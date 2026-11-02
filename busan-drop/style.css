@@ -104,3 +104,16 @@
 @media(max-width:370px){.pad{padding-inline:18px}.app-head{padding-inline:18px}.hero.calendar-hero{padding:20px!important}.calendar-hero h2{font-size:27px;letter-spacing:-1.1px}.calendar-hero .campaign-count strong{font-size:27px}.product-detail .page-heading{font-size:25px}.place-card>strong{font-size:21px}.detail-row{grid-template-columns:minmax(66px,.8fr) minmax(0,1.8fr);gap:12px}.sticky-cta{padding-inline:18px}.product-buy .buy-countdown{font-size:20px}.busan-entry{padding:20px}.intro-screen h2{font-size:38px}}
 
 .chips{scrollbar-width:none}.chips::-webkit-scrollbar{display:none}@media(max-width:650px){.tools{gap:12px;padding-inline:12px}.tools .seg{min-width:0;flex:1;max-width:200px}.tools .swatches{flex-shrink:0}}
+/* Supplied artwork: a light reading area and protected action over the illustration. */
+.hero.calendar-hero.olive-campaign{background:#d1df9c;color:#102614;isolation:isolate}
+.olive-campaign .campaign-illustration{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;pointer-events:none}
+.olive-campaign::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#e8efc9 0%,#e8efc9f5 22%,#e8efc980 40%,#e8efc900 58%,#061a0c30 100%);z-index:-1;pointer-events:none}
+.hero.olive-campaign h2{font-size:28px;line-height:1.2;letter-spacing:-1px;color:#102614;max-width:100%;margin-bottom:10px}
+.olive-campaign .campaign-date{font-size:13px;font-weight:800;color:#17391c}
+.olive-campaign .campaign-count{align-self:flex-start;background:#f7f8e9f5;border:1px solid #f7f8e9;border-radius:8px;padding:7px 11px;margin:auto 0 10px;box-shadow:0 3px 12px #12240e12}
+.olive-campaign .campaign-count strong{font-size:23px;color:#14321a;letter-spacing:-.6px}
+.hero.olive-campaign .hero-cta{background:#102e19;color:#fff;box-shadow:0 3px 12px #061a0c30}
+.olive-campaign .dots{background:#f7f8e9ed;border-radius:20px;padding:7px}
+.olive-campaign .dots button{background:#14321a66}.olive-campaign .dots button.on{background:#14321a}
+@media(max-width:370px){.hero.olive-campaign h2{font-size:25px}.olive-campaign .campaign-date{font-size:12px}.olive-campaign .campaign-count strong{font-size:21px}.olive-campaign .campaign-count{padding:6px 9px}.hero.olive-campaign .hero-cta{padding:10px 13px}}
+.olive-campaign .campaign-illustration{top:24%;height:76%;object-fit:contain;object-position:center bottom}.olive-campaign::before{background:linear-gradient(180deg,#e8efc9 0%,#e8efc9f5 24%,#e8efc900 40%,#e8efc900 75%,#061a0c20 100%)}
