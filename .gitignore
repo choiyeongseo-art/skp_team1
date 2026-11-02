@@ -1,0 +1,12 @@
+# Local work and generated delivery archives
+/tmp/
+/output/
+*.zip
+__pycache__/
+*.py[cod]
+# Chat jobs contain absolute source image paths
+/internal/thumbnail-pipeline/jobs/
+# Local credentials
+.env
+.env.*
+!.env.example

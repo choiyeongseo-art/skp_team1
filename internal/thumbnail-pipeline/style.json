@@ -1,0 +1,10 @@
+{
+  "style": "busan-drop-amber-v1",
+  "minimum_edge": 1024,
+  "background": "warm ivory #f3efe4, subtle amber #ecb617 circular spotlight",
+  "composition": "entire product visible, centered, occupying 72–78% of square frame, safe margins for UI badges",
+  "lighting": "soft studio lighting, realistic contact shadow, crisp premium ecommerce photography",
+  "angles": [9, -8, 6, -10],
+  "invariants": "Preserve product identity, packaging shape, original brand logo, exact label lettering, colors and quantity. Do not invent hidden sides, extra packaging, accessories or product claims.",
+  "avoid": "No added text, prices, discount badges, watermarks, extra products or props. Do not bake UI labels into the image."
+}
