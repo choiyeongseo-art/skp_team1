@@ -117,3 +117,292 @@
 .olive-campaign .dots button{background:#14321a66}.olive-campaign .dots button.on{background:#14321a}
 @media(max-width:370px){.hero.olive-campaign h2{font-size:25px}.olive-campaign .campaign-date{font-size:12px}.olive-campaign .campaign-count strong{font-size:21px}.olive-campaign .campaign-count{padding:6px 9px}.hero.olive-campaign .hero-cta{padding:10px 13px}}
 .olive-campaign .campaign-illustration{top:24%;height:76%;object-fit:contain;object-position:center bottom}.olive-campaign::before{background:linear-gradient(180deg,#e8efc9 0%,#e8efc9f5 24%,#e8efc900 40%,#e8efc900 75%,#061a0c20 100%)}
+/* Brand campaign illustrations and paired actions */
+.hero.illustrated-campaign{isolation:isolate;background:#fcf2e5;color:#201d1b}
+.illustrated-campaign .campaign-illustration{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;pointer-events:none}
+.illustrated-campaign::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fcf2e5 0%,#fcf2e5ed 25%,#fcf2e500 52%);z-index:-1;pointer-events:none}
+.hero.illustrated-campaign h2{font-size:28px;line-height:1.2;letter-spacing:-1px;color:inherit;margin-bottom:10px}
+.illustrated-campaign .campaign-date{font-size:13px;font-weight:800;color:inherit}
+.illustrated-campaign .campaign-count{align-self:flex-start;background:#fff9f0ed;border:1px solid #fff7eb;border-radius:8px;padding:6px 10px;margin:auto 0 10px;box-shadow:0 3px 12px #201d1b12}
+.illustrated-campaign .campaign-count strong{font-size:23px;color:#29231f}
+.campaign-actions{display:flex;align-items:center;gap:7px;margin-top:auto;padding-bottom:25px}
+.hero .campaign-actions .hero-cta,.hero-store{min-height:44px;padding:10px 13px;border-radius:8px;font-size:12px;font-weight:800;line-height:1.5;white-space:nowrap;box-shadow:0 2px 10px #0002}
+.hero .campaign-actions .hero-cta{background:#202020;color:white}
+.hero-store{background:#fffaf3;color:#202020;border:1px solid #20202022}.hero-store span{font-size:16px;margin-left:3px}
+.illustrated-campaign .hero-bottom{bottom:12px;right:20px}.illustrated-campaign .dots{background:#fff9f0ed;border-radius:20px;padding:6px}
+.illustrated-campaign .dots button{background:#2225}.illustrated-campaign .dots button.on{background:#222}
+.hero.topten-campaign{color:#ad0010}.hero.topten-campaign .hero-cta,.hero.uniqlo-campaign .hero-cta{background:#cf0016}
+.hero.olive-campaign{background:#d1df9c;color:#102614}.olive-campaign .campaign-illustration{top:24%;height:76%;object-fit:contain;object-position:center bottom}
+.olive-campaign::before{background:linear-gradient(180deg,#e8efc9 0%,#e8efc9f5 24%,#e8efc900 40%,#e8efc900 75%,#061a0c20 100%)}
+.hero.olive-campaign .hero-cta{background:#102e19}.hero.zara-campaign .hero-store{color:#b71919}
+/* Offline store-map prototype */
+.store-heading{padding:18px 22px 20px}.store-eyebrow{font-size:10px;color:var(--accent);letter-spacing:2px;font-weight:800}.store-heading h2{font-size:27px;letter-spacing:-1px;margin:10px 0}.store-heading h2 span{color:var(--accent)}.store-heading p{font-size:12px;color:#aaa;margin:0 0 18px}
+.store-brands{display:flex;gap:7px}.store-brands button{flex:1;min-height:40px;background:#252525;color:#bbb;border:1px solid #454545;border-radius:8px;font-size:12px}.store-brands button.active{background:var(--accent);color:#161616;border-color:var(--accent);font-weight:800}
+.store-map{position:relative;margin:0 16px;border-radius:18px;overflow:hidden;aspect-ratio:360/420;background:#d4e8ee;border:1px solid #ffffff33}.store-map>svg{display:block;width:100%;height:100%}.map-badge{position:absolute;top:14px;left:12px;background:#fffef7ed;color:#35443c;border-radius:6px;padding:8px 10px;font-size:10px;font-weight:700;box-shadow:0 2px 8px #0001}.map-north{position:absolute;right:15px;top:14px;color:#3a4a42;font-size:11px;text-align:center}
+.store-pin{position:absolute;transform:translate(-50%,-88%);background:transparent;min-width:44px;min-height:44px;padding:0;display:flex;align-items:center;flex-direction:column;color:#242424;filter:drop-shadow(0 2px 2px #0003);z-index:1}.store-pin svg{width:32px;height:36px;overflow:visible}.store-pin span{font-size:10px;line-height:1.4;padding:3px 7px;border-radius:5px;background:white;color:#222;font-weight:800;white-space:nowrap}.store-pin.selected{color:#b78300;z-index:2}.store-pin.selected svg{width:39px;height:43px}.store-pin.selected span{background:var(--accent)}
+.store-results{padding:20px 22px 28px}.store-result-title{display:flex;justify-content:space-between;align-items:center;font-size:14px}.store-result-title span{font-size:10px;color:#aaa}.store-location-tabs{display:flex;gap:8px;margin:14px 0}.store-location-tabs button{background:#252525;color:#bbb;padding:10px 14px;border-radius:20px;min-height:40px;font-size:11px}.store-location-tabs button.active{background:var(--accent);color:#111;font-weight:800}
+.store-detail{border:1px solid #494330;background:#24231f;border-radius:14px;padding:20px}.store-demo{font-size:9px;letter-spacing:1px;color:var(--accent)}.store-detail h3{font-size:21px;letter-spacing:-.6px;margin:10px 0}.store-detail>p{font-size:11px;color:#bbb;line-height:1.6}.store-detail dl{margin:18px 0}.store-detail dl div{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #ffffff12;font-size:12px}.store-detail dt{color:#aaa}.store-detail dd{margin:0;text-align:right;font-weight:700}.store-detail .store-disclaimer{font-size:10px;color:#bcb6a5}.store-products{width:100%;min-height:44px;background:var(--accent);color:#111;border-radius:8px;font-size:12px;font-weight:800;margin-top:8px}
+@media(max-width:370px){.hero.illustrated-campaign h2{font-size:25px}.campaign-actions{gap:6px}.hero .campaign-actions .hero-cta,.hero-store{padding:9px 11px;font-size:11px}.store-heading{padding-inline:18px}.store-location-tabs{gap:5px}.store-location-tabs button{padding-inline:12px}}
+/* Original vector wave animation: no external assets or animation libraries. */
+.brand-strip{gap:10px;justify-content:space-between}
+.brand-strip .brand-mini{flex:0 0 54px;min-width:0}
+.brand-strip .brand-logo{width:54px;height:54px;border-radius:15px;font-size:9px;margin-bottom:9px}
+.busan-brand-icon{position:relative;overflow:hidden;isolation:isolate;background:var(--accent);border-color:transparent;color:#111}
+.brand-logo.busan-brand-icon{background:var(--accent);border-color:transparent;color:#111}
+.busan-wordmark{position:relative;z-index:0;font-size:12px;font-weight:900;letter-spacing:-.8px;display:block;animation:busan-word-pop 6s infinite;will-change:transform}
+.busan-wave{position:absolute;top:0;left:0;width:200%;height:100%;pointer-events:none;transform:translateY(100%);will-change:transform}
+.busan-wave-back{z-index:1;fill:#363636;animation:busan-wave-rise 6s infinite cubic-bezier(.45,0,.3,1)}
+.busan-wave-front{z-index:2;fill:#111;animation:busan-wave-rise 6s .16s infinite cubic-bezier(.45,0,.3,1)}
+.busan-wave path{animation:busan-wave-drift 2.8s linear infinite}.busan-wave-back path{animation-duration:3.8s;animation-direction:reverse}
+@keyframes busan-wave-rise{0%,12%,100%{transform:translateY(100%)}34%,46%{transform:translateY(-46%)}68%,88%{transform:translateY(100%)}}
+@keyframes busan-wave-drift{from{transform:translateX(0)}to{transform:translateX(-100px)}}
+@keyframes busan-word-pop{0%,28%{transform:translateY(0) scale(1)}36%,48%{transform:translateY(11px) scale(.9)}58%{transform:translateY(-7px) scale(1.08,1.12)}65%{transform:translateY(2px) scale(1.02,.95)}72%,100%{transform:translateY(0) scale(1)}}
+.busan-brand-row{width:100%;text-align:left;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.busan-row-copy{flex:1;display:flex;flex-direction:column;gap:8px}.busan-row-copy strong{font-size:16px}.busan-row-copy>span{font-size:11px;color:#aaa}
+.busan-brand-row .busan-wordmark{font-size:14px}
+@media(max-width:350px){.brand-strip{gap:7px}.brand-strip .brand-mini{flex-basis:49px}.brand-strip .brand-logo{width:49px;height:49px;font-size:8px}.busan-wordmark{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.busan-wordmark,.busan-wave,.busan-wave path{animation:none!important}.busan-wordmark{transform:none}.busan-wave{transform:translateY(100%)}}
+/* Compact two-column product catalog */
+.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px;align-items:stretch}
+.product-grid>.empty{grid-column:1/-1}
+.product-grid .deal-card{min-width:0;margin:0;position:relative;border-radius:10px;display:flex;flex-direction:column}
+.product-grid .product-art,.product-grid .real-art{height:auto;aspect-ratio:1;width:100%;min-height:0}
+.product-grid .product-art img{object-fit:cover}
+.product-grid .product-kicker{display:none}
+.product-grid .product-sticker{right:7px;bottom:9px;padding:7px 8px;font-size:22px;line-height:1;box-shadow:2px 2px 0 #222;transform:rotate(-7deg)}
+.product-grid .product-sticker small{font-size:9px;margin-top:3px}
+.product-grid .save{top:6px;right:6px;width:36px;height:36px;min-width:36px;display:grid;place-items:center;background:#1717178c;border-radius:50%;padding:7px}
+.product-grid .save .icon{width:20px;height:20px}
+.product-grid .real-card-save{position:absolute;top:0;right:0;z-index:2}
+.product-grid .real-art{padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}
+.product-grid .real-art>span{font-size:14px;max-width:calc(100% - 24px)}
+.product-grid .real-art em{font-size:27px;line-height:1;font-style:normal;align-self:flex-end}
+.product-grid .real-art em small{display:block;font-size:10px;text-align:right;margin-top:4px}
+.product-grid .deal-content{padding:12px 10px;flex:1;display:flex;flex-direction:column}
+.product-grid .deal-meta{margin-bottom:7px;font-size:10px}
+.product-grid .badge{font-size:10px}
+.product-grid .deal-content h3{font-size:12px;line-height:1.5;font-weight:650;letter-spacing:-.2px;margin:0 0 12px;overflow-wrap:anywhere}
+.card-prices{margin-top:auto}.card-prices>del{display:block;font-size:10px;color:#999;line-height:1.5;margin-bottom:4px}.card-prices>div{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px;line-height:1.35}.card-prices strong{font-size:15px;color:var(--accent);font-weight:900}.card-prices b{font-size:17px;color:#f7f7f7;letter-spacing:-.7px}.card-prices small{font-size:10px;letter-spacing:0;margin-left:1px}
+@media(max-width:350px){.product-grid{gap:14px 8px}.product-grid .deal-content{padding:10px 8px}.card-prices b{font-size:15px}.card-prices strong{font-size:13px}.product-grid .product-sticker{font-size:18px;padding:6px}}
+/* Full-bleed monochrome map; accent reserved for store locations. */
+.phone.stores .viewport{height:calc(100% - 70px);overflow:hidden}
+.store-map-screen{position:relative;height:100%;width:100%;background:#151515;overflow:hidden;isolation:isolate}
+.store-map.immersive-map{position:absolute;inset:0;margin:0;border:0;border-radius:0;aspect-ratio:auto;background:#151515;touch-action:none;cursor:grab;user-select:none}
+.store-map.immersive-map:active{cursor:grabbing}
+.map-world{position:absolute;inset:0;transform-origin:center;will-change:transform}
+.map-world>svg{width:100%;height:100%;display:block}
+.map-topbar{position:absolute;top:14px;left:16px;right:16px;z-index:4;display:flex;align-items:center;gap:12px;pointer-events:none}
+.map-topbar>span{font-size:12px;font-weight:700;color:#eee;text-shadow:0 1px 6px #000}
+.map-icon-button{display:grid;place-items:center;width:44px;height:44px;min-width:44px;padding:0;border-radius:50%;background:#1b1b1bed;border:1px solid #5556;color:#eee;font-size:25px;line-height:1;pointer-events:auto;box-shadow:0 4px 14px #0003}
+.map-icon-button .icon{width:19px;height:19px}
+.map-zoom{position:absolute;right:16px;top:80px;z-index:4;display:flex;flex-direction:column;gap:8px}
+.map-zoom button:disabled{color:#626262;cursor:default}
+.map-demo-note{position:absolute;bottom:13px;left:18px;z-index:3;font-size:9px;color:#888;pointer-events:none}
+.immersive-map .store-pin{width:46px;height:50px;min-width:46px;min-height:50px;transform:translate(-50%,-88%) scale(var(--pin-counter-scale,1));transform-origin:center 88%;color:var(--accent);filter:none;z-index:1;justify-content:center;padding:0;cursor:pointer}
+.immersive-map .store-pin.selected{color:var(--accent);z-index:2}
+.immersive-map .store-pin .pin-glyph{display:grid;place-items:center;width:44px;height:48px;transform-origin:center bottom;background:transparent;padding:0;filter:drop-shadow(0 3px 5px #0007)}
+.immersive-map .store-pin svg,.immersive-map .store-pin.selected svg{width:32px;height:38px;overflow:visible}
+.immersive-map .store-pin.selected .pin-glyph{animation:map-pin-pop .48s cubic-bezier(.22,.85,.36,1) both}
+@keyframes map-pin-pop{0%{transform:scale(1)}56%{transform:scale(1.6)}78%{transform:scale(1.3)}100%{transform:scale(1.4)}}
+.map-store-peek{position:absolute;bottom:34px;left:16px;right:16px;z-index:4;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-radius:16px;background:#202020f2;border:1px solid #5556;padding:17px 18px;box-shadow:0 8px 24px #0004;animation:map-detail-enter .25s ease-out}
+.map-store-demo{font-size:9px;color:#a0a0a0;letter-spacing:.5px}.map-store-peek h3{font-size:17px;margin:6px 0 9px;letter-spacing:-.5px;color:#f5f5f5}.map-store-peek p{font-size:12px;color:#ddd;margin:0 0 5px}.map-store-peek small{font-size:10px;color:#999}.map-store-peek .map-icon-button{width:36px;min-width:36px;height:36px;background:transparent;border:0;box-shadow:none;font-size:23px}
+@keyframes map-detail-enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){.immersive-map .store-pin.selected .pin-glyph{animation:none;transform:scale(1.4)}.map-store-peek{animation:none}}
+.immersive-map .store-pin .pin-glyph{color:inherit}
+/* Wide rounded campaign frame, with copy left and illustration right. */
+.hero.calendar-hero.illustrated-campaign{aspect-ratio:1.9;min-height:184px;height:auto;margin:0 18px;padding:17px 16px!important;border-radius:21px;justify-content:space-between;background:#fbf0df;flex-shrink:0}
+.hero.illustrated-campaign.olive-campaign{background:#d1df9c}
+.illustrated-campaign .campaign-illustration{inset:0 0 0 auto;top:0;right:0;width:64%;height:100%;object-fit:cover;object-position:center bottom;z-index:-2}
+.illustrated-campaign::before{background:linear-gradient(90deg,#fbf0df 0%,#fbf0df 37%,#fbf0dfe8 48%,#fbf0df00 73%)}
+.olive-campaign::before{background:linear-gradient(90deg,#d1df9c 0%,#d1df9c 37%,#d1df9ce8 48%,#d1df9c00 73%)}
+.campaign-copy{position:relative;max-width:75%}
+.campaign-brand-tag{display:inline-flex;align-items:center;min-height:22px;background:#191919;color:#fffaf1;border-radius:20px;padding:4px 9px;font-size:9px;font-weight:700;line-height:1.3}
+.hero.illustrated-campaign h2{font-size:21px;line-height:1.23;letter-spacing:-.8px;margin:9px 0 7px;max-width:100%;font-weight:850;text-wrap:balance}
+.campaign-meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap;line-height:1.4}
+.illustrated-campaign .campaign-date{font-size:10px;font-weight:650;letter-spacing:0;line-height:1.4}
+.campaign-timer{display:inline-block;border-left:1px solid currentColor;padding-left:6px;font-size:10px;font-weight:850;letter-spacing:-.3px;white-space:nowrap}
+.illustrated-campaign .campaign-actions{position:relative;display:flex;flex-wrap:nowrap;gap:6px;padding:0;margin:12px 0 0;align-self:flex-start}
+.hero.illustrated-campaign .campaign-actions .hero-cta,.illustrated-campaign .hero-store{min-height:40px;padding:9px 12px;border-radius:24px;font-size:11px;box-shadow:none}
+.illustrated-campaign .hero-store{background:#fffaf0e8;border:1px solid #2223;color:#1d1d1d}
+.illustrated-campaign .hero-store span{font-size:13px;margin-left:2px}
+.campaign-pagination{display:flex;justify-content:center;height:24px;align-items:center}
+.campaign-pagination .dots{display:flex;align-items:center;gap:2px;height:24px}
+.campaign-pagination .dots button{position:relative;width:20px;height:24px;background:transparent;border-radius:0;padding:0}
+.campaign-pagination .dots button::after{content:"";position:absolute;top:9px;left:7px;width:6px;height:6px;border-radius:10px;background:#666;transition:width .2s,background .2s,left .2s}
+.campaign-pagination .dots button.on{width:28px;background:transparent}
+.campaign-pagination .dots button.on::after{left:4px;width:20px;background:var(--accent)}
+@media(max-width:350px){.hero.calendar-hero.illustrated-campaign{min-height:176px;padding:15px 14px!important;border-radius:18px}.hero.illustrated-campaign h2{font-size:19px}.campaign-copy{max-width:81%}.hero.illustrated-campaign .campaign-actions .hero-cta,.illustrated-campaign .hero-store{padding-inline:10px;font-size:10px}}
+/* The map artwork and pins share one fixed 3:5 world, never stretched. */
+.immersive-map .map-world{inset:auto;left:50%;top:50%;aspect-ratio:3/5}
+.immersive-map .map-world>svg{width:100%;height:100%;display:block}
+/* Campaign frame: height 3 : width 4. */
+.hero.calendar-hero.illustrated-campaign{aspect-ratio:4/3;min-height:0}
+/* Five compact brand tabs float above the map. */
+.map-brand-tabs{position:absolute;z-index:5;top:72px;left:16px;right:16px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:5px;background:#161616ed;border:1px solid #ffffff15;border-radius:15px;box-shadow:0 4px 20px #0003}
+.map-brand-tabs button{min-width:0;min-height:42px;border-radius:10px;background:transparent;color:#bbb;font-size:10px;font-weight:750;padding:7px 2px;white-space:nowrap;transition:background .2s,color .2s}
+.map-brand-tabs button.active{background:var(--accent);color:#111;box-shadow:0 2px 8px #0002}
+.store-map-screen .map-zoom{top:140px}
+@media(max-width:350px){.map-brand-tabs{left:12px;right:12px;gap:2px;padding:4px}.map-brand-tabs button{font-size:9px}}
+/* Larger editorial typography for all five campaigns. */
+.campaign-brand-tag{font-size:12px;min-height:26px;padding:5px 11px;letter-spacing:-.2px}
+.campaign-copy{max-width:86%}
+.hero.illustrated-campaign h2{font-size:30px;line-height:1.16;letter-spacing:-1.3px;font-weight:900;margin:12px 0 10px;text-wrap:pretty}
+.illustrated-campaign .campaign-date,.campaign-timer{font-size:12px;line-height:1.5}
+.campaign-timer{padding-left:8px}
+.hero.illustrated-campaign .campaign-actions .hero-cta,.illustrated-campaign .hero-store{font-size:13px;min-height:44px;padding:10px 15px;font-weight:800}
+.hero.illustrated-campaign .campaign-illustration{width:66%}
+.hero.illustrated-campaign.busan-destination-campaign{background:#111;color:var(--accent);border:1px solid #ffffff14}
+.busan-destination-campaign::before{display:none}
+.busan-destination-campaign .campaign-copy{max-width:100%}
+.busan-destination-campaign .campaign-brand-tag{background:var(--accent);color:#111;font-size:11px;letter-spacing:1px}
+.hero.busan-destination-campaign h2{color:#f5f3ec;font-size:29px;line-height:1.18;letter-spacing:-1px}
+.busan-destination-campaign .campaign-date{color:#b8b8b8;font-size:11px}
+.hero.busan-destination-campaign .campaign-actions .hero-cta{background:var(--accent);color:#111}
+.busan-banner-art{position:absolute;inset:0;width:100%;height:100%;z-index:-1;color:var(--accent);pointer-events:none}
+.busan-sea-back{animation:busan-sea-flow 7s linear infinite}.busan-sea-front{animation:busan-sea-flow 5s linear infinite reverse}
+.busan-gulls{animation:busan-gull-glide 5s ease-in-out infinite;transform-origin:320px 60px}
+.busan-camellia>g{animation:busan-flower-turn 18s linear infinite;transform-origin:0 0}
+@keyframes busan-sea-flow{from{transform:translateX(0)}to{transform:translateX(-100px)}}
+@keyframes busan-gull-glide{0%,100%{transform:translate(0,0) rotate(-2deg)}50%{transform:translate(-12px,-6px) rotate(2deg)}}
+@keyframes busan-flower-turn{to{transform:rotate(360deg)}}
+@media(max-width:370px){.campaign-brand-tag{font-size:11px;min-height:23px}.hero.illustrated-campaign h2{font-size:25px;margin:9px 0 8px;letter-spacing:-1px}.illustrated-campaign .campaign-date,.campaign-timer{font-size:11px}.hero.illustrated-campaign .campaign-actions .hero-cta,.illustrated-campaign .hero-store{font-size:11px;padding:9px 12px;min-height:40px}.hero.busan-destination-campaign h2{font-size:25px}.busan-destination-campaign .campaign-date{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.busan-sea-back,.busan-sea-front,.busan-gulls,.busan-camellia>g{animation:none}}
+/* Two-column local discovery cards, matching the product catalog rhythm. */
+.local-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:stretch}
+.local-grid .place-card{min-width:0;min-height:190px;height:100%;margin:0;padding:16px 13px;border-radius:14px;display:flex;flex-direction:column;justify-content:space-between}
+.local-grid .place-card-top{display:flex;flex-direction:column;align-items:flex-start;gap:7px;font-size:9px;line-height:1.5}
+.local-grid .place-status{font-size:9px}
+.local-grid .place-card>strong{font-size:19px;line-height:1.3;letter-spacing:-.7px;margin:20px 0;overflow-wrap:anywhere;text-wrap:pretty}
+.local-grid .place-card-bottom{margin-top:auto;display:flex;flex-direction:column;align-items:flex-start;gap:9px;width:100%;padding-top:12px;font-size:9px;line-height:1.5}
+.local-grid .place-card-bottom b{font-size:10px}
+.local-grid .local-empty{grid-column:1/-1}
+/* Keep 4:3 for a balanced campaign and a visible path to shopping. */
+.hero.calendar-hero.illustrated-campaign{aspect-ratio:4/3;padding:20px!important}
+.campaign-pagination{height:20px}
+@media(max-width:370px){.hero.calendar-hero.illustrated-campaign{padding:16px!important}.local-grid{gap:10px}.local-grid .place-card{padding:14px 11px;min-height:185px}.local-grid .place-card>strong{font-size:17px}}
+/* Reserve the upper half for the Busan headline and supporting copy. */
+.busan-destination-campaign .busan-banner-art{top:auto;bottom:0;height:52%;width:100%;overflow:visible}
+.hero.busan-destination-campaign .campaign-copy{z-index:1;max-width:100%}
+.hero.busan-destination-campaign h2{font-size:28px;line-height:1.18;margin:10px 0 9px}
+.busan-destination-campaign .campaign-meta{position:relative;z-index:1}
+.busan-destination-campaign .campaign-date{display:block;line-height:1.5}
+.hero.busan-destination-campaign .campaign-actions{z-index:2}
+@media(max-width:370px){.hero.busan-destination-campaign h2{font-size:24px;margin:8px 0}.busan-destination-campaign .busan-banner-art{height:46%}}
+.busan-destination-campaign .busan-banner-art{left:auto;right:0;bottom:0;top:auto;width:72%;height:72%;overflow:hidden}
+@media(max-width:370px){.busan-destination-campaign .busan-banner-art{width:66%;height:66%}}
+/* Continuous sea across the complete banner; skyline remains at the right. */
+.busan-banner-art .busan-sea{display:none}
+.busan-banner-full-sea{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:20%;z-index:-1;color:var(--accent);pointer-events:none;overflow:visible}
+/* Stationary rounded viewport for the whip + blur cross transition. */
+.campaign-stage{position:relative;isolation:isolate;overflow:hidden;margin:0 18px;border-radius:21px;aspect-ratio:4/3;flex-shrink:0;background:#171717}
+.campaign-stage>.hero.calendar-hero.illustrated-campaign{margin:0;width:100%;height:100%;border-radius:inherit;aspect-ratio:auto}
+.campaign-stage>.campaign-outgoing{position:absolute;inset:0;pointer-events:none;z-index:3}
+@media(max-width:350px){.campaign-stage{border-radius:18px}}
+/* Product types, distinct from the brand shortcuts above. */
+.chips.product-category-chips{display:flex;flex-wrap:wrap;gap:7px;overflow:visible;margin:16px 0 20px}
+.product-category-chips .chip{min-height:36px;padding:8px 12px;font-size:11px;line-height:1.4;white-space:nowrap}
+/* Calm, compact empty state with a clearly bounded action. */
+.empty{padding:36px 18px 40px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.empty-symbol{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#242424;border:1px solid #ffffff12;margin-bottom:18px;color:var(--accent)}
+.empty .empty-symbol .icon{width:24px;height:24px;margin:0}
+.empty h3{font-size:19px;line-height:1.4;letter-spacing:-.5px;margin:0 0 10px}
+.empty p{font-size:12px;line-height:1.8;max-width:250px;color:#aaa;margin:0}
+.empty .primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex:none;width:auto;min-width:156px;min-height:44px;height:44px;padding:0 18px;margin:22px 0 0;border-radius:24px;font-size:12px;font-weight:800;line-height:1.4}
+.empty .primary .icon{width:16px;height:16px;color:inherit;margin:0}
+/* Separate product rows, official collections and supporting information. */
+.phone.brand .product-grid:not(:empty){margin-bottom:24px}
+.phone.brand .catalog-link{margin-bottom:12px;padding:20px 18px;min-height:72px;border-radius:12px}
+.phone.brand .catalog-link strong{font-size:15px;line-height:1.5}
+.phone.brand .catalog-link>b{font-size:24px;line-height:1;margin-left:14px}
+.phone.brand .catalog-link+.notice{margin-top:22px;margin-bottom:20px;line-height:1.8}
+.phone.brand .official-link{margin-top:18px}
+.phone.brand .section-title{margin-top:28px;margin-bottom:16px}
+@media(max-width:350px){.phone.brand .product-grid:not(:empty){margin-bottom:20px}.phone.brand .catalog-link{padding:18px 15px}}
+.map-region-tabs{position:absolute;z-index:5;top:139px;left:16px;right:16px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:4px;background:#171717e8;border:1px solid #ffffff12;border-radius:13px}
+.map-region-tabs button{min-height:36px;padding:6px 2px;border-radius:9px;background:transparent;color:#bbb;font-size:10px;font-weight:650;white-space:nowrap}
+.map-region-tabs button.active{background:#383838;color:var(--accent);box-shadow:inset 0 0 0 1px #ffffff20}
+.store-map-screen .map-zoom{top:198px}
+.phone.stores .viewport{height:calc(100% - 122px)}
+@media(max-width:350px){.map-region-tabs{left:12px;right:12px;gap:2px}.map-region-tabs button{font-size:9px}}
+.language-screen{padding:10px 24px 28px;min-height:100%;display:flex;flex-direction:column}
+.language-screen>.iconbtn{align-self:flex-start;margin-left:-10px}
+.language-intro{margin:22px 0 25px}.language-intro>span{font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:800}
+.language-intro h2{font-size:32px;line-height:1.25;letter-spacing:-1px;margin:15px 0 12px}
+.language-intro p{font-size:12px;color:#aaa;line-height:1.7;margin:0}
+.language-options{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.language-options>button{display:flex;justify-content:space-between;align-items:center;text-align:left;min-height:72px;padding:16px 18px;border:1px solid #3b3b3b;border-radius:13px;background:#202020;color:#eee}
+.language-options>button.selected{background:#29271e;border-color:var(--accent)}
+.language-options strong{font-size:18px;font-weight:750;display:block;line-height:1.4}.language-options small{display:block;font-size:10px;color:#999;margin-top:3px}
+.language-check{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;border:1px solid #555;color:#111;font-size:14px}
+.selected .language-check{background:var(--accent);border-color:var(--accent)}
+.language-enter{margin-top:auto;flex-shrink:0;min-height:50px;font-size:13px;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:12px}
+.phone.language .viewport{height:calc(100% - 70px)}
+@media(max-width:350px){.language-screen{padding-inline:20px}.language-intro{margin:14px 0 20px}.language-intro h2{font-size:28px}.language-options>button{min-height:65px}}
+/* Map markers live outside the scaled world so their SVG stays native-size. */
+.map-pin-layer{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.immersive-map .map-pin-layer .store-pin{transform:translate(-50%,-88%);pointer-events:auto;will-change:left,top}
+.immersive-map .map-pin-layer .pin-glyph{filter:none}
+/* Shared visual rhythm: dark surfaces, warm accents and travel-pass details. */
+.phone{--surface:#1c1d1e;--line:#ffffff14;--radius-card:16px}
+.phone .app-head{padding-top:16px;padding-bottom:18px}
+.phone .wordmark{font-weight:900;letter-spacing:-1px}
+.phone .section-title{align-items:center;gap:12px;margin-top:28px;margin-bottom:16px}
+.phone .section-title h3{font-size:18px;letter-spacing:-.6px;line-height:1.4}
+.phone .textbtn{font-size:11px;color:#aaa;min-height:36px}
+.phone .textbtn:hover{color:var(--accent)}
+.brand-strip{padding:2px 0 10px}
+.brand-strip .brand-logo{background:linear-gradient(145deg,#303132,#202122);border-color:#ffffff16;box-shadow:inset 0 1px 0 #ffffff08}
+.brand-strip .brand-logo.busan-brand-icon{background:var(--accent)}
+.brand-mini{line-height:1.5}.brand-mini>span:last-child{letter-spacing:-.2px}
+.product-grid{gap:20px 12px}
+.product-grid .deal-card{border:1px solid #ffffff12;border-radius:13px;background:linear-gradient(160deg,#222324,#191a1b);box-shadow:0 4px 14px #0001}
+.product-grid .deal-content{padding:13px 11px 15px}
+.product-grid .deal-content h3{font-size:12px;line-height:1.6;margin-bottom:15px}
+.product-grid .deal-meta .badge{font-size:10px;letter-spacing:.1px;color:var(--accent)}
+.card-prices>del{color:#999;font-size:10px;margin-bottom:6px}
+.card-prices>div{gap:5px}.card-prices strong{font-size:16px}.card-prices b{font-size:18px}
+.product-grid .real-art{background:radial-gradient(ellipse at 25% 20%,#f7f3e8,#ded9ce)}
+.product-grid .real-art>span{letter-spacing:.5px;font-size:13px}
+.product-grid .real-art>em{border-radius:2px;box-shadow:3px 4px 0 #0002;padding:12px 10px}
+.product-grid .real-art>em::before{content:"";position:absolute;top:7px;left:7px;width:4px;height:4px;border:1px solid #ffffff80;border-radius:50%}
+.phone .save{border:1px solid #ffffff24;transition:background .18s,color .18s}
+.phone .save.saved{background:var(--accent);color:#111;border-color:transparent}
+.phone .search{border-radius:13px;border-color:#ffffff1c;background:#202122}
+.phone .search:focus-within{border-color:var(--accent)}
+.phone .chip{border:1px solid #ffffff08;background:#252627;color:#bbb}
+.phone .chip.active{background:var(--accent);border-color:transparent;color:#111;font-weight:800}
+.phone .product-category-chips{gap:8px;margin-bottom:24px}
+.phone .profile-card{position:relative;overflow:hidden;border:1px solid #ffffff16;background:radial-gradient(ellipse at 100% 0,#33312a00,#202122),linear-gradient(120deg,#292a2b,#1d1e1f);padding:24px;border-radius:18px}
+.profile-card::after{content:"";display:block;margin-top:24px;border-top:1px dashed #ffffff25}
+.profile-card .avatar{border-radius:14px;transform:rotate(-5deg)}
+.phone .menu-row{min-height:64px;border-color:#ffffff12;font-size:13px}
+.phone .primary{font-weight:800;transition:filter .18s,transform .18s}
+.phone .primary:active{transform:scale(.98)}
+.phone .secondary{border-color:#ffffff25;border-radius:12px}
+.phone .sale-panel{position:relative;border-radius:16px;padding:20px;background:linear-gradient(135deg,#292a2b,#1d1e1f);border-color:#ffffff17}
+.phone .sale-panel-top{padding-bottom:15px;border-bottom:1px dashed #ffffff26}
+.phone .catalog-link{background:linear-gradient(120deg,#28292a,#212223);border-color:#ffffff16}
+.phone .place-card{background:linear-gradient(145deg,#29342e,#202925);border-color:#ffffff1c}
+.phone .popup-card{background:linear-gradient(145deg,#393025,#29231e)}
+#bottomNav{background:#161718;border-top:1px solid #ffffff14}
+#bottomNav button{position:relative;isolation:isolate;gap:5px;font-size:10px}
+#bottomNav button.active::before{content:"";position:absolute;top:5px;left:50%;transform:translateX(-50%);width:46px;height:27px;border-radius:20px;background:var(--accent);opacity:.13;z-index:-1}
+.phone .sheet{border:1px solid #ffffff1c;border-bottom:0;border-radius:24px 24px 0 0;background:linear-gradient(160deg,#292a2b,#202122)}
+.phone .sheet p{font-size:13px;line-height:1.9;color:#bbb}
+.phone .intro-tag{box-shadow:0 10px 24px #0003}
+.phone .intro-tag::after{content:"";position:absolute;right:12px;top:12px;width:7px;height:7px;border-radius:50%;border:1px solid currentColor;opacity:.5}
+.phone :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:350px){.product-grid{gap:16px 9px}.product-grid .deal-content{padding:11px 9px 13px}.card-prices b{font-size:16px}.card-prices strong{font-size:14px}}
+/* Detail save actions use the same persisted pressed state as catalog hearts. */
+.phone .secondary[data-save][aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}
+.phone [data-save][aria-pressed="true"] .icon{fill:currentColor}
+/* SVG camera redraws vector paths at viewport resolution at every zoom. */
+.immersive-map .map-world{left:0;top:0;aspect-ratio:auto;will-change:auto;transform:none}
+.immersive-map .map-world>svg{shape-rendering:geometricPrecision}
+/* One restrained neon invitation per map visit, without replay on selection. */
+.map-region-tabs{animation:region-entry-glow 4s ease-out both}
+@keyframes region-entry-glow{0%{border-color:#ffffff12;box-shadow:none}14%,40%{border-color:var(--accent);box-shadow:0 0 7px color-mix(in srgb,var(--accent) 40%,transparent),inset 0 0 7px color-mix(in srgb,var(--accent) 12%,transparent)}26%,65%{border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 0 14px color-mix(in srgb,var(--accent) 20%,transparent)}100%{border-color:#ffffff12;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.map-region-tabs{animation:none}}
+.detail-store-link{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:13px 16px;margin:22px 0 24px;border:1px solid #ffffff25;border-radius:12px;background:#242526;color:#eee;font-size:13px;font-weight:750;text-align:left}
+.detail-store-link>span:first-child{display:flex;align-items:center;gap:9px}.detail-store-link .icon{width:18px;height:18px;color:var(--accent)}.detail-store-link>span:last-child{color:var(--accent);font-size:20px}

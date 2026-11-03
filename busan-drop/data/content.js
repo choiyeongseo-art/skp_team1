@@ -8,8 +8,8 @@ window.BUSAN_CONTENT = {
     {name:'자라',logo:'ZARA',cat:'패션',url:'https://www.zara.com/kr/',desc:'부산에서 입고 싶은 겨울의 실루엣',sale:'블랙프라이데이 소식',verified:false,start:null,end:null,period:'공식 일정 확인 전',reported:'11.27 – 12.01',source:'https://www.zara.com/kr/',note:'2026.11.02 확인한 한국 공식 스토어에서 11.27–12.01 행사 발표를 확인하지 못했습니다. 블랙프라이데이 날짜와 브랜드의 실제 세일 기간은 별개입니다.',categories:[{name:'여성 특가 상품',label:'현재 공식 특가 · 블프 일정과 별개',url:'https://www.zara.com/kr/ko/woman-special-prices-l1314.html'},{name:'새로운 컬렉션',label:'공식 스토어에서 보기',url:'https://www.zara.com/kr/'}]}
   ],
   deals:[
-    {id:8,brand:0,title:'남성 울블렌드 집업 가디건',cat:'패션',tag:'TENTEN DAY',discount:28,original:69900,price:49900,url:'https://www.goodwearmall.com/product/MSF4EC1921CH/detail',desc:'공식 텐텐데이 기획전에서 확인한 겨울 가디건. 색상·사이즈별 재고와 결제 가격은 공식몰에서 확인하세요.'},
-    {id:9,brand:0,title:'여성 램스울 블렌드 카라 가디건',cat:'패션',tag:'TENTEN DAY',discount:50,original:59900,price:29900,url:'https://www.goodwearmall.com/product/MSF4EC2921IV/detail',desc:'공식 기획전 표시 정상가 59,900원, 판매가 29,900원. 옵션과 쿠폰에 따라 최종 결제금액이 달라질 수 있습니다.'}
+    {id:8,brand:0,title:'남성 울블렌드 집업 가디건',cat:'패션',category:'남성의류',tag:'TENTEN DAY',discount:28,original:69900,price:49900,url:'https://www.goodwearmall.com/product/MSF4EC1921CH/detail',desc:'공식 텐텐데이 기획전에서 확인한 겨울 가디건. 색상·사이즈별 재고와 결제 가격은 공식몰에서 확인하세요.'},
+    {id:9,brand:0,title:'여성 램스울 블렌드 카라 가디건',cat:'패션',category:'여성의류',tag:'TENTEN DAY',discount:50,original:59900,price:29900,url:'https://www.goodwearmall.com/product/MSF4EC2921IV/detail',desc:'공식 기획전 표시 정상가 59,900원, 판매가 29,900원. 옵션과 쿠폰에 따라 최종 결제금액이 달라질 수 있습니다.'}
   ],
   places:[
     {id:'balansa',name:'발란사',english:'BALANSA',type:'로컬 브랜드',area:'전포',tag:'SOUND & STYLE',address:'부산 부산진구 전포대로255번길 37 · 다동 1층',desc:'부산 전포에서 만나는 사운드숍 발란사. 스트리트웨어와 음악 취향을 여행 동선에 더해보세요.',url:'https://balansa.co.kr/',source:'https://balansa.co.kr/',note:'공식 사이트에 기재된 주소 기준. 방문 전 영업시간과 매장 운영 여부를 확인하세요.'},
