@@ -13,7 +13,7 @@ function selectMapRegion(name){if(state.mapRegion===name){resetMapCamera();state
 function storePinArt(){
  if(state.mapLocal)return '<path data-pin-art="local" d="M8 8h8v7H8zM10 8V6h4v2" fill="none" stroke="#171717" stroke-width="1.5"/>';
  if(state.brand===1)return '<g data-pin-art="beauty" fill="none" stroke="#171717" stroke-width="1.25" stroke-linejoin="round"><path d="M6.8 9.2h4.3v6H6.8zM7.5 9.2V6.4L10.3 5v4.2M13 8h4.2v7.2H13zM13.8 8V5.8h2.6V8M13.2 12.8h3.8"/></g>';
- return '<path data-pin-art="fashion" d="m9.2 5.4-3.8 2.4 1.8 3.3 1.5-.8v5.1h6.6v-5.1l1.5.8 1.8-3.3-3.8-2.4c-.7 2.6-4.9 2.6-5.6 0Z" fill="none" stroke="#171717" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>';
+ return `<g data-pin-art="fashion" transform="translate(5 3.5) scale(.22)" fill="none" stroke="#383932" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="${tshirtPath()}"/><path d="M25 13Q32 22 39 13M21 49h22"/></g>`;
 }
 
 function validStoreKey(key){return typeof key==='string'&&/^(topten|oliveyoung|uniqlo|zara|local):[0-5]$/.test(key)}
