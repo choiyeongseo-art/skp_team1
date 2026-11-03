@@ -506,8 +506,8 @@
 /* Visual rhythm: balanced category art, soft card fade and quieter secondary text. */
 .phone .product-category-chips .category-picture svg{stroke-width:1.8}
 .phone .home-place-row{border-radius:16px;clip-path:inset(0 round 16px);border:1px solid #ffffff18}
-.phone .place-illustration{border-radius:inherit;background-image:linear-gradient(90deg,#222428 0%,#222428f2 25%,#222428c4 43%,#22242870 57%,#22242820 75%,#22242800 100%),var(--place-art)}
-.phone .place-illustration::after{inset:0 28% 0 0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);mask-image:linear-gradient(90deg,#000 15%,#0009 45%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 15%,#0009 45%,transparent 100%)}
+.phone .place-illustration{border-radius:inherit;background-image:linear-gradient(90deg,#222428 0%,#222428f7 29%,#222428d9 46%,#22242855 68%,#2224280a 100%),var(--place-art)}
+.phone .place-illustration::after{inset:0 40% 0 0;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);mask-image:linear-gradient(90deg,#000 55%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 55%,transparent)}
 .phone .home-place-main>small{color:#bec2c8}.phone .home-place-meta{color:#b9bec6}
 .phone .local-detail-label{color:#c7cbd1}.phone .local-count{background:#ffffff08;border-color:#ffffff18;color:#c7cbd1}
 .phone .place-card .place-status{background:#ffffff0a;color:#c7cbd1}
