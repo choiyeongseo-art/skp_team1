@@ -45,3 +45,6 @@ test('local store saves are separate and invalid saved keys are discarded',()=>{
 
 
 test('home local events use compact rows and store likes show an icon-only toggle',()=>{const a=app();a.run("state.shoppingTypes=['로컬/팝업']");const home=a.run('home()');assert.match(home,/home-local-list/);assert.match(home,/home-place-row/);assert.doesNotMatch(home,/home-local-grid/);assert.match(a.run("homePlaceRow(places[2])"),/센텀.*10.20/);a.run("state.screen='stores';state.brand=0;state.store=0;state.mapLocal=false;toggleStoreSave(0)");const html=a.run('storeMap()');assert.match(html,/aria-label="매장 저장 해제"/);assert.doesNotMatch(html,/저장한 매장 · 해제/);assert.match(html,/#FF5B3E/);assert.doesNotMatch(html,/#91E2C7/);a.run('toggleStoreSave(0)');assert.match(a.run('storeMap()'),/aria-label="매장 저장"/);});
+
+
+test('purchase actions stay outside scrolling detail content and clear when opening map',()=>{const a=app();for(const id of [7,8,9]){a.run(`state.deal=${id};nav('detail')`);const actions=a.elements.get('#detailActions').innerHTML;assert.match(actions,/바로 사러가기/);assert.doesNotMatch(actions,/바로 사러가기 ↗|buy-status|올영 블프/);assert.doesNotMatch(a.elements.get('#viewport').innerHTML,/sticky-cta|detail-action-panel/);assert.match(actions,new RegExp('data-save="'+id+'"'));}a.run("nav('stores')");assert.equal(a.elements.get('#detailActions').innerHTML,'');});
