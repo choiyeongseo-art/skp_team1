@@ -34,3 +34,6 @@ test('store pins show clothing for fashion brands and cosmetics for Olive Young'
 
 
 test('saved language and visit settings still start at intro then language and visit popup',async()=>{const a=app({language:'ko',tripPromptSeen:true,tripConfigured:true,visitStart:'2026-11-04',visitEnd:'2026-11-06'});assert.equal(a.run('state.screen'),'intro');assert.equal(a.run('state.tripPromptSeen'),false);a.run("nav('language')");assert.equal(a.run('state.screen'),'language');assert.equal(a.elements.get('#modal').innerHTML,'');await a.events.click({target:{closest:()=>({dataset:{languageEnter:'true'}})}});assert.equal(a.run('state.screen'),'home');assert.match(a.elements.get('#modal').innerHTML,/trip-sheet/);assert.match(a.elements.get('#modal').innerHTML,/2026-11-04/);assert.equal(a.run('state.tripPromptSeen'),true);a.run("nav('profile');nav('home')");assert.equal(a.elements.get('#modal').innerHTML,'');});
+
+
+test('intro retains three decorative tickets and its primary browsing and pass actions',()=>{const a=app();const html=a.run('intro()');assert.match(html,/intro-tag t1/);assert.match(html,/intro-tag t2/);assert.match(html,/intro-tag t3/);assert.match(html,/class="primary" data-nav="language">혜택 둘러보기/);assert.match(html,/data-language-next="signup"/);});
