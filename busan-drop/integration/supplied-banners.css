@@ -1,0 +1,42 @@
+.phone .campaign-stage.supplied-campaign { aspect-ratio:auto; position:relative; background:transparent; overflow:visible; border-radius:0; }
+.supplied-banner-viewport { position:relative; aspect-ratio:1; border-radius:21px; width:100%; overflow:hidden; touch-action:pan-y; }
+.supplied-banner-track { display:flex; width:100%; height:100%; will-change:transform; transition:transform .28s cubic-bezier(.22,.61,.36,1); }
+.supplied-slide { position:relative; isolation:isolate; flex:0 0 100%; width:100%; min-width:0; height:100%; color:#25201c; background:#fbf1e4; }
+.supplied-slide>img { display:block; width:100%; height:100%; object-fit:contain; pointer-events:none; }
+.supplied-slide::after { content:""; position:absolute; inset:0; pointer-events:none; z-index:0; background:linear-gradient(180deg,#fbf1e4b3,transparent 40%); }
+.supplied-slide.tone-olive { color:#123823; background:#cddd93; }
+.supplied-slide.tone-olive::after { background:linear-gradient(180deg,#d9e7a4e0,transparent 42%); }
+.supplied-slide.tone-monchhichi { color:#fff7e9; background:#ed1117; }
+.supplied-slide.tone-monchhichi::after { background:linear-gradient(180deg,#c4000940,transparent 42%); }
+.supplied-slide.tone-tiffany { color:#123b3b; background:#83d2cb; }
+.supplied-slide.tone-tiffany::after { background:linear-gradient(180deg,#83d2cbcc,transparent 42%); }
+.supplied-banner-copy { position:absolute; z-index:1; top:20px; left:22px; right:22px; pointer-events:none; }
+.supplied-banner-copy>span { font-size:10px; line-height:1.4; font-weight:700; }
+.supplied-banner-copy h2 { max-width:90%; margin:6px 0 0; font-size:27px; line-height:1.15; letter-spacing:-.9px; font-weight:900; overflow-wrap:anywhere; }
+.supplied-brand-link { position:absolute; z-index:1; bottom:36px; left:16px; right:auto; display:flex; align-items:center; min-height:40px; padding:10px 15px; border-radius:22px; background:#171c18e8; color:#fff; font-size:11px; font-weight:700; }
+.supplied-brand-page>img { width:100%; height:auto; border-radius:18px; }
+@media(max-width:350px) { .supplied-banner-copy { top:17px; left:18px; right:18px; } .supplied-banner-copy h2 { font-size:24px; } }
+@media(prefers-reduced-motion:reduce) { .supplied-banner-track { transition:none; } }
+
+.supplied-banner-actions { position:absolute; z-index:2; left:16px; right:16px; bottom:16px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.supplied-banner-actions .supplied-brand-link,.supplied-banner-actions .event-banner-count { position:static; min-height:40px; padding:8px 12px; background:#171c18eb; border:1px solid #ffffff35; color:#f4f4f4; font-size:12.5px; }
+.supplied-banner-actions .supplied-brand-link { flex:none; justify-content:center; border-radius:22px; }
+.supplied-banner-actions .event-banner-count { min-width:64px; justify-content:center; border-radius:22px; }
+.supplied-banner-actions .event-banner-count.is-saved { color:var(--accent); }
+.supplied-campaign>.campaign-pagination { position:static; height:32px; margin-top:8px; }
+.supplied-campaign>.campaign-pagination .dots { gap:2px; background:transparent; }
+.supplied-campaign>.campaign-pagination .dots button { width:13px; min-height:32px; height:32px; }
+.supplied-campaign>.campaign-pagination .dots button::after { top:13px; left:3.5px; }
+.supplied-campaign>.campaign-pagination .dots button.on { width:24px; }
+.supplied-campaign>.campaign-pagination .dots button.on::after { left:2px; }
+#phone.home .supplied-campaign+.pad { padding-top:12px; }
+
+.supplied-banner-meta { display:grid; gap:5px; margin-top:10px; max-width:100%; font-size:12.5px; line-height:1.5; font-weight:650; }
+.supplied-banner-place { max-width:100%; overflow-wrap:anywhere; }
+.supplied-slide::after { background:linear-gradient(180deg,#fbf1e4ed, #fbf1e4a6 36%,transparent 68%); }
+.supplied-slide.tone-olive::after { background:linear-gradient(180deg,#d9e7a4f2,#d9e7a4bd 36%,transparent 68%); }
+.supplied-slide.tone-monchhichi::after { background:linear-gradient(180deg,#ae0009cc,#ae000955 40%,transparent 70%); }
+.supplied-slide.tone-tiffany::after { background:linear-gradient(180deg,#83d2cbf2,#83d2cbbd 36%,transparent 68%); }
+
+.supplied-slide.tone-magic {color:#fff6df;background:#543572;}
+.supplied-slide.tone-magic::after {background:linear-gradient(180deg,#48225fe8,#48225f70 38%,transparent 68%);}

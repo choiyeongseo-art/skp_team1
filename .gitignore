@@ -10,3 +10,14 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Local preview / deployment state (never commit)
+node_modules/
+.vercel/
+.local/
+/public/
+.vercel
+.env*
+
+# Runtime map configuration is loaded from the existing public production endpoint
+/busan-drop/integration/mapbox-config.js

@@ -1,0 +1,98 @@
+#phone.pass .viewport { bottom:calc(var(--nav-height) + var(--safe-bottom) + 80px); padding-bottom:12px; }
+.shopping-pass { padding:6px 18px 24px; color:#f3f4f5; font-size:15px; line-height:1.6; }
+.pass-title { margin:10px 0 24px; }
+.pass-title>span { color:#9ea4ad; font-size:12.5px; letter-spacing:1.8px; }
+.pass-title h2 { display:flex; align-items:center; justify-content:space-between; margin:7px 0; font-size:32px; line-height:1.2; letter-spacing:-1px; }
+.pass-title h2 svg { width:32px; height:32px; color:var(--accent); }
+.pass-title p { margin:12px 0 0; font-size:16px; color:#bac0c7; line-height:1.7; }
+.pass-ticket { position:relative; isolation:isolate; background:var(--accent); color:#171819; border-radius:18px; padding:20px 20px 15px; margin:0 0 26px; overflow:hidden; }
+.pass-ticket::before,.pass-ticket::after { content:''; position:absolute; width:20px; height:20px; border-radius:50%; background:#111; top:calc(100% - 52px); }
+.pass-ticket::before { left:-10px; }.pass-ticket::after { right:-10px; }
+.pass-ticket>span { font-size:12.5px; letter-spacing:1.2px; font-weight:700; }
+.pass-ticket>strong { display:block; white-space:pre-line; font-size:24px; font-weight:900; line-height:1.4; letter-spacing:-.8px; padding:12px 0 20px; }
+.pass-ticket>div { display:flex; justify-content:space-between; gap:6px; padding-top:12px; border-top:1px dashed #17181970; font-size:12.5px; font-weight:800; }
+.pass-settings { background:linear-gradient(145deg,#282b2e,#1d1f22); border:1px solid #ffffff22; border-radius:18px; padding:18px 16px; margin-bottom:28px; }
+.pass-section-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:14px; }
+.pass-section-head h3 { margin:0; font-size:13px; color:var(--accent); font-weight:700; display:flex; gap:10px; align-items:center; }
+.pass-section-head h3>span { font-size:20px; font-weight:800; color:#f3f4f5; letter-spacing:-.4px; }
+.pass-section-head>button { min-height:44px; padding:5px 0 5px 8px; font-size:12.5px; color:#b9c0c7; background:transparent; flex-shrink:0; }
+.pass-trip-dates { display:flex; gap:10px; align-items:center; }
+.pass-trip-dates>.icon { width:25px; height:25px; color:var(--accent); flex-shrink:0; }
+.pass-trip-dates strong { display:block; font-size:15px; font-weight:750; }
+.pass-trip-dates span { display:block; font-size:12.5px; color:#a9b0b8; margin-top:4px; }
+.pass-tastes { display:flex; gap:6px; flex-wrap:wrap; margin:16px 0; }
+.pass-tastes>span { border:1px solid #ffd62845; background:#ffd62812; color:#e6d478; border-radius:7px; padding:4px 8px; font-size:12.5px; }
+.pass-fields { display:grid; grid-template-columns:1.1fr 1fr; gap:8px; margin-top:18px; }
+.pass-fields label { min-width:0; color:#b8bfc8; font-size:12.5px; font-weight:600; }
+.pass-fields input,.pass-fields select,.pass-choice>select { display:block; color-scheme:dark; width:100%; min-width:0; box-sizing:border-box; min-height:48px; border:1px solid #ffffff30; background:#17191c; color:#f1f3f6; border-radius:10px; padding:10px 8px; font:inherit; font-size:14px; margin-top:7px; }
+.pass-fields input:focus-visible,.pass-fields select:focus-visible,.pass-choice>select:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.pass-transport { display:flex; gap:7px; margin-top:12px; }
+.pass-transport button { flex:1; min-height:44px; border:1px solid #ffffff20; border-radius:9px; background:transparent; color:#aeb5be; font-size:14px; }
+.pass-transport button[aria-pressed=true] { background:#ffd62819; border-color:#ffd62899; color:var(--accent); }
+.pass-helper { color:#a5adb8; font-size:12.5px; line-height:1.75; margin:0 0 16px; }
+.pass-choice { background:#202326; border:1px solid #ffffff1c; border-radius:15px; padding:14px; margin-bottom:12px; }
+.pass-choice.unavailable { opacity:.65; }
+.pass-choice-top { display:flex; gap:12px; align-items:center; }
+.pass-choice-top>img { width:52px; height:64px; object-fit:cover; border-radius:8px; flex-shrink:0; }
+.pass-choice-top>label { min-width:0; flex:1; position:relative; padding-right:29px; cursor:pointer; }
+.pass-choice-top strong { font-size:16px; display:block; }
+.pass-choice-top label>span { font-size:12.5px; color:#b8bec7; line-height:1.6; display:block; margin-top:4px; }
+.pass-choice-top input { position:absolute; right:0; top:4px; width:21px; height:21px; accent-color:var(--accent); }
+.pass-choice>select { font-size:13px; margin:12px 0 8px; }
+.pass-status { display:inline-block; font-size:12.5px; line-height:1.5; color:#b4bbc6; }
+.pass-status.open { color:#bddd96; }.pass-status.check { color:#f5d467; }.pass-status.off { color:#edb0a4; }
+.pass-course-summary { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+.pass-course-summary>strong { font-size:32px; line-height:1.2; }
+.pass-course-summary>strong>span { font-size:13px; margin-left:7px; font-weight:600; color:#b7bfc9; }
+.pass-course-summary>span { font-size:12.5px; color:#aab3bf; text-align:right; max-width:55%; }
+.pass-map-wrap { position:relative; background:#24272a; border:1px solid #ffffff20; border-radius:16px; overflow:hidden; margin-bottom:12px; }
+#shoppingPassMap { height:250px; width:100%; color:#b9c0ca; font-size:14px; }
+.pass-map-note { position:absolute; z-index:1; top:12px; left:12px; font-size:12.5px; padding:6px 10px; border-radius:20px; background:#17191de6; pointer-events:none; color:#e3e8ee; }
+.pass-map-pin { width:32px; height:32px; display:grid; place-items:center; border:2px solid #171819; border-radius:50%; background:var(--accent); color:#141414; font-size:16px; font-weight:900; box-shadow:0 3px 10px #0006; }
+.pass-stops { list-style:none; padding:0; margin:24px 0 0; }
+.pass-stops>li { position:relative; display:flex; gap:10px; padding-bottom:20px; }
+.pass-stops>li:not(:last-child)::before { content:''; position:absolute; top:29px; bottom:0; left:14px; width:1px; background:#ffd62850; }
+.pass-stop-number { position:relative; background:var(--accent); width:29px; height:29px; border-radius:50%; display:grid; place-items:center; flex-shrink:0; color:#111; font-size:14px; font-weight:900; margin-top:13px; }
+.pass-stops article { flex:1; min-width:0; border:1px solid #ffffff1c; border-radius:14px; background:#202326; padding:12px; }
+.pass-stop-heading { display:flex; justify-content:space-between; align-items:center; gap:6px; }
+.pass-stop-heading>span { font-size:12.5px; color:#b9c0cb; }
+.pass-stop-heading>div { display:flex; gap:4px; }
+.pass-stop-heading button { background:#ffffff08; color:#d4d9df; border-radius:7px; min-width:34px; min-height:44px; font-size:18px; }
+.pass-stop-heading button:disabled { opacity:.25; }
+.pass-stops h4 { font-size:17px; line-height:1.5; margin:7px 0; letter-spacing:-.3px; }
+.pass-stops p { font-size:13px; color:#aeb6c1; margin:7px 0 10px; line-height:1.7; }
+.pass-stop-actions { display:flex; flex-wrap:wrap; gap:6px 10px; margin-top:10px; }
+.pass-stop-actions button,.pass-stop-actions a { min-height:44px; display:flex; align-items:center; background:none; color:#e3e7ec; text-decoration:none; font-size:12.5px; padding:4px 0; }
+.pass-stop-actions a { color:var(--accent); }.pass-stop-actions button[aria-pressed=true] { color:#bddd96; }
+.pass-stops .visited article { border-color:#bddd9655; }.pass-stops .visited .pass-stop-number { background:#bddd96; }
+.pass-empty { text-align:center; padding:26px 0; }
+.pass-empty>svg { width:48px; height:48px; margin:0 auto 16px; color:var(--accent); }
+.pass-empty h3 { font-size:20px; line-height:1.5; margin:0 0 10px; letter-spacing:-.5px; }
+.pass-empty p { color:#aeb7c2; font-size:14px; margin:8px 0 22px; line-height:1.8; }
+.pass-primary { display:flex; align-items:center; justify-content:center; gap:14px; min-height:48px; border-radius:12px; padding:10px 16px; background:var(--accent); color:#151619; text-decoration:none; font-size:15px; font-weight:800; box-sizing:border-box; }
+.pass-primary svg { width:23px; height:23px; }.pass-primary:disabled { background:#34383d; color:#8f98a5; }
+.pass-empty .pass-primary { width:100%; }.pass-preview { background:none; color:#d7dce3; text-decoration:underline; text-underline-offset:4px; min-height:44px; padding:12px; font-size:13px; margin-top:12px; }
+.pass-footer { display:flex; align-items:center; gap:12px; min-height:80px; padding:12px 18px; background:#1c1e20; border-top:1px solid #ffffff20; box-sizing:border-box; }
+.pass-footer>span { flex:0 0 auto; font-size:12.5px; color:#aeb6c0; }.pass-footer>span b { display:block; color:#f2f5f8; font-size:16px; }.pass-footer .pass-primary { flex:1; }
+.pass-footer>strong { font-size:16px; text-align:center; width:100%; color:#d8e7b7; }
+.pass-footnote { color:#838e9e; font-size:12.5px; text-align:center; margin:20px 0 0; }
+.pass-demo-notice { border:1px solid #ffd62844; border-radius:10px; padding:10px 12px; margin:-8px 0 22px; color:#e5cf7c; font-size:12.5px; }
+.pass-demo-notice>button { color:#f0df9f; background:none; display:block; min-height:44px; font-size:13px; text-decoration:underline; }
+.saved-to-pass { display:block; width:100%; min-height:48px; background:#ffd62816; color:var(--accent); border:1px solid #ffd62855; padding:10px; border-radius:12px; margin-bottom:20px; font-size:14px; font-weight:700; }
+@media(max-width:350px){.shopping-pass{padding-inline:16px}.pass-settings{padding-inline:12px}.pass-ticket{padding-inline:16px}.pass-ticket>strong{font-size:22px}.pass-fields input,.pass-fields select{font-size:12.5px;padding-inline:5px}.pass-title h2{font-size:30px}.pass-stop-actions{gap:5px 8px}}
+
+.pass-route-meta { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 18px; }
+.pass-route-meta>span { background:#ffffff09; border:1px solid #ffffff16; border-radius:6px; padding:4px 7px; color:#bac2cd; font-size:12.5px; }
+.pass-map-origin { background:#22272d; color:#ffd628; border:2px solid #ffd628; border-radius:16px; padding:3px 7px; font-size:12.5px; font-weight:800; }
+
+.pass-category-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:20px 0 24px; }
+.pass-category-grid button { min-width:0; min-height:44px; padding:10px 4px; border:1px solid #ffffff18; border-radius:10px; background:#303236; color:#c5cad1; font-size:14px; font-weight:700; }
+.pass-category-grid button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#171717; }
+.pass-category-grid button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+
+.pass-origin-field {grid-template-columns:1fr;}
+.pass-visit-date {display:block; font-size:12.5px; color:#bdc5ce; margin:12px 0;}
+.pass-visit-date input {display:block; width:100%; min-height:44px; border:1px solid #ffffff30; background:#17191c; color:#f1f3f6; color-scheme:dark; border-radius:9px; padding:8px; margin-top:6px; font:inherit; font-size:14px;}
+.pass-event-preview {display:block; background:none; color:var(--accent); font-size:12.5px; min-height:40px; padding:8px 0;}
+.pass-stop-date {display:block; color:var(--accent); font-size:13px; margin:5px 0;}
+.pass-choices .pass-section-head>span {font-size:12.5px; color:#b9c0c7; white-space:nowrap;}

@@ -1,0 +1,326 @@
+{
+  "production": "https://busandrop.vercel.app",
+  "deploymentId": "dpl_BBQUeQS9ayWCwWUufhVPJgc47qPm",
+  "files": [
+    {
+      "path": "app.js",
+      "sha256": "2852ffcfb77cab4066dcc25c19b0aae4a6996c264d9ae4d9b9dac30ee16ff902"
+    },
+    {
+      "path": "assets/banners/home-20261105/gelatopique-user-20261106.png",
+      "sha256": "5276332ced13ca21a08aa545420e96583751a2c5456b44fe29f2e1b59a25da0c"
+    },
+    {
+      "path": "assets/banners/home-20261105/gelatopique.svg",
+      "sha256": "e8ecc1d4f1aa7aaef144d26b7df4a5256913b2a3082f09b5c1ca44cb0cfcdca9"
+    },
+    {
+      "path": "assets/banners/home-20261105/grand-josun.svg",
+      "sha256": "c4a033c2cf8d758b52e3673306c4f16074c2e8f95d3a05944377e6a871339855"
+    },
+    {
+      "path": "assets/banners/home-20261105/harrypotter-user-20261106.png",
+      "sha256": "449b26c86f3a1b7b1b0fd0c798bc4e724424185699ad788af2144ff1586d77ed"
+    },
+    {
+      "path": "assets/banners/home-20261105/hinakuu-user-20261106.png",
+      "sha256": "46030a1cbb1e7f7b911f7042a0ecc65602d53553498d7349e71bf6ab77c13499"
+    },
+    {
+      "path": "assets/banners/home-20261105/maplestory.svg",
+      "sha256": "4628f686513b3d1829588d8e1da69d57e296145522166dfb5a6e9c26c3722927"
+    },
+    {
+      "path": "assets/banners/home-20261105/monchhichi.jpg",
+      "sha256": "3d6e186c4ecb4c77766cf9ef15b939273b2a439cfa0cc63faf23e1db35b595c0"
+    },
+    {
+      "path": "assets/banners/home-20261105/monchhichi.png",
+      "sha256": "d1c9964d686b679b9b84f3cc857a175a5be7bc8a999966e8959282ea5c69e8dc"
+    },
+    {
+      "path": "assets/banners/home-20261105/mugiwara-user-20261106.png",
+      "sha256": "a44ff139bf8585cc89f8d26404eca2c17130131ccbaede960c8743dde5123492"
+    },
+    {
+      "path": "assets/banners/home-20261105/mugiwara.svg",
+      "sha256": "4a495fedccd3d4a643e57781104e49c0457ef8be47232fd92e096ec6b5b70d72"
+    },
+    {
+      "path": "assets/banners/home-20261105/oliveyoung.jpg",
+      "sha256": "3c9281ec8ed1169c0875b8b21dcd52d8e0f1d44cba4eea0b045db19c38b0f19d"
+    },
+    {
+      "path": "assets/banners/home-20261105/oliveyoung.png",
+      "sha256": "2afecf173d645a7b6c1ed7c55b2a3e3202d79ec261eef70577f4e99ed8104bf0"
+    },
+    {
+      "path": "assets/banners/home-20261105/sanx.svg",
+      "sha256": "9eb2feb858e65213b450fd0e00f89083e0d36db55266dcc75cc05c0c9cf2de7e"
+    },
+    {
+      "path": "assets/banners/home-20261105/signiel.svg",
+      "sha256": "1e7d35cff73f556c0ca3ba6a9ed569d04e40d3a6cc76d570edab6872097102ce"
+    },
+    {
+      "path": "assets/banners/home-20261105/tiffany.jpg",
+      "sha256": "82a56b615ad5052ef6569fa491be5ca3e956ed8ab4da63d1af7c7a9cef57ff0b"
+    },
+    {
+      "path": "assets/banners/home-20261105/tiffany.png",
+      "sha256": "18b9663b3cf2a7cddb204fd1d4a668d7860f2b1c92da8fc246126197070e0ab5"
+    },
+    {
+      "path": "assets/banners/home-20261105/topten.jpg",
+      "sha256": "822fd6d668e96204a174f3693d40b9ae208843ce2e2c28c4fff27fda026ae299"
+    },
+    {
+      "path": "assets/banners/home-20261105/topten.png",
+      "sha256": "08567d5fa3d550913a76d311497ee3a2099b19e30ef14d8314bb83eac7c1a644"
+    },
+    {
+      "path": "assets/banners/home-20261105/tunaschool-user.png",
+      "sha256": "056613da7e5af437441ad7c57b8350dd591237b1c61e69a73111a5aaf52db0c2"
+    },
+    {
+      "path": "assets/banners/home-20261105/tunaschool.svg",
+      "sha256": "b105615b912a2a6b8ebea1c9c848e50a3c8a39db25335b7e0a2bd987836f6aa1"
+    },
+    {
+      "path": "assets/banners/home-20261105/uniqlo.jpg",
+      "sha256": "83e5b07bb225c4fc1f847fe096fdc0c067e1ffeeb84a0862d8d11b8a883c464b"
+    },
+    {
+      "path": "assets/banners/home-20261105/uniqlo.png",
+      "sha256": "5d835f900471e703f8dce601f2c6e21fb8424f4bac11540334566a6bbca28f06"
+    },
+    {
+      "path": "assets/banners/home-20261105/wackywilly-user-20261106.png",
+      "sha256": "48fad17c7235c15c4e98721bf8bef44f4aa616aadbb332b5405b4840893cb680"
+    },
+    {
+      "path": "assets/banners/home-20261105/wackywilly.svg",
+      "sha256": "da6583453985140afe642f966804a27596f552466bc6d54b2807a8af5c0188ad"
+    },
+    {
+      "path": "assets/banners/home-20261105/westin-josun.svg",
+      "sha256": "1997935197afa6db2dbdf89aba0c50ef15c359c522c7389bc35969420927590d"
+    },
+    {
+      "path": "assets/banners/home-20261105/yjack-user-20261106.png",
+      "sha256": "47c04610ecc5560be93b5702cb2b3af27008623c7916bccd442c7a8ad5922946"
+    },
+    {
+      "path": "assets/banners/home-20261105/yjack.svg",
+      "sha256": "1b38dee87d9e74a3acdd09ad6eb8a48aa76de0f28bfa038e4a3288008e18acae"
+    },
+    {
+      "path": "assets/banners/home-20261105/zara.jpg",
+      "sha256": "86da6984653a4866e6e03bd3f6f8a473830307e6658d070a970d6683e6149da1"
+    },
+    {
+      "path": "assets/banners/home-20261105/zara.png",
+      "sha256": "6b4c63e1445b41dc9b78df72ce1144e4bab30d66fbdf32cbcf3bc8a7d83fb94c"
+    },
+    {
+      "path": "assets/banners/oliveyoung-shopping.png",
+      "sha256": "2afecf173d645a7b6c1ed7c55b2a3e3202d79ec261eef70577f4e99ed8104bf0"
+    },
+    {
+      "path": "assets/banners/topten-shopping-v1.png",
+      "sha256": "08567d5fa3d550913a76d311497ee3a2099b19e30ef14d8314bb83eac7c1a644"
+    },
+    {
+      "path": "assets/banners/uniqlo-shopping-v1.png",
+      "sha256": "5d835f900471e703f8dce601f2c6e21fb8424f4bac11540334566a6bbca28f06"
+    },
+    {
+      "path": "assets/banners/zara-shopping-v1.png",
+      "sha256": "6b4c63e1445b41dc9b78df72ce1144e4bab30d66fbdf32cbcf3bc8a7d83fb94c"
+    },
+    {
+      "path": "assets/fonts/SUIT-Bold.ttf",
+      "sha256": "e9b000dcc7a21bc82289fa7d159119ed6dbae621fabdb2553a104394a208e23d"
+    },
+    {
+      "path": "assets/fonts/SUIT-ExtraBold.ttf",
+      "sha256": "4603d335820213dd248c545c2f5d54041d047022039932e6133a9032027e3862"
+    },
+    {
+      "path": "assets/fonts/SUIT-ExtraLight.ttf",
+      "sha256": "905a952a6121fb3b9979c28ad245c23f24fe3fdc700ad9329b32ba40a91c4ec4"
+    },
+    {
+      "path": "assets/fonts/SUIT-Heavy.ttf",
+      "sha256": "9dbd449ccaeb26bc154d66fa6a8d8a9089a00abdf4f556707031c710ab1b46f9"
+    },
+    {
+      "path": "assets/fonts/SUIT-Light.ttf",
+      "sha256": "15626037d575857c10fb189cd7f12a81fb80821aa3fd823c5985aab67a9255cf"
+    },
+    {
+      "path": "assets/fonts/SUIT-Medium.ttf",
+      "sha256": "06be0060927642883b9027b275744fc8234826e6563015ebe3324f3802ae005f"
+    },
+    {
+      "path": "assets/fonts/SUIT-Regular.ttf",
+      "sha256": "88c94c990b9996c558666ef07c11664ab177c3be191e2846950b48f245d02274"
+    },
+    {
+      "path": "assets/fonts/SUIT-SemiBold.ttf",
+      "sha256": "8d202e0341b9426b653c1b3d36b2c0d1f4b482a7dfa83baaccf84d355d688fbd"
+    },
+    {
+      "path": "assets/fonts/SUIT-Thin.ttf",
+      "sha256": "c72d5ae2ac8bbe89eab79d82218d47f5474a9c0b3261ac439080d13064c19766"
+    },
+    {
+      "path": "assets/nivea-black-friday.png",
+      "sha256": "ff28866f1dc1a50f3911fcc3ce763e7bf3893027a3790ad65be551731830cee7"
+    },
+    {
+      "path": "assets/places/cafe.png",
+      "sha256": "7515eeafcd5a97a05f31727d67fab0614c7a6d7258ab944e90a1c3fcb710c358"
+    },
+    {
+      "path": "assets/places/fashion.png",
+      "sha256": "b6a0248318378015b74b546117440818d0b333d6b5e90f6cd47f9c14da10d7a4"
+    },
+    {
+      "path": "assets/places/popup.png",
+      "sha256": "89f13b6c6df093abda52d308ee5a052f0a44b6b32d2d81ac1b2d4773c14228f2"
+    },
+    {
+      "path": "assets/products/nivea-repair-care/ff28866f1dc1a50f.png",
+      "sha256": "ff28866f1dc1a50f3911fcc3ce763e7bf3893027a3790ad65be551731830cee7"
+    },
+    {
+      "path": "data/content.js",
+      "sha256": "059c7ffe9f496cea59558df96dbeaf1183a38834522cf32c61c3af681f0548c2"
+    },
+    {
+      "path": "data/event-catalog.js",
+      "sha256": "d144941a8d13cc2209df716db5041da65048996f9e23079d90261a5c6c1b2f3e"
+    },
+    {
+      "path": "data/event-details.js",
+      "sha256": "53e408d1699bc300de0d59dda0b66c43b4160dac199039446fe503d11bafa014"
+    },
+    {
+      "path": "data/store-locations.js",
+      "sha256": "10fdf77b497b72b8af8abc52a60f83507e0a8d668f39cdfa045a4635ed25ebdd"
+    },
+    {
+      "path": "index.html",
+      "sha256": "5cbd44ac235ffd2de0dc7eb891a0f9ec8e1658adebceb510e65e43758c2ed727"
+    },
+    {
+      "path": "integration/event-detail-popup.css",
+      "sha256": "ab9c195a00aeef4d1d570cdc99cd85d02d31cdefcfe4103f545f92cf7f689000"
+    },
+    {
+      "path": "integration/event-detail-popup.js",
+      "sha256": "acda3a23282d1be979a12254411b756732207abb68d3a296fe9edd28fd8e8cc6"
+    },
+    {
+      "path": "integration/event-social.css",
+      "sha256": "344f53b841264887048b2794c76e5ae7c2f891aa99c31a85ec064d266ef1e64f"
+    },
+    {
+      "path": "integration/event-social.js",
+      "sha256": "aebcdfd723494ea0be6768cfe1b3a02b2f1e017ff60ea8f895ca012fc0ca6632"
+    },
+    {
+      "path": "integration/event-window.js",
+      "sha256": "c72720bf1a534b092ad9a0a527fd160421f18952ee6317236c5a4afdecec8900"
+    },
+    {
+      "path": "integration/header-language.css",
+      "sha256": "4d48f6504c37675eaa818b05ea4c7c388c44ebed2a7ad5595eccc9310382cc79"
+    },
+    {
+      "path": "integration/header-language.js",
+      "sha256": "d8bb2ee64660ccaeb524ac531dbd1d7744157b3a4964d07f6059eb5800ad015b"
+    },
+    {
+      "path": "integration/home-categories.css",
+      "sha256": "eb27910d43e71581c31effa54adc5cd5b8bce2b06440f31a5e9fa0892dd30cd0"
+    },
+    {
+      "path": "integration/home-categories.js",
+      "sha256": "49e80bcd0fde08cc2d1a13db5f2f5ca41ecb57952f73bba16cf1f2869b7de9d7"
+    },
+    {
+      "path": "integration/home-event-map.css",
+      "sha256": "292cacce9035fa993eaf8c3dfbbf6f23f9b1a77dc2271e42a8788eb042de2112"
+    },
+    {
+      "path": "integration/home-event-map.js",
+      "sha256": "6a7b91931d81825e9c639ece05fc6d02b7ed16c4161747eeb175af478453d053"
+    },
+    {
+      "path": "integration/mapbox-config.js",
+      "sha256": "f1426dfedc79686a631bf8fdf97efa391437cfd818155f7d245a465cd1375d11"
+    },
+    {
+      "path": "integration/mapbox-view.js",
+      "sha256": "422f7776b774d048a8c26846790b8245844768a6a59ec1dac918e85b8e43f411"
+    },
+    {
+      "path": "integration/navigation-spacing.css",
+      "sha256": "04eb3e7b539a2f3301fb6b21a092565b445e070a6d46f69d5ca57d42de8e2343"
+    },
+    {
+      "path": "integration/page-routes.js",
+      "sha256": "682974e4d73f2ea08dca16f1d89b970b74c5d975e8019a9eaaae95ab80a0cee6"
+    },
+    {
+      "path": "integration/pass-model.js",
+      "sha256": "0332b7ce614915b7f55b340f03ee86c0f80f4ed94e2b0cc60087ae7b5ae2898a"
+    },
+    {
+      "path": "integration/shopping-pass.css",
+      "sha256": "5ba5bdea13fe768c8506c5837d86bd53a6e549f39491e7d59a5302b5e44efb60"
+    },
+    {
+      "path": "integration/shopping-pass.js",
+      "sha256": "1cbd757719a51ef769a1b33fe7b9fa4834f80e4c127f5d4f8362b93e35ddc080"
+    },
+    {
+      "path": "integration/store-events-model.js",
+      "sha256": "55d9a1aaa604e9ca65a60769d8382dfa858c0e4d56f528f35dd85b98db1015fc"
+    },
+    {
+      "path": "integration/store-mapbox.css",
+      "sha256": "f9b13eb72dad3e520c75db25825c13f85a06ba0700c74a413cd2766de3046dc2"
+    },
+    {
+      "path": "integration/store-mapbox.js",
+      "sha256": "c7f9a90a296b807bc49965dc5c83e8d20c348ac8ce57b3137bbbf50032dc4f93"
+    },
+    {
+      "path": "integration/supplied-banners.css",
+      "sha256": "6835febbf5bc095827e795993dd3f79dac604fc9d39e8bbbc34edb308ca79636"
+    },
+    {
+      "path": "integration/supplied-banners.js",
+      "sha256": "4969217beccd89394ea091f04667473709a803f3ca2e084338d0261175d6d970"
+    },
+    {
+      "path": "language.js",
+      "sha256": "1c36996d13ead77c435051b3e41ed7051e8eec732637d17f4e5ebe09a0430cc2"
+    },
+    {
+      "path": "store-map.js",
+      "sha256": "3494fd9def398110c951fab9c5d8785d855ecdf9ed48da31312d68cad2f167f8"
+    },
+    {
+      "path": "style.css",
+      "sha256": "5aa08a70e751197be443f4cfce319ad36a6d681d951c307dc591c2267bc67cce"
+    },
+    {
+      "path": "thumbnail-assets.js",
+      "sha256": "8d3959bfa284ed994243b99e867bc9a478e2c0a6fcd6c9b9e83f9df9819d7a83"
+    }
+  ]
+}

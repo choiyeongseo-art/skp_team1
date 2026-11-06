@@ -1,0 +1,159 @@
+/* Keep product brand indices stable; register supplied brands and artwork separately. */
+(() => {
+  for(const brand of [
+    {name:'몬치치',logo:'MONCHHICHI',cat:'팝업',sale:'몬치치',desc:'몬치치 브랜드와 팝업 소식',asset:'monchhichi.jpg'},
+    {name:'티파니앤코',logo:'TIFFANY & CO.',cat:'패션',sale:'티파니앤코',desc:'티파니앤코 주얼리 브랜드 소식',asset:'tiffany.jpg'},
+    {name:'와키윌리',logo:'WACKY WILLY',cat:'패션',sale:'원이 스타일 팝업',desc:'와키윌리 × 리센느 원이 부산본점 팝업',asset:'wackywilly-user-20261106.png'},
+    {name:'참치학교',logo:'TUNA SCHOOL',cat:'팝업',sale:'참치학교 광복점 팝업',desc:'광복점 B1에서 만나는 참치학교',asset:'tunaschool-user.png'},
+    {"name": "원피스 무기와라 스토어", "logo": "MUGIWARA STORE", "cat": "굿즈", "sale": "무기와라 스토어 팝업", "desc": "서면에 모인 밀짚모자 굿즈. 원피스 캐릭터 상품과 한국 오리지널 굿즈를 부산본점에서 만나보세요.", "asset": "mugiwara-user-20261106.png"},
+    {"name": "와이잭", "logo": "YJACK", "cat": "패션", "sale": "와이잭 동부산 팝업", "desc": "기장에서 만나는 와이잭 특가. 티셔츠·팬츠와 시그니처·캐시미어 라인을 동부산점 팝업에서 살펴보세요.", "asset": "yjack-user-20261106.png"},
+    {"name": "젤라또 피케", "logo": "GELATO PIQUE", "cat": "패션", "sale": "포근한 룸웨어 팝업", "desc": "서면에서 만나는 포근한 룸웨어. 젤라또 피케의 룸웨어와 잡화, 구매금액별 사은품을 만나보세요.", "asset": "gelatopique-user-20261106.png"},
+    {"name": "리락쿠마·스미코구라시", "logo": "SAN-X", "cat": "굿즈", "sale": "산엑스 친구들 미니스토어", "desc": "서면에서 만나는 산엑스 친구들. 리락쿠마·스미코구라시 캐릭터 상품과 코구마르쉐 특별상품을 만나보세요.", "asset": "sanx.svg"},
+    {"name": "메이플스토리", "logo": "MAPLESTORY", "cat": "팝업", "sale": "메이플 월드로 떠나요", "desc": "기장에서 만나는 메이플 월드. 캐릭터 만들기·모바일 스탬프 랠리·공연·포토존과 굿즈를 즐기는 가을 시즌 축제예요.", "asset": "maplestory.svg"},
+{
+  "name": "시그니엘 부산",
+  "logo": "시그니엘 부산",
+  "cat": "숙박",
+  "sale": "바다 곁, 나만의 휴식",
+  "desc": "해운대 바다 곁에서 즐기는 디저트·프라이빗 다이닝·캔들 패키지와 브랜드 페스타를 살펴보세요.",
+  "asset": "signiel.svg"
+},
+{
+  "name": "웨스틴 조선 부산",
+  "logo": "웨스틴 조선 부산",
+  "cat": "숙박",
+  "sale": "해운대에서 누리는 쓱데이",
+  "desc": "객실 단독·조식·스위트 특가와 별도 다이닝 오퍼를 선택해 해운대에서 쉬어가세요.",
+  "asset": "westin-josun.svg"
+},
+{
+  "name": "그랜드 조선 부산",
+  "logo": "그랜드 조선 부산",
+  "cat": "숙박",
+  "sale": "바다 앞에서 쉬어가는 하루",
+  "desc": "디럭스·키즈 객실과 조식·스위트 패키지, 별도 다이닝 오퍼로 나만의 휴식을 준비하세요.",
+  "asset": "grand-josun.svg"
+},
+{
+  "name": "해리포터 마호도코로",
+  "logo": "HARRY POTTER",
+  "cat": "굿즈",
+  "sale": "서면에서 만나는 마법 굿즈",
+  "desc": "해리포터 세계관을 담은 가방·파우치·양말 등 생활 잡화를 만나보세요. 부산점 구매 사은품과 온라인 기획전은 각각의 조건을 확인해주세요.",
+  "asset": "harrypotter-user-20261106.png"
+},
+{
+  "name": "히나쿠우",
+  "logo": "HINAKUU",
+  "cat": "굿즈",
+  "sale": "부산에 놀러 온 히나쿠우",
+  "desc": "히나쿠우 캐릭터 굿즈와 코지하우스 상품을 만나보세요. 구매금액별 포토카드와 SNS 후기 엽서 등 조건별 선물을 확인할 수 있어요.",
+  "asset": "hinakuu-user-20261106.png"
+}
+  ]){
+    if(!brands.some(existing=>existing.name===brand.name))brands.push({...brand,verified:false,start:null,end:null,period:'공식 일정 확인 전',reported:'미등록',source:'',url:'',categories:[],supplied:true});
+  }
+  // Archive TOPTEN without reassigning product and store brand indices.
+  for(const brand of brands)brand.active=brand.name!=='탑텐';
+  if(brands[state.brand]?.active===false)state.brand=brands.findIndex(b=>b.active);
+  const uniqlo=brands.find(brand=>brand.name==='유니클로');
+  if(uniqlo){uniqlo.sale='연말 행사 안내';uniqlo.verified=false;uniqlo.start=null;uniqlo.end=null;}
+  const zara=brands.find(brand=>brand.name==='자라');
+  if(zara){zara.sale='블랙프라이데이 안내';zara.verified=false;zara.start=null;zara.end=null;}
+  const allSlides=[
+    {brand:1,file:'oliveyoung.jpg',tone:'olive'},
+    {brand:2,file:'uniqlo.jpg',tone:'fashion'},
+    {brand:3,file:'zara.jpg',tone:'fashion'},
+    {brand:brands.findIndex(b=>b.name==='몬치치'),file:'monchhichi.jpg',tone:'monchhichi'},
+    {brand:brands.findIndex(b=>b.name==='티파니앤코'),file:'tiffany.jpg',tone:'tiffany'},
+    {brand:brands.findIndex(b=>b.name==='와키윌리'),file:'wackywilly-user-20261106.png',tone:'fashion'},
+    {brand:brands.findIndex(b=>b.name==='참치학교'),file:'tunaschool-user.png',tone:'fashion'},
+    {brand:brands.findIndex(b=>b.name==="원피스 무기와라 스토어"),file:"mugiwara-user-20261106.png",tone:'fashion'},
+    {brand:brands.findIndex(b=>b.name==="와이잭"),file:"yjack-user-20261106.png",tone:'fashion'},
+    {brand:brands.findIndex(b=>b.name==="젤라또 피케"),file:"gelatopique-user-20261106.png",tone:'fashion'},
+    {brand:brands.findIndex(b=>b.name==="리락쿠마·스미코구라시"),file:"sanx.svg",tone:'fashion'},
+    {brand:brands.findIndex(b=>b.name==="메이플스토리"),file:"maplestory.svg",tone:'fashion'},
+{brand:brands.findIndex(b=>b.name==="시그니엘 부산"),file:'signiel.svg',tone:'fashion'},
+{brand:brands.findIndex(b=>b.name==="웨스틴 조선 부산"),file:'westin-josun.svg',tone:'fashion'},
+{brand:brands.findIndex(b=>b.name==="그랜드 조선 부산"),file:'grand-josun.svg',tone:'fashion'},
+{brand:brands.findIndex(b=>b.name==="해리포터 마호도코로"),file:'harrypotter-user-20261106.png',tone:'magic'},
+{brand:brands.findIndex(b=>b.name==="히나쿠우"),file:'hinakuu-user-20261106.png',tone:'fashion'}
+  ];
+  const directory='assets/banners/home-20261105/';
+  let slides=[];
+  const todayInKorea=()=>window.BUSAN_EVENT_WINDOW?.koreaToday()||new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const validDay=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value))&&new Date(value+'T00:00:00Z').toISOString().slice(0,10)===value;
+  const selectBannerSchedule=(campaign,today)=>{
+    if(!campaign||campaign.scheduleStatus!=='confirmed'||campaign.isActive===false)return null;
+    const schedules=campaign.scheduleKind==='booking'&&campaign.offers?.length?campaign.offers.map(offer=>({start:offer.bookingStart,end:offer.bookingEnd,name:offer.name})): [campaign];
+    return schedules.filter(s=>validDay(s.start)&&validDay(s.end)&&s.start<=s.end&&s.end>=today).sort((a,b)=>a.end.localeCompare(b.end)||a.start.localeCompare(b.start))[0]||null;
+  };
+  refreshCampaigns=()=>{
+    const today=todayInKorea(),currentBrand=slides[state.banner]?.brand;
+    const next=allSlides.map(slide=>({...slide,schedule:selectBannerSchedule(window.BUSAN_EVENT_CATALOG?.find(event=>event.brand===brands[slide.brand]?.name),today)}))
+      .filter(slide=>slide.schedule&&brands[slide.brand]?.active!==false&&window.BUSAN_EVENT_DETAILS?.[brands[slide.brand].name]?.isActive!==false)
+      .sort((a,b)=>a.schedule.end.localeCompare(b.schedule.end)||a.schedule.start.localeCompare(b.schedule.start)||a.brand-b.brand).slice(0,10);
+    const changed=JSON.stringify(slides)!==JSON.stringify(next);
+    slides=next;banners.splice(0,banners.length,...slides.map(slide=>slide.brand));
+    const retained=slides.findIndex(slide=>slide.brand===currentBrand);
+    state.banner=retained>=0?retained:Math.max(0,Math.min(state.banner,slides.length-1));
+    return changed;
+  };
+  const bannerActions=()=>{const brand=brands[slides[state.banner].brand];return `<button class="supplied-brand-link" data-banner-find-stores="${slides[state.banner].brand}" aria-controls="viewport">매장 찾기 ↗</button>${window.BUSAN_EVENT_SOCIAL?.counter(brand.name)||''}`;};
+  const bannerMeta=name=>{
+    const campaign=slides.find(slide=>brands[slide.brand].name===name)?.schedule,details=window.BUSAN_EVENT_DETAILS?.[name];
+    const rows=(window.BUSAN_STORE_LOCATIONS||[]).filter(item=>item.brand===name&&(item.eventParticipation||item.profile?.eventParticipation)!=='unconfirmed');
+    const period=campaign?.start&&campaign?.end?`${campaign.start.replaceAll('-','.')} – ${campaign.end.replaceAll('-','.')}`:'행사 일정 안내 전';
+    const place=name==='올리브영'?'부산 올리브영 전 매장':details?.bannerVenue||details?.venue||(rows.length===1?rows[0].name:'부산 · 매장별 위치 확인');
+    return `<div class="supplied-banner-meta"><span class="supplied-banner-period">${details?.periodLabel?esc(details.periodLabel)+' · ':''}${esc(period)}</span><span class="supplied-banner-place">${esc(place)}</span></div>`;
+  };
+  campaignBanner=()=>{
+    refreshCampaigns();
+    if(!slides.length)return '';
+    return `<div class="campaign-stage supplied-campaign"><div class="supplied-banner-viewport" id="hero" role="region" aria-label="브랜드 행사 배너" tabindex="0"><div class="supplied-banner-track" style="transform:translate3d(${-state.banner*100}%,0,0)">${slides.map((slide,index)=>{const brand=brands[slide.brand];return `<section class="supplied-slide tone-${slide.tone}" data-supplied-slide="${index}" aria-hidden="${index!==state.banner}" ${index!==state.banner?'inert':''}><img src="${directory+slide.file}" alt="${esc(brand.name)} 행사 배너" width="1000" height="1000" decoding="async" draggable="false"><div class="supplied-banner-copy"><span>${esc(brand.name)}</span><h2>${esc(slide.schedule.name&&brand.name==='시그니엘 부산'?slide.schedule.name:brand.sale)}</h2>${bannerMeta(brand.name)}</div></section>`;}).join('')}</div><div class="supplied-banner-actions">${bannerActions()}</div></div><div class="campaign-pagination" aria-label="행사 배너 선택"><div class="dots">${slides.map((slide,index)=>`<button data-banner="${index}" class="${index===state.banner?'on':''}" aria-label="${esc(brands[slide.brand].name)} 행사 배너" aria-pressed="${index===state.banner}"></button>`).join('')}</div></div></div>`;
+  };
+  switchCampaign=next=>{
+    restartBannerRotation();
+    if(refreshCampaigns()){if(state.screen==='home')render();return;}
+    if(document.querySelector('.header-language[open]')||!Number.isInteger(next)||next<0||next>=slides.length)return;
+    state.banner=next;
+    const actions=document.querySelector('.supplied-banner-actions');if(actions)actions.innerHTML=bannerActions();
+    const track=document.querySelector('.supplied-banner-track');
+    if(track)track.style.transform=`translate3d(${-100*next}%,0,0)`;
+    document.querySelectorAll('[data-supplied-slide]').forEach(slide=>{
+      const inactive=Number(slide.dataset.suppliedSlide)!==next;
+      slide.setAttribute('aria-hidden',String(inactive));slide.inert=inactive;
+    });
+    document.querySelectorAll('[data-banner]').forEach(button=>{
+      const active=Number(button.dataset.banner)===next;
+      button.classList.toggle('on',active);button.setAttribute('aria-pressed',String(active));
+    });
+  };
+  document.addEventListener('click',event=>{
+    const button=event.target.closest('[data-banner-find-stores]');
+    if(!button)return;
+    const brand=Number(button.dataset.bannerFindStores);
+    if(!Number.isInteger(brand)||!brands[brand])return;
+    state.brand=brand;state.mapLocal=false;state.storeRegion=null;state.realStoreId=null;
+    state.storeCategory=window.BUSAN_STORE_BRAND_CATEGORIES?.[brands[brand].name]?.[0]||'전체';
+    nav('stores');
+  });
+  const originalBrandPage=brandPage;
+  brandPage=()=>{
+    const brand=brands[state.brand];if(!brand.supplied)return originalBrandPage();
+    return head(brand.name+' 브랜드관',true)+`<div class="pad supplied-brand-page"><img src="${directory+brand.asset}" alt="${esc(brand.name)} 브랜드 이미지" width="1000" height="1000"><h2>${esc(brand.name)}</h2><p>${esc(brand.desc)}</p><p class="notice">행사 일정과 상세 정보를 준비하고 있어요.</p></div>`;
+  };
+  const originalStoreMap=storeMap;
+  storeMap=()=>originalStoreMap().replace(/<button data-map-brand="(\d+)"[\s\S]*?<\/button>/g,(html,index)=>brands[Number(index)]?.supplied?'':html);
+  const originalBind=bindView;
+  bindView=()=>{
+    originalBind();
+    document.querySelector('.supplied-banner-viewport')?.addEventListener('keydown',event=>{
+      if(!['ArrowRight','ArrowLeft'].includes(event.key))return;
+      event.preventDefault();switchCampaign((state.banner+(event.key==='ArrowRight'?1:slides.length-1))%slides.length);
+    });
+  };
+  specs.home[2][1]='캠페인 배너|종료일이 가까운 확정 행사 최대 10개|한국 날짜 기준 종료 행사 제외 · 3초마다 전환';
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&state.screen==='home'&&refreshCampaigns())render();});
+  refreshCampaigns();
+})();

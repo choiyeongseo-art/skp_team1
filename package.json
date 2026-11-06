@@ -1,0 +1,19 @@
+{
+  "name": "busandrop",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node scripts/build.cjs",
+    "test": "node --test tests/current/*.test.cjs",
+    "verify:handoff": "node scripts/verify-handoff.cjs"
+  },
+  "dependencies": {
+    "express": "4.21.2",
+    "@vercel/blob": "2.8.2"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "regions": [
+    "icn1"
+  ],
+  "functions": {
+    "api/event-saves.js": {
+      "maxDuration": 30,
+      "includeFiles": "busan-drop/data/event-catalog.js"
+    }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/busandrop/login",
+      "permanent": false
+    },
+    {
+      "source": "/busandrop",
+      "destination": "/busandrop/login",
+      "permanent": false
+    },
+    {
+      "source": "/home",
+      "destination": "/busandrop/home",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/busandrop/event-saves",
+      "destination": "/api/event-saves"
+    },
+    {
+      "source": "/api/busandrop/event-saves/:eventId",
+      "destination": "/api/event-saves?eventId=:eventId"
+    },
+    {
+      "source": "/busandrop/login",
+      "destination": "/busandrop/index.html"
+    },
+    {
+      "source": "/busandrop/home",
+      "destination": "/busandrop/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/busandrop/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
