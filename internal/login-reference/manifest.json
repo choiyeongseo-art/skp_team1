@@ -1,0 +1,12 @@
+{
+  "sourceProject": "ZEN WAY / zen-way (reference export)",
+  "portedAt": "2026-11-08",
+  "scope": "Login layout/provider SVGs/email pending disclosure/legal structure. Blank backdrop; home wordmark; new headline. Next.js/React adapted to static app. No credentials, sessions, OAuth callbacks, account database or analytics imported.",
+  "legalStatus": "Original policies are draft-2026-10-26; adapted BUSAN DROP draft distinguishes local prototype from original account features, contacts pending confirmation.",
+  "sources": {
+    "zen-way-login.tsx.txt": "100934f5350beac91cfad65945c9b9bcc30edf404004d1eafc79eeb3dc386984",
+    "zen-way-privacy.tsx.txt": "e92feebc2c8c22fcef1a0f87b799c83513da243631be566601001b841571a15f",
+    "zen-way-terms.tsx.txt": "456098bd2df414228345a6c8beed548417739a51a5486f87eb59358908042c15",
+    "zen-way-email-sign-in.tsx.txt": "6c0dc4762ef81625c4034c397baa3b4b548522aaa2ab8402eac9f6fbbe8f4e33"
+  }
+}

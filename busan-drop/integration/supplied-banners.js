@@ -49,6 +49,30 @@
   "sale": "부산에 놀러 온 히나쿠우",
   "desc": "히나쿠우 캐릭터 굿즈와 코지하우스 상품을 만나보세요. 구매금액별 포토카드와 SNS 후기 엽서 등 조건별 선물을 확인할 수 있어요.",
   "asset": "hinakuu-user-20261106.png"
+},
+{
+  "name": "달달더마켓",
+  "logo": "달달더마켓",
+  "cat": "로컬",
+  "sale": "부산 디저트 16곳 한자리에",
+  "desc": "부산 지역 디저트·간식 브랜드 16개사가 참여하는 기간 한정 판매전. 미리 만나는 크리스마스를 테마로 베이커리·천연 아이스크림·음료 등 다양한 간식을 소개해요.",
+  "asset": "daldal-market.svg"
+},
+{
+  "name": "광안리 M 드론×레이저쇼",
+  "logo": "광안리 M 드론×레이저쇼",
+  "cat": "로컬",
+  "sale": "성의 수호자 with 레이저쇼",
+  "desc": "11월 21일 광안리 밤하늘에서 만나는 드론과 레이저 결합 공연. 19시·21시 두 차례, 회당 약 24분 동안 진행돼요.",
+  "asset": "gwangalli-drone.svg"
+},
+{
+  "name": "G-STAR",
+  "logo": "G-STAR",
+  "cat": "로컬",
+  "sale": "신작 게임을 만나는 부산 벡스코",
+  "desc": "11월 19~22일 벡스코에서 열리는 일반 관람 BTC 게임 전시. 관람 전날까지 온라인 예매가 필요하며 현장 판매는 없어요. 부스별 체험·굿즈·대기·연령 조건은 각각 확인해주세요.",
+  "asset": "gstar.svg"
 }
   ]){
     if(!brands.some(existing=>existing.name===brand.name))brands.push({...brand,verified:false,start:null,end:null,period:'공식 일정 확인 전',reported:'미등록',source:'',url:'',categories:[],supplied:true});
@@ -77,7 +101,10 @@
 {brand:brands.findIndex(b=>b.name==="웨스틴 조선 부산"),file:'westin-josun.svg',tone:'fashion'},
 {brand:brands.findIndex(b=>b.name==="그랜드 조선 부산"),file:'grand-josun.svg',tone:'fashion'},
 {brand:brands.findIndex(b=>b.name==="해리포터 마호도코로"),file:'harrypotter-user-20261106.png',tone:'magic'},
-{brand:brands.findIndex(b=>b.name==="히나쿠우"),file:'hinakuu-user-20261106.png',tone:'fashion'}
+{brand:brands.findIndex(b=>b.name==="히나쿠우"),file:'hinakuu-user-20261106.png',tone:'fashion'},
+{brand:brands.findIndex(b=>b.name==="달달더마켓"),file:'daldal-market.svg',tone:'fashion'},
+{brand:brands.findIndex(b=>b.name==="광안리 M 드론×레이저쇼"),file:'gwangalli-drone.svg',tone:'fashion'},
+{brand:brands.findIndex(b=>b.name==="G-STAR"),file:'gstar.svg',tone:'fashion'}
   ];
   const directory='assets/banners/home-20261105/';
   let slides=[];

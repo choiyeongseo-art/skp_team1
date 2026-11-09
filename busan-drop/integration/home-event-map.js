@@ -21,7 +21,7 @@
   };
   const language=()=>{
     if(!map?.isStyleLoaded())return;
-    const field={ko:'name_ko',ja:'name_ja',zh:'name_zh-Hans',en:'name_en'}[state.language]||'name_en';
+    const field={ko:'name_ko',ja:'name_ja',zh:'name_zh-Hans','zh-TW':'name_zh-Hant',en:'name_en'}[state.language]||'name_en';
     for(const name of ['country-label','state-label','settlement-label','settlement-subdivision-label','poi-label','road-label']){
       if(map.getLayer(name))map.setLayoutProperty(name,'text-field',['coalesce',['get',field],['get','name']]);
     }

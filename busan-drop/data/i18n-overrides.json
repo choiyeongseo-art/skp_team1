@@ -1,0 +1,2810 @@
+{
+  "드롭 플랜": {
+    "en": "Drop Plan",
+    "ja": "ドロッププラン",
+    "zh-CN": "Drop Plan",
+    "zh-TW": "Drop Plan"
+  },
+  "나만의 드롭 플랜 만들기": {
+    "en": "Create my Drop Plan",
+    "ja": "自分だけのプランを作る",
+    "zh-CN": "创建我的行程",
+    "zh-TW": "建立我的行程"
+  },
+  "드롭 플랜 만들기/로그인": {
+    "en": "Create a plan / Sign in",
+    "ja": "プラン作成 / ログイン",
+    "zh-CN": "创建行程 / 登录",
+    "zh-TW": "建立行程 / 登入"
+  },
+  "드롭 플랜 만들기": {
+    "en": "Create a plan",
+    "ja": "プランを作成",
+    "zh-CN": "创建行程",
+    "zh-TW": "建立行程"
+  },
+  "로그인": {
+    "en": "Sign in",
+    "ja": "ログイン",
+    "zh-CN": "登录",
+    "zh-TW": "登入"
+  },
+  "다시 만나 반가워요.": {
+    "en": "Welcome back.",
+    "ja": "おかえりなさい。",
+    "zh-CN": "欢迎回来。",
+    "zh-TW": "歡迎回來。"
+  },
+  "이메일": {
+    "en": "Email",
+    "ja": "メールアドレス",
+    "zh-CN": "电子邮箱",
+    "zh-TW": "電子郵件"
+  },
+  "비밀번호": {
+    "en": "Password",
+    "ja": "パスワード",
+    "zh-CN": "密码",
+    "zh-TW": "密碼"
+  },
+  "체험용 비밀번호 8자 이상": {
+    "en": "Demo password, 8+ characters",
+    "ja": "体験用パスワード・8文字以上",
+    "zh-CN": "体验密码，至少8个字符",
+    "zh-TW": "體驗密碼，至少8個字元"
+  },
+  "가입 없이 계속 둘러보기": {
+    "en": "Continue as a guest",
+    "ja": "ゲストとして続ける",
+    "zh-CN": "以访客身份继续",
+    "zh-TW": "以訪客身分繼續"
+  },
+  "부산 가기 전,": {
+    "en": "Before Busan,",
+    "ja": "釜山に行く前に、",
+    "zh-CN": "出发去釜山前，",
+    "zh-TW": "出發去釜山前，"
+  },
+  "혜택부터": {
+    "en": "find your perks.",
+    "ja": "お得な情報を",
+    "zh-CN": "先把优惠",
+    "zh-TW": "先把優惠"
+  },
+  "챙겨요.": {
+    "en": "Make it worth the drop.",
+    "ja": "チェックしよう。",
+    "zh-CN": "准备好。",
+    "zh-TW": "準備好。"
+  },
+  "혜택 둘러보기": {
+    "en": "Explore offers",
+    "ja": "特典を探す",
+    "zh-CN": "浏览优惠",
+    "zh-TW": "瀏覽優惠"
+  },
+  "프로토타입 체험": {
+    "en": "Prototype demo",
+    "ja": "プロトタイプ体験",
+    "zh-CN": "原型体验",
+    "zh-TW": "原型體驗"
+  },
+  "홈": {
+    "en": "Home",
+    "ja": "ホーム",
+    "zh-CN": "首页",
+    "zh-TW": "首頁"
+  },
+  "매장찾기": {
+    "en": "Stores",
+    "ja": "店舗検索",
+    "zh-CN": "找门店",
+    "zh-TW": "找門店"
+  },
+  "매장 찾기": {
+    "en": "Find stores",
+    "ja": "店舗を探す",
+    "zh-CN": "查找门店",
+    "zh-TW": "尋找門店"
+  },
+  "저장": {
+    "en": "Saved",
+    "ja": "保存",
+    "zh-CN": "收藏",
+    "zh-TW": "收藏"
+  },
+  "마이": {
+    "en": "My page",
+    "ja": "マイページ",
+    "zh-CN": "我的",
+    "zh-TW": "我的"
+  },
+  "전체": {
+    "en": "All",
+    "ja": "すべて",
+    "zh-CN": "全部",
+    "zh-TW": "全部"
+  },
+  "전체 보기": {
+    "en": "View all",
+    "ja": "すべて見る",
+    "zh-CN": "查看全部",
+    "zh-TW": "查看全部"
+  },
+  "로컬": {
+    "en": "Local",
+    "ja": "ローカル",
+    "zh-CN": "本地",
+    "zh-TW": "在地"
+  },
+  "팝업": {
+    "en": "Pop-ups",
+    "ja": "ポップアップ",
+    "zh-CN": "快闪",
+    "zh-TW": "快閃"
+  },
+  "패션": {
+    "en": "Fashion",
+    "ja": "ファッション",
+    "zh-CN": "时尚",
+    "zh-TW": "時尚"
+  },
+  "뷰티": {
+    "en": "Beauty",
+    "ja": "ビューティー",
+    "zh-CN": "美妆",
+    "zh-TW": "美妝"
+  },
+  "숙박": {
+    "en": "Stays",
+    "ja": "宿泊",
+    "zh-CN": "住宿",
+    "zh-TW": "住宿"
+  },
+  "굿즈": {
+    "en": "Merch",
+    "ja": "グッズ",
+    "zh-CN": "周边",
+    "zh-TW": "周邊"
+  },
+  "푸드": {
+    "en": "Food",
+    "ja": "フード",
+    "zh-CN": "美食",
+    "zh-TW": "美食"
+  },
+  "지역": {
+    "en": "Area",
+    "ja": "エリア",
+    "zh-CN": "地区",
+    "zh-TW": "地區"
+  },
+  "카테고리": {
+    "en": "Category",
+    "ja": "カテゴリー",
+    "zh-CN": "类别",
+    "zh-TW": "類別"
+  },
+  "브랜드": {
+    "en": "Brand",
+    "ja": "ブランド",
+    "zh-CN": "品牌",
+    "zh-TW": "品牌"
+  },
+  "행사 안내": {
+    "en": "Events",
+    "ja": "イベント案内",
+    "zh-CN": "活动信息",
+    "zh-TW": "活動資訊"
+  },
+  "행사 둘러보기": {
+    "en": "Explore events",
+    "ja": "イベントを探す",
+    "zh-CN": "浏览活动",
+    "zh-TW": "瀏覽活動"
+  },
+  "목록": {
+    "en": "List",
+    "ja": "リスト",
+    "zh-CN": "列表",
+    "zh-TW": "清單"
+  },
+  "지도": {
+    "en": "Map",
+    "ja": "地図",
+    "zh-CN": "地图",
+    "zh-TW": "地圖"
+  },
+  "자세히 보기": {
+    "en": "View details",
+    "ja": "詳しく見る",
+    "zh-CN": "查看详情",
+    "zh-TW": "查看詳情"
+  },
+  "행사 자세히 보기": {
+    "en": "Event details",
+    "ja": "イベントの詳細",
+    "zh-CN": "活动详情",
+    "zh-TW": "活動詳情"
+  },
+  "일정 확인 중": {
+    "en": "Dates pending",
+    "ja": "日程確認中",
+    "zh-CN": "日期待确认",
+    "zh-TW": "日期待確認"
+  },
+  "일정 미확정": {
+    "en": "Dates pending",
+    "ja": "日程未定",
+    "zh-CN": "日期未定",
+    "zh-TW": "日期未定"
+  },
+  "확인 전": {
+    "en": "Not confirmed",
+    "ja": "未確認",
+    "zh-CN": "待确认",
+    "zh-TW": "待確認"
+  },
+  "확정": {
+    "en": "Confirmed",
+    "ja": "確認済み",
+    "zh-CN": "已确认",
+    "zh-TW": "已確認"
+  },
+  "미확정": {
+    "en": "Unconfirmed",
+    "ja": "未確認",
+    "zh-CN": "未确认",
+    "zh-TW": "未確認"
+  },
+  "뒤로": {
+    "en": "Back",
+    "ja": "戻る",
+    "zh-CN": "返回",
+    "zh-TW": "返回"
+  },
+  "닫기": {
+    "en": "Close",
+    "ja": "閉じる",
+    "zh-CN": "关闭",
+    "zh-TW": "關閉"
+  },
+  "이전": {
+    "en": "Back",
+    "ja": "戻る",
+    "zh-CN": "上一步",
+    "zh-TW": "上一步"
+  },
+  "다음 단계": {
+    "en": "Next step",
+    "ja": "次のステップ",
+    "zh-CN": "下一步",
+    "zh-TW": "下一步"
+  },
+  "방문 일정": {
+    "en": "Trip dates",
+    "ja": "旅行日程",
+    "zh-CN": "旅行日期",
+    "zh-TW": "旅遊日期"
+  },
+  "도착일": {
+    "en": "Arrival",
+    "ja": "到着日",
+    "zh-CN": "抵达日期",
+    "zh-TW": "抵達日期"
+  },
+  "마지막 날": {
+    "en": "Last day",
+    "ja": "最終日",
+    "zh-CN": "最后一天",
+    "zh-TW": "最後一天"
+  },
+  "여행 일정": {
+    "en": "Trip dates",
+    "ja": "旅行日程",
+    "zh-CN": "旅行日期",
+    "zh-TW": "旅遊日期"
+  },
+  "언제 부산에 오세요?": {
+    "en": "When will you visit Busan?",
+    "ja": "いつ釜山に来ますか？",
+    "zh-CN": "计划什么时候来釜山？",
+    "zh-TW": "計劃什麼時候來釜山？"
+  },
+  "여행 기간에 열리는 행사를 모두 모아드려요.": {
+    "en": "See events happening during your trip.",
+    "ja": "旅行期間中のイベントをまとめてご案内します。",
+    "zh-CN": "查看旅行期间举办的活动。",
+    "zh-TW": "查看旅遊期間舉辦的活動。"
+  },
+  "여행 중 열리는 행사": {
+    "en": "Events during your trip",
+    "ja": "旅行中のイベント",
+    "zh-CN": "旅途中的活动",
+    "zh-TW": "旅途中的活動"
+  },
+  "행사 고르기": {
+    "en": "Choose events",
+    "ja": "イベントを選ぶ",
+    "zh-CN": "选择活动",
+    "zh-TW": "選擇活動"
+  },
+  "동선 짜기": {
+    "en": "Plan your route",
+    "ja": "ルートを決める",
+    "zh-CN": "规划路线",
+    "zh-TW": "規劃路線"
+  },
+  "주변 둘러보기": {
+    "en": "Explore nearby",
+    "ja": "周辺をめぐる",
+    "zh-CN": "探索周边",
+    "zh-TW": "探索周邊"
+  },
+  "맛집 더하기": {
+    "en": "Add food stops",
+    "ja": "グルメを追加",
+    "zh-CN": "添加美食站",
+    "zh-TW": "加入美食站"
+  },
+  "나의 드롭 플랜": {
+    "en": "My Drop Plan",
+    "ja": "マイドロッププラン",
+    "zh-CN": "我的 Drop Plan",
+    "zh-TW": "我的 Drop Plan"
+  },
+  "내 드롭 플랜": {
+    "en": "My Drop Plans",
+    "ja": "保存したプラン",
+    "zh-CN": "我的行程",
+    "zh-TW": "我的行程"
+  },
+  "내 드롭 플랜 저장하기": {
+    "en": "Save my plan",
+    "ja": "プランを保存",
+    "zh-CN": "保存我的行程",
+    "zh-TW": "儲存我的行程"
+  },
+  "계획 수정하기": {
+    "en": "Edit plan",
+    "ja": "プランを編集",
+    "zh-CN": "编辑行程",
+    "zh-TW": "編輯行程"
+  },
+  "저장 완료": {
+    "en": "Saved",
+    "ja": "保存済み",
+    "zh-CN": "已保存",
+    "zh-TW": "已儲存"
+  },
+  "저장하기": {
+    "en": "Save",
+    "ja": "保存する",
+    "zh-CN": "保存",
+    "zh-TW": "儲存"
+  },
+  "건너뛰기": {
+    "en": "Skip",
+    "ja": "スキップ",
+    "zh-CN": "跳过",
+    "zh-TW": "略過"
+  },
+  "맛집 없이 저장": {
+    "en": "Save without food stops",
+    "ja": "グルメを追加せず保存",
+    "zh-CN": "不添加餐厅并保存",
+    "zh-TW": "不加入餐廳並儲存"
+  },
+  "선택하지 않아도 괜찮아요": {
+    "en": "These stops are optional",
+    "ja": "追加は任意です",
+    "zh-CN": "可按需选择",
+    "zh-TW": "可自由選擇"
+  },
+  "곳 선택": {
+    "en": "selected",
+    "ja": "か所選択",
+    "zh-CN": "处已选",
+    "zh-TW": "處已選"
+  },
+  "곳 추가": {
+    "en": "added",
+    "ja": "か所追加",
+    "zh-CN": "处已添加",
+    "zh-TW": "處已加入"
+  },
+  "개 방문지": {
+    "en": "stops",
+    "ja": "か所の訪問先",
+    "zh-CN": "个目的地",
+    "zh-TW": "個目的地"
+  },
+  "개 행사": {
+    "en": "events",
+    "ja": "件のイベント",
+    "zh-CN": "个活动",
+    "zh-TW": "個活動"
+  },
+  "개 지점": {
+    "en": "locations",
+    "ja": "店舗",
+    "zh-CN": "家门店",
+    "zh-TW": "家門店"
+  },
+  "행사장": {
+    "en": "Venue",
+    "ja": "会場",
+    "zh-CN": "会场",
+    "zh-TW": "會場"
+  },
+  "관광지": {
+    "en": "Sights",
+    "ja": "観光地",
+    "zh-CN": "景点",
+    "zh-TW": "景點"
+  },
+  "미식": {
+    "en": "Food",
+    "ja": "グルメ",
+    "zh-CN": "美食",
+    "zh-TW": "美食"
+  },
+  "플레이스": {
+    "en": "Places",
+    "ja": "スポット",
+    "zh-CN": "地点",
+    "zh-TW": "地點"
+  },
+  "플레이스 저장": {
+    "en": "Save place",
+    "ja": "スポットを保存",
+    "zh-CN": "收藏地点",
+    "zh-TW": "收藏地點"
+  },
+  "저장됨": {
+    "en": "Saved",
+    "ja": "保存済み",
+    "zh-CN": "已收藏",
+    "zh-TW": "已收藏"
+  },
+  "일정에 추가": {
+    "en": "Add to itinerary",
+    "ja": "旅程に追加",
+    "zh-CN": "加入行程",
+    "zh-TW": "加入行程"
+  },
+  "추가됨 · 해제": {
+    "en": "Added · Remove",
+    "ja": "追加済み・解除",
+    "zh-CN": "已添加 · 移除",
+    "zh-TW": "已加入 · 移除"
+  },
+  "직선 약": {
+    "en": "Approx. straight-line",
+    "ja": "直線距離 約",
+    "zh-CN": "直线约",
+    "zh-TW": "直線約"
+  },
+  "행사장 반경 3km · 가까운 순": {
+    "en": "Within 3 km of venues · Nearest first",
+    "ja": "会場から3km以内・近い順",
+    "zh-CN": "场地周边3公里 · 按距离排序",
+    "zh-TW": "場地周邊3公里 · 依距離排序"
+  },
+  "조회 중": {
+    "en": "Loading",
+    "ja": "読み込み中",
+    "zh-CN": "加载中",
+    "zh-TW": "載入中"
+  },
+  "대표 메뉴": {
+    "en": "Signature dishes",
+    "ja": "おすすめメニュー",
+    "zh-CN": "招牌菜",
+    "zh-TW": "招牌菜"
+  },
+  "운영시간": {
+    "en": "Hours",
+    "ja": "営業時間",
+    "zh-CN": "营业时间",
+    "zh-TW": "營業時間"
+  },
+  "요일별 운영시간": {
+    "en": "Weekly hours",
+    "ja": "曜日別の営業時間",
+    "zh-CN": "每周营业时间",
+    "zh-TW": "每週營業時間"
+  },
+  "등록시간상 영업 중": {
+    "en": "Open per listed hours",
+    "ja": "掲載時間上は営業中",
+    "zh-CN": "登记时间内营业",
+    "zh-TW": "登記時間內營業"
+  },
+  "등록시간상 영업시간 외": {
+    "en": "Outside listed hours",
+    "ja": "掲載の営業時間外",
+    "zh-CN": "非登记营业时段",
+    "zh-TW": "非登記營業時段"
+  },
+  "등록시간상 브레이크타임": {
+    "en": "Listed break time",
+    "ja": "掲載時間上は休憩中",
+    "zh-CN": "登记休息时段",
+    "zh-TW": "登記休息時段"
+  },
+  "등록시간상 주문 마감": {
+    "en": "Listed last order passed",
+    "ja": "掲載の注文受付終了",
+    "zh-CN": "已过登记点单时间",
+    "zh-TW": "已過登記點餐時間"
+  },
+  "운영시간 확인 필요": {
+    "en": "Hours need confirmation",
+    "ja": "営業時間の確認が必要",
+    "zh-CN": "营业时间待确认",
+    "zh-TW": "營業時間待確認"
+  },
+  "정기휴무": {
+    "en": "Regular day off",
+    "ja": "定休日",
+    "zh-CN": "固定休息日",
+    "zh-TW": "固定休息日"
+  },
+  "확인 필요": {
+    "en": "Please confirm",
+    "ja": "要確認",
+    "zh-CN": "待确认",
+    "zh-TW": "待確認"
+  },
+  "주문 마감": {
+    "en": "Last order",
+    "ja": "ラストオーダー",
+    "zh-CN": "最后点单",
+    "zh-TW": "最後點餐"
+  },
+  "익일": {
+    "en": "Next day",
+    "ja": "翌日",
+    "zh-CN": "次日",
+    "zh-TW": "次日"
+  },
+  "지도에서 보기": {
+    "en": "View on map",
+    "ja": "地図で見る",
+    "zh-CN": "在地图上查看",
+    "zh-TW": "在地圖上查看"
+  },
+  "길찾기": {
+    "en": "Directions",
+    "ja": "ルート検索",
+    "zh-CN": "路线导航",
+    "zh-TW": "路線導航"
+  },
+  "근처": {
+    "en": "nearby",
+    "ja": "周辺",
+    "zh-CN": "附近",
+    "zh-TW": "附近"
+  },
+  "이용": {
+    "en": "Use",
+    "ja": "利用",
+    "zh-CN": "使用",
+    "zh-TW": "使用"
+  },
+  "일": {
+    "en": "day",
+    "ja": "日",
+    "zh-CN": "天",
+    "zh-TW": "天"
+  },
+  "함께 들를 곳": {
+    "en": "Extra stops",
+    "ja": "あわせて訪れる場所",
+    "zh-CN": "顺路地点",
+    "zh-TW": "順路地點"
+  },
+  "새 플랜": {
+    "en": "New plan",
+    "ja": "新しいプラン",
+    "zh-CN": "新建行程",
+    "zh-TW": "新增行程"
+  },
+  "저장한 플레이스": {
+    "en": "Saved places",
+    "ja": "保存したスポット",
+    "zh-CN": "收藏的地点",
+    "zh-TW": "收藏的地點"
+  },
+  "저장한 행사": {
+    "en": "Saved events",
+    "ja": "保存したイベント",
+    "zh-CN": "收藏的活动",
+    "zh-TW": "收藏的活動"
+  },
+  "저장한 혜택": {
+    "en": "Saved offers",
+    "ja": "保存した特典",
+    "zh-CN": "收藏的优惠",
+    "zh-TW": "收藏的優惠"
+  },
+  "최근 저장순": {
+    "en": "Recently saved",
+    "ja": "新しい保存順",
+    "zh-CN": "按收藏时间排序",
+    "zh-TW": "依收藏時間排序"
+  },
+  "열기": {
+    "en": "Open",
+    "ja": "開く",
+    "zh-CN": "打开",
+    "zh-TW": "開啟"
+  },
+  "게스트": {
+    "en": "Guest",
+    "ja": "ゲスト",
+    "zh-CN": "访客",
+    "zh-TW": "訪客"
+  },
+  "체험 회원": {
+    "en": "Demo member",
+    "ja": "体験メンバー",
+    "zh-CN": "体验会员",
+    "zh-TW": "體驗會員"
+  },
+  "언어 설정 / Language": {
+    "en": "Language",
+    "ja": "言語設定",
+    "zh-CN": "语言设置",
+    "zh-TW": "語言設定"
+  },
+  "서비스 안내": {
+    "en": "About",
+    "ja": "サービスについて",
+    "zh-CN": "服务介绍",
+    "zh-TW": "服務介紹"
+  },
+  "플랜과 플레이스는 이 브라우저에 저장돼요.": {
+    "en": "Plans and places are saved in this browser.",
+    "ja": "プランとスポットはこのブラウザに保存されます。",
+    "zh-CN": "行程和地点保存在当前浏览器中。",
+    "zh-TW": "行程和地點儲存在目前的瀏覽器中。"
+  },
+  "드롭 플랜을 마이에 저장했어요.": {
+    "en": "Plan saved to My page.",
+    "ja": "マイページにプランを保存しました。",
+    "zh-CN": "行程已保存至“我的”。",
+    "zh-TW": "行程已儲存至「我的」。"
+  },
+  "오늘부터 날짜를 선택할 수 있어요.": {
+    "en": "Choose today or a later date.",
+    "ja": "今日以降の日付を選んでください。",
+    "zh-CN": "请选择今天或以后的日期。",
+    "zh-TW": "請選擇今天或之後的日期。"
+  },
+  "MY DROP PLAN": {
+    "en": "MY DROP PLAN",
+    "ja": "マイドロッププラン",
+    "zh-CN": "我的行程",
+    "zh-TW": "我的行程"
+  },
+  "MY COLLECTION": {
+    "en": "MY COLLECTION",
+    "ja": "マイコレクション",
+    "zh-CN": "我的收藏",
+    "zh-TW": "我的收藏"
+  },
+  "SAVED DROP PLAN": {
+    "en": "SAVED DROP PLAN",
+    "ja": "保存したプラン",
+    "zh-CN": "已保存行程",
+    "zh-TW": "已儲存行程"
+  },
+  "OPTIONAL": {
+    "en": "OPTIONAL",
+    "ja": "任意",
+    "zh-CN": "可选",
+    "zh-TW": "選填"
+  },
+  "NEAR YOUR DROP": {
+    "en": "NEAR YOUR DROP",
+    "ja": "訪問先の近く",
+    "zh-CN": "行程附近",
+    "zh-TW": "行程附近"
+  },
+  "YOUR DROP": {
+    "en": "YOUR DROP",
+    "ja": "訪問先",
+    "zh-CN": "您的行程",
+    "zh-TW": "您的行程"
+  },
+  "올영 블랙프라이데이": {
+    "en": "OLIVE YOUNG Black Friday",
+    "ja": "オリーブヤング ブラックフライデー",
+    "zh-CN": "OLIVE YOUNG 黑色星期五",
+    "zh-TW": "OLIVE YOUNG 黑色星期五"
+  },
+  "원이 스타일 팝업": {
+    "en": "Woni's Style Pop-up",
+    "ja": "ウォニのスタイル ポップアップ",
+    "zh-CN": "Woni 风格快闪店",
+    "zh-TW": "Woni 風格快閃店"
+  },
+  "포근한 룸웨어 팝업": {
+    "en": "Cozy Roomwear Pop-up",
+    "ja": "ふんわりルームウェア ポップアップ",
+    "zh-CN": "舒适家居服快闪店",
+    "zh-TW": "舒適家居服快閃店"
+  },
+  "와이잭 동부산 팝업": {
+    "en": "YJACK Dongbusan Pop-up",
+    "ja": "YJACK 東釜山ポップアップ",
+    "zh-CN": "YJACK 东釜山快闪店",
+    "zh-TW": "YJACK 東釜山快閃店"
+  },
+  "해운대에서 누리는 쓱데이": {
+    "en": "SSG Day in Haeundae",
+    "ja": "海雲台で楽しむ SSG DAY",
+    "zh-CN": "海云台 SSG Day",
+    "zh-TW": "海雲台 SSG Day"
+  },
+  "바다 앞에서 쉬어가는 하루": {
+    "en": "A Day by the Sea",
+    "ja": "海辺で過ごす一日",
+    "zh-CN": "海边休憩的一天",
+    "zh-TW": "海邊休憩的一天"
+  },
+  "부산에 놀러 온 히나쿠우": {
+    "en": "HINAKUU Visits Busan",
+    "ja": "HINAKUUが釜山にやってきた",
+    "zh-CN": "HINAKUU 来釜山玩",
+    "zh-TW": "HINAKUU 來釜山玩"
+  },
+  "서면에서 만나는 마법 굿즈": {
+    "en": "Magical Merch in Seomyeon",
+    "ja": "西面で出会う魔法のグッズ",
+    "zh-CN": "西面的魔法周边",
+    "zh-TW": "西面的魔法周邊"
+  },
+  "산엑스 친구들 미니스토어": {
+    "en": "San-X Friends Mini Store",
+    "ja": "サンエックスの仲間たち ミニストア",
+    "zh-CN": "San-X 伙伴迷你店",
+    "zh-TW": "San-X 夥伴迷你店"
+  },
+  "메이플 월드로 떠나요": {
+    "en": "Step into Maple World",
+    "ja": "メイプルワールドへ出かけよう",
+    "zh-CN": "走进冒险岛世界",
+    "zh-TW": "走進楓之谷世界"
+  },
+  "서면": {
+    "en": "Seomyeon",
+    "ja": "西面",
+    "zh-CN": "西面",
+    "zh-TW": "西面"
+  },
+  "남포동": {
+    "en": "Nampo-dong",
+    "ja": "南浦洞",
+    "zh-CN": "南浦洞",
+    "zh-TW": "南浦洞"
+  },
+  "광안리": {
+    "en": "Gwangalli",
+    "ja": "広安里",
+    "zh-CN": "广安里",
+    "zh-TW": "廣安里"
+  },
+  "해운대": {
+    "en": "Haeundae",
+    "ja": "海雲台",
+    "zh-CN": "海云台",
+    "zh-TW": "海雲台"
+  },
+  "모바일 기준 390 × 844px": {
+    "en": "Mobile viewport · 390 × 844px",
+    "ja": "モバイル基準・390 × 844px",
+    "zh-CN": "手机尺寸 · 390 × 844px",
+    "zh-TW": "手機尺寸 · 390 × 844px"
+  },
+  "로컬과 팝업을 만나는 홈": {
+    "en": "Discover local events and pop-ups",
+    "ja": "ローカルとポップアップに出会うホーム",
+    "zh-CN": "发现本地活动与快闪",
+    "zh-TW": "發現在地活動與快閃"
+  },
+  "지원 언어": {
+    "en": "Languages",
+    "ja": "対応言語",
+    "zh-CN": "支持语言",
+    "zh-TW": "支援語言"
+  },
+  "기본 메뉴와 버튼 언어 적용": {
+    "en": "Language applies to menus and buttons",
+    "ja": "メニューとボタンに適用",
+    "zh-CN": "适用于菜单和按钮",
+    "zh-TW": "適用於選單與按鈕"
+  },
+  "등록된 정규 운영시간 기준 · 임시휴무·공휴일 변동은 매장에 확인해주세요.": {
+    "en": "Based on listed regular hours. Confirm temporary closures and holiday changes with the restaurant.",
+    "ja": "掲載の通常営業時間に基づきます。臨時休業・祝日の変更は店舗にご確認ください。",
+    "zh-CN": "根据登记的常规营业时间。临时休息及节假日变动请向餐厅确认。",
+    "zh-TW": "依登記的一般營業時間。臨時公休與假日異動請向餐廳確認。"
+  },
+  "내 취향의 혜택,": {
+    "en": "Perks for your style,",
+    "ja": "あなたに合う特典を、",
+    "zh-CN": "喜欢的优惠，",
+    "zh-TW": "喜歡的優惠，"
+  },
+  "놓치지 않도록.": {
+    "en": "all in one place.",
+    "ja": "見逃さないために。",
+    "zh-CN": "一个也不错过。",
+    "zh-TW": "一個也不錯過。"
+  },
+  "코스 설정은 이 브라우저에 보관돼요.": {
+    "en": "Your route is saved in this browser.",
+    "ja": "ルート設定はこのブラウザに保存されます。",
+    "zh-CN": "路线设置保存在当前浏览器中。",
+    "zh-TW": "路線設定儲存在目前的瀏覽器中。"
+  },
+  "연결선은 방문 순서 표시예요. 실제 이동 경로·시간은 길찾기에서 확인하세요.": {
+    "en": "Lines show the order of your stops. Check Directions for actual routes and travel times.",
+    "ja": "線は訪問順を示します。実際の経路・所要時間はルート検索で確認してください。",
+    "zh-CN": "连线仅表示到访顺序，实际路线及时间请查看导航。",
+    "zh-TW": "連線僅表示造訪順序，實際路線與時間請查看導航。"
+  },
+  "가고 싶은 행사를 선택하세요. 행사마다 방문 날짜를 정할 수 있어요.": {
+    "en": "Choose your events and set a visit date for each one.",
+    "ja": "行きたいイベントを選び、各イベントの訪問日を設定してください。",
+    "zh-CN": "选择想去的活动，并分别设置到访日期。",
+    "zh-TW": "選擇想去的活動，並分別設定造訪日期。"
+  },
+  "저장한 행사로 드롭 플랜 만들기": {
+    "en": "Build a plan from saved events",
+    "ja": "保存したイベントでプランを作る",
+    "zh-CN": "用收藏活动规划行程",
+    "zh-TW": "用收藏活動規劃行程"
+  },
+  "예약/판매 기간": {
+    "en": "Booking / sale dates",
+    "ja": "予約・販売期間",
+    "zh-CN": "预订／销售日期",
+    "zh-TW": "預訂／銷售日期"
+  },
+  "캐리랜드 인 부산 — 몬치치 팝업": {
+    "en": "KARYLAND in BUSAN — MONCHHICHI Pop-up",
+    "ja": "KARYLAND in BUSAN — モンチッチ ポップアップ",
+    "zh-CN": "KARYLAND in BUSAN — MONCHHICHI 快闪店",
+    "zh-TW": "KARYLAND in BUSAN — MONCHHICHI 快閃店"
+  },
+  "광안리 M 드론×레이저쇼": {
+    "en": "Gwangalli M Drone × Laser Show",
+    "ja": "広安里 Mドローン×レーザーショー",
+    "zh-CN": "广安里 M 无人机×激光秀",
+    "zh-TW": "廣安里 M 無人機×雷射秀"
+  },
+  "지점 선택 · 행사 보기": {
+    "en": "Choose a location · View event",
+    "ja": "店舗を選択・イベントを見る",
+    "zh-CN": "选择门店 · 查看活动",
+    "zh-TW": "選擇門店 · 查看活動"
+  },
+  "행사 정보 보기": {
+    "en": "View event details",
+    "ja": "イベントの詳細を見る",
+    "zh-CN": "查看活动详情",
+    "zh-TW": "查看活動詳情"
+  },
+  "진행 중": {
+    "en": "On now",
+    "ja": "開催中",
+    "zh-CN": "进行中",
+    "zh-TW": "進行中"
+  },
+  "진행 예정": {
+    "en": "Upcoming",
+    "ja": "開催予定",
+    "zh-CN": "即将举办",
+    "zh-TW": "即將舉辦"
+  },
+  "예약 접수 중": {
+    "en": "Booking open",
+    "ja": "予約受付中",
+    "zh-CN": "接受预订",
+    "zh-TW": "接受預訂"
+  },
+  "서비스 안내 / About": {
+    "en": "About",
+    "ja": "サービスについて",
+    "zh-CN": "服务介绍",
+    "zh-TW": "服務介紹"
+  },
+  "FIND YOUR NEXT STOP": {
+    "en": "FIND YOUR NEXT STOP",
+    "ja": "次の立ち寄り先を探す",
+    "zh-CN": "发现下一站",
+    "zh-TW": "發現下一站"
+  },
+  "SAME PLACE": {
+    "en": "SAME PLACE",
+    "ja": "同じ場所",
+    "zh-CN": "同一地点",
+    "zh-TW": "同一地點"
+  },
+  "DESTINATION / 01": {
+    "en": "DESTINATION / 01",
+    "ja": "行き先 / 01",
+    "zh-CN": "目的地 / 01",
+    "zh-TW": "目的地 / 01"
+  },
+  "BLACK FRIDAY": {
+    "en": "BLACK FRIDAY",
+    "ja": "ブラックフライデー",
+    "zh-CN": "黑色星期五",
+    "zh-TW": "黑色星期五"
+  },
+  "SAVE YOUR DROP": {
+    "en": "SAVE YOUR DROP",
+    "ja": "プランを保存",
+    "zh-CN": "收藏您的行程",
+    "zh-TW": "收藏您的行程"
+  },
+  "POP-UP": {
+    "en": "POP-UP",
+    "ja": "ポップアップ",
+    "zh-CN": "快闪",
+    "zh-TW": "快閃"
+  },
+  "FASHION": {
+    "en": "FASHION",
+    "ja": "ファッション",
+    "zh-CN": "时尚",
+    "zh-TW": "時尚"
+  },
+  "BEAUTY": {
+    "en": "BEAUTY",
+    "ja": "ビューティー",
+    "zh-CN": "美妆",
+    "zh-TW": "美妝"
+  },
+  "HOTEL": {
+    "en": "HOTEL",
+    "ja": "ホテル",
+    "zh-CN": "酒店",
+    "zh-TW": "飯店"
+  },
+  "Use two fingers to move the map": {
+    "en": "Use two fingers to move the map",
+    "ja": "2本の指で地図を移動できます",
+    "zh-CN": "用双指移动地图",
+    "zh-TW": "用雙指移動地圖"
+  },
+  "Use ⌘ + scroll to zoom the map": {
+    "en": "Use ⌘ + scroll to zoom the map",
+    "ja": "⌘キーを押しながらスクロールで拡大・縮小",
+    "zh-CN": "按住⌘并滚动以缩放地图",
+    "zh-TW": "按住⌘並捲動以縮放地圖"
+  },
+  "Use Ctrl + scroll to zoom the map": {
+    "en": "Use Ctrl + scroll to zoom the map",
+    "ja": "Ctrlキーを押しながらスクロールで拡大・縮小",
+    "zh-CN": "按住Ctrl并滚动以缩放地图",
+    "zh-TW": "按住Ctrl並捲動以縮放地圖"
+  },
+  "Zoom in": {
+    "en": "Zoom in",
+    "ja": "拡大",
+    "zh-CN": "放大",
+    "zh-TW": "放大"
+  },
+  "Zoom out": {
+    "en": "Zoom out",
+    "ja": "縮小",
+    "zh-CN": "缩小",
+    "zh-TW": "縮小"
+  },
+  "Toggle attribution": {
+    "en": "Toggle attribution",
+    "ja": "地図の帰属表示",
+    "zh-CN": "切换地图版权信息",
+    "zh-TW": "切換地圖版權資訊"
+  },
+  "롯데백화점 부산본점 B1 키네틱 스테이지": {
+    "en": "Lotte Department Store Busan Main Store · B1 Kinetic Stage",
+    "ja": "ロッテ百貨店釜山本店・B1キネティックステージ",
+    "zh-CN": "乐天百货釜山总店 · B1 Kinetic Stage",
+    "zh-TW": "樂天百貨釜山總店 · B1 Kinetic Stage"
+  },
+  "롯데백화점 광복점 B1 분수대 일원": {
+    "en": "Lotte Department Store Gwangbok · B1 Fountain Area",
+    "ja": "ロッテ百貨店光復店・B1噴水エリア",
+    "zh-CN": "乐天百货光复店 · B1 喷泉区域",
+    "zh-TW": "樂天百貨光復店 · B1 噴泉區域"
+  },
+  "신세계백화점 센텀시티 · B2 하이퍼스테이지": {
+    "en": "Shinsegae Centum City · B2 Hyper Stage",
+    "ja": "新世界百貨店センタムシティ・B2ハイパーステージ",
+    "zh-CN": "新世界百货 Centum City · B2 Hyper Stage",
+    "zh-TW": "新世界百貨 Centum City · B2 Hyper Stage"
+  },
+  "올리브영 커넥트현대 부산점": {
+    "en": "OLIVE YOUNG Connect Hyundai Busan",
+    "ja": "オリーブヤング コネクト現代釜山店",
+    "zh-CN": "OLIVE YOUNG Connect Hyundai 釜山店",
+    "zh-TW": "OLIVE YOUNG Connect Hyundai 釜山店"
+  },
+  "올리브영 남포 타운": {
+    "en": "OLIVE YOUNG Nampo Town",
+    "ja": "オリーブヤング南浦タウン",
+    "zh-CN": "OLIVE YOUNG 南浦 Town",
+    "zh-TW": "OLIVE YOUNG 南浦 Town"
+  },
+  "올리브영 밀락더마켓점": {
+    "en": "OLIVE YOUNG Millac the Market",
+    "ja": "オリーブヤング ミラック・ザ・マーケット店",
+    "zh-CN": "OLIVE YOUNG Millac the Market 店",
+    "zh-TW": "OLIVE YOUNG Millac the Market 店"
+  },
+  "티파니앤코 신세계백화점 센텀시티점": {
+    "en": "Tiffany & Co. Shinsegae Centum City",
+    "ja": "ティファニー 新世界百貨店センタムシティ店",
+    "zh-CN": "Tiffany & Co. 新世界百货 Centum City 店",
+    "zh-TW": "Tiffany & Co. 新世界百貨 Centum City 店"
+  },
+  "후기 해시태그:": {
+    "en": "Review hashtags:",
+    "ja": "レビューハッシュタグ：",
+    "zh-CN": "评价标签：",
+    "zh-TW": "評價標籤："
+  },
+  "올리브영": {
+    "en": "OLIVE YOUNG",
+    "ja": "オリーブヤング",
+    "zh-CN": "OLIVE YOUNG",
+    "zh-TW": "OLIVE YOUNG"
+  },
+  "유니클로": {
+    "en": "UNIQLO",
+    "ja": "ユニクロ",
+    "zh-CN": "优衣库",
+    "zh-TW": "優衣庫"
+  },
+  "자라": {
+    "en": "ZARA",
+    "ja": "ZARA",
+    "zh-CN": "ZARA",
+    "zh-TW": "ZARA"
+  },
+  "몬치치": {
+    "en": "MONCHHICHI",
+    "ja": "モンチッチ",
+    "zh-CN": "MONCHHICHI",
+    "zh-TW": "MONCHHICHI"
+  },
+  "와키윌리": {
+    "en": "WACKYWILLY",
+    "ja": "ワッキーウィリー",
+    "zh-CN": "WACKYWILLY",
+    "zh-TW": "WACKYWILLY"
+  },
+  "참치학교": {
+    "en": "Tuna School",
+    "ja": "ツナスクール",
+    "zh-CN": "Tuna School",
+    "zh-TW": "Tuna School"
+  },
+  "티파니앤코": {
+    "en": "Tiffany & Co.",
+    "ja": "ティファニー",
+    "zh-CN": "Tiffany & Co.",
+    "zh-TW": "Tiffany & Co."
+  },
+  "원피스 무기와라 스토어": {
+    "en": "ONE PIECE Mugiwara Store",
+    "ja": "ONE PIECE 麦わらストア",
+    "zh-CN": "ONE PIECE 草帽商店",
+    "zh-TW": "ONE PIECE 草帽商店"
+  },
+  "와이잭": {
+    "en": "YJACK",
+    "ja": "YJACK",
+    "zh-CN": "YJACK",
+    "zh-TW": "YJACK"
+  },
+  "젤라또 피케": {
+    "en": "gelato pique",
+    "ja": "ジェラート ピケ",
+    "zh-CN": "gelato pique",
+    "zh-TW": "gelato pique"
+  },
+  "리락쿠마·스미코구라시": {
+    "en": "Rilakkuma & Sumikko Gurashi",
+    "ja": "リラックマ・すみっコぐらし",
+    "zh-CN": "轻松小熊·角落小伙伴",
+    "zh-TW": "拉拉熊·角落小夥伴"
+  },
+  "메이플스토리": {
+    "en": "MapleStory",
+    "ja": "メイプルストーリー",
+    "zh-CN": "冒险岛",
+    "zh-TW": "楓之谷"
+  },
+  "시그니엘 부산": {
+    "en": "SIGNIEL BUSAN",
+    "ja": "シグニエル釜山",
+    "zh-CN": "釜山 SIGNIEL 酒店",
+    "zh-TW": "釜山 SIGNIEL 酒店"
+  },
+  "웨스틴 조선 부산": {
+    "en": "The Westin Josun Busan",
+    "ja": "ウェスティン朝鮮釜山",
+    "zh-CN": "釜山威斯汀朝鲜酒店",
+    "zh-TW": "釜山威斯汀朝鮮酒店"
+  },
+  "그랜드 조선 부산": {
+    "en": "Grand Josun Busan",
+    "ja": "グランド朝鮮釜山",
+    "zh-CN": "釜山格兰德朝鲜酒店",
+    "zh-TW": "釜山格蘭德朝鮮酒店"
+  },
+  "해리포터 마호도코로": {
+    "en": "Harry Potter Mahou Dokoro",
+    "ja": "ハリー・ポッター マホウドコロ",
+    "zh-CN": "哈利·波特 Mahou Dokoro",
+    "zh-TW": "哈利波特 Mahou Dokoro"
+  },
+  "히나쿠우": {
+    "en": "HINAKUU",
+    "ja": "ヒナクウ",
+    "zh-CN": "HINAKUU",
+    "zh-TW": "HINAKUU"
+  },
+  "달달더마켓": {
+    "en": "DALDAL THE MARKET",
+    "ja": "ダルダル・ザ・マーケット",
+    "zh-CN": "DALDAL THE MARKET",
+    "zh-TW": "DALDAL THE MARKET"
+  },
+  "2026 올리브영 블랙프라이데이": {
+    "en": "OLIVE YOUNG Black Friday 2026",
+    "ja": "オリーブヤング ブラックフライデー2026",
+    "zh-CN": "2026 OLIVE YOUNG 黑色星期五",
+    "zh-TW": "2026 OLIVE YOUNG 黑色星期五"
+  },
+  "유니클로 연말 행사 안내": {
+    "en": "UNIQLO Year-end Event Updates",
+    "ja": "ユニクロ年末イベント案内",
+    "zh-CN": "优衣库年末活动资讯",
+    "zh-TW": "優衣庫年末活動資訊"
+  },
+  "자라 블랙프라이데이 안내": {
+    "en": "ZARA Black Friday Updates",
+    "ja": "ZARA ブラックフライデー案内",
+    "zh-CN": "ZARA 黑色星期五资讯",
+    "zh-TW": "ZARA 黑色星期五資訊"
+  },
+  "몬치치 KARYLAND in BUSAN 팝업": {
+    "en": "MONCHHICHI KARYLAND in BUSAN Pop-up",
+    "ja": "モンチッチ KARYLAND in BUSAN ポップアップ",
+    "zh-CN": "MONCHHICHI KARYLAND in BUSAN 快闪店",
+    "zh-TW": "MONCHHICHI KARYLAND in BUSAN 快閃店"
+  },
+  "와키윌리 × 리센느 원이 팝업": {
+    "en": "WACKYWILLY × RESCENE Woni Pop-up",
+    "ja": "ワッキーウィリー × RESCENE ウォニ ポップアップ",
+    "zh-CN": "WACKYWILLY × RESCENE Woni 快闪店",
+    "zh-TW": "WACKYWILLY × RESCENE Woni 快閃店"
+  },
+  "참치학교 광복점 팝업": {
+    "en": "Tuna School Gwangbok Pop-up",
+    "ja": "ツナスクール光復店ポップアップ",
+    "zh-CN": "Tuna School 光复店快闪",
+    "zh-TW": "Tuna School 光復店快閃"
+  },
+  "티파니앤코 행사 소식": {
+    "en": "Tiffany & Co. Event Updates",
+    "ja": "ティファニー イベント情報",
+    "zh-CN": "Tiffany & Co. 活动资讯",
+    "zh-TW": "Tiffany & Co. 活動資訊"
+  },
+  "원피스 무기와라 스토어 부산 롯데 팝업": {
+    "en": "ONE PIECE Mugiwara Store Busan Lotte Pop-up",
+    "ja": "ONE PIECE 麦わらストア 釜山ロッテ ポップアップ",
+    "zh-CN": "ONE PIECE 草帽商店釜山乐天快闪店",
+    "zh-TW": "ONE PIECE 草帽商店釜山樂天快閃店"
+  },
+  "와이잭 동부산점 팝업스토어": {
+    "en": "YJACK Dongbusan Pop-up Store",
+    "ja": "YJACK 東釜山店ポップアップストア",
+    "zh-CN": "YJACK 东釜山快闪店",
+    "zh-TW": "YJACK 東釜山快閃店"
+  },
+  "젤라또 피케 부산본점 팝업스토어": {
+    "en": "gelato pique Busan Main Store Pop-up",
+    "ja": "ジェラート ピケ 釜山本店ポップアップ",
+    "zh-CN": "gelato pique 釜山总店快闪店",
+    "zh-TW": "gelato pique 釜山總店快閃店"
+  },
+  "리락쿠마 스미코구라시 PLUS by San-X 부산 미니스토어": {
+    "en": "Rilakkuma Sumikko Gurashi PLUS by San-X Busan Mini Store",
+    "ja": "リラックマ すみっコぐらし PLUS by San-X 釜山ミニストア",
+    "zh-CN": "轻松小熊 角落小伙伴 PLUS by San-X 釜山迷你店",
+    "zh-TW": "拉拉熊 角落小夥伴 PLUS by San-X 釜山迷你店"
+  },
+  "메이플스토리 in 롯데월드 부산": {
+    "en": "MapleStory in LOTTE WORLD BUSAN",
+    "ja": "メイプルストーリー in ロッテワールド釜山",
+    "zh-CN": "冒险岛 in 釜山乐天世界",
+    "zh-TW": "楓之谷 in 釜山樂天世界"
+  },
+  "시그니엘 부산 시즌 패키지": {
+    "en": "SIGNIEL BUSAN Seasonal Packages",
+    "ja": "シグニエル釜山 シーズンパッケージ",
+    "zh-CN": "釜山 SIGNIEL 季节套餐",
+    "zh-TW": "釜山 SIGNIEL 季節套裝"
+  },
+  "웨스틴 조선 부산 쓱데이": {
+    "en": "The Westin Josun Busan SSG Day",
+    "ja": "ウェスティン朝鮮釜山 SSG DAY",
+    "zh-CN": "釜山威斯汀朝鲜酒店 SSG Day",
+    "zh-TW": "釜山威斯汀朝鮮酒店 SSG Day"
+  },
+  "그랜드 조선 부산 쓱데이": {
+    "en": "Grand Josun Busan SSG Day",
+    "ja": "グランド朝鮮釜山 SSG DAY",
+    "zh-CN": "釜山格兰德朝鲜酒店 SSG Day",
+    "zh-TW": "釜山格蘭德朝鮮酒店 SSG Day"
+  },
+  "해리포터 마호도코로 부산본점 팝업스토어": {
+    "en": "Harry Potter Mahou Dokoro Busan Main Store Pop-up",
+    "ja": "ハリー・ポッター マホウドコロ 釜山本店ポップアップ",
+    "zh-CN": "哈利·波特 Mahou Dokoro 釜山总店快闪店",
+    "zh-TW": "哈利波特 Mahou Dokoro 釜山總店快閃店"
+  },
+  "히나쿠우 in BUSAN 팝업스토어": {
+    "en": "HINAKUU in BUSAN Pop-up Store",
+    "ja": "HINAKUU in BUSAN ポップアップストア",
+    "zh-CN": "HINAKUU in BUSAN 快闪店",
+    "zh-TW": "HINAKUU in BUSAN 快閃店"
+  },
+  "2026 달달더마켓": {
+    "en": "DALDAL THE MARKET 2026",
+    "ja": "ダルダル・ザ・マーケット2026",
+    "zh-CN": "2026 DALDAL THE MARKET",
+    "zh-TW": "2026 DALDAL THE MARKET"
+  },
+  "광안리 M 드론×레이저쇼 — 성의 수호자": {
+    "en": "Gwangalli M Drone × Laser Show — Guardians of the Castle",
+    "ja": "広安里 Mドローン×レーザーショー — 城の守護者",
+    "zh-CN": "广安里 M 无人机×激光秀 — 城堡守护者",
+    "zh-TW": "廣安里 M 無人機×雷射秀 — 城堡守護者"
+  },
+  "국제게임전시회 지스타 2026": {
+    "en": "G-STAR 2026 International Game Exhibition",
+    "ja": "国際ゲーム展示会 G-STAR 2026",
+    "zh-CN": "G-STAR 2026 国际游戏展",
+    "zh-TW": "G-STAR 2026 國際遊戲展"
+  },
+  "추가": {
+    "en": "Add",
+    "ja": "追加",
+    "zh-CN": "添加",
+    "zh-TW": "加入"
+  },
+  "전체 일정 확인": {
+    "en": "Review itinerary",
+    "ja": "旅程を確認",
+    "zh-CN": "确认完整行程",
+    "zh-TW": "確認完整行程"
+  },
+  "행사·관광지·맛집의 방문 날짜와 순서를 확인해주세요. 같은 날짜 안에서 순서를 바꿀 수 있어요.": {
+    "en": "Check the dates and order of your events, sights and food stops. Reorder stops within the same day.",
+    "ja": "イベント・観光地・飲食店の訪問日と順番を確認してください。同じ日付内で順番を変更できます。",
+    "zh-CN": "请确认活动、景点和餐厅的到访日期与顺序。同一天内可调整顺序。",
+    "zh-TW": "請確認活動、景點與餐廳的造訪日期和順序。同一天內可調整順序。"
+  },
+  "플랜 저장 ✓": {
+    "en": "Save plan ✓",
+    "ja": "プランを保存 ✓",
+    "zh-CN": "保存行程 ✓",
+    "zh-TW": "儲存行程 ✓"
+  },
+  "플랜 수정하기 ↗": {
+    "en": "Edit plan ↗",
+    "ja": "プランを編集 ↗",
+    "zh-CN": "编辑行程 ↗",
+    "zh-TW": "編輯行程 ↗"
+  },
+  "← 내 드롭 플랜": {
+    "en": "← My Drop Plans",
+    "ja": "← マイドロッププラン",
+    "zh-CN": "← 我的行程",
+    "zh-TW": "← 我的行程"
+  },
+  "내 드롭 플랜 보기 ↗": {
+    "en": "View my plans ↗",
+    "ja": "マイプランを見る ↗",
+    "zh-CN": "查看我的行程 ↗",
+    "zh-TW": "查看我的行程 ↗"
+  },
+  "방문 순서이며 실제 이동시간은 길찾기에서 확인해주세요.": {
+    "en": "This is your visit order. Check directions for actual travel times.",
+    "ja": "訪問順です。実際の移動時間は経路検索で確認してください。",
+    "zh-CN": "此为到访顺序，实际交通时间请查看路线。",
+    "zh-TW": "此為造訪順序，實際交通時間請查看路線。"
+  },
+  "길찾기 ↗": {
+    "en": "Directions ↗",
+    "ja": "ルート検索 ↗",
+    "zh-CN": "路线 ↗",
+    "zh-TW": "路線 ↗"
+  },
+  "이전 장소에서 길찾기 ↗": {
+    "en": "Directions from previous stop ↗",
+    "ja": "前のスポットからのルート ↗",
+    "zh-CN": "从上一地点出发 ↗",
+    "zh-TW": "從上一地點出發 ↗"
+  },
+  "순서 위로": {
+    "en": "Move up",
+    "ja": "上へ移動",
+    "zh-CN": "上移",
+    "zh-TW": "上移"
+  },
+  "순서 아래로": {
+    "en": "Move down",
+    "ja": "下へ移動",
+    "zh-CN": "下移",
+    "zh-TW": "下移"
+  },
+  "방문일 정규 운영시간": {
+    "en": "Regular hours on visit date",
+    "ja": "訪問日の通常営業時間",
+    "zh-CN": "到访日常规营业时间",
+    "zh-TW": "造訪日常規營業時間"
+  },
+  "현재 기준": {
+    "en": "As of now",
+    "ja": "現在の状況",
+    "zh-CN": "当前时刻",
+    "zh-TW": "目前時刻"
+  },
+  "등록상 정기휴무": {
+    "en": "Closed per regular schedule",
+    "ja": "登録上の定休日",
+    "zh-CN": "登记的固定休息日",
+    "zh-TW": "登記的固定公休日"
+  },
+  "임시휴무·공휴일은 매장 확인 필요": {
+    "en": "Confirm holiday and temporary closures with the venue.",
+    "ja": "臨時休業・祝日は店舗に確認してください。",
+    "zh-CN": "临时休息及节假日请向门店确认。",
+    "zh-TW": "臨時休息及節假日請向店家確認。"
+  },
+  "맛집 검색": {
+    "en": "Search restaurants",
+    "ja": "飲食店を検索",
+    "zh-CN": "搜索餐厅",
+    "zh-TW": "搜尋餐廳"
+  },
+  "이름·메뉴·주소 검색": {
+    "en": "Search name, menu or address",
+    "ja": "店名・メニュー・住所で検索",
+    "zh-CN": "搜索名称、菜单或地址",
+    "zh-TW": "搜尋名稱、菜單或地址"
+  },
+  "음식 종류": {
+    "en": "Food type",
+    "ja": "料理の種類",
+    "zh-CN": "餐饮类型",
+    "zh-TW": "餐飲類型"
+  },
+  "카페·디저트": {
+    "en": "Cafés & desserts",
+    "ja": "カフェ・スイーツ",
+    "zh-CN": "咖啡甜品",
+    "zh-TW": "咖啡甜點"
+  },
+  "일식": {
+    "en": "Japanese",
+    "ja": "日本料理",
+    "zh-CN": "日料",
+    "zh-TW": "日式料理"
+  },
+  "양식": {
+    "en": "Western",
+    "ja": "洋食",
+    "zh-CN": "西餐",
+    "zh-TW": "西餐"
+  },
+  "중식": {
+    "en": "Chinese",
+    "ja": "中国料理",
+    "zh-CN": "中餐",
+    "zh-TW": "中式料理"
+  },
+  "한식·기타": {
+    "en": "Korean & other",
+    "ja": "韓国料理・その他",
+    "zh-CN": "韩餐及其他",
+    "zh-TW": "韓式料理及其他"
+  },
+  "선택한 맛집": {
+    "en": "Selected restaurants",
+    "ja": "選択した飲食店",
+    "zh-CN": "已选餐厅",
+    "zh-TW": "已選餐廳"
+  },
+  "운영시간 확인 날짜": {
+    "en": "Date to check hours",
+    "ja": "営業時間の確認日",
+    "zh-CN": "查看营业时间的日期",
+    "zh-TW": "查看營業時間的日期"
+  },
+  "음식 종류는 이름·메뉴 키워드 기준입니다.": {
+    "en": "Food types are based on name and menu keywords.",
+    "ja": "料理の種類は店名・メニューのキーワードを基にしています。",
+    "zh-CN": "餐饮分类依据名称和菜单关键词。",
+    "zh-TW": "餐飲分類依據名稱與菜單關鍵字。"
+  },
+  "맛집 더 보기 +": {
+    "en": "More restaurants +",
+    "ja": "飲食店をもっと見る +",
+    "zh-CN": "更多餐厅 +",
+    "zh-TW": "更多餐廳 +"
+  },
+  "검색 결과가 없어요. 검색어나 종류를 바꿔보세요.": {
+    "en": "No matches. Try a different search or food type.",
+    "ja": "該当するお店がありません。検索語や種類を変えてください。",
+    "zh-CN": "暂无结果，请更换关键词或类型。",
+    "zh-TW": "沒有結果，請更換關鍵字或類型。"
+  },
+  "맛집 없이 일정 확인": {
+    "en": "Review without food stops",
+    "ja": "飲食店を追加せず確認",
+    "zh-CN": "不加餐厅，确认行程",
+    "zh-TW": "不加餐廳，確認行程"
+  },
+  "관심 저장": {
+    "en": "Wishlist",
+    "ja": "お気に入り",
+    "zh-CN": "心愿单",
+    "zh-TW": "收藏清單"
+  },
+  "가고 싶은 행사·장소를 모아보세요. 완성한 플랜은 마이에서 관리해요.": {
+    "en": "Collect events and places here. Manage completed plans in My page.",
+    "ja": "気になるイベント・スポットを保存。完成したプランはマイページで管理できます。",
+    "zh-CN": "在此收藏活动与地点，完成的行程请在“我的”管理。",
+    "zh-TW": "在此收藏活動與地點，完成的行程請在「我的」管理。"
+  },
+  "관심 저장 종류": {
+    "en": "Wishlist type",
+    "ja": "お気に入りの種類",
+    "zh-CN": "收藏类型",
+    "zh-TW": "收藏類型"
+  },
+  "관심 있는 장소를 저장해보세요.": {
+    "en": "Save places you want to visit.",
+    "ja": "行きたいスポットを保存しましょう。",
+    "zh-CN": "收藏想去的地点。",
+    "zh-TW": "收藏想去的地點。"
+  },
+  "관심 저장 해제": {
+    "en": "Remove from wishlist",
+    "ja": "お気に入りから解除",
+    "zh-CN": "取消收藏",
+    "zh-TW": "取消收藏"
+  },
+  "관심 행사·장소 보기 ↗": {
+    "en": "View wishlist ↗",
+    "ja": "お気に入りを見る ↗",
+    "zh-CN": "查看心愿单 ↗",
+    "zh-TW": "查看收藏 ↗"
+  },
+  "완성한 플랜을 확인하고 수정하세요.": {
+    "en": "View and edit your completed plans.",
+    "ja": "完成したプランを確認・編集できます。",
+    "zh-CN": "查看与编辑已完成的行程。",
+    "zh-TW": "查看與編輯已完成的行程。"
+  },
+  "플랜과 관심 장소는 이 브라우저에 저장돼요.": {
+    "en": "Plans and saved places are stored in this browser.",
+    "ja": "プランとお気に入りのスポットはこのブラウザに保存されます。",
+    "zh-CN": "行程和收藏地点保存在当前浏览器中。",
+    "zh-TW": "行程與收藏地點儲存在目前瀏覽器中。"
+  },
+  "계정 및 설정": {
+    "en": "Account & settings",
+    "ja": "アカウント・設定",
+    "zh-CN": "账号与设置",
+    "zh-TW": "帳號與設定"
+  },
+  "내 드롭 플랜 관리": {
+    "en": "Manage my plans",
+    "ja": "マイプラン管理",
+    "zh-CN": "管理我的行程",
+    "zh-TW": "管理我的行程"
+  },
+  "완성한 전체 방문 순서를 확인하고 수정합니다.": {
+    "en": "View and edit your full itinerary.",
+    "ja": "旅程全体の訪問順を確認・編集します。",
+    "zh-CN": "查看与编辑完整到访顺序。",
+    "zh-TW": "查看與編輯完整造訪順序。"
+  },
+  "저장 플랜": {
+    "en": "Saved plans",
+    "ja": "保存したプラン",
+    "zh-CN": "已保存行程",
+    "zh-TW": "已儲存行程"
+  },
+  "마이 안에서 상세 확인": {
+    "en": "Open details in My page",
+    "ja": "マイページで詳細を確認",
+    "zh-CN": "在“我的”查看详情",
+    "zh-TW": "在「我的」查看詳情"
+  },
+  "기존 플랜 갱신": {
+    "en": "Update existing plan",
+    "ja": "既存のプランを更新",
+    "zh-CN": "更新现有行程",
+    "zh-TW": "更新現有行程"
+  },
+  "별도 저장함": {
+    "en": "Separate wishlist",
+    "ja": "専用のお気に入り",
+    "zh-CN": "独立收藏夹",
+    "zh-TW": "獨立收藏夾"
+  },
+  "행사·관광지·맛집": {
+    "en": "Events, sights & food",
+    "ja": "イベント・観光地・飲食店",
+    "zh-CN": "活动、景点与餐厅",
+    "zh-TW": "活動、景點與餐廳"
+  },
+  "드롭 플랜 편집": {
+    "en": "Edit Drop Plan",
+    "ja": "ドロッププラン編集",
+    "zh-CN": "编辑 Drop Plan",
+    "zh-TW": "編輯 Drop Plan"
+  },
+  "최근 저장순 마이 안에서 상세 확인": {
+    "en": "Newest first · Details in My page",
+    "ja": "保存順・マイページで詳細確認",
+    "zh-CN": "最近保存优先，在“我的”查看详情",
+    "zh-TW": "最近儲存優先，在「我的」查看詳情"
+  },
+  "전체 방문 순서 지도": {
+    "en": "Full itinerary map",
+    "ja": "旅程全体の訪問順マップ",
+    "zh-CN": "完整到访顺序地图",
+    "zh-TW": "完整造訪順序地圖"
+  },
+  "숫자는 전체 방문 순서예요. 연결선은 같은 날의 방문 순서입니다.": {
+    "en": "Numbers show the full visit order. Lines connect stops on the same day.",
+    "ja": "数字は全体の訪問順です。線は同じ日のスポットを結びます。",
+    "zh-CN": "数字代表完整到访顺序，连线连接同一天的地点。",
+    "zh-TW": "數字代表完整造訪順序，連線連接同一天的地點。"
+  },
+  "지도를 불러오지 못했어요. 아래 방문 목록을 확인해주세요.": {
+    "en": "Map unavailable. See the stops below.",
+    "ja": "地図を読み込めません。下の訪問リストをご確認ください。",
+    "zh-CN": "地图加载失败，请查看下方地点列表。",
+    "zh-TW": "地圖載入失敗，請查看下方地點清單。"
+  },
+  "방문 순서": {
+    "en": "Visit order",
+    "ja": "訪問順",
+    "zh-CN": "游览顺序",
+    "zh-TW": "遊覽順序"
+  },
+  "숫자는 전체 방문 순서예요. 가까운 핀은 묶어서 표시하며, 연결선은 같은 날의 방문 순서입니다.": {
+    "en": "Numbers show visit order. Nearby pins are grouped; lines connect same-day stops.",
+    "ja": "数字は訪問順です。近いピンはまとめ、同じ日のスポットを線で結びます。",
+    "zh-CN": "数字代表到访顺序。相近图钉合并显示，连线连接同一天的地点。",
+    "zh-TW": "數字代表造訪順序。相近圖釘合併顯示，連線連接同一天的地點。"
+  },
+  "메뉴·운영시간 보기": {
+    "en": "Menu & hours",
+    "ja": "メニュー・営業時間",
+    "zh-CN": "菜单与营业时间",
+    "zh-TW": "菜單與營業時間"
+  },
+  "장소 정보 보기": {
+    "en": "Place information",
+    "ja": "スポット情報",
+    "zh-CN": "地点信息",
+    "zh-TW": "地點資訊"
+  },
+  "일정에 추가됨": {
+    "en": "Added to itinerary",
+    "ja": "旅程に追加済み",
+    "zh-CN": "已加入行程",
+    "zh-TW": "已加入行程"
+  },
+  "주소": {
+    "en": "Address",
+    "ja": "住所",
+    "zh-CN": "地址",
+    "zh-TW": "地址"
+  },
+  "현재 위치에서 길찾기 ↗": {
+    "en": "Directions from my location ↗",
+    "ja": "現在地からルート検索 ↗",
+    "zh-CN": "从当前位置出发 ↗",
+    "zh-TW": "從目前位置出發 ↗"
+  },
+  "방문 완료 취소": {
+    "en": "Undo visit completion",
+    "ja": "訪問完了を取り消す",
+    "zh-CN": "撤销完成",
+    "zh-TW": "取消完成"
+  },
+  "방문 완료": {
+    "en": "Visited",
+    "ja": "訪問完了",
+    "zh-CN": "已到访",
+    "zh-TW": "已造訪"
+  },
+  "계획 경로 보기": {
+    "en": "View planned route",
+    "ja": "予定ルートを見る",
+    "zh-CN": "查看计划路线",
+    "zh-TW": "查看規劃路線"
+  },
+  "현지 방문 안내": {
+    "en": "Visit guide",
+    "ja": "現地での訪問ガイド",
+    "zh-CN": "实地到访指引",
+    "zh-TW": "實地造訪指引"
+  },
+  "방문할 날짜": {
+    "en": "Visit date",
+    "ja": "訪問日",
+    "zh-CN": "到访日期",
+    "zh-TW": "造訪日期"
+  },
+  "방문 완료 · 다음 장소 보기 ✓": {
+    "en": "Visited · Show next stop ✓",
+    "ja": "訪問完了・次のスポットへ ✓",
+    "zh-CN": "完成到访，查看下一站 ✓",
+    "zh-TW": "完成造訪，查看下一站 ✓"
+  },
+  "오늘의 플랜 완료": {
+    "en": "Today's plan complete",
+    "ja": "今日のプラン完了",
+    "zh-CN": "今日行程已完成",
+    "zh-TW": "今日行程已完成"
+  },
+  "선택일의 플랜 완료": {
+    "en": "Selected day's plan complete",
+    "ja": "選択日のプラン完了",
+    "zh-CN": "所选日期行程已完成",
+    "zh-TW": "所選日期行程已完成"
+  },
+  "이 날짜의 방문을 모두 완료했어요.": {
+    "en": "You have visited every stop for this date.",
+    "ja": "この日のスポットをすべて訪問しました。",
+    "zh-CN": "该日期的所有地点均已到访。",
+    "zh-TW": "該日期的所有地點均已造訪。"
+  },
+  "다른 날짜의 일정은 날짜 선택에서 확인하세요.": {
+    "en": "Choose another date to view its stops.",
+    "ja": "他の日の予定は日付を選んで確認できます。",
+    "zh-CN": "选择其他日期可查看当天行程。",
+    "zh-TW": "選擇其他日期可查看當天行程。"
+  },
+  "어떻게 사용하나요?": {
+    "en": "How to use",
+    "ja": "使い方",
+    "zh-CN": "如何使用？",
+    "zh-TW": "如何使用？"
+  },
+  "방문할 날짜를 선택하고 길찾기를 눌러 Google Maps로 이동하세요.": {
+    "en": "Choose your visit date and tap directions to open Google Maps.",
+    "ja": "訪問日を選び、ルート検索を押してGoogle Mapsを開きます。",
+    "zh-CN": "选择到访日期，点击路线打开 Google Maps。",
+    "zh-TW": "選擇造訪日期，點選路線開啟 Google Maps。"
+  },
+  "현장에서 방문을 마치면 이 화면으로 돌아와 방문 완료를 누르세요.": {
+    "en": "After your visit, return here and mark the stop as visited.",
+    "ja": "訪問を終えたらこの画面に戻り、訪問完了を押します。",
+    "zh-CN": "到访结束后，返回此页面并标记已到访。",
+    "zh-TW": "造訪結束後，返回此頁面並標記已造訪。"
+  },
+  "다음 장소가 표시되면 길찾기를 눌러 현재 위치에서 출발하세요.": {
+    "en": "When the next stop appears, tap directions to start from your current location.",
+    "ja": "次のスポットが表示されたら、現在地からのルートを開きます。",
+    "zh-CN": "下一站出现后，点击路线从当前位置出发。",
+    "zh-TW": "下一站出現後，點選路線從目前位置出發。"
+  },
+  "잘못 누른 완료는 아래 방문 목록에서 취소할 수 있어요. 진행 상태는 이 브라우저에 보관돼요.": {
+    "en": "Undo an accidental completion in the list below. Progress is saved in this browser.",
+    "ja": "誤って完了にした場合は下のリストで取り消せます。進行状況はこのブラウザに保存されます。",
+    "zh-CN": "误点完成可在下方列表撤销。进度保存在当前浏览器中。",
+    "zh-TW": "誤點完成可在下方清單取消。進度儲存在目前瀏覽器中。"
+  },
+  "현재 위치는 Google Maps에서 확인합니다. 위치를 사용할 수 없으면 출발지를 직접 입력해주세요.": {
+    "en": "Google Maps finds your current location. If unavailable, enter your starting point there.",
+    "ja": "現在地はGoogle Mapsで確認します。取得できない場合は出発地を直接入力してください。",
+    "zh-CN": "Google Maps 会获取当前位置。如无法获取，请手动输入出发地。",
+    "zh-TW": "Google Maps 會取得目前位置。如無法取得，請手動輸入出發地。"
+  },
+  "진행 상태를 저장하지 못했어요.": {
+    "en": "Could not save your progress.",
+    "ja": "進行状況を保存できませんでした。",
+    "zh-CN": "无法保存进度。",
+    "zh-TW": "無法儲存進度。"
+  },
+  "일정 날짜": {
+    "en": "Itinerary date",
+    "ja": "旅程の日付",
+    "zh-CN": "行程日期",
+    "zh-TW": "行程日期"
+  },
+  "오늘 일정": {
+    "en": "Today's itinerary",
+    "ja": "今日の予定",
+    "zh-CN": "今日行程",
+    "zh-TW": "今日行程"
+  },
+  "날짜별 방문 일정": {
+    "en": "Visits by date",
+    "ja": "日付別の訪問予定",
+    "zh-CN": "按日期查看行程",
+    "zh-TW": "按日期查看行程"
+  },
+  "날짜를 바꾸면 해당 날짜의 일정만 보여요.": {
+    "en": "Change the date to view that day’s stops.",
+    "ja": "日付を変えると、その日の予定を表示します。",
+    "zh-CN": "切换日期以查看当天行程。",
+    "zh-TW": "切換日期以查看當天行程。"
+  },
+  "일정을 확인하고 길찾기를 눌러 Google Maps로 이동하세요.": {
+    "en": "Check your itinerary and tap directions to open Google Maps.",
+    "ja": "予定を確認し、ルート検索を押してGoogle Mapsを開きます。",
+    "zh-CN": "确认行程，点击路线打开 Google Maps。",
+    "zh-TW": "確認行程，點選路線開啟 Google Maps。"
+  },
+  "드롭 플랜 진행 단계": {
+    "en": "Drop Plan steps",
+    "ja": "ドロッププランの手順",
+    "zh-CN": "Drop Plan 步骤",
+    "zh-TW": "Drop Plan 步驟"
+  },
+  "행사": {
+    "en": "Events",
+    "ja": "イベント",
+    "zh-CN": "活动",
+    "zh-TW": "活動"
+  },
+  "동선": {
+    "en": "Route",
+    "ja": "ルート",
+    "zh-CN": "路线",
+    "zh-TW": "路線"
+  },
+  "맛집": {
+    "en": "Food",
+    "ja": "グルメ",
+    "zh-CN": "餐厅",
+    "zh-TW": "餐廳"
+  },
+  "방문 날짜가 다르면 날짜별로 일정이 나뉘어요. 같은 날의 방문 순서만 바꿀 수 있어요.": {
+    "en": "Different visit dates are shown as separate daily itineraries. Reorder stops within the same day.",
+    "ja": "訪問日が異なる場合は日付ごとに分かれます。同じ日の訪問順のみ変更できます。",
+    "zh-CN": "不同到访日期会分成每日行程，仅可调整同一天内的顺序。",
+    "zh-TW": "不同造訪日期會分成每日行程，僅可調整同一天內的順序。"
+  },
+  "행사 기간": {
+    "en": "Event dates",
+    "ja": "開催期間",
+    "zh-CN": "活动期间",
+    "zh-TW": "活動期間"
+  },
+  "필수": {
+    "en": "Required",
+    "ja": "必須",
+    "zh-CN": "必选",
+    "zh-TW": "必選"
+  },
+  "선택": {
+    "en": "Optional",
+    "ja": "任意",
+    "zh-CN": "可选",
+    "zh-TW": "可選"
+  },
+  "방문할 행사를 1곳 이상 선택해주세요.": {
+    "en": "Select at least one event to visit.",
+    "ja": "訪問するイベントを1件以上選んでください。",
+    "zh-CN": "请至少选择一个要到访的活动。",
+    "zh-TW": "請至少選擇一個要造訪的活動。"
+  },
+  "같은 날짜 안에서 방문 순서를 조정하세요.": {
+    "en": "Arrange the stops within each day.",
+    "ja": "同じ日付内で訪問順を調整してください。",
+    "zh-CN": "请调整同一天内的到访顺序。",
+    "zh-TW": "請調整同一天內的造訪順序。"
+  },
+  "휴무일": {
+    "en": "Closed days",
+    "ja": "休業日",
+    "zh-CN": "休息日",
+    "zh-TW": "公休日"
+  },
+  "이용 요금": {
+    "en": "Admission fee",
+    "ja": "入場料金",
+    "zh-CN": "门票费用",
+    "zh-TW": "入場費用"
+  },
+  "주차": {
+    "en": "Parking",
+    "ja": "駐車場",
+    "zh-CN": "停车",
+    "zh-TW": "停車"
+  },
+  "문의": {
+    "en": "Contact",
+    "ja": "お問い合わせ",
+    "zh-CN": "咨询",
+    "zh-TW": "洽詢"
+  },
+  "자세한 소개": {
+    "en": "Detailed introduction",
+    "ja": "詳しい紹介",
+    "zh-CN": "详细介绍",
+    "zh-TW": "詳細介紹"
+  },
+  "음식 종류는 등록된 분류를 우선 사용하며, 미등록 항목은 이름·메뉴로 구분합니다.": {
+    "en": "Food types use the registered category first, with name and menu keywords as a fallback.",
+    "ja": "料理の種類は登録済みの分類を優先し、未登録の場合は店名・メニューで分類します。",
+    "zh-CN": "餐饮类型优先使用已登记的分类，未登记时按店名和菜单关键词区分。",
+    "zh-TW": "餐飲類型優先使用已登記的分類，未登記時按店名和菜單關鍵字區分。"
+  },
+  "마이페이지": {
+    "en": "My page",
+    "ja": "マイページ",
+    "zh-CN": "我的",
+    "zh-TW": "我的"
+  },
+  "찜한 행사": {
+    "en": "Saved events",
+    "ja": "お気に入りのイベント",
+    "zh-CN": "收藏的活动",
+    "zh-TW": "收藏的活動"
+  },
+  "찜한 행사를 모아보고 다시 찾아보세요.": {
+    "en": "Keep your favorite events here and revisit them anytime.",
+    "ja": "お気に入りのイベントをまとめて、いつでも見返せます。",
+    "zh-CN": "收藏喜欢的活动，随时回来查看。",
+    "zh-TW": "收藏喜歡的活動，隨時回來查看。"
+  },
+  "드롭 플랜은 이 브라우저에 저장돼요.": {
+    "en": "Drop Plans are saved in this browser.",
+    "ja": "Drop Planはこのブラウザーに保存されます。",
+    "zh-CN": "Drop Plan保存在当前浏览器中。",
+    "zh-TW": "Drop Plan儲存在目前的瀏覽器中。"
+  },
+  "찜한 행사 모아보기": {
+    "en": "View saved events",
+    "ja": "お気に入りのイベントを見る",
+    "zh-CN": "查看收藏活动",
+    "zh-TW": "查看收藏活動"
+  },
+  "하트로 찜한 행사만 표시합니다. 저장한 드롭 플랜은 마이페이지에서 관리합니다.": {
+    "en": "Only events saved with a heart appear here. Manage saved Drop Plans in My page.",
+    "ja": "ハートでお気に入りにしたイベントを表示します。保存したDrop Planはマイページで管理します。",
+    "zh-CN": "这里只显示点心形收藏的活动，已保存的Drop Plan在“我的”中管理。",
+    "zh-TW": "這裡只顯示點愛心收藏的活動，已儲存的Drop Plan在「我的」中管理。"
+  },
+  "다른 지점에서도 동일한 찜 상태 공유": {
+    "en": "The same saved status is shared across branches",
+    "ja": "他の店舗でも同じお気に入り状態を共有",
+    "zh-CN": "不同门店共享同一收藏状态",
+    "zh-TW": "不同門店共用同一收藏狀態"
+  },
+  "최근 찜한 행사부터 표시": {
+    "en": "Most recently saved events first",
+    "ja": "最近お気に入りにしたイベントから表示",
+    "zh-CN": "最近收藏的活动优先",
+    "zh-TW": "最近收藏的活動優先"
+  },
+  "마이페이지에서 관리": {
+    "en": "Manage in My page",
+    "ja": "マイページで管理",
+    "zh-CN": "在“我的”中管理",
+    "zh-TW": "在「我的」中管理"
+  },
+  "일정 확인·수정·길찾기": {
+    "en": "View, edit and get directions for your itinerary",
+    "ja": "日程の確認・編集・ルート検索",
+    "zh-CN": "查看、修改行程及路线导航",
+    "zh-TW": "查看、修改行程及路線導航"
+  },
+  "저장 탭에서 관리": {
+    "en": "Manage in the Saved tab",
+    "ja": "保存タブで管理",
+    "zh-CN": "在收藏标签中管理",
+    "zh-TW": "在收藏分頁中管理"
+  },
+  "완성한 드롭 플랜과 구분": {
+    "en": "Separate from completed Drop Plans",
+    "ja": "完成したDrop Planと区別",
+    "zh-CN": "与已完成的Drop Plan分开管理",
+    "zh-TW": "與已完成的Drop Plan分開管理"
+  },
+  "부산 도착일": {
+    "en": "Arrival in Busan",
+    "ja": "釜山到着日",
+    "zh-CN": "抵达釜山日期",
+    "zh-TW": "抵達釜山日期"
+  },
+  "행사마다 종료일이 달라요. 각 행사의 기간을 확인하고 방문해주세요.": {
+    "en": "Events end on different dates. Check each event’s dates before visiting.",
+    "ja": "イベントごとに終了日が異なります。各イベントの開催期間を確認してお出かけください。",
+    "zh-CN": "各活动结束日期不同，请确认每个活动的日期后再前往。",
+    "zh-TW": "各活動結束日期不同，請確認每個活動的日期後再前往。"
+  },
+  "행사장별 플랜 확인": {
+    "en": "Review venue groups",
+    "ja": "会場ごとのプラン確認",
+    "zh-CN": "确认各会场行程",
+    "zh-TW": "確認各會場行程"
+  },
+  "행사장과 주변 장소를 함께 확인하세요. 방문 날짜는 따로 지정하지 않아요.": {
+    "en": "Review each venue with its nearby stops. No visit dates are assigned.",
+    "ja": "会場と周辺スポットをまとめて確認できます。訪問日は指定しません。",
+    "zh-CN": "查看各会场及周边地点，无需指定到访日期。",
+    "zh-TW": "查看各會場及周邊地點，無需指定到訪日期。"
+  },
+  "가고 싶은 행사와 방문할 행사장을 선택하세요.": {
+    "en": "Choose events and the venues you want to visit.",
+    "ja": "行きたいイベントと訪問する会場を選んでください。",
+    "zh-CN": "选择想去的活动及会场。",
+    "zh-TW": "選擇想去的活動及會場。"
+  },
+  "여행 기간 중 방문 가능": {
+    "en": "Available during your trip",
+    "ja": "旅行期間中に訪問可能",
+    "zh-CN": "旅行期间可前往",
+    "zh-TW": "旅行期間可前往"
+  },
+  "사전 예약·이용 조건 확인": {
+    "en": "Check booking and entry conditions",
+    "ja": "事前予約・利用条件を確認",
+    "zh-CN": "请确认预约及使用条件",
+    "zh-TW": "請確認預約及使用條件"
+  },
+  "주변 관광지": {
+    "en": "Nearby sights",
+    "ja": "周辺の観光スポット",
+    "zh-CN": "周边景点",
+    "zh-TW": "周邊景點"
+  },
+  "주변 맛집": {
+    "en": "Nearby food",
+    "ja": "周辺のグルメ",
+    "zh-CN": "周边美食",
+    "zh-TW": "周邊美食"
+  },
+  "이 행사장 주변에서 들를 맛집을 골라보세요.": {
+    "en": "Choose places to eat near this venue.",
+    "ja": "この会場の近くで立ち寄る飲食店を選びましょう。",
+    "zh-CN": "选择此会场附近想去的餐厅。",
+    "zh-TW": "選擇此會場附近想去的餐廳。"
+  },
+  "행사 종료": {
+    "en": "Event ends",
+    "ja": "イベント終了",
+    "zh-CN": "活动结束",
+    "zh-TW": "活動結束"
+  },
+  "예약 마감": {
+    "en": "Booking closes",
+    "ja": "予約締切",
+    "zh-CN": "预约截止",
+    "zh-TW": "預約截止"
+  },
+  "행사장 중심 플랜": {
+    "en": "Venue group",
+    "ja": "会場を中心としたプラン",
+    "zh-CN": "会场及周边地点",
+    "zh-TW": "會場及周邊地點"
+  },
+  "주변 장소 수정": {
+    "en": "Edit nearby stops",
+    "ja": "周辺スポットを編集",
+    "zh-CN": "修改周边地点",
+    "zh-TW": "修改周邊地點"
+  },
+  "추가한 주변 장소가 없어요.": {
+    "en": "No nearby stops added.",
+    "ja": "追加した周辺スポットはありません。",
+    "zh-CN": "尚未添加周边地点。",
+    "zh-TW": "尚未加入周邊地點。"
+  },
+  "연결선은 행사장별 장소 묶음이며 실제 이동 경로는 길찾기에서 확인해주세요.": {
+    "en": "Lines connect stops within each venue group. Use directions for actual routes.",
+    "ja": "線は会場ごとのスポットのまとまりを示しています。実際の経路はルート検索で確認してください。",
+    "zh-CN": "连线表示各会场周边地点的分组，实际路线请查看导航。",
+    "zh-TW": "連線表示各會場周邊地點的分組，實際路線請查看導航。"
+  },
+  "행사장별 플랜 지도": {
+    "en": "Venue group map",
+    "ja": "会場ごとのプランマップ",
+    "zh-CN": "会场分组地图",
+    "zh-TW": "會場分組地圖"
+  },
+  "행사 선택": {
+    "en": "Choose events",
+    "ja": "イベント選択",
+    "zh-CN": "选择活动",
+    "zh-TW": "選擇活動"
+  },
+  "첫 행사장 주변 둘러보기": {
+    "en": "Explore the first venue",
+    "ja": "最初の会場の周辺へ",
+    "zh-CN": "探索第一个会场周边",
+    "zh-TW": "探索第一個會場周邊"
+  },
+  "음식점 추천받기": {
+    "en": "Find nearby food",
+    "ja": "周辺の飲食店を見る",
+    "zh-CN": "查看附近餐厅",
+    "zh-TW": "查看附近餐廳"
+  },
+  "전체 플랜 확인": {
+    "en": "Review full plan",
+    "ja": "プラン全体を確認",
+    "zh-CN": "查看完整行程",
+    "zh-TW": "查看完整行程"
+  },
+  "다음 행사장 둘러보기": {
+    "en": "Explore the next venue",
+    "ja": "次の会場の周辺へ",
+    "zh-CN": "探索下一个会场周边",
+    "zh-TW": "探索下一個會場周邊"
+  },
+  "방문할 행사와 지점을 확인해주세요.": {
+    "en": "Check the events and venues you selected.",
+    "ja": "選択したイベントと会場を確認してください。",
+    "zh-CN": "请确认所选活动及会场。",
+    "zh-TW": "請確認所選活動及會場。"
+  },
+  "다음 방문 장소": {
+    "en": "Next stop",
+    "ja": "次の訪問先",
+    "zh-CN": "下一个地点",
+    "zh-TW": "下一個地點"
+  },
+  "기간상 오늘 방문 가능한 장소": {
+    "en": "Within its event dates today",
+    "ja": "開催期間上、本日訪問できる場所",
+    "zh-CN": "今天在活动日期范围内的地点",
+    "zh-TW": "今天在活動日期範圍內的地點"
+  },
+  "방문을 모두 완료했어요": {
+    "en": "All visits complete",
+    "ja": "すべての訪問が完了しました",
+    "zh-CN": "已完成全部到访",
+    "zh-TW": "已完成全部到訪"
+  },
+  "오늘 추천할 장소가 없어요": {
+    "en": "No stops to recommend today",
+    "ja": "本日のおすすめスポットはありません",
+    "zh-CN": "今天暂无可推荐地点",
+    "zh-TW": "今天暫無可推薦地點"
+  },
+  "행사별 기간과 아래 장소 목록을 확인해주세요.": {
+    "en": "Check each event’s dates and the stops below.",
+    "ja": "各イベントの期間と以下のスポット一覧を確認してください。",
+    "zh-CN": "请查看各活动日期及下方地点列表。",
+    "zh-TW": "請查看各活動日期及下方地點列表。"
+  },
+  "행사별 종료일을 확인하고 원하는 행사장 묶음부터 방문하세요.": {
+    "en": "Check end dates and start with the venue group you prefer.",
+    "ja": "終了日を確認し、お好きな会場のまとまりから訪問してください。",
+    "zh-CN": "确认结束日期，从想去的会场分组开始。",
+    "zh-TW": "確認結束日期，從想去的會場分組開始。"
+  },
+  "길찾기를 누르면 현재 위치에서 Google Maps로 안내합니다.": {
+    "en": "Tap directions to open Google Maps from your current location.",
+    "ja": "ルート検索を押すと現在地からGoogle Mapsで案内します。",
+    "zh-CN": "点击导航，在Google Maps中从当前位置出发。",
+    "zh-TW": "點選導航，在Google Maps中從目前位置出發。"
+  },
+  "방문 완료를 누르면 다음 장소를 보여드려요. 아래 목록에서 다른 장소로 바로 이동해도 좋아요.": {
+    "en": "Mark a visit complete to see the next stop, or choose any stop below.",
+    "ja": "訪問完了を押すと次の場所を表示します。以下の一覧から別の場所を選んでも構いません。",
+    "zh-CN": "标记到访完成后会显示下一个地点，也可直接选择下方其他地点。",
+    "zh-TW": "標記到訪完成後會顯示下一個地點，也可直接選擇下方其他地點。"
+  },
+  "행사 운영시간·예약 조건은 방문 전에 확인해주세요.": {
+    "en": "Check event hours and booking conditions before visiting.",
+    "ja": "訪問前にイベントの営業時間と予約条件を確認してください。",
+    "zh-CN": "前往前请确认活动营业时间及预约条件。",
+    "zh-TW": "前往前請確認活動營業時間及預約條件。"
+  },
+  "길찾기·방문 완료 사용하기": {
+    "en": "Directions & visit tracking",
+    "ja": "ルート検索・訪問完了を使う",
+    "zh-CN": "导航及到访记录",
+    "zh-TW": "導航及到訪紀錄"
+  },
+  "선택한 종류의 맛집이 없어요. 다른 종류를 골라보세요.": {
+    "en": "No restaurants in this category. Try another type.",
+    "ja": "選択した種類の飲食店はありません。別の種類を選んでください。",
+    "zh-CN": "暂无此类餐厅，请选择其他种类。",
+    "zh-TW": "暫無此類餐廳，請選擇其他種類。"
+  },
+  "관광지 더 보기 +": {
+    "en": "More sights +",
+    "ja": "観光スポットをもっと見る +",
+    "zh-CN": "更多景点 +",
+    "zh-TW": "更多景點 +"
+  },
+  "플랜 만들기 전 확인해주세요": {
+    "en": "Before you make your plan",
+    "ja": "プラン作成前にご確認ください",
+    "zh-CN": "制定行程前请确认",
+    "zh-TW": "制定行程前請確認"
+  },
+  "행사마다 종료일이 달라요. 각 행사의 기간을 확인하고 플랜을 만들어주세요.": {
+    "en": "Events end on different dates. Check each event’s dates when making your plan.",
+    "ja": "イベントごとに終了日が異なります。各イベントの開催期間を確認してプランを作成してください。",
+    "zh-CN": "各活动结束日期不同，请确认各活动日期后制定行程。",
+    "zh-TW": "各活動結束日期不同，請確認各活動日期後制定行程。"
+  },
+  "저장한 플랜은 현재 기기의 이 브라우저에만 보관돼요. 브라우저 데이터를 삭제하거나 다른 기기·브라우저를 사용하면 불러올 수 없어요.": {
+    "en": "Saved plans are stored only in this browser on this device. They cannot be retrieved after clearing browser data or from another device or browser.",
+    "ja": "保存したプランは、この端末のこのブラウザにのみ保存されます。ブラウザのデータを削除した場合や、別の端末・ブラウザでは読み込めません。",
+    "zh-CN": "已保存的行程仅保存在当前设备的此浏览器中。清除浏览器数据后，或使用其他设备、浏览器时，将无法读取。",
+    "zh-TW": "已儲存的行程僅保存在目前裝置的此瀏覽器中。清除瀏覽器資料後，或使用其他裝置、瀏覽器時，將無法讀取。"
+  },
+  "로그인하고 나만의 플랜을 만들어보세요. 저장한 플랜은 마이페이지에서 수정·삭제할 수 있어요.": {
+    "en": "Log in and create your own plan. You can edit or delete saved plans in My Page.",
+    "ja": "ログインして自分だけのプランを作成しましょう。保存したプランはマイページで編集・削除できます。",
+    "zh-CN": "登录并创建专属行程。可在我的页面修改或删除已保存的行程。",
+    "zh-TW": "登入並建立專屬行程。可在我的頁面修改或刪除已儲存的行程。"
+  },
+  "로그인하고 나만의 플랜을 만들어보세요.": {
+    "en": "Log in and create your own plan.",
+    "ja": "ログインして自分だけのプランを作成しましょう。",
+    "zh-CN": "登录并创建专属行程。",
+    "zh-TW": "登入並建立專屬行程。"
+  },
+  "로그인하고 플랜 만들기": {
+    "en": "Log in & create a plan",
+    "ja": "ログインしてプラン作成",
+    "zh-CN": "登录并创建行程",
+    "zh-TW": "登入並建立行程"
+  },
+  "현재는 로그인 여부와 관계없이 이 브라우저에만 저장돼요. 브라우저 데이터를 삭제하면 플랜도 사라져요.": {
+    "en": "For now, plans are stored only in this browser, whether logged in or not. Clearing browser data also removes your plans.",
+    "ja": "現在はログインの有無にかかわらず、このブラウザにのみ保存されます。ブラウザのデータを削除するとプランも消えます。",
+    "zh-CN": "目前无论是否登录，行程均仅保存在此浏览器中。清除浏览器数据也会删除行程。",
+    "zh-TW": "目前無論是否登入，行程均僅保存在此瀏覽器中。清除瀏覽器資料也會刪除行程。"
+  },
+  "현재 로그인은 체험용이며, 플랜은 이 브라우저에만 저장돼요.": {
+    "en": "Login is currently a demo. Plans are stored only in this browser.",
+    "ja": "現在のログインは体験用です。プランはこのブラウザにのみ保存されます。",
+    "zh-CN": "目前登录仅供体验，行程仅保存在此浏览器中。",
+    "zh-TW": "目前登入僅供體驗，行程僅保存在此瀏覽器中。"
+  },
+  "여행의 취향을 내 플랜에 담아보세요.": {
+    "en": "Make your plan your own.",
+    "ja": "旅の好みをプランに詰め込みましょう。",
+    "zh-CN": "将旅行喜好加入您的行程。",
+    "zh-TW": "將旅行喜好加入您的行程。"
+  },
+  "5개 언어 지원": {
+    "en": "5 languages",
+    "ja": "5言語対応",
+    "zh-CN": "支持5种语言",
+    "zh-TW": "支援5種語言"
+  },
+  "플랜 이용 방법과 저장 안내": {
+    "en": "How plans work and where they are saved",
+    "ja": "プランの使い方と保存について",
+    "zh-CN": "行程使用及保存说明",
+    "zh-TW": "行程使用及儲存說明"
+  },
+  "저장한 플랜을 열어 확인하거나 수정·삭제하세요.": {
+    "en": "Open, edit or delete your saved plans.",
+    "ja": "保存したプランを開いて確認・編集・削除できます。",
+    "zh-CN": "可打开、查看、修改或删除已保存的行程。",
+    "zh-TW": "可開啟、查看、修改或刪除已儲存的行程。"
+  },
+  "수정": {
+    "en": "Edit",
+    "ja": "編集",
+    "zh-CN": "修改",
+    "zh-TW": "修改"
+  },
+  "삭제": {
+    "en": "Delete",
+    "ja": "削除",
+    "zh-CN": "删除",
+    "zh-TW": "刪除"
+  },
+  "플랜 보기": {
+    "en": "View plan",
+    "ja": "プランを見る",
+    "zh-CN": "查看行程",
+    "zh-TW": "查看行程"
+  },
+  "플랜 삭제": {
+    "en": "Delete plan",
+    "ja": "プランを削除",
+    "zh-CN": "删除行程",
+    "zh-TW": "刪除行程"
+  },
+  "플랜을 삭제할까요?": {
+    "en": "Delete this plan?",
+    "ja": "このプランを削除しますか？",
+    "zh-CN": "要删除此行程吗？",
+    "zh-TW": "要刪除此行程嗎？"
+  },
+  "선택한 플랜과 방문 완료 기록이 삭제돼요. 삭제 후에는 되돌릴 수 없어요.": {
+    "en": "This plan and its visit history will be deleted. This cannot be undone.",
+    "ja": "選択したプランと訪問完了の記録が削除されます。元に戻すことはできません。",
+    "zh-CN": "将删除所选行程及到访记录，删除后无法恢复。",
+    "zh-TW": "將刪除所選行程及到訪紀錄，刪除後無法恢復。"
+  },
+  "삭제하기": {
+    "en": "Delete",
+    "ja": "削除する",
+    "zh-CN": "确认删除",
+    "zh-TW": "確認刪除"
+  },
+  "플랜을 삭제했어요.": {
+    "en": "Plan deleted.",
+    "ja": "プランを削除しました。",
+    "zh-CN": "行程已删除。",
+    "zh-TW": "行程已刪除。"
+  },
+  "플랜을 삭제하지 못했어요. 다시 시도해주세요.": {
+    "en": "Could not delete the plan. Please try again.",
+    "ja": "プランを削除できませんでした。もう一度お試しください。",
+    "zh-CN": "无法删除行程，请重试。",
+    "zh-TW": "無法刪除行程，請重試。"
+  },
+  "BUSAN DROP 이용 안내": {
+    "en": "About BUSAN DROP",
+    "ja": "BUSAN DROPのご利用案内",
+    "zh-CN": "BUSAN DROP使用指南",
+    "zh-TW": "BUSAN DROP使用指南"
+  },
+  "여행 기간에 열리는 행사를 고르고, 행사장 주변 관광지와 맛집을 묶어 플랜을 만들어보세요.": {
+    "en": "Choose events during your trip and group each venue with nearby sights and food.",
+    "ja": "旅行期間中のイベントを選び、会場周辺の観光スポットやグルメをまとめてプランを作りましょう。",
+    "zh-CN": "选择旅行期间的活动，将各会场与附近景点及美食组合成行程。",
+    "zh-TW": "選擇旅行期間的活動，將各會場與附近景點及美食組合成行程。"
+  },
+  "저장한 플랜은 마이페이지에서 수정·삭제할 수 있어요.": {
+    "en": "Edit or delete saved plans in My Page.",
+    "ja": "保存したプランはマイページで編集・削除できます。",
+    "zh-CN": "可在我的页面修改或删除已保存的行程。",
+    "zh-TW": "可在我的頁面修改或刪除已儲存的行程。"
+  },
+  "행사별 기간과 운영시간·예약 조건은 방문 전에 확인해주세요.": {
+    "en": "Check each event’s dates, hours and booking conditions before visiting.",
+    "ja": "訪問前に各イベントの開催期間・営業時間・予約条件を確認してください。",
+    "zh-CN": "到访前请确认各活动日期、营业时间及预约条件。",
+    "zh-TW": "到訪前請確認各活動日期、營業時間及預約條件。"
+  },
+  "행사를 1곳 이상 선택하면 계속할 수 있어요.": {
+    "en": "Choose at least one event to continue.",
+    "ja": "イベントを1件以上選ぶと次に進めます。",
+    "zh-CN": "选择至少一个活动后即可继续。",
+    "zh-TW": "選擇至少一個活動後即可繼續。"
+  },
+  "선택한 행사장 주변의 관광지·맛집을 추천해드려요.": {
+    "en": "Find sights and food near your selected venues.",
+    "ja": "選択した会場周辺の観光スポットやグルメをご紹介します。",
+    "zh-CN": "为您推荐所选会场周边的景点及美食。",
+    "zh-TW": "為您推薦所選會場周邊的景點及美食。"
+  },
+  "선택한 행사의 방문 지점을 확인해주세요.": {
+    "en": "Confirm a venue for each selected event.",
+    "ja": "選択したイベントの訪問先をご確認ください。",
+    "zh-CN": "请确认各所选活动的到访会场。",
+    "zh-TW": "請確認各所選活動的到訪會場。"
+  },
+  "플랜 저장": {
+    "en": "Save plan",
+    "ja": "プランを保存",
+    "zh-CN": "保存行程",
+    "zh-TW": "儲存行程"
+  },
+  "목록에서 보기 ↗": {
+    "en": "View in list ↗",
+    "ja": "一覧で見る ↗",
+    "zh-CN": "在列表中查看 ↗",
+    "zh-TW": "在列表中查看 ↗"
+  },
+  "행사장별 지도 보기": {
+    "en": "View map by venue",
+    "ja": "会場別に地図を見る",
+    "zh-CN": "按会场查看地图",
+    "zh-TW": "依會場查看地圖"
+  },
+  "맛집 핀을 눌러 둘러보세요": {
+    "en": "Tap a food pin to explore",
+    "ja": "グルメのピンをタップしてください",
+    "zh-CN": "点击美食标记查看详情",
+    "zh-TW": "點擊美食標記查看詳情"
+  },
+  "지도에서 맛집을 선택해보세요.": {
+    "en": "Choose a restaurant on the map.",
+    "ja": "地図から飲食店を選んでください。",
+    "zh-CN": "请在地图上选择餐厅。",
+    "zh-TW": "請在地圖上選擇餐廳。"
+  },
+  "지도를 불러오지 못했어요. 목록 보기에서 장소를 선택해주세요.": {
+    "en": "Map unavailable. Choose a place in list view.",
+    "ja": "地図を読み込めません。一覧からスポットを選んでください。",
+    "zh-CN": "地图加载失败，请在列表中选择地点。",
+    "zh-TW": "地圖載入失敗，請在列表中選擇地點。"
+  },
+  "소개 닫기": {
+    "en": "Close preview",
+    "ja": "紹介を閉じる",
+    "zh-CN": "关闭介绍",
+    "zh-TW": "關閉介紹"
+  },
+  "맛집 보기 방식": {
+    "en": "Restaurant view",
+    "ja": "グルメの表示方法",
+    "zh-CN": "美食显示方式",
+    "zh-TW": "美食顯示方式"
+  },
+  "행사장 주변 맛집 지도": {
+    "en": "Restaurants near the venue",
+    "ja": "会場周辺のグルメマップ",
+    "zh-CN": "会场周边美食地图",
+    "zh-TW": "會場周邊美食地圖"
+  },
+  "선택한 맛집 소개": {
+    "en": "Selected restaurant",
+    "ja": "選択した飲食店の紹介",
+    "zh-CN": "所选餐厅介绍",
+    "zh-TW": "所選餐廳介紹"
+  },
+  "곳": {
+    "en": "places",
+    "ja": "か所",
+    "zh-CN": "处",
+    "zh-TW": "處"
+  },
+  "핀은 장소 종류를 표시해요. 연결선은 같은 행사장 주변의 장소 묶음이에요.": {
+    "en": "Pins show place types. Lines group places around the same event venue.",
+    "ja": "ピンはスポットの種類、線は同じ会場周辺のまとまりを示します。",
+    "zh-CN": "标记表示地点类型，连线表示同一会场周边的地点组合。",
+    "zh-TW": "標記表示地點類型，連線表示同一會場周邊的地點組合。"
+  },
+  "내 여행기간": {
+    "en": "My travel dates",
+    "ja": "旅行期間",
+    "zh-CN": "我的旅行日期",
+    "zh-TW": "我的旅行日期"
+  },
+  "방문 스케줄": {
+    "en": "Planned visits",
+    "ja": "訪問プラン",
+    "zh-CN": "游览安排",
+    "zh-TW": "遊覽安排"
+  },
+  "주변 장소 지도": {
+    "en": "Map of nearby places",
+    "ja": "周辺スポットの地図",
+    "zh-CN": "周边地点地图",
+    "zh-TW": "周邊地點地圖"
+  },
+  "핀을 눌러 장소를 확인하세요.": {
+    "en": "Tap a pin to see the place.",
+    "ja": "ピンをタップしてスポットを確認してください。",
+    "zh-CN": "点击标记查看地点。",
+    "zh-TW": "點擊標記查看地點。"
+  },
+  "지도를 불러오지 못했어요. 아래 장소 목록을 확인해주세요.": {
+    "en": "Map unavailable. See the place list below.",
+    "ja": "地図を読み込めません。下のスポット一覧をご確認ください。",
+    "zh-CN": "地图加载失败，请查看下方地点列表。",
+    "zh-TW": "地圖載入失敗，請查看下方地點列表。"
+  },
+  "등록된 지도 위치가 없어요.": {
+    "en": "No map location is available.",
+    "ja": "地図の位置情報がありません。",
+    "zh-CN": "暂无地图位置信息。",
+    "zh-TW": "暫無地圖位置資訊。"
+  },
+  "방문 순서 조정": {
+    "en": "Change visit order",
+    "ja": "訪問順を調整",
+    "zh-CN": "调整游览顺序",
+    "zh-TW": "調整遊覽順序"
+  },
+  "위·아래 버튼으로 행사장별 방문 순서를 조정하세요.": {
+    "en": "Use the up and down buttons to arrange visits within each venue group.",
+    "ja": "上下ボタンで会場ごとの訪問順を調整してください。",
+    "zh-CN": "使用上下按钮调整每个会场组合内的游览顺序。",
+    "zh-TW": "使用上下按鈕調整每個會場組合內的遊覽順序。"
+  },
+  "연결선은 선택한 방문 순서이며 실제 이동 경로는 길찾기에서 확인해주세요.": {
+    "en": "Lines show your selected visit order. Check directions for actual routes.",
+    "ja": "線は選択した訪問順です。実際の経路はルート検索でご確認ください。",
+    "zh-CN": "连线表示所选游览顺序，实际路线请查看导航。",
+    "zh-TW": "連線表示所選遊覽順序，實際路線請查看導航。"
+  },
+  "플랜 수정 ↗": {
+    "en": "Edit plan ↗",
+    "ja": "プランを編集 ↗",
+    "zh-CN": "编辑行程 ↗",
+    "zh-TW": "編輯行程 ↗"
+  },
+  "위·아래 버튼으로 조정": {
+    "en": "Use arrows to reorder",
+    "ja": "上下ボタンで調整",
+    "zh-CN": "用上下按钮调整",
+    "zh-TW": "用上下按鈕調整"
+  },
+  "지도에서 동선 확인": {
+    "en": "Check your route on the map",
+    "ja": "地図で訪問順を確認",
+    "zh-CN": "在地图上确认游览顺序",
+    "zh-TW": "在地圖上確認遊覽順序"
+  },
+  "장소 추가·변경 ↗": {
+    "en": "Add or change places ↗",
+    "ja": "スポットを追加・変更 ↗",
+    "zh-CN": "添加或更换地点 ↗",
+    "zh-TW": "新增或更換地點 ↗"
+  },
+  "여행할 때, 내 플랜과 함께": {
+    "en": "Travel with your Drop Plan",
+    "ja": "旅のお供に、マイプラン",
+    "zh-CN": "带着行程去旅行",
+    "zh-TW": "帶著行程去旅行"
+  },
+  "플랜을 열고 내 위치에서 다음 목적지로 길찾기 하세요. 도착 후 방문 완료를 누르면 스탬프가 찍히고 다음 장소를 안내해요.": {
+    "en": "Open a plan for directions from your location to the next stop. Mark your visit complete to collect a stamp and reveal the next destination.",
+    "ja": "プランを開き、現在地から次の目的地へ。到着後に訪問完了を押すとスタンプが付き、次の場所を案内します。",
+    "zh-CN": "打开行程，从当前位置导航至下一站。到达后点击完成到访，即可盖章并显示下一站。",
+    "zh-TW": "開啟行程，從目前位置導航至下一站。抵達後點擊完成造訪，即可蓋章並顯示下一站。"
+  },
+  "길찾기 → 방문 완료 → 다음 목적지": {
+    "en": "Directions → Complete visit → Next stop",
+    "ja": "道順 → 訪問完了 → 次の目的地",
+    "zh-CN": "导航 → 完成到访 → 下一站",
+    "zh-TW": "導航 → 完成造訪 → 下一站"
+  },
+  "여행 진행": {
+    "en": "Trip progress",
+    "ja": "旅の進捗",
+    "zh-CN": "旅行进度",
+    "zh-TW": "旅行進度"
+  },
+  "방문 순서대로 하나씩 출발해보세요": {
+    "en": "Follow your stops one at a time",
+    "ja": "訪問順に一か所ずつ出発しましょう",
+    "zh-CN": "按顺序逐站出发",
+    "zh-TW": "按順序逐站出發"
+  },
+  "내 위치에서 다음 목적지로 길찾기 ↗": {
+    "en": "Directions from my location to the next stop ↗",
+    "ja": "現在地から次の目的地への道順 ↗",
+    "zh-CN": "从当前位置导航至下一站 ↗",
+    "zh-TW": "從目前位置導航至下一站 ↗"
+  },
+  "Google Maps에서 열려요. 위치 권한을 허용해주세요.": {
+    "en": "Opens in Google Maps. Allow location access.",
+    "ja": "Google Mapsで開きます。位置情報を許可してください。",
+    "zh-CN": "将在Google Maps中打开。请允许访问位置信息。",
+    "zh-TW": "將在Google Maps中開啟。請允許存取位置資訊。"
+  },
+  "오늘 방문 가능한 장소가 없어요": {
+    "en": "No stops available to visit today",
+    "ja": "今日訪問できる場所はありません",
+    "zh-CN": "今天没有可到访的地点",
+    "zh-TW": "今天沒有可造訪的地點"
+  },
+  "아래 카드에서 여행의 스탬프를 확인하세요.": {
+    "en": "See your travel stamps on the cards below.",
+    "ja": "下のカードで旅のスタンプを確認できます。",
+    "zh-CN": "在下方卡片查看旅行印章。",
+    "zh-TW": "在下方卡片查看旅行印章。"
+  },
+  "길찾기 → 도착 후 방문 완료 → 다음 목적지로 출발": {
+    "en": "Directions → Mark complete on arrival → Head to the next stop",
+    "ja": "道順 → 到着後に訪問完了 → 次の目的地へ",
+    "zh-CN": "导航 → 到达后完成到访 → 前往下一站",
+    "zh-TW": "導航 → 抵達後完成造訪 → 前往下一站"
+  },
+  "잘못 누른 완료는 카드에서 취소할 수 있어요. 진행 상태는 이 브라우저에 보관돼요.": {
+    "en": "Undo a completed visit on its card. Progress is saved in this browser.",
+    "ja": "カードから訪問完了を取り消せます。進捗はこのブラウザに保存されます。",
+    "zh-CN": "可在卡片上撤销完成到访。进度保存在此浏览器中。",
+    "zh-TW": "可在卡片上取消完成造訪。進度儲存在此瀏覽器中。"
+  },
+  "스탬프를 찍었어요. 다음 목적지가 갱신됐어요.": {
+    "en": "Stamp collected. Your next stop is updated.",
+    "ja": "スタンプが付きました。次の目的地を更新しました。",
+    "zh-CN": "盖章成功，下一站已更新。",
+    "zh-TW": "蓋章成功，下一站已更新。"
+  },
+  "방문 완료를 취소했어요.": {
+    "en": "Visit completion undone.",
+    "ja": "訪問完了を取り消しました。",
+    "zh-CN": "已撤销完成到访。",
+    "zh-TW": "已取消完成造訪。"
+  },
+  "부산 방문 전 꼭 확인하기": {
+    "en": "Check before you visit Busan",
+    "ja": "釜山へ行く前にチェック",
+    "zh-CN": "到访釜山前必看",
+    "zh-TW": "造訪釜山前必看"
+  },
+  "Google로 계속하기": {
+    "en": "Continue with Google",
+    "ja": "Googleで続ける",
+    "zh-CN": "使用 Google 继续",
+    "zh-TW": "使用 Google 繼續"
+  },
+  "Apple로 계속하기": {
+    "en": "Continue with Apple",
+    "ja": "Appleで続ける",
+    "zh-CN": "使用 Apple 继续",
+    "zh-TW": "使用 Apple 繼續"
+  },
+  "이메일로 계속하기": {
+    "en": "Continue with email",
+    "ja": "メールで続ける",
+    "zh-CN": "使用邮箱继续",
+    "zh-TW": "使用電子郵件繼續"
+  },
+  "먼저 둘러보기": {
+    "en": "Explore first",
+    "ja": "まずは見る",
+    "zh-CN": "先逛一逛",
+    "zh-TW": "先逛逛看"
+  },
+  "저장이나 플랜 생성이 필요할 때 로그인해도 괜찮아요.": {
+    "en": "You can sign in when you are ready to save or plan.",
+    "ja": "保存やプラン作成が必要になった時に、あとからサインインできます。",
+    "zh-CN": "准备好收藏或规划时再登录也可以。",
+    "zh-TW": "準備好收藏或規劃時再登入也可以。"
+  },
+  "개인정보처리방침": {
+    "en": "Privacy Policy",
+    "ja": "プライバシーポリシー",
+    "zh-CN": "隐私政策",
+    "zh-TW": "隱私權政策"
+  },
+  "이용약관": {
+    "en": "Terms of Service",
+    "ja": "利用規約",
+    "zh-CN": "服务条款",
+    "zh-TW": "服務條款"
+  },
+  "이메일 로그인은 준비 중입니다.": {
+    "en": "Email sign-in is coming soon.",
+    "ja": "メールログインは準備中です。",
+    "zh-CN": "邮箱登录正在准备中。",
+    "zh-TW": "電子郵件登入正在準備中。"
+  },
+  "Google 로그인은 준비 중입니다. 먼저 둘러보기를 이용해주세요.": {
+    "en": "Google sign-in is being configured. Please explore first for now.",
+    "ja": "Googleログインは準備中です。今は「まずは見る」をご利用ください。",
+    "zh-CN": "Google 登录正在配置中，请先浏览。",
+    "zh-TW": "Google 登入正在設定中，請先瀏覽。"
+  },
+  "Apple 로그인은 준비 중입니다. 먼저 둘러보기를 이용해주세요.": {
+    "en": "Apple sign-in is being configured. Please explore first for now.",
+    "ja": "Appleログインは準備中です。今は「まずは見る」をご利用ください。",
+    "zh-CN": "Apple 登录正在配置中，请先浏览。",
+    "zh-TW": "Apple 登入正在設定中，請先瀏覽。"
+  },
+  "서비스 문서": {
+    "en": "Service documents",
+    "ja": "サービス文書",
+    "zh-CN": "服务文件",
+    "zh-TW": "服務文件"
+  },
+  "인증코드": {
+    "en": "Verification code",
+    "ja": "認証コード",
+    "zh-CN": "验证码",
+    "zh-TW": "驗證碼"
+  },
+  "인증코드 받기": {
+    "en": "Send code",
+    "ja": "認証コードを送信",
+    "zh-CN": "获取验证码",
+    "zh-TW": "取得驗證碼"
+  },
+  "확인하고 로그인": {
+    "en": "Verify and sign in",
+    "ja": "確認してログイン",
+    "zh-CN": "验证并登录",
+    "zh-TW": "驗證並登入"
+  },
+  "메일의 인증코드를 입력해주세요. 스팸함도 확인해주세요.": {
+    "en": "Enter the code from your email. Please also check spam.",
+    "ja": "メールの認証コードを入力してください。迷惑メールも確認してください。",
+    "zh-CN": "请输入邮件中的验证码，也请检查垃圾邮件。",
+    "zh-TW": "請輸入郵件中的驗證碼，也請檢查垃圾郵件。"
+  },
+  "다른 이메일 / 코드 다시 요청": {
+    "en": "Change email / request another code",
+    "ja": "別のメール / コードを再送信",
+    "zh-CN": "更换邮箱 / 重新获取验证码",
+    "zh-TW": "更換電子郵件 / 重新取得驗證碼"
+  },
+  "로그인 화면으로 이동하고 있어요.": {
+    "en": "Opening sign-in…",
+    "ja": "ログイン画面に移動しています。",
+    "zh-CN": "正在打开登录页面。",
+    "zh-TW": "正在開啟登入頁面。"
+  },
+  "인증을 확인하고 있어요.": {
+    "en": "Verifying…",
+    "ja": "確認しています。",
+    "zh-CN": "正在验证。",
+    "zh-TW": "正在驗證。"
+  },
+  "인증메일을 보냈어요. 메일함을 확인해주세요.": {
+    "en": "Email sent. Please check your inbox.",
+    "ja": "認証メールを送信しました。受信箱を確認してください。",
+    "zh-CN": "认证邮件已发送，请检查收件箱。",
+    "zh-TW": "驗證郵件已寄出，請檢查收件匣。"
+  },
+  "로그인됐어요.": {
+    "en": "You are signed in.",
+    "ja": "ログインしました。",
+    "zh-CN": "已登录。",
+    "zh-TW": "已登入。"
+  },
+  "로그인됨": {
+    "en": "Signed in",
+    "ja": "ログイン中",
+    "zh-CN": "已登录",
+    "zh-TW": "已登入"
+  },
+  "로그아웃했어요.": {
+    "en": "You are signed out.",
+    "ja": "ログアウトしました。",
+    "zh-CN": "已退出登录。",
+    "zh-TW": "已登出。"
+  },
+  "로그아웃하지 못했어요. 다시 시도해주세요.": {
+    "en": "Could not sign out. Please try again.",
+    "ja": "ログアウトできませんでした。もう一度お試しください。",
+    "zh-CN": "无法退出登录，请重试。",
+    "zh-TW": "無法登出，請再試一次。"
+  },
+  "이 로그인 방식은 현재 사용할 수 없어요. 설정 완료 후 다시 시도해주세요.": {
+    "en": "This sign-in method is unavailable until setup is complete.",
+    "ja": "このログイン方法は設定完了まで利用できません。",
+    "zh-CN": "此登录方式尚未配置完成，请稍后重试。",
+    "zh-TW": "此登入方式尚未設定完成，請稍後再試。"
+  },
+  "요청이 많아요. 잠시 후 다시 시도해주세요.": {
+    "en": "Too many requests. Please try again later.",
+    "ja": "リクエストが多すぎます。しばらくしてからお試しください。",
+    "zh-CN": "请求过多，请稍后重试。",
+    "zh-TW": "請求過多，請稍後再試。"
+  },
+  "코드가 올바르지 않거나 만료됐어요. 다시 확인하거나 새 코드를 요청해주세요.": {
+    "en": "The code is invalid or expired. Check it or request a new code.",
+    "ja": "コードが正しくないか期限切れです。確認するか、新しいコードを取得してください。",
+    "zh-CN": "验证码无效或已过期，请检查或获取新验证码。",
+    "zh-TW": "驗證碼無效或已過期，請檢查或取得新驗證碼。"
+  },
+  "인증메일을 보내지 못했어요. 이메일 주소를 확인하고 다시 시도해주세요.": {
+    "en": "Could not send the verification email. Check your address and try again.",
+    "ja": "認証メールを送信できませんでした。メールアドレスを確認してお試しください。",
+    "zh-CN": "无法发送认证邮件，请检查邮箱地址后重试。",
+    "zh-TW": "無法寄送驗證郵件，請檢查電子郵件地址後再試。"
+  },
+  "로그인을 완료하지 못했어요. 다시 시도해주세요.": {
+    "en": "Could not complete sign-in. Please try again.",
+    "ja": "ログインできませんでした。もう一度お試しください。",
+    "zh-CN": "无法完成登录，请重试。",
+    "zh-TW": "無法完成登入，請再試一次。"
+  },
+  "플랜과 방문 기록은 이 브라우저에 보관돼요.": {
+    "en": "Plans and visit progress are stored in this browser.",
+    "ja": "プランと訪問記録はこのブラウザに保存されます。",
+    "zh-CN": "行程和到访记录保存在此浏览器中。",
+    "zh-TW": "行程和造訪紀錄儲存在此瀏覽器中。"
+  },
+  "플랜 이름": {
+    "en": "Plan name",
+    "ja": "プラン名",
+    "zh-CN": "行程名称",
+    "zh-TW": "行程名稱"
+  },
+  "플랜 이름 수정": {
+    "en": "Edit plan name",
+    "ja": "プラン名を編集",
+    "zh-CN": "修改行程名称",
+    "zh-TW": "修改行程名稱"
+  },
+  "플랜 이름을 1~40자로 입력해주세요.": {
+    "en": "Enter a plan name with 1–40 characters.",
+    "ja": "プラン名を1〜40文字で入力してください。",
+    "zh-CN": "请输入1至40个字符的行程名称。",
+    "zh-TW": "請輸入1至40個字元的行程名稱。"
+  },
+  "장소 삭제": {
+    "en": "Remove place",
+    "ja": "場所を削除",
+    "zh-CN": "删除地点",
+    "zh-TW": "刪除地點"
+  },
+  "장소를 삭제할까요?": {
+    "en": "Remove this place?",
+    "ja": "この場所を削除しますか？",
+    "zh-CN": "要删除此地点吗？",
+    "zh-TW": "要刪除此地點嗎？"
+  },
+  "이 행사와 묶인 관광지·맛집을 플랜에서 삭제해요.": {
+    "en": "This removes the event and its nearby sights and restaurants from your plan.",
+    "ja": "このイベントと関連する観光地・飲食店をプランから削除します。",
+    "zh-CN": "将从行程中删除此活动及其关联的景点和餐厅。",
+    "zh-TW": "將從行程中刪除此活動及其關聯的景點和餐廳。"
+  },
+  "이 장소를 플랜에서 삭제해요.": {
+    "en": "This removes the place from your plan.",
+    "ja": "この場所をプランから削除します。",
+    "zh-CN": "将从行程中删除此地点。",
+    "zh-TW": "將從行程中刪除此地點。"
+  },
+  "설정": {
+    "en": "Settings",
+    "ja": "設定",
+    "zh-CN": "设置",
+    "zh-TW": "設定"
+  },
+  "로그아웃": {
+    "en": "Log out",
+    "ja": "ログアウト",
+    "zh-CN": "退出登录",
+    "zh-TW": "登出"
+  },
+  "다음 목적지": {
+    "en": "Next stop",
+    "ja": "次の目的地",
+    "zh-CN": "下一站",
+    "zh-TW": "下一站"
+  },
+  "로그인하면 완성한 플랜이 계정에 저장돼요. 게스트 플랜은 이 브라우저에 보관돼요.": {
+    "en": "Completed plans are saved to your account when signed in. Guest plans stay in this browser.",
+    "ja": "ログインすると完成したプランがアカウントに保存されます。ゲストのプランはこのブラウザに保存されます。",
+    "zh-CN": "登录后，完成的行程将保存到账户。游客行程保存在此浏览器中。",
+    "zh-TW": "登入後，完成的行程將儲存至帳戶。訪客行程儲存在此瀏覽器中。"
+  },
+  "잘못 누른 완료는 카드에서 취소할 수 있어요. 로그인하면 진행 상태도 계정에 저장돼요.": {
+    "en": "Undo an accidental completed visit on its card. When signed in, progress is saved to your account.",
+    "ja": "訪問完了はカードから取り消せます。ログインすると進行状況もアカウントに保存されます。",
+    "zh-CN": "可在卡片上撤销误标的已访问状态。登录后，进度也将保存到账户。",
+    "zh-TW": "可在卡片上撤銷誤標的已造訪狀態。登入後，進度也將儲存至帳戶。"
+  },
+  "로그인하면 플랜과 방문 기록은 계정에 저장돼요. 게스트 기록은 이 브라우저에 보관돼요.": {
+    "en": "When signed in, plans and visit progress are saved to your account. Guest records stay in this browser.",
+    "ja": "ログインするとプランと訪問記録がアカウントに保存されます。ゲストの記録はこのブラウザに保存されます。",
+    "zh-CN": "登录后，行程和访问记录将保存到账户。游客记录保存在此浏览器中。",
+    "zh-TW": "登入後，行程與造訪紀錄將儲存至帳戶。訪客紀錄儲存在此瀏覽器中。"
+  },
+  "서비스 이용 통계": {
+    "en": "Usage analytics",
+    "ja": "利用状況の分析",
+    "zh-CN": "使用情况统计",
+    "zh-TW": "使用情況統計"
+  }
+}

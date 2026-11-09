@@ -1,0 +1,32 @@
+[
+  {
+    "original": "탑텐 배너.png",
+    "asset": "topten.png",
+    "sha256": "08567d5fa3d550913a76d311497ee3a2099b19e30ef14d8314bb83eac7c1a644"
+  },
+  {
+    "original": "올리브영 배너.png",
+    "asset": "oliveyoung.png",
+    "sha256": "2afecf173d645a7b6c1ed7c55b2a3e3202d79ec261eef70577f4e99ed8104bf0"
+  },
+  {
+    "original": "유니클로 배너.png",
+    "asset": "uniqlo.png",
+    "sha256": "5d835f900471e703f8dce601f2c6e21fb8424f4bac11540334566a6bbca28f06"
+  },
+  {
+    "original": "자라 배너.png",
+    "asset": "zara.png",
+    "sha256": "6b4c63e1445b41dc9b78df72ce1144e4bab30d66fbdf32cbcf3bc8a7d83fb94c"
+  },
+  {
+    "original": "몬치치 배너.png",
+    "asset": "monchhichi.png",
+    "sha256": "d1c9964d686b679b9b84f3cc857a175a5be7bc8a999966e8959282ea5c69e8dc"
+  },
+  {
+    "original": "티파니앤코 배너.png",
+    "asset": "tiffany.png",
+    "sha256": "18b9663b3cf2a7cddb204fd1d4a668d7860f2b1c92da8fc246126197070e0ab5"
+  }
+]

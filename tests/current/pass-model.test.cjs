@@ -54,7 +54,7 @@ test('real trip discovery lists unsaved events and uses hotel stay periods after
  const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),c={window:{}};
  for(const f of ['data/event-details.js','data/store-locations.js','data/event-catalog.js'])vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);
  const {trip}=require('../../busan-drop/integration/pass-model'),args={catalog:c.window.BUSAN_EVENT_CATALOG,locations:c.window.BUSAN_STORE_LOCATIONS,events:c.window.BUSAN_EVENT_DETAILS};
- const result=trip({...args,start:'2026-11-06',end:'2026-11-08'});assert.equal(result.candidates.length,14);assert.equal(result.route.length,0);assert.ok(!result.candidates.some(c=>c.campaign.brand==='유니클로'));
+ const result=trip({...args,start:'2026-11-06',end:'2026-11-08'});assert.equal(result.candidates.length,15);assert.equal(result.route.length,0);assert.ok(!result.candidates.some(c=>c.campaign.brand==='유니클로'));
  const hotel=trip({...args,start:'2026-12-01',end:'2026-12-01',selection:{selected:['grand-josun-busan-202611']}});assert.equal(hotel.route[0].campaign.brand,'그랜드 조선 부산');assert.match(hotel.route[0].status.label,/사전 예약/);
 });
 
@@ -64,3 +64,25 @@ test('new character popups stay selectable until their distinct final days and e
  assert.equal(status(hina,'2026-11-09').blocked,true);assert.equal(status(hina,'2026-11-10').blocked,false);assert.equal(status(hina,'2026-11-11').blocked,true);
  assert.equal(status(harry,'2026-11-09').blocked,true);assert.equal(status(harry,'2027-01-07').blocked,false);assert.equal(status(harry,'2027-01-08').blocked,true);
 });
+
+ test('Olive Young trip picker includes all three requested branches without claiming unverified benefits',()=>{
+ const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),c={window:{}};
+ for(const f of ['data/event-details.js','data/store-locations.js','data/event-catalog.js'])vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);
+ const args={catalog:c.window.BUSAN_EVENT_CATALOG,locations:c.window.BUSAN_STORE_LOCATIONS,events:c.window.BUSAN_EVENT_DETAILS,start:'2026-11-06',end:'2026-11-07'};
+ const {trip}=require('../../busan-drop/integration/pass-model');
+ const olive=trip(args).candidates.find(c=>c.campaign.brand==='올리브영');
+ assert.deepEqual(Array.from(olive.branches,s=>s.id).sort(),['oliveyoung-0','oliveyoung-30','oliveyoung-8']);
+ for(const branchId of ['oliveyoung-0','oliveyoung-30']){
+  const result=trip({...args,selection:{selected:[olive.campaign.id],branches:{[olive.campaign.id]:branchId}}});
+  assert.equal(result.route[0].item.id,branchId);assert.equal(result.route[0].status.kind,'check');assert.equal(result.route[0].status.blocked,false);
+ }
+});
+
+test('route pins retain every visit number at identical coordinates and refresh numbers after reorder',()=>{
+ const {coordinateGroups}=require('../../busan-drop/integration/pass-model');
+ const route=[{item:{id:'a',lng:129,lat:35}},{item:{id:'b',lng:130,lat:36}},{item:{id:'c',lng:129,lat:35}}];
+ const groups=coordinateGroups(route);assert.equal(groups.length,2);assert.deepEqual(groups[0].entries.map(e=>e.number),[1,3]);assert.deepEqual(groups[0].entries.map(e=>e.entry.item.id),['a','c']);
+ const moved=coordinateGroups([route[1],route[0],route[2]]);assert.deepEqual(moved[1].entries.map(e=>e.number),[2,3]);assert.equal(moved[1].lng,129);assert.equal(moved[1].lat,35);
+ assert.equal(coordinateGroups([...route,{item:{lng:129.000001,lat:35}}]).length,3);
+});
+test('trip routes keep calendar order ahead of manual order and reorder only within a day',()=>{const {trip}=require('../../busan-drop/integration/pass-model');const brands=['A','B','C'],catalog=brands.map(brand=>({id:brand,brand,scheduleStatus:'confirmed'})),locations=brands.map((brand,i)=>({id:brand,brand,lat:35+i/100,lng:129})),events=Object.fromEntries(brands.map(brand=>[brand,{start:'2026-11-01',end:'2026-11-30'}]));const result=trip({start:'2026-11-08',end:'2026-11-09',catalog,locations,events,selection:{selected:brands,visitDates:{A:'2026-11-09',B:'2026-11-08',C:'2026-11-08'},order:['A','C','B']}});assert.deepEqual(result.route.map(c=>c.campaign.id),['C','B','A']);assert.deepEqual(result.route.map(c=>c.visitDate),['2026-11-08','2026-11-08','2026-11-09']);});

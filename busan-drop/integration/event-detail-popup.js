@@ -33,18 +33,20 @@
     window.dispatchEvent?.(new Event('busan-event-detail-closed'));
   };
   const build=(item)=>{
+    if(window.BUSAN_EVENT_WINDOW?.locationExpired(item))return '';
     const t=names[state.language]||names.ko,baseEvent=research()[item.brand],event=baseEvent?{...baseEvent,...item.eventOverrides}:null,brand=brands.find(b=>b.name===item.brand);
     const files={'유니클로':'uniqlo.jpg','자라':'zara.jpg','티파니앤코':'tiffany.jpg'};
     const image=event?.image||files[item.brand];
     const section=(title,body)=>`<section class="event-info-section"><h3>${safe(title)}</h3>${body}</section>`;
-    const p=value=>`<p>${safe(value)}</p>`,note=value=>value?`<small>${safe(value)}</small>`:'';
+    const copy=value=>safe(value).replace(/#[\p{L}\p{N}_]+/gu,tag=>`<span translate="no">${tag}</span>`);
+    const p=value=>`<p>${copy(value)}</p>`,note=value=>value?`<small>${safe(value)}</small>`:'';
     const directionsUrl=`https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}`;
     const range=event?.start&&event?.end?`${date(event.start)} — ${date(event.end)}`:(event?.dateLabel||t[11]);
     const holiday=event?.closed?.length?`<div class="event-closure">11.09 휴점 · 이날은 방문할 수 없어요</div>`:'';
     const richSections=(event?.sections||[]).map(info=>section(info.title,
 
       (info.columns?`<div class="event-table-wrap"><table><thead><tr>${info.columns.map(c=>`<th scope="col">${safe(c)}</th>`).join('')}</tr></thead><tbody>${info.rows.map(row=>`<tr>${row.map(c=>`<td>${safe(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:'')+
-      (info.items?`<ul class="event-detail-list">${info.items.map(text=>`<li>${safe(text)}</li>`).join('')}</ul>`:'')+note(info.visitorNote??info.note))).join('');
+      (info.items?`<ul class="event-detail-list">${info.items.map(text=>`<li>${copy(text)}</li>`).join('')}</ul>`:'')+note(info.visitorNote??info.note))).join('');
     const highlights=event?.highlights?`<div class="event-highlights">${event.highlights.map(([label,value])=>`<div><span>${safe(label)}</span><strong>${safe(value)}</strong></div>`).join('')}</div>`:'';
     const storeProfile=item.profile?section('이 매장의 특징',`<strong>${safe(item.profile.headline)}</strong>${p(item.profile.description)}<ul class="event-detail-list">${item.profile.features.map(feature=>`<li>${safe(feature)}</li>`).join('')}</ul>${note(item.profile.eventNotice)}`):'';
     const title=event?.title||item.name;
@@ -55,7 +57,7 @@
   };
   window.BUSAN_EVENT_DETAIL_HTML=build;
   window.BUSAN_OPEN_EVENT_DETAIL=item=>{
-    if(!item)return;
+    if(!item||window.BUSAN_EVENT_WINDOW?.locationExpired(item))return;
     close();previousFocus=document.activeElement;
     document.querySelector('#modal').innerHTML=build(item);
     document.querySelector('#phone').classList.add('event-detail-open');
@@ -68,6 +70,7 @@
     try{await navigator.clipboard.writeText(copy.dataset.eventCopyAddress);document.querySelector('.event-detail-feedback').textContent=({ko:'주소를 복사했어요',en:'Address copied',ja:'住所をコピーしました',zh:'地址已复制'})[state.language]||'Address copied';}
     catch{document.querySelector('.event-detail-feedback').textContent='주소를 길게 눌러 복사해주세요.';}
   });
+  window.addEventListener?.('busan-event-date-changed',close);
   document.addEventListener('keydown',e=>{
     const dialog=document.querySelector('.event-detail-dialog');if(!dialog)return;
     if(e.key==='Escape'){close();return;}

@@ -38,18 +38,21 @@
   if(!start||!end||end<start)return {candidates:[],route:[]};
   const candidates=catalog.filter(c=>c.scheduleStatus==='confirmed'&&c.isActive!==false&&events[c.brand]?.isActive!==false).map(campaign=>{
    const base=events[campaign.brand]||campaign;
-   const branches=locations.filter(item=>item.brand===campaign.brand&&Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&(item.eventParticipation||item.profile?.eventParticipation)!=='unconfirmed'&&firstVisit({...base,...item.eventOverrides},start,end,item));
+   const branches=locations.filter(item=>item.brand===campaign.brand&&Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&((item.eventParticipation||item.profile?.eventParticipation)!=='unconfirmed'||item.planSelectable===true)&&firstVisit({...base,...item.eventOverrides},start,end,item));
    if(!branches.length)return null;
    const item=branches.find(item=>item.id===selection.branches?.[campaign.id])||(branches.length===1?branches[0]:null),event={...base,...item?.eventOverrides};
    const first=firstVisit(event,start,end,item)||branches.map(branch=>firstVisit({...base,...branch.eventOverrides},start,end,branch)).filter(Boolean).sort()[0],requested=selection.visitDates?.[campaign.id],visitDate=requested&&requested>=start&&requested<=end?requested:first;
    return {campaign,branches,item,event,visitDate,selected:(selection.selected||[]).includes(campaign.id),status:status(event,visitDate,item)};
   }).filter(Boolean).sort((a,b)=>a.visitDate.localeCompare(b.visitDate)||a.campaign.id.localeCompare(b.campaign.id));
-  const order=selection.order||[],route=candidates.filter(c=>c.selected&&c.item&&!c.status.blocked).sort((a,b)=>{const ai=order.indexOf(a.campaign.id),bi=order.indexOf(b.campaign.id);return (ai<0?999:ai)-(bi<0?999:bi)||a.visitDate.localeCompare(b.visitDate);});
+  const order=selection.order||[],route=candidates.filter(c=>c.selected&&c.item&&!c.status.blocked).sort((a,b)=>{const ai=order.indexOf(a.campaign.id),bi=order.indexOf(b.campaign.id);return a.visitDate.localeCompare(b.visitDate)||(ai<0?999:ai)-(bi<0?999:bi);});
   return {candidates,route};
  }
  function directions(item,origin,mode='transit'){
   const url=new URL('https://www.google.com/maps/dir/');url.searchParams.set('api','1');url.searchParams.set('destination',`${item.lat},${item.lng}`);url.searchParams.set('travelmode',mode==='walking'?'walking':'transit');
   if(origin)url.searchParams.set('origin',`${origin.lat},${origin.lng}`);return url.href;
  }
- const api={status,build,directions,trip,firstVisit};if(typeof module==='object'&&module.exports)module.exports=api;else root.BUSAN_PASS_MODEL=api;
+ function coordinateGroups(route=[]){
+  const grouped=new Map();route.forEach((entry,index)=>{const {lat,lng}=entry.item||{};if(!Number.isFinite(lat)||!Number.isFinite(lng))return;const key=`${lng},${lat}`;if(!grouped.has(key))grouped.set(key,{key,lat,lng,entries:[]});grouped.get(key).entries.push({entry,number:index+1});});return [...grouped.values()];
+ }
+ const api={status,build,directions,trip,firstVisit,coordinateGroups};if(typeof module==='object'&&module.exports)module.exports=api;else root.BUSAN_PASS_MODEL=api;
 })(typeof window==='object'?window:this);

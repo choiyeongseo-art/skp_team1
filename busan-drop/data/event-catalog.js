@@ -214,6 +214,36 @@
   "end": "2026-11-10",
   "scheduleStatus": "confirmed",
   "scheduleSource": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568807"
+},
+{
+  "id": "daldal-market-busan-202611",
+  "brand": "달달더마켓",
+  "title": "2026 달달더마켓",
+  "image": "daldal-market.svg",
+  "start": "2026-11-06",
+  "end": "2026-11-12",
+  "scheduleStatus": "confirmed",
+  "scheduleSource": "https://www.bepa.kr/kor/view.do?idx=19599&no=1502&state=ing&view=view"
+},
+{
+  "id": "gwangalli-drone-laser-20261121",
+  "brand": "광안리 M 드론×레이저쇼",
+  "title": "광안리 M 드론×레이저쇼 — 성의 수호자",
+  "image": "gwangalli-drone.svg",
+  "start": "2026-11-21",
+  "end": "2026-11-21",
+  "scheduleStatus": "confirmed",
+  "scheduleSource": "https://www.gwangallimdrone.co.kr/notice/gwanganri-m-deuronraiteusyo-11weol-gongyeon-peurogeuraem-annae-2"
+},
+{
+  "id": "gstar-busan-202611",
+  "brand": "G-STAR",
+  "title": "국제게임전시회 지스타 2026",
+  "image": "gstar.svg",
+  "start": "2026-11-19",
+  "end": "2026-11-22",
+  "scheduleStatus": "confirmed",
+  "scheduleSource": "https://www.gstar.or.kr/part/gstar_btc_info.do"
 }
  ];
  if(typeof module==='object'&&module.exports)module.exports=events;else root.BUSAN_EVENT_CATALOG=events;

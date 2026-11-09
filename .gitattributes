@@ -1,0 +1,2 @@
+# Keep vendored upstream bundles byte-identical, including whitespace inside literals.
+busan-drop/vendor/*.js -whitespace

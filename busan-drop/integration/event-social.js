@@ -3,17 +3,19 @@
  const catalog=window.BUSAN_EVENT_CATALOG,api='/api/busandrop/event-saves';
  let snapshot={saved:[],counts:{}},loaded=false,failed=false;
  const busy=new Set(),heart='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>',share='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 11v9h14v-9"/></svg>';
- const byBrand=brand=>catalog.find(e=>e.brand===brand),isSaved=id=>snapshot.saved.some(e=>e.eventId===id);
+ const activeSaved=()=>snapshot.saved.filter(entry=>catalog.some(event=>event.id===entry.eventId&&!window.BUSAN_EVENT_WINDOW.isExpired(event)));
+ const byBrand=brand=>catalog.find(e=>e.brand===brand&&!window.BUSAN_EVENT_WINDOW.isExpired(e)),isSaved=id=>snapshot.saved.some(e=>e.eventId===id);
  const storeFor=(event,storeId)=>{const rows=(window.BUSAN_STORE_LOCATIONS||[]).filter(s=>s.brand===event.brand);return rows.find(s=>s.id===storeId)||rows[0];};
  const countText=id=>loaded?new Intl.NumberFormat().format(snapshot.counts[id]||0):'—';
  const saveButton=(event,storeId)=>`<button class="event-save-button ${isSaved(event.id)?'is-saved':''}" data-event-social-save="${event.id}" data-event-store="${esc(storeId||'')}" aria-label="${isSaved(event.id)?'저장 취소':'행사 저장'}" aria-pressed="${isSaved(event.id)}" ${!loaded||busy.has(event.id)?'disabled':''}>${heart}</button>`;
  window.BUSAN_EVENT_SOCIAL={
   saveControl:(brand,storeId)=>{const event=byBrand(brand);return event?saveButton(event,storeId):'';},
-  getState:()=>({saved:snapshot.saved.map(entry=>({...entry})),loaded,failed}),
+  refreshAccount:()=>{const account=window.BUSAN_ACCOUNT_STORE;if(account?.getOwner()){snapshot={saved:account.getEvents(),counts:snapshot.counts};loaded=!account.isLoading();failed=false;}else{snapshot={saved:[],counts:{}};loaded=false;load();}if(state.screen==='saved')render();else sync();publish();},
+  getState:()=>({saved:activeSaved().map(entry=>({...entry})),loaded,failed}),
   actions:item=>{const event=byBrand(item.brand);return event?`<div class="event-social-actions">${saveButton(event,item.id)}<button class="event-share-button" data-event-share="${event.id}" data-event-store="${esc(item.id||'')}" aria-label="행사 공유">${share}</button></div>`:'';},
   counter:brand=>{const event=byBrand(brand);return event?`<button type="button" class="event-banner-count event-save-button ${isSaved(event.id)?'is-saved':''}" data-event-social-save="${event.id}" data-event-count="${event.id}" aria-label="${isSaved(event.id)?'저장 취소':'행사 저장'}" aria-pressed="${isSaved(event.id)}" ${!loaded||busy.has(event.id)?'disabled':''}>${heart}<span>${countText(event.id)}</span></button>`:'';}
  };
- saved=()=>head()+`<div class="pad saved-events"><div class="saved-events-heading"><h2>저장한 행사 <span>${snapshot.saved.length}</span></h2><span>최근 저장순</span></div>${loaded&&snapshot.saved.length?'<button class="saved-to-pass" data-nav="pass">저장한 행사로 쇼핑패스 만들기 ↗</button>':''}${!loaded?`<p class="saved-events-empty">${failed?'저장한 행사를 불러오지 못했어요.':'저장한 행사를 불러오는 중이에요.'}</p>${failed?'<button class="event-social-retry" data-event-social-retry>다시 불러오기</button>':''}`:snapshot.saved.length?`<div class="saved-event-list">${snapshot.saved.map(entry=>{
+ saved=()=>head()+`<div class="pad saved-events"><div class="saved-events-heading"><h3>찜한 행사 <span>${activeSaved().length}</span></h3><span>최근 저장순</span></div>${loaded&&activeSaved().length?'<button class="saved-to-pass" data-nav="pass">저장한 행사로 드롭 플랜 만들기 ↗</button>':''}${!loaded?`<p class="saved-events-empty">${failed?'저장한 행사를 불러오지 못했어요.':'저장한 행사를 불러오는 중이에요.'}</p>${failed?'<button class="event-social-retry" data-event-social-retry>다시 불러오기</button>':''}`:activeSaved().length?`<div class="saved-event-list">${activeSaved().map(entry=>{
   const event=catalog.find(e=>e.id===entry.eventId);if(!event)return '';
   return `<article class="saved-event-card"><button class="saved-event-open" data-saved-event-open="${event.id}" data-event-store="${esc(entry.storeId||'')}"><img src="assets/banners/home-20261105/${event.image}" alt="${esc(event.brand)} 행사 배너" width="1000" height="1000"><div class="saved-event-copy"><span>${esc(event.brand)}</span><h3>${esc(event.title)}</h3><span>행사 자세히 보기 ↗</span></div></button>${saveButton(event,entry.storeId)}</article>`;
  }).join('')}</div>`:'<div class="saved-events-empty"><p>아직 저장한 행사가 없어요.</p><span>행사 정보의 하트를 눌러 모아보세요.</span><button data-nav="home">행사 둘러보기 ↗</button></div>'}</div>`;
@@ -25,20 +27,21 @@
   document.querySelectorAll('[data-event-count]').forEach(node=>{node.querySelector('span').textContent=countText(node.dataset.eventCount);});
  }
  async function load(){
-  try{const response=await fetch(api,{credentials:'same-origin',cache:'no-store'});if(!response.ok)throw Error();snapshot=await response.json();loaded=true;failed=false;}
+  const owner=window.BUSAN_AUTH?.getUser()?.id||null;if(owner){window.BUSAN_EVENT_SOCIAL.refreshAccount();return;}
+  try{const response=await fetch(api,{credentials:'same-origin',cache:'no-store'});if(!response.ok)throw Error();const value=await response.json();if(window.BUSAN_AUTH?.getUser())return;snapshot=value;loaded=true;failed=false;}
   catch{failed=true;}
   if(state.screen==='saved'&&!document.querySelector('.event-detail-dialog'))render();else sync();publish();
  }
  function feedback(message){const node=document.querySelector('.event-detail-feedback');if(node){node.textContent=message;setTimeout(()=>{if(node.isConnected)node.textContent='';},2300);}else toast(message);}
  async function toggle(button){
-  const id=button.dataset.eventSocialSave;if(!loaded||busy.has(id))return;
+  const id=button.dataset.eventSocialSave;if(!loaded||busy.has(id)||window.BUSAN_EVENT_WINDOW.isExpired(catalog.find(event=>event.id===id)))return;
   busy.add(id);sync();const saving=!isSaved(id);
-  try{const response=await fetch(`${api}/${id}`,{method:'PUT',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({saved:saving,storeId:button.dataset.eventStore||undefined})});if(!response.ok)throw Error();snapshot=await response.json();feedback(saving?'행사를 저장했어요':'저장을 취소했어요');}
-  catch{feedback('저장하지 못했어요. 다시 시도해주세요.');}
+  try{if(window.BUSAN_ACCOUNT_STORE?.getOwner()){await window.BUSAN_ACCOUNT_STORE.toggleEvent(id,button.dataset.eventStore,saving);feedback(saving?'행사를 저장했어요':'저장을 취소했어요');return;}const response=await fetch(`${api}/${id}`,{method:'PUT',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({saved:saving,storeId:button.dataset.eventStore||undefined})});if(!response.ok)throw Error();const value=await response.json();if(window.BUSAN_AUTH?.getUser())return;snapshot=value;window.BUSAN_ANALYTICS?.track(saving?'event_like_added':'event_like_removed',{event_id:id,store_id:button.dataset.eventStore,save_scope:'browser'});feedback(saving?'행사를 저장했어요':'저장을 취소했어요');}
+  catch{window.BUSAN_ANALYTICS?.track('operation_failed',{operation:'event_like',event_id:id,error_code:'request_failed'});feedback('저장하지 못했어요. 다시 시도해주세요.');}
   finally{busy.delete(id);if(state.screen==='saved'&&!document.querySelector('.event-detail-dialog'))render();else sync();publish();}
  }
  async function shareEvent(button){
-  const event=catalog.find(e=>e.id===button.dataset.eventShare);if(!event)return;
+  const event=catalog.find(e=>e.id===button.dataset.eventShare);if(!event||window.BUSAN_EVENT_WINDOW.isExpired(event))return;
   const url=new URL('/busandrop/home',location.origin);url.searchParams.set('event',event.id);if(button.dataset.eventStore)url.searchParams.set('store',button.dataset.eventStore);
   try{
    if(navigator.share){await navigator.share({title:event.title,text:event.title,url:url.href});return;}

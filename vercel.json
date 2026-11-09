@@ -10,6 +10,22 @@
     "api/event-saves.js": {
       "maxDuration": 30,
       "includeFiles": "busan-drop/data/event-catalog.js"
+    },
+    "api/nearby-attractions.js": {
+      "maxDuration": 60,
+      "includeFiles": "busan-drop/data/store-locations.js"
+    },
+    "api/nearby-restaurants.js": {
+      "maxDuration": 60,
+      "includeFiles": "busan-drop/data/store-locations.js"
+    },
+    "api/tourism-translations.js": {
+      "maxDuration": 60,
+      "includeFiles": "busan-drop/data/store-locations.js"
+    },
+    "api/restaurant-translations.js": {
+      "maxDuration": 60,
+      "includeFiles": "busan-drop/data/store-locations.js"
     }
   },
   "redirects": [
@@ -31,6 +47,26 @@
   ],
   "rewrites": [
     {
+      "source": "/api/busandrop/auth-config",
+      "destination": "/api/auth-config"
+    },
+    {
+      "source": "/api/busandrop/restaurant-translations",
+      "destination": "/api/restaurant-translations"
+    },
+    {
+      "source": "/api/busandrop/tourism-translations",
+      "destination": "/api/tourism-translations"
+    },
+    {
+      "source": "/api/busandrop/nearby-restaurants",
+      "destination": "/api/nearby-restaurants"
+    },
+    {
+      "source": "/api/busandrop/nearby-attractions",
+      "destination": "/api/nearby-attractions"
+    },
+    {
       "source": "/api/busandrop/event-saves",
       "destination": "/api/event-saves"
     },
@@ -44,6 +80,26 @@
     },
     {
       "source": "/busandrop/home",
+      "destination": "/busandrop/index.html"
+    },
+    {
+      "source": "/busandrop/stores",
+      "destination": "/busandrop/index.html"
+    },
+    {
+      "source": "/busandrop/drop-plan",
+      "destination": "/busandrop/index.html"
+    },
+    {
+      "source": "/busandrop/saved",
+      "destination": "/busandrop/index.html"
+    },
+    {
+      "source": "/busandrop/my",
+      "destination": "/busandrop/index.html"
+    },
+    {
+      "source": "/busandrop/auth/callback",
       "destination": "/busandrop/index.html"
     }
   ],

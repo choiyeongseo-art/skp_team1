@@ -68,6 +68,7 @@ window.BUSAN_STORE_LOCATIONS=[
     "lng": 129.0295,
     "address": "부산광역시 중구 비프광장로 40",
     "id": "oliveyoung-0",
+    "planSelectable": true,
     "brand": "올리브영",
     "region": "남포동",
     "verification": "retained",
@@ -91,6 +92,7 @@ window.BUSAN_STORE_LOCATIONS=[
     "lng": 129.124,
     "address": "부산광역시 수영구 민락수변로17번길 56 · 밀락더마켓",
     "id": "oliveyoung-30",
+    "planSelectable": true,
     "brand": "올리브영",
     "region": "광안리",
     "verification": "retained",
@@ -736,6 +738,65 @@ window.BUSAN_STORE_LOCATIONS.push(...[
     "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568807",
     "coordinateSource": "https://www.lotteshopping.com/store/main?cstrCd=0005",
     "coordinateNote": "점포 공식 지도 기준 건물 위치 · 실내 부스 좌표는 아닙니다.",
+    "eventParticipation": "confirmed-notice"
+  }
+]);
+
+window.BUSAN_STORE_LOCATIONS.push(...[
+  {
+    "id": "daldal-market-gwangbok",
+    "brand": "달달더마켓",
+    "name": "롯데백화점 광복점 B1 분수대 일원",
+    "address": "부산광역시 중구 중앙대로 2 · 롯데백화점 광복점 B1 분수대 일원",
+    "region": "남포동",
+    "district": "중구",
+    "lat": 35.098187,
+    "lng": 129.036618,
+    "source": "https://www.bepa.kr/kor/view.do?idx=19599&no=1502&state=ing&view=view",
+    "coordinateSource": "https://maps.google.com/maps?ll=35.098187,129.036618",
+    "coordinateNote": "백화점 건물 기준 위치 · 실내 분수대 행사 부스는 현장 안내 확인",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "gwangalli-drone-beach",
+    "brand": "광안리 M 드론×레이저쇼",
+    "name": "광안리해수욕장 · 드론×레이저쇼",
+    "address": "부산광역시 수영구 광안해변로 219 · 광안리해수욕장",
+    "region": "광안리",
+    "district": "수영구",
+    "lat": 35.15319,
+    "lng": 129.11898,
+    "source": "https://www.gwangallimdrone.co.kr/notice/gwanganri-m-deuronraiteusyo-11weol-gongyeon-peurogeuraem-annae-2",
+    "coordinateSource": "https://www.findlatlng.org/en/place/gwangalli-beach",
+    "coordinateNote": "광안리해수욕장 대표 위치 · 공연 비행 좌표나 지정 관람석 위치는 아닙니다.",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "gstar-bexco-hall1",
+    "brand": "G-STAR",
+    "name": "지스타 BTC · 벡스코 제1전시장",
+    "address": "부산광역시 해운대구 APEC로 55 · 벡스코 제1전시장 1~3홀",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.16894,
+    "lng": 129.13616,
+    "source": "https://www.gstar.or.kr/part/gstar_btc_info.do",
+    "coordinateSource": "https://mapcarta.com/W396366119",
+    "coordinateNote": "제1전시장 건물 기준 · 입장팔찌 교환처·대기열·실내 부스는 현장 배치도 확인",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "gstar-bexco-hall2",
+    "brand": "G-STAR",
+    "name": "지스타 BTC · 벡스코 제2전시장",
+    "address": "부산광역시 해운대구 APEC로 30 · 벡스코 제2전시장 1층 4홀",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.1657,
+    "lng": 129.13504,
+    "source": "https://www.gstar.or.kr/part/gstar_btc_info.do",
+    "coordinateSource": "https://mapcarta.com/W308672919",
+    "coordinateNote": "제2전시장 건물 기준 · BTC 1층 4홀, BTB 3층 5홀과 구분",
     "eventParticipation": "confirmed-notice"
   }
 ]);

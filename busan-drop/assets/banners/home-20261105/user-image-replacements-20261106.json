@@ -1,0 +1,44 @@
+[
+  {
+    "brand": "젤라또 피케",
+    "file": "gelatopique-user-20261106.png",
+    "source": "[local source omitted]",
+    "sha256": "5276332ced13ca21a08aa545420e96583751a2c5456b44fe29f2e1b59a25da0c",
+    "registered": true
+  },
+  {
+    "brand": "히나쿠우",
+    "file": "hinakuu-user-20261106.png",
+    "source": "[local source omitted]",
+    "sha256": "46030a1cbb1e7f7b911f7042a0ecc65602d53553498d7349e71bf6ab77c13499",
+    "registered": true
+  },
+  {
+    "brand": "와키윌리",
+    "file": "wackywilly-user-20261106.png",
+    "source": "[local source omitted]",
+    "sha256": "48fad17c7235c15c4e98721bf8bef44f4aa616aadbb332b5405b4840893cb680",
+    "registered": true
+  },
+  {
+    "brand": "와이잭",
+    "file": "yjack-user-20261106.png",
+    "source": "[local source omitted]",
+    "sha256": "47c04610ecc5560be93b5702cb2b3af27008623c7916bccd442c7a8ad5922946",
+    "registered": true
+  },
+  {
+    "brand": "해리포터 마호도코로",
+    "file": "harrypotter-user-20261106.png",
+    "source": "[local source omitted]",
+    "sha256": "449b26c86f3a1b7b1b0fd0c798bc4e724424185699ad788af2144ff1586d77ed",
+    "registered": true
+  },
+  {
+    "brand": "원피스 무기와라 스토어",
+    "file": "mugiwara-user-20261106.png",
+    "source": "[local source omitted]",
+    "sha256": "a44ff139bf8585cc89f8d26404eca2c17130131ccbaede960c8743dde5123492",
+    "registered": true
+  }
+]

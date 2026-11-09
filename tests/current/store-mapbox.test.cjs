@@ -17,7 +17,7 @@ test('brand and region selection render only matching real coordinates and reuse
  const {c,maps,pins,click}=setup();c.render();assert.equal(maps.length,1);assert.equal(pins.filter(p=>!p.removed).length,3);
  assert.match(c.storeMap(),/3개 지점/);
  click('[data-store-brand]',{storeBrand:'3'});assert.equal(maps.length,1);assert.equal(pins.filter(p=>!p.removed).length,3);
- click('[data-store-region]',{storeRegion:'서면'});assert.equal(pins.filter(p=>!p.removed).length,1);assert.match(c.storeMap(),/자라 서면점/);
+ click('[data-store-region]',{storeRegion:'서면'});assert.equal(pins.filter(p=>!p.removed).length,1);assert.equal(c.window.BUSAN_STORE_LOCATIONS.find(row=>row.id===pins.find(p=>!p.removed).element.dataset.storePin).brand,'자라');
  const active=pins.find(p=>!p.removed);assert.ok(active.ll[0]>129&&active.ll[1]>35);
  c.state.screen='home';c.render();assert.ok(maps[0].removed);
 });
@@ -31,7 +31,7 @@ test('all banner brands have locations and missing brands do not use fictional d
 test('both maps use the same style and navigation puts stores before brands',()=>{
  const {c,maps}=setup();c.render();assert.equal(maps[0].options.style,c.window.BUSAN_MAPBOX_CONFIG.style);
  const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
- assert.ok(app.includes("[['home','홈','home'],['stores','매장찾기','store'],['pass','쇼핑패스','ticket']"));
+ assert.ok(app.includes("[['home','홈','home'],['stores','매장찾기','store'],['pass','드롭 플랜','ticket']"));
 });
 test('category narrows brand choices and intersects with region and selected brand',()=>{
  const {c,pins,click}=setup();c.render();
@@ -40,11 +40,11 @@ test('category narrows brand choices and intersects with region and selected bra
  assert.match(html,/data-store-brand="2"/);assert.match(html,/data-store-brand="3"/);assert.doesNotMatch(html,/data-store-brand="1"/);
  assert.equal(pins.filter(p=>!p.removed).length,13);
  click('[data-store-region]',{storeRegion:'서면'});click('[data-store-brand]',{storeBrand:'3'});
- assert.equal(pins.filter(p=>!p.removed).length,1);assert.match(c.storeMap(),/자라 서면점/);
+ assert.equal(pins.filter(p=>!p.removed).length,1);assert.equal(c.window.BUSAN_STORE_LOCATIONS.find(row=>row.id===pins.find(p=>!p.removed).element.dataset.storePin).brand,'자라');
  click('[data-store-category]',{storeCategory:'뷰티'});assert.equal(c.state.mapLocal,true);assert.match(c.storeMap(),/data-store-brand="1"/);assert.doesNotMatch(c.storeMap(),/data-store-brand="3"/);
  assert.equal(pins.filter(p=>!p.removed).length,0);
  click('[data-store-region]',{storeRegion:'남포동'});assert.equal(pins.filter(p=>!p.removed).length,1);
- click('[data-store-category]',{storeCategory:'디저트'});assert.equal(pins.filter(p=>!p.removed).length,0);assert.match(c.storeMap(),/등록된 위치가 없어요/);
+ click('[data-store-category]',{storeCategory:'로컬'});assert.equal(pins.filter(p=>!p.removed).length,0);assert.match(c.storeMap(),/등록된 위치가 없어요/);
  c.state.language='en';assert.match(c.storeMap(),/>Busan<\/button>/);
 });
 
@@ -60,8 +60,8 @@ test('store finder keeps the home camera for every brand and uses shared regiona
  click('[data-store-region]',{storeRegion:'서면'});assert.equal(maps[0].camera.zoom,13.5);assert.deepEqual(maps[0].camera.center,c.window.BUSAN_MAPBOX_VIEWS.서면.center);
 });
 
-test('Monchhichi is listed under pop-ups rather than goods',()=>{
- const {c,click,pins}=setup();click('[data-store-category]',{storeCategory:'굿즈'});assert.doesNotMatch(c.storeMap(),/data-store-brand="4"/);
+test('Monchhichi is listed under pop-ups and excluded from local events',()=>{
+ const {c,click,pins}=setup();click('[data-store-category]',{storeCategory:'로컬'});assert.doesNotMatch(c.storeMap(),/data-store-brand="4"/);
  click('[data-store-category]',{storeCategory:'팝업'});assert.match(c.storeMap(),/data-store-brand="4"/);assert.equal(pins.filter(p=>!p.removed).length,1);
 });
 

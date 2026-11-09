@@ -21,3 +21,6 @@ node_modules/
 
 # Runtime map configuration is loaded from the existing public production endpoint
 /busan-drop/integration/mapbox-config.js
+
+# Share only the empty configuration template.
+!.env.example

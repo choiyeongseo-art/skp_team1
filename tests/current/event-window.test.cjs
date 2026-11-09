@@ -16,9 +16,9 @@ test('includes ongoing and upcoming events from all brands, inclusive edges, exc
 test('real data displays Monchhichi and confirmed Olive Young branch without asserting unconfirmed store participation',()=>{
  const c={window:{}};for(const f of ['data/event-details.js','data/store-locations.js'])vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);
  const args={today,events:c.window.BUSAN_EVENT_DETAILS,locations:c.window.BUSAN_STORE_LOCATIONS,categories:{'올리브영':['뷰티'],'몬치치':['팝업']}};
- const result=select(args);assert.equal(result.items.length,14);assert.ok(result.items.some(s=>s.id==='oliveyoung-8'));assert.ok(result.items.some(s=>s.brand==='몬치치'));
+ const result=select(args);assert.equal(result.items.length,18);assert.ok(result.items.some(s=>s.id==='oliveyoung-8'));assert.ok(result.items.some(s=>s.brand==='몬치치'));
  assert.equal(select({...args,category:'뷰티'}).items.length,1);assert.equal(select({...args,category:'팝업',region:'해운대'}).items.length,1);
- assert.equal(select({...args,today:'2026-11-08'}).items.length,13);assert.equal(select({...args,today:'2026-11-16'}).items.length,7);
+ assert.equal(select({...args,today:'2026-11-08'}).items.length,17);assert.equal(select({...args,today:'2026-11-16'}).items.length,10);
 });
 
 test('home tabs filter by administrative district even when legacy shopping-area tags disagree',()=>{
@@ -31,16 +31,16 @@ test('home tabs filter by administrative district even when legacy shopping-area
 test('static confirmed campaign periods drive home pins, with pending schedules excluded in every district',()=>{
  const c={window:{}};for(const f of ['data/event-catalog.js','data/event-details.js','data/store-locations.js'])vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);
  const args={today,catalog:c.window.BUSAN_EVENT_CATALOG,events:c.window.BUSAN_EVENT_DETAILS,locations:c.window.BUSAN_STORE_LOCATIONS};
- for(const [region,count] of [['BUSAN',14],['서면',6],['남포동',1],['광안리',0],['해운대',4]])assert.equal(select({...args,region}).items.length,count,region);
- assert.equal(select({...args,today:'2026-11-07'}).items.length,14);
- assert.equal(select({...args,today:'2026-11-08'}).items.length,13);
- assert.equal(select({...args,today:'2026-11-15'}).items.length,8);
- assert.equal(select({...args,today:'2026-11-16'}).items.length,7);
+ for(const [region,count] of [['BUSAN',18],['서면',6],['남포동',2],['광안리',1],['해운대',6]])assert.equal(select({...args,region}).items.length,count,region);
+ assert.equal(select({...args,today:'2026-11-07'}).items.length,18);
+ assert.equal(select({...args,today:'2026-11-08'}).items.length,17);
+ assert.equal(select({...args,today:'2026-11-15'}).items.length,11);
+ assert.equal(select({...args,today:'2026-11-16'}).items.length,10);
  // Even numeric dates accidentally populated on a pending record must not publish it.
  const catalog=args.catalog.map(e=>e.brand==='유니클로'?{...e,start:e.reportedStart,end:e.reportedEnd}:e);
- assert.equal(select({...args,catalog}).items.length,14);
+ assert.equal(select({...args,catalog}).items.length,18);
  // Static campaign periods, rather than unrelated detail dates, define eligibility.
- assert.equal(select({...args,events:{...args.events,'몬치치':{start:null,end:null}}}).items.length,14);
+ assert.equal(select({...args,events:{...args.events,'몬치치':{start:null,end:null}}}).items.length,18);
 });
 
 test('same-building events remain individually selectable in a grouped home pin',()=>{

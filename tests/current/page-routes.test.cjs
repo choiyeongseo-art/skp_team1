@@ -1,33 +1,10 @@
-const test=require('node:test');
-const assert=require('node:assert/strict');
-const vm=require('node:vm');
-const fs=require('node:fs');
-const path=require('node:path');
+const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
 const source=fs.readFileSync(path.join(__dirname,'../../busan-drop/integration/page-routes.js'),'utf8');
-function setup(initialPath){
- const calls=[],listeners={},elements={};
- const location={pathname:initialPath};
- const context={state:{screen:'intro'},historyStack:[],render(){calls.push('render');},document:{querySelector(s){return elements[s]??=( {innerHTML:'modal',scrollTop:50} );}},window:{location,history:{pushState(state,title,url){calls.push(['push',url]);location.pathname=url;},replaceState(state,title,url){calls.push(['replace',url]);location.pathname=url;}},addEventListener(name,fn){listeners[name]=fn;}}};
- vm.createContext(context);vm.runInContext(source,context);
- return {context,calls,listeners,location,elements};
-}
-test('login opens the welcome screen; language selection stays at login until home',()=>{
- const {context:c,calls,location}=setup('/busandrop/login');
- assert.equal(c.state.screen,'intro');
- c.state.screen='language';c.render();assert.equal(location.pathname,'/busandrop/login');
- c.state.screen='home';c.render();assert.equal(location.pathname,'/busandrop/home');
- c.render();assert.equal(calls.filter(x=>Array.isArray(x)&&x[0]==='push').length,1);
-});
-test('direct home access and reload start at home',()=>{
- const {context:c,location}=setup('/busandrop/home');
- assert.equal(c.state.screen,'home');assert.equal(location.pathname,'/busandrop/home');
- c.state.screen='stores';c.render();assert.equal(location.pathname,'/busandrop/home');
-});
-test('back and forward restore the matching screen without adding history',()=>{
- const {context:c,calls,listeners,location,elements}=setup('/busandrop/login');
- c.state.screen='home';c.render();const count=calls.length;
- location.pathname='/busandrop/login';listeners.popstate();assert.equal(c.state.screen,'intro');
- assert.equal(elements['#modal'].innerHTML,'');assert.equal(elements['#viewport'].scrollTop,0);
- location.pathname='/busandrop/home';listeners.popstate();assert.equal(c.state.screen,'home');
- assert.equal(calls.slice(count).filter(x=>Array.isArray(x)).length,0);
-});
+const routes={signup:'/busandrop/login',home:'/busandrop/home',stores:'/busandrop/stores',pass:'/busandrop/drop-plan',saved:'/busandrop/saved',profile:'/busandrop/my'};
+function setup(initialPath,search=''){const calls=[],listeners={},elements={},location={pathname:initialPath,search};const context={state:{screen:'intro'},historyStack:[],render(){calls.push('render');},document:{querySelector(s){return elements[s]??={innerHTML:'modal',scrollTop:50};}},window:{location,history:{pushState(state,title,url){calls.push(['push',url,state]);location.pathname=url.split('?')[0];},replaceState(state,title,url){calls.push(['replace',url,state]);location.pathname=url.split('?')[0];}},addEventListener(name,fn){listeners[name]=fn;}}};vm.createContext(context);vm.runInContext(source,context);return {context,calls,listeners,location,elements};}
+test('all six routes load directly and reload into their own screens, including login component',()=>{for(const [screen,url] of Object.entries(routes)){const h=setup(url);assert.equal(h.context.state.screen,screen);assert.equal(h.location.pathname,url);if(screen==='signup')assert.equal(h.context.state.authMode,'login');assert.equal(setup(h.location.pathname).context.state.screen,screen);}});
+test('tab switches update URLs once; renders and language selection do not duplicate history',()=>{const h=setup(routes.signup);h.context.state.screen='language';h.context.render();assert.equal(h.location.pathname,routes.signup);for(const [screen,url] of Object.entries(routes)){h.context.state.screen=screen;h.context.render();assert.equal(h.location.pathname,url);const n=h.calls.length;h.context.render();assert.equal(h.calls.slice(n).filter(Array.isArray).length,0);}});
+test('browser back/forward restore screen and clear modal/scroll without adding history',()=>{const h=setup(routes.signup);for(const [screen,url]of Object.entries(routes)){h.context.state.screen='home';h.context.historyStack=['old'];h.location.pathname=url;const n=h.calls.length;h.listeners.popstate({state:{screen}});assert.equal(h.context.state.screen,screen);assert.equal(h.elements['#modal'].innerHTML,'');assert.equal(h.elements['#viewport'].scrollTop,0);assert.equal(h.context.historyStack.length,0);assert.equal(h.calls.slice(n).filter(Array.isArray).length,0);}});
+test('invalid or mismatched history state falls back to URL; language state can be restored at login',()=>{const h=setup(routes.home);h.location.pathname=routes.profile;h.listeners.popstate({state:{screen:'stores'}});assert.equal(h.context.state.screen,'profile');h.location.pathname=routes.signup;h.listeners.popstate({state:{screen:'language'}});assert.equal(h.context.state.screen,'language');});
+test('canonicalizes trailing slash and retains login query parameters',()=>{const h=setup('/busandrop/login/','?utm_source=instagram');assert.equal(h.context.state.screen,'signup');assert.ok(h.calls.some(c=>Array.isArray(c)&&c[0]==='replace'&&c[1]==='/busandrop/login?utm_source=instagram'));});
+test('routing boots after login and plan modules so direct links render installed screens',()=>{const index=fs.readFileSync(path.join(__dirname,'../../busan-drop/index.html'),'utf8');assert.ok(index.indexOf('integration/login.js')<index.indexOf('integration/page-routes.js'));assert.ok(index.indexOf('integration/shopping-pass.js')<index.indexOf('integration/page-routes.js'));});

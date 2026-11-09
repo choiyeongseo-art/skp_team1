@@ -23,7 +23,7 @@
 .store-filter-group { margin:0 0 16px; }
 .store-filter-group>h3 { margin:0 0 8px; font-size:11px; line-height:1.4; color:#a3a7ad; font-weight:650; }
 .store-filter-group>.home-event-regions,.store-filter-group>.store-brand-filters { margin-bottom:0; }
-.store-category-filters { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; }
+.store-category-filters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
 .store-category-filters button { min-height:36px; min-width:0; padding:8px 3px; border-radius:10px; background:#242629; color:#b6b8ba; font-size:11px; font-weight:700; overflow-wrap:anywhere; }
 .store-category-filters button.active { background:var(--accent); color:#151515; }
 /* Filtered campaign rows follow the reference's image-left, information-right layout. */
@@ -71,16 +71,61 @@
 .branch-map-status {display:block; font-size:12.5px; color:#bbc5cf; line-height:1.6;}
 .branch-map-status[hidden] {display:none;}
 .branch-map-pin {width:36px; height:42px; border-radius:18px 18px 18px 3px; background:#ffd628; color:#141414; border:2px solid #171717; font-size:16px; font-weight:850; box-shadow:0 3px 10px #0006; cursor:pointer;}
-.branch-map-pin[aria-pressed=true] {background:#fff; outline:3px solid #ffd628; z-index:2;}
-.branch-number-choices {display:flex; flex-wrap:wrap; gap:6px; margin:14px 0;}
-.branch-number-choices button {display:flex; align-items:center; gap:5px; min-height:38px; padding:7px 9px; border-radius:8px; background:#303539; color:#dce3ea; font-size:12.5px; border:1px solid #ffffff15;}
-.branch-number-choices button[aria-pressed=true] {background:#ffd628; color:#121212; border-color:#ffd628;}
-.branch-selection-heading {display:flex; align-items:center; gap:10px;}
-.branch-selection-heading>b {display:grid; place-items:center; flex:0 0 30px; height:30px; border-radius:50%; background:#ffd628; color:#131313; font-size:14px;}
-.branch-selected-location {border-top:1px solid #ffffff1a; padding-top:16px;}
-.branch-selected-location strong {font-size:15px; overflow-wrap:anywhere;}
-.branch-selected-location small {font-size:12.5px; color:#b4becb;}
-.branch-selected-location p {font-size:12.5px; line-height:1.7; color:#aab6c4; margin:10px 0 14px;}
-.branch-selected-location>button {width:100%; min-height:44px; background:#ffd628; border-radius:9px; color:#141414; font-size:14px; font-weight:800;}
+/* Branch numbers connect map positions to venue names; every choice opens details. */
+.branch-map-heading {display:flex; align-items:flex-start; justify-content:space-between; gap:12px;}
+.branch-map-heading p {margin:0; font-size:12px; line-height:1.6; color:inherit;}
+.branch-map-heading .branch-map-overview {flex:none; min-height:32px; border:0; background:transparent; padding:0; color:var(--accent); font-size:12px;}
+.branch-number-choices {display:grid; gap:0; margin:4px 0 0;}
+.branch-number-choices button {display:grid; grid-template-columns:28px minmax(0,1fr); align-items:center; column-gap:10px; row-gap:4px; width:100%; min-height:64px; padding:12px 0; border:0; border-bottom:1px solid #ffffff20; border-radius:0; background:transparent; color:inherit; text-align:left;}
+.branch-number-choices button:last-child {border-bottom:0;}
+.branch-number-choices button>b {grid-row:1 / 3; display:grid; place-items:center; width:28px; height:28px; border-radius:50%; background:#ffd628; color:#141414; font-size:13px;}
+.branch-choice-name {font-size:14px; font-weight:750; line-height:1.5; overflow-wrap:anywhere;}
+.branch-choice-action {grid-column:2; font-size:12px; line-height:1.5; opacity:.8;}
+.branch-number-choices button:hover {background:#ffd62815;}
+.branch-number-choices button:focus-visible,.branch-map-pin:focus-visible,.branch-map-overview:focus-visible {outline:2px solid var(--accent); outline-offset:3px;}
 
-.store-event-branches>.branch-map-overview {display:block; width:auto; margin:8px 0 0 auto; min-height:32px; padding:4px 0; border:0; color:var(--accent); font-size:12.5px;}
+
+/* Light result controls and a bounded, scrollable venue menu. */
+#phone .store-results-toolbar {margin:24px 0 16px;padding-top:20px;align-items:center;}
+#phone .store-results-toolbar strong {font-size:19px;letter-spacing:-.4px;}
+#phone .store-results-toolbar em {display:inline-flex;align-items:center;justify-content:center;min-width:25px;height:25px;padding:0 6px;margin-left:5px;border-radius:8px;background:#fff5bf;color:#715b00;font-size:13px;vertical-align:middle;}
+#phone .store-results-toolbar>div>span {font-size:12px;color:#69717a;}
+#phone .store-view-toggle {padding:4px;gap:4px;border:1px solid #e1e4e8;border-radius:14px;background:#f4f5f6;}
+#phone .store-view-toggle>button {min-width:48px;min-height:36px;border-radius:10px;background:transparent;color:#606872;}
+#phone .store-view-toggle>button[aria-pressed=true] {background:#ffd628;color:#171717;box-shadow:0 1px 3px #0000000c;}
+#phone.stores .viewport {scrollbar-width:thin;scrollbar-color:#c7cbd0 transparent;}
+#phone.stores .viewport::-webkit-scrollbar,#phone .store-location-options::-webkit-scrollbar {width:4px;}
+#phone.stores .viewport::-webkit-scrollbar-thumb,#phone .store-location-options::-webkit-scrollbar-thumb {background:#c7cbd0;border-radius:8px;}
+
+/* Pin selection reveals a compact place card inside the map. */
+#phone .store-location-detail {left:10px;right:10px;bottom:28px;padding:16px;border:1px solid #e1e4e8;border-radius:18px;background:#fff;color:#171717;box-shadow:0 8px 28px #0003;}
+#phone .store-preview-heading {display:flex;align-items:center;gap:12px;padding-right:24px;}
+#phone .store-preview-heading img {flex:0 0 56px;width:56px;height:56px;border-radius:12px;object-fit:cover;}
+#phone .store-preview-heading>div {min-width:0;}
+#phone .store-preview-heading small {display:block;margin-bottom:4px;color:#715b00;font-size:11px;font-weight:650;}
+#phone .store-preview-heading strong {display:block;font-size:15px;font-weight:800;line-height:1.45;word-break:keep-all;overflow-wrap:anywhere;}
+#phone .store-preview-close {position:absolute;top:10px;right:10px;width:28px;height:28px;padding:0;border-radius:50%;background:#f2f3f5;color:#626870;font-size:20px;line-height:1;}
+#phone .store-location-detail .store-preview-address {margin:12px 0 6px;font-size:11px;line-height:1.6;color:#69717a;}
+#phone .store-location-detail .store-preview-description {margin:0 0 12px;font-size:12px;line-height:1.5;color:#30363d;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+#phone .store-preview-more {display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:40px;padding:10px 14px;border-radius:10px;background:#ffd628;color:#171717;font-size:13px;font-weight:800;}
+#phone .real-store-pin[aria-pressed=true] {background:#fff;border-color:#171717;outline:3px solid #ffd628;z-index:2;}
+#phone .store-preview-more:focus-visible,#phone .store-preview-close:focus-visible {outline:2px solid #171717;outline-offset:2px;}
+
+#phone .real-store-pin .category-pin-icon {width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+#phone .real-store-pin {display:grid;place-items:center;cursor:pointer;}
+
+/* Illustrated destination stamps: warm paper, ink and a single yellow accent. */
+#phone .real-store-pin {width:42px;height:52px;padding:0 0 7px;border:0;border-radius:0;background:transparent;color:#1c211e;box-shadow:none;filter:drop-shadow(0 3px 3px #0005);overflow:visible;}
+#phone .category-pin-face {position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;width:40px;height:44px;box-sizing:border-box;border:1.5px solid #202520;border-radius:19px 19px 10px 10px;background:#fff;}
+#phone .category-pin-face::after {content:'';position:absolute;left:calc(50% - 4px);bottom:-5px;width:7px;height:7px;background:#fff;border-right:1.5px solid #202520;border-bottom:1.5px solid #202520;transform:rotate(45deg);}
+#phone .real-store-pin .category-pin-icon {display:block;width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+#phone .category-pin-caption {position:relative;z-index:1;display:block;font-family:Arial,sans-serif;font-size:5.5px;font-weight:800;letter-spacing:.65px;line-height:1;margin:0 0 3px;}
+#phone .real-store-pin[aria-pressed=true] {background:transparent;border:0;outline:none;z-index:2;}
+#phone .real-store-pin[aria-pressed=true] .category-pin-face {background:#fff;box-shadow:0 0 0 2px #202520,0 0 0 4px #ffd628;}
+#phone .real-store-pin[aria-pressed=true] .category-pin-face::after {background:#fff;}
+#phone .real-store-pin:focus-visible {outline:none;}
+#phone .real-store-pin:focus-visible .category-pin-face {outline:2px solid #ffd628;outline-offset:3px;}
+
+#phone .branch-number-choices button {background:transparent; border-color:#dce0e4;}
+#phone .branch-map-heading .branch-map-overview {color:#715b00;}
+#phone .branch-number-choices button:hover {background:#fff6c8;}

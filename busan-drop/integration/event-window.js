@@ -11,6 +11,29 @@
   const [y,m,d]=today.split('-').map(Number),lastDay=new Date(Date.UTC(y,m+1,0)).getUTCDate();
   return {start:today,end:iso(new Date(Date.UTC(y,m,Math.min(d,lastDay))))};
  }
+ // Only confirmed calendar dates expire; unknown schedules must not disappear by guesswork.
+ function isExpired(event,today=koreaToday()){
+  if(!event)return false;
+  const ends=event.scheduleKind==='booking'&&event.offers?.length?event.offers.map(offer=>offer.bookingEnd):[event.end];
+  return ends.length>0&&ends.every(end=>valid(end)&&end<today);
+ }
+ function catalog(){return root.BUSAN_EVENT_CATALOG||[];}
+ function activeCatalog(today=koreaToday()){return catalog().filter(event=>!isExpired(event,today));}
+ function locationExpired(item,today=koreaToday()){
+  const campaign=catalog().find(event=>event.brand===item?.brand);
+  return isExpired(campaign||root.BUSAN_EVENT_DETAILS?.[item?.brand],today)||isExpired(item?.eventOverrides,today);
+ }
+ function routeVisible(route=[],today=koreaToday()){
+  return route.filter(stop=>!isExpired(catalog().find(event=>event.id===stop.campaign?.id)||stop.campaign,today)&&!isExpired(stop.event,today)&&!locationExpired(stop.item,today));
+ }
+ function planVisible(entry,today=koreaToday()){
+  if(!entry)return entry;
+  const raw=entry.routeSnapshot||[],route=routeVisible(raw,today),expiredIds=new Set(raw.filter(stop=>!route.includes(stop)).map(stop=>stop.campaign.id));
+  const expired=id=>expiredIds.has(id)||isExpired(catalog().find(event=>event.id===id),today);
+  return {...entry,routeSnapshot:route,stops:(entry.stops||[]).filter(stop=>!expired(stop.id)),
+   places:entry.flow==='venue-groups'?(entry.places||[]).filter(place=>!expired(place.eventId)):entry.places,
+   itinerary:entry.itinerary?.filter(stop=>entry.flow==='venue-groups'?!expired(stop.eventId):stop.kind!=='event'||!expired(stop.id.replace(/^event:/,'')))};
+ }
  const districts={서면:'부산진구',남포동:'중구',광안리:'수영구',해운대:'해운대구'};
  function matchesRegion(item,region){
   if(region==='BUSAN')return true;
@@ -48,6 +71,6 @@
   }
   return [...groups.values()];
  }
- const api={koreaToday,monthWindow,select,matchesRegion,groupLocations};
+ const api={isExpired,activeCatalog,locationExpired,routeVisible,planVisible,koreaToday,monthWindow,select,matchesRegion,groupLocations};
  if(typeof module==='object'&&module.exports)module.exports=api;else root.BUSAN_EVENT_WINDOW=api;
 })(typeof window==='object'?window:this);

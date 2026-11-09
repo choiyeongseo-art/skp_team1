@@ -1,0 +1,498 @@
+'use client'
+
+import {track} from '@/lib/analytics'
+import Image from 'next/image'
+import EmailSignIn from '@/components/email-sign-in'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+
+import { useLang } from '@/contexts/lang-context'
+import { startGoogleSignIn, startAppleSignIn, isSupabaseAuthConfigured, isGoogleSignInEnabled, createSupabaseBrowserClient } from '@/lib/supabase-client'
+
+const LOGIN_IMAGE_OVERLAY = 'linear-gradient(to bottom, rgba(5,6,4,0) 0%, rgba(5,6,4,0) 30%, rgba(5,6,4,0.20) 38%, rgba(5,6,4,0.50) 52%, rgba(5,6,4,0.60) 65%, rgba(5,6,4,0.68) 80%, rgba(5,6,4,0.75) 100%)'
+
+const LOGIN_SLIDES = [
+  {
+    src: '/login-jeonju-wide-crowd.jpg',
+    objectPosition: '50% 50%',
+    overlay: LOGIN_IMAGE_OVERLAY,
+  },
+  {
+    src: '/login-gwangan-balanced.jpg',
+    objectPosition: '50% 50%',
+    overlay: LOGIN_IMAGE_OVERLAY,
+  },
+  {
+    src: '/login-meditation-rain-balanced.jpg',
+    objectPosition: '50% 50%',
+    overlay: LOGIN_IMAGE_OVERLAY,
+  },
+  {
+    src: '/login-namsan-balanced.jpg',
+    objectPosition: '50% 50%',
+    overlay: LOGIN_IMAGE_OVERLAY,
+  },
+] as const
+
+const LOGIN_COPY = {
+  EN: {
+    eyebrow: 'Welcome',
+    title: 'Begin your calm trip to Korea',
+    description: 'Save places, refine personal plans, and keep your wellness journey in one quiet space.',
+    google: 'Continue with Google',
+    apple: 'Continue with Apple',
+    email: 'Continue with Email',
+    guest: 'Explore first',
+    helper: 'You can browse Zen Way first and sign in when you are ready to save or plan.',
+    legal: 'By continuing, you agree to our Terms and Privacy Policy.',
+    slides: ['K-Wellness', 'Curated Journeys'],
+  },
+  JP: {
+    eyebrow: 'Welcome',
+    title: '韓国での穏やかな旅を始めましょう',
+    description: 'スポットの保存、マイプランの調整、ウェルネス旅程の管理を一つの静かな空間で行えます。',
+    google: 'Googleで続ける',
+    apple: 'Appleで続ける',
+    email: 'メールで続ける',
+    guest: 'まずは見る',
+    helper: '保存やプラン作成が必要になった時に、あとからサインインできます。',
+    legal: '続行すると、利用規約とプライバシーポリシーに同意したことになります。',
+    slides: ['K-Wellness', '最適化された旅'],
+  },
+  CN: {
+    eyebrow: 'Welcome',
+    title: '开启一段安静的韩国疗愈之旅',
+    description: '收藏地点、优化 个人行程，并在一个安静的空间里管理你的 wellness 旅行。',
+    google: '使用 Google 继续',
+    apple: '使用 Apple 继续',
+    email: '使用邮箱继续',
+    guest: '先逛一逛',
+    helper: '你可以先浏览 Zen Way，准备好保存或规划时再登录。',
+    legal: '继续即表示你同意我们的条款与隐私政策。',
+    slides: ['K-Wellness', '定制旅行'],
+  },
+  TW: {
+    eyebrow: 'Welcome',
+    title: '開始一段安靜的韓國療癒旅程',
+    description: '收藏地點、微調 个人行程，並在一個安靜的空間裡管理你的 wellness 旅行。',
+    google: '使用 Google 繼續',
+    apple: '使用 Apple 繼續',
+    email: '使用電子郵件繼續',
+    guest: '先逛逛看',
+    helper: '你可以先瀏覽 Zen Way，之後要儲存或規劃時再登入。',
+    legal: '繼續即表示你同意我們的條款與隱私政策。',
+    slides: ['K-Wellness', '客製旅程'],
+  },
+  KR: {
+    eyebrow: 'Welcome',
+    title: '고요한 한국 웰니스 여정을 시작해보세요',
+    description: '장소를 저장하고, 마이 플랜을 다듬고, 웰니스 여행을 한 공간에서 차분하게 관리할 수 있어요.',
+    google: 'Google로 계속하기',
+    apple: 'Apple로 계속하기',
+    email: '이메일로 계속하기',
+    guest: '먼저 둘러보기',
+    helper: '저장이나 플랜 생성이 필요할 때 로그인해도 괜찮아요.',
+    legal: '계속하면 이용약관 및 개인정보처리방침에 동의하는 것으로 간주됩니다.',
+    slides: ['K-Wellness', 'Curated Journeys'],
+  },
+} as const
+
+const APPLE_AUTH_ERROR_COPY = {
+  EN: {
+    unavailable: 'Apple sign-in is being configured. Please use Explore first for now.',
+    failed: 'Apple sign-in could not be completed. Please try again.',
+  },
+  JP: {
+    unavailable: 'Appleログインは現在設定中です。今は「まずは見る」をご利用ください。',
+    failed: 'Appleログインを完了できませんでした。もう一度お試しください。',
+  },
+  CN: {
+    unavailable: 'Apple 登录正在配置中。目前请先浏览内容。',
+    failed: 'Apple 登录未能完成，请重试。',
+  },
+  TW: {
+    unavailable: 'Apple 登入正在設定中。目前請先瀏覽內容。',
+    failed: 'Apple 登入無法完成，請再試一次。',
+  },
+  KR: {
+    unavailable: 'Apple 로그인을 설정하고 있어요. 지금은 먼저 둘러보기를 이용해 주세요.',
+    failed: 'Apple 로그인을 완료하지 못했어요. 다시 시도해 주세요.',
+  },
+} as const
+
+
+function ProviderIcon({ type }: { type: 'google' | 'apple' | 'email' }) {
+  if (type === 'google') {
+    return (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21.8 12.23c0-.76-.07-1.49-.2-2.2H12v4.17h5.49a4.7 4.7 0 0 1-2.03 3.08v2.56h3.29c1.93-1.78 3.05-4.41 3.05-7.61Z" fill="#4285F4" />
+        <path d="M12 22c2.76 0 5.08-.91 6.77-2.47l-3.29-2.56c-.91.61-2.07.97-3.48.97-2.67 0-4.93-1.8-5.74-4.22H2.86v2.64A10 10 0 0 0 12 22Z" fill="#34A853" />
+        <path d="M6.26 13.72A5.99 5.99 0 0 1 5.94 12c0-.6.11-1.18.32-1.72V7.64H2.86A10 10 0 0 0 2 12c0 1.61.39 3.13 1.09 4.36l3.17-2.64Z" fill="#FBBC05" />
+        <path d="M12 6.06c1.5 0 2.84.52 3.89 1.53l2.92-2.92C17.08 3.06 14.76 2 12 2 8.09 2 4.72 4.24 2.86 7.64l3.4 2.64C7.07 7.86 9.33 6.06 12 6.06Z" fill="#EA4335" />
+      </svg>
+    )
+  }
+
+  if (type === 'apple') {
+    return (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M15.19 3.39c.82-.98 1.38-2.35 1.23-3.39-1.18.05-2.6.78-3.45 1.76-.76.87-1.42 2.26-1.24 3.58 1.31.1 2.64-.66 3.46-1.95Zm4.18 14.57c-.54 1.25-.8 1.81-1.5 2.94-.98 1.58-2.36 3.56-4.07 3.57-1.52.02-1.92-.99-3.98-.98-2.06.01-2.49 1-4.01.99-1.71-.02-3.02-1.8-4-3.37C-.92 17.2-.77 10.56 3.35 8.04c.98-.61 2.36-1.1 3.72-1.1 1.48 0 2.42 1.01 3.97 1.01 1.5 0 2.42-1.01 3.95-1.01 1.21 0 2.49.33 3.47.9-3.03 1.66-2.54 5.98.91 7.12Z" />
+      </svg>
+    )
+  }
+
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="14" rx="3" />
+      <path d="M4.5 7.5 12 13l7.5-5.5" />
+    </svg>
+  )
+}
+
+function AuthButton({
+  type,
+  label,
+  onClick,
+  active = false,
+  disabled = false,
+  fontFamily,
+}: {
+  type: 'google' | 'apple' | 'email'
+  label: string
+  onClick?: () => void
+  active?: boolean
+  disabled?: boolean
+  fontFamily?: string
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      style={{
+        width: '100%',
+        height: 50,
+        borderRadius: 0,
+        border: '1px solid rgba(255,255,255,0.90)',
+        background: 'rgba(0,0,0,0.10)',
+        color: '#FFFFFF',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 10,
+        fontSize: 15,
+        fontWeight: 500,
+        lineHeight: 2,
+        letterSpacing: '0.05em',
+        boxShadow: 'none',
+        transform: active ? 'scale(0.985)' : 'scale(1)',
+        opacity: disabled && !active ? 0.5 : active ? 0.92 : 1,
+        transition: 'transform 140ms ease, opacity 140ms ease, background-color 140ms ease',
+        cursor: disabled ? (active ? 'wait' : 'not-allowed') : 'pointer',
+      }}
+    >
+      <ProviderIcon type={type} />
+      <span style={fontFamily ? { fontFamily } : undefined}>{label}</span>
+    </button>
+  )
+}
+
+export default function LoginPage() {
+  const { uiLang } = useLang()
+  const copy = LOGIN_COPY[uiLang]
+  const authConfigured = isSupabaseAuthConfigured()
+  const appleAuthErrorCopy = APPLE_AUTH_ERROR_COPY[uiLang]
+  const [showIntro, setShowIntro] = useState(true)
+  const [activeSlide, setActiveSlide] = useState(0)
+  const [signingIn, setSigningIn] = useState<'google' | 'apple' | null>(null)
+  const [authError, setAuthError] = useState('')
+  const [utmContent, setUtmContent] = useState('')
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!isSupabaseAuthConfigured()) return
+    const supabase = createSupabaseBrowserClient()
+    supabase.auth.getSession().then(({ data }) => {
+      if (data.session) router.replace('/home')
+    })
+  }, [router])
+
+  // UTM 파라미터 읽기 — 인스타 유입 추적
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const content = params.get('utm_content') ?? ''
+    const source = params.get('utm_source') ?? ''
+    if (source === 'instagram' && content) {
+      setUtmContent(content)
+      try { sessionStorage.setItem('zen_utm_content', content) } catch {}
+    } else {
+      try {
+        const stored = sessionStorage.getItem('zen_utm_content')
+        if (stored) setUtmContent(stored)
+      } catch {}
+    }
+  }, [])
+
+  useEffect(() => {
+    track('login_screen_viewed', {})
+  }, [])
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const introTimer = window.setTimeout(() => {
+      setShowIntro(false)
+    }, reducedMotion ? 500 : 4000)
+
+    return () => window.clearTimeout(introTimer)
+  }, [])
+
+  useEffect(() => {
+    if (showIntro) return
+
+    const timer = window.setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % LOGIN_SLIDES.length)
+    }, 3750)
+
+    return () => window.clearInterval(timer)
+  }, [showIntro])
+
+  async function handleGoogleSignIn() {
+    if (signingIn) return
+    setAuthError('')
+    setSigningIn('google')
+    try {
+      try{if(localStorage.getItem('zen_analytics_consent')==='granted')sessionStorage.setItem('zen_login_pending',String(Date.now()))}catch{}
+      track('login_started',{method:'google',source: utmContent ? `instagram_${utmContent}` : '/login'})
+      await startGoogleSignIn()
+    } catch {
+      track('login_failed',{source:'/login'})
+      setSigningIn(null)
+      setAuthError(({KR: 'Google 로그인을 완료하지 못했어요. 먼저 둘러보기를 이용할 수 있어요.', EN: 'Google sign-in failed. You can still explore first.', JP: 'Googleログインに失敗しました。まずは閲覧できます。', CN: 'Google 登录失败，您仍可先浏览。', TW: 'Google 登入失敗，您仍可先瀏覽。'})[uiLang])
+    }
+  }
+
+  async function handleAppleSignIn() {
+    if (signingIn) return
+    setAuthError('')
+    setSigningIn('apple')
+    try {
+      try{if(localStorage.getItem('zen_analytics_consent')==='granted')sessionStorage.setItem('zen_login_pending',String(Date.now()))}catch{}
+      track('login_started',{method:'apple',source: utmContent ? `instagram_${utmContent}` : '/login'})
+      await startAppleSignIn()
+    } catch (error) {
+      track('login_failed',{source:'/login'})
+      setSigningIn(null)
+      setAuthError(
+        error instanceof Error && error.message === 'supabase/not-configured'
+          ? appleAuthErrorCopy.unavailable
+          : appleAuthErrorCopy.failed,
+      )
+    }
+  }
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        overflowX: 'hidden',
+        overflowY: showIntro ? 'hidden' : 'auto',
+        backgroundColor: '#080907',
+      }}
+    >
+      {showIntro && (
+        <div className="zen-login-intro" aria-hidden="true">
+          <h1 className="zen-login-intro__wordmark">ZEN WAY</h1>
+        </div>
+      )}
+
+      <style>{`
+        @keyframes zen-login-intro-backdrop {
+          0%, 54% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+
+        @keyframes zen-login-intro-wordmark {
+          0%, 8% {
+            opacity: 0;
+            filter: blur(0);
+            letter-spacing: 0.30em;
+            transform: scale(0.985);
+          }
+          18%, 54% {
+            opacity: 1;
+            filter: blur(0);
+            letter-spacing: 0.30em;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            filter: blur(12px);
+            letter-spacing: 0.30em;
+            transform: scale(1.08);
+          }
+        }
+
+        .zen-login-intro {
+          position: absolute;
+          inset: 0;
+          z-index: 120;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background: #FFFFFF;
+          animation: zen-login-intro-backdrop 4000ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+          pointer-events: none;
+          will-change: opacity;
+        }
+
+        .zen-login-intro__wordmark {
+          margin: 0;
+          color: #000000;
+          font-family: var(--font-dm-sans);
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 2;
+          letter-spacing: 0.30em;
+          text-align: center;
+          white-space: nowrap;
+          animation: zen-login-intro-wordmark 3700ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+          will-change: opacity, filter, letter-spacing, transform;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .zen-login-intro {
+            animation-duration: 500ms;
+          }
+
+          .zen-login-intro__wordmark {
+            animation-duration: 450ms;
+          }
+        }
+      `}</style>
+
+      <div style={{ position: 'relative', minHeight: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingTop: 160 }}>
+      {/* ── Full-screen image backdrop ───────────────────── */}
+      <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', zIndex: 0 }}>
+
+        {LOGIN_SLIDES.map((slide, index) => (
+          <div
+            key={slide.src}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              opacity: activeSlide === index ? 1 : 0,
+              transform: activeSlide === index ? 'scale(1.05)' : 'scale(1.01)',
+              transition: 'opacity 1000ms cubic-bezier(0.4,0,0.2,1), transform 3750ms linear',
+              willChange: 'opacity, transform',
+            }}
+          >
+            <Image
+              src={slide.src}
+              alt=""
+              fill
+              priority={index === 0}
+              sizes="390px"
+              style={{ objectFit: 'cover', objectPosition: slide.objectPosition }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: slide.overlay,
+                pointerEvents: 'none',
+              }}
+            />
+          </div>
+        ))}
+
+
+      </div>
+
+      {/* ── Editorial Content — overlays the full-screen image ─────── */}
+      <div style={{ padding: '24px 20px max(24px, env(safe-area-inset-bottom))', position: 'relative', zIndex: 10 }}>
+
+        {/* ZEN WAY — editorial masthead */}
+        <h1 style={{
+          fontFamily: 'var(--font-dm-sans)',
+          fontSize: 30,
+          fontWeight: 500,
+          lineHeight: 2,
+          letterSpacing: '0.30em',
+          color: '#FFFFFF',
+          textAlign: 'center',
+          marginBottom: 15,
+          marginTop: 0,
+          textShadow: '0 2px 30px rgba(0,0,0,0.90), 0 1px 8px rgba(0,0,0,0.80)',
+        }}>
+          ZEN WAY
+        </h1>
+
+        {/* Title — value proposition */}
+        <p style={{
+          fontFamily: 'var(--font-bookk-myungjo)',
+          fontSize: 18,
+          fontWeight: 400,
+          lineHeight: 1.6,
+          wordBreak: 'keep-all',
+          textWrap: 'balance',
+          color: '#FFFFFF',
+          textAlign: 'center',
+          margin: '0 0 20px',
+          letterSpacing: '0.05em',
+          textShadow: '0 2px 14px rgba(0,0,0,0.20)',
+        }}>
+          {copy.title}
+        </p>
+
+        {/* Auth buttons */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 18 }}>
+          {authConfigured && isGoogleSignInEnabled() && <AuthButton type="google" label={signingIn === 'google' ? '···' : copy.google} active={signingIn === 'google'} disabled={!!signingIn} onClick={handleGoogleSignIn} />}
+          {authConfigured && <AuthButton type="apple" label={signingIn === 'apple' ? '···' : copy.apple} active={signingIn === 'apple'} disabled={!!signingIn} onClick={handleAppleSignIn} />}
+          {authConfigured && <EmailSignIn korean={uiLang === 'KR'} />}
+
+        </div>
+
+        {authError && (
+          <p role="alert" style={{ fontSize: 12.5, lineHeight: 2, color: '#FFFFFF', textAlign: 'center', margin: '-8px 0 12px' }}>
+            {authError}
+          </p>
+        )}
+
+        <div style={{ width: '100%', height: 1, backgroundColor: 'rgba(255,255,255,0.72)', marginBottom: 14 }} />
+
+        {/* Explore first — centered guest action */}
+        <Link
+          href="/welcome"
+          onClick={() => track('guest_started', {source: utmContent ? `instagram_${utmContent}` : '/login'})}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 8,
+            height: 50,
+            color: '#FFFFFF',
+            textDecoration: 'none',
+          }}
+        >
+          <span style={{ fontSize: 15, fontWeight: 500, lineHeight: 2, letterSpacing: '0.05em' }}>{copy.guest}</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </Link>
+
+        <p style={{ fontSize: 10, lineHeight: 2, color: 'rgba(255,255,255,0.58)', textAlign: 'center', marginTop: 6 }}>
+          {({KR: '로그인하면 저장한 장소와 여행 계획이 계정에 보관됩니다.', EN: 'Sign in to keep saved places and plans in your account.', JP: 'ログインするとスポットやプランがアカウントに保存されます。', CN: '登录后，地点和计划保存在账号中。', TW: '登入後，地點和計畫儲存在帳號中。'})[uiLang]}
+        </p>
+        <nav aria-label="Service documents" style={{display:'flex',justifyContent:'center',gap:16,fontSize:11,lineHeight:2,color:'#FFFFFF',marginTop:14}}>
+          <Link href="/privacy" style={{color:'inherit'}}>{({KR:'개인정보처리방침',EN:'Privacy Policy',JP:'プライバシーポリシー',CN:'隐私政策',TW:'隱私權政策'})[uiLang]}</Link>
+          <Link href="/terms" style={{color:'inherit'}}>{({KR:'이용약관',EN:'Terms of Service',JP:'利用規約',CN:'服务条款',TW:'服務條款'})[uiLang]}</Link>
+        </nav>
+      </div>
+      </div>
+
+    </div>
+  )
+}
