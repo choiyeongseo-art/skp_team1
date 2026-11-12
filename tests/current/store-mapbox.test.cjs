@@ -29,7 +29,7 @@ test('all banner brands have locations and missing brands do not use fictional d
  assert.match(c.storeMap(),/등록된 위치가 없어요/);assert.doesNotMatch(c.storeMap(),/시연점|map-world/);
 });
 test('both maps use the same style and navigation puts stores before brands',()=>{
- const {c,maps}=setup();c.render();assert.equal(maps[0].options.style,c.window.BUSAN_MAPBOX_CONFIG.style);
+ const {c,maps}=setup();c.render();assert.equal(maps[0].options.style,'mapbox://styles/mapbox/streets-v12');
  const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
  assert.ok(app.includes("[['home','홈','home'],['stores','매장찾기','store'],['pass','드롭 플랜','ticket']"));
 });

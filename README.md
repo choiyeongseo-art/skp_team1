@@ -1,8 +1,8 @@
 # BUSAN DROP — 디자이너 작업 시작
 
-2026-11-09 개발본입니다. 현재 운영: https://busandrop.vercel.app/busandrop/home
+2026-11-12 웹·앱 화면 디자인 인수인계본입니다. 현재 운영: https://busandrop.vercel.app/busandrop/home
 
-화면·자산·기능 로직·Supabase 마이그레이션·테스트를 함께 전달합니다. 먼저 [HANDOFF.md](HANDOFF.md)를 읽고 디자인 수정 위치와 남은 이슈를 확인하세요.
+웹과 앱이 공유하는 화면·자산·기능 로직, 연결에 필요한 Supabase 문서와 테스트를 전달합니다. iOS·Android 패키징 없이 브라우저에서 앱 화면을 수정하고 확인할 수 있습니다. 먼저 [HANDOFF.md](HANDOFF.md)를 읽고 디자인 수정 위치와 남은 이슈를 확인하세요.
 
 ## 실행
 
@@ -11,6 +11,7 @@ Node.js **24.x**와 Git이 필요합니다. 저장소 최상위에서 실행합�
 ```sh
 git clone https://github.com/choiyeongseo-art/skp_team1.git
 cd skp_team1
+git switch -c design/polish
 npm ci
 npm run dev
 ```
@@ -48,7 +49,8 @@ Vercel 접근 권한과 운영 환경 변수는 담당자가 별도로 관리합
 ## 문서
 
 - [HANDOFF.md](HANDOFF.md): 현재 기능, 수정 파일 지도, 디자인 마무리 범위, 알려진 이슈
-- [docs/AUTH-SETUP.md](docs/AUTH-SETUP.md): Google·Apple·이메일 로그인과 로컬 콜백 설정
+- [docs/AUTH-SETUP.md](docs/AUTH-SETUP.md): Google·Apple OAuth와 로컬 콜백 설정
+- [supabase/ACCOUNT_PASSWORD_AUTH.md](supabase/ACCOUNT_PASSWORD_AUTH.md): 아이디·비밀번호 가입 및 로그인 설정
 - [supabase/ACCOUNT_PERSISTENCE.md](supabase/ACCOUNT_PERSISTENCE.md): 계정별 행사·플랜·언어 저장
 - [supabase/PRODUCT_ANALYTICS.md](supabase/PRODUCT_ANALYTICS.md): 지표 정의·테이블·집계 SQL
 - [supabase/migrations/](supabase/migrations/): 신규 환경에 적용할 DB SQL

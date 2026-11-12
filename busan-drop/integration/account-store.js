@@ -60,6 +60,10 @@
   }catch{if(version===epoch){failed=true;view();}}})();return currentReady;
  }
  window.BUSAN_ACCOUNT_STORE={getOwner:()=>owner,isLoading:()=>!!owner&&!hydrated,getEvents:()=>copy(events),updateLibrary,toggleEvent,ready:()=>currentReady,retry:()=>{if(!hydrated&&owner){owner=null;return switchUser();}return flush();},status:()=>({owner,loading:!!owner&&!hydrated,failed,pending:pending.length})};
+ window.addEventListener('busan-account-deleted',e=>{
+  if(e.detail?.id!==owner)return;
+  ++epoch;pending=[];hydrated=false;library=empty();events=[];
+ });
  window.addEventListener('busan-auth-updated',switchUser);
  window.addEventListener('busan-language-changed',()=>setLanguage(state.language));
  document.addEventListener('click',e=>{if(e.target.closest('[data-language-enter]'))setLanguage(state.language);});

@@ -6,6 +6,21 @@ function setup(){const initial={plans:[{id:'a',title:'Plan A',start:'2026-11-08'
  return {c,modal,click,rename,discarded,get:()=>JSON.parse(storage.get('busan-my-library'))};}
 test('plan cards precede bottom settings, removed account copy stays absent, and actions remain separate',()=>{const h=setup(),html=h.c.profile();assert.ok(html.indexOf('id="myLibrary"')<html.indexOf('account-settings'));assert.doesNotMatch(html,/계정 및 설정|로그인됨|게스트|여행의 취향|플랜과 방문 기록|account-identity|account-invite/);assert.match(html,/data-language-next="profile"/);assert.match(html,/data-library-about/);assert.match(html,/MY PAGE/);assert.match(html,/<h2>마이페이지<\/h2>/);assert.match(html,/<h3 id="mySettingsTitle">설정<\/h3>/);assert.doesNotMatch(html,/class="account-menu"/);assert.match(html,/data-library-edit="a"/);assert.match(html,/data-library-delete="a"/);assert.doesNotMatch(html,/<button[^>]*my-plan-card/);});
 test('opening and cancelling deletion leave all saved plans intact',()=>{const h=setup();h.click('data-library-delete','a');assert.match(h.modal.innerHTML,/data-library-delete-confirm="a"/);assert.equal(h.get().plans.length,2);h.click('data-library-delete-cancel');assert.equal(h.modal.innerHTML,'');assert.equal(h.get().plans.length,2);assert.equal(h.discarded.length,0);});
+
+test('My settings always exposes the appropriate account action for guests and signed-in users',()=>{
+ const h=setup();
+ h.c.state.joined=false;
+ assert.match(h.c.profile(),/data-library-login[^>]*>[\s\S]*?<strong>로그인<\/strong>/);
+ assert.doesNotMatch(h.c.profile(),/data-bd-signout/);
+ const before=h.get(),navigation=[];h.c.nav=screen=>navigation.push(screen);
+ h.click('data-library-login');
+ assert.deepEqual(navigation,['signup']);assert.equal(h.c.state.authMode,'login');assert.equal(h.c.state.joined,false);assert.deepEqual(h.get(),before);
+ h.c.state.joined=true;
+ assert.match(h.c.profile(),/data-bd-signout[^>]*>[\s\S]*?<strong>로그아웃<\/strong>/);
+ assert.doesNotMatch(h.c.profile(),/data-library-login/);
+ h.c.state.joined=false;
+ assert.match(h.c.profile(),/data-library-login/);
+});
 test('only the pending plan can be deleted; confirmation clears its matching draft reference',()=>{const h=setup();h.click('data-library-delete-confirm','a');assert.equal(h.get().plans.length,2);h.click('data-library-delete','a');h.click('data-library-delete-confirm','b');assert.equal(h.get().plans.length,2);h.click('data-library-delete-confirm','a');assert.deepEqual(h.get().plans.map(plan=>plan.id),['b']);assert.deepEqual(h.discarded,['a']);});
 
 test('plan summaries separate events, sights and food including empty categories',()=>{

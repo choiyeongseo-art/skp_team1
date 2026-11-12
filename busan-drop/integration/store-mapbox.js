@@ -119,12 +119,13 @@
     try{
       if(!window.mapboxgl||!window.BUSAN_MAPBOX_CONFIG?.token)throw Error('Map unavailable');
       mapboxgl.accessToken=window.BUSAN_MAPBOX_CONFIG.token;
-      branchMap=new mapboxgl.Map({container:host,style:window.BUSAN_MAPBOX_CONFIG.style,...window.BUSAN_MAPBOX_VIEWS.BUSAN,cooperativeGestures:true,attributionControl:false});
+      branchMap=new mapboxgl.Map({container:host,style:window.BUSAN_BASEMAP_STYLE||window.BUSAN_MAPBOX_CONFIG.style,...window.BUSAN_MAPBOX_VIEWS.BUSAN,cooperativeGestures:true,performanceMetricsCollection:false,attributionControl:false});
+   window.BUSAN_STYLE_MAP?.(branchMap);
       branchMap.addControl(new mapboxgl.AttributionControl({compact:true}),'bottom-right');
       const current=branchMap;
       branchMap.on('load',()=>{if(branchMap!==current)return;status.hidden=true;branchMap.resize();const field={ko:'name_ko',en:'name_en',ja:'name_ja',zh:'name_zh-Hans','zh-TW':'name_zh-Hant'}[state.language]||'name_en';for(const layer of ['settlement-label','settlement-subdivision-label','poi-label','road-label'])if(current.getLayer(layer))current.setLayoutProperty(layer,'text-field',['coalesce',['get',field],['get','name']]);});
       branchMap.on('error',()=>{if(branchMap===current&&!current.isStyleLoaded()){status.hidden=false;status.textContent=branchCopy()[2];}});
-      items.forEach((item,i)=>{if(!Number.isFinite(item.lat)||!Number.isFinite(item.lng))return;const pin=document.createElement('button');pin.type='button';pin.className='branch-map-pin';pin.dataset.branchId=item.id;pin.textContent=String(i+1);pin.setAttribute('aria-label',`${i+1}. ${branchName(item)}`);pin.addEventListener('click',e=>{e.stopPropagation();select(item.id);});branchMarkers.push(new mapboxgl.Marker({element:pin,anchor:'bottom'}).setLngLat([item.lng,item.lat]).addTo(branchMap));});
+      items.forEach((item,i)=>{if(!Number.isFinite(item.lat)||!Number.isFinite(item.lng))return;const pin=document.createElement('button');pin.type='button';pin.className='branch-map-pin';pin.dataset.branchId=item.id;pin.textContent=String(i+1);pin.setAttribute('aria-label',`${i+1}. ${branchName(item)}`);pin.addEventListener('click',e=>{e.stopPropagation();select(item.id);});branchMarkers.push(new mapboxgl.Marker({element:pin,anchor:'center'}).setLngLat([item.lng,item.lat]).addTo(branchMap));});
       fitBranches();
     }catch{status.textContent=branchCopy()[2];}
   };
@@ -165,7 +166,7 @@
     const list=visible();
     list.forEach(s=>{
       const pin=document.createElement('button');pin.type='button';pin.className='real-store-pin';const pinCategory=brandCategories[s.brand]?.[0]||'로컬';pin.setAttribute('aria-label',`${categoryLabel(pinCategory)} · ${s.name}`);pin.dataset.pinCategory=pinCategory;pin.dataset.storePin=s.id;pin.setAttribute('aria-pressed','false');pin.innerHTML=categoryPinIcon(pinCategory);pin.addEventListener('click',()=>preview(s.id));
-      markers.push(new mapboxgl.Marker({element:pin,anchor:'bottom'}).setLngLat([s.lng,s.lat]).addTo(map));
+      markers.push(new mapboxgl.Marker({element:pin,anchor:'center'}).setLngLat([s.lng,s.lat]).addTo(map));
     });
     const filter=`${category()}/${state.mapLocal?'all':state.brand}/${state.storeRegion||''}`;
     if(filter!==lastFilter){
@@ -186,7 +187,8 @@
       if(!window.mapboxgl||!window.BUSAN_MAPBOX_CONFIG?.token){status('error');return;}
       try{
         mapboxgl.accessToken=window.BUSAN_MAPBOX_CONFIG.token;
-        map=new mapboxgl.Map({container:host,style:window.BUSAN_MAPBOX_CONFIG.style,...window.BUSAN_MAPBOX_VIEWS.BUSAN,cooperativeGestures:true,attributionControl:false});
+        map=new mapboxgl.Map({container:host,style:window.BUSAN_BASEMAP_STYLE||window.BUSAN_MAPBOX_CONFIG.style,...window.BUSAN_MAPBOX_VIEWS.BUSAN,cooperativeGestures:true,performanceMetricsCollection:false,attributionControl:false});
+   window.BUSAN_STYLE_MAP?.(map);
         map.addControl(new mapboxgl.AttributionControl({compact:true}),'bottom-right');
         const current=map;
         map.on('load',()=>{if(map!==current)return;status('ready');localize();map.resize();});

@@ -8,11 +8,16 @@
     const container=document.querySelector('#eventVenueMap'),config=window.BUSAN_MAPBOX_CONFIG;
     if(!validCoordinates(item)||!container||!window.mapboxgl||!config)return;
     try{
-      const map=new window.mapboxgl.Map({container,accessToken:config.token,style:config.style,center:[item.lng,item.lat],zoom:15,cooperativeGestures:true,attributionControl:false});
+      const map=new window.mapboxgl.Map({container,accessToken:config.token,style:window.BUSAN_BASEMAP_STYLE||config.style,center:[item.lng,item.lat],zoom:15,cooperativeGestures:true,performanceMetricsCollection:false,attributionControl:false});
+      window.BUSAN_STYLE_MAP?.(map);
       venueMap=map;
       map.addControl(new window.mapboxgl.AttributionControl({compact:true}),'bottom-right');
       map.addControl(new window.mapboxgl.NavigationControl({showCompass:false}),'top-right');
-      new window.mapboxgl.Marker({color:'#FFD628'}).setLngLat([item.lng,item.lat]).addTo(map);
+      const pin=document.createElement('span');
+      pin.className='bd-event-location-pin';
+      pin.setAttribute('aria-hidden','true');
+      pin.innerHTML='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 10l2-5h12l2 5v2a2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0zM6 14v5h12v-5M10 19v-4h4v4"/></svg>';
+      new window.mapboxgl.Marker({element:pin}).setLngLat([item.lng,item.lat]).addTo(map);
       map.on('load',()=>{if(venueMap===map)map.resize();});
       map.on('error',()=>{if(venueMap===map)container.setAttribute('aria-label','지도를 불러올 수 없어요. 아래 길찾기를 이용해주세요.');});
       if(typeof MutationObserver!=='undefined'){

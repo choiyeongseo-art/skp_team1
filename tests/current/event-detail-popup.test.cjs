@@ -62,6 +62,7 @@ test('Zara pins show campaign guidance, branch hours and sections without fabric
 
 test('venue maps follow selected branch coordinates and release resources on replacement and navigation',()=>{
  const {c}=setup(),maps=[],pins=[],observers=[];
+ c.document.createElement=()=>({setAttribute(){}});
  c.window.BUSAN_MAPBOX_CONFIG={token:'test-public-token',style:'test-style'};
  c.window.mapboxgl={Map:class{constructor(options){this.options=options;this.removed=false;maps.push(this);}addControl(){}on(){}remove(){this.removed=true;}},Marker:class{setLngLat(coords){pins.push(coords);return this;}addTo(){return this;}},AttributionControl:class{},NavigationControl:class{}};
  c.MutationObserver=class{constructor(callback){this.callback=callback;observers.push(this);}observe(){}disconnect(){this.disconnected=true;}};

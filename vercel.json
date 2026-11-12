@@ -26,6 +26,9 @@
     "api/restaurant-translations.js": {
       "maxDuration": 60,
       "includeFiles": "busan-drop/data/store-locations.js"
+    },
+    "api/apple-account-delete.js": {
+      "maxDuration": 60
     }
   },
   "redirects": [
@@ -46,6 +49,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/busandrop/apple-account-delete",
+      "destination": "/api/apple-account-delete"
+    },
     {
       "source": "/api/busandrop/auth-config",
       "destination": "/api/auth-config"

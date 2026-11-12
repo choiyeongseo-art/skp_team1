@@ -52,7 +52,7 @@
         });
         venuePopup=new mapboxgl.Popup({className:'home-venue-popup',offset:30,maxWidth:'none',focusAfterOpen:true}).setLngLat([group.lng,group.lat]).setDOMContent(list).addTo(map);
       });
-      eventMarkers.push(new mapboxgl.Marker({element:pin,anchor:'bottom'}).setLngLat([group.lng,group.lat]).addTo(map));
+      eventMarkers.push(new mapboxgl.Marker({element:pin,anchor:'center'}).setLngLat([group.lng,group.lat]).addTo(map));
     });
   };
   let lastToday=window.BUSAN_EVENT_WINDOW?.koreaToday();
@@ -68,7 +68,8 @@
       try{
         mapboxgl.accessToken=window.BUSAN_MAPBOX_CONFIG.token;
         const destination=destinations[state.mapRegion||'BUSAN'];
-        map=new mapboxgl.Map({container,style:window.BUSAN_MAPBOX_CONFIG.style,bounds:destination.bounds,fitBoundsOptions:{padding:24},cooperativeGestures:true,attributionControl:false});
+        map=new mapboxgl.Map({container,style:window.BUSAN_BASEMAP_STYLE||window.BUSAN_MAPBOX_CONFIG.style,bounds:destination.bounds,fitBoundsOptions:{padding:24},cooperativeGestures:true,performanceMetricsCollection:false,attributionControl:false});
+   window.BUSAN_STYLE_MAP?.(map);
         map.addControl(new mapboxgl.AttributionControl({compact:true}),'bottom-right');
         instances++;container.dataset.mapInstance=String(instances);
         const current=map;

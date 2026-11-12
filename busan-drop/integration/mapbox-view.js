@@ -19,3 +19,13 @@ window.BUSAN_HOME_MAPBOX_VIEWS={
   광안리:{district:'수영구',bounds:[[129.097087,35.132391],[129.134720,35.184750]]},
   해운대:{district:'해운대구',bounds:[[129.112306,35.144628],[129.210196,35.247653]]}
 };
+
+window.BUSAN_BASEMAP_STYLE = 'mapbox://styles/mapbox/streets-v12';
+
+window.BUSAN_STYLE_MAP = function styleMap(map) {
+  map.on('style.load', () => {
+    if (map.getLayer('water')) {
+      map.setPaintProperty('water', 'fill-color', '#92d7e9');
+    }
+  });
+};

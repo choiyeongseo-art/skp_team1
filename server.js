@@ -1,6 +1,7 @@
 const express=require('express'),path=require('node:path');
 const app=express(),publicApp=path.join(__dirname,process.env.BUSANDROP_PREVIEW==='1'?'public/busandrop':'busan-drop');
 app.use(express.json({limit:'16kb'}));
+app.post('/api/busandrop/apple-account-delete',require('./lib/apple-account-delete.cjs').createAppleDeleteHandler());
 app.get('/api/busandrop/auth-config',require('./lib/auth-config.cjs').createAuthConfigHandler({keyFile:path.join(__dirname,'.env.local')}));
 app.get('/api/busandrop/nearby-attractions',require('./lib/supabase-nearby.cjs').createNearbyHandler({locationFile:path.join(publicApp,'data/store-locations.js'),keyFile:path.join(__dirname,'.env.local')}));
 app.get('/api/busandrop/nearby-restaurants',require('./lib/supabase-nearby.cjs').createNearbyHandler({kind:'food',locationFile:path.join(publicApp,'data/store-locations.js'),keyFile:path.join(__dirname,'.env.local')}));

@@ -197,3 +197,16 @@
 /* Explicit text colors prevent iOS native blue button labels. */
 #phone .my-page [data-library-new],#phone .my-page .account-settings>.account-menu-row{color:#191919;-webkit-text-fill-color:currentColor;appearance:none;-webkit-appearance:none}
 #phone .my-page .account-menu-copy strong{color:#191919;-webkit-text-fill-color:currentColor}
+
+/* Match the settings icons: compact, dark, monoline on the shared grey tile. */
+#phone .my-page .account-menu-icon .account-menu-symbol{display:block;width:18px;height:18px;flex:none}
+
+.account-delete .account-menu-copy strong{color:#a13333}
+.account-delete-dialog{max-height:85dvh;overflow:auto;padding:28px!important}
+.account-delete-dialog h2{font-size:22px;margin:0 0 18px}
+.account-delete-dialog p{font-size:14px;line-height:1.65;overflow-wrap:anywhere}
+.account-delete-consent{display:flex;align-items:flex-start;gap:10px;margin:22px 0;font-size:14px;line-height:1.6}
+.account-delete-consent input{width:20px;height:20px;flex-shrink:0;margin-top:2px;accent-color:#a13333}
+.account-delete-error{color:#a13333;min-height:1em}
+.account-delete-dialog [data-account-delete-confirm]{background:#a13333;color:white}
+.account-delete-dialog button:disabled{opacity:.45;cursor:wait}
