@@ -3628,5 +3628,134 @@
     "ja": "サービス・利用規約",
     "zh-CN": "服务与政策",
     "zh-TW": "服務與政策"
+  },
+  "방문 지점 선택": {
+    "en": "Choose a location to visit",
+    "ja": "訪問する店舗を選択",
+    "zh-CN": "选择到访门店",
+    "zh-TW": "選擇到訪門店"
+  },
+  "구매 사은품": {
+    "en": "Gift with purchase",
+    "ja": "購入特典",
+    "zh-CN": "购物赠品",
+    "zh-TW": "購物贈品"
+  },
+  "안내된 사은품": {
+    "en": "Advertised gift",
+    "ja": "案内されている特典",
+    "zh-CN": "公布的赠品",
+    "zh-TW": "公布的贈品"
+  },
+  "구매하면 받을 수 있는 사은품": {
+    "en": "Gifts with purchase",
+    "ja": "購入特典",
+    "zh-CN": "购物可获赠品",
+    "zh-TW": "購物可獲贈品"
+  },
+  "핵심 혜택": {
+    "en": "Key offer",
+    "ja": "主な特典",
+    "zh-CN": "主要优惠",
+    "zh-TW": "主要優惠"
+  },
+  "행사 정보": {
+    "en": "Event details",
+    "ja": "イベント情報",
+    "zh-CN": "活动详情",
+    "zh-TW": "活動詳情"
+  },
+  "기간": {
+    "en": "Dates",
+    "ja": "開催期間",
+    "zh-CN": "活动日期",
+    "zh-TW": "活動日期"
+  },
+  "장소 · 교통": {
+    "en": "Location & transit",
+    "ja": "場所・アクセス",
+    "zh-CN": "地点与交通",
+    "zh-TW": "地點與交通"
+  },
+  "혜택 · 조건": {
+    "en": "Offers & conditions",
+    "ja": "特典・条件",
+    "zh-CN": "优惠与条件",
+    "zh-TW": "優惠與條件"
+  },
+  "입장 · 예약": {
+    "en": "Entry & booking",
+    "ja": "入場・予約",
+    "zh-CN": "入场与预约",
+    "zh-TW": "入場與預約"
+  },
+  "외국인 방문 안내": {
+    "en": "International visitors",
+    "ja": "海外からのお客様へ",
+    "zh-CN": "海外游客须知",
+    "zh-TW": "海外旅客須知"
+  },
+  "방문 전 확인": {
+    "en": "Before you visit",
+    "ja": "来場前の確認",
+    "zh-CN": "到访前确认",
+    "zh-TW": "到訪前確認"
+  },
+  "확인 정보": {
+    "en": "Sources",
+    "ja": "確認情報",
+    "zh-CN": "信息来源",
+    "zh-TW": "資訊來源"
+  },
+  "주소 복사": {
+    "en": "Copy address",
+    "ja": "住所をコピー",
+    "zh-CN": "复制地址",
+    "zh-TW": "複製地址"
+  },
+  "입장료": {
+    "en": "Entry fee",
+    "ja": "入場料",
+    "zh-CN": "入场费",
+    "zh-TW": "入場費"
+  },
+  "외국인 이용·예약": {
+    "en": "Visitor eligibility & booking",
+    "ja": "外国人の利用・予約",
+    "zh-CN": "外国游客参与及预约",
+    "zh-TW": "外國旅客參與及預約"
+  },
+  "해외 카드·간편결제": {
+    "en": "Foreign cards & mobile payments",
+    "ja": "海外カード・スマホ決済",
+    "zh-CN": "境外卡与移动支付",
+    "zh-TW": "海外信用卡與行動支付"
+  },
+  "택스리펀": {
+    "en": "Tax refund",
+    "ja": "免税",
+    "zh-CN": "退税",
+    "zh-TW": "退稅"
+  },
+  "여권 필요 여부": {
+    "en": "Passport required",
+    "ja": "パスポートの要否",
+    "zh-CN": "是否需要护照",
+    "zh-TW": "是否需要護照"
+  },
+  "주소를 복사했어요": {
+    "en": "Address copied",
+    "ja": "住所をコピーしました",
+    "zh-CN": "地址已复制",
+    "zh-TW": "地址已複製"
+  },
+  "주소를 길게 눌러 복사해주세요.": {
+    "en": "Press and hold the address to copy it.",
+    "ja": "住所を長押ししてコピーしてください。",
+    "zh-CN": "请长按地址进行复制。",
+    "zh-TW": "請長按地址進行複製。"
+  },
+  "드롭 플랜": {
+    "zh-TW": "日程計劃"
   }
 }
