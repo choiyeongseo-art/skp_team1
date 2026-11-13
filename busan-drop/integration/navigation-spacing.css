@@ -10,6 +10,7 @@
   font-size:10px;
 }
 #phone #bottomNav button>.icon { width:22px; height:22px; align-self:center; }
+[data-ui-language="en"] #phone #bottomNav button { text-transform:uppercase; }
 #phone #bottomNav button.active::before {
   top:calc(50% - 25px);
   width:44px;
