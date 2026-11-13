@@ -4,7 +4,7 @@ function setup(){const initial={plans:[{id:'a',title:'Plan A',start:'2026-11-08'
  function click(attribute,value=''){const el={dataset:{[attribute.replace('data-','').replace(/-([a-z])/g,(_,letter)=>letter.toUpperCase())]:value},classList:{contains:()=>false},isConnected:false};for(const item of listeners.filter(item=>item.name==='click'))item.fn({target:{closest:selector=>selector.split(',').some(part=>part.trim()==='['+attribute+']')?el:null,classList:{contains:()=>false}}});}
  function rename(value){let invalid=false;const input={value,setCustomValidity(message){invalid=!!message},reportValidity(){}},form={matches:s=>s==='[data-library-rename-form]',querySelector:()=>input};for(const item of listeners.filter(item=>item.name==='submit'))item.fn({target:form,preventDefault(){}});return invalid;}
  return {c,modal,click,rename,discarded,get:()=>JSON.parse(storage.get('busan-my-library'))};}
-test('plan cards precede bottom settings, removed account copy stays absent, and actions remain separate',()=>{const h=setup(),html=h.c.profile();assert.ok(html.indexOf('id="myLibrary"')<html.indexOf('account-settings'));assert.doesNotMatch(html,/계정 및 설정|로그인됨|게스트|여행의 취향|플랜과 방문 기록|account-identity|account-invite/);assert.match(html,/data-language-next="profile"/);assert.match(html,/data-library-about/);assert.match(html,/MY PAGE/);assert.match(html,/<h2>마이페이지<\/h2>/);assert.match(html,/<h3 id="mySettingsTitle">설정<\/h3>/);assert.doesNotMatch(html,/class="account-menu"/);assert.match(html,/data-library-edit="a"/);assert.match(html,/data-library-delete="a"/);assert.doesNotMatch(html,/<button[^>]*my-plan-card/);});
+test('plan cards precede bottom settings, removed account copy stays absent, and actions remain separate',()=>{const h=setup(),html=h.c.profile();assert.ok(html.indexOf('id="myLibrary"')<html.indexOf('account-settings'));assert.doesNotMatch(html,/계정 및 설정|로그인됨|게스트|여행의 취향|플랜과 방문 기록|account-identity|account-invite/);assert.match(html,/data-language-next="profile"/);assert.match(html,/data-library-about/);assert.doesNotMatch(html,/MY PAGE/);assert.match(html,/<h2>마이페이지<\/h2>/);assert.match(html,/<h3 id="mySettingsTitle">설정<\/h3>/);assert.doesNotMatch(html,/class="account-menu"/);assert.match(html,/data-library-edit="a"/);assert.match(html,/data-library-delete="a"/);assert.doesNotMatch(html,/<button[^>]*my-plan-card/);});
 test('opening and cancelling deletion leave all saved plans intact',()=>{const h=setup();h.click('data-library-delete','a');assert.match(h.modal.innerHTML,/data-library-delete-confirm="a"/);assert.equal(h.get().plans.length,2);h.click('data-library-delete-cancel');assert.equal(h.modal.innerHTML,'');assert.equal(h.get().plans.length,2);assert.equal(h.discarded.length,0);});
 
 test('My settings always exposes the appropriate account action for guests and signed-in users',()=>{
@@ -87,4 +87,12 @@ test('operating hours separate day and seasonal schedules without splitting time
  assert.deepEqual(Array.from(context.splitHoursLines('백화점 기준 월–목 10:30–20:00 / 금–일·공휴일 10:30–20:30')),['백화점 기준 월–목 10:30–20:00','금–일·공휴일 10:30–20:30']);
  assert.deepEqual(Array.from(context.splitHoursLines('- 1월~2월 · 12월 : 09:00 ~ 20:00 - 3월~6월 · 9월~11월 : 09:00 ~ 21:00\n- 7월~8월 : 09:00 ~ 22:00\n\n※ 탑승권 발권 : 폐장시간 30분 전')),['1월~2월 · 12월 : 09:00 ~ 20:00','3월~6월 · 9월~11월 : 09:00 ~ 21:00','7월~8월 : 09:00 ~ 22:00','※ 탑승권 발권 : 폐장시간 30분 전']);
  const html=context.stopHoursHtml({kind:'food',hours:'11:00 - 15:00<br>17:00 - 21:00'});assert.equal((html.match(/class="venue-stop-hours-line"/g)||[]).length,2);assert.doesNotMatch(html,/<br>/);assert.match(context.stopHoursHtml({kind:'food'}),/확인 필요/);
+});
+
+test('card rename edits only the selected title without opening plan details',()=>{
+ const h=setup(),before=h.get();h.click('data-library-card-rename','b');
+ assert.match(h.c.profile(),/my-plan-name-form/);assert.doesNotMatch(h.c.profile(),/my-plan-detail/);
+ h.rename('  Weekend Busan  ');assert.equal(h.get().plans[1].title,'Weekend Busan');
+ assert.deepEqual(h.get().plans[0],before.plans[0]);assert.deepEqual(h.get().plans[1].stops,before.plans[1].stops);
+ h.click('data-library-card-rename','a');h.click('data-library-card-rename-cancel');h.rename('Cancelled');assert.equal(h.get().plans[0].title,'Plan A');
 });

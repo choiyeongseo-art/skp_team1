@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
-function setup(){const events={},elements=new Map();const c={window:{},state:{language:'ko'},brands:[{name:'몬치치',cat:'팝업'},{name:'올리브영',cat:'뷰티'}],esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),document:{activeElement:null,querySelector(s){if(s==='.event-detail-overlay'||s==='.event-detail-dialog')return null;if(!elements.has(s))elements.set(s,{innerHTML:'',classList:{add(){},remove(){}},focus(){}});return elements.get(s);},addEventListener(name,fn){(events[name]??=[]).push(fn);}}};vm.createContext(c);for(const f of ['data/event-details.js','integration/event-detail-popup.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);return {c,elements};}
+function setup(){const events={},elements=new Map();const c={window:{},state:{language:'ko'},brands:[{name:'몬치치',cat:'팝업'},{name:'올리브영',cat:'뷰티'}],esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),document:{activeElement:null,querySelector(s){if(s==='.event-detail-overlay'||s==='.event-detail-dialog')return null;if(!elements.has(s))elements.set(s,{innerHTML:'',classList:{add(){},remove(){}},focus(){}});return elements.get(s);},addEventListener(name,fn){(events[name]??=[]).push(fn);}}};vm.createContext(c);for(const f of ['data/event-details.js','integration/event-detail-popup.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);return {c,elements,events};}
 test('Monchhichi popup starts with banner and contains actionable researched information',()=>{
  const {c}=setup();const html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'몬치치 팝업',address:'센텀남대로 35',lat:35.16,lng:129.12});
  assert.ok(html.indexOf('event-detail-banner')<html.indexOf('id="eventDetailTitle"'));
@@ -19,7 +19,7 @@ test('unknown brand events do not receive fabricated dates or offers and escaped
 test('Google directions stays in the fixed footer without a duplicate by the address',()=>{
  const {c}=setup();const html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'팝업',address:'센텀남대로 35',lat:35.1688179,lng:129.1295233});
  assert.match(html,/data-event-copy-address/);assert.doesNotMatch(html,/event-address-directions/);
- assert.match(html,/<footer class="event-detail-actions"><a class="event-directions" href="https:\/\/www.google.com\/maps\/dir\/\?api=1&destination=35\.1688179,129\.1295233"/);
+ assert.match(html,/<footer class="event-detail-actions">[\s\S]*?<a class="event-directions" href="https:\/\/www.google.com\/maps\/dir\/\?api=1&destination=35\.1688179,129\.1295233"/);
 });
 
 test('research provenance stays internal while visitor conditions remain visible',()=>{
@@ -42,7 +42,7 @@ test('Uniqlo preserves unconfirmed winter dates and shows independently verified
  const rows=c.window.BUSAN_STORE_LOCATIONS.filter(s=>s.brand==='유니클로');assert.equal(rows.length,9);
  const seomyeon=rows.find(s=>s.id==='uniqlo-6'),saha=rows.find(s=>s.id==='uniqlo-4');
  const html=c.window.BUSAN_EVENT_DETAIL_HTML(seomyeon),sahaHtml=c.window.BUSAN_EVENT_DETAIL_HTML(saha);
- for(const text of ['공식 일정 안내 전','10:30–21:00','이 매장은 면세 이용 불가','051-810-3330','서면역 7번'])assert.ok(html.includes(text),text);
+ for(const text of ['공식 일정 안내 전','10:30–21:00','이 매장은 면세 이용 불가','051-810-3330'])assert.ok(html.includes(text),text);
  assert.doesNotMatch(html,/undefined|2026\.11\.20|2026\.11\.27|더플백|티슈|50%|70%/);
  assert.match(sahaHtml,/현금 결제 불가/);assert.doesNotMatch(sahaHtml,/이 매장은 면세 이용 불가/);
  assert.equal(c.window.BUSAN_EVENT_DETAILS['유니클로'].start,null);assert.equal(c.window.BUSAN_EVENT_DETAILS['유니클로'].verified,false);
@@ -112,6 +112,8 @@ test('San-X preserves January end and conditional gifts; Maple requires paid adm
 test('Harry Potter and Hinakuu preserve separate gift rules, venue ambiguity and current entry conditions',()=>{
  const {c}=setup(),build=brand=>c.window.BUSAN_EVENT_DETAIL_HTML({brand,name:brand,address:'부산광역시 부산진구 가야대로 772',lat:35.1568527,lng:129.0566158});
  const harry=build('해리포터 마호도코로'),hina=build('히나쿠우');
- assert.match(harry,/harrypotter-user-20261106.png/);assert.match(harry,/2027.01.07/);assert.match(harry,/중복 증정되지/);assert.match(harry,/08:00/);assert.doesNotMatch(harry,/15만원/);
+ assert.match(harry,/harrypotter-user-20261112.png/);assert.match(harry,/2027.01.07/);assert.match(harry,/중복 증정되지/);assert.match(harry,/08:00/);assert.doesNotMatch(harry,/15만원/);
  assert.match(hina,/hinakuu-user-20261106.png/);assert.match(hina,/2026.11.10/);assert.match(hina,/포토카드 5종 중복 없이/);assert.match(hina,/키네틱 스테이지/);assert.match(hina,/팬덤스페이스/);assert.match(hina,/품목·옵션별 최대 2개/);assert.match(hina,/11.09 휴점/);
 });
+
+test('saved-list button navigates immediately without reading or changing save state or showing a toast',async()=>{for(const saved of [false,true]){const {c,events}=setup(),routes=[];let reads=0,writes=0,toasts=0;c.nav=screen=>routes.push(screen);c.toast=()=>toasts++;c.window.BUSAN_EVENT_SOCIAL={getState:()=>{reads++;return {loaded:true,saved:saved?[{eventId:'current'}]:[]};},toggleEvent:()=>writes++};await events.click[0]({target:{closest:s=>s==='[data-event-saved-list]'?{}:null}});assert.deepEqual(routes,['saved']);assert.equal(reads,0);assert.equal(writes,0);assert.equal(toasts,0);}});

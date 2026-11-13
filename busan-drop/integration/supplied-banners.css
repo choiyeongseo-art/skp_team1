@@ -38,5 +38,80 @@
 .supplied-slide.tone-monchhichi::after { background:linear-gradient(180deg,#ae0009cc,#ae000955 40%,transparent 70%); }
 .supplied-slide.tone-tiffany::after { background:linear-gradient(180deg,#83d2cbf2,#83d2cbbd 36%,transparent 68%); }
 
-.supplied-slide.tone-magic {color:#fff6df;background:#543572;}
+.supplied-slide.tone-magic {color:#FFD628;background:#543572;}
 .supplied-slide.tone-magic::after {background:linear-gradient(180deg,#48225fe8,#48225f70 38%,transparent 68%);}
+
+/* Fill the square banner edge-to-edge, with copy and controls over artwork. */
+#phone .supplied-slide>img{object-fit:cover;object-position:center}
+#phone .supplied-slide>img[src*="gstar-poster-"]{object-position:50% 50%}
+#phone .supplied-slide>img[src*="daldal-poster-"]{object-position:50% 58%}
+#phone .supplied-slide>img[src*="maplestory-poster-"]{object-position:50% 50%}
+#phone .supplied-slide>img[src*="mugiwara-poster-"]{object-position:50% 50%}
+
+/* Overscan the four reported banner images, keeping overlays fixed. */
+#phone .supplied-slide{overflow:hidden;box-sizing:border-box}
+#phone .supplied-slide>img[src*="yjack-user-"],#phone .supplied-slide>img[src*="wackywilly-user-"],#phone .supplied-slide>img[src*="gelatopique-user-"]{transform:scale(1.12);transform-origin:60% 50%;max-width:none;object-fit:cover}
+#phone .supplied-slide>img[src*="gstar-poster-"]{transform:scale(1.08);transform-origin:50% 35%;max-width:none;object-fit:cover}
+
+/* Home-only yellow band ends immediately before event discovery. */
+#phone.home .home-feature-band{background:#FFD628;padding-bottom:24px;border-radius:0 0 26px 26px}
+#phone.home .home-feature-band .app-head{background:transparent}
+#phone.home .home-feature-band .wordmark em{color:#191919}
+#phone.home .home-feature-band .supplied-campaign{margin:0 18px;padding:7px 7px 0;background:#191919;border-radius:22px;box-sizing:border-box;overflow:hidden}
+#phone.home .home-feature-band .supplied-banner-viewport{border-radius:16px;aspect-ratio:1;background:#191919}
+#phone.home .home-feature-band .campaign-pagination{height:34px;margin:0;background:#191919}
+#phone.home .home-feature-band .dots button::after{background:#707070}
+#phone.home .home-feature-band .dots button.on::after{background:#FFD628}
+#phone.home .home-discovery{padding-top:24px}
+
+/* Preserve the rising wordmark motion against the yellow home background. */
+#phone.home .home-feature-band .wordmark-fill{background:#191919;color:#FFD628}
+#phone.home .home-feature-band .wordmark-fill em{color:#FFD628}
+
+/* Editorial hierarchy with a shared footer baseline and clear artwork. */
+#phone .supplied-editorial{--banner-wash:251,241,228}
+#phone .supplied-editorial.tone-olive{--banner-wash:217,231,164}
+#phone .supplied-editorial.tone-monchhichi{--banner-wash:174,0,9}
+#phone .supplied-editorial.tone-tiffany{--banner-wash:131,210,203}
+#phone .supplied-editorial.tone-magic{--banner-wash:9,38,59}
+#phone .supplied-editorial::after{background:linear-gradient(180deg,rgba(var(--banner-wash),.82),rgba(var(--banner-wash),.45) 26%,transparent 48%,transparent 71%,rgba(var(--banner-wash),.70) 88%,rgba(var(--banner-wash),.88));backdrop-filter:none;filter:none}
+#phone .supplied-editorial .supplied-banner-copy{top:32px;bottom:18px;left:20px;right:20px;display:block}
+#phone .supplied-editorial .supplied-banner-copy>span{display:block;max-width:100%;font-size:17px;line-height:1.35;letter-spacing:-.3px;font-weight:800;word-break:keep-all}
+#phone .supplied-editorial .supplied-banner-copy h2{max-width:100%;margin:10px 0 0;font-size:clamp(23px,6.2vw,27px);line-height:1.28;letter-spacing:-.7px;font-weight:850;word-break:keep-all;overflow-wrap:break-word;text-wrap:balance}
+#phone .supplied-editorial .supplied-banner-meta{position:absolute;left:0;right:72px;bottom:0;margin:0;padding:0;display:grid;gap:4px;font-size:11px;line-height:1.45;font-weight:650}
+#phone .supplied-editorial .supplied-banner-period{font-size:10px;font-weight:600;letter-spacing:-.15px}
+#phone .supplied-editorial .supplied-banner-place{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;word-break:keep-all;overflow-wrap:anywhere}
+#phone .supplied-banner-actions{left:20px;right:20px;bottom:18px}
+#phone .supplied-banner-actions .event-banner-count{min-width:54px;min-height:36px;height:36px;margin:0}
+@media(max-width:350px){#phone .supplied-editorial .supplied-banner-copy{top:26px;left:16px;right:16px}#phone .supplied-editorial .supplied-banner-copy>span{font-size:15px}#phone .supplied-editorial .supplied-banner-copy h2{font-size:23px;margin-top:8px}#phone .supplied-banner-actions{left:16px;right:16px}}
+/* Reframe the portrait poster around its gold Harry Potter wordmark. */
+#phone .supplied-slide.tone-magic{background:#09263b}
+#phone .supplied-slide>img[src*="harrypotter-user-"]{position:absolute;width:155%;height:auto;max-width:none;left:-27.5%;top:11%;object-fit:contain;transform:none}
+
+/* Full-banner detail target; saving remains a separate action above it. */
+#phone .supplied-detail-link{position:absolute;inset:0;z-index:1;width:100%;height:100%;padding:0;border:0;border-radius:inherit;background:transparent;cursor:pointer}
+#phone .supplied-detail-link:focus-visible{outline:3px solid #FFD628;outline-offset:-4px}
+#phone .supplied-banner-actions{justify-content:flex-end;pointer-events:none}
+#phone .supplied-banner-actions>button{pointer-events:auto}
+
+/* A restrained dark top scrim gives every headline consistent contrast. */
+#phone .supplied-slide.supplied-editorial::after{background:linear-gradient(180deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.76) 28%,rgba(0,0,0,.50) 43%,transparent 64%),linear-gradient(180deg,transparent 71%,rgba(var(--banner-wash),.70) 88%,rgba(var(--banner-wash),.88));backdrop-filter:none;filter:none}
+#phone .supplied-editorial .supplied-banner-copy>span,#phone .supplied-editorial .supplied-banner-copy h2{color:#fff;text-shadow:0 1px 4px #0006}
+
+/* Artwork is edge-to-edge; only carousel pagination keeps a black base. */
+#phone.home .home-feature-band .supplied-campaign{padding:0;background:transparent;border-radius:18px;overflow:hidden}
+#phone.home .home-feature-band .supplied-banner-viewport{border-radius:18px 18px 0 0}
+#phone.home .home-feature-band .campaign-pagination{background:#191919;border-radius:0 0 18px 18px}
+
+/* Give the moving track a definite square viewport and clip all paint inside it. */
+#phone.home .home-feature-band .supplied-banner-viewport{position:relative;aspect-ratio:1;overflow:hidden;isolation:isolate;clip-path:inset(0 round 18px 18px 0 0)}
+#phone .supplied-banner-track{position:absolute;inset:0;display:flex;align-items:stretch;gap:0;width:100%;height:100%;margin:0;padding:0;border:0}
+#phone .supplied-slide{flex:0 0 100%;width:100%;height:100%;min-width:0;margin:0;padding:0;border:0;border-radius:0;overflow:hidden;backface-visibility:hidden}
+#phone .supplied-slide>img{border:0;backface-visibility:hidden}
+/* Focus feedback stays inside the pagination strip instead of crossing artwork. */
+#phone.home .home-feature-band .campaign-pagination{position:relative;z-index:2;height:34px;min-height:34px;margin:0;padding:0 8px;overflow:hidden;background:#191919}
+#phone .supplied-campaign>.campaign-pagination .dots{height:34px;align-items:center;padding:0;gap:2px}
+#phone .supplied-campaign>.campaign-pagination .dots>button{flex:0 0 13px;width:13px;height:30px;min-height:30px;margin:0;padding:0;border:0;border-radius:6px}
+#phone .supplied-campaign>.campaign-pagination .dots>button.on{flex-basis:24px;width:24px}
+#phone .supplied-campaign>.campaign-pagination .dots>button::after{top:12px}
+#phone .supplied-campaign>.campaign-pagination .dots>button:focus-visible{outline:2px solid #FFD628;outline-offset:-2px}

@@ -14,7 +14,7 @@
   restoring=true;
   try{
    const screen=screenForPath(window.location.pathname),saved=event?.state?.screen;
-   state.screen=saved&&pathForScreen(saved)===routes[screen]?saved:screen;
+   state.screen=saved&&saved!=='browse'&&pathForScreen(saved)===routes[screen]?saved:screen;
    if(state.screen==='signup')state.authMode='login';
    if(state.screen==='stores')state.mapShowBack=false;
    historyStack=[];

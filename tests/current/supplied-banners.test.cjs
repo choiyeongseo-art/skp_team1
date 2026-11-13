@@ -20,7 +20,7 @@ test('home banners show the ten nearest confirmed deadlines regardless of shoppi
  }
  const html=a.run('campaignBanner()');assert.equal([...html.matchAll(/data-supplied-slide=/g)].length,10);
  assert.doesNotMatch(html,/topten.jpg|텐텐데이/);
- assert.match(html,/oliveyoung.jpg[\s\S]*올영 블랙프라이데이/);
+ assert.match(html,/oliveyoung.jpg[\s\S]*부산 여행 파우치, 여기서 채울까\?/);
  assert.equal([...html.matchAll(/data-banner=/g)].length,10);
  for(const file of ['oliveyoung','topten','uniqlo','zara','monchhichi','tiffany'])assert.ok(fs.existsSync(path.join(__dirname,'../../busan-drop/assets/banners/home-20261105',file+'.jpg')));
 });
@@ -66,14 +66,14 @@ test('banner autoplay advances at three seconds and manual selection restarts th
  a.run("Date.now=()=>7000;window.testTimers.find(t=>t.delay===500).fn()");assert.equal(a.run('state.banner'),4);
 });
 
-test('banner details put static dates and venue after the event title and region survives category changes',()=>{
+test('banner details show dates and venue; home category filters without leaving home',()=>{
  const a=app();a.run("nav('home')");const html=a.run('campaignBanner()');
- assert.match(html,/<h2>몬치치<\/h2><div class="supplied-banner-meta"><span class="supplied-banner-period">2026.11.05 – 2026.11.15<\/span><span class="supplied-banner-place">신세계백화점 센텀시티/);
+ assert.match(html,/<h2>눈 마주치면 데려오게 될걸\?<\/h2><div class="supplied-banner-meta"><span class="supplied-banner-period">2026.11.05 – 2026.11.15<\/span><span class="supplied-banner-place">신세계백화점 센텀시티/);
  assert.doesNotMatch(html,/행사 일정 안내 전|uniqlo.jpg|zara.jpg|tiffany.jpg/);assert.match(html,/부산 올리브영 전 매장/);
  a.run("state.mapRegion='서면'");
- for(const fn of a.events.click)fn({target:{closest:selector=>selector==='[data-home-category]'?{dataset:{homeCategory:'굿즈'}}:null}});
- assert.equal(a.run('state.mapRegion'),'서면');assert.equal(a.run('state.filter'),'굿즈');
- assert.match(a.elements.get('#viewport').innerHTML,/data-home-category="굿즈" aria-pressed="true"/);
+ for(const fn of a.events.click)fn({target:{closest:selector=>selector==='[data-home-category]'?{dataset:{homeCategory:'팝업'}}:null}});
+ assert.equal(a.run('state.homeCategory'),'팝업');assert.equal(a.run('state.screen'),'home');
+ assert.equal(a.run('state.mapRegion'),'서면');
 });
 
 test('expired banners leave on the next KST day, including hotel booking deadlines; fewer than ten and empty states are safe',()=>{

@@ -21,14 +21,14 @@
 .pass-trip-dates strong { display:block; font-size:15px; font-weight:750; }
 .pass-trip-dates span { display:block; font-size:12.5px; color:#a9b0b8; margin-top:4px; }
 .pass-tastes { display:flex; gap:6px; flex-wrap:wrap; margin:16px 0; }
-.pass-tastes>span { border:1px solid #ffd62845; background:#ffd62812; color:#e6d478; border-radius:7px; padding:4px 8px; font-size:12.5px; }
+.pass-tastes>span { border:1px solid #FFD62845; background:#FFD62812; color:#FFD628; border-radius:7px; padding:4px 8px; font-size:12.5px; }
 .pass-fields { display:grid; grid-template-columns:1.1fr 1fr; gap:8px; margin-top:18px; }
 .pass-fields label { min-width:0; color:#b8bfc8; font-size:12.5px; font-weight:600; }
 .pass-fields input,.pass-fields select,.pass-choice>select { display:block; color-scheme:dark; width:100%; min-width:0; box-sizing:border-box; min-height:48px; border:1px solid #ffffff30; background:#17191c; color:#f1f3f6; border-radius:10px; padding:10px 8px; font:inherit; font-size:14px; margin-top:7px; }
 .pass-fields input:focus-visible,.pass-fields select:focus-visible,.pass-choice>select:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
 .pass-transport { display:flex; gap:7px; margin-top:12px; }
 .pass-transport button { flex:1; min-height:44px; border:1px solid #ffffff20; border-radius:9px; background:transparent; color:#aeb5be; font-size:14px; }
-.pass-transport button[aria-pressed=true] { background:#ffd62819; border-color:#ffd62899; color:var(--accent); }
+.pass-transport button[aria-pressed=true] { background:#FFD62819; border-color:#FFD62899; color:var(--accent); }
 .pass-helper { color:#a5adb8; font-size:12.5px; line-height:1.75; margin:0 0 16px; }
 .pass-choice { background:#202326; border:1px solid #ffffff1c; border-radius:15px; padding:14px; margin-bottom:12px; }
 .pass-choice.unavailable { opacity:.65; }
@@ -40,7 +40,7 @@
 .pass-choice-top input { position:absolute; right:0; top:4px; width:21px; height:21px; accent-color:var(--accent); }
 .pass-choice>select { font-size:13px; margin:12px 0 8px; }
 .pass-status { display:inline-block; font-size:12.5px; line-height:1.5; color:#b4bbc6; }
-.pass-status.open { color:#bddd96; }.pass-status.check { color:#f5d467; }.pass-status.off { color:#edb0a4; }
+.pass-status.open { color:#bddd96; }.pass-status.check { color:#FFD628; }.pass-status.off { color:#edb0a4; }
 .pass-course-summary { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
 .pass-course-summary>strong { font-size:32px; line-height:1.2; }
 .pass-course-summary>strong>span { font-size:13px; margin-left:7px; font-weight:600; color:#b7bfc9; }
@@ -51,7 +51,7 @@
 .pass-map-pin { width:32px; height:32px; display:grid; place-items:center; border:2px solid #171819; border-radius:50%; background:var(--accent); color:#141414; font-size:16px; font-weight:900; box-shadow:0 3px 10px #0006; }
 .pass-stops { list-style:none; padding:0; margin:24px 0 0; }
 .pass-stops>li { position:relative; display:flex; gap:10px; padding-bottom:20px; }
-.pass-stops>li:not(:last-child)::before { content:''; position:absolute; top:29px; bottom:0; left:14px; width:1px; background:#ffd62850; }
+.pass-stops>li:not(:last-child)::before { content:''; position:absolute; top:29px; bottom:0; left:14px; width:1px; background:#FFD62850; }
 .pass-stop-number { position:relative; background:var(--accent); width:29px; height:29px; border-radius:50%; display:grid; place-items:center; flex-shrink:0; color:#111; font-size:14px; font-weight:900; margin-top:13px; }
 .pass-stops article { flex:1; min-width:0; border:1px solid #ffffff1c; border-radius:14px; background:#202326; padding:12px; }
 .pass-stop-heading { display:flex; justify-content:space-between; align-items:center; gap:6px; }
@@ -76,14 +76,14 @@
 .pass-footer>span { flex:0 0 auto; font-size:12.5px; color:#aeb6c0; }.pass-footer>span b { display:block; color:#f2f5f8; font-size:16px; }.pass-footer .pass-primary { flex:1; }
 .pass-footer>strong { font-size:16px; text-align:center; width:100%; color:#d8e7b7; }
 .pass-footnote { color:#838e9e; font-size:12.5px; text-align:center; margin:20px 0 0; }
-.pass-demo-notice { border:1px solid #ffd62844; border-radius:10px; padding:10px 12px; margin:-8px 0 22px; color:#e5cf7c; font-size:12.5px; }
-.pass-demo-notice>button { color:#f0df9f; background:none; display:block; min-height:44px; font-size:13px; text-decoration:underline; }
-.saved-to-pass { display:block; width:100%; min-height:48px; background:#ffd62816; color:var(--accent); border:1px solid #ffd62855; padding:10px; border-radius:12px; margin-bottom:20px; font-size:14px; font-weight:700; }
+.pass-demo-notice { border:1px solid #FFD62844; border-radius:10px; padding:10px 12px; margin:-8px 0 22px; color:#FFD628; font-size:12.5px; }
+.pass-demo-notice>button { color:#FFD628; background:none; display:block; min-height:44px; font-size:13px; text-decoration:underline; }
+.saved-to-pass { display:block; width:100%; min-height:48px; background:#FFD62816; color:var(--accent); border:1px solid #FFD62855; padding:10px; border-radius:12px; margin-bottom:20px; font-size:14px; font-weight:700; }
 @media(max-width:350px){.shopping-pass{padding-inline:16px}.pass-settings{padding-inline:12px}.pass-ticket{padding-inline:16px}.pass-ticket>strong{font-size:22px}.pass-fields input,.pass-fields select{font-size:12.5px;padding-inline:5px}.pass-title h2{font-size:30px}.pass-stop-actions{gap:5px 8px}}
 
 .pass-route-meta { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 18px; }
 .pass-route-meta>span { background:#ffffff09; border:1px solid #ffffff16; border-radius:6px; padding:4px 7px; color:#bac2cd; font-size:12.5px; }
-.pass-map-origin { background:#22272d; color:#ffd628; border:2px solid #ffd628; border-radius:16px; padding:3px 7px; font-size:12.5px; font-weight:800; }
+.pass-map-origin { background:#22272d; color:#FFD628; border:2px solid #FFD628; border-radius:16px; padding:3px 7px; font-size:12.5px; font-weight:800; }
 
 .pass-category-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:20px 0 24px; }
 .pass-category-grid button { min-width:0; min-height:44px; padding:10px 4px; border:1px solid #ffffff18; border-radius:10px; background:#303236; color:#c5cad1; font-size:14px; font-weight:700; }
@@ -116,23 +116,23 @@
 .pass-branch-picker summary::-webkit-details-marker { display:none; }
 .pass-branch-picker summary>span { min-width:0; word-break:keep-all; overflow-wrap:anywhere; }
 .pass-branch-picker summary>i { width:8px; height:8px; flex:0 0 8px; border-right:1.5px solid #525c67; border-bottom:1.5px solid #525c67; transform:rotate(45deg); margin:0 3px 4px; }
-.pass-branch-picker[open] summary { border-color:#d3af00; background:#fff9dc; }
+.pass-branch-picker[open] summary { border-color:#FFD628; background:#FFD628; }
 .pass-branch-picker[open] summary>i { transform:rotate(225deg); margin-bottom:0; }
 .pass-branch-panel { padding:8px; margin-top:7px; border:1px solid #e0e3e7; border-radius:14px; background:#fff; box-shadow:0 6px 20px #161b2210; }
 .pass-branch-panel>p { color:#69717b; font-size:11px; line-height:1.5; font-weight:650; margin:3px 6px 8px; }
 .pass-branch-panel>button { width:100%; display:flex; align-items:flex-start; gap:10px; text-align:left; background:#fff; color:#171717; border:1px solid transparent; border-radius:10px; padding:12px 9px; min-height:56px; }
 .pass-branch-panel>button+button { margin-top:5px; }
-.pass-branch-panel>button[aria-pressed=true] { background:#fff8d4; border-color:#f0d65d; }
+.pass-branch-panel>button[aria-pressed=true] { background:#FFD628; border-color:#FFD628; }
 .pass-branch-panel strong { display:block; font-size:13px; line-height:1.5; font-weight:750; word-break:keep-all; overflow-wrap:anywhere; }
 .pass-branch-panel small { display:block; margin-top:4px; font-size:11px; line-height:1.6; color:#626b76; word-break:keep-all; overflow-wrap:anywhere; }
 .pass-branch-radio { flex:0 0 20px; height:20px; border:1px solid #cbd1d8; border-radius:50%; display:grid; place-items:center; color:#171717; font-size:12px; margin-top:1px; }
-[aria-pressed=true]>.pass-branch-radio { background:#FFD628; border-color:#e3bf19; }
-.pass-branch-picker summary:focus-visible,.pass-branch-panel>button:focus-visible { outline:2px solid #b18c00; outline-offset:2px; }
-@media(hover:hover) { .pass-branch-panel>button:hover { background:#fff9e3; } }
+[aria-pressed=true]>.pass-branch-radio { background:#FFD628; border-color:#FFD628; }
+.pass-branch-picker summary:focus-visible,.pass-branch-panel>button:focus-visible { outline:2px solid #FFD628; outline-offset:2px; }
+@media(hover:hover) { .pass-branch-panel>button:hover { background:#FFD628; } }
 
 /* One ticket-like action joins the selected count and save target. */
 #phone .pass-footer:not(.pass-footer-split) {padding:12px 16px;min-height:80px;}
-#phone .pass-save-bar {display:grid;grid-template-columns:minmax(120px,40%) minmax(0,1fr);gap:0;width:100%;height:56px;min-height:56px;padding:0;border-radius:12px;background:#ffd628;color:#171717;box-shadow:none;}
+#phone .pass-save-bar {display:grid;grid-template-columns:minmax(120px,40%) minmax(0,1fr);gap:0;width:100%;height:56px;min-height:56px;padding:0;border-radius:12px;background:#FFD628;color:#171717;box-shadow:none;}
 #phone .pass-save-count {display:flex;align-items:baseline;justify-content:center;gap:7px;padding:0 10px;border-right:1px solid #17171735;line-height:1;}
 #phone .pass-save-count b {font-size:26px;font-weight:850;letter-spacing:-1px;font-variant-numeric:tabular-nums;}
 #phone .pass-save-count small {font-size:10px;font-weight:600;white-space:nowrap;}
@@ -141,7 +141,7 @@
 #phone .pass-save-bar:disabled {background:#e9ecef;color:#747b84;}
 #phone .pass-save-bar:disabled .pass-save-count {border-color:#747b8435;}
 #phone .pass-save-bar:focus-visible {outline:2px solid #171717;outline-offset:3px;}
-#phone .pass-save-bar:not(:disabled):active {transform:translateY(1px);background:#f3c914;}
+#phone .pass-save-bar:not(:disabled):active {transform:translateY(1px);background:#FFD628;}
 
 /* A route stop keeps only the event, period and address. */
 #phone .pass-stop-heading {align-items:flex-start;gap:12px;}
@@ -152,7 +152,7 @@
 #phone .pass-stop-date {display:block;margin-top:10px;color:#715b00;font-size:12px;font-weight:650;line-height:1.6;}
 #phone .pass-stops article>p {margin:8px 0 0;font-size:12px;line-height:1.7;color:#626870;}
 #phone .pass-stops>li {isolation:isolate;}
-#phone .pass-stop-heading button:focus-visible {outline:2px solid #d4ad00;outline-offset:2px;}
+#phone .pass-stop-heading button:focus-visible {outline:2px solid #FFD628;outline-offset:2px;}
 /* Four-step journey: optional editorial place cards and a shared action dock. */
 #phone .pass-step-footer {padding:12px 16px;background:#fff;border-top:1px solid #e2e5e9;}
 #phone .pass-step-footer-meta {display:flex;justify-content:space-between;gap:12px;margin-bottom:10px;font-size:10px;font-weight:750;letter-spacing:.2px;}
@@ -169,27 +169,27 @@
 #phone .pass-nearby-intro {font-size:12px;line-height:1.85;color:#626870;margin:0 0 20px;}
 #phone .pass-step-track {display:flex;gap:5px;margin:0 0 24px;}
 #phone .pass-step-track span {flex:1;height:4px;border-radius:5px;background:#eceef0;}
-#phone .pass-step-track .on {background:#ffd628;}
+#phone .pass-step-track .on {background:#FFD628;}
 #phone .pass-nearby-context {display:flex;justify-content:space-between;font-size:11px;color:#69717a;margin-bottom:12px;}
 #phone .pass-nearby-context b {color:#171717;}
 #phone .pass-nearby-card {border:1px solid #dce0e4;border-radius:18px;padding:16px;margin-bottom:12px;background:#fff;transition:border-color .18s,background .18s;}
-#phone .pass-nearby-card.is-selected {border-color:#d5af12;background:#fffcef;}
+#phone .pass-nearby-card.is-selected {border-color:#FFD628;background:#FFD628;}
 #phone .pass-nearby-card>label {display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
-#phone .pass-nearby-art {display:grid;place-items:center;flex:0 0 60px;height:72px;border-radius:12px;background:#f6f1df;}
+#phone .pass-nearby-art {display:grid;place-items:center;flex:0 0 60px;height:72px;border-radius:12px;background:#FFD628;}
 #phone .pass-nearby-art.food {background:#fff0d8;}
-#phone .pass-nearby-art svg {width:47px;height:47px;fill:#ffd628;stroke:#202520;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+#phone .pass-nearby-art svg {width:47px;height:47px;fill:#FFD628;stroke:#202520;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
 #phone .pass-nearby-copy {flex:1;min-width:0;}
 #phone .pass-nearby-copy small {display:block;color:#715b00;font-size:10px;margin:0 0 6px;}
 #phone .pass-nearby-copy strong {display:block;font-size:16px;line-height:1.5;letter-spacing:-.4px;}
 #phone .pass-nearby-copy>span {display:block;color:#626870;font-size:11px;line-height:1.7;margin-top:6px;}
-#phone .pass-nearby-card input {width:19px;height:19px;margin:2px 0;accent-color:#ffd628;flex-shrink:0;}
+#phone .pass-nearby-card input {width:19px;height:19px;margin:2px 0;accent-color:#FFD628;flex-shrink:0;}
 #phone .pass-nearby-card>p {font-size:11px;line-height:1.7;color:#69717a;margin:14px 0 8px;}
 #phone .pass-nearby-card>a {font-size:11px;color:#414950;text-decoration:none;display:inline-flex;align-items:center;min-height:32px;}
 #phone .pass-nearby-empty {padding:30px 18px;border:1px dashed #dce0e4;border-radius:16px;text-align:center;}
-#phone .pass-nearby-empty .icon {width:32px;height:32px;color:#a88a13;}
+#phone .pass-nearby-empty .icon {width:32px;height:32px;color:#FFD628;}
 #phone .pass-nearby-empty h4 {font-size:15px;margin:14px 0 8px;}
 #phone .pass-nearby-empty p {font-size:12px;color:#69717a;line-height:1.7;}
-#phone .pass-complete-note {padding:12px 14px;background:#fff6c8;color:#715b00;font-size:12px;font-weight:700;border-radius:12px;margin-bottom:22px;}
+#phone .pass-complete-note {padding:12px 14px;background:#FFD628;color:#715b00;font-size:12px;font-weight:700;border-radius:12px;margin-bottom:22px;}
 #phone .pass-added-places {margin-top:28px;}
 #phone .pass-added-places h3 {font-size:19px;}
 #phone .pass-added-places h3>span {color:#715b00;}
@@ -202,10 +202,10 @@
 #phone .pass-step-footer {position:relative;padding:15px 16px 10px;background:#fff;border-top:1px solid #202520;box-shadow:0 -6px 20px #17171705;}
 #phone .pass-footer-progress {position:absolute;left:16px;right:16px;top:-2px;display:flex;gap:4px;pointer-events:none;}
 #phone .pass-footer-progress>span {height:3px;flex:1;background:#e4e6e7;}
-#phone .pass-footer-progress>.on {background:#ffd628;}
+#phone .pass-footer-progress>.on {background:#FFD628;}
 #phone .pass-step-footer-meta {display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;letter-spacing:0;}
 #phone .pass-footer-stage {display:flex;align-items:center;gap:10px;}
-#phone .pass-footer-index {display:flex;flex-direction:column;align-items:center;justify-content:center;width:39px;height:39px;background:#ffd628;border-radius:3px;color:#171717;}
+#phone .pass-footer-index {display:flex;flex-direction:column;align-items:center;justify-content:center;width:39px;height:39px;background:#FFD628;border-radius:3px;color:#171717;}
 #phone .pass-footer-index>small {font-size:6px;line-height:1;letter-spacing:1px;font-weight:800;margin-bottom:2px;}
 #phone .pass-footer-index>b {font-size:23px;line-height:1;font-weight:850;letter-spacing:-1px;}
 #phone .pass-footer-stage>div>small {display:block;font-size:8px;line-height:1.2;letter-spacing:1px;color:#69717a;margin-bottom:4px;font-weight:600;}
@@ -217,11 +217,11 @@
 #phone .pass-step-back {flex:0 0 47px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:52px;border:1px solid #dce0e4;border-radius:10px;color:#30363d;background:#fff;}
 #phone .pass-step-back>span {font-size:19px;line-height:1;}
 #phone .pass-step-back>small {font-size:8px;line-height:1;}
-#phone .pass-step-footer-actions .pass-primary {min-height:52px;border-radius:10px;padding:9px 12px 9px 16px;background:#ffd628;color:#171717;}
+#phone .pass-step-footer-actions .pass-primary {min-height:52px;border-radius:10px;padding:9px 12px 9px 16px;background:#FFD628;color:#171717;}
 #phone .pass-footer-next-copy {text-align:left;min-width:0;}
 #phone .pass-footer-next-copy>small {display:block;font-size:7px;line-height:1.1;letter-spacing:1.2px;font-weight:650;margin-bottom:4px;color:#514400;}
 #phone .pass-footer-next-copy>strong {display:block;font-size:14px;line-height:1.3;letter-spacing:-.3px;font-weight:800;}
-#phone .pass-footer-arrow {display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:50%;background:#1c211e;color:#ffd628;font-size:19px;font-weight:500;line-height:1;}
+#phone .pass-footer-arrow {display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:50%;background:#1c211e;color:#FFD628;font-size:19px;font-weight:500;line-height:1;}
 #phone .pass-step-footer-actions .pass-primary:disabled {background:#e9ecef;color:#747b84;}
 #phone .pass-primary:disabled .pass-footer-next-copy>small {color:#747b84;}
 #phone .pass-primary:disabled .pass-footer-arrow {background:#cfd4d9;color:#fff;}
@@ -252,40 +252,40 @@
 /* Multiple route numbers share one pin at the actual venue coordinate. */
 #phone .pass-map-pin-group {display:flex;align-items:center;justify-content:center;gap:4px;width:auto;min-width:42px;max-width:132px;height:auto;min-height:32px;padding:5px 9px;border-radius:18px;flex-wrap:wrap;line-height:1.2;}
 #phone .pass-map-pin-group i {font-style:normal;font-size:13px;}
-#phone .pass-map-pin-group[aria-expanded=true] {background:#fff;color:#171717;outline:3px solid #ffd628;}
+#phone .pass-map-pin-group[aria-expanded=true] {background:#fff;color:#171717;outline:3px solid #FFD628;}
 #phone .pass-map-group-panel[hidden] {display:none;}
-#phone .pass-map-group-panel {margin:12px 0 16px;padding:14px;background:#fff;border:1px solid #dfd4a1;border-radius:14px;box-shadow:0 4px 15px #17171706;}
+#phone .pass-map-group-panel {margin:12px 0 16px;padding:14px;background:#fff;border:1px solid #FFD628;border-radius:14px;box-shadow:0 4px 15px #17171706;}
 #phone .pass-map-group-heading {display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px;}
 #phone .pass-map-group-heading small {display:block;font-size:8px;color:#715b00;letter-spacing:1px;margin-bottom:5px;font-weight:700;}
 #phone .pass-map-group-heading h4 {margin:0;font-size:14px;line-height:1.5;}
 #phone .pass-map-group-heading h4 b {color:#715b00;}
 #phone .pass-map-group-heading>button {flex:0 0 28px;height:28px;border-radius:50%;background:#f3f4f6;color:#626870;font-size:20px;padding:0;}
 #phone .pass-map-group-event {display:grid;grid-template-columns:25px minmax(0,1fr);gap:8px;align-items:start;width:100%;text-align:left;padding:12px 0;background:none;color:#171717;border-top:1px solid #eceef0;}
-#phone .pass-group-number {display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#ffd628;color:#171717;font-size:12px;font-weight:800;}
+#phone .pass-group-number {display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#FFD628;color:#171717;font-size:12px;font-weight:800;}
 #phone .pass-map-group-event strong {font-size:13px;line-height:1.6;display:block;}
 #phone .pass-map-group-event small {display:block;font-size:10px;line-height:1.6;color:#69717a;margin-top:4px;}
 #phone .pass-map-group-event em {grid-column:2;font-style:normal;font-size:11px;color:#715b00;margin-top:2px;}
-#phone .pass-map-group-event:focus-visible {outline:2px solid #d4ad00;outline-offset:3px;}
+#phone .pass-map-group-event:focus-visible {outline:2px solid #FFD628;outline-offset:3px;}
 
 #phone .pass-map-zoom {position:absolute;z-index:3;top:12px;right:12px;display:flex;flex-direction:column;border:1px solid #dce0e4;border-radius:11px;overflow:hidden;background:#fff;box-shadow:0 3px 12px #0002;}
 #phone .pass-map-zoom button {display:grid;place-items:center;width:36px;height:36px;background:#fff;color:#171717;font-size:23px;line-height:1;font-weight:500;padding:0;}
 #phone .pass-map-zoom button+button {border-top:1px solid #e2e5e9;}
-#phone .pass-map-zoom button:hover,#phone .pass-map-zoom button:active {background:#ffd628;}
+#phone .pass-map-zoom button:hover,#phone .pass-map-zoom button:active {background:#FFD628;}
 #phone .pass-map-zoom button:focus-visible {outline:2px solid #715b00;outline-offset:-3px;}
 #phone .pass-map-note {max-width:calc(100% - 74px);box-sizing:border-box;}
 
 #phone .pass-nearby-art {overflow:hidden;}
 #phone .pass-nearby-art>img {width:100%;height:100%;object-fit:cover;}
 #phone .pass-tour-venue {display:block;margin-top:12px;font-size:10px;line-height:1.6;color:#715b00;}
-#phone .pass-tour-status {padding:30px 18px;border:1px solid #e1e4e8;border-radius:16px;text-align:center;background:#fffdf5;}
+#phone .pass-tour-status {padding:30px 18px;border:1px solid #e1e4e8;border-radius:16px;text-align:center;background:#FFD628;}
 #phone .pass-tour-status strong {display:block;font-size:14px;line-height:1.6;}
 #phone .pass-tour-status p {font-size:12px;line-height:1.7;color:#69717a;}
-#phone .pass-tour-status button {padding:10px 14px;border-radius:10px;background:#ffd628;color:#171717;font-size:12px;font-weight:700;}
-#phone .pass-tour-spinner {display:inline-block;width:22px;height:22px;border:2px solid #ece5c7;border-top-color:#c8a500;border-radius:50%;margin-bottom:12px;animation:pass-tour-spin .8s linear infinite;}
+#phone .pass-tour-status button {padding:10px 14px;border-radius:10px;background:#FFD628;color:#171717;font-size:12px;font-weight:700;}
+#phone .pass-tour-spinner {display:inline-block;width:22px;height:22px;border:2px solid #FFD628;border-top-color:#FFD628;border-radius:50%;margin-bottom:12px;animation:pass-tour-spin .8s linear infinite;}
 @keyframes pass-tour-spin {to{transform:rotate(360deg);}}
 @media(prefers-reduced-motion:reduce){#phone .pass-tour-spinner{animation:none;}}
 /* Tourist map: white wave stamps, yellow route numbers. */
-.pass-tour-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:14px 0 12px}.pass-tour-legend{display:flex;gap:12px;font-size:11px;color:#535962}.pass-tour-legend span{display:flex;gap:5px;align-items:center}.pass-tour-legend i{width:10px;height:10px;display:block;border:1px solid #222;border-radius:50%}.pass-tour-legend .event{background:#ffd628}.pass-tour-legend .sight{background:#fff}.pass-tour-view{display:flex;padding:3px;border:1px solid #e1e3e5;border-radius:10px;gap:3px}.pass-tour-view button{padding:7px 12px;background:#fff;border:0;border-radius:7px;font:inherit;font-size:12px}.pass-tour-view button[aria-pressed=true]{background:#ffd628;font-weight:750}.pass-tour-map-wrap{position:relative;border-radius:20px;overflow:hidden;border:1px solid #ddd}.pass-tour-map-wrap #passTourMap{height:350px;width:100%}.pass-tour-map-wrap .pass-map-zoom{top:12px;right:12px}.pass-tour-map-hint{position:absolute;bottom:28px;left:12px;pointer-events:none;border-radius:20px;background:#161616df;color:#fff;font-size:10px;padding:7px 10px}.pass-tour-pin{position:absolute;width:39px;height:45px;background:white;border:1.5px solid #171717;border-radius:18px 18px 18px 4px;padding:3px 3px 6px;box-shadow:0 3px 8px #0005;cursor:pointer;transition:background .18s,border-color .18s}.pass-tour-pin svg{width:31px;height:34px;display:block}.pass-tour-pin.is-selected{background:#ffd628}.pass-tour-pin.is-selected svg>path:first-child{fill:#fff}.pass-tour-pin.is-focused{outline:3px solid #ffd628;outline-offset:3px;z-index:3}.pass-tour-pin-check{display:none;position:absolute;top:-5px;right:-5px;width:15px;height:15px;border-radius:50%;background:#181818;color:#ffd628;font-size:10px;line-height:15px}.pass-tour-pin.is-selected .pass-tour-pin-check{display:block}.pass-tour-event-pin{z-index:2;font-size:14px!important;min-width:30px!important;height:30px!important;box-shadow:0 0 0 3px #181818,0 3px 8px #0006}.pass-tour-preview{margin:12px 0 18px;padding:15px;border:1px solid #dce0e4;border-radius:16px;background:#fff}.pass-tour-preview-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.pass-tour-preview-top small{font-size:9px;letter-spacing:.08em;color:#6d7278}.pass-tour-preview-top button{border:0;background:#f3f4f5;border-radius:50%;width:26px;height:26px;font-size:18px}.pass-tour-preview-body{display:flex;align-items:center;gap:12px}.pass-tour-preview-body img,.pass-tour-preview-icon{width:68px;height:78px;object-fit:cover;border-radius:9px;flex-shrink:0}.pass-tour-preview-body h4{font-size:19px;line-height:1.3;margin:0 0 6px;letter-spacing:-.04em}.pass-tour-preview-body p{font-size:11px;line-height:1.6;color:#616873;margin:0}.pass-tour-description{font-size:12px;color:#555e69;line-height:1.65;margin:12px 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.pass-tour-preview-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px}.pass-tour-preview-actions a{font-size:11px;color:#363b42}.pass-tour-preview-actions button{border:0;border-radius:9px;background:#ffd628;color:#171717;font:inherit;font-size:12px;font-weight:750;padding:11px 15px}.pass-tour-preview-actions button[aria-pressed=true]{background:#181818;color:#ffd628}.pass-tour-preview-empty{display:flex;align-items:center;gap:12px}.pass-tour-preview-empty svg{width:38px;height:38px}.pass-tour-preview-empty strong{font-size:13px}.pass-tour-preview-empty p{font-size:11px;color:#616873;margin:5px 0 0}.pass-tour-event-name{font-size:13px;font-weight:650;line-height:1.6}
+.pass-tour-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:14px 0 12px}.pass-tour-legend{display:flex;gap:12px;font-size:11px;color:#535962}.pass-tour-legend span{display:flex;gap:5px;align-items:center}.pass-tour-legend i{width:10px;height:10px;display:block;border:1px solid #222;border-radius:50%}.pass-tour-legend .event{background:#FFD628}.pass-tour-legend .sight{background:#fff}.pass-tour-view{display:flex;padding:3px;border:1px solid #e1e3e5;border-radius:10px;gap:3px}.pass-tour-view button{padding:7px 12px;background:#fff;border:0;border-radius:7px;font:inherit;font-size:12px}.pass-tour-view button[aria-pressed=true]{background:#FFD628;font-weight:750}.pass-tour-map-wrap{position:relative;border-radius:20px;overflow:hidden;border:1px solid #ddd}.pass-tour-map-wrap #passTourMap{height:350px;width:100%}.pass-tour-map-wrap .pass-map-zoom{top:12px;right:12px}.pass-tour-map-hint{position:absolute;bottom:28px;left:12px;pointer-events:none;border-radius:20px;background:#161616df;color:#fff;font-size:10px;padding:7px 10px}.pass-tour-pin{position:absolute;width:39px;height:45px;background:white;border:1.5px solid #171717;border-radius:18px 18px 18px 4px;padding:3px 3px 6px;box-shadow:0 3px 8px #0005;cursor:pointer;transition:background .18s,border-color .18s}.pass-tour-pin svg{width:31px;height:34px;display:block}.pass-tour-pin.is-selected{background:#FFD628}.pass-tour-pin.is-selected svg>path:first-child{fill:#fff}.pass-tour-pin.is-focused{outline:3px solid #FFD628;outline-offset:3px;z-index:3}.pass-tour-pin-check{display:none;position:absolute;top:-5px;right:-5px;width:15px;height:15px;border-radius:50%;background:#181818;color:#FFD628;font-size:10px;line-height:15px}.pass-tour-pin.is-selected .pass-tour-pin-check{display:block}.pass-tour-event-pin{z-index:2;font-size:14px!important;min-width:30px!important;height:30px!important;box-shadow:0 0 0 3px #181818,0 3px 8px #0006}.pass-tour-preview{margin:12px 0 18px;padding:15px;border:1px solid #dce0e4;border-radius:16px;background:#fff}.pass-tour-preview-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.pass-tour-preview-top small{font-size:9px;letter-spacing:.08em;color:#6d7278}.pass-tour-preview-top button{border:0;background:#f3f4f5;border-radius:50%;width:26px;height:26px;font-size:18px}.pass-tour-preview-body{display:flex;align-items:center;gap:12px}.pass-tour-preview-body img,.pass-tour-preview-icon{width:68px;height:78px;object-fit:cover;border-radius:9px;flex-shrink:0}.pass-tour-preview-body h4{font-size:19px;line-height:1.3;margin:0 0 6px;letter-spacing:-.04em}.pass-tour-preview-body p{font-size:11px;line-height:1.6;color:#616873;margin:0}.pass-tour-description{font-size:12px;color:#555e69;line-height:1.65;margin:12px 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.pass-tour-preview-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px}.pass-tour-preview-actions a{font-size:11px;color:#363b42}.pass-tour-preview-actions button{border:0;border-radius:9px;background:#FFD628;color:#171717;font:inherit;font-size:12px;font-weight:750;padding:11px 15px}.pass-tour-preview-actions button[aria-pressed=true]{background:#181818;color:#FFD628}.pass-tour-preview-empty{display:flex;align-items:center;gap:12px}.pass-tour-preview-empty svg{width:38px;height:38px}.pass-tour-preview-empty strong{font-size:13px}.pass-tour-preview-empty p{font-size:11px;color:#616873;margin:5px 0 0}.pass-tour-event-name{font-size:13px;font-weight:650;line-height:1.6}
 
 .pass-tour-event-pin.pass-map-pin-group{display:flex;gap:3px;padding:0 8px;min-width:46px!important;align-items:center;justify-content:center}.pass-tour-event-pin.pass-map-pin-group span{display:inline}.pass-tour-event-pin i{font-style:normal;font-size:10px}
 
@@ -296,11 +296,11 @@
 #phone .pass-footer-progress li{display:flex;align-items:center;justify-content:center;gap:5px;padding:8px 2px;border-radius:8px;color:#858c94;background:#f5f6f7;font-size:10px;min-width:0}
 #phone .pass-footer-progress li>span{display:grid;place-items:center;flex:0 0 18px;width:18px;height:18px;border-radius:50%;background:#e6e8ea;color:#757d86;font-size:10px;font-weight:800}
 #phone .pass-footer-progress li>b{font-size:10px;line-height:1.35;font-weight:650;overflow-wrap:anywhere}
-#phone .pass-footer-progress .is-current{background:#ffd628;color:#171717}
-#phone .pass-footer-progress .is-current>span{background:#191919;color:#ffd628}
+#phone .pass-footer-progress .is-current{background:#FFD628;color:#171717}
+#phone .pass-footer-progress .is-current>span{background:#191919;color:#FFD628}
 #phone .pass-footer-progress .is-done{background:white;color:#58616b}
-#phone .pass-footer-progress .is-done>span{background:#191919;color:#ffd628}
-#phone .pass-date-explainer{background:#fff9dc;border-left:3px solid #ffd628;padding:10px 12px;margin:12px 0 18px;font-size:11px;line-height:1.7;color:#736328}
+#phone .pass-footer-progress .is-done>span{background:#191919;color:#FFD628}
+#phone .pass-date-explainer{background:#FFD628;border-left:3px solid #FFD628;padding:10px 12px;margin:12px 0 18px;font-size:11px;line-height:1.7;color:#736328}
 #phone .pass-stops>.pass-day-divider{display:flex;justify-content:space-between;gap:12px;padding:13px 0 8px;margin:0;border:0;font-size:12px;color:#202020}
 #phone .pass-day-divider span{font-size:10px;color:#7b838c}
 #phone .pass-event-period{display:block;font-size:10px;line-height:1.6;color:#7b838c;margin-top:6px}
@@ -309,9 +309,9 @@
 #phone .pass-footer-progress{gap:5px;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid #edf0f2}
 #phone .pass-footer-progress li{background:transparent;padding:6px 2px;border-radius:7px;gap:5px;color:#8c939b}
 #phone .pass-footer-progress li>b{font-size:10px;letter-spacing:-.15px}
-#phone .pass-footer-progress li.is-current{background:#fff4b5;color:#1b1b1b}
-#phone .pass-footer-progress li.is-current>span{background:#ffd628;color:#191919;outline:1px solid #c6a600;outline-offset:0}
-#phone .pass-footer-progress li.is-done>span{background:#191919;color:#ffd628}
+#phone .pass-footer-progress li.is-current{background:#FFD628;color:#1b1b1b}
+#phone .pass-footer-progress li.is-current>span{background:#FFD628;color:#191919;outline:1px solid #FFD628;outline-offset:0}
+#phone .pass-footer-progress li.is-done>span{background:#191919;color:#FFD628}
 #phone .pass-step-footer-meta{margin-bottom:12px;min-height:27px;align-items:center}
 #phone .pass-footer-stage{align-items:flex-start;flex-direction:column;gap:2px}
 #phone .pass-footer-stage .pass-footer-step-label{font-size:7px;letter-spacing:.1em;color:#858d97}
@@ -325,7 +325,7 @@
 #phone .pass-step-back{flex-basis:62px;border-radius:11px;background:#fff;border-color:#dce0e4}
 #phone .pass-footer-help-row{display:flex;align-items:center;gap:7px;min-height:42px;margin-top:11px;border-top:1px solid #edf0f2;padding:7px 0 0}
 #phone .pass-footer-requirement{flex:0 0 auto;font-size:8px;line-height:1.3;border:1px solid #dce0e4;border-radius:4px;color:#79818a;padding:3px 5px;white-space:nowrap}
-#phone .pass-footer-requirement.is-required{background:#191919;border-color:#191919;color:#fff0a0}
+#phone .pass-footer-requirement.is-required{background:#191919;border-color:#191919;color:#FFD628}
 #phone .pass-footer-help-row>p{flex:1;min-width:0;margin:0;font-size:10px;line-height:1.6;color:#79818a}
 #phone .pass-footer-help-row .pass-step-skip{flex:0 1 auto;max-width:42%;min-height:32px;padding:4px 0 4px 5px;gap:5px;font-size:10px;line-height:1.5;white-space:normal;background:transparent;text-align:right}
 #phone .pass-footer-help-row .pass-step-skip>span{font-size:17px;flex-shrink:0}
@@ -358,17 +358,17 @@ html:not([lang=ko]) #phone .pass-footer-summary .pass-footer-progress li>b{font-
 #phone .pass-footer-summary .pass-footer-total>span{font-size:10px}
 
 /* Venue-by-venue recommendations: compact context, optional stops, grouped review. */
-.venue-date-notice{margin:0 0 20px;padding:12px 14px;border-radius:12px;background:#fff7ce;color:#675100;font-size:13px;line-height:1.6;border-left:3px solid #ffd628}
+.venue-date-notice{margin:0 0 20px;padding:12px 14px;border-radius:12px;background:#FFD628;color:#675100;font-size:13px;line-height:1.6;border-left:3px solid #FFD628}
 .venue-context{display:grid;gap:6px;margin:0 0 22px;padding:16px;border:1px solid #e5e7eb;border-radius:14px;background:#fafafa}
 .venue-context small{font-size:12px;color:#68717c}.venue-context strong{font-size:18px;line-height:1.4}.venue-context span{font-size:12px;color:#68717c}.venue-context b{font-size:12px;color:#806300}
 .pass-nearby .venue-context+h3{font-size:23px;margin:12px 0}.pass-footer-summary>strong{font-size:13px}.pass-step-footer-compact .pass-footer-help-row{padding-top:8px;margin-top:8px}.pass-footer-help-row p{margin:0}
 .venue-plan-group{margin:20px 0;border:1px solid #e2e5e9;border-radius:16px;overflow:hidden;background:#fff}
-.venue-group-heading{display:flex;gap:12px;padding:18px 16px;background:#fff9df}.venue-group-number{display:grid;place-items:center;flex:0 0 30px;height:30px;background:#ffd628;border-radius:50%;font-weight:800}.venue-group-heading small{font-size:11px;color:#68717c}.venue-group-heading h3{font-size:18px;line-height:1.45;margin:4px 0 8px}.venue-group-heading b{font-size:12px;color:#806300}
+.venue-group-heading{display:flex;gap:12px;padding:18px 16px;background:#FFD628}.venue-group-number{display:grid;place-items:center;flex:0 0 30px;height:30px;background:#FFD628;border-radius:50%;font-weight:800}.venue-group-heading small{font-size:11px;color:#68717c}.venue-group-heading h3{font-size:18px;line-height:1.45;margin:4px 0 8px}.venue-group-heading b{font-size:12px;color:#806300}
 .venue-plan-group ol{list-style:none;padding:0 16px;margin:0}.venue-place{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid #eceef1}.venue-place:last-child{border-bottom:0}.venue-place-kind{font-size:10px;color:#68717c;flex:0 0 38px;padding-top:3px}.venue-place>div{min-width:0;flex:1}.venue-place strong{font-size:15px;line-height:1.5}.venue-place p{font-size:12px;line-height:1.6;color:#68717c;margin:5px 0 10px}.venue-place-actions{display:flex;justify-content:space-between;gap:8px;align-items:center}.venue-place-actions a{font-size:12px;color:#615000}.venue-place-actions button,.venue-group-edit button{font-size:12px;background:#f3f4f6;border:0;border-radius:8px;padding:10px;color:#252525}.venue-place.is-visited strong{color:#8a919a;text-decoration:line-through}.venue-group-edit{padding:12px 16px 0;text-align:right}.venue-group-empty{font-size:12px;color:#68717c;padding:0 16px 14px}.venue-plan-groups+.library-map-wrap{margin-top:24px}
 .venue-navigation{margin:16px 0;border:1px solid #e1e5e9;border-radius:12px;padding:12px 14px}.venue-navigation>summary{font-size:13px;font-weight:700;cursor:pointer}.venue-navigation .journey-panel{margin:18px 0 0}.venue-navigation .journey-next{padding:16px 12px}
 
-.pass-notice{margin:0 0 22px;padding:14px 16px;background:#fff9df;border:1px solid #f0e1a0;border-radius:12px}.pass-notice h3{font-size:13px;margin:0 0 8px;color:#574800;line-height:1.5}.pass-notice p{font-size:12px;color:#655f4a;line-height:1.7;margin:0}.pass-notice p+p{margin-top:8px}
-.pass-login-link{background:transparent;border:0;color:#29271c;font-size:12px;font-weight:750;padding:8px 0;min-height:36px;text-decoration:underline;text-underline-offset:3px}.pass-notice>small{display:block;border-top:1px solid #eee3b4;padding-top:9px;margin-top:2px;font-size:10px;color:#79735f;line-height:1.65}.pass-notice h3 [aria-hidden]{display:inline-block;margin-left:3px;font-size:16px;vertical-align:middle}
+.pass-notice{margin:0 0 22px;padding:14px 16px;background:#FFD628;border:1px solid #FFD628;border-radius:12px}.pass-notice h3{font-size:13px;margin:0 0 8px;color:#574800;line-height:1.5}.pass-notice p{font-size:12px;color:#655f4a;line-height:1.7;margin:0}.pass-notice p+p{margin-top:8px}
+.pass-login-link{background:transparent;border:0;color:#29271c;font-size:12px;font-weight:750;padding:8px 0;min-height:36px;text-decoration:underline;text-underline-offset:3px}.pass-notice>small{display:block;border-top:1px solid #FFD628;padding-top:9px;margin-top:2px;font-size:10px;color:#79735f;line-height:1.65}.pass-notice h3 [aria-hidden]{display:inline-block;margin-left:3px;font-size:16px;vertical-align:middle}
 
 /* Reserve the measured dock height, with a final-card gap inside the scroller. */
 #phone.pass .viewport{bottom:calc(var(--nav-height) + var(--safe-bottom) + var(--pass-dock-height,148px));padding-bottom:0;scroll-padding-bottom:24px}
@@ -377,10 +377,10 @@ html:not([lang=ko]) #phone .pass-footer-summary .pass-footer-progress li>b{font-
 #phone .pass-dock-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:24px}
 #phone .pass-dock-heading>strong{font-size:13px;line-height:1.5;font-weight:750;color:#4b535d;min-width:0}
 #phone .pass-selection-count{display:inline-flex;align-items:baseline;gap:4px;flex-shrink:0;padding:4px 9px;border-radius:7px;background:#f2f4f6;color:#646c76;font-size:11px;line-height:1.4;border:0;white-space:nowrap}
-#phone .pass-selection-count.has-selection{background:#fff5bd;color:#695200}
+#phone .pass-selection-count.has-selection{background:#FFD628;color:#695200}
 #phone .pass-selection-count>b{font-size:14px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
 #phone .pass-dock-actions{display:flex;align-items:stretch;gap:8px;min-width:0}
-#phone .pass-dock-next{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0;min-height:48px;padding:12px 14px;border-radius:10px;background:#ffd628;color:#191919;border:0;text-align:left;line-height:1.45;font-size:14px;font-weight:750}
+#phone .pass-dock-next{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0;min-height:48px;padding:12px 14px;border-radius:10px;background:#FFD628;color:#191919;border:0;text-align:left;line-height:1.45;font-size:14px;font-weight:750}
 #phone .pass-dock-next>span{min-width:0;overflow-wrap:break-word}
 #phone .pass-dock-next>svg{width:20px;height:20px;flex:0 0 20px}
 #phone .pass-dock-next:disabled{background:#eef0f2;color:#858d97;cursor:not-allowed;opacity:1}
@@ -391,7 +391,7 @@ html:not([lang=ko]) #phone .pass-footer-summary .pass-footer-progress li>b{font-
 #phone .pass-dock-skip>span{font-size:16px}
 #phone .pass-action-dock button:focus-visible{outline:2px solid #191919;outline-offset:2px}
 @media(max-width:350px){#phone .pass-step-footer.pass-action-dock{padding-inline:16px}#phone .pass-dock-next{font-size:13px;gap:8px}#phone .pass-dock-heading>strong{font-size:12px}}
-.pass-tour-legend svg{width:17px;height:17px}.pass-food-pin{background:#fff4dd}.pass-food-pin svg{width:27px;height:29px;margin:auto;color:#171717}.pass-food-pin.is-selected{background:#ffd628}.pass-food-pin.is-selected svg>path:first-child{fill:none}
+.pass-tour-legend svg{width:17px;height:17px}.pass-food-pin{background:#fff4dd}.pass-food-pin svg{width:27px;height:29px;margin:auto;color:#171717}.pass-food-pin.is-selected{background:#FFD628}.pass-food-pin.is-selected svg>path:first-child{fill:none}
 .nearby-food-details{margin:14px 0;font-size:12px}.nearby-food-details>div{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;padding:8px 0}.nearby-food-details dt{color:#69727d}.nearby-food-details dd{margin:0;line-height:1.6;overflow-wrap:anywhere}
 
 /* Give the result count, More action and visit notes distinct breathing room. */
@@ -406,11 +406,28 @@ html:not([lang=ko]) #phone .pass-footer-summary .pass-footer-progress li>b{font-
 #phone .venue-stop-card>.venue-stop-image{display:grid;place-items:center;width:62px;height:76px;border-radius:10px;overflow:hidden;background:#f3f4f5;flex:none}
 .venue-stop-image img{width:100%;height:100%;object-fit:cover}.venue-stop-image>svg{width:28px;height:28px}
 #phone .venue-stop-card>.venue-stop-copy{min-width:0}.venue-stop-card .venue-stop-copy>strong{display:block;font-size:13px;line-height:1.5;overflow-wrap:anywhere;letter-spacing:-.02em}.venue-stop-card .venue-stop-copy>p{margin:5px 0 7px;font-size:11px;line-height:1.65;overflow-wrap:anywhere}
-#phone .venue-stop-card>.venue-stop-order{display:grid;grid-template-columns:34px;gap:5px;flex:none}.venue-stop-order button{display:grid;place-items:center;width:34px;height:34px;border:1px solid #e1e4e8;border-radius:9px;background:#f4f5f6;color:#303740;padding:6px}.venue-stop-order svg{width:20px;height:20px}.venue-stop-order button:disabled{opacity:.25;cursor:default}.venue-stop-order button:focus-visible{outline:2px solid #d0aa00;outline-offset:2px}
+#phone .venue-stop-card>.venue-stop-order{display:grid;grid-template-columns:34px;gap:5px;flex:none}.venue-stop-order button{display:grid;place-items:center;width:34px;height:34px;border:1px solid #e1e4e8;border-radius:9px;background:#f4f5f6;color:#303740;padding:6px}.venue-stop-order svg{width:20px;height:20px}.venue-stop-order button:disabled{opacity:.25;cursor:default}.venue-stop-order button:focus-visible{outline:2px solid #FFD628;outline-offset:2px}
 #phone .venue-stop-card .venue-place-actions>a{font-size:11px;min-height:30px;display:inline-flex;align-items:center}.venue-stop-card .venue-place-actions{flex-wrap:wrap}
-#phone .venue-stop-card>.venue-stop-image{position:relative}.venue-stop-step{position:absolute;top:4px;left:4px;z-index:1;display:grid;place-items:center;width:19px;height:19px;border-radius:50%;border:1px solid #fff;background:#171717;color:#ffd628;font:750 10px/1 Arial,sans-serif}
+#phone .venue-stop-card>.venue-stop-image{position:relative}.venue-stop-step{position:absolute;top:4px;left:4px;z-index:1;display:grid;place-items:center;width:19px;height:19px;border-radius:50%;border:1px solid #fff;background:#171717;color:#FFD628;font:750 10px/1 Arial,sans-serif}
 .venue-stop-card{position:relative}.venue-stop-card:focus-within{z-index:2}
 
 #phone .venue-group-heading{align-items:flex-start;}
 #phone .venue-group-heading>div{min-width:0;}
 #phone .venue-group-heading h3{margin:0 0 10px;font-size:18px;line-height:1.5;overflow-wrap:anywhere;}
+
+/* Event detail actions share a compact, high-contrast button. */
+#phone .pass-event-preview{display:inline-flex;align-items:center;justify-content:center;min-height:40px;margin-top:12px;padding:10px 14px;border:1px solid #191919;border-radius:10px;background:#191919;color:#fff;font-size:12px;line-height:1.5;font-weight:700;text-decoration:none}
+#phone .pass-event-preview:hover{background:#303030}
+#phone .pass-event-preview:focus-visible{outline:2px solid #b18c00;outline-offset:3px}
+
+/* Start review content directly with the trip summary. */
+#phone .pass-review>.review-trip-summary{margin:8px 0 24px}
+
+#phone .pass-choice-top label{min-width:0}
+#phone .pass-choice-top label>.pass-choice-description{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+#phone .pass-event-preview{display:inline-block;min-height:40px;padding:9px 0;border:0;border-radius:0;background:transparent;color:#191919;font-weight:800;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+#phone .pass-event-preview:hover{background:transparent;color:#715b00}
+
+/* Only multi-venue events require an explicit location to build a real route. */
+#phone .pass-required-branch{display:grid;gap:8px;margin:12px 0;font-size:12px;font-weight:650}
+#phone .pass-required-branch select{width:100%;min-width:0;min-height:44px;padding:10px;border:1px solid #dce0e4;border-radius:10px;background:#fff;color:#191919;font-size:12px}

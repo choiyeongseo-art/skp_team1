@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "source": "busan-drop/assets/banners/home-20261105/monchhichi-user-20261112-v2.png",
+  "result": "busan-drop/assets/banners/home-20261105/monchhichi-restored-20261112.png",
+  "dimensions": [
+    1122,
+    1402
+  ],
+  "prompt": "Faithfully restore and upscale the original poster, preserving character, red tartan, wreath, KARYLAND / IN / BUSAN and original composition. Remove pixelation and reconstruct fine plush fur and readable lettering. Correct bottom footer to © 2026 SEKIGUCHI CO., LTD. after visual review."
+}

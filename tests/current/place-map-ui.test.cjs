@@ -59,7 +59,7 @@ test('review renders event and place thumbnails with compact copy and boundary-a
  const html=c.groupedHtml({flow:'venue-groups',routeSnapshot:route,places},{edit:true});
  assert.match(html,/assets\/banners\/home-20261105\/event.jpg/);assert.match(html,/src="sight.jpg"/);assert.match(html,/src="food.jpg"/);assert.match(html,/>Event A<\/strong>/);
  assert.match(html,/data-venue-stop-move="up"[^>]+data-stop-id="event:a"[^>]+disabled/);assert.match(html,/data-venue-stop-move="down"[^>]+data-stop-id="place:a:f"[^>]+disabled/);
- assert.doesNotMatch(html,/class="venue-place-kind"/);assert.match(html,/venue-mini-toolbar[\s\S]*?venue-mini-selection[\s\S]*?data-venue-edit/);assert.doesNotMatch(html,/class="venue-group-edit"/);assert.match(html,/data-venue-remove="a"/);assert.match(html,/>장소 추가·변경 ↗<\/button>/);assert.ok(html.indexOf('class="venue-visit-list"')<html.indexOf('data-venue-mini-map'));assert.ok(html.indexOf('data-venue-mini-map')<html.indexOf('data-venue-edit'));assert.doesNotMatch(html,/핀을 눌러 장소를 확인하세요/);
+ assert.doesNotMatch(html,/class="venue-place-kind"/);assert.match(html,/venue-mini-toolbar[\s\S]*?venue-mini-selection[\s\S]*?data-venue-edit/);assert.doesNotMatch(html,/class="venue-group-edit"/);assert.match(html,/data-venue-remove="a"/);assert.match(html,/>주변 장소 추가·다시 선택 ↗<\/button>/);assert.ok(html.indexOf('class="venue-visit-list"')<html.indexOf('data-venue-mini-map'));assert.ok(html.indexOf('data-venue-mini-map')<html.indexOf('data-venue-edit'));assert.doesNotMatch(html,/핀을 눌러 장소를 확인하세요/);
 });
 
 test('review marker CSS preserves the Mapbox absolute origin for every pin type',()=>{

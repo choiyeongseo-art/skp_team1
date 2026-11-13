@@ -70,7 +70,7 @@
 .branch-location-map {height:270px; width:100%; border-radius:10px; overflow:hidden; background:#303437; margin:12px 0;}
 .branch-map-status {display:block; font-size:12.5px; color:#bbc5cf; line-height:1.6;}
 .branch-map-status[hidden] {display:none;}
-.branch-map-pin {width:36px; height:42px; border-radius:18px 18px 18px 3px; background:#ffd628; color:#141414; border:2px solid #171717; font-size:16px; font-weight:850; box-shadow:0 3px 10px #0006; cursor:pointer;}
+.branch-map-pin {width:36px; height:42px; border-radius:18px 18px 18px 3px; background:#FFD628; color:#141414; border:2px solid #171717; font-size:16px; font-weight:850; box-shadow:0 3px 10px #0006; cursor:pointer;}
 /* Branch numbers connect map positions to venue names; every choice opens details. */
 .branch-map-heading {display:flex; align-items:flex-start; justify-content:space-between; gap:12px;}
 .branch-map-heading p {margin:0; font-size:12px; line-height:1.6; color:inherit;}
@@ -78,21 +78,21 @@
 .branch-number-choices {display:grid; gap:0; margin:4px 0 0;}
 .branch-number-choices button {display:grid; grid-template-columns:28px minmax(0,1fr); align-items:center; column-gap:10px; row-gap:4px; width:100%; min-height:64px; padding:12px 0; border:0; border-bottom:1px solid #ffffff20; border-radius:0; background:transparent; color:inherit; text-align:left;}
 .branch-number-choices button:last-child {border-bottom:0;}
-.branch-number-choices button>b {grid-row:1 / 3; display:grid; place-items:center; width:28px; height:28px; border-radius:50%; background:#ffd628; color:#141414; font-size:13px;}
+.branch-number-choices button>b {grid-row:1 / 3; display:grid; place-items:center; width:28px; height:28px; border-radius:50%; background:#FFD628; color:#141414; font-size:13px;}
 .branch-choice-name {font-size:14px; font-weight:750; line-height:1.5; overflow-wrap:anywhere;}
 .branch-choice-action {grid-column:2; font-size:12px; line-height:1.5; opacity:.8;}
-.branch-number-choices button:hover {background:#ffd62815;}
+.branch-number-choices button:hover {background:#FFD62815;}
 .branch-number-choices button:focus-visible,.branch-map-pin:focus-visible,.branch-map-overview:focus-visible {outline:2px solid var(--accent); outline-offset:3px;}
 
 
 /* Light result controls and a bounded, scrollable venue menu. */
 #phone .store-results-toolbar {margin:24px 0 16px;padding-top:20px;align-items:center;}
 #phone .store-results-toolbar strong {font-size:19px;letter-spacing:-.4px;}
-#phone .store-results-toolbar em {display:inline-flex;align-items:center;justify-content:center;min-width:25px;height:25px;padding:0 6px;margin-left:5px;border-radius:8px;background:#fff5bf;color:#715b00;font-size:13px;vertical-align:middle;}
+#phone .store-results-toolbar em {display:inline-flex;align-items:center;justify-content:center;min-width:25px;height:25px;padding:0 6px;margin-left:5px;border-radius:8px;background:#FFD628;color:#715b00;font-size:13px;vertical-align:middle;}
 #phone .store-results-toolbar>div>span {font-size:12px;color:#69717a;}
 #phone .store-view-toggle {padding:4px;gap:4px;border:1px solid #e1e4e8;border-radius:14px;background:#f4f5f6;}
 #phone .store-view-toggle>button {min-width:48px;min-height:36px;border-radius:10px;background:transparent;color:#606872;}
-#phone .store-view-toggle>button[aria-pressed=true] {background:#ffd628;color:#171717;box-shadow:0 1px 3px #0000000c;}
+#phone .store-view-toggle>button[aria-pressed=true] {background:#FFD628;color:#171717;box-shadow:0 1px 3px #0000000c;}
 #phone.stores .viewport {scrollbar-width:thin;scrollbar-color:#c7cbd0 transparent;}
 #phone.stores .viewport::-webkit-scrollbar,#phone .store-location-options::-webkit-scrollbar {width:4px;}
 #phone.stores .viewport::-webkit-scrollbar-thumb,#phone .store-location-options::-webkit-scrollbar-thumb {background:#c7cbd0;border-radius:8px;}
@@ -107,8 +107,8 @@
 #phone .store-preview-close {position:absolute;top:10px;right:10px;width:28px;height:28px;padding:0;border-radius:50%;background:#f2f3f5;color:#626870;font-size:20px;line-height:1;}
 #phone .store-location-detail .store-preview-address {margin:12px 0 6px;font-size:11px;line-height:1.6;color:#69717a;}
 #phone .store-location-detail .store-preview-description {margin:0 0 12px;font-size:12px;line-height:1.5;color:#30363d;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-#phone .store-preview-more {display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:40px;padding:10px 14px;border-radius:10px;background:#ffd628;color:#171717;font-size:13px;font-weight:800;}
-#phone .real-store-pin[aria-pressed=true] {background:#fff;border-color:#171717;outline:3px solid #ffd628;z-index:2;}
+#phone .store-preview-more {display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:40px;padding:10px 14px;border-radius:10px;background:#FFD628;color:#171717;font-size:13px;font-weight:800;}
+#phone .real-store-pin[aria-pressed=true] {background:#fff;border-color:#171717;outline:3px solid #FFD628;z-index:2;}
 #phone .store-preview-more:focus-visible,#phone .store-preview-close:focus-visible {outline:2px solid #171717;outline-offset:2px;}
 
 #phone .real-store-pin .category-pin-icon {width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
@@ -121,11 +121,11 @@
 #phone .real-store-pin .category-pin-icon {display:block;width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
 #phone .category-pin-caption {position:relative;z-index:1;display:block;font-family:Arial,sans-serif;font-size:5.5px;font-weight:800;letter-spacing:.65px;line-height:1;margin:0 0 3px;}
 #phone .real-store-pin[aria-pressed=true] {background:transparent;border:0;outline:none;z-index:2;}
-#phone .real-store-pin[aria-pressed=true] .category-pin-face {background:#fff;box-shadow:0 0 0 2px #202520,0 0 0 4px #ffd628;}
+#phone .real-store-pin[aria-pressed=true] .category-pin-face {background:#fff;box-shadow:0 0 0 2px #202520,0 0 0 4px #FFD628;}
 #phone .real-store-pin[aria-pressed=true] .category-pin-face::after {background:#fff;}
 #phone .real-store-pin:focus-visible {outline:none;}
-#phone .real-store-pin:focus-visible .category-pin-face {outline:2px solid #ffd628;outline-offset:3px;}
+#phone .real-store-pin:focus-visible .category-pin-face {outline:2px solid #FFD628;outline-offset:3px;}
 
 #phone .branch-number-choices button {background:transparent; border-color:#dce0e4;}
 #phone .branch-map-heading .branch-map-overview {color:#715b00;}
-#phone .branch-number-choices button:hover {background:#fff6c8;}
+#phone .branch-number-choices button:hover {background:#FFD628;}

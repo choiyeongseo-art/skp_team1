@@ -36,16 +36,16 @@ test('both maps use the same style and navigation puts stores before brands',()=
 test('category narrows brand choices and intersects with region and selected brand',()=>{
  const {c,pins,click}=setup();c.render();
  click('[data-store-category]',{storeCategory:'패션'});
- let html=c.storeMap();assert.ok(html.indexOf('data-store-region')<html.indexOf('data-store-category'));assert.ok(html.indexOf('data-store-category')<html.indexOf('data-store-brand'));
- assert.match(html,/data-store-brand="2"/);assert.match(html,/data-store-brand="3"/);assert.doesNotMatch(html,/data-store-brand="1"/);
+ let html=c.storeMap();assert.ok(html.indexOf('data-store-category')<html.indexOf('data-store-region'));assert.doesNotMatch(html,/data-store-brand=/);
+ assert.doesNotMatch(html,/data-store-brand=/);assert.doesNotMatch(html,/data-store-brand="1"/);
  assert.equal(pins.filter(p=>!p.removed).length,13);
- click('[data-store-region]',{storeRegion:'서면'});click('[data-store-brand]',{storeBrand:'3'});
+ c.state.storeRefineOpen=true;click('[data-store-region]',{storeRegion:'서면'});assert.equal(c.state.storeRefineOpen,false);click('[data-store-brand]',{storeBrand:'3'});
  assert.equal(pins.filter(p=>!p.removed).length,1);assert.equal(c.window.BUSAN_STORE_LOCATIONS.find(row=>row.id===pins.find(p=>!p.removed).element.dataset.storePin).brand,'자라');
- click('[data-store-category]',{storeCategory:'뷰티'});assert.equal(c.state.mapLocal,true);assert.match(c.storeMap(),/data-store-brand="1"/);assert.doesNotMatch(c.storeMap(),/data-store-brand="3"/);
+ click('[data-store-category]',{storeCategory:'뷰티'});assert.equal(c.state.mapLocal,true);assert.doesNotMatch(c.storeMap(),/data-store-brand=/);assert.doesNotMatch(c.storeMap(),/data-store-brand="3"/);
  assert.equal(pins.filter(p=>!p.removed).length,0);
  click('[data-store-region]',{storeRegion:'남포동'});assert.equal(pins.filter(p=>!p.removed).length,1);
  click('[data-store-category]',{storeCategory:'로컬'});assert.equal(pins.filter(p=>!p.removed).length,0);assert.match(c.storeMap(),/등록된 위치가 없어요/);
- c.state.language='en';assert.match(c.storeMap(),/>Busan<\/button>/);
+ c.state.language='en';assert.match(c.storeMap(),/>All Busan<\/button>/);
 });
 
 test('archived TOPTEN is absent from every category and stale selection resets safely',()=>{
@@ -62,7 +62,7 @@ test('store finder keeps the home camera for every brand and uses shared regiona
 
 test('Monchhichi is listed under pop-ups and excluded from local events',()=>{
  const {c,click,pins}=setup();click('[data-store-category]',{storeCategory:'로컬'});assert.doesNotMatch(c.storeMap(),/data-store-brand="4"/);
- click('[data-store-category]',{storeCategory:'팝업'});assert.match(c.storeMap(),/data-store-brand="4"/);assert.equal(pins.filter(p=>!p.removed).length,1);
+ click('[data-store-category]',{storeCategory:'팝업'});assert.doesNotMatch(c.storeMap(),/data-store-brand=/);assert.equal(pins.filter(p=>!p.removed).length,1);
 });
 
 test('only the three selected Olive Young branches remain, with distinct profiles',()=>{
@@ -82,4 +82,27 @@ test('nine requested Uniqlo branches have distinct official pins and correct reg
  click('[data-store-category]',{storeCategory:'패션'});click('[data-store-brand]',{storeBrand:'2'});assert.equal(pins.filter(p=>!p.removed).length,9);
  click('[data-store-region]',{storeRegion:'서면'});assert.equal(pins.filter(p=>!p.removed).length,2);
  click('[data-store-region]',{storeRegion:'남포동'});assert.equal(pins.filter(p=>!p.removed).length,1);
+});
+
+test('food and dessert categories filter their registered event brands independently',()=>{
+ const {c,click}=setup();c.render();
+ click('[data-store-category]',{storeCategory:'푸드'});
+ assert.equal(c.state.storeCategory,'푸드');assert.equal(c.window.BUSAN_STORE_BRAND_CATEGORIES['참치학교'].includes('푸드'),true);
+ click('[data-store-category]',{storeCategory:'디저트'});
+ assert.equal(c.state.storeCategory,'디저트');assert.equal(c.window.BUSAN_STORE_BRAND_CATEGORIES['달달더마켓'].includes('디저트'),true);
+ const html=c.storeMap();assert.match(html,/<details class="store-refine"/);assert.ok(html.indexOf('data-store-category')<html.indexOf('store-refine'));
+});
+
+test('expanded finder districts distinguish Centum, Haeundae and Gijang without changing source locations',()=>{
+ const {c,click,pins}=setup();const source=c.window.BUSAN_STORE_LOCATIONS;
+ const before=JSON.stringify(source);c.render();
+ for(const [text,region] of [['부산 해운대구 센텀남대로 35','벡스코/센텀시티'],['부산 해운대구 달맞이길 30','해운대/마린시티'],['부산 기장군 기장해안로 147','송정/기장/정관'],['부산 동구 범일로 125','서면/연산/범일'],['부산 동구 초량동 부산역','부산역'],['부산 사하구 하신중앙로 129','사상/강서/김해공항/하단']]){
+  assert.equal(c.window.BUSAN_STORE_REGION_FOR({address:text,name:''}),region);
+ }
+ click('[data-store-category]',{storeCategory:'전체'});
+ click('[data-store-region]',{storeRegion:'벡스코/센텀시티'});
+ assert.ok(pins.filter(p=>!p.removed).length>0);
+ for(const pin of pins.filter(p=>!p.removed)){const item=source.find(row=>row.id===pin.element.dataset.storePin);assert.equal(c.window.BUSAN_STORE_REGION_FOR(item),'벡스코/센텀시티');}
+ const html=c.storeMap();assert.equal((html.match(/data-store-region=/g)||[]).length,11);assert.match(html,/부산 전체/);
+ assert.equal(JSON.stringify(source),before);
 });

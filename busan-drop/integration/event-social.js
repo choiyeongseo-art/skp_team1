@@ -18,7 +18,7 @@
  };
  saved=()=>head()+`<div class="pad saved-events"><div class="saved-events-heading"><h3>찜한 행사 <span>${activeSaved().length}</span></h3><span>최근 저장순</span></div>${loaded&&activeSaved().length?'<button class="saved-to-pass" data-nav="pass">저장한 행사로 드롭 플랜 만들기 ↗</button>':''}${!loaded?`<p class="saved-events-empty">${failed?'저장한 행사를 불러오지 못했어요.':'저장한 행사를 불러오는 중이에요.'}</p>${failed?'<button class="event-social-retry" data-event-social-retry>다시 불러오기</button>':''}`:activeSaved().length?`<div class="saved-event-list">${activeSaved().map(entry=>{
   const event=catalog.find(e=>e.id===entry.eventId);if(!event)return '';
-  return `<article class="saved-event-card"><button class="saved-event-open" data-saved-event-open="${event.id}" data-event-store="${esc(entry.storeId||'')}"><img src="assets/banners/home-20261105/${event.image}" alt="${esc(event.brand)} 행사 배너" width="1000" height="1000"><div class="saved-event-copy"><span>${esc(event.brand)}</span><h3>${esc(event.title)}</h3><span>행사 자세히 보기 ↗</span></div></button>${saveButton(event,entry.storeId)}</article>`;
+  return `<article class="saved-event-card"><button class="saved-event-open" data-saved-event-open="${event.id}" data-event-store="${esc(entry.storeId||'')}"><img src="assets/banners/home-20261105/${event.image}" alt="${esc(event.brand)} 행사 배너" width="1000" height="1000"><div class="saved-event-copy"><span>${esc(event.brand)}</span><div class="saved-event-title"><h3>${esc(event.title)}</h3></div></div></button>${saveButton(event,entry.storeId)}</article>`;
  }).join('')}</div>`:'<div class="saved-events-empty"><p>아직 저장한 행사가 없어요.</p><span>행사 정보의 하트를 눌러 모아보세요.</span><button data-nav="home">행사 둘러보기 ↗</button></div>'}</div>`;
  specs.saved=['저장한 행사를 다시 만나기','최근 저장한 행사부터 배너로 표시합니다.',['저장 행사|행사별 한 번 저장|다른 지점에서도 동일 행사 저장 상태 공유','정렬|최근 저장순|저장 해제 후 다시 저장하면 맨 위로 이동','저장 수|서버 집계|브라우저별 익명 사용자 기준']];
  let lastPublished='';
@@ -55,8 +55,22 @@
    feedback('행사 링크를 복사했어요');
   }catch(error){if(error.name!=='AbortError')feedback('링크를 복사하지 못했어요. 다시 시도해주세요.');}
  }
+ let pendingUnsave=null;
+ function closeUnsave(){document.querySelector('.event-unsave-overlay')?.remove();const button=pendingUnsave;pendingUnsave=null;if(button?.isConnected)button.focus();return button;}
+ function confirmUnsave(button){
+  if(pendingUnsave)return;pendingUnsave=button;const event=catalog.find(e=>e.id===button.dataset.eventSocialSave);
+  document.querySelector('#modal').insertAdjacentHTML('beforeend',`<div class="overlay event-unsave-overlay"><section class="sheet event-unsave-dialog" role="alertdialog" aria-modal="true" aria-labelledby="unsaveTitle" aria-describedby="unsaveDescription"><span class="delete-mark" aria-hidden="true">−</span><h3 id="unsaveTitle">저장을 취소할까요?</h3><p class="delete-plan-title" id="unsaveDescription">${esc(event?.title||'선택한 행사')}</p><div class="library-delete-actions event-unsave-actions"><button type="button" data-unsave-cancel>계속 저장</button><button type="button" data-unsave-confirm>저장 취소</button></div></section></div>`);
+  document.querySelector('[data-unsave-cancel]')?.focus();
+ }
+ document.addEventListener('keydown',event=>{
+  if(!pendingUnsave)return;
+  if(event.key==='Escape'){event.preventDefault();closeUnsave();}
+  if(event.key==='Tab'){const dialog=document.querySelector('.event-unsave-dialog'),buttons=dialog?.querySelectorAll('button');if(!buttons?.length)return;const first=buttons[0],last=buttons[buttons.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
+ });
  document.addEventListener('click',event=>{
-  const save=event.target.closest('[data-event-social-save]');if(save){toggle(save);return;}
+  if(event.target.closest('[data-unsave-confirm]')){const button=closeUnsave();if(button&&isSaved(button.dataset.eventSocialSave))toggle(button);return;}
+  if(event.target.closest('[data-unsave-cancel]')||event.target.classList?.contains('event-unsave-overlay')){closeUnsave();return;}
+  const save=event.target.closest('[data-event-social-save]');if(save){if(state.screen==='saved'&&isSaved(save.dataset.eventSocialSave)&&loaded&&!busy.has(save.dataset.eventSocialSave))confirmUnsave(save);else toggle(save);return;}
   const share=event.target.closest('[data-event-share]');if(share){shareEvent(share);return;}
   if(event.target.closest('[data-event-social-retry]')){load();return;}
   const open=event.target.closest('[data-saved-event-open]');if(open){const campaign=catalog.find(e=>e.id===open.dataset.savedEventOpen),item=campaign&&storeFor(campaign,open.dataset.eventStore);if(item)window.BUSAN_OPEN_EVENT_DETAIL(item);}

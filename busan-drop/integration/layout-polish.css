@@ -1,0 +1,65 @@
+/* Final layout rhythm shared across the existing screens. */
+#phone{--page-inset:24px;--section-gap:32px;--card-radius:14px}
+#phone :is(.store-mapbox-page,.shopping-pass,.library-page,.my-plan-detail),#phone.home .home-discovery{padding-left:var(--page-inset);padding-right:var(--page-inset);box-sizing:border-box}
+#phone :is(.store-mapbox-page,.library-page,.my-plan-detail),#phone.home .home-discovery{padding-bottom:max(24px,env(safe-area-inset-bottom))}
+#phone .shopping-pass{padding-bottom:24px}
+/* Banner metadata shares a fixed safe zone with the independent heart. */
+#phone .supplied-editorial .supplied-banner-copy{left:20px;right:20px;bottom:18px}
+#phone .supplied-editorial .supplied-banner-meta{right:76px;gap:4px;line-height:1.5}
+#phone .supplied-editorial .supplied-banner-period{font-variant-numeric:tabular-nums}
+#phone .supplied-banner-actions{right:20px;bottom:18px}
+#phone .supplied-banner-actions .event-banner-count{min-width:56px}
+/* A consistent date band and section-heading baseline for home cards. */
+#phone.home .home-card-date-ribbon{height:30px;padding:0 6px;display:flex;align-items:center;justify-content:center;font-size:11px;line-height:16px;letter-spacing:.1px;font-variant-numeric:tabular-nums}
+#phone.home .home-popup-heading{min-height:40px;margin-bottom:16px}
+#phone.home .home-group-link{gap:8px;align-items:center;line-height:1.4}
+#phone.home .home-group-link svg{width:18px;height:18px}
+#phone.home .home-event-section{margin-bottom:var(--section-gap)}
+#phone.home .home-event-section:last-child{margin-bottom:0}
+/* Equal icon boxes; silhouette-specific scaling balances perceived size. */
+#phone :is(.home-category-button,.store-category-filters>button){gap:8px}
+#phone .category-glass-icon{width:52px;height:52px;object-fit:contain;object-position:center}
+#phone img.category-glass-icon[src*="-stay."]{transform:scale(.96)}
+#phone img.category-glass-icon[src*="-food."]{transform:scale(.97)}
+#phone img.category-glass-icon[src*="-beauty."]{transform:scale(1.08)}
+#phone img.category-glass-icon[src*="-fashion."]{transform:scale(1.04)}
+#phone :is(.home-category-button,.store-category-filters>button)>span:last-child{min-height:16px;line-height:16px}
+/* Long area names keep matched row heights and a reserved chevron. */
+#phone .store-refine-value{display:grid;grid-template-columns:minmax(0,1fr) 12px;align-items:center;gap:10px;max-width:65%;word-break:keep-all;overflow-wrap:anywhere}
+#phone .store-refine .home-event-regions{grid-auto-rows:minmax(48px,auto);align-items:stretch}
+#phone .store-refine .home-event-regions>button{height:100%;min-height:48px;padding:10px 8px;line-height:16px}
+/* Align checkbox and headline; compact the disclosure spacing. */
+#phone .pass-choice-top{align-items:flex-start;gap:12px}
+#phone .pass-choice-top label{padding-right:32px}
+#phone .pass-choice-top strong{line-height:24px}
+#phone .pass-choice-top input{top:2px;margin:0;width:21px;height:21px}
+#phone .pass-choice-top label>.pass-choice-description{margin-top:6px;line-height:20px}
+#phone .pass-choice-top label>.pass-choice-period{margin-top:6px;line-height:18px}
+#phone .pass-event-more{margin-top:12px;padding-top:8px}
+#phone .pass-event-more>summary{min-height:36px;box-sizing:border-box;padding:8px 0;line-height:20px}
+/* Reserve a two-line title slot; align the heart to its center. */
+#phone .saved-event-card{--saved-art-height:140px}
+#phone .saved-event-open>img{height:var(--saved-art-height)}
+#phone .saved-event-copy{display:grid;grid-template-rows:16px 44px;gap:5px;padding:12px 64px 14px 14px;min-height:0}
+#phone .saved-event-copy>span{display:block;line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#phone .saved-event-title{min-width:0;display:flex;align-items:center;min-height:44px}
+#phone .saved-event-title h3{margin:0;font-size:16px;line-height:22px}
+#phone .saved-event-card>.event-save-button{top:calc(var(--saved-art-height) + 35px);bottom:auto;right:12px;width:40px;height:40px}
+/* Plan title and rename control share a real row instead of fixed offsets. */
+#phone .my-page .my-plan-card-main{display:block;width:100%;min-width:0;margin:0;padding:18px;box-sizing:border-box}
+#phone .my-page .my-plan-name-row{display:grid;grid-template-columns:40px minmax(0,1fr);gap:4px;align-items:center;width:100%;min-width:0;margin:0 0 8px}
+#phone .my-page .my-plan-name-row>.my-plan-rename-icon{position:static;width:40px;height:44px;align-self:center}
+#phone .my-page .my-plan-title-button{display:block;min-width:0;padding:0;background:transparent;color:#191919;text-align:left}
+#phone .my-page .my-plan-title-button>strong{display:block;margin:0;font-size:21px;line-height:1.4;letter-spacing:-.04em;word-break:keep-all;overflow-wrap:anywhere}
+#phone .my-page .my-plan-card-main>.my-plan-open{display:block;width:100%;min-width:0;padding:0;margin:0;text-align:left}
+#phone .my-page .my-plan-card-main>.my-plan-open>b{margin-bottom:0}
+@media(max-width:350px){#phone{--page-inset:20px}#phone .category-glass-icon{width:46px;height:46px}#phone .supplied-editorial .supplied-banner-copy{left:16px;right:16px}#phone .supplied-banner-actions{right:16px}}
+
+/* Separate the detail action from the visit-status message. */
+#phone .pass-event-more>.pass-event-preview{display:block;width:fit-content;max-width:100%;margin:12px 0 0 auto;padding:8px 0;min-height:40px;text-align:right}
+
+/* Status and detail link share one horizontal baseline in every event card. */
+#phone .pass-event-more>.pass-event-footer{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:12px}
+#phone .pass-event-footer>.pass-status{flex:1;min-width:0;margin:0;line-height:20px}
+#phone .pass-event-footer>.pass-event-preview{display:block;flex:none;width:auto;min-height:40px;margin:0;padding:10px 0;line-height:20px;text-align:right;white-space:nowrap}
+@media(max-width:350px){#phone .pass-event-more>.pass-event-footer{gap:8px}#phone .pass-event-footer>.pass-status,#phone .pass-event-footer>.pass-event-preview{font-size:11px}}

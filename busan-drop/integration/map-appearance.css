@@ -67,7 +67,7 @@
 
 #phone .pass-tour-pin.is-selected,
 #phone .pass-map-pin[aria-expanded=true] {
-  outline: 3px solid #ffd628;
+  outline: 3px solid #FFD628;
   outline-offset: 2px;
 }
 
@@ -90,3 +90,14 @@
   width: 23px;
   height: 23px;
 }
+
+/* Shared dark map markers: one centered symbol, no decorative captions. */
+#phone .category-pin-face,#phone .branch-map-pin,#phone .venue-map-pin,#phone .venue-map-pin.is-event,#phone .pass-map-pin,#phone .pass-tour-pin,.bd-event-location-pin{background:#191919;border-color:#191919;color:#FFD628;display:grid;place-items:center;padding:0}
+#phone .category-pin-face{width:100%;height:100%;min-width:0;min-height:0;gap:0;border-radius:50%}
+#phone .real-store-pin[aria-pressed=true] .category-pin-face{background:#191919;box-shadow:0 0 0 2px #191919,0 0 0 4px #FFD628}
+#phone .category-pin-face::after{content:none}
+#phone .category-pin-icon,#phone .real-store-pin .category-pin-icon{display:block;width:28px;height:28px;max-width:76%;max-height:76%;margin:0;fill:none;stroke:#191919;color:#191919;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+#phone .category-pin-icon>path:not([fill]){stroke:#fff}
+#phone .category-pin-caption{display:none}
+#phone .venue-mini-map .category-pin-icon{width:24px;height:24px}
+.bd-event-location-pin svg{color:#FFD628}

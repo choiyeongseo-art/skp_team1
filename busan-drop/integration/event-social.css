@@ -24,3 +24,15 @@
 .saved-events-empty { padding:50px 0; text-align:center; color:#aeb4bd; font-size:16px; line-height:1.8; }
 .saved-events-empty>span { font-size:14px; }
 .saved-events-empty button,.event-social-retry { display:block; min-height:44px; margin:24px auto 0; padding:10px 18px; border-radius:12px; background:var(--accent); color:#171717; font-size:15px; font-weight:700; }
+
+/* Compact saved cards show two events without a long image stack. */
+#phone .saved-event-list{gap:16px}
+#phone .saved-event-open>img{height:140px;aspect-ratio:auto;object-fit:cover}
+#phone .saved-event-copy{padding:12px 62px 14px 14px;min-height:88px}
+#phone .saved-event-copy>span{font-size:11px;line-height:16px}
+#phone .saved-event-copy h3{margin:5px 0 0;font-size:16px;line-height:22px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+#phone .saved-event-card>.event-save-button{right:12px;bottom:20px;width:40px;height:40px}
+
+.event-unsave-overlay{z-index:100}
+.event-unsave-dialog .delete-plan-title{overflow-wrap:anywhere}
+.event-unsave-actions [data-unsave-confirm]{background:#191919;color:#FFD628;border-color:#191919}

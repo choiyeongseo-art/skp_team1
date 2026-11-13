@@ -2,10 +2,10 @@
 #phone { --bg:#fff; --card:#f5f6f7; --muted:#626870; --ink:#171717; --text:#171717; --accent:#FFD628; background:#fff; color:#171717; color-scheme:light; }
 #phone .status,#phone .viewport { background:#fff; color:#171717; }
 #phone .home-indicator { background:#171717; }
-#phone #bottomNav { background:#FFD628; border-top:1px solid #edc600; }
+#phone #bottomNav { background:#FFD628; border-top:1px solid #FFD628; }
 #phone #bottomNav button,#phone #bottomNav button.active { color:#111; }
 #phone #bottomNav button,#phone #bottomNav button.active { font-weight:600; }
-#phone #bottomNav button.active::before { inset:0; width:100%; height:100%; transform:none; border:0; border-radius:0; background:radial-gradient(ellipse at 50% 40%,#fff8c4 0%,#fff3a380 34%,#fff3a300 74%); opacity:1; pointer-events:none; }
+#phone #bottomNav button.active::before { inset:0; width:100%; height:100%; transform:none; border:0; border-radius:0; background:radial-gradient(ellipse at 50% 40%,#FFD628 0%,#FFD62880 34%,#FFD62800 74%); opacity:1; pointer-events:none; }
 #phone #bottomNav button .icon,#phone #bottomNav button.active .icon { stroke-width:1.7; }
 #phone .shopping-pass,#phone .store-mapbox-page,#phone .saved-events,#phone .event-detail-content { color:#171717; }
 #phone :is(.pass-title>span,.pass-title p,.pass-trip-dates span,.pass-helper,.pass-fields label,.pass-footnote,.pass-choice-top label>span,.pass-course-summary>span,.pass-course-summary>strong>span,.pass-stop-heading>span,.pass-stops p,.pass-section-head>button,.pass-status,.store-filter-group>h3,.store-event-copy>small,.store-event-location,.store-results-toolbar>div>span,.saved-events-heading>span,.saved-events-empty,.saved-event-copy>span,.event-detail-subtitle,.event-detail-intro,.event-info-section p,.event-info-section small,.event-date-card>span,.event-date-card>small,.event-visitor-grid dt,.event-fee>span,.home-popup-heading>button,.notice,.subheading,.field,.check,.guest,.textbtn,.menu-row,.language-intro p,.language-options small,.intro-top span) { color:#5b626a; }
@@ -14,29 +14,29 @@
 #phone :is(.pass-settings,.pass-choice,.saved-event-card,.profile-card) { box-shadow:0 2px 12px #00000005; }
 #phone :is(.pass-fields input,.pass-fields select,.pass-choice>select,.pass-visit-date input,.form input:not([type=checkbox]),.trip-dates input,.search,.auth-tabs,.event-date-card,.event-detail-tags>span,.pass-route-meta>span,.event-address-copy) { background:#f5f6f7; color:#171717; border-color:#d5dae0; color-scheme:light; }
 #phone :is(.store-category-filters button,.store-brand-filters button,.home-event-regions,.home-event-regions button,.store-view-toggle,.store-view-toggle>button,.pass-stop-heading button,.secondary,.sheet>.secondary) { background:#f2f3f5; color:#424950; border-color:#dce0e4; }
-#phone :is(.store-category-filters button.active,.store-brand-filters button.active,.home-event-regions button.active,.store-view-toggle>button[aria-pressed=true],.language-options>button.selected,.auth-tabs button.active) { background:#FFD628; color:#171717; border-color:#e4bf12; }
+#phone :is(.store-category-filters button.active,.store-brand-filters button.active,.home-event-regions button.active,.store-view-toggle>button[aria-pressed=true],.language-options>button.selected,.auth-tabs button.active) { background:#FFD628; color:#171717; border-color:#FFD628; }
 #phone :is(.pass-section-head h3,.pass-trip-dates>.icon,.pass-stop-actions a,.pass-empty>svg,.store-event-date,.store-results-toolbar em,.saved-events-heading h2 span,.saved-event-copy>span:last-child,.event-info-section h3,.event-detail-tags>span:first-child,.event-closure,.language-intro>span,.language-selected,.header-language[open] summary,.header-language-menu>button[aria-pressed=true]) { color:#715b00; }
-#phone :is(.pass-primary,.primary,.saved-to-pass,.event-official,.event-social-retry) { background:#FFD628; color:#171717; border-color:#e2bd15; }
+#phone :is(.pass-primary,.primary,.saved-to-pass,.event-official,.event-social-retry) { background:#FFD628; color:#171717; border-color:#FFD628; }
 #phone .pass-primary:disabled { background:#e9ecef; color:#747b84; }
 #phone :is(.pass-footer>span,.pass-footer>span b,.pass-stop-actions button,.pass-stop-actions a,.pass-route-meta>span,.event-address-copy,.event-directions) { color:#30363d; }
 #phone :is(.store-event-card,.store-results-toolbar,.event-info-section,.event-visitor-grid>div,.menu-row,.event-detail-actions) { border-color:#e2e5e9; }
 #phone :is(.event-social-actions button,.saved-event-card>.event-save-button,.store-event-save,.event-save-button) { background:#f4f5f6; color:#30363d; border-color:#d5dae0; }
-#phone .event-save-button.is-saved { color:#715b00; background:#fff4b8; }
+#phone .event-save-button.is-saved { color:#715b00; background:#FFD628; }
 #phone :is(.home-local-slot,.home-rail-event>img,.home-popup-card>img) { background:#f1f2f4; border-color:#e5e7eb; }
 #phone .campaign-pagination .dots button { background:#c5c9ce; }
 #phone .campaign-pagination .dots button.on { background:#171717; }
 #phone .pass-status.open { color:#39701c; }
-#phone .pass-status.check,#phone .event-closure { color:#795a00; background:#fff7cf; }
+#phone .pass-status.check,#phone .event-closure { color:#795a00; background:#FFD628; }
 #phone .pass-status.off { color:#a63d2b; }
 #phone :is(.branch-selector,.store-event-branches,.branch-selected-location,.store-location-detail,.store-map-empty) { background:#f5f6f7; color:#171717; border-color:#dce0e4; }
 #phone :is(.branch-selector p,.branch-selector small,.branch-selected-location p,.store-location-detail p,.store-location-detail small) { color:#5b626a; }
 #phone :is(.event-benefit-table th,.event-benefit-table td,.event-table th,.event-table td) { border-color:#dce0e4; color:#30363d; }
 #phone :is(.header-language-menu>p,.header-language-menu>button>small,.trip-preferences p,.trip-dates label,.trip-preferences legend) { color:#5b626a; }
 #phone .header-language-menu { box-shadow:0 12px 32px #0002; }
-#phone .header-language-menu>button[aria-pressed=true] { background:#fff5bc; }
+#phone .header-language-menu>button[aria-pressed=true] { background:#FFD628; }
 #phone .sheet.trip-sheet,#phone .trip-sheet .trip-preferences { background:#fff; color:#171717; color-scheme:light; }
 #phone .trip-sheet .trip-types span { background:#f2f3f5; color:#171717; border-color:#dce0e4; }
-#phone .trip-sheet .trip-types input:checked+span { background:#fff3ae; color:#171717; }
+#phone .trip-sheet .trip-types input:checked+span { background:#FFD628; color:#171717; }
 #phone .intro-screen h2 em { color:#715b00; }
 #phone .intro-screen>.guest { color:#5b626a; }
 #phone :is(.pass-empty p,.store-event-more,.store-event-branches>p,.branch-map-status,.branch-selected-location small,.event-detail-list li,.event-visitor-value,.event-highlights span,.event-table-wrap th,.event-table-wrap td:last-child,.event-table-wrap td,.event-table-wrap th,.sheet p,.sheet .guest,.form-error) { color:#545d66; }
@@ -54,3 +54,86 @@
 
 /* Keep a compact ring and a clear label gap. */
 #phone #bottomNav button { grid-template-rows:32px 14px; gap:8px; }
+
+/* Discovery and plan editing polish. */
+#phone .store-mapbox-page,#phone .shopping-pass,#phone.home .home-discovery{padding-left:24px;padding-right:24px;box-sizing:border-box}
+.home-section-note{font-size:12px;line-height:1.7;color:#626870;margin:-6px 0 16px}
+.home-card-brand{font-size:11px;font-weight:800;color:#715b00}.home-card-location,.home-card-period{font-size:11px;line-height:1.5;color:#626870;overflow-wrap:anywhere}
+.home-popup-heading h3{font-size:19px;word-break:keep-all}.home-popup-heading>button{flex-shrink:0}
+.pass-login-prompt{margin:0 0 20px}.pass-login-prompt .pass-login-link{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;border:1px solid #e4e6e9;border-radius:12px;background:#fff;color:#242629;font-size:14px;font-weight:700;text-decoration:none}.pass-login-prompt svg{width:20px;height:20px}
+.place-card-rating{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;font-size:12px;line-height:1.5}.place-card-rating>span{color:#715b00;font-weight:700}.place-card-rating .place-rating-empty{color:#747b85;font-weight:400}.place-card-rating a{color:#715b00;text-underline-offset:3px}
+.venue-stop-order{align-self:stretch}.venue-stop-order .venue-stop-remove{margin-top:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:48px;width:40px;color:#a33b32;background:#fff4f2;border-color:#f0d7d2;font-size:10px}.venue-stop-remove svg{width:19px;height:19px}
+@media(max-width:350px){#phone .store-mapbox-page,#phone .shopping-pass,#phone.home .home-discovery{padding-left:20px;padding-right:20px}}
+
+.pass-event-more{margin-top:14px;border-top:1px solid #e4e6e9;padding-top:12px}.pass-event-more>summary{cursor:pointer;font-size:12px;font-weight:700;color:#626870;padding:6px 0}.pass-event-more dl{font-size:12px;line-height:1.7}.pass-event-more dl>div{margin:10px 0}.pass-event-more dt{font-weight:700}.pass-event-more dd{margin:3px 0 0;color:#626870}.pass-choice-top label>span{line-height:1.65}
+
+.pass-action-dock .pass-login-prompt{margin:10px 0 0}.pass-action-dock .pass-login-prompt .pass-login-link{min-height:40px;font-size:12px;background:#fff}
+
+/* Square, edge-to-edge event artwork throughout the app. */
+#phone .home-popup-card>img,#phone .home-rail-event>img{aspect-ratio:1;object-fit:cover;object-position:center}
+#phone img[src*="gstar-poster-"],#phone img[src*="gwangalli-poster-"],#phone img[src*="daldal-poster-"],#phone img[src*="maplestory-poster-"],#phone img[src*="mugiwara-poster-"]{object-fit:cover;object-position:center}
+#phone img[src*="daldal-poster-"]{object-position:50% 58%}
+#phone .event-detail-banner:has(img[src*="20261112"]){aspect-ratio:1}
+
+/* Dark navigation; retain existing selection geometry and white graphics. */
+#phone #bottomNav{background:#191919;border-top-color:#191919}
+#phone #bottomNav button,#phone #bottomNav button.active{color:#fff}
+#phone #bottomNav button.active::before{background:#ffffff16}
+#phone #bottomNav::after{background:#191919}
+
+/* Saved event hearts share a dark surface and brand-yellow glyph. */
+#phone .event-save-button.is-saved,#phone .store-event-save.is-saved,#phone .saved-event-card>.event-save-button.is-saved,#phone .event-social-actions button.is-saved,#phone .supplied-banner-actions .event-banner-count.is-saved{background:#191919;border-color:#191919;color:#FFD628}
+#phone .event-save-button.is-saved svg,#phone .event-banner-count.is-saved svg{color:#FFD628;fill:#FFD628;stroke:#FFD628}
+
+/* Dark visit-date card with yellow date labels. */
+#phone .shopping-pass .pass-settings{background:#191919;border-color:#191919;color:#fff}
+#phone .shopping-pass .pass-settings .pass-section-head h3,#phone .shopping-pass .pass-settings .pass-section-head h3 span,#phone .shopping-pass .pass-settings .pass-trip-dates strong{color:#fff}
+#phone .shopping-pass .pass-settings .pass-trip-dates span,#phone .shopping-pass .pass-settings .pass-helper{color:#c7cbd0}
+#phone .shopping-pass .pass-settings .pass-trip-dates>.icon{color:#FFD628}
+#phone .shopping-pass .pass-settings .pass-fields label{color:#FFD628}
+#phone .shopping-pass .pass-settings .pass-fields input{background:#303236;border-color:#555960;color:#fff;color-scheme:dark}
+/* Every icon-only event heart has the same circular touch target. */
+#phone .event-save-button:not(.event-banner-count),#phone .store-event-save,#phone .saved-event-card>.event-save-button{width:44px;height:44px;min-width:44px;min-height:44px;border-radius:50%;padding:10px;box-sizing:border-box;display:grid;place-items:center}
+#phone .event-save-button.is-saved,#phone .store-event-save.is-saved,#phone .saved-event-card>.event-save-button.is-saved{background:#191919;border-color:#191919;color:#FFD628}
+#phone .event-save-button.is-saved svg,#phone .saved-event-card>.event-save-button.is-saved svg{fill:#FFD628;stroke:#FFD628;color:#FFD628}
+
+/* Compact date prompt after removing its secondary sentence. */
+#phone .shopping-pass .pass-settings .pass-trip-dates{gap:10px;min-height:28px;align-items:center}
+#phone .shopping-pass .pass-settings .pass-trip-dates strong{margin:0;line-height:1.5}
+#phone .shopping-pass .pass-settings .pass-fields{margin-top:20px;gap:10px}
+
+/* Compact heart controls, aligned to each card's content edge. */
+#phone .event-save-button:not(.event-banner-count),#phone .store-event-save,#phone .saved-event-card>.event-save-button,#phone .place-card-heart{width:36px;height:36px;min-width:36px;min-height:36px;padding:8px;border-radius:50%;box-sizing:border-box;display:grid;place-items:center}
+#phone .event-save-button:not(.event-banner-count)::before,#phone .place-card-heart::before{content:'';position:absolute;inset:-4px;border-radius:50%}
+#phone .event-save-button svg,#phone .place-card-heart svg{width:18px;height:18px;flex:none}
+#phone .store-event-card>.event-save-button{top:18px;right:0}
+#phone .store-event-copy>small{padding-right:44px}
+#phone .store-event-copy>strong{padding-right:40px}
+#phone .saved-event-card>.event-save-button{right:16px;bottom:16px}
+#phone .place-card-heart{right:0;top:12px}
+#phone .place-card-heart[aria-pressed=true]{background:#191919;color:#FFD628}
+#phone .place-card-heart[aria-pressed=true] svg{fill:#FFD628;stroke:#FFD628}
+#phone .event-social-actions{align-items:center;gap:8px}
+#phone .supplied-banner-actions .event-banner-count{display:flex;align-items:center;justify-content:center;flex-direction:row;gap:6px;min-width:54px;min-height:34px;height:34px;width:auto;padding:7px 10px;border-radius:20px;font-size:11px;line-height:1}
+#phone .supplied-banner-actions .event-banner-count svg{width:16px;height:16px}
+
+/* Subject-centered square crops of the supplied event posters. */
+#phone img[src*="sanx-user-20261112"]{object-fit:cover;object-position:50% 50%}
+#phone img[src*="signiel-user-20261112"]{object-fit:cover;object-position:65% 50%}
+#phone img[src*="harrypotter-user-20261112"]{object-fit:cover;object-position:50% 52%}
+#phone .event-detail-banner:has(img[src*="sanx-user-20261112"]),#phone .event-detail-banner:has(img[src*="signiel-user-20261112"]),#phone .event-detail-banner:has(img[src*="harrypotter-user-20261112"]){aspect-ratio:1}
+
+/* Keep the footer directions label readable in the light theme. */
+#phone .event-detail-dialog .event-detail-actions>a.event-directions,
+#phone .event-detail-dialog .event-detail-actions>a.event-directions:visited,
+#phone .event-detail-dialog .event-detail-actions>a.event-directions:hover{background:#191919;border-color:#191919;color:#fff;-webkit-text-fill-color:#fff}
+
+/* Primary page titles share one compact spacing rhythm. */
+#phone :is(.store-mapbox-page,.shopping-pass,.library-page)>.pass-title{margin:8px 0 24px;padding:0}
+#phone :is(.store-mapbox-page,.shopping-pass,.library-page)>.pass-title>h2{margin:0;font-size:30px;line-height:1.3;letter-spacing:-1px}
+
+/* Language selection shares the home wordmark and a concise heading. */
+#phone .language-intro>.wordmark{font-size:25px;line-height:1.3;letter-spacing:-1.2px;color:#191919}
+#phone .language-intro>.wordmark em{color:inherit}
+#phone .language-intro h2{margin:18px 0 0}
+#phone .language-intro{margin-bottom:24px}

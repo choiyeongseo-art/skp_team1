@@ -1,0 +1,78 @@
+/* Shared category tiles: generated glass artwork above compact labels. */
+#phone .home-category-grid,#phone .store-category-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 6px}
+#phone .home-category-grid{margin:0;padding:24px 20px 18px;background:#fff}
+#phone .home-category-button,#phone .store-category-filters>button{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;min-width:0;min-height:90px;padding:6px 2px;border:1px solid transparent;border-radius:14px;background:transparent;color:#242629;font-size:11px;font-weight:650;line-height:1.4;text-align:center}
+#phone .category-glass-icon{display:block;width:60px;height:60px;object-fit:contain;flex:none;pointer-events:none}
+#phone .home-category-button>span,#phone .store-category-filters>button>span{font-size:11px;white-space:normal;word-break:keep-all}
+#phone .store-category-filters>button.active{background:#f3f4f5;border-color:#FFD628;color:#191919}
+#phone .home-category-button:hover,#phone .store-category-filters>button:hover{background:#f5f6f7}
+#phone .home-category-button:focus-visible,#phone .store-category-filters>button:focus-visible{outline:2px solid #191919;outline-offset:2px}
+#phone.home .home-discovery{padding-top:10px}
+@media(max-width:350px){#phone .home-category-grid{padding-inline:16px}#phone .category-glass-icon{width:52px;height:52px}#phone .home-category-button,#phone .store-category-filters>button{min-height:82px}}
+
+/* Main categories first; progressively disclose area and brand choices. */
+#phone .store-page-intro{margin-bottom:24px}
+#phone .store-filter-group{margin-bottom:20px}
+#phone .store-filter-group>h3{margin:0 0 12px;font-size:12px;font-weight:650;color:#626870}
+#phone .store-refine{margin:8px 0 24px;border:1px solid #e2e5e9;border-radius:14px;background:#fff}
+#phone .store-refine>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:66px;padding:14px 16px;box-sizing:border-box;list-style:none;cursor:pointer}
+#phone .store-refine>summary::-webkit-details-marker{display:none}
+#phone .store-refine summary strong{display:block;font-size:13px;line-height:1.5;color:#191919}
+#phone .store-refine summary small{display:block;margin-top:3px;font-size:11px;line-height:1.5;color:#747b85}
+#phone .store-refine-value{display:flex;gap:12px;align-items:center;font-size:12px;font-weight:650;color:#30363d}
+#phone .store-refine-value>span{transition:transform .2s}
+#phone .store-refine[open] .store-refine-value>span{transform:rotate(180deg)}
+#phone .store-refine-body{padding:18px 14px 0;border-top:1px solid #e9ecef;background:#fafbfc;border-radius:0 0 14px 14px}
+#phone .store-refine .home-event-regions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:none;border:0;padding:0;overflow:visible}
+#phone .store-refine .store-brand-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;overflow:visible;margin:0;padding:0}
+#phone .store-refine .home-event-regions>button,#phone .store-refine .store-brand-filters>button{display:flex;align-items:center;justify-content:center;min-width:0;min-height:42px;height:auto;padding:10px 8px;box-sizing:border-box;font-size:11px;line-height:1.5;white-space:normal;overflow-wrap:anywhere;border-radius:9px;background:#eef0f2;color:#424950;border:1px solid transparent}
+#phone .store-refine .home-event-regions>button.active,#phone .store-refine .store-brand-filters>button.active{background:#FFD628;color:#191919}
+
+/* Quiet rounded tiles behind home category artwork. */
+#phone .home-category-button{background:#f3f4f6;border:1px solid #e9ecef;border-radius:16px;padding:10px 2px 9px;min-height:98px}
+#phone .home-category-button:hover{background:#eceef1;border-color:#d8dde3}
+
+/* The complete shopping header shares one yellow surface. */
+#phone.home .home-feature-band{padding-bottom:24px;margin-bottom:32px;border-radius:0 0 30px 30px;overflow:hidden;background:#FFD628}
+#phone.home .home-feature-band .home-category-grid{padding:8px 20px 0;background:transparent;gap:10px 8px}
+#phone.home .home-feature-band .home-category-button{background:#ffffffeb;border-color:#fff;border-radius:16px;min-height:94px;padding:8px 2px}
+#phone.home .home-feature-band .home-category-button:hover{background:#fff;border-color:#191919}
+#phone.home .home-feature-band+.home-discovery{padding-top:0}
+@media(max-width:350px){#phone.home .home-feature-band .home-category-grid{padding-inline:16px}}
+
+/* Calm spacing after removing the decorative caption. */
+#phone.home .home-feature-band .home-category-grid{padding:24px 20px 0;gap:12px 8px}
+#phone.home .home-feature-band{padding-bottom:24px;margin-bottom:32px}
+@media(max-width:350px){#phone.home .home-feature-band .home-category-grid{padding-inline:16px}}
+
+/* Home category selection filters only the discovery sections below it. */
+#phone.home .home-feature-band .home-category-button.active{background:#fff;border-color:#191919;box-shadow:inset 0 0 0 1px #191919}
+#phone.home .home-discovery>.home-category-rail-section:first-child{margin-top:0}
+#phone.home .home-category-empty{width:100%;margin:0;padding:20px 14px;border-radius:12px;background:#f3f4f6;color:#626870;font-size:12px;line-height:1.8}
+
+/* Ticket stub finish: a quiet perforation and two side notches. */
+#phone.home .home-feature-band{position:relative;padding-bottom:48px;border-radius:0 0 8px 8px}
+
+/* Longer finder districts need equal-width, comfortably spaced options. */
+#phone .store-refine .home-event-regions{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#phone .store-refine .home-event-regions>button{min-height:44px;padding:10px 8px;word-break:keep-all;overflow-wrap:anywhere}
+#phone .store-refine .home-event-regions>button:first-child{grid-column:1/-1}
+#phone .store-refine-value{max-width:65%;text-align:right;font-size:11px;line-height:1.5}
+
+/* Ticket edge cutouts, without a perforation line. */
+#phone.home .home-feature-band::after{content:'';position:absolute;left:-12px;right:-12px;bottom:15px;height:24px;background:radial-gradient(circle at center,#fff 0 11.5px,transparent 12px) left center/24px 24px no-repeat,radial-gradient(circle at center,#fff 0 11.5px,transparent 12px) right center/24px 24px no-repeat;pointer-events:none}
+
+/* Shared flat symbols: clean silhouette, no gloss or drop shadow. */
+#phone .category-glass-icon{width:52px;height:52px;filter:none}
+#phone .home-category-button,#phone .store-category-filters>button{gap:8px}
+@media(max-width:350px){#phone .category-glass-icon{width:46px;height:46px}}
+
+/* Original BD artwork: a short lift / landing, followed by a long quiet hold. */
+#phone .category-bd-motion{position:relative;display:block;perspective:240px;overflow:visible}
+#phone .category-bd-motion-face{position:absolute;inset:2px;display:block;overflow:hidden;border-radius:12px;background:#FFD628;transform-origin:50% 75%;animation:bd-category-drop 6s cubic-bezier(.22,.61,.36,1) infinite}
+#phone .category-bd-motion-face>img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.12);pointer-events:none;user-select:none}
+@keyframes bd-category-drop{0%,58%,100%{transform:translateY(0) rotate(0) scale(1)}64%{transform:translateY(-5px) rotate(-6deg) scale(1.03)}70%{transform:translateY(1px) rotate(3deg) scale(.97)}76%{transform:translateY(-1px) rotate(-1deg) scale(1.01)}82%{transform:translateY(0) rotate(0) scale(1)}}
+@media(hover:hover){#phone :is(.home-category-button,.store-category-filters>button):hover .category-bd-motion-face{animation:bd-category-hover .65s cubic-bezier(.22,.61,.36,1) both}}
+#phone :is(.home-category-button,.store-category-filters>button):focus-visible .category-bd-motion-face{animation:bd-category-hover .65s cubic-bezier(.22,.61,.36,1) both}
+@keyframes bd-category-hover{0%,100%{transform:translateY(0) rotate(0)}35%{transform:translateY(-5px) rotate(-6deg)}65%{transform:translateY(1px) rotate(3deg)}}
+@media(prefers-reduced-motion:reduce){#phone .category-bd-motion-face,#phone :is(.home-category-button,.store-category-filters>button):is(:hover,:focus-visible) .category-bd-motion-face{animation:none;transform:none}}

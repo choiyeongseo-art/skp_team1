@@ -1,0 +1,672 @@
+{
+  "source": "DeepL web translator, signed-in session",
+  "date": "2026-11-13",
+  "postedited": true,
+  "notes": "UI brevity; brand names; Potterheads; Woni; venue transliteration corrected after translation. No credentials retained.",
+  "translations": {
+    "상세 보기": {
+      "en": "View details",
+      "ja": "詳細を見る",
+      "zh-CN": "查看详情",
+      "zh-TW": "查看詳情"
+    },
+    "쇼핑 일러스트": {
+      "en": "Shopping illustration",
+      "ja": "ショッピングイラスト",
+      "zh-CN": "购物插图",
+      "zh-TW": "購物插圖"
+    },
+    "혜택 보기": {
+      "en": "View offers",
+      "ja": "特典を見る",
+      "zh-CN": "查看优惠",
+      "zh-TW": "查看優惠"
+    },
+    "가격 출처": {
+      "en": "Price source",
+      "ja": "価格の出典",
+      "zh-CN": "价格来源",
+      "zh-TW": "價格來源"
+    },
+    "정상가": {
+      "en": "Regular price",
+      "ja": "通常価格",
+      "zh-CN": "原价",
+      "zh-TW": "原價"
+    },
+    "원": {
+      "en": "KRW",
+      "ja": "ウォン",
+      "zh-CN": "韩元",
+      "zh-TW": "韓元"
+    },
+    "출처": {
+      "en": "Source",
+      "ja": "出典",
+      "zh-CN": "来源",
+      "zh-TW": "來源"
+    },
+    "바로 사러가기": {
+      "en": "Buy now",
+      "ja": "購入ページへ",
+      "zh-CN": "立即购买",
+      "zh-TW": "立即購買"
+    },
+    "공식몰 열기": {
+      "en": "Open official store",
+      "ja": "公式ストアを開く",
+      "zh-CN": "打开官方商城",
+      "zh-TW": "開啟官方商店"
+    },
+    "Apple 로그인 연결을 다시 확인한 뒤 탈퇴를 진행해 주세요.": {
+      "en": "Please verify your Apple sign-in connection again before deleting your account.",
+      "ja": "Appleログインの連携を再度確認してから、退会手続きを進めてください。",
+      "zh-CN": "请重新确认 Apple 登录关联后，再注销账户。",
+      "zh-TW": "請再次確認 Apple 登入連結後，再刪除帳號。"
+    },
+    "Apple로 다시 확인": {
+      "en": "Verify with Apple again",
+      "ja": "Appleで再確認",
+      "zh-CN": "通过 Apple 重新验证",
+      "zh-TW": "透過 Apple 重新確認"
+    },
+    "Apple 로그인 연결 해제가 완료됐어요.": {
+      "en": "Your Apple sign-in connection has been disconnected.",
+      "ja": "Appleログインの連携解除が完了しました。",
+      "zh-CN": "Apple 登录已成功解除绑定。",
+      "zh-TW": "Apple 登入連結已解除。"
+    },
+    "탈퇴하면 계정과 계정에 저장된 좋아요, 플랜, 방문 기록, 언어 설정 및 연결된 이용 기록이 삭제돼요.": {
+      "en": "Deleting your account removes your saved events, plans, visit history, language settings and linked usage records.",
+      "ja": "退会すると、アカウントおよび保存したイベント、プラン、訪問履歴、言語設定、関連する利用履歴が削除されます。",
+      "zh-CN": "注销后，您的账户、收藏活动、行程、访问记录、语言设置及关联使用记录将被删除。",
+      "zh-TW": "刪除帳號後，帳號及其中儲存的收藏活動、行程、造訪紀錄、語言設定與相關使用紀錄都會刪除。"
+    },
+    "삭제한 계정과 기록은 복구할 수 없어요. 비회원으로 저장한 기록은 별도로 남아 있을 수 있어요.": {
+      "en": "Deleted accounts and records cannot be recovered. Records saved as a guest may remain separately.",
+      "ja": "削除したアカウントと履歴は復元できません。ゲストとして保存した履歴は別途残る場合があります。",
+      "zh-CN": "已删除的账户和记录无法恢复。以访客身份保存的记录可能会单独保留。",
+      "zh-TW": "已刪除的帳號與紀錄無法復原。訪客身分儲存的紀錄可能會另行保留。"
+    },
+    "삭제 내용을 확인했으며 회원탈퇴에 동의합니다.": {
+      "en": "I have reviewed what will be deleted and agree to delete my account.",
+      "ja": "削除内容を確認し、退会に同意します。",
+      "zh-CN": "我已确认删除内容，并同意注销账户。",
+      "zh-TW": "我已確認刪除內容，並同意刪除帳號。"
+    },
+    "취소": {
+      "en": "Cancel",
+      "ja": "キャンセル",
+      "zh-CN": "取消",
+      "zh-TW": "取消"
+    },
+    "탈퇴하기": {
+      "en": "Delete account",
+      "ja": "退会する",
+      "zh-CN": "注销账户",
+      "zh-TW": "刪除帳號"
+    },
+    "삭제 중…": {
+      "en": "Deleting…",
+      "ja": "削除中…",
+      "zh-CN": "正在删除…",
+      "zh-TW": "正在刪除…"
+    },
+    "탈퇴하지 못했어요. 연결 상태를 확인한 뒤 다시 시도해 주세요.": {
+      "en": "Could not delete your account. Check your connection and try again.",
+      "ja": "退会できませんでした。接続状態を確認してから、もう一度お試しください。",
+      "zh-CN": "注销失败。请检查连接后重试。",
+      "zh-TW": "刪除帳號失敗。請確認連線後再試一次。"
+    },
+    "회원탈퇴가 완료됐어요.": {
+      "en": "Your account has been deleted.",
+      "ja": "退会が完了しました。",
+      "zh-CN": "账户已注销。",
+      "zh-TW": "帳號已刪除。"
+    },
+    "Apple로 가입했다면 Apple 계정 설정에서도 BUSAN DROP의 로그인 연결을 해제할 수 있어요.": {
+      "en": "If you signed up with Apple, you can also disconnect BUSAN DROP in your Apple account settings.",
+      "ja": "Appleで登録した場合は、Appleアカウントの設定からもBUSAN DROPのログイン連携を解除できます。",
+      "zh-CN": "若通过 Apple 注册，也可在 Apple 账户设置中解除与 BUSAN DROP 的登录关联。",
+      "zh-TW": "若透過 Apple 註冊，亦可在 Apple 帳號設定中解除與 BUSAN DROP 的登入連結。"
+    },
+    "행사 탐색과 플랜 이용 흐름을 개선하기 위해 방문·클릭 기록을 수집해도 될까요? 이메일과 정밀 위치는 수집하지 않아요.": {
+      "en": "May we collect visit and click history to improve event discovery and planning? We do not collect email addresses or precise location.",
+      "ja": "イベント検索やプランの使いやすさを改善するため、訪問・クリック履歴の収集を許可しますか？メールアドレスや詳細な位置情報は収集しません。",
+      "zh-CN": "为优化活动浏览和行程体验，是否允许收集访问及点击记录？我们不会收集电子邮箱或精确位置。",
+      "zh-TW": "為改善活動瀏覽與行程使用體驗，是否允許收集造訪及點擊紀錄？我們不會收集電子郵件或精確位置。"
+    },
+    "허용": {
+      "en": "Allow",
+      "ja": "許可",
+      "zh-CN": "允许",
+      "zh-TW": "允許"
+    },
+    "허용 안함": {
+      "en": "Do not allow",
+      "ja": "許可しない",
+      "zh-CN": "不允许",
+      "zh-TW": "不允許"
+    },
+    "행사 일러스트": {
+      "en": "Event illustration",
+      "ja": "イベントのイラスト",
+      "zh-CN": "活动插图",
+      "zh-TW": "活動插圖"
+    },
+    "행사 공유": {
+      "en": "Share event",
+      "ja": "イベントを共有",
+      "zh-CN": "分享活动",
+      "zh-TW": "分享活動"
+    },
+    "선택한 행사": {
+      "en": "Selected event",
+      "ja": "選択したイベント",
+      "zh-CN": "已选活动",
+      "zh-TW": "已選活動"
+    },
+    "저장을 취소할까요?": {
+      "en": "Remove this saved event?",
+      "ja": "このイベントの保存を解除しますか？",
+      "zh-CN": "要取消收藏此活动吗？",
+      "zh-TW": "要取消收藏此活動嗎？"
+    },
+    "계속 저장": {
+      "en": "Keep saved",
+      "ja": "保存したままにする",
+      "zh-CN": "保留收藏",
+      "zh-TW": "保留收藏"
+    },
+    "부산 이벤트": {
+      "en": "Busan events",
+      "ja": "釜山のイベント",
+      "zh-CN": "釜山活动",
+      "zh-TW": "釜山活動"
+    },
+    "카테고리별 행사를 같은 크기의 2열 카드로 보여줍니다.": {
+      "en": "Events are displayed by category in a two-column card grid.",
+      "ja": "カテゴリー別のイベントを同じサイズの2列カードで表示します。",
+      "zh-CN": "按类别以相同大小的双列卡片展示活动。",
+      "zh-TW": "依類別以相同大小的雙欄卡片顯示活動。"
+    },
+    "부산에서 즐기는 전시·축제": {
+      "en": "Exhibitions and festivals in Busan",
+      "ja": "釜山で楽しむ展示・フェスティバル",
+      "zh-CN": "釜山展览与节庆",
+      "zh-TW": "釜山展覽與節慶"
+    },
+    "이번 주 놓치기 아쉬운 팝업": {
+      "en": "Pop-ups to catch this week",
+      "ja": "今週見逃せないポップアップ",
+      "zh-CN": "本周不容错过的快闪活动",
+      "zh-TW": "本週不容錯過的快閃活動"
+    },
+    "부산에서 만나는 패션 브랜드": {
+      "en": "Fashion brands in Busan",
+      "ja": "釜山で出会えるファッションブランド",
+      "zh-CN": "在釜山邂逅时尚品牌",
+      "zh-TW": "在釜山邂逅時尚品牌"
+    },
+    "뷰티 브랜드 혜택 모아보기": {
+      "en": "Beauty brand offers",
+      "ja": "ビューティーブランドの特典一覧",
+      "zh-CN": "美容品牌优惠汇总",
+      "zh-TW": "美容品牌優惠一覽"
+    },
+    "부산에서 머무는 특별한 하루": {
+      "en": "A special stay in Busan",
+      "ja": "釜山で過ごす特別な一日",
+      "zh-CN": "在釜山度过特别的一天",
+      "zh-TW": "在釜山度過特別的一天"
+    },
+    "부산에서 즐기는 맛있는 한 끼": {
+      "en": "Delicious meals in Busan",
+      "ja": "釜山で楽しむ美味しい食事",
+      "zh-CN": "在釜山享用美味佳肴",
+      "zh-TW": "在釜山享用美味佳餚"
+    },
+    "달콤하게 즐기는 부산 디저트": {
+      "en": "Sweet treats in Busan",
+      "ja": "甘く楽しむ釜山のデザート",
+      "zh-CN": "尽享釜山甜点",
+      "zh-TW": "甜蜜品嚐釜山甜點"
+    },
+    "지금 확인된 행사가 없어요. 새로운 소식을 준비하고 있어요.": {
+      "en": "No confirmed events yet. New updates are on the way.",
+      "ja": "現在、確認できるイベントはありません。新しい情報を準備中です。",
+      "zh-CN": "目前暂无已确认的活动，最新资讯即将更新。",
+      "zh-TW": "目前尚無已確認的活動，正在準備最新消息。"
+    },
+    "Google·Apple 또는 아이디·비밀번호로 로그인합니다.": {
+      "en": "Sign in with Google, Apple, or your username and password.",
+      "ja": "Google・Apple、またはID・パスワードでログインします。",
+      "zh-CN": "使用 Google、Apple 或用户名与密码登录。",
+      "zh-TW": "使用 Google、Apple 或帳號與密碼登入。"
+    },
+    "검토용 초안 · 최종 수정 2026.11.08": {
+      "en": "Draft for review · Updated 2026.11.08",
+      "ja": "確認用草案・最終更新 2026.11.08",
+      "zh-CN": "审阅草稿 · 更新于 2026.11.08",
+      "zh-TW": "審閱草稿 · 更新於 2026.11.08"
+    },
+    "목차": {
+      "en": "Contents",
+      "ja": "目次",
+      "zh-CN": "目录",
+      "zh-TW": "目錄"
+    },
+    "이전 장소에서 길찾기": {
+      "en": "Directions from previous location",
+      "ja": "前の場所からルート検索",
+      "zh-CN": "从上一处地点规划路线",
+      "zh-TW": "從上一處地點規劃路線"
+    },
+    "일정에서 빼기": {
+      "en": "Remove from itinerary",
+      "ja": "行程から削除",
+      "zh-CN": "从行程中移除",
+      "zh-TW": "從行程中移除"
+    },
+    "이름 변경": {
+      "en": "Rename",
+      "ja": "名前を変更",
+      "zh-CN": "更改名称",
+      "zh-TW": "更改名稱"
+    },
+    "현재 위치에서 길찾기": {
+      "en": "Directions from current location",
+      "ja": "現在地からルート検索",
+      "zh-CN": "从当前位置规划路线",
+      "zh-TW": "從目前位置規劃路線"
+    },
+    "빼기": {
+      "en": "Remove",
+      "ja": "削除",
+      "zh-CN": "移除",
+      "zh-TW": "移除"
+    },
+    "주변 장소 추가·다시 선택": {
+      "en": "Add or reselect nearby places",
+      "ja": "周辺の場所を追加・再選択",
+      "zh-CN": "添加或重新选择周边地点",
+      "zh-TW": "新增或重新選擇周邊地點"
+    },
+    "이 행사 일정 빼기": {
+      "en": "Remove this event from itinerary",
+      "ja": "このイベントを行程から削除",
+      "zh-CN": "将此活动从行程中移除",
+      "zh-TW": "將此活動從行程中移除"
+    },
+    "내 위치에서 다음 목적지로 길찾기": {
+      "en": "Directions to the next stop",
+      "ja": "現在地から次の目的地へのルート検索",
+      "zh-CN": "规划前往下一站的路线",
+      "zh-TW": "規劃前往下一站的路線"
+    },
+    "별점": {
+      "en": "Rating",
+      "ja": "評価",
+      "zh-CN": "评分",
+      "zh-TW": "評分"
+    },
+    "등록된 별점 없음": {
+      "en": "No ratings yet",
+      "ja": "評価はまだありません",
+      "zh-CN": "暂无评分",
+      "zh-TW": "尚無評分"
+    },
+    "별점·리뷰 확인": {
+      "en": "View ratings and reviews",
+      "ja": "評価・レビューを確認",
+      "zh-CN": "查看评分与评论",
+      "zh-TW": "查看評分與評論"
+    },
+    "코스에 포함": {
+      "en": "Include in itinerary",
+      "ja": "コースに含める",
+      "zh-CN": "加入行程",
+      "zh-TW": "加入行程"
+    },
+    "방문 전 확인해주세요.": {
+      "en": "Please check before visiting.",
+      "ja": "訪問前にご確認ください。",
+      "zh-CN": "到访前请确认。",
+      "zh-TW": "造訪前請先確認。"
+    },
+    "보기 방식": {
+      "en": "View mode",
+      "ja": "表示方法",
+      "zh-CN": "查看方式",
+      "zh-TW": "檢視模式"
+    },
+    "행사장 주변 지도": {
+      "en": "Map around the venue",
+      "ja": "会場周辺の地図",
+      "zh-CN": "活动场地周边地图",
+      "zh-TW": "活動場地周邊地圖"
+    },
+    "선택한 장소 소개": {
+      "en": "About the selected place",
+      "ja": "選択した場所の紹介",
+      "zh-CN": "所选地点介绍",
+      "zh-TW": "所選地點介紹"
+    },
+    "행사장": {
+      "en": "Venue",
+      "ja": "会場",
+      "zh-CN": "活动场地",
+      "zh-TW": "活動場地"
+    },
+    "일정에서 장소를 뺐어요. 이전 버튼에서 다시 추가할 수 있어요.": {
+      "en": "Place removed from your itinerary. Use Back to add it again.",
+      "ja": "行程から場所を削除しました。「戻る」ボタンから再度追加できます。",
+      "zh-CN": "已将此地点从行程中移除，可通过“返回”按钮重新添加。",
+      "zh-TW": "已將此地點從行程移除，可透過「返回」按鈕重新加入。"
+    },
+    "방문할 지점을 선택해주세요": {
+      "en": "Select a venue to visit",
+      "ja": "訪問する会場を選択してください",
+      "zh-CN": "请选择要前往的地点",
+      "zh-TW": "請選擇要造訪的地點"
+    },
+    "더보기": {
+      "en": "More",
+      "ja": "もっと見る",
+      "zh-CN": "查看更多",
+      "zh-TW": "更多"
+    },
+    "팝업·행사 이름": {
+      "en": "Pop-up / event name",
+      "ja": "ポップアップ・イベント名",
+      "zh-CN": "快闪店／活动名称",
+      "zh-TW": "快閃店／活動名稱"
+    },
+    "장소": {
+      "en": "Location",
+      "ja": "場所",
+      "zh-CN": "地点",
+      "zh-TW": "地點"
+    },
+    "행사 전체 정보 보기": {
+      "en": "Full event details",
+      "ja": "イベントの詳細情報",
+      "zh-CN": "查看活动完整信息",
+      "zh-TW": "查看活動完整資訊"
+    },
+    "표시": {
+      "en": "Shown",
+      "ja": "表示",
+      "zh-CN": "显示",
+      "zh-TW": "顯示"
+    },
+    "해운대/마린시티": {
+      "en": "Haeundae / Marine City",
+      "ja": "海雲台／マリンシティ",
+      "zh-CN": "海云台／海洋城",
+      "zh-TW": "海雲台／海洋城"
+    },
+    "벡스코/센텀시티": {
+      "en": "BEXCO / Centum City",
+      "ja": "BEXCO／センタムシティ",
+      "zh-CN": "BEXCO／Centum City",
+      "zh-TW": "BEXCO／Centum City"
+    },
+    "송정/기장/정관": {
+      "en": "Songjeong / Gijang / Jeonggwan",
+      "ja": "松亭／機張／正官",
+      "zh-CN": "松亭／机张／正官",
+      "zh-TW": "松亭／機張／正官"
+    },
+    "광안리/경성대": {
+      "en": "Gwangalli / Kyungsung Univ.",
+      "ja": "広安里／慶星大",
+      "zh-CN": "广安里／庆星大学",
+      "zh-TW": "廣安里／慶星大學"
+    },
+    "부산역": {
+      "en": "Busan Station",
+      "ja": "釜山駅",
+      "zh-CN": "釜山站",
+      "zh-TW": "釜山站"
+    },
+    "자갈치/남포동/영도": {
+      "en": "Jagalchi / Nampo / Yeongdo",
+      "ja": "チャガルチ／南浦洞／影島",
+      "zh-CN": "札嘎其／南浦洞／影岛",
+      "zh-TW": "札嘎其／南浦洞／影島"
+    },
+    "송도/다대포": {
+      "en": "Songdo / Dadaepo",
+      "ja": "松島／多大浦",
+      "zh-CN": "松岛／多大浦",
+      "zh-TW": "松島／多大浦"
+    },
+    "서면/연산/범일": {
+      "en": "Seomyeon / Yeonsan / Beomil",
+      "ja": "西面／蓮山／凡一",
+      "zh-CN": "西面／莲山／凡一",
+      "zh-TW": "西面／蓮山／凡一"
+    },
+    "동래/온천/금정구": {
+      "en": "Dongnae / Oncheon / Geumjeong",
+      "ja": "東莱／温泉／金井区",
+      "zh-CN": "东莱／温泉／金井区",
+      "zh-TW": "東萊／溫泉／金井區"
+    },
+    "사상/강서/김해공항/하단": {
+      "en": "Sasang / Gangseo / Gimhae Airport / Hadan",
+      "ja": "沙上／江西／金海空港／下端",
+      "zh-CN": "沙上／江西／金海机场／下端",
+      "zh-TW": "沙上／江西／金海機場／下端"
+    },
+    "지도나 지점명을 누르면 해당 행사로 이동해요": {
+      "en": "Tap the map or a venue name to view its event.",
+      "ja": "地図や店舗名を押すと、該当するイベントに移動します。",
+      "zh-CN": "点击地图或地点名称可查看相应活动。",
+      "zh-TW": "點擊地圖或地點名稱即可查看對應活動。"
+    },
+    "지도를 불러오지 못했어요. 아래 지점명을 눌러 행사를 확인하세요.": {
+      "en": "Unable to load the map. Select a venue below to view its event.",
+      "ja": "地図を読み込めませんでした。下の店舗名からイベントをご確認ください。",
+      "zh-CN": "无法加载地图，请点击下方地点名称查看活动。",
+      "zh-TW": "無法載入地圖，請點擊下方地點名稱查看活動。"
+    },
+    "상세 필터": {
+      "en": "Refine filters",
+      "ja": "詳細フィルター",
+      "zh-CN": "详细筛选",
+      "zh-TW": "詳細篩選"
+    },
+    "리센느 원이도 빠진 와키윌리 패션": {
+      "en": "WACKY WILLY style with RESCENE's WONI",
+      "ja": "RESCENEのウォニと楽しむWACKY WILLYスタイル",
+      "zh-CN": "与 RESCENE WONI 一起感受 WACKY WILLY 时尚",
+      "zh-TW": "與 RESCENE WONI 一起感受 WACKY WILLY 時尚"
+    },
+    "젤라또 피케 룸웨어 · 부산본점": {
+      "en": "Gelato Pique loungewear · Busan Main Store",
+      "ja": "ジェラート ピケのルームウェア・釜山本店",
+      "zh-CN": "Gelato Pique 家居服 · 釜山本店",
+      "zh-TW": "Gelato Pique 居家服 · 釜山本店"
+    },
+    "리락쿠마·스미코구라시 굿즈 · 부산본점": {
+      "en": "Rilakkuma & Sumikko Gurashi goods · Busan Main Store",
+      "ja": "リラックマ・すみっコぐらしグッズ・釜山本店",
+      "zh-CN": "轻松熊与角落小伙伴周边 · 釜山本店",
+      "zh-TW": "拉拉熊與角落小夥伴周邊 · 釜山本店"
+    },
+    "그랜드 조선 부산 · 객실 패키지": {
+      "en": "Grand Josun Busan · Room packages",
+      "ja": "グランド朝鮮釜山・客室パッケージ",
+      "zh-CN": "釜山大朝鲜酒店 · 客房套餐",
+      "zh-TW": "釜山大朝鮮酒店 · 客房套裝"
+    },
+    "히나쿠우 캐릭터 굿즈 · 부산 팝업": {
+      "en": "Hinakuu goods · Busan pop-up",
+      "ja": "ヒナクウのキャラクターグッズ・釜山ポップアップ",
+      "zh-CN": "Hinakuu 角色周边 · 釜山快闪店",
+      "zh-TW": "Hinakuu 角色周邊 · 釜山快閃店"
+    },
+    "부산 여행 파우치, 여기서 채울까?": {
+      "en": "Fill your travel pouch in Busan?",
+      "ja": "釜山旅行のポーチ、ここで揃えようか？",
+      "zh-CN": "釜山旅行收纳包，就从这里装满吧？",
+      "zh-TW": "釜山旅行收納包，就從這裡裝滿吧？"
+    },
+    "매일 입을 옷이 제일 중요하니까": {
+      "en": "Because everyday outfits matter most",
+      "ja": "毎日着る服が一番大事だから",
+      "zh-CN": "毕竟每天穿的衣服最重要",
+      "zh-TW": "畢竟每天穿的衣服最重要"
+    },
+    "여행 사진 속 내 룩, 조금 더 과감하게": {
+      "en": "Go a little bolder in your travel photos",
+      "ja": "旅の写真のコーデ、もう少し大胆に",
+      "zh-CN": "旅行照片里的穿搭，再大胆一点",
+      "zh-TW": "旅行照片裡的穿搭，再大膽一點"
+    },
+    "눈 마주치면 데려오게 될걸?": {
+      "en": "One look and you'll want to take it home",
+      "ja": "目が合ったら、つい連れて帰りたくなる",
+      "zh-CN": "一眼就让你想带它回家",
+      "zh-TW": "看一眼就想帶回家"
+    },
+    "민트빛 설렘을 나에게 선물할 시간": {
+      "en": "Treat yourself to a little mint-blue magic",
+      "ja": "ミント色のときめきを自分にプレゼント",
+      "zh-CN": "送给自己一份薄荷色的悸动",
+      "zh-TW": "送自己一份薄荷色的悸動"
+    },
+    "먹는 참치 아니고, 데려가는 참치!": {
+      "en": "Not tuna to eat — tuna to take home!",
+      "ja": "食べるマグロじゃなくて、連れて帰るマグロ！",
+      "zh-CN": "不是用来吃的金枪鱼，是带回家的金枪鱼！",
+      "zh-TW": "不是要吃的鮪魚，是要帶回家的鮪魚！"
+    },
+    "귀여운 애 옆에 또 귀여운 애": {
+      "en": "One cute friend after another",
+      "ja": "かわいい子の隣に、またかわいい子",
+      "zh-CN": "可爱的小伙伴旁边，还有可爱的小伙伴",
+      "zh-TW": "可愛的小夥伴旁邊，還有可愛的小夥伴"
+    },
+    "오늘의 퀘스트는 부산에서!": {
+      "en": "Today's quest: Busan!",
+      "ja": "今日のクエストは釜山で！",
+      "zh-CN": "今天的任务就在釜山！",
+      "zh-TW": "今天的任務就在釜山！"
+    },
+    "부산 여행에 하루쯤은 이런 호사": {
+      "en": "One day of luxury on your Busan trip",
+      "ja": "釜山旅行、一日くらいはこんな贅沢を",
+      "zh-CN": "釜山之旅，总该享受一天奢华",
+      "zh-TW": "釜山之旅，總該享受一天奢華"
+    },
+    "바다 앞에서 아무것도 안 할 자유": {
+      "en": "The freedom to do nothing by the sea",
+      "ja": "海の前で何もしない自由",
+      "zh-CN": "面对大海，什么都不做的自由",
+      "zh-TW": "面對大海，什麼都不做的自由"
+    },
+    "체크인하는 순간, 여기가 내 여행지": {
+      "en": "Check in to your next destination",
+      "ja": "チェックインした瞬間、ここが私の旅先",
+      "zh-CN": "入住的那一刻，这里就是旅行目的地",
+      "zh-TW": "入住的那一刻，這裡就是旅行目的地"
+    },
+    "밥 배 따로, 부산 디저트 배 따로": {
+      "en": "Room for a meal, and room for Busan desserts",
+      "ja": "ご飯はご飯、釜山のデザートは別腹",
+      "zh-CN": "正餐一个胃，釜山甜点另一个胃",
+      "zh-TW": "正餐一個胃，釜山甜點另一個胃"
+    },
+    "광안리의 밤, 하늘이 무대가 된다": {
+      "en": "Gwangalli nights turn the sky into a stage",
+      "ja": "広安里の夜、空が舞台になる",
+      "zh-CN": "广安里的夜晚，天空化作舞台",
+      "zh-TW": "廣安里的夜晚，天空化作舞台"
+    },
+    "화면 너머 기다리던 게임, 직접 만나러": {
+      "en": "Meet the game you've been waiting for",
+      "ja": "画面の向こうで待ちわびたゲームに、会いに行こう",
+      "zh-CN": "亲身体验期待已久的游戏",
+      "zh-TW": "親身體驗期待已久的遊戲"
+    },
+    "이번 가을, 원이처럼 입어볼까?": {
+      "en": "Dress like RESCENE's WONI this fall?",
+      "ja": "この秋、RESCENEのウォニみたいに着てみようか？",
+      "zh-CN": "这个秋天，试试 RESCENE WONI 的穿搭？",
+      "zh-TW": "這個秋天，試試 RESCENE WONI 的穿搭？"
+    },
+    "히나쿠우가 부산에 놀러 왔다": {
+      "en": "Hinakuu is visiting Busan",
+      "ja": "ヒナクウが釜山に遊びに来た",
+      "zh-CN": "Hinakuu 来釜山玩了",
+      "zh-TW": "Hinakuu 來釜山玩了"
+    },
+    "잠옷 입고 약속 잡고 싶어지는": {
+      "en": "Pajamas you'll want to make plans in",
+      "ja": "パジャマのまま出かけたくなる",
+      "zh-CN": "让人想穿着睡衣出门赴约",
+      "zh-TW": "讓人想穿著睡衣出門赴約"
+    },
+    "기본템 쇼핑, 여기서 끝낼까?": {
+      "en": "Your basics shopping stops here?",
+      "ja": "定番アイテム探し、ここで決まり？",
+      "zh-CN": "基础款购物，就在这里搞定？",
+      "zh-TW": "基本款購物，就在這裡搞定？"
+    },
+    "해덕들 주목! 마법 한 스푼을 일상에": {
+      "en": "Potterheads, add a little magic to your day",
+      "ja": "ハリポタファン必見！日常に魔法をひとさじ",
+      "zh-CN": "哈迷看过来！为日常添一勺魔法",
+      "zh-TW": "哈迷看過來！為日常添一匙魔法"
+    },
+    "부산에 상륙한 밀짚모자 일당": {
+      "en": "The Straw Hat Pirates have landed in Busan",
+      "ja": "釜山に上陸した麦わらの一味",
+      "zh-CN": "登陆釜山的草帽一伙",
+      "zh-TW": "登陸釜山的草帽一夥"
+    },
+    "행사 상세 보기": {
+      "en": "View event details",
+      "ja": "イベント詳細を見る",
+      "zh-CN": "查看活动详情",
+      "zh-TW": "查看活動詳情"
+    },
+    "브랜드 이미지": {
+      "en": "Brand image",
+      "ja": "ブランドイメージ",
+      "zh-CN": "品牌图片",
+      "zh-TW": "品牌圖片"
+    }
+  },
+  "terminologyResearch": {
+    "woni": {
+      "spelling": {
+        "en": "RESCENE WONI",
+        "ja": "RESCENE ウォニ",
+        "zh-CN": "RESCENE WONI",
+        "zh-TW": "RESCENE WONI"
+      },
+      "sources": [
+        "https://music.bugs.co.kr/artist/80390465",
+        "https://rescene-fb.jp/",
+        "https://nitter.gq/RESCENEofficial/status/2119768137931649446"
+      ],
+      "note": "Chinese preserves the Latin stage name rather than inventing an unverified Chinese name."
+    },
+    "harryPotterFans": {
+      "en": "Potterheads",
+      "ja": "ハリポタファン",
+      "zh-CN": "哈迷",
+      "zh-TW": "哈迷",
+      "sources": [
+        "https://www.fanlore.org/wiki/Potterhead",
+        "https://news.tv-asahi.co.jp/news_geinou/articles/000303714.html",
+        "https://www.hpfl.net/about/site"
+      ],
+      "note": "Japanese also uses ポッタリアン; chose the immediately understandable ハリポタファン for a short promotional headline."
+    }
+  }
+}
