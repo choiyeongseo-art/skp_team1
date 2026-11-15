@@ -2,6 +2,8 @@
 (() => {
  const catalog=window.BUSAN_EVENT_CATALOG,api='/api/busandrop/event-saves';
  let snapshot={saved:[],counts:{}},loaded=false,failed=false,countsLoaded=false;
+ let loading=false,lastLoadAttempt=null;
+ const refreshAfterMs=5*60*1000;
  const busy=new Set(),heart='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>',share='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 11v9h14v-9"/></svg>';
  const activeSaved=()=>snapshot.saved.filter(entry=>catalog.some(event=>event.id===entry.eventId&&!window.BUSAN_EVENT_WINDOW.isExpired(event)));
  const byBrand=brand=>catalog.find(e=>e.brand===brand&&!window.BUSAN_EVENT_WINDOW.isExpired(e)),isSaved=id=>snapshot.saved.some(e=>e.eventId===id);
@@ -11,7 +13,7 @@
  const saveButton=(event,storeId)=>`<button class="event-save-button ${isSaved(event.id)?'is-saved':''}" data-event-social-save="${event.id}" data-event-store="${esc(storeId||'')}" aria-label="${isSaved(event.id)?'저장 취소':'행사 저장'}" aria-pressed="${isSaved(event.id)}" ${!loaded||busy.has(event.id)?'disabled':''}>${heart}</button>`;
  window.BUSAN_EVENT_SOCIAL={
   saveControl:(brand,storeId)=>{const event=byBrand(brand);return event?saveButton(event,storeId):'';},
-  refreshAccount:()=>{const account=window.BUSAN_ACCOUNT_STORE;if(account?.getOwner()){snapshot={saved:account.getEvents(),counts:snapshot.counts};loaded=!account.isLoading();failed=false;}else{snapshot={saved:[],counts:{}};loaded=false;countsLoaded=false;load();}if(state.screen==='saved')render();else sync();publish();},
+  refreshAccount:()=>{const account=window.BUSAN_ACCOUNT_STORE;if(account?.getOwner()){snapshot={saved:account.getEvents(),counts:snapshot.counts};loaded=!account.isLoading();failed=false;}else{snapshot={saved:[],counts:{}};loaded=false;countsLoaded=false;load(true);}if(state.screen==='saved')render();else sync();publish();},
   getState:()=>({saved:activeSaved().map(entry=>({...entry})),loaded,failed}),
   actions:item=>{const event=byBrand(item.brand);return event?`<div class="event-social-actions">${saveButton(event,item.id)}<button class="event-share-button" data-event-share="${event.id}" data-event-store="${esc(item.id||'')}" aria-label="행사 공유">${share}</button></div>`:'';},
   counter:brand=>{const event=byBrand(brand);return event?`<button type="button" class="event-banner-count event-save-button ${isSaved(event.id)?'is-saved':''}" data-event-social-save="${event.id}" data-event-count="${event.id}" aria-label="${isSaved(event.id)?'저장 취소':'행사 저장'}" aria-pressed="${isSaved(event.id)}" ${!loaded||busy.has(event.id)?'disabled':''}>${heart}<span>${countText(event.id)}</span></button>`:'';}
@@ -27,7 +29,9 @@
   document.querySelectorAll('[data-event-social-save]').forEach(button=>{const id=button.dataset.eventSocialSave,on=isSaved(id);button.classList.toggle('is-saved',on);button.setAttribute('aria-pressed',String(on));button.setAttribute('aria-label',on?'저장 취소':'행사 저장');button.disabled=!loaded||busy.has(id);});
   document.querySelectorAll('[data-event-count]').forEach(node=>{node.querySelector('span').textContent=countText(node.dataset.eventCount);});
  }
- async function load(){
+ async function load(force=false){
+  if(loading||(!force&&lastLoadAttempt!==null&&Date.now()-lastLoadAttempt<refreshAfterMs))return;
+  loading=true;lastLoadAttempt=Date.now();
   try{
    const response=await fetch(api,{credentials:'same-origin',cache:'no-store'});if(!response.ok)throw Error();
    const value=await response.json(),account=window.BUSAN_ACCOUNT_STORE;
@@ -35,6 +39,7 @@
    snapshot={counts:value.counts||{},saved:account?.getOwner()?account.getEvents():value.saved||[]};
    countsLoaded=true;loaded=account?.getOwner()?!account.isLoading():true;failed=false;
   }catch{failed=true;}
+  finally{loading=false;}
   if(state.screen==='saved'&&!document.querySelector('.event-detail-dialog'))render();else sync();publish();
  }
  function feedback(message){const node=document.querySelector('.event-detail-feedback');if(node){node.textContent=message;setTimeout(()=>{if(node.isConnected)node.textContent='';},2300);}else toast(message);}
@@ -72,13 +77,12 @@
   if(event.target.closest('[data-unsave-cancel]')||event.target.classList?.contains('event-unsave-overlay')){closeUnsave();return;}
   const save=event.target.closest('[data-event-social-save]');if(save){if(state.screen==='saved'&&isSaved(save.dataset.eventSocialSave)&&loaded&&!busy.has(save.dataset.eventSocialSave))confirmUnsave(save);else toggle(save);return;}
   const share=event.target.closest('[data-event-share]');if(share){shareEvent(share);return;}
-  if(event.target.closest('[data-event-social-retry]')){load();return;}
+  if(event.target.closest('[data-event-social-retry]')){load(true);return;}
   const open=event.target.closest('[data-saved-event-open]');if(open){const campaign=catalog.find(e=>e.id===open.dataset.savedEventOpen),item=campaign&&storeFor(campaign,open.dataset.eventStore);if(item)window.BUSAN_OPEN_EVENT_DETAIL(item);}
  });
  window.addEventListener('busan-event-detail-closed',()=>{if(state.screen==='saved')render();});
- window.addEventListener('focus',load);
- // Refresh aggregate counts while another visitor saves, without rebuilding maps or sheets.
- setInterval(()=>{if(!document.hidden)load();},30000);
+ // Fetch on return only when stale; never poll storage while a page stays open.
+ window.addEventListener('focus',()=>{if(!document.hidden)return load();});
  const query=new URLSearchParams(location.search),shared=catalog.find(e=>e.id===query.get('event'));
  render();load();
  if(shared){const item=storeFor(shared,query.get('store'));if(item)window.BUSAN_OPEN_EVENT_DETAIL(item);}
