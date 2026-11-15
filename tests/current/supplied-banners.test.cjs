@@ -66,13 +66,13 @@ test('banner autoplay advances at three seconds and manual selection restarts th
  a.run("Date.now=()=>7000;window.testTimers.find(t=>t.delay===500).fn()");assert.equal(a.run('state.banner'),4);
 });
 
-test('banner details show dates and venue; home category filters without leaving home',()=>{
+test('banner details show dates and venue; home category opens matching stores',()=>{
  const a=app();a.run("nav('home')");const html=a.run('campaignBanner()');
  assert.match(html,/<h2>눈 마주치면 데려오게 될걸\?<\/h2><div class="supplied-banner-meta"><span class="supplied-banner-period">2026.11.05 – 2026.11.15<\/span><span class="supplied-banner-place">신세계백화점 센텀시티/);
  assert.doesNotMatch(html,/행사 일정 안내 전|uniqlo.jpg|zara.jpg|tiffany.jpg/);assert.match(html,/부산 올리브영 전 매장/);
  a.run("state.mapRegion='서면'");
  for(const fn of a.events.click)fn({target:{closest:selector=>selector==='[data-home-category]'?{dataset:{homeCategory:'팝업'}}:null}});
- assert.equal(a.run('state.homeCategory'),'팝업');assert.equal(a.run('state.screen'),'home');
+ assert.equal(a.run('state.homeCategory'),'전체');assert.equal(a.run('state.screen'),'stores');assert.equal(a.run('state.storeCategory'),'팝업');
  assert.equal(a.run('state.mapRegion'),'서면');
 });
 
@@ -93,4 +93,21 @@ test('KST date rollover updates the displayed carousel during autoplay without a
  assert.doesNotMatch(a.elements.get('#viewport').innerHTML,/oliveyoung.jpg|westin-josun.svg|grand-josun.svg/);
  const order=JSON.parse(a.run('JSON.stringify(banners.map(index=>{const event=window.BUSAN_EVENT_CATALOG.find(c=>c.brand===brands[index].name);return event.offers?.length?event.offers.filter(o=>o.bookingEnd>=window.BUSAN_EVENT_WINDOW.koreaToday()).map(o=>o.bookingEnd).sort()[0]:event.end;}))'));
  assert.deepEqual(order,[...order].sort());
+});
+
+
+test('banner pointer swipes advance once, wrap, and ignore vertical or cancelled gestures',()=>{
+ const a=app();a.run("nav('home');state.banner=0");
+ const track={style:{}},viewport={querySelector:()=>track,setPointerCapture(){}};
+ const target={closest:selector=>selector==='.supplied-banner-viewport'?viewport:null};
+ const send=(type,x,y)=>{for(const handler of a.events[type]||[])handler({target,pointerId:1,button:0,isPrimary:true,clientX:x,clientY:y});};
+ send('pointerdown',200,100);send('pointermove',100,105);
+ assert.match(track.style.transform,/100px/);assert.equal(track.style.transition,'none');
+ send('pointerup',100,105);assert.equal(a.run('state.banner'),1);assert.equal(track.style.transition,'');
+ send('pointerdown',100,100);send('pointermove',200,105);send('pointerup',200,105);assert.equal(a.run('state.banner'),0);
+ send('pointerdown',100,100);send('pointerup',200,105);assert.equal(a.run('state.banner'),a.run('banners.length-1'));
+ const before=a.run('state.banner');
+ send('pointerdown',100,100);send('pointermove',110,200);send('pointerup',110,200);assert.equal(a.run('state.banner'),before);
+ send('pointerdown',200,100);send('pointermove',100,105);send('pointercancel',100,105);assert.equal(a.run('state.banner'),before);assert.equal(track.style.transition,'');
+ send('pointerdown',100,100);send('pointerup',105,100);assert.equal(a.run('state.banner'),before);
 });

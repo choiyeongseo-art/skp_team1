@@ -12,3 +12,8 @@
 
 ## Git 저장소
 이 프로젝트의 기본 원격은 https://github.com/choiyeongseo-art/skp_team1.git 이며 기본 브랜치는 main이다. 저장소를 다시 묻지 말고 원격 상태를 확인한 뒤 이 저장소를 사용한다. 로컬 체크아웃은 tmp/skp_team1-publish에 준비되어 있다.
+
+## 행사 리서치·데이터 입력 공통 규격
+사용자가 행사 조사·등록 데이터 작성을 요청하면 `internal/event-workflow/README.md`와 `contract.json`의 7개 카테고리·10단계 입력 순서를 따른다. `node scripts/event-workflow.cjs init`으로 지점별 초안을 만들고 조사 후 `validate`, `validate --ready`, `ingest`로 검토용 파일을 저장한다. 항목별 출처·확인일을 기록하고 미확인은 unknown/null로 둔다. 2차 자료를 공식 확정으로 승격하지 않는다. 카테고리별 추가 항목을 함께 확인한다. v3 입력 계약은 운영 DB v2와 자동 연결되지 않으므로 DB 등록·공개 완료라고 설명하지 않는다. 기존 v2 관리자 폼을 이 공통 규격으로 오인하지 않는다.
+
+통합된 최신 행사 입력·화면 규칙은 `docs/행사_입력규칙.md`를 먼저 확인한다. 이전 문서의 화면 제목·순서가 다르면 이 통합 문서와 사용자의 최신 지시를 우선한다.

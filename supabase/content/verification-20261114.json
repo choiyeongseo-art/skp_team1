@@ -1,0 +1,16 @@
+{
+  "project": "yinxfrdkxohyttmkuaxa",
+  "date": "2026-11-14",
+  "checks": 12,
+  "passed": 12,
+  "fixtures": "rolled back",
+  "static_content_imported": false,
+  "ui_switched": false,
+  "tables": 12,
+  "rls_enabled": 12,
+  "columns": 168,
+  "display_sections": 10,
+  "five_language_sections": 10,
+  "imported_events": 0,
+  "required_admission_price_evidence_fields": 2
+}

@@ -9,9 +9,8 @@ function scroll({scrollTop=200,panelTop=600,viewportTop=100,reduced=false,missin
 test('pin preview scrolls the phone viewport to the card with a 12px top gap',()=>{const [result]=scroll();assert.equal(result.top,688);assert.equal(result.behavior,'smooth');});
 test('reduced motion uses immediate scrolling and never scrolls before the content start',()=>{const [result]=scroll({scrollTop:0,panelTop:95,reduced:true});assert.equal(result.top,0);assert.equal(result.behavior,'auto');});
 test('missing viewport is safe',()=>assert.equal(scroll({missing:true}).length,0));
-test('only explicit pin selection requests reveal; normal preview rendering preserves scroll',()=>{
- assert.match(source,/tourFocused=place.id;showTourPreview\(\{reveal:true\}\)/);
- assert.match(source,/function showTourPreview\(\{reveal=false\}=\{\}\)/);
- assert.match(source,/if\(place&&reveal\)revealTourPreview\(panel\)/);
- assert.match(source,/tourFocused=null;showTourPreview\(\)/);
+test('map popup replaces the below-map reveal without scrolling the page',()=>{
+ const calls=[],place={id:'tour',name:'관광지',lat:35,lng:129,distance:100},panel={hidden:false};
+ const c={tourPopup:null,tourFocused:'tour',map:{easeTo:options=>calls.push(options)},nearbyKind:()=> 'sights',mapPlaces:()=>[place],venueChoice:()=>({sights:[]}),tourDistance:()=> '100m',esc:String,window:{BUSAN_TOURISM_I18N:{display:p=>p}},document:{querySelector:()=>panel,querySelectorAll:()=>[]},mapboxgl:{Popup:class{setLngLat(){return this}setHTML(){return this}addTo(){return this}on(){return this}}}};
+ vm.createContext(c);vm.runInContext(source.slice(source.indexOf(' function showTourPreview('),source.indexOf(' function initTourMap(')),c);c.showTourPreview();assert.equal(panel.hidden,true);assert.deepEqual(Array.from(calls[0].center),[129,35]);assert.equal(calls[0].offset[1],70);
 });

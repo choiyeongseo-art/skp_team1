@@ -1,5 +1,6 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),source=path.join(root,'busan-drop'),target=path.join(root,'public/busandrop');
+require('./build-event-display-flow.cjs').generate(root);
 fs.mkdirSync(target,{recursive:true});
 function copy(src,out){for(const entry of fs.readdirSync(src,{withFileTypes:true})){if(entry.name.startsWith('.')||entry.name.endsWith('.md'))continue;const a=path.join(src,entry.name),b=path.join(out,entry.name);if(entry.isDirectory()){fs.mkdirSync(b,{recursive:true});copy(a,b);}else fs.copyFileSync(a,b);}}
 copy(source,target);

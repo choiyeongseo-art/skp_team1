@@ -7,7 +7,7 @@ window.BUSAN_EVENT_DETAILS={
     start:'2026-11-05',end:'2026-11-15',dateNote:'행사 기간은 2차 자료 기준 · 공식 원문 대조 필요',closed:['2026-11-09'],
     venue:'신세계백화점 센텀시티 · B2 하이퍼스테이지',
     hours:'월–목 10:30–20:00 / 금–일 10:30–20:30',hoursNote:'백화점 영업시간 기준. 팝업 입장 마감 시각은 확인 전입니다.',
-    transit:'부산 2호선 센텀시티역 연결 · 12번 출구 기준 약 130m',transitNote:'B2 행사장까지의 실내 이동·대기시간은 별도입니다.',
+    transit:'부산 2호선 센텀시티역 연결 · 12번 출구 기준 약 130m',transitNote:null,
     benefit:'구매 고객 스티커 1종 랜덤 증정. 10만원 이상 구매 시 러기지태그 1종 랜덤 증정 안내.',benefitNote:'2차 자료 기준 · 선착순·소진 시 종료. 중복 수령·영수증 합산·잔여 수량은 확인 전입니다.',
     entry:'사전예약 우선 입장, 잔여 인원에 한해 현장 대기 안내.',entryNote:'2차 자료 기준. 예약 없이 방문했을 때 입장은 보장되지 않습니다.',
     fee:null,foreign:null,payment:null,taxFree:null,passport:null,

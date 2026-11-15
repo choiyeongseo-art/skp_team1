@@ -63,3 +63,10 @@
 #phone .pass-event-footer>.pass-status{flex:1;min-width:0;margin:0;line-height:20px}
 #phone .pass-event-footer>.pass-event-preview{display:block;flex:none;width:auto;min-height:40px;margin:0;padding:10px 0;line-height:20px;text-align:right;white-space:nowrap}
 @media(max-width:350px){#phone .pass-event-more>.pass-event-footer{gap:8px}#phone .pass-event-footer>.pass-status,#phone .pass-event-footer>.pass-event-preview{font-size:11px}}
+
+/* Pin stop ordering controls to the identity row, above the full-width action footer. */
+#phone .venue-visit-list>.venue-stop-card>.venue-stop-order{grid-column:3;grid-row:1;align-self:start;height:max-content}
+#phone .venue-visit-list>.venue-stop-card>.venue-stop-image{grid-column:1;grid-row:1}
+#phone .venue-visit-list>.venue-stop-card>.venue-stop-copy{grid-column:2;grid-row:1}
+#phone .venue-visit-list>.is-journey-stop .venue-stop-info{grid-column:2;grid-row:1}
+#phone .my-plan-detail .is-journey-stop .venue-place-actions{grid-row:2}

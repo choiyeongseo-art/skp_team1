@@ -37,3 +37,7 @@
 
 /* Place cards add to itineraries; only events use wishlist hearts. */
 #phone .place-card-copy>small,#phone .place-card-copy>strong{padding-right:0}
+
+/* Missing photos use the same camera / fork artwork and colors as map pins. */
+#phone :is(.place-card-image,.pass-map-place-media,.venue-stop-image):has(>svg){background:#191919;color:#FFD628}
+#phone :is(.place-card-image,.pass-map-place-media,.venue-stop-image)>svg{stroke:currentColor;flex:none}

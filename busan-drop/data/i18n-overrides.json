@@ -1,9 +1,6 @@
 {
   "드롭 플랜": {
-    "en": "Drop Plan",
-    "ja": "ドロッププラン",
-    "zh-CN": "Drop Plan",
-    "zh-TW": "Drop Plan"
+    "zh-TW": "日程計劃"
   },
   "나만의 드롭 플랜 만들기": {
     "en": "Create my Drop Plan",
@@ -222,10 +219,10 @@
     "zh-TW": "查看詳情"
   },
   "행사 자세히 보기": {
-    "en": "Event details",
+    "en": "View event details",
     "ja": "イベントの詳細",
-    "zh-CN": "活动详情",
-    "zh-TW": "活動詳情"
+    "zh-CN": "查看活动详情",
+    "zh-TW": "查看活動詳情"
   },
   "일정 확인 중": {
     "en": "Dates pending",
@@ -594,10 +591,10 @@
     "zh-TW": "使用"
   },
   "일": {
-    "en": "day",
+    "en": "Sun",
     "ja": "日",
-    "zh-CN": "天",
-    "zh-TW": "天"
+    "zh-CN": "周日",
+    "zh-TW": "週日"
   },
   "함께 들를 곳": {
     "en": "Extra stops",
@@ -900,8 +897,8 @@
     "zh-TW": "查看活動詳情"
   },
   "진행 중": {
-    "en": "On now",
-    "ja": "開催中",
+    "en": "In progress",
+    "ja": "進行中",
     "zh-CN": "进行中",
     "zh-TW": "進行中"
   },
@@ -1638,15 +1635,15 @@
     "zh-TW": "從目前位置出發 ↗"
   },
   "방문 완료 취소": {
-    "en": "Undo visit completion",
+    "en": "Undo visit",
     "ja": "訪問完了を取り消す",
-    "zh-CN": "撤销完成",
-    "zh-TW": "取消完成"
+    "zh-CN": "取消已游览",
+    "zh-TW": "取消已造訪"
   },
   "방문 완료": {
     "en": "Visited",
-    "ja": "訪問完了",
-    "zh-CN": "已到访",
+    "ja": "訪問済み",
+    "zh-CN": "已游览",
     "zh-TW": "已造訪"
   },
   "계획 경로 보기": {
@@ -2502,8 +2499,8 @@
     "zh-TW": "從目前位置導航至下一站 ↗"
   },
   "Google Maps에서 열려요. 위치 권한을 허용해주세요.": {
-    "en": "Opens in Google Maps. Allow location access.",
-    "ja": "Google Mapsで開きます。位置情報を許可してください。",
+    "en": "Opens in Google Maps. Please allow location access.",
+    "ja": "Google Mapsで開きます。位置情報へのアクセスを許可してください。",
     "zh-CN": "将在Google Maps中打开。请允许访问位置信息。",
     "zh-TW": "將在Google Maps中開啟。請允許存取位置資訊。"
   },
@@ -2742,8 +2739,8 @@
     "zh-TW": "請輸入1至40個字元的行程名稱。"
   },
   "장소 삭제": {
-    "en": "Remove place",
-    "ja": "場所を削除",
+    "en": "Remove stop",
+    "ja": "スポットを削除",
     "zh-CN": "删除地点",
     "zh-TW": "刪除地點"
   },
@@ -2780,8 +2777,8 @@
   "다음 목적지": {
     "en": "Next stop",
     "ja": "次の目的地",
-    "zh-CN": "下一站",
-    "zh-TW": "下一站"
+    "zh-CN": "下一目的地",
+    "zh-TW": "下一目的地"
   },
   "로그인하면 완성한 플랜이 계정에 저장돼요. 게스트 플랜은 이 브라우저에 보관돼요.": {
     "en": "Completed plans are saved to your account when signed in. Guest plans stay in this browser.",
@@ -3755,7 +3752,676 @@
     "zh-CN": "请长按地址进行复制。",
     "zh-TW": "請長按地址進行複製。"
   },
-  "드롭 플랜": {
-    "zh-TW": "日程計劃"
+  "방문 요약": {
+    "en": "Visit at a glance",
+    "ja": "訪問の概要",
+    "zh-CN": "到访概览",
+    "zh-TW": "造訪概覽"
+  },
+  "입장 방식": {
+    "en": "Entry method",
+    "ja": "入場方法",
+    "zh-CN": "入场方式",
+    "zh-TW": "入場方式"
+  },
+  "방문 전 꼭 확인": {
+    "en": "Essential visit information",
+    "ja": "訪問前の重要事項",
+    "zh-CN": "到访前必读",
+    "zh-TW": "造訪前必讀"
+  },
+  "외국인 이용·예약 조건은 확인 전입니다.": {
+    "en": "International visitor eligibility and booking conditions are not confirmed.",
+    "ja": "外国人の利用・予約条件は未確認です。",
+    "zh-CN": "外国游客的参与及预约条件尚未确认。",
+    "zh-TW": "外國旅客的參與及預約條件尚未確認。"
+  },
+  "날짜·입장·예약": {
+    "en": "Dates, admission & booking",
+    "ja": "日程・入場・予約",
+    "zh-CN": "日期、入场与预约",
+    "zh-TW": "日期、入場與預約"
+  },
+  "행사 내용·프로그램": {
+    "en": "Event experience & program",
+    "ja": "イベント内容・プログラム",
+    "zh-CN": "活动内容与节目",
+    "zh-TW": "活動內容與節目"
+  },
+  "상품·메뉴·패키지 가격": {
+    "en": "Products, menus & package prices",
+    "ja": "商品・メニュー・パッケージ料金",
+    "zh-CN": "商品、菜单与套餐价格",
+    "zh-TW": "商品、菜單與套裝價格"
+  },
+  "혜택·적용 조건": {
+    "en": "Benefits & conditions",
+    "ja": "特典・適用条件",
+    "zh-CN": "优惠与适用条件",
+    "zh-TW": "優惠與適用條件"
+  },
+  "해외 방문객 안내": {
+    "en": "International visitor information",
+    "ja": "海外からのお客様へ",
+    "zh-CN": "外国游客指南",
+    "zh-TW": "外國旅客指南"
+  },
+  "장소·교통": {
+    "en": "Location & transit",
+    "ja": "場所・アクセス",
+    "zh-CN": "地点与交通",
+    "zh-TW": "地點與交通"
+  },
+  "확인일": {
+    "en": "Last checked",
+    "ja": "確認日",
+    "zh-CN": "确认日期",
+    "zh-TW": "確認日期"
+  },
+  "행사 일정과 지점 참여 여부를 확인해주세요.": {
+    "en": "Check the event dates and whether this branch participates.",
+    "ja": "開催日程と店舗の参加状況をご確認ください。",
+    "zh-CN": "请确认活动日期及该门店是否参与。",
+    "zh-TW": "請確認活動日期及該門市是否參與。"
+  },
+  "예약 없이 방문했을 때 입장은 보장되지 않습니다.": {
+    "en": "Entry is not guaranteed without a reservation.",
+    "ja": "予約なしでの入場は保証されません。",
+    "zh-CN": "未预约到访不保证可以入场。",
+    "zh-TW": "未預約到訪不保證可以入場。"
+  },
+  "전체 휴점일 보기": {
+    "en": "View all closure dates",
+    "ja": "すべての休業日を見る",
+    "zh-CN": "查看全部休业日",
+    "zh-TW": "查看全部休業日"
+  },
+  "11.09 휴점": {
+    "en": "Closed on 11.09",
+    "ja": "11.09 休業",
+    "zh-CN": "11.09 休业",
+    "zh-TW": "11.09 休業"
+  },
+  "전체 내용 보기": {
+    "en": "View all details",
+    "ja": "すべての内容を見る",
+    "zh-CN": "查看全部内容",
+    "zh-TW": "查看全部內容"
+  },
+  "휴점 · 이날은 방문할 수 없어요": {
+    "en": "Closed · Unavailable on this date",
+    "ja": "休業・この日は訪問できません",
+    "zh-CN": "休业·当天无法到访",
+    "zh-TW": "休業・當天無法造訪"
+  },
+  "안내 출처": {
+    "en": "Information source",
+    "ja": "案内の出典",
+    "zh-CN": "信息来源",
+    "zh-TW": "資訊來源"
+  },
+  "기타 안내": {
+    "en": "Additional information",
+    "ja": "その他のご案内",
+    "zh-CN": "其他信息",
+    "zh-TW": "其他資訊"
+  },
+  "운영 시간": {
+    "en": "Operating hours",
+    "ja": "営業時間",
+    "zh-CN": "营业时间",
+    "zh-TW": "營業時間"
+  },
+  "월": {
+    "en": "Mon",
+    "ja": "月",
+    "zh-CN": "周一",
+    "zh-TW": "週一"
+  },
+  "화": {
+    "en": "Tue",
+    "ja": "火",
+    "zh-CN": "周二",
+    "zh-TW": "週二"
+  },
+  "수": {
+    "en": "Wed",
+    "ja": "水",
+    "zh-CN": "周三",
+    "zh-TW": "週三"
+  },
+  "목": {
+    "en": "Thu",
+    "ja": "木",
+    "zh-CN": "周四",
+    "zh-TW": "週四"
+  },
+  "금": {
+    "en": "Fri",
+    "ja": "金",
+    "zh-CN": "周五",
+    "zh-TW": "週五"
+  },
+  "토": {
+    "en": "Sat",
+    "ja": "土",
+    "zh-CN": "周六",
+    "zh-TW": "週六"
+  },
+  "매일": {
+    "en": "Daily",
+    "ja": "毎日",
+    "zh-CN": "每天",
+    "zh-TW": "每天"
+  },
+  "공휴일": {
+    "en": "Public holidays",
+    "ja": "祝日",
+    "zh-CN": "节假日",
+    "zh-TW": "國定假日"
+  },
+  "월–목": {
+    "en": "Mon–Thu",
+    "ja": "月〜木",
+    "zh-CN": "周一至周四",
+    "zh-TW": "週一至週四"
+  },
+  "금–일": {
+    "en": "Fri–Sun",
+    "ja": "金〜日",
+    "zh-CN": "周五至周日",
+    "zh-TW": "週五至週日"
+  },
+  "사전예약 우선 입장": {
+    "en": "Advance reservations receive priority",
+    "ja": "事前予約者優先入場",
+    "zh-CN": "预约者优先入场",
+    "zh-TW": "預約者優先入場"
+  },
+  "잔여 인원에 한해 현장 대기 안내.": {
+    "en": "On-site waiting is available only for remaining capacity.",
+    "ja": "定員に空きがある場合のみ現地待機をご案内。",
+    "zh-CN": "仅在有剩余名额时接受现场等候。",
+    "zh-TW": "僅在有剩餘名額時接受現場等候。"
+  },
+  "백화점 기준 월–목": {
+    "en": "Department store hours · Mon–Thu",
+    "ja": "百貨店基準 月〜木",
+    "zh-CN": "百货商场营业时间·周一至周四",
+    "zh-TW": "百貨公司營業時間・週一至週四"
+  },
+  "금–일·공휴일": {
+    "en": "Fri–Sun & public holidays",
+    "ja": "金〜日・祝日",
+    "zh-CN": "周五至周日及节假日",
+    "zh-TW": "週五至週日及國定假日"
+  },
+  "카카오톡 예약하기에서 ‘무기와라 스토어’를 검색하세요.": {
+    "en": "Search for Mugiwara Store in KakaoTalk Reservations.",
+    "ja": "カカオトーク予約で「麦わらストア」を検索してください。",
+    "zh-CN": "请在KakaoTalk预约中搜索“Mugiwara Store”。",
+    "zh-TW": "請在KakaoTalk預約中搜尋「Mugiwara Store」。"
+  },
+  "1인 1일 1회": {
+    "en": "Once per person per day",
+    "ja": "1人1日1回",
+    "zh-CN": "每人每天一次",
+    "zh-TW": "每人每天一次"
+  },
+  "같은 날짜 중복예약은 불가해요.": {
+    "en": "Duplicate bookings for the same date are not allowed.",
+    "ja": "同じ日の重複予約はできません。",
+    "zh-CN": "不可重复预约同一天。",
+    "zh-TW": "不可重複預約同一天。"
+  },
+  "동절기 본관 기준 평일": {
+    "en": "Main building winter hours · Weekdays",
+    "ja": "冬季本館基準 平日",
+    "zh-CN": "主楼冬季营业时间·工作日",
+    "zh-TW": "本館冬季營業時間・平日"
+  },
+  "주말·공휴일": {
+    "en": "Weekends & public holidays",
+    "ja": "土日・祝日",
+    "zh-CN": "周末及节假日",
+    "zh-TW": "週末及國定假日"
+  },
+  "유료 파크 입장권 필요": {
+    "en": "Paid park admission required",
+    "ja": "有料パーク入場券が必要",
+    "zh-CN": "需要购买乐园门票",
+    "zh-TW": "需要購買樂園門票"
+  },
+  "굿즈·식음·일부 체험 비용은 별도 확인": {
+    "en": "Check separate costs for goods, food and selected experiences",
+    "ja": "グッズ・飲食・一部体験の別途料金は要確認",
+    "zh-CN": "周边、餐饮及部分体验费用需另行确认",
+    "zh-TW": "周邊、餐飲及部分體驗費用需另行確認"
+  },
+  "롯데월드 어드벤처 부산 입장권이 필요해요.": {
+    "en": "A LOTTE WORLD Adventure Busan admission ticket is required.",
+    "ja": "ロッテワールド・アドベンチャー釜山の入場券が必要です。",
+    "zh-CN": "需要乐天世界冒险乐园釜山门票。",
+    "zh-TW": "需要樂天世界冒險樂園釜山門票。"
+  },
+  "방문일 운영시간·예매 조건·당일 공연시간표는 공식 홈페이지에서 확인하세요.": {
+    "en": "Check the official website for opening hours, booking conditions and showtimes for your visit.",
+    "ja": "来場日の営業時間・予約条件・公演時間は公式サイトでご確認ください。",
+    "zh-CN": "请在官网确认到访日的营业时间、预约条件及演出时间。",
+    "zh-TW": "請在官網確認造訪日的營業時間、預約條件及演出時間。"
+  },
+  "체크인": {
+    "en": "Check-in",
+    "ja": "チェックイン",
+    "zh-CN": "入住",
+    "zh-TW": "入住"
+  },
+  "체크아웃": {
+    "en": "Check-out",
+    "ja": "チェックアウト",
+    "zh-CN": "退房",
+    "zh-TW": "退房"
+  },
+  "회당 약 24분": {
+    "en": "About 24 minutes per show",
+    "ja": "1回約24分",
+    "zh-CN": "每场约24分钟",
+    "zh-TW": "每場約24分鐘"
+  },
+  "청소년 8,000원": {
+    "en": "Youth KRW 8,000",
+    "ja": "青少年8,000ウォン",
+    "zh-CN": "青少年8,000韩元",
+    "zh-TW": "青少年8,000韓元"
+  },
+  "개장": {
+    "en": "Opens",
+    "ja": "開場",
+    "zh-CN": "开场",
+    "zh-TW": "開場"
+  },
+  "입장권 확인": {
+    "en": "Ticket check",
+    "ja": "チケット確認",
+    "zh-CN": "门票确认",
+    "zh-TW": "門票確認"
+  },
+  "입장 마감": {
+    "en": "Last admission",
+    "ja": "最終入場",
+    "zh-CN": "停止入场",
+    "zh-TW": "停止入場"
+  },
+  "찾아가기": {
+    "en": "Getting here",
+    "ja": "アクセス",
+    "zh-CN": "交通指南",
+    "zh-TW": "交通指南"
+  },
+  "해외 카드": {
+    "en": "Foreign cards",
+    "ja": "海外発行カード",
+    "zh-CN": "境外银行卡",
+    "zh-TW": "海外發行信用卡"
+  },
+  "간편 결제": {
+    "en": "Mobile payments",
+    "ja": "モバイル決済",
+    "zh-CN": "移动支付",
+    "zh-TW": "行動支付"
+  },
+  "텍스 리펀": {
+    "en": "Tax refund",
+    "ja": "免税・税金還付",
+    "zh-CN": "退税",
+    "zh-TW": "退稅"
+  },
+  "항목": {
+    "en": "Item",
+    "ja": "項目",
+    "zh-CN": "项目",
+    "zh-TW": "項目"
+  },
+  "안내": {
+    "en": "Information",
+    "ja": "ご案内",
+    "zh-CN": "说明",
+    "zh-TW": "說明"
+  },
+  "부산광역시 동구 범일로 125": {
+    "en": "Connect Hyundai Busan B1, 125 Beomil-ro, Dong-gu, Busan",
+    "ja": "釜山広域市東区汎一路125・コネクト現代釜山B1",
+    "zh-CN": "连接现代釜山 B1, 125 Beomil-ro, Dong-gu, Busan",
+    "zh-TW": "連結現代釜山 B1, 125 Beomil-ro, Dong-gu, Busan"
+  },
+  "부산광역시 수영구 민락수변로17번길 56": {
+    "en": "Millak The Market, 56, Millaksubyeon-ro 17beon-gil, Suyeong-gu, Busan",
+    "ja": "釜山広域市水泳区民楽水辺路17番ギル56・ミラクザマーケット",
+    "zh-CN": "釜山广域市水营区民乐水边路 17 街 56 民乐市场",
+    "zh-TW": "釜山廣域市水營區民樂水邊路 17 街 56 民樂市場"
+  },
+  "부산광역시 해운대구 센텀남대로 59": {
+    "en": "59 Centum Nam-daero, Haeundae-gu, Busan",
+    "ja": "釜山広域市海雲台区センタム南大路59・ロッテ百貨店セントムシティ店2階",
+    "zh-CN": "釜山海云台区 Centum 南大路 59",
+    "zh-TW": "釜山海雲台區 Centum 南大路 59"
+  },
+  "부산광역시 부산진구 중앙대로702번길 33": {
+    "en": "1st floor, 33, Jungang-daero 702beon-gil, Busanjin-gu, Busan",
+    "ja": "釜山広域市釜山神宮中央大路702番道33・1階",
+    "zh-CN": "釜山广域市釜山镇区中央大路702街33号1楼",
+    "zh-TW": "釜山廣域市釜山鎮區中央大路702街33號1樓"
+  },
+  "부산 해운대구 센텀남대로 35": {
+    "en": "35 Centumnam-daero, Haeundae-gu, Busan",
+    "ja": "釜山海雲台区センタム南大路35・新世界センタムシティB2ハイパーステージ",
+    "zh-CN": "釜山海云台区 Centumnam 大路 35",
+    "zh-TW": "釜山海雲台區 Centumnam 大路 35"
+  },
+  "부산광역시 부산진구 가야대로 772": {
+    "en": "Lotte Department Store Busan Main Branch B1 Kinetic Stage, 772 Gaya-daero, Busanjin-gu, Busan",
+    "ja": "釜山広域市釜山神宮ヶ谷通り772・ロッテ百貨店釜山本店B1キネティックステージ",
+    "zh-CN": "釜山广域市釜山镇区伽倻大路 772 号乐天百货公司釜山总店 B1 Kinetic Stage",
+    "zh-TW": "釜山廣域市釜山鎮區伽倻大路 772 號樂天百貨公司釜山總店 B1 Kinetic Stage"
+  },
+  "부산광역시 중구 중앙대로 2": {
+    "en": "2 Jungang-daero, Jung-gu, Busan",
+    "ja": "釜山広域市中区中央大路2・ロッテ百貨店光復店B1食品イベント場（ポールバセット前）",
+    "zh-CN": "釜山市中区中央大路2·乐天百货光福店B1美食活动中心（保罗·巴塞特前面）",
+    "zh-TW": "釜山市中區中央大路2·樂天百貨光福店B1美食活動中心（保羅·巴塞特前面）"
+  },
+  "부산광역시 수영구 광안해변로 219": {
+    "en": "Gwangalli Beach, 219 Gwanganhaebyeon-ro, Suyeong-gu, Busan",
+    "ja": "釜山広域市水泳区広安海路219・広安里海水浴場",
+    "zh-CN": "釜山广安海岸路 219 广安里海水浴场",
+    "zh-TW": "釜山廣安海岸路 219 廣安里海水浴場"
+  },
+  "부산광역시 해운대구 APEC로 55": {
+    "en": "55 APEC-ro, Haeundae-gu, Busan",
+    "ja": "釜山広域市海雲台区APECで55・BEXCO第1展示場1～3ホール",
+    "zh-CN": "釜山海云台区 APEC 路 55 号·BEXCO 展览馆 1，1 至 3 号馆",
+    "zh-TW": "釜山海雲台區 APEC 路 55 號·BEXCO 展覽館 1，1 至 3 號館"
+  },
+  "부산광역시 해운대구 APEC로 30": {
+    "en": "30 APEC-ro, Haeundae-gu, Busan",
+    "ja": "釜山広域市海雲台区APECで30・BEXCO第2展示場1階4ホール",
+    "zh-CN": "釜山海云台区 APEC 路 30 号",
+    "zh-TW": "釜山海雲台區 APEC 路 30 號"
+  },
+  "마지막 코스": {
+    "en": "Final stop",
+    "ja": "最後のスポット",
+    "zh-CN": "最后一站",
+    "zh-TW": "最後一站"
+  },
+  "마지막 장소": {
+    "en": "Final stop",
+    "ja": "最後のスポット",
+    "zh-CN": "最后一站",
+    "zh-TW": "最後一站"
+  },
+  "전체 플랜 경로": {
+    "en": "Full plan route",
+    "ja": "プラン全体のルート",
+    "zh-CN": "完整行程路线",
+    "zh-TW": "完整行程路線"
+  },
+  "전체 경로": {
+    "en": "Full route",
+    "ja": "全体ルート",
+    "zh-CN": "完整路线",
+    "zh-TW": "完整路線"
+  },
+  "모든 방문 장소를 전체 순서대로 연결했어요.": {
+    "en": "All stops are connected in your visit order.",
+    "ja": "すべてのスポットを訪問順につなぎました。",
+    "zh-CN": "所有地点已按游览顺序连接。",
+    "zh-TW": "所有地點已按造訪順序連接。"
+  },
+  "번호와 점선을 따라 동선을 확인하세요.": {
+    "en": "Follow the numbers and dotted lines to review your route.",
+    "ja": "番号と点線でルートを確認してください。",
+    "zh-CN": "请按编号和虚线查看行程路线。",
+    "zh-TW": "請按編號和虛線查看行程路線。"
+  },
+  "연결선은 방문 순서를 표시하는 직선이며, 실제 도로 경로와 다를 수 있어요.": {
+    "en": "Lines show the visit order, not actual road routes.",
+    "ja": "線は訪問順を示す直線で、実際の道路ルートとは異なる場合があります。",
+    "zh-CN": "连线仅表示游览顺序，可能与实际道路路线不同。",
+    "zh-TW": "連線僅表示造訪順序，可能與實際道路路線不同。"
+  },
+  "관광지 자세히 보기": {
+    "en": "View sight details",
+    "ja": "観光地の詳細",
+    "zh-CN": "查看景点详情",
+    "zh-TW": "查看景點詳情"
+  },
+  "맛집 자세히 보기": {
+    "en": "View restaurant details",
+    "ja": "飲食店の詳細",
+    "zh-CN": "查看餐厅详情",
+    "zh-TW": "查看餐廳詳情"
+  },
+  "다음 코스까지 거리 확인 전": {
+    "en": "Distance to next stop unconfirmed",
+    "ja": "次のスポットまでの距離は未確認",
+    "zh-CN": "下一站距离待确认",
+    "zh-TW": "下一站距離待確認"
+  },
+  "다음 장소까지 거리 확인 전": {
+    "en": "Distance to next stop unconfirmed",
+    "ja": "次のスポットまでの距離は未確認",
+    "zh-CN": "下一站距离待确认",
+    "zh-TW": "下一站距離待確認"
+  },
+  "전체 방문 현황": {
+    "en": "All visit milestones",
+    "ja": "訪問状況をすべて見る",
+    "zh-CN": "全部游览进度",
+    "zh-TW": "全部造訪進度"
+  },
+  "방문 전": {
+    "en": "Not visited",
+    "ja": "未訪問",
+    "zh-CN": "未游览",
+    "zh-TW": "未造訪"
+  },
+  "방문했어요": {
+    "en": "visited",
+    "ja": "訪問しました",
+    "zh-CN": "已游览",
+    "zh-TW": "已造訪"
+  },
+  "선택한 장소 방문 진행": {
+    "en": "Visit progress for selected stops",
+    "ja": "選択したスポットの訪問進捗",
+    "zh-CN": "已选地点游览进度",
+    "zh-TW": "已選地點造訪進度"
+  },
+  "내 위치에서 길찾기": {
+    "en": "Directions from my location",
+    "ja": "現在地からのルート",
+    "zh-CN": "从当前位置出发",
+    "zh-TW": "從目前位置出發"
+  },
+  "이 장소를 정말 삭제할까요?": {
+    "en": "Remove this stop?",
+    "ja": "このスポットを削除しますか？",
+    "zh-CN": "确定删除此地点吗？",
+    "zh-TW": "確定刪除此地點嗎？"
+  },
+  "선택한 장소를 플랜에서 삭제합니다. 삭제하시겠습니까?": {
+    "en": "Remove the selected stop from this plan?",
+    "ja": "選択したスポットをプランから削除しますか？",
+    "zh-CN": "确定从行程中删除所选地点吗？",
+    "zh-TW": "確定從行程中刪除所選地點嗎？"
+  },
+  "이 행사와 묶인 관광지·맛집을 플랜에서 삭제합니다. 삭제하시겠습니까?": {
+    "en": "Remove this event and its linked sights and restaurants from the plan?",
+    "ja": "このイベントと関連する観光地・飲食店をプランから削除しますか？",
+    "zh-CN": "确定删除此活动及其关联的景点和餐厅吗？",
+    "zh-TW": "確定刪除此活動及其關聯的景點和餐廳嗎？"
+  },
+  "주변 관광지 · 맛집 변경하기": {
+    "en": "Change nearby sights & restaurants",
+    "ja": "周辺の観光地・飲食店を変更",
+    "zh-CN": "更改周边景点和餐厅",
+    "zh-TW": "更改周邊景點和餐廳"
+  },
+  "행사장 일정 빼기": {
+    "en": "Remove venue itinerary",
+    "ja": "会場の予定を削除",
+    "zh-CN": "移除会场行程",
+    "zh-TW": "移除會場行程"
+  },
+  "이 행사 주변 경로": {
+    "en": "Route around this event",
+    "ja": "このイベント周辺のルート",
+    "zh-CN": "此活动周边路线",
+    "zh-TW": "此活動周邊路線"
+  },
+  "플랜에 추가하기": {
+    "en": "Add to plan",
+    "ja": "プランに追加",
+    "zh-CN": "添加到行程",
+    "zh-TW": "加入行程"
+  },
+  "플랜에 추가됨": {
+    "en": "Added to plan",
+    "ja": "プランに追加済み",
+    "zh-CN": "已添加到行程",
+    "zh-TW": "已加入行程"
+  },
+  "여행 일정 확인 전": {
+    "en": "Travel dates unconfirmed",
+    "ja": "旅行日程は未確認",
+    "zh-CN": "旅行日期待确认",
+    "zh-TW": "旅行日期待確認"
+  },
+  "전체 플랜 경로 지도": {
+    "en": "Full plan route map",
+    "ja": "プラン全体のルート地図",
+    "zh-CN": "完整行程路线地图",
+    "zh-TW": "完整行程路線地圖"
+  },
+  "위 아래 버튼으로 방문 순서를 조정하고 저장하세요.": {
+    "en": "Use the up and down buttons to reorder your stops, then save.",
+    "ja": "上下のボタンで訪問順を調整して保存してください。",
+    "zh-CN": "请用上下按钮调整游览顺序后保存。",
+    "zh-TW": "請用上下按鈕調整造訪順序後儲存。"
+  },
+  "전체 플랜 경로에서 행사장 선택": {
+    "en": "Choose a venue on the full plan route",
+    "ja": "プラン全体のルートで会場を選択",
+    "zh-CN": "在完整行程路线中选择会场",
+    "zh-TW": "在完整行程路線中選擇會場"
+  },
+  "한식": {
+    "en": "Korean",
+    "ja": "韓国料理",
+    "zh-CN": "韩餐",
+    "zh-TW": "韓式料理"
+  },
+  "면류": {
+    "en": "Noodles",
+    "ja": "麺類",
+    "zh-CN": "面食",
+    "zh-TW": "麵食"
+  },
+  "해산물": {
+    "en": "Seafood",
+    "ja": "海鮮",
+    "zh-CN": "海鲜",
+    "zh-TW": "海鮮"
+  },
+  "일정 확인": {
+    "en": "Check dates",
+    "ja": "日程確認",
+    "zh-CN": "查看日程",
+    "zh-TW": "查看日程"
+  },
+  "플랜 확인·저장": {
+    "en": "Review & save plan",
+    "ja": "プラン確認・保存",
+    "zh-CN": "确认并保存行程",
+    "zh-TW": "確認並儲存行程"
+  },
+  "준비 단계": {
+    "en": "Preparation",
+    "ja": "準備段階",
+    "zh-CN": "准备阶段",
+    "zh-TW": "準備階段"
+  },
+  "전체 단계 보기": {
+    "en": "View all steps",
+    "ja": "すべてのステップを見る",
+    "zh-CN": "查看全部步骤",
+    "zh-TW": "查看全部步驟"
+  },
+  "관광지·맛집은 선택 사항이에요. 건너뛸 수 있어요.": {
+    "en": "Sights and restaurants are optional. You can skip them.",
+    "ja": "観光地・飲食店は任意です。スキップできます。",
+    "zh-CN": "景点和餐厅为选填项，可以跳过。",
+    "zh-TW": "景點和餐廳為選填項，可以略過。"
+  },
+  "여행 중 열리는 부산 행사": {
+    "en": "Busan events during your trip",
+    "ja": "旅行中に開催される釜山のイベント",
+    "zh-CN": "旅行期间的釜山活动",
+    "zh-TW": "旅行期間的釜山活動"
+  },
+  "부산 관광지 큐레이션 · 직선거리 기준입니다. 실제 이동 경로는 마이페이지의 저장된 플랜에서 확인해주세요.": {
+    "en": "Curated Busan sights, sorted by straight-line distance. Check your saved plan in My page for directions.",
+    "ja": "釜山の観光地を直線距離でご案内します。移動ルートはマイページの保存したプランでご確認ください。",
+    "zh-CN": "釜山精选景点，距离为直线距离。请在「我的」已保存行程中查看实际出行路线。",
+    "zh-TW": "釜山精選景點，距離為直線距離。請在「我的」已儲存行程中查看實際交通路線。"
+  },
+  "주변에 해당 종류의 맛집이 없어요. 다른 종류나 전체 보기를 선택해주세요.": {
+    "en": "No restaurants in this category nearby. Choose another category or view all.",
+    "ja": "周辺にこの種類の飲食店はありません。別の種類か「すべて見る」を選んでください。",
+    "zh-CN": "附近没有此类餐厅，请选择其他类别或查看全部。",
+    "zh-TW": "附近沒有此類餐廳，請選擇其他類別或查看全部。"
+  },
+  "이 행사와 주변 플랜을 정말 삭제하시겠습니까?": {
+    "en": "Remove this event and its nearby stops from the plan?",
+    "ja": "このイベントと周辺スポットをプランから削除しますか？",
+    "zh-CN": "确定删除此活动及其周边行程吗？",
+    "zh-TW": "確定刪除此活動及其周邊行程嗎？"
+  },
+  "플랜에 추가했어요.": {
+    "en": "Added to your plan.",
+    "ja": "プランに追加しました。",
+    "zh-CN": "已加入行程。",
+    "zh-TW": "已加入行程。"
+  },
+  "주변 추천|행사장별 관광지 → 맛집|각 단계에서 선택하거나 건너뛰기": {
+    "en": "Nearby picks|Sights → restaurants for each venue|Choose or skip at each step",
+    "ja": "周辺のおすすめ|会場ごとに観光地 → 飲食店|各ステップで選択・スキップ",
+    "zh-CN": "周边推荐|各会场的景点 → 餐厅|每一步均可选择或跳过",
+    "zh-TW": "周邊推薦|各會場的景點 → 餐廳|每一步皆可選擇或略過"
+  },
+  "가고 싶은 행사를 선택하면 단계가 정해져요": {
+    "en": "Choose events to see your plan steps",
+    "ja": "イベントを選ぶとプランの手順が表示されます",
+    "zh-CN": "选择活动后即可查看行程步骤",
+    "zh-TW": "選擇活動後即可查看行程步驟"
+  },
+  "플랜 구성 진행": {
+    "en": "Plan setup progress",
+    "ja": "プラン作成の進捗",
+    "zh-CN": "行程规划进度",
+    "zh-TW": "行程規劃進度"
+  },
+  "기장": {
+    "en": "Gijang",
+    "ja": "機張",
+    "zh-CN": "机张",
+    "zh-TW": "機張"
+  },
+  "기장군": {
+    "en": "Gijang-gun",
+    "ja": "機張郡",
+    "zh-CN": "机张郡",
+    "zh-TW": "機張郡"
   }
 }

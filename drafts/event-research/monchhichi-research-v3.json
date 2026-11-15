@@ -1,0 +1,242 @@
+{
+  "schema_version": 3,
+  "id": "monchhichi-research-v3",
+  "venue_id": "monchhichi-centum",
+  "category": "popup",
+  "secondary_categories": [],
+  "publication_status": "draft",
+  "sections": {
+    "intro": {
+      "name": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "summary": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "image": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "event_type": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "audience": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "visit": {
+      "period": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "venue_summary": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "hours_summary": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "admission": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "booking": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "foreign_booking": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "alerts": {
+      "restrictions": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "requirements": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "admission": {
+      "opening_hours": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "exceptions": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "prices": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "booking_period": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "booking_url": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "walk_in": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "alternative_booking": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "content": {
+      "description": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "sessions": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "products": {
+      "items": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "offers": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "benefits": {
+      "offers": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "international": {
+      "eligibility": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "payments": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "tax_refund": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "passport": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "location": {
+      "name": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "address_ko": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "indoor": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "coordinates": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "transit": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "accessibility": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    },
+    "trust": {
+      "notices": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "contact": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "official_url": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      },
+      "limitations": {
+        "status": "unknown",
+        "value": null,
+        "sources": []
+      }
+    }
+  },
+  "category_details": {
+    "entry_queue": {
+      "status": "unknown",
+      "value": null,
+      "sources": []
+    },
+    "limited_goods": {
+      "status": "unknown",
+      "value": null,
+      "sources": []
+    },
+    "special_program": {
+      "status": "unknown",
+      "value": null,
+      "sources": []
+    }
+  }
+}

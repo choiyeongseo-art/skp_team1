@@ -1,0 +1,4518 @@
+{
+  "as_of": "2026-11-14",
+  "scope": "로컬 등록 데이터 구조·누락 검수. 공식 사이트 최신 사실 재확인/운영 DB 조회 아님.",
+  "source_root": "/Users/manok2ne/Desktop/busandrop_개발/team-web-github-20261113",
+  "summary": {
+    "events": 20,
+    "visibleEvents": 13,
+    "locations": 33,
+    "visibleLocations": 24,
+    "details": 19,
+    "categoryCounts": {
+      "로컬": {
+        "registered": 3,
+        "visible": 2
+      },
+      "팝업": {
+        "registered": 10,
+        "visible": 7
+      },
+      "패션": {
+        "registered": 3,
+        "visible": 3
+      },
+      "뷰티": {
+        "registered": 1,
+        "visible": 0
+      },
+      "푸드": {
+        "registered": 1,
+        "visible": 1
+      },
+      "디저트": {
+        "registered": 1,
+        "visible": 0
+      },
+      "숙박": {
+        "registered": 3,
+        "visible": 1
+      }
+    }
+  },
+  "events": [
+    {
+      "id": "oliveyoung-blackfriday-2026",
+      "brand": "올리브영",
+      "categories": [
+        "뷰티"
+      ],
+      "status": "종료/예약 마감",
+      "start": "2026-11-01",
+      "end": "2026-11-07",
+      "locations": 3,
+      "detailPresent": true,
+      "checked": "2026-11-05",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "블프라이즈 박스 · 한정 판매",
+        "쿠폰·결제·포인트 조건",
+        "온라인 혜택과 매장 혜택은 달라요"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "온라인 혜택을 지점에 일괄 적용 금지. 3개 지점의 참여 확인·박스·쿠폰 조건 분리.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "uniqlo-2026",
+      "brand": "유니클로",
+      "categories": [
+        "패션"
+      ],
+      "status": "일정 미확정",
+      "start": null,
+      "end": null,
+      "locations": 9,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "legacySectionOrder": [
+        "행사 일정 · 혜택",
+        "할인 상품 확인하기",
+        "면세 쇼핑 안내"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree"
+      ],
+      "review": "제보 날짜를 방문 기간으로 사용 금지. 9개 지점의 영업시간·결제·면세 조건 개별 유지.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "zara-2026",
+      "brand": "자라",
+      "categories": [
+        "패션"
+      ],
+      "status": "일정 미확정",
+      "start": null,
+      "end": null,
+      "locations": 3,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "행사 일정 · 할인 상품",
+        "쿠폰 · 결제 안내",
+        "구매 후 반품하기",
+        "외국인 · 면세 쇼핑"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "할인 일정·할인율 미확정. 3개 지점 등록이 행사 참여 확정을 의미하지 않음.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "monchhichi-busan-202611",
+      "brand": "몬치치",
+      "categories": [
+        "팝업"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-11-05",
+      "end": "2026-11-15",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-05",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "구매하면 받을 수 있는 사은품",
+        "예약하고 방문하기",
+        "몬치치 등장 · 스페셜 이벤트",
+        "어떤 굿즈가 있나요?"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport",
+        "카탈로그 confirmed와 상세의 2차 출처 표현 충돌"
+      ],
+      "review": "사은품·예약·등장 회차·상품 가격이 혼재. 2차 자료 가격/기간을 공식 확정으로 승격 금지. 지난 휴점 강조 해제.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "wackywilly-busan-202610",
+      "brand": "와키윌리",
+      "categories": [
+        "팝업"
+      ],
+      "status": "종료/예약 마감",
+      "start": "2026-10-30",
+      "end": "2026-11-12",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "안내 상품 4종 · 행사 가격",
+        "방문 전에 알아두세요"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "종료 행사 보관. 상품별 정상가/할인가·할인 제외·구매 제한 구조화.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "tunaschool-gwangbok-202611",
+      "brand": "참치학교",
+      "categories": [
+        "팝업",
+        "푸드"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-11-06",
+      "end": "2026-11-19",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "참치학교 · 행사 가격",
+        "참다랑어 해체쇼"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "팝업+푸드 교차 분류. 메뉴/중량/인분과 해체쇼 회차·식사/포장·알레르기 확인 항목 분리.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "tiffany-2026",
+      "brand": "티파니앤코",
+      "categories": [
+        "패션"
+      ],
+      "status": "일정 미확정",
+      "start": null,
+      "end": null,
+      "locations": 1,
+      "detailPresent": false,
+      "checked": null,
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [],
+      "issues": [
+        "상세 데이터 없음",
+        "상세 전체 확인일 없음",
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "카탈로그는 있으나 상세 행사 데이터 없음. 일반 매장 안내와 실제 행사 구분.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "mugiwara-busan-202611",
+      "brand": "원피스 무기와라 스토어",
+      "categories": [
+        "팝업"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-10-30",
+      "end": "2026-11-26",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "예약하고 방문하기",
+        "방문·구매 특전",
+        "굿즈 가격 살펴보기"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "예약/현장 대기와 방문 특전/구매 특전을 분리. 참고 상품가·구매 제한 별도.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "yjack-busan-202611",
+      "brand": "와이잭",
+      "categories": [
+        "팝업"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-11-05",
+      "end": "2026-11-18",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "상품별 할인 살펴보기",
+        "구매금액별 추가할인",
+        "방문 안내"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "상품별 할인과 구매액별 추가 할인 분리. 제외 품목·중복 적용 확인.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "gelatopique-busan-202611",
+      "brand": "젤라또 피케",
+      "categories": [
+        "팝업"
+      ],
+      "status": "종료/예약 마감",
+      "start": "2026-10-30",
+      "end": "2026-11-12",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "룸웨어·잡화 행사 가격",
+        "모바일상품권 받기",
+        "구매금액별 사은품",
+        "채널 추가·가챠 이벤트"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "종료 행사 보관. 모바일상품권·사은품·채널 추가·가챠의 조건을 각각 입력.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "sanx-busan-202610",
+      "brand": "리락쿠마·스미코구라시",
+      "categories": [
+        "팝업"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-10-30",
+      "end": "2027-01-31",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "입장하고 둘러보기",
+        "구매금액별 특전",
+        "스페셜 상품 가격",
+        "새 상품 소식 확인하기"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "2027년 종료일 유지. 상품가·조건부 구매 특전·신상품 공지 구분.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "maplestory-busan-202608",
+      "brand": "메이플스토리",
+      "categories": [
+        "팝업"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-08-29",
+      "end": "2026-11-22",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "파크에서 만나는 메이플 월드",
+        "공연·포토타임",
+        "입장권 참고 정상가",
+        "비용·이용 조건 확인"
+      ],
+      "issues": [
+        "기본 5항목 미입력: foreign, payment, taxFree, passport"
+      ],
+      "review": "파크 입장료와 유료 체험/굿즈 비용 분리. 공연·포토타임 회차와 이용 제한 분리.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "signiel-busan-202611",
+      "brand": "시그니엘 부산",
+      "categories": [
+        "숙박"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-08-18",
+      "end": "2027-06-30",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "Taste of Autumn",
+        "In-Room Dining at SIGNIEL",
+        "Autumn Serenity Retreat",
+        "SIGNIEL BRAND FESTA",
+        "예약하고 방문하기"
+      ],
+      "issues": [
+        "기본 5항목 미입력: foreign, payment, taxFree, passport",
+        "상품별 예약 마감 혼재 1/4"
+      ],
+      "review": "4개 상품별 예약·투숙 기간·최저가 단위·인원·세금·포함/제외·취소 조건 분리. 마감 상품 개별 표시.",
+      "offers": 4,
+      "endedOffers": 1
+    },
+    {
+      "id": "westin-josun-busan-202611",
+      "brand": "웨스틴 조선 부산",
+      "categories": [
+        "숙박"
+      ],
+      "status": "종료/예약 마감",
+      "start": "2026-10-30",
+      "end": "2026-11-08",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "Room Only Special Offer",
+        "Breakfast Package",
+        "Suite Offer",
+        "다이닝 오퍼",
+        "다이닝 오퍼",
+        "객실 혜택·이용 조건",
+        "예약하고 방문하기"
+      ],
+      "issues": [
+        "기본 5항목 미입력: foreign, payment, taxFree, passport",
+        "중복 섹션 제목"
+      ],
+      "review": "예약 마감 행사 보관. 숙박과 다이닝 오퍼 분리. 같은 제목의 섹션을 상품 ID로 구분.",
+      "offers": 4,
+      "endedOffers": 4
+    },
+    {
+      "id": "grand-josun-busan-202611",
+      "brand": "그랜드 조선 부산",
+      "categories": [
+        "숙박"
+      ],
+      "status": "종료/예약 마감",
+      "start": "2026-10-30",
+      "end": "2026-11-08",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "Room Only Special Offer",
+        "Breakfast Package",
+        "Suite Offer",
+        "다이닝 오퍼",
+        "다이닝 오퍼",
+        "객실 특가 제외일",
+        "객실 혜택·이용 조건",
+        "예약하고 방문하기"
+      ],
+      "issues": [
+        "기본 5항목 미입력: foreign, payment, taxFree, passport",
+        "중복 섹션 제목"
+      ],
+      "review": "예약 마감 행사 보관. 객실/다이닝·제외일·포함 인원·추가 요금을 상품별로 관리.",
+      "offers": 4,
+      "endedOffers": 4
+    },
+    {
+      "id": "harrypotter-busan-202610",
+      "brand": "해리포터 마호도코로",
+      "categories": [
+        "팝업"
+      ],
+      "status": "진행/예약 중",
+      "start": "2026-10-30",
+      "end": "2027-01-07",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "부산점 구매·방문 사은품",
+        "현장 대기·입장",
+        "상품·온라인 쇼핑"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "지점·층·행사 구역 확인. 현장 대기와 구매/방문 사은품을 구분. 온라인 상품과 현장 재고 혼동 금지.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "hinakuu-busan-202610",
+      "brand": "히나쿠우",
+      "categories": [
+        "팝업"
+      ],
+      "status": "종료/예약 마감",
+      "start": "2026-10-30",
+      "end": "2026-11-10",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": "2026-11-06",
+      "unknown": [
+        "fee",
+        "foreign",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "구매·후기 리워드",
+        "상품 가격",
+        "현장 대기·구매 안내",
+        "B1 행사장 찾기"
+      ],
+      "issues": [
+        "기본 5항목 미입력: fee, foreign, taxFree, passport"
+      ],
+      "review": "종료 행사 보관. 구매/후기 리워드·상품가·B1 실내 동선 분리. 결제 근거 재확인.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "daldal-market-busan-202611",
+      "brand": "달달더마켓",
+      "categories": [
+        "로컬",
+        "디저트"
+      ],
+      "status": "종료/예약 마감",
+      "start": "2026-11-06",
+      "end": "2026-11-12",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": null,
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "부산의 달콤한 브랜드를 만나요"
+      ],
+      "issues": [
+        "상세 전체 확인일 없음",
+        "기본 5항목 미입력: fee, foreign, payment, taxFree, passport"
+      ],
+      "review": "종료 행사 보관. 부산 이벤트+디저트 교차 분류. 입점 브랜드와 실제 메뉴/가격·알레르기·보관 정보 구분.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "gwangalli-drone-laser-20261121",
+      "brand": "광안리 M 드론×레이저쇼",
+      "categories": [
+        "로컬"
+      ],
+      "status": "예정",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "locations": 1,
+      "detailPresent": true,
+      "checked": null,
+      "unknown": [],
+      "legacySectionOrder": [
+        "11월 21일 공연 구성"
+      ],
+      "issues": [
+        "상세 전체 확인일 없음"
+      ],
+      "review": "하루 안의 여러 공연 회차·기상 취소·관람 구역·교통 통제·유료 좌석 여부를 항목별 확인.",
+      "offers": 0,
+      "endedOffers": 0
+    },
+    {
+      "id": "gstar-busan-202611",
+      "brand": "G-STAR",
+      "categories": [
+        "로컬"
+      ],
+      "status": "예정",
+      "start": "2026-11-19",
+      "end": "2026-11-22",
+      "locations": 2,
+      "detailPresent": true,
+      "checked": null,
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "legacySectionOrder": [
+        "일반 관람권 · 예매",
+        "행사별 이용 범위"
+      ],
+      "issues": [
+        "상세 전체 확인일 없음",
+        "기본 5항목 미입력: foreign, payment, taxFree, passport"
+      ],
+      "review": "2개 전시장 연결 유지. BTC/BTB/G-CON 이용 범위·요금·예매 마감·현장 판매 불가·연령 조건 분리.",
+      "offers": 0,
+      "endedOffers": 0
+    }
+  ],
+  "branches": [
+    {
+      "id": "oliveyoung-8",
+      "event_id": "oliveyoung-blackfriday-2026",
+      "brand": "올리브영",
+      "name": "올리브영 커넥트현대 부산점",
+      "address": "부산광역시 동구 범일로 125 · 커넥트현대 부산 B1",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [
+        "phone",
+        "source",
+        "action",
+        "sections"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "oliveyoung-0",
+      "event_id": "oliveyoung-blackfriday-2026",
+      "brand": "올리브영",
+      "name": "올리브영 남포 타운",
+      "address": "부산광역시 중구 비프광장로 40",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "oliveyoung-30",
+      "event_id": "oliveyoung-blackfriday-2026",
+      "brand": "올리브영",
+      "name": "올리브영 밀락더마켓점",
+      "address": "부산광역시 수영구 민락수변로17번길 56 · 밀락더마켓",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "uniqlo-4",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 부산 사하점",
+      "address": "부산광역시 사하구 하신중앙로 129",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote",
+        "payment"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-1",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 롯데백화점 광복점",
+      "address": "부산광역시 중구 중앙대로 2 롯데백화점 광복점2층",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-5",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 부산 범일점",
+      "address": "부산광역시 동구 자성로 128 1F",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-0",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 삼정타워점",
+      "address": "부산광역시 부산진구 중앙대로 672 삼정타워 B1층",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-6",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 롯데백화점 서면점",
+      "address": "부산광역시 부산진구 가야대로 772 롯데백화점 서면점 지하 1F 유니클로",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote",
+        "taxFree",
+        "sections"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-7",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 롯데마트 화명점",
+      "address": "부산광역시 북구 화명대로 47 롯데마트화명점1층",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-8",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 롯데마트 동래점",
+      "address": "부산광역시 동래구 중앙대로 1393 롯데마트 동래점",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-2",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 롯데백화점 센텀시티점",
+      "address": "부산광역시 해운대구 센텀남대로 59 롯데백화점 센텀시티점 지하 2층",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "uniqlo-3",
+      "event_id": "uniqlo-2026",
+      "brand": "유니클로",
+      "name": "유니클로 롯데몰 동부산점",
+      "address": "부산광역시 기장군 기장읍 기장해안로 147 롯데몰동부산점 1~2층",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action",
+        "transit",
+        "transitNote"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree"
+      ],
+      "visible": true
+    },
+    {
+      "id": "zara-14970",
+      "event_id": "zara-2026",
+      "brand": "자라",
+      "name": "자라 롯데백화점 센텀시티점",
+      "address": "부산광역시 해운대구 센텀남대로 59 · 롯데백화점 센텀시티점 2층",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "zara-9302",
+      "event_id": "zara-2026",
+      "brand": "자라",
+      "name": "자라 서면점",
+      "address": "부산광역시 부산진구 중앙대로702번길 33 · 1층",
+      "coordinatesValid": true,
+      "participation": "unconfirmed",
+      "overrides": [
+        "hours",
+        "hoursNote",
+        "phone",
+        "source",
+        "action"
+      ],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "zara-16694",
+      "event_id": "zara-2026",
+      "brand": "자라",
+      "name": "자라 롯데몰 동부산점",
+      "address": "부산 기장군 기장읍 기장해안로 147",
+      "coordinatesValid": true,
+      "participation": "unknown",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "tiffany-centum",
+      "event_id": "tiffany-2026",
+      "brand": "티파니앤코",
+      "name": "티파니앤코 신세계백화점 센텀시티점",
+      "address": "부산 해운대구 센텀남대로 35",
+      "coordinatesValid": true,
+      "participation": "unknown",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "monchhichi-centum",
+      "event_id": "monchhichi-busan-202611",
+      "brand": "몬치치",
+      "name": "몬치치 KARYLAND in BUSAN 팝업",
+      "address": "부산 해운대구 센텀남대로 35 · 신세계 센텀시티 B2 하이퍼스테이지",
+      "coordinatesValid": true,
+      "participation": "unknown",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "wackywilly-busan-b1",
+      "event_id": "wackywilly-busan-202610",
+      "brand": "와키윌리",
+      "name": "와키윌리 × 리센느 원이 팝업",
+      "address": "부산광역시 부산진구 가야대로 772 · 롯데백화점 부산본점 B1 키네틱 스테이지",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "tunaschool-gwangbok-b1",
+      "event_id": "tunaschool-gwangbok-202611",
+      "brand": "참치학교",
+      "name": "참치학교 광복점 팝업",
+      "address": "부산광역시 중구 중앙대로 2 · 롯데백화점 광복점 B1 식품행사장 (폴바셋 앞)",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "mugiwara-popup-202611",
+      "event_id": "mugiwara-busan-202611",
+      "brand": "원피스 무기와라 스토어",
+      "name": "원피스 무기와라 스토어 부산 롯데 팝업",
+      "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "yjack-popup-202611",
+      "event_id": "yjack-busan-202611",
+      "brand": "와이잭",
+      "name": "와이잭 동부산점 팝업스토어",
+      "address": "부산광역시 기장군 기장읍 기장해안로 147, 쇼핑몰 1F",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "gelatopique-popup-202611",
+      "event_id": "gelatopique-busan-202611",
+      "brand": "젤라또 피케",
+      "name": "젤라또 피케 부산본점 팝업스토어",
+      "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "sanx-popup-2026",
+      "event_id": "sanx-busan-202610",
+      "brand": "리락쿠마·스미코구라시",
+      "name": "리락쿠마 스미코구라시 PLUS by San-X 부산 미니스토어",
+      "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "maplestory-popup-2026",
+      "event_id": "maplestory-busan-202608",
+      "brand": "메이플스토리",
+      "name": "메이플스토리 in 롯데월드 부산",
+      "address": "부산광역시 기장군 기장읍 동부산관광로 42",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "signiel-busan",
+      "event_id": "signiel-busan-202611",
+      "brand": "시그니엘 부산",
+      "name": "시그니엘 부산",
+      "address": "부산광역시 해운대구 달맞이길 30",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "westin-josun-busan",
+      "event_id": "westin-josun-busan-202611",
+      "brand": "웨스틴 조선 부산",
+      "name": "웨스틴 조선 부산",
+      "address": "부산광역시 해운대구 동백로 67",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "grand-josun-busan",
+      "event_id": "grand-josun-busan-202611",
+      "brand": "그랜드 조선 부산",
+      "name": "그랜드 조선 부산",
+      "address": "부산광역시 해운대구 해운대해변로 292",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "harrypotter-popup-2026",
+      "event_id": "harrypotter-busan-202610",
+      "brand": "해리포터 마호도코로",
+      "name": "해리포터 마호도코로 부산본점 팝업스토어",
+      "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "hinakuu-popup-2026",
+      "event_id": "hinakuu-busan-202610",
+      "brand": "히나쿠우",
+      "name": "히나쿠우 in BUSAN 팝업스토어",
+      "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "daldal-market-gwangbok",
+      "event_id": "daldal-market-busan-202611",
+      "brand": "달달더마켓",
+      "name": "롯데백화점 광복점 B1 분수대 일원",
+      "address": "부산광역시 중구 중앙대로 2 · 롯데백화점 광복점 B1 분수대 일원",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "fee",
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": false
+    },
+    {
+      "id": "gwangalli-drone-beach",
+      "event_id": "gwangalli-drone-laser-20261121",
+      "brand": "광안리 M 드론×레이저쇼",
+      "name": "광안리해수욕장 · 드론×레이저쇼",
+      "address": "부산광역시 수영구 광안해변로 219 · 광안리해수욕장",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [],
+      "visible": true
+    },
+    {
+      "id": "gstar-bexco-hall1",
+      "event_id": "gstar-busan-202611",
+      "brand": "G-STAR",
+      "name": "지스타 BTC · 벡스코 제1전시장",
+      "address": "부산광역시 해운대구 APEC로 55 · 벡스코 제1전시장 1~3홀",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    },
+    {
+      "id": "gstar-bexco-hall2",
+      "event_id": "gstar-busan-202611",
+      "brand": "G-STAR",
+      "name": "지스타 BTC · 벡스코 제2전시장",
+      "address": "부산광역시 해운대구 APEC로 30 · 벡스코 제2전시장 1층 4홀",
+      "coordinatesValid": true,
+      "participation": "confirmed-notice",
+      "overrides": [],
+      "unknown": [
+        "foreign",
+        "payment",
+        "taxFree",
+        "passport"
+      ],
+      "visible": true
+    }
+  ],
+  "legacySnapshot": {
+    "catalog": [
+      {
+        "id": "oliveyoung-blackfriday-2026",
+        "brand": "올리브영",
+        "image": "oliveyoung.jpg",
+        "title": "2026 올리브영 블랙프라이데이",
+        "start": "2026-11-01",
+        "end": "2026-11-07",
+        "scheduleStatus": "confirmed"
+      },
+      {
+        "id": "uniqlo-2026",
+        "brand": "유니클로",
+        "image": "uniqlo.jpg",
+        "title": "유니클로 연말 행사 안내",
+        "start": null,
+        "end": null,
+        "scheduleStatus": "unconfirmed",
+        "reportedStart": "2026-11-20",
+        "reportedEnd": "2026-11-27"
+      },
+      {
+        "id": "zara-2026",
+        "brand": "자라",
+        "image": "zara.jpg",
+        "title": "자라 블랙프라이데이 안내",
+        "start": null,
+        "end": null,
+        "scheduleStatus": "unconfirmed",
+        "reportedStart": "2026-11-27",
+        "reportedEnd": "2026-12-01"
+      },
+      {
+        "id": "monchhichi-busan-202611",
+        "brand": "몬치치",
+        "image": "monchhichi-restored-20261112.png",
+        "title": "몬치치 KARYLAND in BUSAN 팝업",
+        "start": "2026-11-05",
+        "end": "2026-11-15",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://news.tf.co.kr/read/releasecopy/2385514.htm"
+      },
+      {
+        "id": "wackywilly-busan-202610",
+        "brand": "와키윌리",
+        "image": "wackywilly-user-20261106.png",
+        "title": "와키윌리 × 리센느 원이 팝업",
+        "start": "2026-10-30",
+        "end": "2026-11-12",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000511672"
+      },
+      {
+        "id": "tunaschool-gwangbok-202611",
+        "brand": "참치학교",
+        "image": "tunaschool-photo-20261112.jpeg",
+        "title": "참치학교 광복점 팝업",
+        "start": "2026-11-06",
+        "end": "2026-11-19",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000571267"
+      },
+      {
+        "id": "tiffany-2026",
+        "brand": "티파니앤코",
+        "image": "tiffany.jpg",
+        "title": "티파니앤코 행사 소식",
+        "start": null,
+        "end": null,
+        "scheduleStatus": "unknown"
+      },
+      {
+        "id": "mugiwara-busan-202611",
+        "brand": "원피스 무기와라 스토어",
+        "image": "mugiwara-poster-20261112.webp",
+        "title": "원피스 무기와라 스토어 부산 롯데 팝업",
+        "start": "2026-10-30",
+        "end": "2026-11-26",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568731"
+      },
+      {
+        "id": "yjack-busan-202611",
+        "brand": "와이잭",
+        "image": "yjack-user-20261106.png",
+        "title": "와이잭 동부산점 팝업스토어",
+        "start": "2026-11-05",
+        "end": "2026-11-18",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000567897"
+      },
+      {
+        "id": "gelatopique-busan-202611",
+        "brand": "젤라또 피케",
+        "image": "gelatopique-user-20261106.png",
+        "title": "젤라또 피케 부산본점 팝업스토어",
+        "start": "2026-10-30",
+        "end": "2026-11-12",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000567431"
+      },
+      {
+        "id": "sanx-busan-202610",
+        "brand": "리락쿠마·스미코구라시",
+        "image": "sanx-user-20261112.png",
+        "title": "리락쿠마 스미코구라시 PLUS by San-X 부산 미니스토어",
+        "start": "2026-10-30",
+        "end": "2027-01-31",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.popcondplay.com/ip/news/view/728"
+      },
+      {
+        "id": "maplestory-busan-202608",
+        "brand": "메이플스토리",
+        "image": "maplestory-poster-20261112.jpg",
+        "title": "메이플스토리 in 롯데월드 부산",
+        "start": "2026-08-29",
+        "end": "2026-11-22",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://lotteworldrecruit.tistory.com/entry/%EB%A9%94%EC%9D%B4%ED%94%8C-%EC%9A%A9%EC%82%AC%EC%97%AC-%EB%B6%80%EC%82%B0%EC%9C%BC%EB%A1%9C-%EB%AA%A8%EC%97%AC%EB%9D%BC-%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C-%EB%B6%80%EC%82%B0-%EA%B0%80%EC%9D%84-%EC%8B%9C%EC%A6%8C-%EC%B6%95%EC%A0%9C-MAPLESTORY-in-LOTTEWORLD-BUSAN-%EC%98%A4%ED%94%88"
+      },
+      {
+        "id": "signiel-busan-202611",
+        "brand": "시그니엘 부산",
+        "image": "signiel-user-20261112.png",
+        "title": "시그니엘 부산 시즌 패키지",
+        "start": "2026-08-18",
+        "end": "2027-06-30",
+        "scheduleStatus": "confirmed",
+        "scheduleKind": "booking",
+        "scheduleSource": "https://app.lottehotel.com/busan-signiel/ko/offers/packages",
+        "offers": [
+          {
+            "name": "Taste of Autumn",
+            "bookingStart": "2026-09-07",
+            "bookingEnd": "2026-11-29",
+            "stayStart": "2026-09-14",
+            "stayEnd": "2026-12-01",
+            "priceFrom": 437899,
+            "description": "가을 디저트와 함께하는 숙박 패키지. 현재 메뉴·제공 인원은 예약 상품에서 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "In-Room Dining at SIGNIEL",
+            "bookingStart": "2026-08-24",
+            "bookingEnd": "2027-06-30",
+            "stayStart": "2026-08-24",
+            "stayEnd": "2027-07-01",
+            "priceFrom": 440803,
+            "description": "객실에서 즐기는 프라이빗 다이닝. 식사 시간·메뉴·인원은 선택 상품에서 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "Autumn Serenity Retreat",
+            "bookingStart": "2026-08-18",
+            "bookingEnd": "2026-11-30",
+            "stayStart": "2026-09-01",
+            "stayEnd": "2026-12-01",
+            "priceFrom": 466334,
+            "description": "베르나르 까시에르 코코 티아레 너리싱 캔들 연계 패키지. 현재 선물 구성·재고를 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "SIGNIEL BRAND FESTA",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-02",
+            "stayEnd": "2027-04-01",
+            "priceFrom": 300080,
+            "description": "객실 단독 또는 조식 결합 상품 선택. 조식은 모든 요금에 포함되지 않아요.",
+            "category": "숙박"
+          }
+        ]
+      },
+      {
+        "id": "westin-josun-busan-202611",
+        "brand": "웨스틴 조선 부산",
+        "image": "westin-josun.svg",
+        "title": "웨스틴 조선 부산 쓱데이",
+        "start": "2026-10-30",
+        "end": "2026-11-08",
+        "scheduleStatus": "confirmed",
+        "scheduleKind": "booking",
+        "scheduleSource": "https://www.josunhotel.com/package/get.do?packageId=1670&propertyId=3",
+        "offers": [
+          {
+            "name": "Room Only Special Offer",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 285000,
+            "description": "디럭스 비치뷰 285,000원부터. 이그제큐티브 파크뷰 335,000원부터·비치뷰 365,000원부터. 객실별 라운지 포함 여부와 실제 전망을 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "Breakfast Package",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 360000,
+            "description": "디럭스 비치뷰 1박 + 까밀리아 조식 성인 2인. 어린이 조식은 별도예요.",
+            "category": "숙박"
+          },
+          {
+            "name": "Suite Offer",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 495000,
+            "description": "이그제큐티브 그랜드 495,000원부터·파크뷰 스위트 525,000원부터·비치뷰 스위트 595,000원부터. 클럽 라운지 성인 2인·레스토랑 3만원 바우처 1매.",
+            "category": "숙박"
+          },
+          {
+            "name": "다이닝 오퍼",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": null,
+            "description": "까밀리아 20%, 오킴스 지정 세트, 파노라마 애프터눈티 10% 할인. 객실 상품과 별도 예약이에요.",
+            "category": "로컬"
+          }
+        ]
+      },
+      {
+        "id": "grand-josun-busan-202611",
+        "brand": "그랜드 조선 부산",
+        "image": "grand-josun.svg",
+        "title": "그랜드 조선 부산 쓱데이",
+        "start": "2026-10-30",
+        "end": "2026-11-08",
+        "scheduleStatus": "confirmed",
+        "scheduleKind": "booking",
+        "scheduleSource": "https://gjb.josunhotel.com/package/get.do?packageId=1710&propertyId=4",
+        "offers": [
+          {
+            "name": "Room Only Special Offer",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-02",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 236500,
+            "description": "디럭스 시티뷰 236,500원부터·오션뷰 317,900원부터. 키즈 시티뷰 259,600원부터·오션뷰 335,500원부터.",
+            "category": "숙박",
+            "excludedStayDates": [
+              "2026-11-07",
+              "2026-11-14",
+              "2026-11-19",
+              "2026-11-20",
+              "2026-11-21",
+              "2026-12-31"
+            ]
+          },
+          {
+            "name": "Breakfast Package",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 349800,
+            "description": "아리아 조식 성인 2인. 디럭스 시티뷰 349,800원부터·오션뷰 431,200원부터. 키즈 시티뷰 372,900원부터·오션뷰 448,800원부터.",
+            "category": "숙박",
+            "excludedStayDates": [
+              "2026-11-07",
+              "2026-11-14",
+              "2026-11-19",
+              "2026-11-20",
+              "2026-11-21",
+              "2026-12-31"
+            ]
+          },
+          {
+            "name": "Suite Offer",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 708400,
+            "description": "코너 시티뷰 708,400원부터·패밀리 코너 830,500원부터·이그제큐티브 및 키즈 오션뷰 891,000원부터. 아리아 조식 성인 2인·Gran J 라운지·식음 3만원 바우처.",
+            "category": "숙박",
+            "excludedStayDates": [
+              "2026-11-07",
+              "2026-11-14",
+              "2026-11-19",
+              "2026-11-20",
+              "2026-11-21",
+              "2026-12-31"
+            ]
+          },
+          {
+            "name": "다이닝 오퍼",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": null,
+            "description": "아리아 20%, 팔레드 신 지정 메뉴, 테라스292 지정 세트, 조선델리 케이크 5% 할인. 객실과 별도 예약이에요.",
+            "category": "로컬"
+          }
+        ]
+      },
+      {
+        "id": "harrypotter-busan-202610",
+        "brand": "해리포터 마호도코로",
+        "image": "harrypotter-user-20261112.png",
+        "title": "해리포터 마호도코로 부산본점 팝업스토어",
+        "start": "2026-10-30",
+        "end": "2027-01-07",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.playdground.com/ip/news/view/731"
+      },
+      {
+        "id": "hinakuu-busan-202610",
+        "brand": "히나쿠우",
+        "image": "hinakuu-user-20261106.png",
+        "title": "히나쿠우 in BUSAN 팝업스토어",
+        "start": "2026-10-30",
+        "end": "2026-11-10",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568807"
+      },
+      {
+        "id": "daldal-market-busan-202611",
+        "brand": "달달더마켓",
+        "title": "2026 달달더마켓",
+        "image": "daldal-poster-20261112.jpg",
+        "start": "2026-11-06",
+        "end": "2026-11-12",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.bepa.kr/kor/view.do?idx=19599&no=1502&state=ing&view=view"
+      },
+      {
+        "id": "gwangalli-drone-laser-20261121",
+        "brand": "광안리 M 드론×레이저쇼",
+        "title": "광안리 M 드론×레이저쇼 — 성의 수호자",
+        "image": "gwangalli-poster-20261112.jpg",
+        "start": "2026-11-21",
+        "end": "2026-11-21",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.gwangallimdrone.co.kr/notice/gwanganri-m-deuronraiteusyo-11weol-gongyeon-peurogeuraem-annae-2"
+      },
+      {
+        "id": "gstar-busan-202611",
+        "brand": "G-STAR",
+        "title": "국제게임전시회 지스타 2026",
+        "image": "gstar-poster-20261112.jpg",
+        "start": "2026-11-19",
+        "end": "2026-11-22",
+        "scheduleStatus": "confirmed",
+        "scheduleSource": "https://www.gstar.or.kr/part/gstar_btc_info.do"
+      }
+    ],
+    "details": {
+      "몬치치": {
+        "type": "팝업",
+        "image": "monchhichi-restored-20261112.png",
+        "title": "캐리랜드 인 부산 — 몬치치 팝업",
+        "subtitle": "KARYLAND in BUSAN",
+        "description": "몬치치 신상품과 캐릭터 굿즈를 만나는 기간 한정 팝업.",
+        "start": "2026-11-05",
+        "end": "2026-11-15",
+        "dateNote": "행사 기간은 2차 자료 기준 · 공식 원문 대조 필요",
+        "closed": [
+          "2026-11-09"
+        ],
+        "venue": "신세계백화점 센텀시티 · B2 하이퍼스테이지",
+        "hours": "월–목 10:30–20:00 / 금–일 10:30–20:30",
+        "hoursNote": "백화점 영업시간 기준. 팝업 입장 마감 시각은 확인 전입니다.",
+        "transit": "부산 2호선 센텀시티역 연결 · 12번 출구 기준 약 130m",
+        "transitNote": "B2 행사장까지의 실내 이동·대기시간은 별도입니다.",
+        "benefit": "구매 고객 스티커 1종 랜덤 증정. 10만원 이상 구매 시 러기지태그 1종 랜덤 증정 안내.",
+        "benefitNote": "2차 자료 기준 · 선착순·소진 시 종료. 중복 수령·영수증 합산·잔여 수량은 확인 전입니다.",
+        "entry": "사전예약 우선 입장, 잔여 인원에 한해 현장 대기 안내.",
+        "entryNote": "2차 자료 기준. 예약 없이 방문했을 때 입장은 보장되지 않습니다.",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "notice": "일부 상품 종류별 1인 2개 구매 제한 안내가 있습니다. 적용 상품·교환·환불 조건은 공식 예약 및 현장에서 확인해주세요.",
+        "source": "https://booking.naver.com/booking/12/bizes/1762042",
+        "action": "공식 예약",
+        "phone": "02-6288-9714",
+        "checked": "2026-11-05",
+        "scope": "행사명·장소는 공식 예약 페이지에서 확인했습니다. 기간·입장 방식·사은품은 항목별 확인 상태를 참고해주세요.",
+        "highlights": [
+          [
+            "행사장",
+            "센텀시티 B2"
+          ],
+          [
+            "핵심 혜택",
+            "구매 사은품"
+          ],
+          [
+            "휴점일",
+            "11월 9일"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "구매하면 받을 수 있는 사은품",
+            "status": "2차 자료 기준",
+            "columns": [
+              "구매 조건",
+              "안내된 사은품"
+            ],
+            "rows": [
+              [
+                "구매 고객",
+                "몬치치 스티커 1종 랜덤 증정"
+              ],
+              [
+                "100,000원 이상 구매",
+                "몬치치 러기지태그 1종 랜덤 증정"
+              ]
+            ],
+            "note": "선착순·소진 시 종료. 1일 수량, 현재 잔여 수량, 중복 수령 및 영수증 합산 조건은 확인 전입니다."
+          },
+          {
+            "title": "예약하고 방문하기",
+            "status": "입장 방식은 2차 자료 기준",
+            "items": [
+              "공식 네이버 예약 페이지에서 예약 안내를 확인하세요.",
+              "1인 1예약·사전예약자 우선 입장으로 안내되어 있습니다.",
+              "현장 대기는 잔여 인원이 있을 때만 가능하다는 안내입니다.",
+              "날짜별 회차·잔여석·입장료와 외국인의 예약 인증 가능 여부는 확인 전입니다."
+            ],
+            "note": "현장 방문만으로 입장이 보장되지 않습니다. 하단의 공식 예약 버튼에서 최신 공지를 확인하세요."
+          },
+          {
+            "title": "몬치치 등장 · 스페셜 이벤트",
+            "status": "공식 SNS 재게시 자료 기준",
+            "columns": [
+              "안내 날짜",
+              "매일 안내 시각"
+            ],
+            "rows": [
+              [
+                "11.06(금) — 11.08(일)",
+                "12:00 / 15:00"
+              ],
+              [
+                "11.13(금) — 11.15(일)",
+                "12:00 / 15:00"
+              ]
+            ],
+            "note": "총 6일·12회 예정으로 안내됩니다. 현장 상황에 따라 변경될 수 있으며, 선물 수량·촬영 가능 여부는 확인 전입니다."
+          },
+          {
+            "title": "어떤 굿즈가 있나요?",
+            "status": "2차 자료의 소개 가격",
+            "columns": [
+              "대표 상품",
+              "참고 가격"
+            ],
+            "rows": [
+              [
+                "몬치치 빅헤드 키체인",
+                "22,000원"
+              ],
+              [
+                "골드 몬치치·베비치치 키체인",
+                "35,000원"
+              ],
+              [
+                "베비치치 빅헤드 키체인",
+                "38,000원"
+              ],
+              [
+                "원피스 루피 몬치치 키체인",
+                "48,000원"
+              ],
+              [
+                "원피스 루피 몬치치 인형",
+                "80,000원"
+              ]
+            ],
+            "note": "공식 원본 가격표를 직접 대조하지 못한 참고 가격입니다. 현장 판매가·판매 여부·재고를 보장하지 않습니다.",
+            "visitorNote": "참고 가격이며, 판매 상품·가격·재고는 현장에서 달라질 수 있어요."
+          }
+        ]
+      },
+      "올리브영": {
+        "type": "세일",
+        "image": "oliveyoung.jpg",
+        "title": "2026 올리브영 블랙프라이데이",
+        "subtitle": "OLIVE YOUNG BLACK FRIDAY",
+        "description": "매장별 특가와 쿠폰, 한정 상품 소식을 확인하세요. 온라인과 매장의 혜택은 다를 수 있어요.",
+        "start": "2026-11-01",
+        "end": "2026-11-07",
+        "dateNote": "메인 행사 기간 공식 확인 · 세부 기획전 기간은 다를 수 있습니다.",
+        "closed": [],
+        "hours": null,
+        "hoursNote": "선택한 지점의 영업시간·휴무일은 확인 전입니다.",
+        "transit": null,
+        "benefit": "매장별 라스트픽·한정 상품 및 쿠폰 행사. 가격·품목·수량은 지점별로 다릅니다.",
+        "benefitNote": "선택한 지점의 행사 참여·박스 판매·재고는 별도 확인이 필요합니다. 온라인 최대 할인율을 이 매장 혜택으로 표시하지 않습니다.",
+        "entry": "일반 매장 방문과 회원 쿠폰·추첨 참여 조건은 서로 다릅니다.",
+        "entryNote": "쿠폰 발급·본인인증·최소 구매금액·중복 사용 조건은 공식 안내에서 확인해주세요.",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "notice": "블프라이즈 박스는 타입별 1인 1개, 동일 품목 당일 중복 구매 불가 안내. 오늘드림·픽업 제외. 판매 지점·수량은 별도 확인이 필요합니다.",
+        "source": "https://www.oliveyoung.co.kr/store/planshop/getPlanShopDetail.do?dispCatNo=500000100019BDJ",
+        "action": "공식 행사 안내",
+        "checked": "2026-11-05",
+        "scope": "브랜드 공통 행사 안내입니다. 이 매장의 행사 참여 및 동일 혜택 적용이 확인됐다는 뜻은 아닙니다.",
+        "highlights": [
+          [
+            "메인 기간",
+            "11.01 — 11.07"
+          ],
+          [
+            "진행 채널",
+            "온라인 · 매장"
+          ],
+          [
+            "매장 혜택",
+            "지점별 확인"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "블프라이즈 박스 · 한정 판매",
+            "status": "공식 FAQ · 지점별 참여 별도 확인",
+            "columns": [
+              "박스",
+              "판매가",
+              "안내 판매일"
+            ],
+            "rows": [
+              [
+                "A 박스",
+                "29,900원",
+                "11.01 / 11.07"
+              ],
+              [
+                "B 박스",
+                "6,900원",
+                "11.01 / 11.07"
+              ],
+              [
+                "스페셜 드롭",
+                "39,900원",
+                "11.04 · 한정 매장"
+              ]
+            ],
+            "note": "타입별 1인 1개, 동일 품목 당일 중복 구매 불가. 지점별 수량 상이. 오늘드림·픽업 제외. 개별 구성 제품명·용량은 미공개입니다."
+          },
+          {
+            "title": "쿠폰·결제·포인트 조건",
+            "status": "공식 FAQ 기준",
+            "items": [
+              "올블랙 랜덤 쿠폰: 계정당 하루 1회. 매장·온라인 중 한 채널을 선택하며 중복 발급은 불가합니다.",
+              "카카오·토스페이 2,000원 할인: 오프라인 머니·포인트 결제 전용. 신용·체크카드 결제는 제외됩니다.",
+              "5,000P 추첨: 행사 기간 합산 50,000원 이상 구매하고 앱에서 응모. 10,000명 추첨, 11월 27일 지급 예정으로 안내됩니다."
+            ],
+            "note": "포인트는 구매자 전원에게 자동 적립되는 혜택이 아닙니다. 쿠폰 최소금액·만료·중복 사용, 결제 할인 예산과 외국인 참여 자격은 별도 확인이 필요합니다."
+          },
+          {
+            "title": "온라인 혜택과 매장 혜택은 달라요",
+            "status": "적용 채널 구분",
+            "items": [
+              "온라인 라스트픽에는 최대 70% 안내가 있습니다.",
+              "이 수치는 선택한 부산 매장의 공통 할인율이 아닙니다.",
+              "매장 라스트픽 품목과 가격, 쿠폰·박스 판매·재고는 지점마다 확인해야 합니다."
+            ],
+            "note": "일부 브랜드 기획전은 메인 행사와 종료일이 다릅니다. 공식 상세 안내의 대상·기간을 확인하세요."
+          }
+        ]
+      },
+      "유니클로": {
+        "type": "세일",
+        "image": "uniqlo.jpg",
+        "title": "유니클로 연말 행사 안내",
+        "subtitle": "UNIQLO · YEAR-END SHOPPING",
+        "description": "부산 매장의 위치와 운영정보를 확인하세요. 2026 블랙프라이데이·겨울 감사제의 일정과 혜택은 아직 확인되지 않았어요.",
+        "start": null,
+        "end": null,
+        "verified": false,
+        "isActive": false,
+        "dateLabel": "공식 일정 안내 전",
+        "reportedStart": "2026-11-20",
+        "reportedEnd": "2026-11-27",
+        "hours": null,
+        "hoursNote": "방문할 매장의 운영시간을 확인해주세요.",
+        "closed": [],
+        "benefit": "행사 대상 상품·할인 가격·쿠폰·사은품은 공식 안내를 확인해주세요.",
+        "entry": "매장별 방문·재고·픽업 조건을 확인해주세요.",
+        "entryNote": "전화 재고 예약은 지원하지 않습니다. 실시간 재고와 매장픽업 이용 조건은 공식몰에서 확인하세요.",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": "면세 신청 시 여권 지참",
+        "notice": "매장 등록이 해당 행사의 참여를 의미하지는 않아요. 할인 상품·재고·쿠폰·사은품과 면세 적용 조건은 방문할 지점에 확인해주세요.",
+        "source": "https://www.uniqlo.com/kr/ko/",
+        "action": "유니클로 공식몰",
+        "checked": "2026-11-06",
+        "highlights": [
+          [
+            "행사 일정",
+            "안내 전"
+          ],
+          [
+            "부산 매장",
+            "9곳 등록"
+          ],
+          [
+            "혜택 조건",
+            "지점별 확인"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "행사 일정 · 혜택",
+            "items": [
+              "블랙프라이데이·겨울 감사제의 공식 행사명, 일정, 대상 상품과 할인 가격은 아직 확인되지 않았어요.",
+              "행사별 사은품·쿠폰·앱·회원 조건은 공식 안내가 나온 뒤 확인해주세요."
+            ]
+          },
+          {
+            "title": "할인 상품 확인하기",
+            "items": [
+              "공식몰의 기간한정 가격과 가격인하 상품을 확인할 수 있어요. 연말 행사 혜택과는 구분해서 확인해주세요.",
+              "같은 상품도 방문 시점과 매장에 따라 재고·사이즈·색상이 다를 수 있어요."
+            ]
+          },
+          {
+            "title": "면세 쇼핑 안내",
+            "items": [
+              "일부 오프라인 매장에서 면세 서비스를 이용할 수 있어요. 온라인 스토어는 면세 적용이 불가해요.",
+              "일반 면세 안내의 최소 구매 금액은 15,000원이에요. 대상자·한도·서비스 제공 여부를 매장에서 확인해주세요.",
+              "면세 신청은 결제 전에 요청하고 여권을 지참하세요. 할인·쿠폰과 면세의 중복 적용은 지점에서 확인해주세요."
+            ]
+          }
+        ]
+      },
+      "자라": {
+        "type": "세일",
+        "image": "zara.jpg",
+        "title": "자라 블랙프라이데이 안내",
+        "subtitle": "ZARA · BLACK FRIDAY",
+        "description": "부산 매장의 위치와 운영정보를 확인하세요. 2026 블랙프라이데이의 공식 일정·할인 상품·혜택은 아직 확인되지 않았어요.",
+        "start": null,
+        "end": null,
+        "verified": false,
+        "isActive": false,
+        "dateLabel": "공식 일정 안내 전",
+        "reportedStart": "2026-11-27",
+        "reportedEnd": "2026-12-01",
+        "maxDiscount": null,
+        "hours": null,
+        "hoursNote": "방문 당일 운영시간과 휴무는 매장 공식 안내에서 확인해주세요.",
+        "closed": [],
+        "benefit": "대상 상품·할인 가격·사은품·행사 참여 지점은 공식 안내를 확인해주세요.",
+        "entry": "매장 방문과 행사별 이용 조건을 확인해주세요.",
+        "entryNote": "행사 당일 입장·대기·구매 수량 제한은 아직 확인되지 않았어요.",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "notice": "매장 위치가 등록되어 있어도 블랙프라이데이 참여가 확정된 것은 아니에요. 행사 당일 재고·혜택·반품 예외·면세 조건은 해당 지점에 확인해주세요.",
+        "source": "https://www.zara.com/kr/",
+        "action": "자라 공식몰",
+        "checked": "2026-11-06",
+        "highlights": [
+          [
+            "행사 일정",
+            "안내 전"
+          ],
+          [
+            "혜택 조건",
+            "지점별 확인"
+          ],
+          [
+            "반품 기한",
+            "매장 구매 31일"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "행사 일정 · 할인 상품",
+            "items": [
+              "2026 블랙프라이데이의 한국 공식 일정, 최대 할인율, 대상 상품은 아직 확인되지 않았어요.",
+              "앱·웹 시작 시각과 부산 매장의 참여 여부는 공식 공지를 확인해주세요.",
+              "공식몰의 일반 특가 상품은 블랙프라이데이 행사와 별개예요. 매장별 가격·재고·사이즈는 방문 전에 확인하세요."
+            ]
+          },
+          {
+            "title": "쿠폰 · 결제 안내",
+            "items": [
+              "자라는 공식 도움말에서 할인 코드를 제공하지 않는다고 안내해요. 비공식 쿠폰 코드를 확인 없이 사용하지 마세요.",
+              "온라인 주문은 결제 단계에 표시되는 수단을 확인하세요. 온라인 안내와 매장의 결제 수단은 다를 수 있어요.",
+              "부산 매장의 해외 발급 카드·알리페이·위챗페이 지원 여부는 해당 지점에 문의해주세요."
+            ]
+          },
+          {
+            "title": "구매 후 반품하기",
+            "columns": [
+              "구매 방식",
+              "일반 반품 기한"
+            ],
+            "rows": [
+              [
+                "매장 구매",
+                "구매일로부터 31일"
+              ],
+              [
+                "온라인 구매",
+                "출고일로부터 31일"
+              ]
+            ],
+            "items": [
+              "원래 상태와 모든 라벨을 유지하고 구매한 국가·지역에서 반품해야 해요.",
+              "매장 구매 상품은 최초 구매 매장에서 반품하세요. ZARA QR 코드 또는 영수증이 필요해요.",
+              "온라인 구매 상품은 자라 매장 반품이 가능해요. 자택 수거는 별도 조건과 비용을 확인하세요."
+            ],
+            "note": "일반 반품 정책 안내입니다. 행사 상품의 별도 예외가 있는지는 구매 전에 확인해주세요."
+          },
+          {
+            "title": "외국인 · 면세 쇼핑",
+            "items": [
+              "외국인의 행사 참여·회원 조건과 면세 가능 여부는 지점별로 확인해주세요.",
+              "면세 신청에 필요한 서류와 여권, 할인과 면세의 중복 적용 여부는 결제 전에 직원에게 문의하세요."
+            ]
+          }
+        ]
+      },
+      "와키윌리": {
+        "type": "팝업",
+        "verified": true,
+        "isActive": true,
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "entry": "예약·입장료·대기 등록 방식은 행사장에 문의해주세요.",
+        "checked": "2026-11-06",
+        "action": "공식 행사 안내",
+        "category": "패션",
+        "image": "wackywilly-user-20261106.png",
+        "title": "와키윌리 × 리센느 원이 팝업",
+        "subtitle": "WACKY WILLY · BUSAN POP-UP",
+        "description": "서면에서 만나는 원이 스타일. 와키윌리의 가을·겨울 패션을 부산본점 팝업에서 만나보세요.",
+        "start": "2026-10-30",
+        "end": "2026-11-12",
+        "closed": [
+          "2026-11-09"
+        ],
+        "venue": "롯데백화점 부산본점 B1 키네틱 스테이지",
+        "hours": "백화점 기준 월–목 10:30–20:00 / 금–일 10:30–20:30",
+        "hoursNote": "11월 9일 백화점 휴점. 팝업 개별 마감과 휴점 예외 운영은 문의해주세요.",
+        "transit": "도시철도 1·2호선 서면역 지하 연결통로 이용",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000511672",
+        "phone": "1577-0001",
+        "benefit": "안내 상품 4종의 가격 기준 20% 할인. 상품별 가격과 재고를 확인하세요.",
+        "notice": "11월 9일은 백화점 휴점입니다. 원이 현장 방문·팬사인회 일정은 확인되지 않았어요.",
+        "highlights": [
+          [
+            "행사장",
+            "부산본점 B1"
+          ],
+          [
+            "안내 상품 4종",
+            "가격 기준 20% 할인"
+          ],
+          [
+            "휴점일",
+            "11월 9일"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "안내 상품 4종 · 행사 가격",
+            "columns": [
+              "상품",
+              "비교가격",
+              "행사 가격"
+            ],
+            "rows": [
+              [
+                "케이블 오픈카라 풀오버 블루",
+                "109,000원",
+                "87,200원"
+              ],
+              [
+                "멜로우 미디 울 더플코트 다크 네이비",
+                "329,000원",
+                "263,200원"
+              ],
+              [
+                "올데이 데님 자수 후드집업 블루",
+                "139,000원",
+                "111,200원"
+              ],
+              [
+                "멜로우 후드 스웨이드 무스탕 카멜",
+                "259,000원",
+                "207,200원"
+              ]
+            ],
+            "visitorNote": "20%는 안내 상품 4종의 비교가격과 행사 가격으로 계산한 값이에요. 전 품목·모든 색상·사이즈에 적용되는 할인은 아니에요."
+          },
+          {
+            "title": "방문 전에 알아두세요",
+            "items": [
+              "이번 팝업은 B1 키네틱 스테이지예요. 7층 상설 매장과 위치가 달라요.",
+              "원이 방문·팬사인회·포토카드·사인품·가챠·구매 사은품 일정과 조건은 확인되지 않았어요.",
+              "가격·재고·구매 제한과 예약·입장 조건은 행사장에 문의해주세요.",
+              "문의 전화는 백화점 대표번호입니다."
+            ]
+          }
+        ]
+      },
+      "참치학교": {
+        "type": "팝업",
+        "verified": true,
+        "isActive": true,
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "entry": "예약·입장료·대기 등록 방식은 행사장에 문의해주세요.",
+        "checked": "2026-11-06",
+        "action": "공식 행사 안내",
+        "category": "푸드",
+        "image": "tunaschool-photo-20261112.jpeg",
+        "title": "참치학교 광복점 팝업",
+        "subtitle": "TUNA SCHOOL · GWANGBOK POP-UP",
+        "description": "남포에서 만나는 참치학교. 참치 뱃살회부터 참치 오마카세 상품까지, 상품별 행사 가격을 확인해보세요.",
+        "start": "2026-11-06",
+        "end": "2026-11-19",
+        "closed": [],
+        "venue": "롯데백화점 광복점 B1 식품행사장 · 폴바셋 앞",
+        "hours": "백화점 기준 월–목 10:30–20:00 / 금–일·공휴일 10:30–20:30",
+        "hoursNote": "팝업 개별 마감과 당일 재고는 행사장에 문의해주세요.",
+        "transit": "도시철도 1호선 남포역 8번 출구 · 백화점 B1 연결",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000571267",
+        "phone": "051-678-2173",
+        "benefit": "참치 뱃살회 32,000원 / 프리미엄 참치 한상 49,000원 등 상품별 행사 가격.",
+        "notice": "특수부위와 상품은 조기 소진될 수 있어요. 상품별 중량·인분·포장·현장 취식 방식은 행사장에 문의해주세요.",
+        "highlights": [
+          [
+            "행사장",
+            "광복점 B1"
+          ],
+          [
+            "참치 뱃살회",
+            "32,000원"
+          ],
+          [
+            "해체쇼 안내",
+            "11월 7일 16시"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "참치학교 · 행사 가격",
+            "columns": [
+              "상품",
+              "비교가격",
+              "행사 가격"
+            ],
+            "rows": [
+              [
+                "참치 뱃살회",
+                "45,000원",
+                "32,000원"
+              ],
+              [
+                "프리미엄 참치 한상",
+                "70,000원",
+                "49,000원"
+              ],
+              [
+                "모듬사시미 한상",
+                "65,000원",
+                "45,000원"
+              ],
+              [
+                "스페셜 참치 오마카세",
+                "90,000원",
+                "63,000원"
+              ],
+              [
+                "프리미엄 참치 오마카세",
+                "120,000원",
+                "84,000원"
+              ]
+            ],
+            "visitorNote": "상품별 가격 기준이에요. 중량·인분·구성·포장 및 현장 취식 방식은 문의해주세요."
+          },
+          {
+            "title": "참다랑어 해체쇼",
+            "items": [
+              "11월 7일(토) 오후 4시 해체쇼가 안내되어 있어요.",
+              "11월 14일 추가 일정과 진행 시각은 행사장에 문의해주세요.",
+              "시식·관람료·예약·대기 방식은 확인되지 않았어요."
+            ]
+          }
+        ]
+      },
+      "원피스 무기와라 스토어": {
+        "type": "팝업",
+        "verified": true,
+        "isActive": true,
+        "hours": "백화점 기준 월–목 10:30–20:00 / 금–일 10:30–20:30",
+        "hoursNote": "11월 9일 백화점 휴점. 팝업 최종 마감은 현장 확인해주세요.",
+        "closed": [
+          "2026-11-09"
+        ],
+        "transit": "도시철도 1·2호선 서면역 지하 연결통로 이용",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "phone": "1577-0001",
+        "action": "공식 행사 안내",
+        "checked": "2026-11-06",
+        "category": "굿즈",
+        "title": "원피스 무기와라 스토어 부산 롯데 팝업",
+        "image": "mugiwara-poster-20261112.webp",
+        "start": "2026-10-30",
+        "end": "2026-11-26",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568731",
+        "venue": "롯데백화점 부산본점 B1 팬덤스페이스",
+        "description": "서면에 모인 밀짚모자 굿즈. 원피스 캐릭터 상품과 한국 오리지널 굿즈를 부산본점에서 만나보세요.",
+        "subtitle": "MUGIWARA STORE · BUSAN POP-UP",
+        "benefit": "방문·구매 특전은 예약자 본인에게 한정 수량으로 제공돼요. 구매 금액별 조건을 확인하세요.",
+        "entry": "카카오톡 예약하기에서 ‘무기와라 스토어’를 검색하세요. 1인 1일 1회, 같은 날짜 중복예약은 불가해요.",
+        "notice": "11월 9일 휴점. 특전은 예약자 본인에게 제공되며 단계별 중복 증정은 불가해요. 수량 소진 시 종료됩니다.",
+        "highlights": [
+          [
+            "행사장",
+            "부산본점 B1"
+          ],
+          [
+            "현장 대기",
+            "11/2–11/26"
+          ],
+          [
+            "휴점일",
+            "11월 9일"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "예약하고 방문하기",
+            "items": [
+              "카카오톡 예약하기에서 ‘무기와라 스토어’를 검색해 예약 가능 여부를 확인하세요.",
+              "1인 1일 1회, 동일 날짜 중복예약은 불가해요. 현재 잔여석은 예약 페이지에서 확인하세요.",
+              "10월 30일–11월 1일은 현장 대기등록을 운영하지 않으며, 11월 2일–26일은 현장 대기등록이 가능해요.",
+              "대기 접수는 입장 게이트 옆 키오스크에서 월–목 10:30–19:45 / 금–일 10:30–20:15에 진행돼요. 대기 상황에 따라 조기 마감될 수 있어요.",
+              "예약이 상품 재고를 보장하지는 않아요. 입장료 여부는 확인 전입니다."
+            ]
+          },
+          {
+            "title": "방문·구매 특전",
+            "columns": [
+              "조건",
+              "안내 특전"
+            ],
+            "rows": [
+              [
+                "방문 특전",
+                "루피 모자 타투 스티커"
+              ],
+              [
+                "30,000원 구매",
+                "모바일 클리너 · 2종 중 랜덤 1종"
+              ],
+              [
+                "50,000원 구매",
+                "수배서 PVC 홀더 · 10종 중 랜덤 1종"
+              ],
+              [
+                "100,000원 구매",
+                "루피 누들 스토퍼"
+              ]
+            ],
+            "visitorNote": "예약자 본인에게만 제공되며 단계별 중복 증정은 불가해요. 한정 수량으로 소진 시 종료됩니다."
+          },
+          {
+            "title": "굿즈 가격 살펴보기",
+            "columns": [
+              "상품",
+              "안내 가격"
+            ],
+            "rows": [
+              [
+                "노트북 키보드 스티커",
+                "5,000원"
+              ],
+              [
+                "루피 간장 종지",
+                "14,000원"
+              ],
+              [
+                "쵸파 핸들 플레이트",
+                "24,000원"
+              ],
+              [
+                "밀짚모자일당 미니 파우치 · 랜덤",
+                "15,000원"
+              ],
+              [
+                "루피·조로 머그컵 · 캐릭터별",
+                "22,000원"
+              ],
+              [
+                "ALL ABOARD 피규어 · 캐릭터별",
+                "45,000원"
+              ],
+              [
+                "MERRY&SUNNY GO ROUND 피규어 · 캐릭터별",
+                "48,000원"
+              ]
+            ],
+            "visitorNote": "두 피규어 상품은 1인당 구매 1개 제한이 안내돼 있어요. 가격·재고·재입고는 현장에서 확인하세요."
+          }
+        ]
+      },
+      "와이잭": {
+        "type": "팝업",
+        "verified": true,
+        "isActive": true,
+        "hours": "동절기 본관 기준 평일 10:30–20:30 / 주말·공휴일 10:30–21:00",
+        "hoursNote": "팝업 부스의 별도 마감 시각은 점포에 문의해주세요.",
+        "closed": [],
+        "transit": "동해선 오시리아역 · 점포 안내 기준 도보 7–10분",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "phone": "1577-0001",
+        "action": "공식 행사 안내",
+        "checked": "2026-11-06",
+        "category": "패션",
+        "title": "와이잭 동부산점 팝업스토어",
+        "image": "yjack-user-20261106.png",
+        "start": "2026-11-05",
+        "end": "2026-11-18",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000567897",
+        "venue": "롯데프리미엄아울렛 동부산점 쇼핑몰 1F 크록스 앞",
+        "description": "기장에서 만나는 와이잭 특가. 티셔츠·팬츠와 시그니처·캐시미어 라인을 동부산점 팝업에서 살펴보세요.",
+        "subtitle": "YJACK · DONGBUSAN POP-UP",
+        "benefit": "티셔츠·팬츠 균일가 19,900–39,000원. 대상 상품 최대 80% 할인과 구매금액별 추가할인이 안내돼 있어요.",
+        "entry": "별도 입장료·예약 조건은 확인 전입니다.",
+        "notice": "균일가·일부 상품은 추가할인에서 제외됩니다. 최대 80%는 모든 상품에 적용되는 할인율이 아니에요.",
+        "maxDiscount": 80,
+        "highlights": [
+          [
+            "행사장",
+            "동부산점 1F"
+          ],
+          [
+            "티셔츠·팬츠",
+            "19,900–39,000원"
+          ],
+          [
+            "추가할인",
+            "금액·제외 조건 확인"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "상품별 할인 살펴보기",
+            "items": [
+              "티셔츠·팬츠는 균일가 19,900–39,000원으로 안내돼 있어요.",
+              "최대 80% 할인은 대상 상품 기준이에요. 전 품목에 동일하게 적용되지는 않아요.",
+              "개별 상품 가격·사이즈·색상·재고는 행사장에서 확인하세요."
+            ]
+          },
+          {
+            "title": "구매금액별 추가할인",
+            "columns": [
+              "구매금액",
+              "추가할인"
+            ],
+            "rows": [
+              [
+                "150,000원 이상",
+                "5%"
+              ],
+              [
+                "300,000원 이상",
+                "10%"
+              ]
+            ],
+            "visitorNote": "균일가·일부 상품은 제외됩니다. 할인 전후 금액 기준과 쿠폰 중복·적용 순서는 현장에서 확인하세요. 최대 할인율과 추가할인율을 단순 합산하지 않습니다."
+          },
+          {
+            "title": "방문 안내",
+            "items": [
+              "쇼핑몰 1층 크록스 앞 행사장이에요. 메종동부산과 다른 장소입니다.",
+              "문의 전화는 점포 대표번호입니다. 팝업 부스 운영과 재고는 점포에 확인해주세요."
+            ]
+          }
+        ]
+      },
+      "젤라또 피케": {
+        "type": "팝업",
+        "verified": true,
+        "isActive": true,
+        "hours": "백화점 기준 월–목 10:30–20:00 / 금–일 10:30–20:30",
+        "hoursNote": "11월 9일 백화점 휴점. 팝업 최종 마감은 현장 확인해주세요.",
+        "closed": [
+          "2026-11-09"
+        ],
+        "transit": "도시철도 1·2호선 서면역 지하 연결통로 이용",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "phone": "1577-0001",
+        "action": "공식 행사 안내",
+        "checked": "2026-11-06",
+        "category": "패션",
+        "title": "젤라또 피케 부산본점 팝업스토어",
+        "image": "gelatopique-user-20261106.png",
+        "start": "2026-10-30",
+        "end": "2026-11-12",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000567431",
+        "venue": "롯데백화점 부산본점 B1 키네틱 스테이지",
+        "description": "서면에서 만나는 포근한 룸웨어. 젤라또 피케의 룸웨어와 잡화, 구매금액별 사은품을 만나보세요.",
+        "subtitle": "GELATO PIQUE · BUSAN POP-UP",
+        "benefit": "상품별 행사 가격과 구매금액별 모바일상품권·사은품을 확인하세요.",
+        "entry": "별도 입장료·예약 의무는 확인 전입니다.",
+        "notice": "11월 9일 휴점. 사은품은 한정 수량이며, 실결제 기준·단계별 중복 증정·쿠폰 중복은 현장에 문의해주세요.",
+        "maxDiscount": null,
+        "highlights": [
+          [
+            "행사장",
+            "부산본점 B1"
+          ],
+          [
+            "구매 사은",
+            "금액별 조건 확인"
+          ],
+          [
+            "휴점일",
+            "11월 9일"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "룸웨어·잡화 행사 가격",
+            "columns": [
+              "상품",
+              "비교가격",
+              "행사 가격"
+            ],
+            "rows": [
+              [
+                "DOG 자카드 풀오버·롱팬츠 셋업",
+                "199,000원",
+                "99,500원"
+              ],
+              [
+                "퍼 헤어 클립",
+                "35,000원",
+                "28,000원"
+              ],
+              [
+                "라메 페더 가디건",
+                "155,000원",
+                "108,500원"
+              ],
+              [
+                "르세라핌 플라워 자카드 셋업",
+                "222,000원",
+                "155,400원"
+              ],
+              [
+                "머랭 DOG 후디 원피스",
+                "119,000원",
+                "83,300원"
+              ],
+              [
+                "코튼 원포인트 티셔츠",
+                "96,000원",
+                "76,800원"
+              ],
+              [
+                "AIRY MOCO 풀오버",
+                "139,000원",
+                "111,200원"
+              ],
+              [
+                "코튼 프린트 롱팬츠",
+                "155,000원",
+                "124,000원"
+              ]
+            ],
+            "visitorNote": "상품별 안내 가격 기준이에요. 옵션별 가격·할인 적용과 재고는 행사장에서 확인해주세요."
+          },
+          {
+            "title": "모바일상품권 받기",
+            "columns": [
+              "구매금액",
+              "모바일상품권"
+            ],
+            "rows": [
+              [
+                "200,000원 구매",
+                "10,000원"
+              ],
+              [
+                "400,000원 구매",
+                "20,000원"
+              ]
+            ],
+            "visitorNote": "당일 영수증으로 롯데백화점 앱에서 수령하는 조건이에요. 실결제 기준과 다른 혜택 중복 적용은 현장에서 확인하세요."
+          },
+          {
+            "title": "구매금액별 사은품",
+            "columns": [
+              "구매금액",
+              "안내 사은품"
+            ],
+            "rows": [
+              [
+                "250,000원 구매",
+                "피너츠 키링"
+              ],
+              [
+                "350,000원 구매",
+                "홀리데이 핸드타월"
+              ],
+              [
+                "500,000원 구매",
+                "룸슬리퍼"
+              ]
+            ],
+            "visitorNote": "한정 수량이며 재고·단계별 중복 제공·실결제 기준은 확인해주세요."
+          },
+          {
+            "title": "채널 추가·가챠 이벤트",
+            "items": [
+              "카카오 채널을 추가한 구매 고객에게 에코백이 안내돼 있어요.",
+              "구매 고객 가챠 1회가 안내돼 있으며 경품에는 추가 5% 할인쿠폰·손거울·키링이 포함돼요.",
+              "가챠 경품은 당첨이 보장되지 않아요. 추가 5% 할인은 전원 적용 혜택이 아니에요.",
+              "앱·채널 조건은 해당 혜택에 적용돼요. 기본 할인가 구매 전체에 앱이 필수라는 뜻은 아니에요."
+            ]
+          }
+        ]
+      },
+      "리락쿠마·스미코구라시": {
+        "type": "팝업",
+        "category": "굿즈",
+        "title": "리락쿠마 스미코구라시 PLUS by San-X 부산 미니스토어",
+        "image": "sanx-user-20261112.png",
+        "start": "2026-10-30",
+        "end": "2027-01-31",
+        "verified": true,
+        "isActive": true,
+        "source": "https://www.popcondplay.com/ip/news/view/728",
+        "action": "공식 행사 안내",
+        "venue": "롯데백화점 부산본점 지하 1층",
+        "description": "서면에서 만나는 산엑스 친구들. 리락쿠마·스미코구라시 캐릭터 상품과 코구마르쉐 특별상품을 만나보세요.",
+        "hours": "백화점 기준 월–목 10:30–20:00 / 금–일 10:30–20:30",
+        "transit": "도시철도 1·2호선 서면역, 지하 연결통로 이용",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "checked": "2026-11-06",
+        "subtitle": "SAN-X · BUSAN MINI STORE",
+        "mapTitle": "리락쿠마·스미코구라시",
+        "closed": [
+          "2026-11-09"
+        ],
+        "hoursNote": "11월 9일 백화점 휴점. 12월·1월 휴점과 최종일 마감은 방문 전에 확인해주세요.",
+        "phone": "1577-0001",
+        "benefit": "구매 상품과 금액에 따라 카드스티커·멀티 케이스 키링·플라워 봉제인형을 한정 수량으로 증정해요.",
+        "entry": "11월 2일부터 자유입장하며 혼잡 시 현장 대기로 전환돼요.",
+        "notice": "11월 9일 휴점. 스페셜 상품은 종류별 1인 1개 제한이며, 재고와 특전 잔여 수량은 현장에서 확인해주세요.",
+        "highlights": [
+          [
+            "행사장",
+            "부산본점 B1"
+          ],
+          [
+            "행사 종료",
+            "2027년 1월 31일"
+          ],
+          [
+            "현재 입장",
+            "혼잡 시 현장 대기"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "입장하고 둘러보기",
+            "items": [
+              "11월 2일부터 자유입장하며, 혼잡할 때는 현장 웨이팅으로 전환돼요.",
+              "입장료·현장 대기 접수시간과 일반 상품 전체의 구매 제한은 확인 전입니다.",
+              "스페셜 상품은 종류별 1인 1개로 안내돼요.",
+              "10월 31일–11월 1일 코리락쿠마 포토회는 종료된 별도 일정이에요. 이후 포토회는 후속 공지를 확인하세요."
+            ]
+          },
+          {
+            "title": "구매금액별 특전",
+            "columns": [
+              "구매 조건",
+              "안내 특전"
+            ],
+            "rows": [
+              [
+                "일반 상품 포함 50,000원 구매",
+                "카드스티커"
+              ],
+              [
+                "코구마르쉐 상품 포함 50,000원 구매",
+                "멀티 케이스 키링"
+              ],
+              [
+                "코구마르쉐 상품 포함 150,000원 구매",
+                "플라워 봉제인형"
+              ]
+            ],
+            "visitorNote": "종류별 1인 1개이며 중복 증정이 가능해요. 한정 수량으로 소진 시 종료됩니다. 영수증 합산·분할과 할인 후 금액 기준은 현장에서 확인해주세요."
+          },
+          {
+            "title": "스페셜 상품 가격",
+            "columns": [
+              "상품",
+              "안내 가격"
+            ],
+            "rows": [
+              [
+                "매달아인형 사과",
+                "27,000원"
+              ],
+              [
+                "매달아인형 레몬",
+                "27,000원"
+              ],
+              [
+                "허니허니 파우치",
+                "32,000원"
+              ],
+              [
+                "모아봐요 봉제인형",
+                "36,000원"
+              ],
+              [
+                "봉제인형",
+                "44,000원"
+              ]
+            ],
+            "visitorNote": "10월 30일 입고 공지 상품이에요. 현재 재고를 보장하지 않으며, 스페셜 상품은 종류당 1인 1개로 안내돼요."
+          },
+          {
+            "title": "새 상품 소식 확인하기",
+            "items": [
+              "11월 3일 코리락쿠마 슈퍼 모찌 허그쿠션, 11월 6일 한복 관련 한정상품의 입고가 공지돼 있어요. 실제 입고·판매 및 재고는 현장에서 확인하세요.",
+              "파스타 그릇 2종은 11월 중순, 베이직 다이컷 머그컵 2종은 11월 말 예정으로 안내돼 있어요. 확정 판매일은 후속 공지를 확인하세요.",
+              "후속 판매 공지는 @kawaiitomo_에서 확인할 수 있어요."
+            ]
+          }
+        ]
+      },
+      "메이플스토리": {
+        "type": "체험",
+        "category": "팝업",
+        "title": "메이플스토리 in 롯데월드 부산",
+        "image": "maplestory-poster-20261112.jpg",
+        "start": "2026-08-29",
+        "end": "2026-11-22",
+        "verified": true,
+        "isActive": true,
+        "source": "https://lotteworldrecruit.tistory.com/entry/%EB%A9%94%EC%9D%B4%ED%94%8C-%EC%9A%A9%EC%82%AC%EC%97%AC-%EB%B6%80%EC%82%B0%EC%9C%BC%EB%A1%9C-%EB%AA%A8%EC%97%AC%EB%9D%BC-%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C-%EB%B6%80%EC%82%B0-%EA%B0%80%EC%9D%84-%EC%8B%9C%EC%A6%8C-%EC%B6%95%EC%A0%9C-MAPLESTORY-in-LOTTEWORLD-BUSAN-%EC%98%A4%ED%94%88",
+        "action": "공식 행사 안내",
+        "venue": "롯데월드 어드벤처 부산 파크 전역 (가든스테이지·토킹트리·로리스 엠포리움 등)",
+        "description": "기장에서 만나는 메이플 월드. 캐릭터 만들기·모바일 스탬프 랠리·공연·포토존과 굿즈를 즐기는 가을 시즌 축제예요.",
+        "hours": "방문일 파크 운영시간과 당일 공연시간표를 확인해주세요.",
+        "transit": "동해선 오시리아역 1번 출구, 부산관광공사 안내 기준 도보 약10분",
+        "fee": "유료 파크 입장권 필요 · 굿즈·식음·일부 체험 비용은 별도 확인",
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "checked": "2026-11-06",
+        "subtitle": "MAPLESTORY IN LOTTEWORLD BUSAN",
+        "bannerVenue": "롯데월드 어드벤처 부산 · 파크 전역",
+        "closed": [],
+        "hoursNote": "야외 프로그램은 기상·운영 사정에 따라 변경될 수 있어요.",
+        "phone": "1661-2000",
+        "entry": "롯데월드 어드벤처 부산 입장권이 필요해요. 방문일 운영시간·예매 조건·당일 공연시간표는 공식 홈페이지에서 확인하세요.",
+        "benefit": "캐릭터 만들기·스탬프 랠리·공연·포토존을 즐길 수 있어요. 별도 공통 할인이나 전원 실물 경품 증정은 확인되지 않았어요.",
+        "notice": "파크 입장권이 필요합니다. 상품·먹거리·유료 기기·빠른 탑승권 비용이 모두 포함되는 것은 아니에요. 당일 요금과 프로그램 운영은 공식 안내를 확인하세요.",
+        "highlights": [
+          [
+            "행사장",
+            "롯데월드 부산"
+          ],
+          [
+            "입장",
+            "유료 파크 입장권"
+          ],
+          [
+            "체험·공연",
+            "방문일 시간표 확인"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "파크에서 만나는 메이플 월드",
+            "items": [
+              "가든스테이지의 현장 QR로 의상·헤어를 고르고 만든 캐릭터를 디지털 패널에 표시하는 체험이 안내돼 있어요.",
+              "모바일 스탬프 랠리는 파크를 돌며 선물을 수집하는 게임형 미션이에요. 실물 완주 경품 여부는 확인 전입니다.",
+              "헤네시스 연출·시공간 포털·6m 주황버섯 등 포토존이 안내돼 있어요.",
+              "로리스 엠포리움 전용 존과 가든스테이지 팝업에서 굿즈를 살펴볼 수 있어요.",
+              "슬라임 크로스백·주황버섯 파우치 키링, 포션 음료·캐릭터 솜사탕·빵 등이 소개돼 있어요. 상품별 가격과 재고는 현장에서 확인하세요."
+            ]
+          },
+          {
+            "title": "공연·포토타임",
+            "columns": [
+              "프로그램",
+              "안내 시간"
+            ],
+            "rows": [
+              [
+                "메이플스토리: 댄스 투게더!",
+                "12:30 / 16:00"
+              ],
+              [
+                "핑크빈 포토타임 · 토킹트리 앞",
+                "11:00 / 17:00"
+              ]
+            ],
+            "visitorNote": "개막 시 안내된 시간표예요. 12:30 공연은 화요일 휴연 표기가 있으며, 파크 전체 휴장을 뜻하지 않아요. 방문일 실제 운영과 변경 여부는 당일 시간표에서 확인하세요."
+          },
+          {
+            "title": "입장권 참고 정상가",
+            "columns": [
+              "이용권",
+              "어른",
+              "청소년",
+              "어린이"
+            ],
+            "rows": [
+              [
+                "종일권",
+                "49,000원",
+                "41,000원",
+                "35,000원"
+              ],
+              [
+                "AFTER3",
+                "38,000원",
+                "34,000원",
+                "32,000원"
+              ]
+            ],
+            "visitorNote": "참고 정상가이며 현재 결제 가격이나 할인 적용을 보장하지 않아요. 어른 만 19세 이상, 청소년 만 13–18세, 어린이 36개월 이상–만 12세 안내 기준으로, 예매 직전 실제 요금·연령 조건을 확인하세요."
+          },
+          {
+            "title": "비용·이용 조건 확인",
+            "items": [
+              "네컷사진·포토카드 자판기·캡슐토이 등 유료 기기 비용은 별도로 확인해주세요.",
+              "12개월 이상–36개월 미만 베이비 13,000원 안내는 유아시설 이용권과 연결된 조건이에요. 일반 어린이 종일권과 구분해서 확인하세요.",
+              "QR 체험에 필요한 스마트폰·데이터 환경과 외국어 지원은 확인 전입니다.",
+              "서울 잠실의 봄 시즌이나 별도 대관행사 티켓·멤버십 조건과는 달라요."
+            ]
+          }
+        ]
+      },
+      "시그니엘 부산": {
+        "type": "숙박",
+        "category": "숙박",
+        "image": "signiel-user-20261112.png",
+        "title": "시그니엘 부산 시즌 패키지",
+        "subtitle": "시그니엘 부산",
+        "description": "해운대 바다 곁에서 즐기는 디저트·프라이빗 다이닝·캔들 패키지와 브랜드 페스타를 살펴보세요.",
+        "start": "2026-08-18",
+        "end": "2027-06-30",
+        "scheduleKind": "booking",
+        "periodLabel": "예약·판매 기간",
+        "offers": [
+          {
+            "name": "Taste of Autumn",
+            "bookingStart": "2026-09-07",
+            "bookingEnd": "2026-11-29",
+            "stayStart": "2026-09-14",
+            "stayEnd": "2026-12-01",
+            "priceFrom": 437899,
+            "description": "가을 디저트와 함께하는 숙박 패키지. 현재 메뉴·제공 인원은 예약 상품에서 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "In-Room Dining at SIGNIEL",
+            "bookingStart": "2026-08-24",
+            "bookingEnd": "2027-06-30",
+            "stayStart": "2026-08-24",
+            "stayEnd": "2027-07-01",
+            "priceFrom": 440803,
+            "description": "객실에서 즐기는 프라이빗 다이닝. 식사 시간·메뉴·인원은 선택 상품에서 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "Autumn Serenity Retreat",
+            "bookingStart": "2026-08-18",
+            "bookingEnd": "2026-11-30",
+            "stayStart": "2026-09-01",
+            "stayEnd": "2026-12-01",
+            "priceFrom": 466334,
+            "description": "베르나르 까시에르 코코 티아레 너리싱 캔들 연계 패키지. 현재 선물 구성·재고를 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "SIGNIEL BRAND FESTA",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-02",
+            "stayEnd": "2027-04-01",
+            "priceFrom": 300080,
+            "description": "객실 단독 또는 조식 결합 상품 선택. 조식은 모든 요금에 포함되지 않아요.",
+            "category": "숙박"
+          }
+        ],
+        "verified": true,
+        "isActive": true,
+        "closed": [],
+        "venue": "시그니엘 부산",
+        "bannerVenue": "시그니엘 부산 · 해운대구",
+        "mapTitle": "시그니엘 부산 시즌 패키지",
+        "hours": "체크인·체크아웃은 선택 상품에서 확인",
+        "hoursNote": "식음 업장·부대시설은 별도 운영 시간을 확인하세요.",
+        "source": "https://app.lottehotel.com/busan-signiel/ko/offers/packages",
+        "phone": "051-922-1000",
+        "action": "패키지 예약 안내",
+        "checked": "2026-11-06",
+        "fee": "유료 숙박·식사 상품",
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "entry": "사전 예약 후 이용하세요.",
+        "notice": "예약 기간과 투숙·이용 기간은 달라요. 상품별 혜택·인원·제외일과 최종 결제 조건을 확인하세요.",
+        "highlights": [
+          [
+            "카테고리",
+            "숙박 패키지"
+          ],
+          [
+            "구성",
+            "4가지 상품"
+          ],
+          [
+            "이용",
+            "사전 예약"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "Taste of Autumn",
+            "items": [
+              "예약 2026.09.07 – 2026.11.29",
+              "투숙 2026.09.14 – 2026.12.01",
+              "437,899원부터",
+              "가을 디저트와 함께하는 숙박 패키지. 현재 메뉴·제공 인원은 예약 상품에서 확인하세요."
+            ]
+          },
+          {
+            "title": "In-Room Dining at SIGNIEL",
+            "items": [
+              "예약 2026.08.24 – 2027.06.30",
+              "투숙 2026.08.24 – 2027.07.01",
+              "440,803원부터",
+              "객실에서 즐기는 프라이빗 다이닝. 식사 시간·메뉴·인원은 선택 상품에서 확인하세요."
+            ]
+          },
+          {
+            "title": "Autumn Serenity Retreat",
+            "items": [
+              "예약 2026.08.18 – 2026.11.30",
+              "투숙 2026.09.01 – 2026.12.01",
+              "466,334원부터",
+              "베르나르 까시에르 코코 티아레 너리싱 캔들 연계 패키지. 현재 선물 구성·재고를 확인하세요."
+            ]
+          },
+          {
+            "title": "SIGNIEL BRAND FESTA",
+            "items": [
+              "예약 2026.11.02 – 2026.11.08",
+              "투숙 2026.11.02 – 2027.04.01",
+              "300,080원부터",
+              "객실 단독 또는 조식 결합 상품 선택. 조식은 모든 요금에 포함되지 않아요."
+            ]
+          },
+          {
+            "title": "예약하고 방문하기",
+            "items": [
+              "표시 가격은 2026.11.06 기준 시작가로, 객실·날짜·인원·재고에 따라 달라져요.",
+              "세금·봉사료 포함 여부, 취소·노쇼 조건, 제외일은 최종 예약 화면에서 확인하세요.",
+              "패키지별 혜택을 모두 합산해 제공하지 않아요. 캔들 패키지에 스파 시술이 포함된 것으로 안내하지 않습니다."
+            ]
+          }
+        ]
+      },
+      "웨스틴 조선 부산": {
+        "type": "세일",
+        "category": "숙박",
+        "image": "westin-josun.svg",
+        "title": "웨스틴 조선 부산 쓱데이",
+        "subtitle": "웨스틴 조선 부산",
+        "description": "객실 단독·조식·스위트 특가와 별도 다이닝 오퍼를 선택해 해운대에서 쉬어가세요.",
+        "start": "2026-10-30",
+        "end": "2026-11-08",
+        "scheduleKind": "booking",
+        "periodLabel": "예약·판매 기간",
+        "offers": [
+          {
+            "name": "Room Only Special Offer",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 285000,
+            "description": "디럭스 비치뷰 285,000원부터. 이그제큐티브 파크뷰 335,000원부터·비치뷰 365,000원부터. 객실별 라운지 포함 여부와 실제 전망을 확인하세요.",
+            "category": "숙박"
+          },
+          {
+            "name": "Breakfast Package",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 360000,
+            "description": "디럭스 비치뷰 1박 + 까밀리아 조식 성인 2인. 어린이 조식은 별도예요.",
+            "category": "숙박"
+          },
+          {
+            "name": "Suite Offer",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 495000,
+            "description": "이그제큐티브 그랜드 495,000원부터·파크뷰 스위트 525,000원부터·비치뷰 스위트 595,000원부터. 클럽 라운지 성인 2인·레스토랑 3만원 바우처 1매.",
+            "category": "숙박"
+          },
+          {
+            "name": "다이닝 오퍼",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": null,
+            "description": "까밀리아 20%, 오킴스 지정 세트, 파노라마 애프터눈티 10% 할인. 객실 상품과 별도 예약이에요.",
+            "category": "로컬"
+          }
+        ],
+        "verified": true,
+        "isActive": true,
+        "closed": [],
+        "venue": "웨스틴 조선 부산",
+        "bannerVenue": "웨스틴 조선 부산 · 해운대구",
+        "mapTitle": "웨스틴 조선 부산 쓱데이",
+        "hours": "체크인 15:00 · 체크아웃 12:00",
+        "hoursNote": "식음 업장·부대시설은 별도 운영 시간을 확인하세요.",
+        "source": "https://www.josunhotel.com/package/get.do?packageId=1670&propertyId=3",
+        "phone": "051-749-7001",
+        "action": "패키지 예약 안내",
+        "checked": "2026-11-06",
+        "fee": "유료 숙박·식사 상품",
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "entry": "사전 예약 후 이용하세요.",
+        "notice": "예약 기간과 투숙·이용 기간은 달라요. 상품별 혜택·인원·제외일과 최종 결제 조건을 확인하세요.",
+        "highlights": [
+          [
+            "카테고리",
+            "숙박 패키지"
+          ],
+          [
+            "구성",
+            "4가지 상품"
+          ],
+          [
+            "이용",
+            "사전 예약"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "Room Only Special Offer",
+            "items": [
+              "예약 2026.10.30 – 2026.11.08",
+              "투숙 2026.11.01 – 2027.03.31",
+              "285,000원부터",
+              "디럭스 비치뷰 285,000원부터. 이그제큐티브 파크뷰 335,000원부터·비치뷰 365,000원부터. 객실별 라운지 포함 여부와 실제 전망을 확인하세요."
+            ]
+          },
+          {
+            "title": "Breakfast Package",
+            "items": [
+              "예약 2026.10.30 – 2026.11.08",
+              "투숙 2026.11.01 – 2027.03.31",
+              "360,000원부터",
+              "디럭스 비치뷰 1박 + 까밀리아 조식 성인 2인. 어린이 조식은 별도예요."
+            ]
+          },
+          {
+            "title": "Suite Offer",
+            "items": [
+              "예약 2026.10.30 – 2026.11.08",
+              "투숙 2026.11.01 – 2027.03.31",
+              "495,000원부터",
+              "이그제큐티브 그랜드 495,000원부터·파크뷰 스위트 525,000원부터·비치뷰 스위트 595,000원부터. 클럽 라운지 성인 2인·레스토랑 3만원 바우처 1매."
+            ]
+          },
+          {
+            "title": "다이닝 오퍼",
+            "items": [
+              "예약 2026.10.30 – 2026.11.08",
+              "이용 2026.11.01 – 2027.03.31",
+              "까밀리아 20%, 오킴스 지정 세트, 파노라마 애프터눈티 10% 할인. 객실 상품과 별도 예약이에요."
+            ]
+          },
+          {
+            "title": "다이닝 오퍼",
+            "columns": [
+              "메뉴",
+              "행사 가격"
+            ],
+            "rows": [
+              [
+                "까밀리아 주중 점심 · 성인 1인",
+                "86,400원"
+              ],
+              [
+                "까밀리아 저녁·주말 · 성인 1인",
+                "124,000원"
+              ],
+              [
+                "오킴스 스테이크 세트",
+                "96,000원"
+              ],
+              [
+                "오킴스 버거 + 맥주",
+                "45,000원"
+              ],
+              [
+                "파노라마 애프터눈티",
+                "108,000원"
+              ]
+            ],
+            "visitorNote": "사전 예약·성인 1인당 예치금 20,000원 안내. 연말 제외일과 취소·환급 규정은 예약 전에 호텔로 확인하세요. 문의 051-749-7000."
+          },
+          {
+            "title": "객실 혜택·이용 조건",
+            "items": [
+              "요금은 성인 2인 1실 기준·세금 및 봉사료 포함 시작가예요. 날짜·재고에 따라 달라져요.",
+              "디럭스 상품은 수영장 성인 2인·어린이 2인, 피트니스 성인 2인, 사우나 성인 2인 50% 할인 안내예요.",
+              "스위트 혜택은 투숙 중 1회 제공. 바우처는 3만원 이상 결제 시 사용하며 분할·현금 교환·중복 할인은 불가해요.",
+              "클럽 라운지 7세 이상·해피아워 13세 이상. 피트니스 16세·사우나 13세 이상. 시설별 운영 시간을 확인하세요."
+            ]
+          },
+          {
+            "title": "예약하고 방문하기",
+            "items": [
+              "11월 8일 23:59까지 온라인 사전 예약. 날짜별 한정 판매로 조기 마감될 수 있어요.",
+              "객실 취소·노쇼와 추가 인원 요금은 선택 요금제에서 확인하세요.",
+              "BAC는 매월 두 번째 화요일 휴무이며 호텔 전체 휴무는 아니에요."
+            ]
+          }
+        ]
+      },
+      "그랜드 조선 부산": {
+        "type": "세일",
+        "category": "숙박",
+        "image": "grand-josun.svg",
+        "title": "그랜드 조선 부산 쓱데이",
+        "subtitle": "그랜드 조선 부산",
+        "description": "디럭스·키즈 객실과 조식·스위트 패키지, 별도 다이닝 오퍼로 나만의 휴식을 준비하세요.",
+        "start": "2026-10-30",
+        "end": "2026-11-08",
+        "scheduleKind": "booking",
+        "periodLabel": "예약·판매 기간",
+        "offers": [
+          {
+            "name": "Room Only Special Offer",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-02",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 236500,
+            "description": "디럭스 시티뷰 236,500원부터·오션뷰 317,900원부터. 키즈 시티뷰 259,600원부터·오션뷰 335,500원부터.",
+            "category": "숙박",
+            "excludedStayDates": [
+              "2026-11-07",
+              "2026-11-14",
+              "2026-11-19",
+              "2026-11-20",
+              "2026-11-21",
+              "2026-12-31"
+            ]
+          },
+          {
+            "name": "Breakfast Package",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 349800,
+            "description": "아리아 조식 성인 2인. 디럭스 시티뷰 349,800원부터·오션뷰 431,200원부터. 키즈 시티뷰 372,900원부터·오션뷰 448,800원부터.",
+            "category": "숙박",
+            "excludedStayDates": [
+              "2026-11-07",
+              "2026-11-14",
+              "2026-11-19",
+              "2026-11-20",
+              "2026-11-21",
+              "2026-12-31"
+            ]
+          },
+          {
+            "name": "Suite Offer",
+            "bookingStart": "2026-11-02",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": 708400,
+            "description": "코너 시티뷰 708,400원부터·패밀리 코너 830,500원부터·이그제큐티브 및 키즈 오션뷰 891,000원부터. 아리아 조식 성인 2인·Gran J 라운지·식음 3만원 바우처.",
+            "category": "숙박",
+            "excludedStayDates": [
+              "2026-11-07",
+              "2026-11-14",
+              "2026-11-19",
+              "2026-11-20",
+              "2026-11-21",
+              "2026-12-31"
+            ]
+          },
+          {
+            "name": "다이닝 오퍼",
+            "bookingStart": "2026-10-30",
+            "bookingEnd": "2026-11-08",
+            "stayStart": "2026-11-01",
+            "stayEnd": "2027-03-31",
+            "priceFrom": null,
+            "description": "아리아 20%, 팔레드 신 지정 메뉴, 테라스292 지정 세트, 조선델리 케이크 5% 할인. 객실과 별도 예약이에요.",
+            "category": "로컬"
+          }
+        ],
+        "verified": true,
+        "isActive": true,
+        "closed": [],
+        "venue": "그랜드 조선 부산",
+        "bannerVenue": "그랜드 조선 부산 · 해운대구",
+        "mapTitle": "그랜드 조선 부산 쓱데이",
+        "hours": "체크인 15:00 · 체크아웃 11:00",
+        "hoursNote": "식음 업장·부대시설은 별도 운영 시간을 확인하세요.",
+        "source": "https://gjb.josunhotel.com/package/get.do?packageId=1710&propertyId=4",
+        "phone": "051-922-5001",
+        "action": "패키지 예약 안내",
+        "checked": "2026-11-06",
+        "fee": "유료 숙박·식사 상품",
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "entry": "사전 예약 후 이용하세요.",
+        "notice": "예약 기간과 투숙·이용 기간은 달라요. 상품별 혜택·인원·제외일과 최종 결제 조건을 확인하세요.",
+        "highlights": [
+          [
+            "카테고리",
+            "숙박 패키지"
+          ],
+          [
+            "구성",
+            "4가지 상품"
+          ],
+          [
+            "이용",
+            "사전 예약"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "Room Only Special Offer",
+            "items": [
+              "예약 2026.11.02 – 2026.11.08",
+              "투숙 2026.11.02 – 2027.03.31",
+              "236,500원부터",
+              "디럭스 시티뷰 236,500원부터·오션뷰 317,900원부터. 키즈 시티뷰 259,600원부터·오션뷰 335,500원부터."
+            ]
+          },
+          {
+            "title": "Breakfast Package",
+            "items": [
+              "예약 2026.11.02 – 2026.11.08",
+              "투숙 2026.11.01 – 2027.03.31",
+              "349,800원부터",
+              "아리아 조식 성인 2인. 디럭스 시티뷰 349,800원부터·오션뷰 431,200원부터. 키즈 시티뷰 372,900원부터·오션뷰 448,800원부터."
+            ]
+          },
+          {
+            "title": "Suite Offer",
+            "items": [
+              "예약 2026.11.02 – 2026.11.08",
+              "투숙 2026.11.01 – 2027.03.31",
+              "708,400원부터",
+              "코너 시티뷰 708,400원부터·패밀리 코너 830,500원부터·이그제큐티브 및 키즈 오션뷰 891,000원부터. 아리아 조식 성인 2인·Gran J 라운지·식음 3만원 바우처."
+            ]
+          },
+          {
+            "title": "다이닝 오퍼",
+            "items": [
+              "예약 2026.10.30 – 2026.11.08",
+              "이용 2026.11.01 – 2027.03.31",
+              "아리아 20%, 팔레드 신 지정 메뉴, 테라스292 지정 세트, 조선델리 케이크 5% 할인. 객실과 별도 예약이에요."
+            ]
+          },
+          {
+            "title": "다이닝 오퍼",
+            "columns": [
+              "메뉴",
+              "행사 가격"
+            ],
+            "rows": [
+              [
+                "아리아 주중 점심 · 성인 1인",
+                "88,000원"
+              ],
+              [
+                "아리아 저녁·주말·공휴일 · 성인 1인",
+                "124,000원"
+              ],
+              [
+                "팔레드 신 북경오리",
+                "162,000원"
+              ],
+              [
+                "테라스292 브런치 2인",
+                "90,900원"
+              ],
+              [
+                "치킨 + 맥주 500ml 2잔",
+                "70,000원"
+              ],
+              [
+                "조선델리 딸기 / 치즈 케이크",
+                "95,000원 / 45,600원"
+              ]
+            ],
+            "visitorNote": "아리아 12/24·25·31 제외 조건 확인. 북경오리 최소 4일 전·케이크 2일 전 예약. 사전 예약·예치금과 메뉴별 시간 조건을 확인하세요."
+          },
+          {
+            "title": "객실 특가 제외일",
+            "items": [
+              "2026.11.07 · 11.14 · 11.19–21 · 12.31은 객실 3종 특가 제외일이에요. 호텔 전체 휴무나 다이닝 전체 제외일을 뜻하지 않아요."
+            ]
+          },
+          {
+            "title": "객실 혜택·이용 조건",
+            "items": [
+              "요금은 세금 10% 포함 시작가로, 날짜·재고·객실에 따라 달라져요.",
+              "기준 성인 2인·어린이 2인(0–12세). 추가 성인 77,000원·침구 33,000원/박, 추가 인원 조식 별도. 객실별 정원을 확인하세요.",
+              "Room Only·Breakfast: 수영장 성인 2인·어린이 2인, 피트니스 성인 2인, 사우나 성인 2인 50% 할인.",
+              "Suite: 아리아 조식·피트니스·사우나 성인 2인, 수영장·Gran J 라운지 성인 2인·어린이 2인, 식음 바우처 제공.",
+              "키즈 객실 테마는 체크인 시 무작위 배정. GAC 매월 세 번째 화요일 휴무는 호텔 전체 휴무가 아니에요."
+            ]
+          },
+          {
+            "title": "예약하고 방문하기",
+            "items": [
+              "객실 예약 11월 2–8일 23:59 · 다이닝 판매 10월 30일–11월 8일. 온라인 사전 예약·날짜별 한정 수량이에요.",
+              "체크인 전날 18:00 전 변경·취소 무료. 이후 취소·노쇼: 1박 객실료 80%, 2박 이상 최초 1박 요금 100% 위약금 안내. 선택 요금제 최종 조건을 확인하세요.",
+              "회원·카드사·제휴 할인과 중복 적용되지 않아요."
+            ]
+          }
+        ]
+      },
+      "해리포터 마호도코로": {
+        "type": "팝업",
+        "category": "굿즈",
+        "image": "harrypotter-user-20261112.png",
+        "title": "해리포터 마호도코로 부산본점 팝업스토어",
+        "mapTitle": "해리포터 마호도코로 팝업",
+        "subtitle": "해리포터 마호도코로",
+        "description": "해리포터 세계관을 담은 가방·파우치·양말 등 생활 잡화를 만나보세요. 부산점 구매 사은품과 온라인 기획전은 각각의 조건을 확인해주세요.",
+        "start": "2026-10-30",
+        "end": "2027-01-07",
+        "verified": true,
+        "isActive": true,
+        "closed": [
+          "2026-11-09"
+        ],
+        "venue": "롯데백화점 부산본점 B1 팬덤스페이스",
+        "bannerVenue": "롯데백화점 부산본점 · B1",
+        "hours": "월–목 10:30–20:00 / 금–일 10:30–20:30",
+        "hoursNote": "백화점 일반 운영시간 기준 · 11월 9일 휴점. 팝업 최종 마감과 추가 휴점일은 방문 전 확인하세요.",
+        "transit": "부산도시철도 1·2호선 서면역 · 백화점 지하 연결통로 이용",
+        "source": "https://www.playdground.com/ip/news/view/731",
+        "action": "공식 행사 안내",
+        "checked": "2026-11-06",
+        "phone": null,
+        "entry": "현장 대기·입장 안내를 확인하세요.",
+        "fee": null,
+        "foreign": null,
+        "payment": null,
+        "taxFree": null,
+        "passport": null,
+        "notice": "11월 9일은 백화점 휴점일이에요. 대기 접수·상품·사은품 재고와 추가 휴점일은 방문 전 확인해주세요.",
+        "highlights": [
+          [
+            "행사장",
+            "부산본점 B1"
+          ],
+          [
+            "카테고리",
+            "굿즈 · 팝업"
+          ],
+          [
+            "입장",
+            "현장 대기 안내"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "부산점 구매·방문 사은품",
+            "columns": [
+              "조건",
+              "혜택"
+            ],
+            "rows": [
+              [
+                "1만원 이상 구매",
+                "25주년 금박 스티커"
+              ],
+              [
+                "5만원 이상 구매",
+                "기숙사 마스킹테이프 4종 중 랜덤 1개"
+              ],
+              [
+                "매장 방문 + 팝콘디플레이 관심 IP 등록",
+                "점착메모지"
+              ]
+            ],
+            "visitorNote": "구매금액별 사은품은 중복 증정되지 않으며 한정 수량으로 소진될 수 있어요. 관심 IP 등록은 방문 메모지 혜택의 조건이에요."
+          },
+          {
+            "title": "현장 대기·입장",
+            "items": [
+              "11월 2일부터 오픈 전 대기는 B1 분수광장 유니클로 맞은편 출입구에서 접수해요. 08:00 시작 안내이며 안전·인원 상황에 따라 변경될 수 있어요.",
+              "오픈 후에는 팝업 매장 앞에서 접수하세요. 동반 인원을 함께 등록하고 호출 후 15분 안에 방문해주세요.",
+              "10월 30일–11월 1일의 초기 사전예약 조건은 종료됐어요. 현재는 당일 현장 접수 안내를 확인하세요."
+            ]
+          },
+          {
+            "title": "상품·온라인 쇼핑",
+            "items": [
+              "가방·파우치·양말 등 신상품이 소개돼 있어요. 품목별 현재 가격과 입고·재고는 매장에서 확인하세요.",
+              "온라인 기획전과 부산점은 구매·증정 조건이 다를 수 있어요. 온라인 고객용 혜택을 부산점 혜택과 합산하지 않아요."
+            ]
+          }
+        ]
+      },
+      "히나쿠우": {
+        "type": "팝업",
+        "category": "굿즈",
+        "image": "hinakuu-user-20261106.png",
+        "title": "히나쿠우 in BUSAN 팝업스토어",
+        "mapTitle": "히나쿠우 팝업",
+        "subtitle": "히나쿠우",
+        "description": "히나쿠우 캐릭터 굿즈와 코지하우스 상품을 만나보세요. 구매금액별 포토카드와 SNS 후기 엽서 등 조건별 선물을 확인할 수 있어요.",
+        "start": "2026-10-30",
+        "end": "2026-11-10",
+        "verified": true,
+        "isActive": true,
+        "closed": [
+          "2026-11-09"
+        ],
+        "venue": "롯데백화점 부산본점 B1 · 행사장 위치 현장 확인",
+        "bannerVenue": "롯데백화점 부산본점 · B1",
+        "hours": "월–목 10:30–20:00 / 금–일 10:30–20:30",
+        "hoursNote": "백화점 일반 운영시간 기준 · 11월 9일 휴점. 팝업 최종 마감과 추가 휴점일은 방문 전 확인하세요.",
+        "transit": "부산도시철도 1·2호선 서면역 · 백화점 지하 연결통로 이용",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568807",
+        "action": "공식 행사 안내",
+        "checked": "2026-11-06",
+        "phone": "1544-4205",
+        "entry": "현장 대기·입장 안내를 확인하세요.",
+        "fee": null,
+        "foreign": null,
+        "payment": "현금·신용카드 가능 · 해외 발급 카드와 간편결제는 현장 확인",
+        "taxFree": null,
+        "passport": null,
+        "notice": "11월 9일은 백화점 휴점일이에요. 대기 접수·상품·사은품 재고와 추가 휴점일은 방문 전 확인해주세요.",
+        "highlights": [
+          [
+            "행사장",
+            "부산본점 B1"
+          ],
+          [
+            "카테고리",
+            "굿즈 · 팝업"
+          ],
+          [
+            "입장",
+            "현장 대기 안내"
+          ]
+        ],
+        "sections": [
+          {
+            "title": "구매·후기 리워드",
+            "columns": [
+              "조건",
+              "혜택"
+            ],
+            "rows": [
+              [
+                "MD 3만원 이상",
+                "포토카드 5종 중 랜덤 1종"
+              ],
+              [
+                "MD 15만원 이상",
+                "포토카드 5종 중복 없이 증정"
+              ],
+              [
+                "MD 구매 · 1인 1회",
+                "페이퍼 마그넷"
+              ],
+              [
+                "지정 해시태그 SNS 후기",
+                "부산 한정 엽서 4종 중 랜덤 1종"
+              ]
+            ],
+            "visitorNote": "단일 당일 영수증·원화 판매가 기준이며 합산·분할 불가. 기존 히나쿠우·히숭스 팝업 MD 포함 안내가 있어요. 증정품은 일일 한정으로 소진 시 마감돼요."
+          },
+          {
+            "title": "상품 가격",
+            "columns": [
+              "상품",
+              "가격"
+            ],
+            "rows": [
+              [
+                "인형 키링 / 코지하우스 10cm 인형키링",
+                "각 22,000원"
+              ],
+              [
+                "핀버튼 홀더",
+                "15,000원"
+              ],
+              [
+                "바나나 쿠숭이 쿠션",
+                "29,000원"
+              ],
+              [
+                "랜덤 핀버튼",
+                "4,000원"
+              ],
+              [
+                "증명사진 홀더 / 부클 스티커 세트 / 럭키참",
+                "각 12,000원"
+              ],
+              [
+                "플랫 파우치 / 멀티 파우치",
+                "9,000원 / 24,000원"
+              ],
+              [
+                "미니 플레이트 / 라이스볼",
+                "15,000원 / 25,000원"
+              ],
+              [
+                "베개커버 / 스웨트셔츠",
+                "35,000원 / 65,000원"
+              ],
+              [
+                "미니 버킷백 / 블랭킷",
+                "28,000원 / 38,000원"
+              ],
+              [
+                "코지하우스 월포켓 / 파우치 / 필통",
+                "30,000원 / 16,000원 / 18,000원"
+              ],
+              [
+                "코지하우스 바디필로 / 북커버",
+                "32,000원 / 22,000원"
+              ]
+            ],
+            "visitorNote": "안내 판매가이며 할인율을 의미하지 않아요. 품목·옵션별 재고는 현장에서 확인해주세요."
+          },
+          {
+            "title": "현장 대기·구매 안내",
+            "items": [
+              "사전예약 없이 현장 대기 시스템으로 순차 입장하며, 대기가 없으면 자율 입장해요.",
+              "오픈 전 대기 발생 시 10:00부터 등록 예정이에요. 당일 접수 장소는 현장 안내를 확인하세요.",
+              "호출 후 15분 내 도착해주세요. 입장 알림 캡처본은 인정되지 않으며 재입장 시 새로 대기를 등록해야 해요.",
+              "입장당 1인 1회 구매, 품목·옵션별 최대 2개까지 구매할 수 있어요.",
+              "후기 해시태그: #히나쿠우 #히나쿠우_in_BUSAN #히나쿠우_위드뮤_팝업"
+            ]
+          },
+          {
+            "title": "B1 행사장 찾기",
+            "items": [
+              "포스터는 키네틱 스테이지, 행사 본문은 팬덤스페이스로 안내돼 있어요. 부산본점 B1에서 히나쿠우 팝업의 실제 입구를 직원에게 확인해주세요."
+            ]
+          }
+        ]
+      },
+      "달달더마켓": {
+        "title": "2026 달달더마켓",
+        "start": "2026-11-06",
+        "end": "2026-11-12",
+        "image": "daldal-poster-20261112.jpg",
+        "source": "https://www.bepa.kr/kor/view.do?idx=19599&no=1502&state=ing&view=view",
+        "type": "로컬 마켓",
+        "subtitle": "부산 디저트 16곳 한자리에",
+        "description": "부산 지역 디저트·간식 브랜드 16개사가 참여하는 기간 한정 판매전. 미리 만나는 크리스마스를 테마로 베이커리·천연 아이스크림·음료 등 다양한 간식을 소개해요.",
+        "venue": "롯데백화점 광복점 B1 분수대 일원",
+        "hours": "롯데백화점 광복점 영업시간 기준 · 행사장 세부 운영시간 확인 필요",
+        "transit": "부산도시철도 1호선 남포역 10번 출구 인근 · 백화점 연결 접근",
+        "entry": "판매전 방문·구매 조건은 행사 운영사에 확인해주세요.",
+        "benefit": "지역 디저트·간식 상품 판매 · 개별 할인율·증정품·쿠폰 특전은 확인 전",
+        "notice": "브랜드별 메뉴·재고·결제수단은 현장에서 확인하세요. 백화점 행사 공간이어도 해외 카드·알리페이·택스리펀이 자동 보장되지는 않아요.",
+        "sections": [
+          {
+            "title": "부산의 달콤한 브랜드를 만나요",
+            "items": [
+              "부산 지역 브랜드 16개사 참여 · 11월 6~12일 7일간 개최",
+              "무설탕·노밀가루·글루텐프리·두부 디저트, 천연 아이스크림·베이커리·음료 소개",
+              "개별 할인율·증정·쿠폰 혜택은 확인되지 않았어요."
+            ]
+          }
+        ],
+        "category": "로컬",
+        "closed": [],
+        "action": "공식 행사 안내",
+        "highlights": [
+          [
+            "유형",
+            "로컬 마켓"
+          ],
+          [
+            "지역",
+            "남포동"
+          ],
+          [
+            "입장",
+            "상품 판매"
+          ]
+        ]
+      },
+      "광안리 M 드론×레이저쇼": {
+        "title": "광안리 M 드론×레이저쇼 — 성의 수호자",
+        "start": "2026-11-21",
+        "end": "2026-11-21",
+        "image": "gwangalli-poster-20261112.jpg",
+        "source": "https://www.gwangallimdrone.co.kr/notice/gwanganri-m-deuronraiteusyo-11weol-gongyeon-peurogeuraem-annae-2",
+        "type": "야외 공연",
+        "subtitle": "성의 수호자 with 레이저쇼",
+        "description": "11월 21일 광안리 밤하늘에서 만나는 드론과 레이저 결합 공연. 19시·21시 두 차례, 회당 약 24분 동안 진행돼요.",
+        "venue": "광안리해수욕장",
+        "hours": "11월 21일 19:00 / 21:00 · 회당 약 24분",
+        "transit": "부산도시철도 2호선 광안역 또는 금련산역에서 해변으로 이동 · 도보 약 10분 참고",
+        "entry": "별도 티켓·쿠폰 구매 없이 무료 공개 관람",
+        "fee": "무료 관람",
+        "foreign": "일반 공개 야외 공연",
+        "payment": "해당 없음 · 무료 공연",
+        "taxFree": "해당 없음 · 무료 공연",
+        "passport": "관람 시 불필요",
+        "benefit": "드론·레이저 결합 공연 무료 관람",
+        "notice": "기상·통신 상황에 따라 전날이나 당일 취소·지연될 수 있어요. 11월 7일은 미개최이며, 14일·28일의 일반 드론 공연과 이번 레이저쇼 회차는 달라요. 방문 직전 주최 측 공지를 확인하세요.",
+        "sections": [
+          {
+            "title": "11월 21일 공연 구성",
+            "columns": [
+              "순서",
+              "안내"
+            ],
+            "rows": [
+              [
+                "레이저",
+                "약 6분"
+              ],
+              [
+                "드론",
+                "약 14분"
+              ],
+              [
+                "레이저",
+                "약 4분"
+              ]
+            ],
+            "note": "19:00 / 21:00 · 회당 총 약 24분. 현장 운영에 따라 달라질 수 있어요."
+          }
+        ],
+        "category": "로컬",
+        "closed": [],
+        "action": "공식 행사 안내",
+        "highlights": [
+          [
+            "유형",
+            "야외 공연"
+          ],
+          [
+            "지역",
+            "광안리"
+          ],
+          [
+            "입장",
+            "무료 관람"
+          ]
+        ]
+      },
+      "G-STAR": {
+        "title": "국제게임전시회 지스타 2026",
+        "start": "2026-11-19",
+        "end": "2026-11-22",
+        "image": "gstar-poster-20261112.jpg",
+        "source": "https://www.gstar.or.kr/part/gstar_btc_info.do",
+        "type": "게임 전시",
+        "subtitle": "신작 게임을 만나는 부산 벡스코",
+        "description": "11월 19~22일 벡스코에서 열리는 일반 관람 BTC 게임 전시. 관람 전날까지 온라인 예매가 필요하며 현장 판매는 없어요. 부스별 체험·굿즈·대기·연령 조건은 각각 확인해주세요.",
+        "venue": "벡스코 BTC · 제1전시장 1~3홀 / 제2전시장 1층 4홀",
+        "hours": "11월 19일 11:00 개장 · 입장권 확인 17:00, 입장 17:30 마감",
+        "hoursNote": "나머지 날짜의 개장·최종 폐장 시각은 최신 공식 공지를 확인하세요.",
+        "transit": "부산도시철도 2호선 센텀시티역·벡스코역 접근 · 선택한 전시장과 입구에 따라 동선이 달라요.",
+        "entry": "관람 전날 자정까지 온라인 사전예매 · BTC 현장 판매 없음",
+        "fee": "BTC 성인 18,000원 / 청소년 8,000원",
+        "benefit": "게임 전시·시연 관람 · BTB와 G-CON은 별도 패스",
+        "notice": "1인 1일 최대 2매, 지정 관람일만 유효하며 현장에서 입장팔찌로 교환해요. 외국인 예매 인증·결제 경로는 확인 전입니다. 문의: ticket@gstar.or.kr",
+        "sections": [
+          {
+            "title": "일반 관람권 · 예매",
+            "columns": [
+              "구분",
+              "조건"
+            ],
+            "rows": [
+              [
+                "성인",
+                "18,000원"
+              ],
+              [
+                "청소년",
+                "8,000원 · 생년월일·학생 신분 증빙 확인"
+              ],
+              [
+                "예매",
+                "9월 29일 15:00~11월 21일 23:59 · 각 관람일 전날 자정 마감"
+              ],
+              [
+                "입장",
+                "1인 1일 최대 2매 · 지정일 유효 · 입장팔찌 교환"
+              ]
+            ],
+            "note": "수수료 포함 최종 결제액은 예매 단계에서 확인하세요. 미취학 무료 기준은 공식 언어판 안내가 달라 문의가 필요해요."
+          },
+          {
+            "title": "행사별 이용 범위",
+            "items": [
+              "BTC 일반 게임 전시: 11월 19~22일",
+              "BTB 비즈니스: 11월 19~21일 · 별도 패스",
+              "G-CON: 11월 19~20일 · 별도 패스",
+              "11월 18일 게임대상은 일반 관람 시작일이 아니에요.",
+              "부스별 사은품·전 부스 체험을 공통으로 보장하지 않아요."
+            ]
+          }
+        ],
+        "category": "로컬",
+        "closed": [],
+        "action": "공식 행사 안내",
+        "highlights": [
+          [
+            "유형",
+            "게임 전시"
+          ],
+          [
+            "지역",
+            "해운대구"
+          ],
+          [
+            "입장",
+            "사전예매 필수"
+          ]
+        ]
+      }
+    },
+    "locations": [
+      {
+        "name": "올리브영 커넥트현대 부산점",
+        "lat": 35.141309,
+        "lng": 129.058589,
+        "address": "부산광역시 동구 범일로 125 · 커넥트현대 부산 B1",
+        "id": "oliveyoung-8",
+        "brand": "올리브영",
+        "region": "기타",
+        "verification": "official-venue-coordinate",
+        "phone": "051-667-1238",
+        "source": "https://m.ehyundai.com/mobile/SN/SN_0201000.do?branchCd=B00124000&category=event&evntCrdCd=E2402610512284",
+        "coordinateSource": "https://ehyundai.com/newPortal/DP/WC/WC000000_V.do?branchCd=B00124000",
+        "coordinateNote": "커넥트현대 건물 기준 위치",
+        "profile": {
+          "headline": "11월 7일 한정 박스와 쿠폰을 확인할 매장",
+          "description": "커넥트현대 부산의 블랙프라이데이 공지가 있는 입점 매장입니다. 한정 박스와 지점 공지의 쿠폰 조건을 확인하고 방문해보세요.",
+          "features": [
+            "공식 행사 공지에 11월 1일·7일 A·B 타입 한정 박스 판매 안내",
+            "A 타입 29,900원 / B 타입 6,900원, 각 1인 1개",
+            "공지상 매장 위치는 지하 1층. 현재 위치·운영시간은 방문 전 문의"
+          ],
+          "eventParticipation": "confirmed-notice",
+          "eventNotice": "한정 수량으로 소진 시 종료됩니다. 11월 7일 실제 판매·입고 여부와 쿠폰 중복 사용 여부는 매장에 확인해주세요."
+        },
+        "eventOverrides": {
+          "phone": "051-667-1238",
+          "source": "https://m.ehyundai.com/mobile/SN/SN_0201000.do?branchCd=B00124000&category=event&evntCrdCd=E2402610512284",
+          "action": "이 매장 행사 안내",
+          "sections": [
+            {
+              "title": "11월 7일 · 블프라이즈 박스",
+              "columns": [
+                "박스",
+                "판매가",
+                "구성 상당액"
+              ],
+              "rows": [
+                [
+                  "A 타입",
+                  "29,900원",
+                  "11만원 상당"
+                ],
+                [
+                  "B 타입",
+                  "6,900원",
+                  "3만원 상당"
+                ]
+              ],
+              "note": "판매일 11월 1일·7일. A·B 각 1인 1개, 다른 타입 교차 구매 가능. 동일 타입 2회 구매 불가. 한정 수량·소진 시 종료."
+            },
+            {
+              "title": "이 매장 공지의 쿠폰 조건",
+              "items": [
+                "선착순 랜덤 쿠폰: 매일 00시·18시, 계정당 하루 한 번 발급, 발급 당일 사용.",
+                "50,000원 이상 구매 시 3,000원·5,000원·7,000원·10,000원 중 할인.",
+                "추가 쿠폰: 공지상 일반·건강식품 20,000원 이상 구매 시 5,000원 할인. 앱에서 기간 내 1회 발급."
+              ],
+              "note": "이 지점 공지 기준입니다. 다른 매장·온라인몰의 조건과 다를 수 있어요. 쿠폰끼리 중복 적용 여부와 외국인 인증·사용 조건은 별도 확인해주세요."
+            }
+          ]
+        }
+      },
+      {
+        "name": "올리브영 남포 타운",
+        "lat": 35.0976,
+        "lng": 129.0295,
+        "address": "부산광역시 중구 비프광장로 40",
+        "id": "oliveyoung-0",
+        "planSelectable": true,
+        "brand": "올리브영",
+        "region": "남포동",
+        "verification": "retained",
+        "source": "https://corp.oliveyoung.com/ko/newsroom/press/140",
+        "profile": {
+          "headline": "K뷰티를 깊이 경험하는 대형 타운 매장",
+          "description": "남포동에서 다양한 K뷰티 상품을 둘러보고 피부 진단·맞춤형 상담 경험을 함께 살펴볼 수 있는 대형 매장입니다.",
+          "features": [
+            "대형 K뷰티 쇼핑 공간",
+            "피부 진단·맞춤형 뷰티 상담 경험",
+            "더마 특화존·마스크팩 라이브러리"
+          ],
+          "eventParticipation": "unconfirmed",
+          "eventNotice": "이번 블랙프라이데이의 지점별 특가 품목·쿠폰·박스 판매·재고는 별도 확인이 필요합니다."
+        },
+        "coordinateVerification": "retained-unverified"
+      },
+      {
+        "name": "올리브영 밀락더마켓점",
+        "lat": 35.1517,
+        "lng": 129.124,
+        "address": "부산광역시 수영구 민락수변로17번길 56 · 밀락더마켓",
+        "id": "oliveyoung-30",
+        "planSelectable": true,
+        "brand": "올리브영",
+        "region": "광안리",
+        "verification": "retained",
+        "source": "https://corp.oliveyoung.com/ko/newsroom/press/140",
+        "profile": {
+          "headline": "광안리 여행에 곁들이는 항구 콘셉트 쇼핑",
+          "description": "민락항에 정박한 선박 ‘올영호’를 콘셉트로 한 디자인 특화 매장입니다. 광안리·밀락더마켓을 방문하는 동선에서 함께 둘러보기 좋습니다.",
+          "features": [
+            "항구·선박 ‘올영호’ 콘셉트 공간",
+            "지역 분위기를 담은 디자인 특화 매장",
+            "광안리·밀락더마켓 여행과 함께하는 쇼핑 동선"
+          ],
+          "eventParticipation": "unconfirmed",
+          "eventNotice": "이번 블랙프라이데이의 지점별 특가 품목·쿠폰·박스 판매·재고는 별도 확인이 필요합니다."
+        },
+        "coordinateVerification": "retained-unverified"
+      },
+      {
+        "id": "uniqlo-4",
+        "brand": "유니클로",
+        "name": "유니클로 부산 사하점",
+        "lat": 35.090635,
+        "lng": 128.963936,
+        "address": "부산광역시 사하구 하신중앙로 129",
+        "region": "기타",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/123508",
+        "googlePlusCode": "8Q7C3XR7+3MF",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.090635,128.963936&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "월 11:00–20:30 / 화 11:00–20:30 / 수 11:00–20:30 / 목 11:00–20:30 / 금 11:00–21:00 / 토 11:00–21:00 / 일 11:00–21:00",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-203-1178",
+          "source": "https://map.uniqlo.com/kr/ko/detail/123508",
+          "action": "공식 매장 안내",
+          "transit": null,
+          "transitNote": null,
+          "payment": "현금 결제 불가 · 해외 카드·QR 결제는 매장 확인"
+        },
+        "profile": {
+          "headline": "부산 사하점 방문 안내",
+          "description": "부산광역시 사하구 하신중앙로 129",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "현금 없는 매장 · 결제 수단을 방문 전 확인하세요."
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-1",
+        "brand": "유니클로",
+        "name": "유니클로 롯데백화점 광복점",
+        "lat": 35.098187,
+        "lng": 129.036618,
+        "address": "부산광역시 중구 중앙대로 2 롯데백화점 광복점2층",
+        "region": "남포동",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10500333",
+        "googlePlusCode": "8Q7F32XP+9P2",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.098187,129.036618&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "매일 10:30–21:00",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-678-4046",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10500333",
+          "action": "공식 매장 안내",
+          "transit": null,
+          "transitNote": null
+        },
+        "profile": {
+          "headline": "롯데백화점 광복점 방문 안내",
+          "description": "부산광역시 중구 중앙대로 2 롯데백화점 광복점2층",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "주차 가능 · 이용 조건은 시설에 문의하세요."
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-5",
+        "brand": "유니클로",
+        "name": "유니클로 부산 범일점",
+        "lat": 35.137,
+        "lng": 129.064212,
+        "address": "부산광역시 동구 자성로 128 1F",
+        "region": "기타",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10501173",
+        "googlePlusCode": "8Q7F43P7+MMJ",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.137,129.064212&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "월 11:30–20:30 / 화 11:30–20:30 / 수 11:30–20:30 / 목 11:30–20:30 / 금 11:30–21:00 / 토 11:30–21:00 / 일 11:30–21:00 / 공휴일 10:30–20:30",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-637-1173",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10501173",
+          "action": "공식 매장 안내",
+          "transit": null,
+          "transitNote": null
+        },
+        "profile": {
+          "headline": "부산 범일점 방문 안내",
+          "description": "부산광역시 동구 자성로 128 1F",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "주차 가능 · 이용 조건은 시설에 문의하세요."
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-0",
+        "brand": "유니클로",
+        "name": "유니클로 삼정타워점",
+        "lat": 35.1528,
+        "lng": 129.059606,
+        "address": "부산광역시 부산진구 중앙대로 672 삼정타워 B1층",
+        "region": "서면",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10501174",
+        "googlePlusCode": "8Q7F5335+6R5",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.1528,129.059606&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "월 11:00–22:00 / 화 11:00–22:00 / 수 11:00–22:00 / 목 11:00–22:00 / 금 11:00–22:30 / 토 11:00–22:30 / 일 11:00–22:00",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-520-3674",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10501174",
+          "action": "공식 매장 안내",
+          "transit": null,
+          "transitNote": null
+        },
+        "profile": {
+          "headline": "삼정타워점 방문 안내",
+          "description": "부산광역시 부산진구 중앙대로 672 삼정타워 B1층",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "삼정타워 지하 1층 · 대형 매장"
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-6",
+        "brand": "유니클로",
+        "name": "유니클로 롯데백화점 서면점",
+        "lat": 35.156642,
+        "lng": 129.056003,
+        "address": "부산광역시 부산진구 가야대로 772 롯데백화점 서면점 지하 1F 유니클로",
+        "region": "서면",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10500005",
+        "googlePlusCode": "8Q7F5344+VH2",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.156642,129.056003&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": false,
+        "eventOverrides": {
+          "hours": "매일 10:30–21:00",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-810-3330",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10500005",
+          "action": "공식 매장 안내",
+          "transit": "부산 1·2호선 서면역 7번 출구 방향",
+          "transitNote": null,
+          "taxFree": "이 매장은 면세 이용 불가",
+          "sections": [
+            {
+              "title": "행사 일정 · 혜택",
+              "items": [
+                "2026 블랙프라이데이·겨울 감사제의 공식 일정과 혜택은 아직 확인되지 않았어요.",
+                "이 지점의 행사 참여·대상 상품·재고·쿠폰·사은품은 공식 안내에서 확인해주세요."
+              ]
+            },
+            {
+              "title": "이 매장은 면세 이용 불가",
+              "items": [
+                "롯데백화점 서면점은 즉시 환급·사후 면세 모두 이용할 수 없어요.",
+                "서면의 삼정타워점과 다른 매장입니다. 면세 쇼핑을 원하면 방문할 지점을 먼저 확인하세요."
+              ]
+            }
+          ]
+        },
+        "profile": {
+          "headline": "롯데백화점 서면점 방문 안내",
+          "description": "부산광역시 부산진구 가야대로 772 롯데백화점 서면점 지하 1F 유니클로",
+          "features": [
+            "WOMEN · MEN 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "즉시 환급·사후 면세 모두 이용 불가"
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-7",
+        "brand": "유니클로",
+        "name": "유니클로 롯데마트 화명점",
+        "lat": 35.235173,
+        "lng": 129.01302,
+        "address": "부산광역시 북구 화명대로 47 롯데마트화명점1층",
+        "region": "기타",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10500605",
+        "googlePlusCode": "8Q7F62P7+36G",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.235173,129.01302&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "매일 10:00–22:00",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-365-7078",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10500605",
+          "action": "공식 매장 안내",
+          "transit": null,
+          "transitNote": null
+        },
+        "profile": {
+          "headline": "롯데마트 화명점 방문 안내",
+          "description": "부산광역시 북구 화명대로 47 롯데마트화명점1층",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "주차 가능 · 이용 조건은 시설에 문의하세요."
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-8",
+        "brand": "유니클로",
+        "name": "유니클로 롯데마트 동래점",
+        "lat": 35.211842,
+        "lng": 129.077249,
+        "address": "부산광역시 동래구 중앙대로 1393 롯데마트 동래점",
+        "region": "기타",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10501186",
+        "googlePlusCode": "8Q7F636G+PXG",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.211842,129.077249&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "매일 10:00–22:00",
+          "hoursNote": "매월 둘째·넷째 월요일 휴무 안내. 실제 휴무일은 매장에 확인해주세요.",
+          "phone": "051-552-1186",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10501186",
+          "action": "공식 매장 안내",
+          "transit": null,
+          "transitNote": null
+        },
+        "profile": {
+          "headline": "롯데마트 동래점 방문 안내",
+          "description": "부산광역시 동래구 중앙대로 1393 롯데마트 동래점",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "주차 가능 · 이용 조건은 시설에 문의하세요."
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-2",
+        "brand": "유니클로",
+        "name": "유니클로 롯데백화점 센텀시티점",
+        "lat": 35.169801,
+        "lng": 129.131135,
+        "address": "부산광역시 해운대구 센텀남대로 59 롯데백화점 센텀시티점 지하 2층",
+        "region": "해운대",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10501178",
+        "googlePlusCode": "8Q7F549J+WCQ",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.169801,129.131135&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "월 10:30–20:00 / 화 10:30–20:00 / 수 10:30–20:00 / 목 10:30–20:00 / 금 10:30–20:30 / 토 10:30–20:30 / 일 10:30–20:30",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-730-3791",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10501178",
+          "action": "공식 매장 안내",
+          "transit": "부산 2호선 센텀시티역 · 지하 2층",
+          "transitNote": null
+        },
+        "profile": {
+          "headline": "롯데백화점 센텀시티점 방문 안내",
+          "description": "부산광역시 해운대구 센텀남대로 59 롯데백화점 센텀시티점 지하 2층",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "주차 가능 · 이용 조건은 시설에 문의하세요."
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "uniqlo-3",
+        "brand": "유니클로",
+        "name": "유니클로 롯데몰 동부산점",
+        "lat": 35.192088,
+        "lng": 129.212909,
+        "address": "부산광역시 기장군 기장읍 기장해안로 147 롯데몰동부산점 1~2층",
+        "region": "기장",
+        "verification": "official-store-locator",
+        "source": "https://map.uniqlo.com/kr/ko/detail/10500352",
+        "googlePlusCode": "8Q7F56R6+XVM",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.192088,129.212909&z=15&t=m&hl=ko&gl=KR&mapclient=apiv3",
+        "checked": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "taxFree": null,
+        "eventOverrides": {
+          "hours": "월 10:30–20:30 / 화 10:30–20:30 / 수 10:30–20:30 / 목 10:30–20:30 / 금 10:30–21:00 / 토 10:30–21:00 / 일 10:30–21:00",
+          "hoursNote": "시설 운영 방침과 공휴일에 따라 달라질 수 있어요. 방문 당일 운영 여부는 매장에 확인해주세요.",
+          "phone": "051-901-2774",
+          "source": "https://map.uniqlo.com/kr/ko/detail/10500352",
+          "action": "공식 매장 안내",
+          "transit": null,
+          "transitNote": null
+        },
+        "profile": {
+          "headline": "롯데몰 동부산점 방문 안내",
+          "description": "부산광역시 기장군 기장읍 기장해안로 147 롯데몰동부산점 1~2층",
+          "features": [
+            "WOMEN · MEN · KIDS · BABY 취급",
+            "매장으로 배송 · ORDER & PICK(당일픽업) 지원",
+            "주차 가능 · 이용 조건은 시설에 문의하세요."
+          ],
+          "eventNotice": "등록된 매장 위치입니다. 연말 행사 적용 여부와 혜택은 지점별로 확인해주세요.",
+          "eventParticipation": "unconfirmed"
+        }
+      },
+      {
+        "id": "zara-14970",
+        "brand": "자라",
+        "name": "자라 롯데백화점 센텀시티점",
+        "region": "해운대",
+        "address": "부산광역시 해운대구 센텀남대로 59 · 롯데백화점 센텀시티점 2층",
+        "lat": 35.16923,
+        "lng": 129.131306,
+        "source": "https://www.zara.com/kr/ko/stores-locator/zara-busan-lotte-centum-city-s14970",
+        "verification": "official-store-coordinates",
+        "checkedAt": "2026-11-05",
+        "googlePlusCode": "8Q7F549J+WCQ",
+        "profileCheckedAt": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "eventOverrides": {
+          "hours": "월–목 10:30–20:00 / 금–일 10:30–20:30",
+          "hoursNote": "11월 6–12일 공식 표시 시간입니다. 공휴일·행사일 운영시간과 휴무는 방문 전에 다시 확인해주세요.",
+          "phone": "080-305-1200",
+          "source": "https://www.zara.com/kr/ko/stores-locator/zara-busan-lotte-centum-city-s14970",
+          "action": "공식 매장 안내"
+        },
+        "profile": {
+          "headline": "센텀시티에서 온 가족 패션 쇼핑",
+          "description": "부산광역시 해운대구 센텀남대로 59 · 롯데백화점 센텀시티점 2층",
+          "features": [
+            "여성 · 남성 · 아동 컬렉션 취급",
+            "롯데백화점 센텀시티점 2층",
+            "사이즈·색상·재고는 방문 전 확인해주세요."
+          ],
+          "eventNotice": "이 매장의 블랙프라이데이 참여·할인·사은품은 아직 확인되지 않았어요.",
+          "eventParticipation": "unconfirmed"
+        },
+        "phoneScope": "자라 공식 매장 상세에 공통으로 표시된 연락처"
+      },
+      {
+        "id": "zara-9302",
+        "brand": "자라",
+        "name": "자라 서면점",
+        "region": "서면",
+        "address": "부산광역시 부산진구 중앙대로702번길 33 · 1층",
+        "lat": 35.155406,
+        "lng": 129.060927,
+        "source": "https://www.zara.com/kr/ko/stores-locator/zara-busan-bujeondong-s9302",
+        "verification": "official-store-coordinates",
+        "checkedAt": "2026-11-05",
+        "googlePlusCode": "8Q7F5346+6CG",
+        "profileCheckedAt": "2026-11-06",
+        "eventParticipation": "unconfirmed",
+        "eventOverrides": {
+          "hours": "11:00–22:30",
+          "hoursNote": "11월 6–12일 공식 표시 시간입니다. 공휴일·행사일 운영시간과 휴무는 방문 전에 다시 확인해주세요.",
+          "phone": "080-305-1200",
+          "source": "https://www.zara.com/kr/ko/stores-locator/zara-busan-bujeondong-s9302",
+          "action": "공식 매장 안내"
+        },
+        "profile": {
+          "headline": "서면에서 여성·남성 컬렉션 둘러보기",
+          "description": "부산광역시 부산진구 중앙대로702번길 33 · 1층",
+          "features": [
+            "여성 · 남성 컬렉션 취급",
+            "서면 권역 매장",
+            "사이즈·색상·재고는 방문 전 확인해주세요."
+          ],
+          "eventNotice": "이 매장의 블랙프라이데이 참여·할인·사은품은 아직 확인되지 않았어요.",
+          "eventParticipation": "unconfirmed"
+        },
+        "phoneScope": "자라 공식 매장 상세에 공통으로 표시된 연락처"
+      },
+      {
+        "id": "zara-16694",
+        "brand": "자라",
+        "name": "자라 롯데몰 동부산점",
+        "region": "기타",
+        "address": "부산 기장군 기장읍 기장해안로 147",
+        "lat": 35.1920423,
+        "lng": 129.2130237,
+        "source": "https://www.zara.com/kr/ko/stores-locator/zara-busan-lotte-dongbusan-s16694",
+        "verification": "official-store-coordinates",
+        "checkedAt": "2026-11-05"
+      },
+      {
+        "id": "tiffany-centum",
+        "brand": "티파니앤코",
+        "name": "티파니앤코 신세계백화점 센텀시티점",
+        "region": "해운대",
+        "address": "부산 해운대구 센텀남대로 35",
+        "lat": 35.1688179,
+        "lng": 129.1295233,
+        "source": "https://www.tiffany.kr/stores/ko/korea/busan-shinsegae-centum-city-472",
+        "verification": "official-address-building-coordinate",
+        "coordinateNote": "건물 기준 위치",
+        "checkedAt": "2026-11-05"
+      },
+      {
+        "id": "monchhichi-centum",
+        "brand": "몬치치",
+        "name": "몬치치 KARYLAND in BUSAN 팝업",
+        "region": "해운대",
+        "address": "부산 해운대구 센텀남대로 35 · 신세계 센텀시티 B2 하이퍼스테이지",
+        "lat": 35.1688179,
+        "lng": 129.1295233,
+        "verification": "project-research-building-coordinate",
+        "coordinateNote": "건물 기준 위치",
+        "startDate": "2026-11-05",
+        "endDate": "2026-11-15"
+      },
+      {
+        "id": "wackywilly-busan-b1",
+        "brand": "와키윌리",
+        "name": "와키윌리 × 리센느 원이 팝업",
+        "lat": 35.156642,
+        "lng": 129.056003,
+        "address": "부산광역시 부산진구 가야대로 772 · 롯데백화점 부산본점 B1 키네틱 스테이지",
+        "region": "서면",
+        "district": "부산진구",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000511672",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.156642,129.056003",
+        "coordinateReference": "uniqlo-6",
+        "coordinateNote": "백화점 건물 기준 위치 · B1 행사장 위치는 본문을 확인하세요.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "tunaschool-gwangbok-b1",
+        "brand": "참치학교",
+        "name": "참치학교 광복점 팝업",
+        "lat": 35.098187,
+        "lng": 129.036618,
+        "address": "부산광역시 중구 중앙대로 2 · 롯데백화점 광복점 B1 식품행사장 (폴바셋 앞)",
+        "region": "남포동",
+        "district": "중구",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000571267",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.098187,129.036618",
+        "coordinateReference": "uniqlo-1",
+        "coordinateNote": "백화점 건물 기준 위치 · B1 행사장 위치는 본문을 확인하세요.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "mugiwara-popup-202611",
+        "brand": "원피스 무기와라 스토어",
+        "name": "원피스 무기와라 스토어 부산 롯데 팝업",
+        "lat": 35.1568527,
+        "lng": 129.0566158,
+        "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+        "region": "서면",
+        "district": "부산진구",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568731",
+        "coordinateSource": "https://www.lotteshopping.com/store/main?cstrCd=0005",
+        "coordinateNote": "점포 공식 지도 기준 건물 위치 · 실내 행사장 좌표는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "yjack-popup-202611",
+        "brand": "와이잭",
+        "name": "와이잭 동부산점 팝업스토어",
+        "lat": 35.192687,
+        "lng": 129.212635,
+        "address": "부산광역시 기장군 기장읍 기장해안로 147, 쇼핑몰 1F",
+        "region": "기장",
+        "district": "기장군",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000567897",
+        "coordinateSource": "https://www.lotteshopping.com/store/main?cstrCd=0352",
+        "coordinateNote": "점포 공식 지도 기준 건물 위치 · 실내 행사장 좌표는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "gelatopique-popup-202611",
+        "brand": "젤라또 피케",
+        "name": "젤라또 피케 부산본점 팝업스토어",
+        "lat": 35.1568527,
+        "lng": 129.0566158,
+        "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+        "region": "서면",
+        "district": "부산진구",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000567431",
+        "coordinateSource": "https://www.lotteshopping.com/store/main?cstrCd=0005",
+        "coordinateNote": "점포 공식 지도 기준 건물 위치 · 실내 행사장 좌표는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "sanx-popup-2026",
+        "brand": "리락쿠마·스미코구라시",
+        "name": "리락쿠마 스미코구라시 PLUS by San-X 부산 미니스토어",
+        "lat": 35.1568527,
+        "lng": 129.0566158,
+        "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+        "region": "서면",
+        "district": "부산진구",
+        "source": "https://www.popcondplay.com/ip/news/view/728",
+        "coordinateSource": "https://www.lotteshopping.com/store/main?cstrCd=0005",
+        "coordinateNote": "점포 공식 지도 기준 건물 위치 · 실내 부스 좌표는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "maplestory-popup-2026",
+        "brand": "메이플스토리",
+        "name": "메이플스토리 in 롯데월드 부산",
+        "lat": 35.19602,
+        "lng": 129.2132,
+        "address": "부산광역시 기장군 기장읍 동부산관광로 42",
+        "region": "기장",
+        "district": "기장군",
+        "source": "https://lotteworldrecruit.tistory.com/entry/%EB%A9%94%EC%9D%B4%ED%94%8C-%EC%9A%A9%EC%82%AC%EC%97%AC-%EB%B6%80%EC%82%B0%EC%9C%BC%EB%A1%9C-%EB%AA%A8%EC%97%AC%EB%9D%BC-%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C-%EB%B6%80%EC%82%B0-%EA%B0%80%EC%9D%84-%EC%8B%9C%EC%A6%8C-%EC%B6%95%EC%A0%9C-MAPLESTORY-in-LOTTEWORLD-BUSAN-%EC%98%A4%ED%94%88",
+        "coordinateSource": "https://www.visitbusan.net/index.do?lang_cd=ko&menuCd=DOM_000000201001001000&uc_seq=1310",
+        "coordinateNote": "부산관광공사 지도 기준 파크 위치 · 개별 체험존 좌표는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "signiel-busan",
+        "brand": "시그니엘 부산",
+        "name": "시그니엘 부산",
+        "lat": 35.1598,
+        "lng": 129.16961,
+        "address": "부산광역시 해운대구 달맞이길 30",
+        "region": "해운대",
+        "district": "해운대구",
+        "source": "https://app.lottehotel.com/busan-signiel/ko/offers/packages",
+        "coordinateSource": "https://mapcarta.com/N7858128118",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "westin-josun-busan",
+        "brand": "웨스틴 조선 부산",
+        "name": "웨스틴 조선 부산",
+        "lat": 35.15661,
+        "lng": 129.15375,
+        "address": "부산광역시 해운대구 동백로 67",
+        "region": "해운대",
+        "district": "해운대구",
+        "source": "https://www.josunhotel.com/package/get.do?packageId=1670&propertyId=3",
+        "coordinateSource": "https://roomcard.com/hotel/the-westin-josun-busan/25475648",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "grand-josun-busan",
+        "brand": "그랜드 조선 부산",
+        "name": "그랜드 조선 부산",
+        "lat": 35.1602163,
+        "lng": 129.1632134,
+        "address": "부산광역시 해운대구 해운대해변로 292",
+        "region": "해운대",
+        "district": "해운대구",
+        "source": "https://gjb.josunhotel.com/package/get.do?packageId=1710&propertyId=4",
+        "coordinateSource": "https://gjb.josunhotel.com/about/aboutUs.do",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "harrypotter-popup-2026",
+        "brand": "해리포터 마호도코로",
+        "name": "해리포터 마호도코로 부산본점 팝업스토어",
+        "lat": 35.1568527,
+        "lng": 129.0566158,
+        "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+        "region": "서면",
+        "district": "부산진구",
+        "source": "https://www.playdground.com/ip/news/view/731",
+        "coordinateSource": "https://www.lotteshopping.com/store/main?cstrCd=0005",
+        "coordinateNote": "점포 공식 지도 기준 건물 위치 · 실내 부스 좌표는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "hinakuu-popup-2026",
+        "brand": "히나쿠우",
+        "name": "히나쿠우 in BUSAN 팝업스토어",
+        "lat": 35.1568527,
+        "lng": 129.0566158,
+        "address": "부산광역시 부산진구 가야대로 772, 롯데백화점 부산본점 B1",
+        "region": "서면",
+        "district": "부산진구",
+        "source": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000568807",
+        "coordinateSource": "https://www.lotteshopping.com/store/main?cstrCd=0005",
+        "coordinateNote": "점포 공식 지도 기준 건물 위치 · 실내 부스 좌표는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "daldal-market-gwangbok",
+        "brand": "달달더마켓",
+        "name": "롯데백화점 광복점 B1 분수대 일원",
+        "address": "부산광역시 중구 중앙대로 2 · 롯데백화점 광복점 B1 분수대 일원",
+        "region": "남포동",
+        "district": "중구",
+        "lat": 35.098187,
+        "lng": 129.036618,
+        "source": "https://www.bepa.kr/kor/view.do?idx=19599&no=1502&state=ing&view=view",
+        "coordinateSource": "https://maps.google.com/maps?ll=35.098187,129.036618",
+        "coordinateNote": "백화점 건물 기준 위치 · 실내 분수대 행사 부스는 현장 안내 확인",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "gwangalli-drone-beach",
+        "brand": "광안리 M 드론×레이저쇼",
+        "name": "광안리해수욕장 · 드론×레이저쇼",
+        "address": "부산광역시 수영구 광안해변로 219 · 광안리해수욕장",
+        "region": "광안리",
+        "district": "수영구",
+        "lat": 35.15319,
+        "lng": 129.11898,
+        "source": "https://www.gwangallimdrone.co.kr/notice/gwanganri-m-deuronraiteusyo-11weol-gongyeon-peurogeuraem-annae-2",
+        "coordinateSource": "https://www.findlatlng.org/en/place/gwangalli-beach",
+        "coordinateNote": "광안리해수욕장 대표 위치 · 공연 비행 좌표나 지정 관람석 위치는 아닙니다.",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "gstar-bexco-hall1",
+        "brand": "G-STAR",
+        "name": "지스타 BTC · 벡스코 제1전시장",
+        "address": "부산광역시 해운대구 APEC로 55 · 벡스코 제1전시장 1~3홀",
+        "region": "해운대",
+        "district": "해운대구",
+        "lat": 35.16894,
+        "lng": 129.13616,
+        "source": "https://www.gstar.or.kr/part/gstar_btc_info.do",
+        "coordinateSource": "https://mapcarta.com/W396366119",
+        "coordinateNote": "제1전시장 건물 기준 · 입장팔찌 교환처·대기열·실내 부스는 현장 배치도 확인",
+        "eventParticipation": "confirmed-notice"
+      },
+      {
+        "id": "gstar-bexco-hall2",
+        "brand": "G-STAR",
+        "name": "지스타 BTC · 벡스코 제2전시장",
+        "address": "부산광역시 해운대구 APEC로 30 · 벡스코 제2전시장 1층 4홀",
+        "region": "해운대",
+        "district": "해운대구",
+        "lat": 35.1657,
+        "lng": 129.13504,
+        "source": "https://www.gstar.or.kr/part/gstar_btc_info.do",
+        "coordinateSource": "https://mapcarta.com/W308672919",
+        "coordinateNote": "제2전시장 건물 기준 · BTC 1층 4홀, BTB 3층 5홀과 구분",
+        "eventParticipation": "confirmed-notice"
+      }
+    ]
+  }
+}

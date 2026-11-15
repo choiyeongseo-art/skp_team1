@@ -32,7 +32,7 @@
     '동래/온천/금정구':{center:[129.084,35.234],zoom:11.5},
     '사상/강서/김해공항/하단':{center:[128.965,35.15],zoom:10.5}
   };
-  const categories=['전체','로컬','팝업','패션','뷰티','숙박','푸드','디저트'];
+  const categories=['전체','로컬','팝업','패션','뷰티','푸드','디저트','숙박'];
   document.addEventListener('toggle',event=>{if(event.target.matches?.('.store-refine'))state.storeRefineOpen=event.target.open;},true);
   const brandCategories={
   "달달더마켓": [

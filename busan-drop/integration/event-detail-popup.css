@@ -73,7 +73,95 @@
 /* Shared footer: secondary tools above two clear primary actions. */
 #phone .event-detail-tools{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0}
 #phone .event-detail-tools .event-social-actions{display:flex;gap:8px;flex-shrink:0;margin:0}
-#phone .event-detail-tools :is(.event-save-button,.event-share-button){position:static;width:42px;height:42px;min-height:42px;flex:none;margin:0}
+#phone .event-detail-tools :is(.event-save-button,.event-share-button){position:relative;width:42px;height:42px;min-height:42px;flex:none;margin:0}
 #phone .event-detail-tools .event-official{display:flex;flex:0 1 auto;min-width:0;min-height:42px;padding:8px 12px;background:#f2f3f5;color:#191919;font-size:13px;line-height:1.4;text-align:center}
 #phone .event-detail-actions{row-gap:10px}
 #phone .event-detail-feedback{z-index:2;pointer-events:none}
+
+/* Keep the save hit target inside its button; the generic absolute halo must not cover the dialog. */
+#phone .event-detail-tools .event-save-button:not(.event-banner-count)::before{inset:0}
+
+/* Shared detail design. Content order and source data are handled by the renderer. */
+#phone .event-flow-v3{--event-inset:22px;--event-rule:#e6e8eb;--event-secondary:#626870;background:#fff;color:#202124}
+#phone .event-flow-v3 .event-detail-content{padding:0 var(--event-inset) 12px}
+#phone .event-detail-dialog.event-flow-v3 .event-detail-banner{width:calc(100% + 2 * var(--event-inset));margin-inline:calc(-1 * var(--event-inset));height:auto;aspect-ratio:auto;max-width:none;flex:none;background:#f6f7f8}
+#phone .event-flow-v3 .event-detail-banner img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;object-position:center}
+#phone .event-flow-v3 header[data-flow-section="intro"]{display:block;padding:0}
+#phone .event-flow-v3 .event-flow-heading{padding-top:20px}
+#phone .event-flow-v3 .event-flow-heading h2{font-size:24px;font-weight:800;line-height:1.4;margin:0;letter-spacing:-.6px;overflow-wrap:anywhere}
+#phone .event-flow-v3 .event-flow-heading .event-detail-intro{margin:12px 0 0;font-size:15px;line-height:1.75;color:#626870}
+#phone .event-flow-v3 .event-detail-tags{align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+#phone .event-flow-v3 .event-detail-tags>span{font-size:12px;font-weight:650;padding:5px 9px;border-radius:6px}
+#phone .event-flow-v3 .event-social-actions{display:flex;gap:8px;margin:0;flex-shrink:0}
+#phone .event-flow-v3 .event-social-actions button{position:relative;inset:auto;width:44px;height:44px;flex:none;border-radius:50%}
+#phone .event-flow-v3 .event-save-button::before{inset:0}
+#phone .event-flow-v3 .event-detail-close{width:44px;height:44px;top:12px;right:12px;box-shadow:0 2px 10px #0002;border:2px solid #fff}
+#phone .event-flow-v3 .event-info-section{padding-block:26px;border-color:var(--event-rule)}
+#phone .event-flow-v3 .event-info-section>h3,#phone .event-flow-v3 .event-flow-section-heading>h3{margin:0 0 16px;font-size:18px;font-weight:750;line-height:1.5;letter-spacing:-.35px;color:#242424}
+#phone .event-flow-v3 .event-flow-article+.event-flow-article{margin-top:22px}
+#phone .event-flow-v3 .event-info-section h4{margin:0 0 10px;font-size:15px;font-weight:700;line-height:1.6;color:#34383d}
+#phone .event-flow-v3 .event-info-section p{margin:0;font-size:15px;line-height:1.8;color:#555d66;overflow-wrap:anywhere}
+#phone .event-flow-v3 .event-info-section p+p{margin-top:8px}
+#phone .event-flow-v3 .event-info-section small{margin-top:8px;font-size:13px;line-height:1.75}
+#phone .event-flow-v3 .event-detail-list{padding-left:18px;margin:0}
+#phone .event-flow-v3 .event-detail-list li{font-size:15px;line-height:1.8;margin-bottom:8px;color:#555d66}
+#phone .event-flow-v3 .event-detail-list li:last-child{margin-bottom:0}
+#phone .event-flow-v3 .event-flow-summary{margin:0;display:grid;gap:0;border:1px solid var(--event-rule);border-radius:14px;padding:2px 14px;background:#f8f9fa}
+#phone .event-flow-v3 .event-flow-summary>div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--event-rule)}
+#phone .event-flow-v3 .event-flow-summary>div:last-child{border:0}
+#phone .event-flow-v3 .event-flow-summary dt{font-size:13px;line-height:1.7;color:var(--event-secondary)}
+#phone .event-flow-v3 .event-flow-summary dd{margin:0;min-width:0;font-size:14px;line-height:1.75;color:#242424;overflow-wrap:anywhere}
+#phone .event-flow-v3 .event-summary-value{display:block}
+#phone .event-flow-v3 .event-summary-value+.event-summary-value{margin-top:6px}
+#phone .event-flow-v3 .event-unknown{padding:2px 0;background:transparent;color:#747b84;font-size:13px;line-height:1.75}
+#phone .event-flow-v3 .event-flow-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+#phone .event-flow-v3 .event-flow-section-heading>h3{margin:0;min-width:0}
+#phone .event-flow-v3 .event-flow-section-heading .event-address-copy{margin:0;flex:none;min-height:44px;padding:8px 12px;font-size:13px;font-weight:600;border-radius:9px;background:#f8f9fa;border:1px solid var(--event-rule);color:#34383d}
+#phone .event-flow-v3 :is(.event-place-kv,.event-hours-kv){margin:0;border-top:1px solid var(--event-rule)}
+#phone .event-flow-v3 :is(.event-place-kv,.event-hours-kv)>div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;align-items:start;padding:13px 0;border-bottom:1px solid var(--event-rule)}
+#phone .event-flow-v3 .event-hours-kv>div{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+#phone .event-flow-v3 :is(.event-place-kv,.event-hours-kv) dt{font-size:13px;color:var(--event-secondary);line-height:1.75;overflow-wrap:anywhere}
+#phone .event-flow-v3 :is(.event-place-kv,.event-hours-kv) dd{margin:0;min-width:0;font-size:14px;color:#242424;line-height:1.75;overflow-wrap:anywhere}
+#phone .event-flow-v3 .event-venue-map{margin-top:16px;border:1px solid var(--event-rule);border-radius:12px}
+#phone .event-flow-v3 .event-table-wrap{max-width:100%;overflow-x:auto;border-top:1px solid var(--event-rule)}
+#phone .event-flow-v3 .event-table-wrap table{width:100%;font-size:14px;line-height:1.75}
+#phone .event-flow-v3 .event-table-wrap th{background:#f6f7f8;color:#626870;font-size:12px;font-weight:650;text-align:left}
+#phone .event-flow-v3 .event-table-wrap :is(th,td){padding:12px 10px;border-bottom:1px solid var(--event-rule);vertical-align:top;overflow-wrap:anywhere}
+#phone .event-flow-v3 .event-table-wrap td{color:#34383d}
+#phone .event-flow-v3 .event-table-wrap td:last-child{font-variant-numeric:tabular-nums}
+#phone .event-flow-v3 .event-international-table th[scope="row"]{width:43%;font-size:13px;font-weight:500;background:transparent;color:#626870}
+#phone .event-flow-v3 .event-international-table td{width:57%;font-size:14px}
+#phone .event-flow-v3 .event-info-section small.event-guidance-callout{display:block;margin-top:14px;padding:13px 14px;border:1px solid #f4e6a0;border-left:3px solid #FFD628;border-radius:10px;background:#fff9d6;color:#574600;font-size:13px;line-height:1.85;overflow-wrap:anywhere}
+#phone .event-flow-v3 .event-guidance-callout,#phone .event-flow-v3 [data-flow-section="trust"]>p{white-space:pre-line}
+#phone .event-flow-v3 .event-info-section .event-hours-detail{margin-top:4px;font-size:12px;color:#626870}
+#phone .event-flow-v3 .event-flow-more{margin-top:12px}
+#phone .event-flow-v3 .event-flow-more summary{min-height:44px;display:list-item;padding:10px 0;font-size:14px;line-height:1.7;font-weight:650;color:#424950;list-style-position:inside}
+#phone .event-flow-v3 .event-flow-more[open]>summary{margin-bottom:8px}
+#phone .event-flow-v3 .event-closure{margin:0 0 12px;padding:12px 14px;border-radius:10px;font-size:14px;line-height:1.75}
+#phone .event-flow-v3 .event-flow-contact{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--event-rule)}
+#phone .event-flow-v3 .event-flow-contact>div{display:flex;align-items:center;justify-content:space-between;gap:16px}
+#phone .event-flow-v3 .event-flow-contact dt{font-size:13px;color:#626870}
+#phone .event-flow-v3 .event-flow-contact dd{margin:0;min-width:0}
+#phone .event-flow-v3 .event-contact{margin:0;color:#34383d;font-size:14px;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+#phone .event-flow-v3 .event-detail-actions{display:flex;gap:10px;padding:12px var(--event-inset) max(14px,env(safe-area-inset-bottom));border-top:1px solid var(--event-rule);background:#fff;box-shadow:0 -4px 14px #00000004}
+#phone .event-flow-v3 .event-detail-actions :is(.event-official,.event-directions){display:flex;flex:1;min-width:0;align-items:center;justify-content:center;min-height:50px;padding:12px 10px;border-radius:11px;font-size:14px;line-height:1.5;font-weight:750;text-align:center}
+#phone .event-flow-v3 .event-detail-actions .event-official{background:#FFD628;color:#191919;border:1px solid #FFD628}
+#phone .event-flow-v3 .event-detail-actions .event-directions{background:#242424;color:#fff;border:1px solid #242424}
+#phone .event-flow-v3 :is(button,a,summary):focus-visible{outline:2px solid #665200;outline-offset:3px}
+@media(max-width:360px){
+ #phone .event-flow-v3{--event-inset:18px}
+ #phone .event-flow-v3 .event-flow-heading h2{font-size:22px}
+ #phone .event-flow-v3 .event-flow-summary{padding-inline:12px}
+ #phone .event-flow-v3 .event-flow-summary>div,#phone .event-flow-v3 .event-place-kv>div{grid-template-columns:60px minmax(0,1fr);gap:10px}
+ #phone .event-flow-v3 .event-table-wrap :is(th,td){padding-inline:8px}
+}
+#phone .event-flow-v3 [data-flow-section="products"] .event-table-wrap :is(th,td):last-child{text-align:right}
+#phone .event-detail-dialog.event-flow-v3 :is(.event-info-section>h3,.event-flow-section-heading>h3){color:#242424}
+#phone .event-flow-v3 :is(p,li,td,th,dd,.event-guidance-callout){word-break:keep-all;overflow-wrap:anywhere}
+/* Keep the close control in its own fixed area, clear of scrolled text and tables. */
+#phone .event-detail-dialog.event-flow-v3{padding-top:56px}
+#phone .event-detail-dialog.event-flow-v3::before{content:"";position:absolute;top:0;left:0;right:0;height:55px;background:#fff;border-bottom:1px solid var(--event-rule);z-index:4;pointer-events:none}
+#phone .event-detail-dialog.event-flow-v3 .event-detail-close{top:6px;right:10px}
+
+#phone .event-flow-v3 .event-detail-actions button.event-official{font-family:inherit;cursor:pointer}
+#phone .event-flow-v3 .event-detail-actions button.event-official:disabled{background:#fff9d6;border-color:#f4e6a0;color:#715b00;cursor:default}

@@ -1,4 +1,4 @@
-/* A fresh document launch always plays the intro; tab navigation does not. */
+/* Fresh entry plays the intro; reloads and direct page links preserve the current page. */
 (()=>{
  const layer=document.querySelector('#appLaunchIntro'),video=layer?.querySelector('video');
  if(!layer||!video)return;
@@ -21,7 +21,9 @@
  }
  function loadingGuard(){stopTimer();watchdog=setTimeout(finish,15000);}
  function start(){
-  if((window.BUSAN_LAUNCH_PATH||window.location.pathname)==='/busandrop/auth/callback'){layer.hidden=true;if(app)app.inert=false;return;}
+  const path=(window.BUSAN_LAUNCH_PATH||window.location.pathname).replace(/\/$/,'');
+  const reload=window.performance?.getEntriesByType?.('navigation')?.[0]?.type==='reload';
+  if(reload||['/busandrop/auth/callback','/busandrop/home','/busandrop/stores','/busandrop/drop-plan','/busandrop/saved','/busandrop/my'].includes(path)){video.pause();layer.hidden=true;if(app)app.inert=false;return;}
   clearTimeout(transitionTimer);exitAnimation?.cancel();homeAnimation?.cancel();finished=false;homeReady=false;skip.hidden=false;layer.hidden=false;if(app)app.inert=true;retry.hidden=true;video.muted=true;video.currentTime=0;loadingGuard();
   const playing=video.play();playing?.catch(()=>{stopTimer();retry.hidden=false;});
  }
@@ -32,6 +34,6 @@
  video.addEventListener('stalled',loadingGuard);
  skip.addEventListener('click',()=>finish());
  retry.addEventListener('click',()=>{retry.hidden=true;loadingGuard();video.play()?.catch(()=>{stopTimer();retry.hidden=false;});});
- window.addEventListener('pageshow',event=>{if(event.persisted)start();});
+ window.addEventListener('pageshow',event=>{if(event.persisted){finished=true;stopTimer();video.pause();revealHome();}});
  start();
 })();

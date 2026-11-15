@@ -180,13 +180,37 @@
   };
   let bannerPointer=null,bannerDragged=false;
   document.addEventListener('pointerdown',event=>{
-    if(!event.target.closest('.supplied-banner-viewport'))return;
-    bannerPointer={id:event.pointerId,x:event.clientX,y:event.clientY};bannerDragged=false;
+    const viewport=event.target.closest('.supplied-banner-viewport');
+    if(!viewport||event.isPrimary===false||(event.button!==undefined&&event.button!==0)||event.target.closest('.supplied-banner-actions'))return;
+    bannerPointer={id:event.pointerId,x:event.clientX,y:event.clientY,viewport,index:state.banner,horizontal:false};bannerDragged=false;
+    restartBannerRotation();
   });
   document.addEventListener('pointermove',event=>{
-    if(bannerPointer?.id===event.pointerId&&Math.hypot(event.clientX-bannerPointer.x,event.clientY-bannerPointer.y)>12)bannerDragged=true;
+    if(bannerPointer?.id!==event.pointerId)return;
+    const dx=event.clientX-bannerPointer.x,dy=event.clientY-bannerPointer.y;
+    if(!bannerPointer.horizontal){
+      if(Math.max(Math.abs(dx),Math.abs(dy))<12)return;
+      if(Math.abs(dy)>=Math.abs(dx)){bannerPointer=null;bannerDragged=true;return;}
+      bannerPointer.horizontal=true;bannerDragged=true;
+      bannerPointer.viewport.setPointerCapture?.(event.pointerId);
+    }
+    restartBannerRotation();
+    const track=bannerPointer.viewport.querySelector('.supplied-banner-track');
+    if(track){track.style.transition='none';track.style.transform=`translate3d(calc(${-bannerPointer.index*100}% + ${dx}px),0,0)`;}
   });
-  document.addEventListener('pointercancel',()=>{bannerPointer=null;bannerDragged=true;});
+  const finishBannerSwipe=(event,cancelled=false)=>{
+    if(bannerPointer?.id!==event.pointerId)return;
+    const pointer=bannerPointer;bannerPointer=null;
+    const track=pointer.viewport.querySelector('.supplied-banner-track');
+    if(track){track.style.transition='';track.style.transform=`translate3d(${-state.banner*100}%,0,0)`;}
+    const dx=event.clientX-pointer.x,dy=event.clientY-pointer.y;
+    if(!cancelled&&slides.length>1&&Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){
+      bannerDragged=true;switchCampaign((state.banner+(dx<0?1:slides.length-1))%slides.length);
+    }
+    restartBannerRotation();
+  };
+  document.addEventListener('pointerup',event=>finishBannerSwipe(event));
+  document.addEventListener('pointercancel',event=>finishBannerSwipe(event,true));
   document.addEventListener('click',event=>{
     const button=event.target.closest('[data-banner-detail]');
     if(!button||event.detail!==0&&bannerDragged)return;

@@ -1,0 +1,479 @@
+{
+  "schema_version": 3,
+  "categories": {
+    "local": "부산 이벤트",
+    "popup": "팝업",
+    "fashion": "패션",
+    "beauty": "뷰티",
+    "food": "푸드",
+    "dessert": "디저트",
+    "stay": "숙박"
+  },
+  "locales": [
+    "ko",
+    "en",
+    "ja",
+    "zh-CN",
+    "zh-TW"
+  ],
+  "statuses": [
+    "unknown",
+    "reported",
+    "confirmed",
+    "not_applicable"
+  ],
+  "sections": [
+    {
+      "key": "intro",
+      "order": 10,
+      "title": "행사 소개",
+      "question": "어떤 행사인가?",
+      "display": "always",
+      "fields": [
+        {
+          "key": "name",
+          "label": "행사명",
+          "type": "i18n",
+          "db": "events.name_i18n"
+        },
+        {
+          "key": "summary",
+          "label": "한 줄 소개",
+          "type": "i18n",
+          "db": "events.summary_i18n"
+        },
+        {
+          "key": "image",
+          "label": "대표 이미지·출처·이용 조건",
+          "type": "object",
+          "db": "events.image_url + image_credit/source_url/license"
+        },
+        {
+          "key": "event_type",
+          "label": "진행 형태: popup/sale/experience/exhibition/festival/stay/other",
+          "type": "text",
+          "db": "events.event_type"
+        },
+        {
+          "key": "audience",
+          "label": "참여 대상",
+          "type": "text",
+          "db": "events.audience"
+        }
+      ]
+    },
+    {
+      "key": "visit",
+      "order": 20,
+      "title": "방문 요약",
+      "question": "내 여행 날짜에 갈 수 있나?",
+      "display": "always",
+      "fields": [
+        {
+          "key": "period",
+          "label": "실제 방문 기간",
+          "type": "range",
+          "db": "event_venues.start_date/end_date; schedule_kind=visit"
+        },
+        {
+          "key": "venue_summary",
+          "label": "지점·층 요약",
+          "type": "i18n",
+          "db": "venues.name_i18n/floor_i18n"
+        },
+        {
+          "key": "hours_summary",
+          "label": "운영시간 요약·백화점/행사 기준 구분",
+          "type": "i18n",
+          "db": "event_venues.hours_note_i18n"
+        },
+        {
+          "key": "admission",
+          "label": "입장료 상태: free/paid/mixed/unknown/not_applicable",
+          "type": "text",
+          "db": "event_venues.admission_status"
+        },
+        {
+          "key": "booking",
+          "label": "예약 방식: required/optional/priority/not_required/unknown/not_applicable",
+          "type": "text",
+          "db": "event_venues.booking_status"
+        },
+        {
+          "key": "foreign_booking",
+          "label": "외국인 예약 가능 여부: available/unavailable/conditional/unknown/not_applicable",
+          "type": "text",
+          "db": "event_venues.foreign_booking_status"
+        }
+      ]
+    },
+    {
+      "key": "alerts",
+      "order": 30,
+      "title": "방문 전 꼭 확인",
+      "question": "헛걸음할 조건이 있나?",
+      "display": "applicable_date_only",
+      "fields": [
+        {
+          "key": "restrictions",
+          "label": "입장 제한·예약 필수·휴점 경고",
+          "type": "rows:alerts",
+          "db": "notice_i18n + requirements_i18n + schedule_exceptions"
+        },
+        {
+          "key": "requirements",
+          "label": "한국 번호·본인인증·여권·앱·쿠폰 필요 조건",
+          "type": "object",
+          "db": "event_venues.*_requirement"
+        }
+      ]
+    },
+    {
+      "key": "location",
+      "order": 35,
+      "title": "장소",
+      "question": "어떻게 찾아가나?",
+      "display": "map_after_text",
+      "fields": [
+        {
+          "key": "name",
+          "label": "실제 지점명",
+          "type": "i18n",
+          "db": "venues.name_i18n"
+        },
+        {
+          "key": "address_ko",
+          "label": "한국어 주소·복사용",
+          "type": "text",
+          "db": "venues.address_ko"
+        },
+        {
+          "key": "indoor",
+          "label": "건물·층·구역",
+          "type": "i18n",
+          "db": "venues.building_i18n/floor_i18n/zone_i18n"
+        },
+        {
+          "key": "coordinates",
+          "label": "좌표·건물/입구 기준·정확도 안내",
+          "type": "coordinates",
+          "db": "venues.latitude/longitude; 좌표 범위 추가 검토"
+        },
+        {
+          "key": "transit",
+          "label": "역·출구·도보 안내",
+          "type": "i18n",
+          "db": "venues.transit_i18n"
+        },
+        {
+          "key": "accessibility",
+          "label": "휠체어·유아 동반 등 확인 정보",
+          "type": "i18n",
+          "db": "venues.accessibility_status/accessibility_i18n"
+        }
+      ]
+    },
+    {
+      "key": "admission",
+      "order": 40,
+      "title": "운영 시간",
+      "question": "어떻게 입장하나?",
+      "display": "always",
+      "fields": [
+        {
+          "key": "opening_hours",
+          "label": "요일별 운영시간·마지막 입장·접수 마감",
+          "type": "rows:hours",
+          "db": "opening_hours"
+        },
+        {
+          "key": "exceptions",
+          "label": "휴점·특별 영업",
+          "type": "rows:exceptions",
+          "db": "schedule_exceptions"
+        },
+        {
+          "key": "prices",
+          "label": "입장료·연령·통화·별도 비용",
+          "type": "rows:prices",
+          "db": "admission_prices"
+        },
+        {
+          "key": "booking_period",
+          "label": "예약 접수 기간",
+          "type": "range",
+          "db": "신규: 방문 기간과 별도"
+        },
+        {
+          "key": "booking_url",
+          "label": "공식 예약 URL",
+          "type": "url",
+          "db": "event_venues.booking_url"
+        },
+        {
+          "key": "walk_in",
+          "label": "현장 입장·대기 조건",
+          "type": "i18n",
+          "db": "walk_in_status + booking_i18n"
+        },
+        {
+          "key": "alternative_booking",
+          "label": "한국 번호/인증 불가 시 공식 대안",
+          "type": "i18n",
+          "db": "booking_i18n; 구조화는 추가 검토"
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "order": 50,
+      "title": "행사 내용·프로그램",
+      "question": "가면 무엇을 경험하나?",
+      "display": "expand_if_long",
+      "fields": [
+        {
+          "key": "description",
+          "label": "행사 내용",
+          "type": "i18n",
+          "db": "events.description_i18n"
+        },
+        {
+          "key": "sessions",
+          "label": "특별 프로그램·날짜별 복수 회차",
+          "type": "rows:sessions",
+          "db": "신규 회차 구조 필요"
+        }
+      ]
+    },
+    {
+      "key": "products",
+      "order": 60,
+      "title": "상품·메뉴·패키지 가격",
+      "question": "무엇을 얼마에 이용하나?",
+      "display": "preview_3",
+      "fields": [
+        {
+          "key": "items",
+          "label": "상품·메뉴·옵션·구매 제한·재고",
+          "type": "rows:items",
+          "db": "products + product_variants; 메뉴 확장 검토"
+        },
+        {
+          "key": "offers",
+          "label": "패키지별 예약·이용 기간·가격·인원·포함/제외",
+          "type": "rows:offers",
+          "db": "신규 상품별 일정/패키지 구조 필요"
+        }
+      ]
+    },
+    {
+      "key": "benefits",
+      "order": 70,
+      "title": "혜택·적용 조건",
+      "question": "어떤 조건에서 혜택을 받나?",
+      "display": "show_conditions_together",
+      "fields": [
+        {
+          "key": "offers",
+          "label": "구매 기준 → 혜택 → 수량·소진·중복·채널·기간",
+          "type": "rows:benefits",
+          "db": "benefits; 구매 기준 통화/소진 상태 추가 검토"
+        }
+      ]
+    },
+    {
+      "key": "international",
+      "order": 80,
+      "title": "해외 방문객 안내",
+      "question": "입장·결제·준비가 가능한가?",
+      "display": "critical_also_in_alerts",
+      "fields": [
+        {
+          "key": "eligibility",
+          "label": "외국인 방문·예약 조건",
+          "type": "i18n",
+          "db": "foreign_visitor_i18n"
+        },
+        {
+          "key": "payments",
+          "label": "해외 카드·현금·간편결제 각각",
+          "type": "rows:payments",
+          "db": "payment_methods"
+        },
+        {
+          "key": "tax_refund",
+          "label": "환급 가능 여부·조건",
+          "type": "i18n",
+          "db": "tax_refund_status + tax_refund_i18n"
+        },
+        {
+          "key": "passport",
+          "label": "여권 필요 목적·준비물",
+          "type": "i18n",
+          "db": "passport_requirement + requirements_i18n"
+        }
+      ]
+    },
+    {
+      "key": "trust",
+      "order": 90,
+      "title": "기타 안내",
+      "question": "무엇을 언제 확인한 정보인가?",
+      "display": "public_sources_only",
+      "fields": [
+        {
+          "key": "notices",
+          "label": "취소·환불·기타 주의사항",
+          "type": "i18n",
+          "db": "event_venues.notice_i18n"
+        },
+        {
+          "key": "contact",
+          "label": "문의처",
+          "type": "text",
+          "db": "event_venues.contact_phone"
+        },
+        {
+          "key": "official_url",
+          "label": "공식 행사 안내 URL",
+          "type": "url",
+          "db": "event_venues.official_url"
+        },
+        {
+          "key": "limitations",
+          "label": "이번 리서치 확인 범위·미해결 사항",
+          "type": "i18n",
+          "db": "evidence.internal_note와 공개 문구 분리"
+        }
+      ]
+    }
+  ],
+  "rows": {
+    "alerts": {
+      "message": "i18n",
+      "severity": "text",
+      "start": "date",
+      "end": "date"
+    },
+    "hours": {
+      "weekday": "integer",
+      "opens_at": "time",
+      "closes_at": "time",
+      "closes_next_day": "boolean",
+      "last_admission_at": "time",
+      "registration_deadline_at": "time",
+      "basis": "text"
+    },
+    "exceptions": {
+      "date": "date",
+      "kind": "text",
+      "note": "i18n"
+    },
+    "prices": {
+      "name": "i18n",
+      "amount": "money",
+      "currency": "currency",
+      "unit": "text",
+      "conditions": "i18n"
+    },
+    "sessions": {
+      "id": "text",
+      "name": "i18n",
+      "date": "date",
+      "starts_at": "time",
+      "ends_at": "time",
+      "state": "text",
+      "conditions": "i18n"
+    },
+    "items": {
+      "id": "text",
+      "name": "i18n",
+      "image_url": "url",
+      "option": "i18n",
+      "price": "money",
+      "original_price": "money",
+      "currency": "currency",
+      "unit": "text",
+      "purchase_limit": "integer",
+      "stock_status": "text",
+      "conditions": "i18n"
+    },
+    "offers": {
+      "id": "text",
+      "name": "i18n",
+      "booking_period": "range",
+      "usage_period": "range",
+      "price_from": "money",
+      "currency": "currency",
+      "unit": "text",
+      "people": "text",
+      "tax_service": "i18n",
+      "included": "i18n",
+      "excluded": "i18n",
+      "cancellation": "i18n",
+      "url": "url"
+    },
+    "benefits": {
+      "name": "i18n",
+      "min_purchase": "money",
+      "currency": "currency",
+      "reward": "i18n",
+      "quantity_limit": "integer",
+      "exhaustion_status": "text",
+      "stacking": "i18n",
+      "channel": "text",
+      "period": "range",
+      "conditions": "i18n"
+    },
+    "payments": {
+      "method": "text",
+      "support": "text",
+      "conditions": "i18n"
+    }
+  },
+  "category_profiles": {
+    "local": {
+      "program": "공연·전시 구성",
+      "weather_policy": "기상 취소·변경",
+      "ticket_scope": "관람권 이용 범위"
+    },
+    "popup": {
+      "entry_queue": "예약·현장 대기·재입장",
+      "limited_goods": "한정 상품·구매 제한",
+      "special_program": "등장·체험 회차"
+    },
+    "fashion": {
+      "sizes": "사이즈·옵션",
+      "fitting": "피팅 여부",
+      "returns": "교환·반품",
+      "excluded_items": "할인 제외 품목"
+    },
+    "beauty": {
+      "variants": "용량·색상·구성",
+      "testers": "테스터·체험",
+      "service_booking": "시술/체험 예약·소요시간",
+      "excluded_items": "쿠폰·할인 제외"
+    },
+    "food": {
+      "menu_unit": "메뉴·중량·인분",
+      "service_mode": "매장 식사·포장",
+      "last_order": "주문 마감",
+      "allergens": "확인된 알레르기 정보",
+      "dietary": "확인된 식이 정보"
+    },
+    "dessert": {
+      "menu_unit": "수량·크기·세트 구성",
+      "storage": "보관·소비 안내",
+      "allergens": "확인된 알레르기 정보",
+      "pickup": "픽업·예약·품절"
+    },
+    "stay": {
+      "check_in_out": "체크인·체크아웃",
+      "occupancy": "기준·최대 인원·추가 요금",
+      "package_scope": "객실/식사/체험 구분",
+      "blackout": "제외일",
+      "tax_service": "세금·봉사료",
+      "cancellation": "취소·노쇼"
+    }
+  }
+}

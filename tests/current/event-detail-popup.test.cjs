@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
-function setup(){const events={},elements=new Map();const c={window:{},state:{language:'ko'},brands:[{name:'몬치치',cat:'팝업'},{name:'올리브영',cat:'뷰티'}],esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),document:{activeElement:null,querySelector(s){if(s==='.event-detail-overlay'||s==='.event-detail-dialog')return null;if(!elements.has(s))elements.set(s,{innerHTML:'',classList:{add(){},remove(){}},focus(){}});return elements.get(s);},addEventListener(name,fn){(events[name]??=[]).push(fn);}}};vm.createContext(c);for(const f of ['data/event-details.js','integration/event-detail-popup.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);return {c,elements,events};}
+function setup(){const events={},elements=new Map();const c={window:{},state:{language:'ko'},brands:[{name:'몬치치',cat:'팝업'},{name:'올리브영',cat:'뷰티'}],esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'),document:{activeElement:null,querySelector(s){if(s==='.event-detail-overlay'||s==='.event-detail-dialog')return null;if(!elements.has(s))elements.set(s,{innerHTML:'',classList:{add(){},remove(){}},focus(){}});return elements.get(s);},addEventListener(name,fn){(events[name]??=[]).push(fn);}}};vm.createContext(c);for(const f of ['data/event-details.js','data/event-display-flow.js','integration/event-detail-popup.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'../../busan-drop',f),'utf8'),c);return {c,elements,events};}
 test('Monchhichi popup starts with banner and contains actionable researched information',()=>{
  const {c}=setup();const html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'몬치치 팝업',address:'센텀남대로 35',lat:35.16,lng:129.12});
  assert.ok(html.indexOf('event-detail-banner')<html.indexOf('id="eventDetailTitle"'));
@@ -117,3 +117,116 @@ test('Harry Potter and Hinakuu preserve separate gift rules, venue ambiguity and
 });
 
 test('saved-list button navigates immediately without reading or changing save state or showing a toast',async()=>{for(const saved of [false,true]){const {c,events}=setup(),routes=[];let reads=0,writes=0,toasts=0;c.nav=screen=>routes.push(screen);c.toast=()=>toasts++;c.window.BUSAN_EVENT_SOCIAL={getState:()=>{reads++;return {loaded:true,saved:saved?[{eventId:'current'}]:[]};},toggleEvent:()=>writes++};await events.click[0]({target:{closest:s=>s==='[data-event-saved-list]'?{}:null}});assert.deepEqual(routes,['saved']);assert.equal(reads,0);assert.equal(writes,0);assert.equal(toasts,0);}});
+
+test('all registered venue content follows the shared contract without dropping researched sections',()=>{
+ const {c}=setup();vm.runInContext(fs.readFileSync(path.join(__dirname,'../../busan-drop/data/store-locations.js'),'utf8'),c);
+ const order=require('../../internal/event-workflow/contract.json').sections.map(s=>s.key);
+ for(const venue of c.window.BUSAN_STORE_LOCATIONS){
+  const html=c.window.BUSAN_EVENT_DETAIL_HTML(venue),keys=[...html.matchAll(/data-flow-section="([^"]+)"/g)].map(m=>m[1]);
+  assert.deepEqual(keys,[...keys].sort((a,b)=>order.indexOf(a)-order.indexOf(b)),venue.id);
+  const event={...c.window.BUSAN_EVENT_DETAILS[venue.brand],...venue.eventOverrides};
+  for(const section of event.sections||[])assert.ok(html.includes(c.esc(section.title)),venue.id+': '+section.title);
+  assert.ok(html.indexOf('data-flow-section="location"')<html.indexOf('data-flow-section="admission"'),venue.id);
+ }
+});
+test('closure warnings follow the chosen date, while previous closures remain in the full schedule',()=>{
+ const {c}=setup(),item={brand:'몬치치',name:'팝업',address:'부산',lat:35,lng:129};
+ const current=c.window.BUSAN_EVENT_DETAIL_HTML(item,{visitDate:'2026-11-14'}),closed=c.window.BUSAN_EVENT_DETAIL_HTML(item,{visitDate:'2026-11-09'});
+ assert.doesNotMatch(current,/class="event-closure"/);assert.match(current,/11.09 휴점/);assert.match(closed,/class="event-closure"/);
+ assert.ok(current.indexOf('data-flow-section="products"')<current.indexOf('data-flow-section="benefits"'));
+ assert.match(current,/<details class="event-flow-more">[\s\S]*?48,000원/);
+ assert.doesNotMatch(current,/<footer[^>]*>[\s\S]*?event-saved-list/);
+});
+
+test('popup removes verification dates and repeated summaries without losing source data',()=>{
+ const {c}=setup(),e=c.window.BUSAN_EVENT_DETAILS['몬치치'];
+ const html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'팝업',address:'부산',lat:35,lng:129});
+ assert.doesNotMatch(html,/확인일|datetime="2026-11-05"/);
+ assert.equal(html.split(c.esc(e.entry)).length-1,0);
+ assert.equal(html.split(c.esc(e.hours)).length-1,0);
+ assert.match(html,/event-hours-kv/);
+ assert.equal((html.match(/class="event-table-wrap event-international-table"/g)||[]).length,1);
+ assert.equal(e.checked,'2026-11-05');
+ assert.doesNotMatch(html,/event-flow-source|기타 안내·문의·출처/);assert.match(html,/02-6288-9714/);
+ assert.ok(html.indexOf('data-flow-section="alerts"')<html.indexOf('data-flow-section="location"'));
+ assert.ok(html.indexOf('data-flow-section="location"')<html.indexOf('data-flow-section="admission"'));
+ assert.match(html,/공식 예약/);
+});
+
+test('visit summary separates multiple entries and includes closures; hours use weekday/time pairs',()=>{
+ const {c}=setup(),html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'팝업',address:'부산',lat:35,lng:129});
+ const summary=html.split('class="event-flow-summary"')[1].split('</dl>')[0];
+ assert.match(summary,/<dt>입장 방식<\/dt><dd><span class="event-summary-value">사전예약 우선 입장<\/span><span class="event-summary-value">잔여 인원/);
+ assert.match(summary,/<dt>휴점일<\/dt>/);assert.match(summary,/11.09 휴점/);
+ assert.match(html,/<h3>운영 시간<\/h3>/);assert.doesNotMatch(html,/전체 휴점일 보기|<h3>날짜·입장·예약/);
+ assert.match(html,/<dt><span>월–목<\/span><\/dt><dd><span>10:30–20:00<\/span>/);
+ assert.match(html,/<dt><span>금–일<\/span><\/dt><dd><span>10:30–20:30<\/span>/);
+});
+test('multiple periods, fees and timed performances are separated without assigning unknown hours',()=>{
+ const {c}=setup(),item={brand:'몬치치',name:'팝업',address:'부산',lat:35,lng:129};
+ const e=c.window.BUSAN_EVENT_DETAILS['몬치치'];e.periods=[{start:'2026-11-05',end:'2026-11-08'},{start:'2026-11-13',end:'2026-11-15'}];e.fee='성인 18,000원 / 청소년 8,000원';e.venue=['제1행사장','제2행사장'];
+ const html=c.window.BUSAN_EVENT_DETAIL_HTML(item),summary=html.split('class="event-flow-summary"')[1].split('</dl>')[0];
+ assert.match(summary,/2026.11.05 — 2026.11.08<\/span><span/);assert.match(summary,/성인 18,000원<\/span><span/);assert.match(summary,/제1행사장<\/span><span/);
+ const drone=c.window.BUSAN_EVENT_DETAIL_HTML({...item,brand:'광안리 M 드론×레이저쇼'});
+ assert.match(drone,/<dt><span>11.21<\/span><\/dt><dd><span>19:00/);assert.match(drone,/<dt><span>11.21<\/span><\/dt><dd><span>21:00/);
+ const unknown=c.window.BUSAN_EVENT_DETAIL_HTML({...item,brand:'티파니앤코'});assert.match(unknown,/<dd><span>확인 전<\/span>/);
+});
+
+test('important admission notes use brand callouts and place has one copy action beside its heading',()=>{
+ const {c}=setup(),html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'팝업',address:'센텀남대로 35',lat:35,lng:129});
+ assert.match(html,/<small class="event-guidance-callout">현장 방문만으로 입장이 보장되지/);
+ assert.match(html,/<div class="event-flow-section-heading"><h3>장소<\/h3><button class="event-address-copy"/);
+ assert.equal((html.match(/data-event-copy-address=/g)||[]).length,1);
+ assert.doesNotMatch(html,/B2 행사장까지의 실내 이동|장소·교통/);
+ const order=[...html.matchAll(/data-flow-section="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(order[order.indexOf('location')-1],'alerts');assert.equal(order[order.indexOf('location')+1],'admission');
+});
+
+test('place uses venue/address/transit pairs and section footnotes share the brand callout style',()=>{
+ const {c}=setup(),html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'팝업',address:'부산 해운대구 센텀남대로 35 · 센텀시티 B2',lat:35,lng:129});
+ assert.match(html,/<dl class="event-place-kv"><div><dt>행사장<\/dt>/);
+ assert.match(html,/<dt>주소<\/dt><dd>부산 해운대구 센텀남대로 35<\/dd>/);
+ assert.match(html,/<dt>찾아가기<\/dt><dd>부산 2호선/);
+ assert.match(html,/data-event-copy-address="부산 해운대구 센텀남대로 35 · 센텀시티 B2"/);
+ assert.match(html,/<small class="event-guidance-callout">백화점 영업시간 기준/);
+ assert.match(html,/<small class="event-guidance-callout">참고 가격이며/);
+ assert.match(html,/<small class="event-guidance-callout">선착순·소진 시 종료/);
+});
+
+test('international information lists five separate rows without inferring payment support from legacy prose',()=>{
+ const {c}=setup(),item={brand:'몬치치',name:'팝업',address:'부산',lat:35,lng:129};
+ const html=c.window.BUSAN_EVENT_DETAIL_HTML(item),table=html.split('event-international-table')[1].split('</table>')[0];
+ assert.deepEqual([...table.matchAll(/scope="row">([^<]+)/g)].map(m=>m[1]),['외국인 이용·예약','해외 카드','간편 결제','텍스 리펀','여권 필요 여부']);
+ assert.equal((table.match(/event-unknown/g)||[]).length,5);
+ const e=c.window.BUSAN_EVENT_DETAILS['몬치치'];e.payment='현금 결제 불가 · 해외 카드·QR 결제는 매장 확인';
+ const legacy=c.window.BUSAN_EVENT_DETAIL_HTML(item);assert.match(legacy,/현금 결제 불가/);assert.equal((legacy.split('event-international-table')[1].split('</table>')[0].match(/event-unknown/g)||[]).length,5);
+ e.foreignCard='VISA 가능';e.mobilePayment='확인 전';assert.match(c.window.BUSAN_EVENT_DETAIL_HTML(item),/scope="row">해외 카드<\/th><td>VISA 가능/);
+});
+
+test('callouts and additional guidance separate sentences without breaking dates, decimals or URLs',()=>{
+ const {c}=setup(),format=c.window.BUSAN_EVENT_SENTENCE_LINES;
+ assert.equal(format('입장은 보장되지 않습니다. 공식 예약을 확인하세요.'),'입장은 보장되지 않습니다.\n공식 예약을 확인하세요.');
+ assert.equal(format('2026.11.14 기준입니다. 가격은 3.5원입니다.'),'2026.11.14 기준입니다.\n가격은 3.5원입니다.');
+ assert.equal(format('https://example.com에서 확인하세요.다음 문장입니다.'),'https://example.com에서 확인하세요.\n다음 문장입니다.');
+ assert.equal(format('Dr. Kim checked. Next sentence.'),'Dr. Kim checked.\nNext sentence.');
+ assert.equal(format('確認してください。次の案内です。'),'確認してください。\n次の案内です。');
+ const html=c.window.BUSAN_EVENT_DETAIL_HTML({brand:'몬치치',name:'팝업',address:'부산',lat:35,lng:129});
+ assert.match(html,/입장이 보장되지 않습니다\.\n하단의 공식 예약/);
+ assert.match(html,/1인 2개 구매 제한 안내가 있습니다\.\n적용 상품/);
+});
+
+test('nearby place details share the event dialog shell and retain category-specific researched fields',()=>{
+ const {c,elements}=setup();
+ const sight={kind:'sights',name:'부산 관광지',address:'부산 주소',image:'https://example.com/photo.jpg',lat:35,lng:129,distance:1250,visitInfo:{admission:'성인 5,000원',usetime:'09:00–18:00',restdate:'월요일',parking:'주차 가능',infocenter:'051-123-4567'},detailDescription:'관광지 상세 소개'};
+ const html=c.window.BUSAN_PLACE_DETAIL_HTML(sight);
+ for(const text of ['event-detail-dialog event-flow-v3','방문 요약','방문 전 꼭 확인','주소 복사','운영 시간','관광지 소개','5,000원','1.3km','월요일','051-123-4567','길찾기'])assert.ok(html.includes(text),text);
+ assert.ok(html.indexOf('data-flow-section="location"')<html.indexOf('data-flow-section="admission"'));
+ c.window.BUSAN_OPEN_PLACE_DETAIL(sight);assert.equal(elements.get('#modal').innerHTML,html);
+ const food=c.window.BUSAN_PLACE_DETAIL_HTML({kind:'food',name:'맛집',address:'부산',menu:'국밥',hours:'11:00–21:00',businessStatus:{label:'영업 중'},rating:4.3});
+ for(const text of ['맛집','국밥','11:00–21:00','4.3 / 5','영업 중','메뉴별 가격은 매장의 최신 안내'])assert.ok(food.includes(text),text);
+ assert.doesNotMatch(food,/관광지 소개|관광지<\/span>/);
+});
+test('nearby details preserve unknown values and reject executable image or website URLs',()=>{
+ const {c}=setup();const html=c.window.BUSAN_PLACE_DETAIL_HTML({kind:'food',name:'<img onerror="bad">',image:'javascript:alert(1)',website:'javascript:alert(1)'});
+ assert.match(html,/확인 전/);assert.match(html,/&lt;img/);assert.doesNotMatch(html,/src="javascript:|href="javascript:|<img onerror|>무료</);
+});

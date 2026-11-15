@@ -1,3 +1,6 @@
+/* Use authored button colors in iOS WebView instead of the native blue tint.
+   Zero specificity keeps each component's selected / disabled / danger colors. */
+:where(#phone button){color:inherit;-webkit-text-fill-color:currentColor;-webkit-appearance:none;appearance:none}
 /* Shared white surfaces and brand-yellow navigation across the visitor app. */
 #phone { --bg:#fff; --card:#f5f6f7; --muted:#626870; --ink:#171717; --text:#171717; --accent:#FFD628; background:#fff; color:#171717; color-scheme:light; }
 #phone .status,#phone .viewport { background:#fff; color:#171717; }

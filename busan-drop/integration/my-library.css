@@ -18,7 +18,7 @@
 .library-delete-overlay{z-index:100}:is(.library-delete-dialog,.event-unsave-dialog) .delete-mark{display:grid;place-items:center;width:38px;height:38px;background:#FFD628;border-radius:50%;font-size:25px;color:#675300;margin-bottom:16px}:is(.library-delete-dialog,.event-unsave-dialog) h3{font-size:22px;margin:0 0 12px}:is(.library-delete-dialog,.event-unsave-dialog) p{font-size:13px;line-height:1.7;color:#6e7580}:is(.library-delete-dialog,.event-unsave-dialog) .delete-plan-title{color:#242424;font-weight:700}.library-delete-actions{display:flex;gap:8px;margin-top:22px}.library-delete-actions button{flex:1;min-height:46px;border-radius:10px;border:1px solid #e0e3e7;background:#fff;color:#393e45;font-size:14px;font-weight:700}.library-delete-actions [data-library-delete-confirm]{background:#191919;color:#FFD628;border-color:#191919}
 
 /* Final review uses the same tall map size as the store finder. */
-#phone.pass .pass-review #libraryRouteMap {height:clamp(400px,58svh,500px);}
+#phone.pass .pass-review #libraryRouteMap {height:360px;}
 /* Venue maps describe groups and place types rather than a global visit order. */
 .venue-map-controls{display:flex;gap:7px;overflow-x:auto;margin:24px 0 12px;padding-bottom:4px;scrollbar-width:thin}
 .venue-map-controls button{flex:none;max-width:220px;min-height:40px;padding:9px 13px;border:1px solid #dce0e4;border-radius:12px;background:#f4f5f6;color:#515963;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -267,3 +267,112 @@
 .plan-account-save{margin:22px 0 28px}
 .plan-account-save button{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:50px;padding:13px 18px;border-radius:12px;background:#191919;color:#FFD628;font-size:14px;font-weight:750;line-height:1.5}
 .plan-account-save svg{width:20px;height:20px;flex-shrink:0}
+
+#phone .venue-map-pin .category-glass-icon{display:block;width:30px;height:30px;object-fit:contain;transform:none;flex:none}
+#phone .venue-mini-map .venue-map-pin .category-glass-icon{width:24px;height:24px}
+#phone .venue-map-card-icon .category-glass-icon{width:28px;height:28px;object-fit:contain;transform:none}
+
+#phone .venue-map-legend .category-glass-icon{width:22px;height:22px;object-fit:contain;transform:none}
+
+#phone .venue-mini-manage>button[data-venue-remove]{min-height:42px;padding:10px 13px;border:1px solid #dce0e4;border-radius:10px;background:#fff;color:#41474e;font-size:12px;font-weight:650;line-height:1.5}
+#phone .pass-venue-remove-overlay [data-pass-venue-remove-confirm]{background:#FFD628;border-color:#FFD628;color:#191919}
+#phone .pass-venue-remove-overlay .delete-plan-title{font-size:16px;line-height:1.6;overflow-wrap:anywhere}
+#phone .pass-venue-remove-overlay button:focus-visible{outline:2px solid #715b00;outline-offset:2px}
+
+/* Separate the complete plan overview from the per-event neighborhood maps. */
+#phone .plan-route-overview{margin:28px 0 0;padding:22px 0 0;border-top:2px solid #191919}
+#phone .plan-route-overview-heading{display:flex;align-items:center;gap:11px;margin:0 0 12px}
+#phone .plan-route-overview-icon{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:12px;background:#FFD628;color:#191919}
+#phone .plan-route-overview-icon svg{width:23px;height:23px}
+#phone .plan-route-overview-heading h3{margin:0;font-size:20px;line-height:1.5;font-weight:800;letter-spacing:-.4px;color:#191919}
+#phone .plan-route-overview-heading p{margin:3px 0 0;color:#626870;font-size:12px;line-height:1.6}
+#phone .plan-route-overview-description{margin:0 0 16px;font-size:12px;line-height:1.8;color:#626870}
+#phone .plan-route-overview .venue-map-controls,#phone .my-plan-detail .plan-route-overview .venue-map-controls{margin:0 0 12px}
+#phone .plan-route-overview #libraryRouteMap{height:360px;min-height:360px;max-height:360px}
+
+#phone .venue-mini-manage{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:8px;width:100%;align-items:stretch}
+#phone .venue-mini-manage>button[data-venue-edit],#phone .venue-mini-manage>button[data-venue-remove]{width:100%;min-height:46px;padding:10px 8px;font-size:12px;line-height:1.6;white-space:normal;word-break:keep-all}
+#phone .plan-route-overview-note{margin:10px 0 0;font-size:11px;line-height:1.7;color:#626870}
+
+#phone .venue-group-heading .venue-group-place-count{margin:8px 0 0;font-size:12px;line-height:1.7;font-weight:500;color:#626870}
+
+#phone .venue-mini-toolbar{width:100%;box-sizing:border-box;grid-template-columns:minmax(0,1fr);justify-content:stretch}
+#phone .venue-mini-manage{justify-content:stretch;min-width:0}
+#phone .venue-mini-manage>button{box-sizing:border-box;min-width:0}
+
+#phone .venue-group-heading .venue-group-period{margin:8px 0 0;font-size:12px;font-weight:650;line-height:1.7;color:#715b00;font-variant-numeric:tabular-nums}
+#phone .venue-group-heading .venue-group-period+.venue-group-place-count{margin-top:4px}
+
+#phone .my-plan-detail .venue-visit-list>.venue-stop-card.is-journey-stop{grid-template-columns:88px minmax(0,1fr);gap:14px 12px}
+#phone .my-plan-detail .venue-stop-card>.venue-stop-image{width:88px;height:104px;border-radius:11px}
+#phone .my-plan-detail .venue-stop-info>.venue-stop-category{display:block;margin:0 0 6px;font-size:12px;line-height:1.5;color:#626870;font-weight:500}
+#phone .my-plan-detail .venue-stop-info>strong{font-size:16px;line-height:1.5}
+#phone .my-plan-detail .venue-stop-info>.venue-next-distance{margin:7px 0 0;font-size:12px;line-height:1.6;color:#715b00;font-weight:650}
+#phone .my-plan-detail .venue-place-detail{display:inline-flex;align-items:center;min-height:36px;margin:6px 0 0;padding:6px 0;border:0;border-radius:0;background:transparent;color:#191919;font-size:12px;line-height:1.6;font-weight:750;text-align:left;text-decoration:underline;text-underline-offset:4px}
+#phone .my-plan-detail .venue-place-detail:focus-visible{outline:2px solid #715b00;outline-offset:2px}
+
+/* Every saved place uses the same full-width visit/delete action row. */
+#phone .my-plan-detail .venue-visit-list>.venue-stop-card.is-journey-stop{grid-template-columns:88px minmax(0,1fr) 36px;grid-template-rows:auto auto;column-gap:12px}
+#phone .my-plan-detail .is-journey-stop>.venue-stop-image{grid-column:1;grid-row:1}
+#phone .my-plan-detail .is-journey-stop .venue-stop-info{grid-column:2;grid-row:1}
+#phone .my-plan-detail .is-journey-stop:not(:has(>.venue-stop-order)) .venue-stop-info{grid-column:2/-1}
+#phone .my-plan-detail .is-journey-stop>.venue-stop-order{grid-column:3;grid-row:1;align-self:start}
+#phone .my-plan-detail .is-journey-stop .venue-place-actions{grid-column:1/-1;grid-row:2;width:100%;box-sizing:border-box;grid-template-columns:minmax(0,1fr) 64px;gap:8px;justify-self:stretch}
+#phone .my-plan-detail .is-journey-stop .venue-place-actions>button{width:100%;box-sizing:border-box}
+@media(max-width:350px){#phone .my-plan-detail .venue-visit-list>.venue-stop-card.is-journey-stop{grid-template-columns:68px minmax(0,1fr) 32px;column-gap:10px}#phone .my-plan-detail .venue-stop-card>.venue-stop-image{width:68px;height:88px}}
+
+/* One travel card brings the schedule, progress and next destination together. */
+#phone .my-plan-detail .journey-plan-card{padding:18px;margin:20px 0 24px;border:1px solid #e2e5e9;border-radius:18px;background:#fff;color:#191919;box-shadow:0 3px 14px #00000004}
+#phone .journey-plan-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}
+#phone .journey-plan-top>span{font-size:10px;line-height:1.5;font-weight:800;letter-spacing:1.1px;color:#626870}
+#phone .journey-plan-top>b{padding:6px 9px;border-radius:7px;background:#FFD628;color:#191919;font-size:11px;line-height:1.5;font-weight:750;white-space:nowrap;font-variant-numeric:tabular-nums}
+#phone .journey-plan-summary>strong{display:block;font-size:17px;font-weight:800;line-height:1.6;font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+#phone .journey-plan-summary>p{margin:6px 0 0;font-size:12px;line-height:1.7;color:#626870}
+#phone .journey-plan-progress{height:5px;margin:16px 0 18px;overflow:hidden;border-radius:5px;background:#eceef0}
+#phone .journey-plan-progress>span{display:block;height:100%;border-radius:inherit;background:#191919}
+#phone .my-plan-detail .journey-plan-card .journey-next{padding:16px;border:1px solid #f4e6a0;border-radius:12px;background:#fff9d6;margin:0}
+#phone .journey-next-label{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+#phone .journey-next-label>strong{font-size:12px;line-height:1.5;color:#715b00;font-weight:650}
+#phone .journey-next-label>span{font-size:12px;line-height:1.5;color:#715b00;font-weight:800;font-variant-numeric:tabular-nums}
+#phone .journey-plan-card .journey-next>h3{margin:0;font-size:21px;font-weight:800;line-height:1.45;letter-spacing:-.5px;overflow-wrap:anywhere}
+#phone .journey-plan-card .journey-next>p{margin:10px 0 0;font-size:12px;line-height:1.75;color:#626870;overflow-wrap:anywhere}
+#phone .my-plan-detail .journey-plan-card .journey-next>a.primary[data-journey-directions]{display:flex;width:100%;min-height:48px;margin:18px 0 0;padding:12px;border-radius:10px;font-size:13px;font-weight:750;line-height:1.5;background:#191919;color:#fff;box-sizing:border-box;text-align:center}
+#phone .journey-plan-card .journey-next>p.journey-map-note{margin:9px 0 0;font-size:10px;line-height:1.6;color:#76705b}
+@media(max-width:350px){#phone .my-plan-detail .journey-plan-card{padding:16px}#phone .journey-plan-top{gap:8px}#phone .journey-plan-top>b{font-size:10px;padding-inline:7px}#phone .journey-plan-summary>strong{font-size:15px}}
+
+/* Visit milestones match the plan builder and count every chosen stop. */
+#phone .journey-visit-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}
+#phone .journey-visit-heading>strong{font-size:14px;line-height:1.6;font-weight:700}
+#phone .journey-visit-heading strong>b{color:#715b00}
+#phone .journey-visit-heading>span{flex:none;font-size:12px;font-weight:750;font-variant-numeric:tabular-nums}
+#phone .journey-plan-progress.journey-visit-track{display:flex;gap:4px;height:6px;margin:12px 0 9px;background:transparent;overflow:visible}
+#phone .journey-visit-track>span{flex:1;min-width:0;height:6px;border-radius:4px;background:#eceef0}
+#phone .journey-visit-track>.is-done{background:#191919}
+#phone .journey-visit-track>.is-next{background:#FFD628}
+#phone .journey-visit-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;font-size:10px;line-height:1.6;color:#626870}
+#phone .journey-visit-legend>span{display:flex;align-items:center;gap:5px}
+#phone .journey-visit-legend i{display:block;width:7px;height:7px;border-radius:50%;background:#eceef0}
+#phone .journey-visit-legend i.is-done{background:#191919}
+#phone .journey-visit-legend i.is-next{background:#FFD628}
+#phone .journey-visit-details{border-top:1px solid #eceef0;margin:0 0 16px}
+#phone .journey-visit-details>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:40px;padding-top:4px;list-style:none;font-size:12px;font-weight:700;cursor:pointer}
+#phone .journey-visit-details>summary::-webkit-details-marker{display:none}
+#phone .journey-visit-details>summary svg{width:17px;height:17px}
+#phone .journey-visit-details[open]>summary svg{transform:rotate(180deg)}
+#phone .journey-visit-details>ol{list-style:none;margin:0;padding:4px 0 10px;max-height:300px;overflow:auto;overscroll-behavior:contain}
+#phone .journey-visit-details li{display:flex;align-items:center;gap:10px;padding:10px 0;min-width:0}
+#phone .journey-visit-details li>span{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:#f0f1f3;color:#7b828b;font-size:11px;font-weight:750}
+#phone .journey-visit-details li.is-done>span{background:#191919;color:#fff}
+#phone .journey-visit-details li.is-next>span{background:#FFD628;color:#191919}
+#phone .journey-visit-details li>div{flex:1;min-width:0}
+#phone .journey-visit-details li small{display:block;font-size:10px;line-height:1.5;color:#7b828b}
+#phone .journey-visit-details li strong{display:block;font-size:12px;line-height:1.6;font-weight:650;overflow-wrap:anywhere}
+#phone .journey-visit-details li>b{flex:none;font-size:10px;line-height:1.5;color:#7b828b;font-weight:500}
+#phone .journey-visit-details li.is-next>b{padding:4px 6px;background:#fff9d6;border-radius:5px;color:#715b00}
+#phone .journey-visit-details summary:focus-visible{outline:2px solid #715b00;outline-offset:2px}
+
+#phone .my-plan-detail .journey-plan-card .journey-next{background:#FFD628;border-color:#FFD628}
+#phone .journey-plan-card .journey-next>p,#phone .journey-plan-card .journey-next>p.journey-map-note{color:#514200}
+
+#phone .library-delete-actions :is([data-library-delete-cancel],[data-journey-remove-cancel],[data-pass-venue-remove-cancel]){background:#fff;border-color:#dce0e4;color:#41474e}
+#phone .library-delete-actions :is([data-library-delete-confirm],[data-journey-remove-confirm],[data-pass-venue-remove-confirm]){background:#FFD628;border-color:#FFD628;color:#191919;font-weight:800}

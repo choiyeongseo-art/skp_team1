@@ -1,6 +1,6 @@
 /* A banner-first, scrollable detail sheet for event and store pins. */
 (() => {
-  let previousFocus=null,venueMap=null,venueObserver=null;
+  let previousFocus=null,venueMap=null,venueObserver=null,placePlanAction=null;
   const validCoordinates=item=>typeof item.lat==='number'&&typeof item.lng==='number'&&Number.isFinite(item.lat)&&Number.isFinite(item.lng)&&Math.abs(item.lat)<=90&&Math.abs(item.lng)<=180;
   const disposeMap=()=>{venueObserver?.disconnect();venueObserver=null;venueMap?.remove();venueMap=null;};
   const mountMap=item=>{
@@ -29,52 +29,179 @@
   const safe=value=>esc(String(value??''));
   const date=value=>value?.replaceAll('-','.');
   const research=()=>window.BUSAN_EVENT_DETAILS||{};
-  const names={ko:['행사 정보','닫기','기간','운영시간','장소 · 교통','혜택 · 조건','입장 · 예약','외국인 방문 안내','방문 전 확인','확인 정보','길찾기','확인 전','주소 복사','입장료','외국인 이용·예약','해외 카드·간편결제','택스리펀','여권 필요 여부'],en:['Event details','Close','Dates','Hours','Location & transit','Offers & conditions','Entry & booking','International visitors','Before you visit','Sources','Directions','Not confirmed','Copy address','Entry fee','Visitor eligibility & booking','Foreign cards & mobile payments','Tax refund','Passport required'],ja:['イベント情報','閉じる','開催期間','営業時間','場所・アクセス','特典・条件','入場・予約','海外からのお客様へ','来場前の確認','確認情報','ルート','未確認','住所をコピー','入場料','外国人の利用・予約','海外カード・スマホ決済','免税','パスポートの要否'],zh:['活动详情','关闭','活动日期','营业时间','地点与交通','优惠与条件','入场与预约','海外游客须知','到访前确认','信息来源','路线','待确认','复制地址','入场费','外国游客参与及预约','境外卡与移动支付','退税','是否需要护照']};
+  // Keep one source language so the shared translator handles all five locales consistently.
+  const names=['행사 정보','닫기','기간','운영시간','장소 · 교통','혜택 · 조건','입장 · 예약','외국인 방문 안내','방문 전 확인','확인 정보','길찾기','확인 전','주소 복사','입장료','외국인 이용·예약','해외 카드·간편결제','택스리펀','여권 필요 여부'];
   const close=()=>{
+    placePlanAction=null;
     disposeMap();
     const layer=document.querySelector('.event-detail-overlay');if(!layer)return;
     layer.remove();document.querySelector('#phone')?.classList.remove('event-detail-open');
     previousFocus?.isConnected&&previousFocus.focus();previousFocus=null;
     window.dispatchEvent?.(new Event('busan-event-detail-closed'));
   };
-  const build=(item)=>{
-    if(window.BUSAN_EVENT_WINDOW?.locationExpired(item))return '';
-    const t=names[state.language]||names.ko,baseEvent=research()[item.brand],event=baseEvent?{...baseEvent,...item.eventOverrides}:null,brand=brands.find(b=>b.name===item.brand);
-    const files={'유니클로':'uniqlo.jpg','자라':'zara.jpg','티파니앤코':'tiffany.jpg'};
-    const image=event?.image||files[item.brand];
-    const section=(title,body)=>`<section class="event-info-section"><h3>${safe(title)}</h3>${body}</section>`;
-    const copy=value=>safe(value).replace(/#[\p{L}\p{N}_]+/gu,tag=>`<span translate="no">${tag}</span>`);
-    const p=value=>`<p>${copy(value)}</p>`,note=value=>value?`<small>${safe(value)}</small>`:'';
-    const directionsUrl=`https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}`;
-    const range=event?.start&&event?.end?`${date(event.start)} — ${date(event.end)}`:(event?.dateLabel||t[11]);
-    const holiday=event?.closed?.length?`<div class="event-closure">11.09 휴점 · 이날은 방문할 수 없어요</div>`:'';
-    const richSections=(event?.sections||[]).map(info=>section(info.title,
-
-      (info.columns?`<div class="event-table-wrap"><table><thead><tr>${info.columns.map(c=>`<th scope="col">${safe(c)}</th>`).join('')}</tr></thead><tbody>${info.rows.map(row=>`<tr>${row.map(c=>`<td>${safe(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:'')+
-      (info.items?`<ul class="event-detail-list">${info.items.map(text=>`<li>${copy(text)}</li>`).join('')}</ul>`:'')+note(info.visitorNote??info.note))).join('');
-    const highlights=event?.highlights?`<div class="event-highlights">${event.highlights.map(([label,value])=>`<div><span>${safe(label)}</span><strong>${safe(value)}</strong></div>`).join('')}</div>`:'';
-    const storeProfile=item.profile?section('이 매장의 특징',`<strong>${safe(item.profile.headline)}</strong>${p(item.profile.description)}<ul class="event-detail-list">${item.profile.features.map(feature=>`<li>${safe(feature)}</li>`).join('')}</ul>${note(item.profile.eventNotice)}`):'';
-    const title=event?.title||item.name;
-    const venue=event?.venue&&!event.venue.includes(' / ')?event.venue:item.name;
-    const intro=event?.description||'행사 상세 정보를 준비하고 있어요. 현재는 등록된 매장 위치를 안내합니다.';
-    const unknown=`<span class="event-unknown">${t[11]}</span>`;
-    const visitor=[['fee',t[13]],['foreign',t[14]],['payment',t[15]],['taxFree',t[16]],['passport',t[17]]].map(([field,label])=>`<div><dt>${safe(label)}</dt><dd>${event?.[field]!=null?`<span class="event-visitor-value">${safe(event[field])}</span>`:unknown}</dd></div>`).join('');
-    return `<div class="event-detail-overlay"><section class="event-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="eventDetailTitle" tabindex="-1"><button class="event-detail-close" data-event-detail-close aria-label="${t[1]}">×</button><div class="event-detail-scroll">${image?`<div class="event-detail-banner"><img src="assets/banners/home-20261105/${image}" alt="${safe(item.brand)} 행사 일러스트" width="1000" height="1000"></div>`:''}<div class="event-detail-content"><div class="event-detail-tags"><span>${safe(event?.type||brand?.cat||'매장')}</span></div><h2 id="eventDetailTitle">${safe(title)}</h2><p class="event-detail-intro">${safe(intro)}</p>${storeProfile}${highlights}${event?`<div class="event-date-card"><span>${safe(event.periodLabel||t[2])}</span><strong>${range}</strong>${holiday}</div>`:''}${section(t[4],`<strong class="event-venue-name">${safe(venue)}</strong><p class="event-venue-address">${safe(item.address)}</p>${validCoordinates(item)?`<div id="eventVenueMap" class="event-venue-map" role="region" aria-label="${safe(item.name)} 위치 지도"></div>`:''}<button class="event-address-copy" data-event-copy-address="${safe(item.address)}">${t[12]} ⧉</button>`)}${section(t[3],p(event?.hours||t[11])+note(event?.hoursNote))}${event?.sections?.length?'':section(t[5],p(event?.benefit||t[11])+note(event?.benefitNote))}${richSections}${event?.sections?.some(info=>info.title==='예약하고 방문하기')?'':section(t[6],p(event?.entry||t[11])+note(event?.entryNote))}${section(t[7],`<dl class="event-visitor-grid">${visitor}</dl>`)}${section(t[8],p(event?.notice||'해당 매장의 행사 일정과 이용 조건은 확인 전입니다.'))}${event?.phone?section(({ko:'문의',en:'Contact',ja:'お問い合わせ',zh:'咨询'})[state.language]||'Contact',`<a class="event-contact" href="tel:${event.phone}">${event.phone} ↗</a>`):''}</div></div><footer class="event-detail-actions"><div class="event-detail-tools">${window.BUSAN_EVENT_SOCIAL?.actions(item)||''}${event?.source?`<a class="event-official" href="${safe(event.source)}" target="_blank" rel="noopener noreferrer">${safe(event.action)}</a>`:''}</div><a class="event-directions" href="${directionsUrl}" target="_blank" rel="noopener noreferrer">${t[10]}</a><button type="button" class="event-saved-list" data-event-saved-list>저장 목록 확인하기</button></footer><span class="event-detail-feedback" role="status"></span></section></div>`;
+  // Split explicit lists without breaking a date range or a building/floor name.
+  const summaryLines=(input,kind)=>{
+    if(Array.isArray(input))return input.flatMap(value=>summaryLines(value,kind));
+    if(input==null)return [];
+    if(typeof input==='object'&&input.start&&input.end)return [(input.label?String(input.label)+' · ':'')+date(input.start)+' — '+date(input.end)];
+    const text=String(input).trim();
+    const pattern=kind==='entry'?/\n+|\s+\/\s+|,\s+|(?<=[.!?])\s+/ : kind==='fee'?/\n+|\s+\/\s+|\s+·\s+/ : /\n+|\s+\/\s+/;
+    return text.split(pattern).map(s=>s.trim()).filter(Boolean);
   };
-  window.BUSAN_EVENT_DETAIL_HTML=build;
-  window.BUSAN_OPEN_EVENT_DETAIL=item=>{
-    if(!item||window.BUSAN_EVENT_WINDOW?.locationExpired(item))return;
+  const schedulePairs=hours=>{
+    if(Array.isArray(hours))return hours.map(row=>({label:String(row.date||row.label||''),time:String(row.time||''),note:row.note||''}));
+    if(!hours)return [{label:'운영시간',time:'확인 전'}];
+    const text=String(hours);
+    // These published descriptions contain different milestones, not a continuous opening range.
+    if(/체크인\s+\d/.test(text))return text.split(/\s+·\s+/).map(part=>{const m=part.match(/^(.*?)\s+(\d{1,2}:\d{2})$/);return m?{label:m[1],time:m[2]}:{label:'운영시간',time:part};});
+    const dated=text.match(/^(\d{1,2})월\s*(\d{1,2})일\s+(.+)$/);
+    if(dated){
+      const label=dated[1].padStart(2,'0')+'.'+dated[2].padStart(2,'0'),rows=[];
+      for(const part of dated[3].split(/\s+\/\s+|\s+·\s+|,\s*/)){
+        const m=part.match(/^(.*?)\s*(\d{1,2}:\d{2})\s*(.*)$/);
+        if(m)rows.push({label,time:m[2],qualifier:[m[1].trim(),m[3].trim()].filter(Boolean).join(' ')});
+        else if(rows.length)rows[rows.length-1].note=part;
+      }
+      if(rows.length)return rows;
+    }
+    const parts=text.split(/\s+\/\s+/);
+    return parts.map(part=>{
+      const m=part.match(/^(.*?)\s*(\d{1,2}:\d{2}[–~－-]\d{1,2}:\d{2})$/);
+      return m?{label:m[1].trim()||'운영시간',time:m[2]}:{label:'운영시간',time:part};
+    });
+  };
+  const sentenceLines=value=>String(value).replace(/([.!?。！？])(?:[ \t]+|(?=[가-힣])|(?<=[。！？])(?=\S))/g,(match,mark,offset,text)=>{
+    const prefix=text.slice(0,offset+1);
+    if(mark==='.'&&/(?:\b(?:Mr|Mrs|Ms|Dr|Prof|St|vs|etc)|\be\.g|\bi\.e)\.$/i.test(prefix))return match;
+    return mark+'\n';
+  });
+  window.BUSAN_EVENT_SENTENCE_LINES=sentenceLines;
+  const build=(item,options={})=>{
+    if(window.BUSAN_EVENT_WINDOW?.locationExpired(item))return '';
+    const t=names,baseEvent=research()[item.brand],event=baseEvent?{...baseEvent,...item.eventOverrides}:null,brand=brands.find(b=>b.name===item.brand);
+    const flow=window.BUSAN_EVENT_DISPLAY_FLOW;
+    if(!flow)return '';
+    const files={'유니클로':'uniqlo.jpg','자라':'zara.jpg','티파니앤코':'tiffany.jpg'};
+    const image=event?.image||files[item.brand],title=event?.title||item.name;
+    const section=(title,body)=>`<article class="event-flow-article"><h4>${safe(title)}</h4>${body}</article>`;
+    const copy=value=>safe(value).replace(/#[\p{L}\p{N}_]+/gu,tag=>`<span translate="no">${tag}</span>`);
+    const p=(value,sentences=false)=>`<p>${copy(sentences?sentenceLines(value):value)}</p>`,note=value=>value?`<small class="event-guidance-callout">${safe(sentenceLines(value))}</small>`:'';
+    const webUrl=value=>typeof value==='string'&&/^https?:\/\/[^\s]+$/i.test(value)?safe(value):'';
+    const today=window.BUSAN_EVENT_WINDOW?.koreaToday?.()||new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul'}).format(new Date());
+    const requested=options.visitDate||item.visitDate||state.visitStart;
+    const visitDate=/^\d{4}-\d{2}-\d{2}$/.test(requested||'')?requested:today;
+    const venue=event?.venue&&!event.venue.includes(' / ')?event.venue:item.name;
+    const range=event?.start&&event?.end?`${date(event.start)} — ${date(event.end)}`:(event?.dateLabel||t[11]);
+    const unknown=`<span class="event-unknown">${t[11]}</span>`;
+    const value=x=>x!=null?safe(x):unknown;
+    const groups=Object.fromEntries(flow.sections.map(s=>[s.key,[]]));
+    const renderRich=(info,key)=>{
+      let table='';
+      if(info.columns){
+        const rows=info.rows||[],head=`<thead><tr>${info.columns.map(c=>`<th scope="col">${safe(c)}</th>`).join('')}</tr></thead>`;
+        const renderTable=list=>`<div class="event-table-wrap"><table>${head}<tbody>${list.map(row=>`<tr>${row.map(c=>`<td>${copy(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+        const limit=key==='products'?3:rows.length;
+        table=renderTable(rows.slice(0,limit));
+        if(rows.length>limit)table+=`<details class="event-flow-more"><summary>${safe('전체 내용 보기')}</summary>${renderTable(rows.slice(limit))}</details>`;
+      }
+      const rendered=section(info.title,table+(info.items?`<ul class="event-detail-list">${info.items.map(text=>`<li>${copy(text)}</li>`).join('')}</ul>`:'')+note(info.visitorNote??info.note));
+      const offer=event?.offers?.find(offer=>offer.name===info.title);
+      return key==='products'&&offer?.bookingEnd&&offer.bookingEnd<today?`<details class="event-flow-more event-offer-ended"><summary><span>${safe(info.title)}</span> · <span>${safe('예약 마감')}</span></summary>${rendered}</details>`:rendered;
+    };
+    for(const info of event?.sections||[]){
+      const key=info.flowSection||flow.mapping[item.brand]?.[info.title]||'content';
+      (groups[key==='admission'?'alerts':key]||groups.content).push(renderRich(info,key));
+    }
+    const summaryRows=[
+      [event?.periodLabel||t[2],event?.periods||range,'period'],['장소',venue,'venue'],
+      [t[13],event?.fee,'fee'],['입장 방식',event?.entry,'entry']
+    ];
+    if(event?.closed?.length)summaryRows.push(['휴점일',event.closed.map(d=>d.slice(5).replace('-','.')+' 휴점'),'closed']);
+    groups.visit.unshift(`<dl class="event-flow-summary">${summaryRows.map(([label,text,kind])=>`<div><dt>${safe(label)}</dt><dd>${text==null?unknown:summaryLines(text,kind).map(line=>`<span class="event-summary-value">${safe(line)}</span>`).join('')}</dd></div>`).join('')}</dl>`);
+    const closed=(event?.closed||[]).includes(visitDate);
+    if(closed)groups.alerts.unshift(`<div class="event-closure" role="status"><time translate="no">${safe(date(visitDate))}</time> <span>${safe('휴점 · 이날은 방문할 수 없어요')}</span></div>`);
+    if(!event?.start||!event?.end)groups.alerts.unshift(p('행사 일정과 지점 참여 여부를 확인해주세요.'));
+    const hours=schedulePairs(event?.openingHours||event?.hours);
+    groups.admission.push(`<dl class="event-hours-kv">${hours.map(row=>`<div><dt><span>${safe(row.label)}</span>${row.qualifier?` <span>${safe(row.qualifier)}</span>`:''}</dt><dd><span>${safe(row.time)}</span>${row.note?`<small class="event-hours-detail">${safe(row.note)}</small>`:''}</dd></div>`).join('')}</dl>`+note(event?.hoursNote));
+    if(!groups.alerts.some(html=>html.includes(safe('예약하고 방문하기'))))groups.alerts.push(section(t[6],p(event?.entry||t[11])+note(event?.entryNote?.replace(/^2차 자료 기준[. ·]*/,''))));
+    if(item.profile)groups.content.push(section('이 매장의 특징',`<strong>${safe(item.profile.headline)}</strong>${p(item.profile.description)}<ul class="event-detail-list">${(item.profile.features||[]).map(feature=>`<li>${safe(feature)}</li>`).join('')}</ul>${note(item.profile.eventNotice)}`));
+    if(!groups.content.length)groups.content.push(p(event?.description||'행사 상세 정보를 준비하고 있어요. 현재는 등록된 매장 위치를 안내합니다.'));
+    if(!groups.benefits.length&&event?.benefit)groups.benefits.push(p(event.benefit)+note(event.benefitNote));
+    // Legacy payment prose is not evidence that both card and wallet payments work.
+    const notApplicable=event?.payment?.startsWith('해당 없음')?event.payment:null;
+    const visitor=[['외국인 이용·예약',event?.foreign],['해외 카드',event?.foreignCard??notApplicable],['간편 결제',event?.mobilePayment??notApplicable],['텍스 리펀',event?.taxFree],['여권 필요 여부',event?.passport]];
+    groups.international.push(`<div class="event-table-wrap event-international-table"><table><thead><tr><th scope="col">항목</th><th scope="col">안내</th></tr></thead><tbody>${visitor.map(([label,text])=>`<tr><th scope="row">${safe(label)}</th><td>${value(text)}</td></tr>`).join('')}</tbody></table></div>`);
+    if(event?.payment&&!notApplicable)groups.international.push(note(event.payment));
+    const postalAddress=String(item.address||'').split(' · ')[0];
+    groups.location.unshift(`<dl class="event-place-kv"><div><dt>행사장</dt><dd>${safe(venue)}</dd></div><div><dt>주소</dt><dd>${value(postalAddress||null)}</dd></div><div><dt>찾아가기</dt><dd>${value(event?.transit)}</dd></div></dl>${validCoordinates(item)?`<div id="eventVenueMap" class="event-venue-map" role="region" aria-label="${safe(item.name)} 위치 지도"></div>`:''}${note(event?.transitNote)}`);
+    groups.trust.push(p(event?.notice||'해당 매장의 행사 일정과 이용 조건은 확인 전입니다.',true));
+    if(event?.phone)groups.trust.push(`<dl class="event-flow-contact"><div><dt>문의</dt><dd><a class="event-contact" href="tel:${safe(event.phone.replace(/[^+\d-]/g,''))}">${safe(event.phone)} ↗</a></dd></div></dl>`);
+    const official=webUrl(event?.source);
+    const intro=event?.description||'행사 상세 정보를 준비하고 있어요. 현재는 등록된 매장 위치를 안내합니다.';
+    groups.intro.push(`${image?`<div class="event-detail-banner"><img src="assets/banners/home-20261105/${safe(image)}" alt="${safe(item.brand)} 행사 일러스트" width="1000" height="1000"></div>`:''}<div class="event-flow-heading"><div class="event-detail-tags"><span>${safe(event?.type||brand?.cat||'매장')}</span>${window.BUSAN_EVENT_SOCIAL?.actions(item)||''}</div><h2 id="eventDetailTitle">${safe(title)}</h2><p class="event-detail-intro">${safe(intro)}</p></div>`);
+    // Remove exact repeated prose only; tables and conditions with different wording remain intact.
+    const normalize=text=>text.replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim();
+    const seen=new Set([intro,...summaryRows.flatMap(([,text,kind])=>[...summaryLines(text,kind),...(typeof text==='string'?[text]:[])])].filter(Boolean).map(text=>normalize(safe(text))));
+    const dedupe=html=>html.replace(/<(p|small|li)([^>]*)>([\s\S]*?)<\/\1>/g,(all,tag,attrs,text)=>{
+      const key=normalize(text);if(key.length<12)return all;
+      if(seen.has(key))return '';seen.add(key);return all;
+    }).replace(/<article class="event-flow-article"><h4>[^<]*<\/h4>\s*<\/article>/g,'');
+    const addressCopy=`<button class="event-address-copy" data-event-copy-address="${safe(item.address)}">${t[12]} ⧉</button>`;
+    const body=flow.sections.map(s=>{
+      if(s.key==='intro')return `<header data-flow-section="intro">${groups.intro.join('')}</header>`;
+      const content=dedupe(groups[s.key].join(''));
+      return content.trim()?`<section class="event-info-section event-flow-section" data-flow-section="${s.key}">${s.key==='location'?`<div class="event-flow-section-heading"><h3>${safe(s.title)}</h3>${addressCopy}</div>`:`<h3>${safe(s.title)}</h3>`}${content}</section>`:'';
+    }).join('');
+    const directionsUrl=`https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}`;
+    return detailShell(body,`${validCoordinates(item)?`<a class="event-directions" href="${directionsUrl}" target="_blank" rel="noopener noreferrer">${t[10]} ↗</a>`:''}${official?`<a class="event-official" href="${official}" target="_blank" rel="noopener noreferrer">${safe(event?.action||'안내 출처')} ↗</a>`:''}`);
+  };
+  const detailShell=(body,actions)=>`<div class="event-detail-overlay"><section class="event-detail-dialog event-flow-v3" role="dialog" aria-modal="true" aria-labelledby="eventDetailTitle" tabindex="-1"><button class="event-detail-close" data-event-detail-close aria-label="닫기">×</button><div class="event-detail-scroll"><div class="event-detail-content">${body}</div></div><footer class="event-detail-actions">${actions}</footer><span class="event-detail-feedback" role="status"></span></section></div>`;
+  const buildPlace=(raw,{selected=false}={})=>{
+    const webUrl=value=>typeof value==='string'&&/^https?:\/\/[^\s]+$/i.test(value)?value:'';
+    const place=window.BUSAN_TOURISM_I18N?.display(raw)||raw,food=place.kind==='food',kind=food?'맛집':'관광지',info=place.visitInfo||{};
+    const value=text=>text?safe(text):'<span class="event-unknown">확인 전</span>';
+    const rows=(values,cls='event-place-kv')=>`<dl class="${cls}">${values.map(([label,text])=>`<div><dt>${safe(label)}</dt><dd>${value(text)}</dd></div>`).join('')}</dl>`;
+    const section=(key,title,content,action='')=>`<section class="event-info-section event-flow-section" data-flow-section="${key}">${action?`<div class="event-flow-section-heading"><h3>${title}</h3>${action}</div>`:`<h3>${title}</h3>`}${content}</section>`;
+    const note=text=>`<small class="event-guidance-callout">${safe(String(text).replace(/([.!?])\s+/g,'$1\n'))}</small>`;
+    const mapUrl='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(place.name+' '+(place.address||''));
+    const website=webUrl(place.website),rating=Number.isFinite(place.rating)&&place.rating>0&&place.rating<=5?place.rating.toFixed(1)+' / 5':null;
+    const distance=Number.isFinite(place.distance)?'직선 약 '+(place.distance>=1000?(place.distance/1000).toFixed(1)+'km':place.distance+'m'):null;
+    const intro=`<header data-flow-section="intro">${webUrl(place.image)?`<div class="event-detail-banner"><img src="${safe(webUrl(place.image))}" alt="${safe(place.name)}"></div>`:''}<div class="event-flow-heading"><div class="event-detail-tags"><span>${kind}${place.category?' · '+safe(place.category):''}</span></div><h2 id="eventDetailTitle" translate="no">${safe(place.name)}</h2>${place.description?`<p class="event-detail-intro" translate="no">${safe(place.description)}</p>`:''}</div></header>`;
+    const summary=section('visit','방문 요약',rows([['장소',place.name],['행사장 거리',distance],...(food?[['대표 메뉴',place.menu]]:[['이용 요금',info.admission],['추천 체류',place.visitDuration]]),['휴무일',info.restdate]],'event-flow-summary'));
+    const alert=section('alerts','방문 전 꼭 확인',note(food?'영업 표시는 등록된 운영시간 기준입니다. 임시휴무·공휴일·메뉴와 가격은 방문 전 매장에 확인해주세요.':'운영시간·요금·입장 조건은 현장 사정에 따라 달라질 수 있습니다. 방문 전 최신 안내를 확인해주세요.'));
+    const location=section('location','장소',rows([['장소명',place.name],['주소',place.address],['주차',info.parking]])+(validCoordinates(place)?`<div id="eventVenueMap" class="event-venue-map" role="region" aria-label="${safe(place.name)} 위치 지도"></div>`:'')+note('행사장과의 거리는 직선거리 기준입니다. 실제 이동 경로는 길찾기에서 확인해주세요.'),`<button class="event-address-copy" data-event-copy-address="${safe(place.address||'')}">주소 복사 ⧉</button>`);
+    const normalized=place.hoursNormalized,weekly=normalized?.validationStatus==='auto_validated'&&Array.isArray(normalized.weekly)?normalized.weekly.map(day=>[day.dayName,day.state==='closed'?'정기휴무':day.state==='unknown'?'확인 전':day.intervals.map(slot=>`${slot.open}–${slot.endDayOffset?'익일 ':''}${slot.close}${slot.lastOrder?' · 주문 마감 '+slot.lastOrder:''}`).join(' / ')]):null;
+    const hours=section('admission','운영 시간',rows(weekly||[['운영시간',food?place.hours:info.usetime]],'event-hours-kv')+(food&&place.businessStatus?.label?note('현재 기준 · '+place.businessStatus.label+'\n'+(place.businessStatus.notice||'')):''));
+    const details=food?section('products','대표 메뉴',`<div class="event-table-wrap"><table><thead><tr><th scope="col">항목</th><th scope="col">안내</th></tr></thead><tbody><tr><th scope="row">대표 메뉴</th><td>${value(place.menu)}</td></tr></tbody></table></div>`+note('메뉴별 가격은 매장의 최신 안내를 확인해주세요.')):place.detailDescription?section('content','관광지 소개',`<p translate="no">${safe(place.detailDescription)}</p>`):'';
+    const reviews=section('reviews','별점·리뷰',rows([['등록 별점',rating]])+`<a class="event-contact" href="${safe(mapUrl)}" target="_blank" rel="noopener noreferrer">최신 별점·리뷰 확인 ↗</a>`);
+    const contact=place.phone||info.infocenter;
+    const trust=section('trust','기타 안내',rows([['문의',contact]])+(website?`<a class="event-contact" href="${safe(website)}" target="_blank" rel="noopener noreferrer">공식 홈페이지 ↗</a>`:''));
+    const directions=validCoordinates(place)?'https://www.google.com/maps/dir/?api=1&destination='+place.lat+','+place.lng:mapUrl;
+    return detailShell(intro+summary+alert+location+hours+details+reviews+trust,`<a class="event-directions" href="${safe(directions)}" target="_blank" rel="noopener noreferrer">길찾기 ↗</a><button type="button" class="event-official" data-place-plan-add ${selected?'disabled':''}>${selected?'✓ 플랜에 추가됨':'플랜에 추가하기'}</button>`);
+  };
+  const openDetail=(item,html)=>{
     close();previousFocus=document.activeElement;
-    document.querySelector('#modal').innerHTML=build(item);
+    document.querySelector('#modal').innerHTML=html;
     document.querySelector('#phone').classList.add('event-detail-open');
     mountMap(item);
     document.querySelector('.event-detail-close')?.focus({preventScroll:true});
   };
+  window.BUSAN_PLACE_DETAIL_HTML=buildPlace;
+  window.BUSAN_OPEN_PLACE_DETAIL=(place,options={})=>{if(!place)return;openDetail(place,buildPlace(place,options));placePlanAction=options.onAdd||null;};
+  window.BUSAN_EVENT_DETAIL_HTML=build;
+  window.BUSAN_OPEN_EVENT_DETAIL=item=>{
+    if(!item||window.BUSAN_EVENT_WINDOW?.locationExpired(item))return;
+    openDetail(item,build(item));
+  };
   document.addEventListener('click',async e=>{
+    if(e.target.closest('[data-place-plan-add]')){
+      if(placePlanAction?.()===true){close();return;}
+      const feedback=document.querySelector('.event-detail-feedback');if(feedback)feedback.textContent='드롭 플랜의 주변 장소 선택 화면에서 추가해주세요.';return;
+    }
     if(e.target.closest('[data-event-saved-list]')){close();nav('saved');return;}
     if(e.target.closest('[data-event-detail-close]')||e.target.classList?.contains('event-detail-overlay'))close();
     const copy=e.target.closest('[data-event-copy-address]');if(!copy)return;
-    try{await navigator.clipboard.writeText(copy.dataset.eventCopyAddress);document.querySelector('.event-detail-feedback').textContent=({ko:'주소를 복사했어요',en:'Address copied',ja:'住所をコピーしました',zh:'地址已复制'})[state.language]||'Address copied';}
+    try{await navigator.clipboard.writeText(copy.dataset.eventCopyAddress);document.querySelector('.event-detail-feedback').textContent='주소를 복사했어요';}
     catch{document.querySelector('.event-detail-feedback').textContent='주소를 길게 눌러 복사해주세요.';}
   });
   window.addEventListener?.('busan-event-date-changed',close);
