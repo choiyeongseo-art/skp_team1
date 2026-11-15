@@ -175,7 +175,11 @@
     const details=food?section('products','대표 메뉴',`<div class="event-table-wrap"><table><thead><tr><th scope="col">항목</th><th scope="col">안내</th></tr></thead><tbody><tr><th scope="row">대표 메뉴</th><td>${value(place.menu)}</td></tr></tbody></table></div>`+note('메뉴별 가격은 매장의 최신 안내를 확인해주세요.')):place.detailDescription?section('content','관광지 소개',`<p translate="no">${safe(place.detailDescription)}</p>`):'';
     const reviews=section('reviews','별점·리뷰',rows([['등록 별점',rating]])+`<a class="event-contact" href="${safe(mapUrl)}" target="_blank" rel="noopener noreferrer">최신 별점·리뷰 확인 ↗</a>`);
     const contact=place.phone||info.infocenter;
-    const trust=section('trust','기타 안내',rows([['문의',contact]])+(website?`<a class="event-contact" href="${safe(website)}" target="_blank" rel="noopener noreferrer">공식 홈페이지 ↗</a>`:''));
+    const sourceLabels={ko:['자료 출처','Visit Busan · 비짓부산','한국관광공사 TourAPI'],en:['Data source','Visit Busan','Korea Tourism Organization · TourAPI'],ja:['資料提供元','Visit Busan','韓国観光公社 TourAPI'],zh:['资料来源','Visit Busan','韩国旅游发展局 TourAPI'],'zh-TW':['資料來源','Visit Busan','韓國觀光公社 TourAPI']};
+    const attribution=sourceLabels[state.language]||sourceLabels.en;
+    const sourceLink=food?'https://www.visitbusan.net/':'https://api.visitkorea.or.kr/';
+    const sourceCredit=`<p class="event-place-source" translate="no">${safe(attribution[0])} · <a class="event-contact" href="${sourceLink}" target="_blank" rel="noopener noreferrer">${safe(attribution[food?1:2])} ↗</a></p>`;
+    const trust=section('trust','기타 안내',rows([['문의',contact]])+(website?`<a class="event-contact" href="${safe(website)}" target="_blank" rel="noopener noreferrer">공식 홈페이지 ↗</a>`:'')+sourceCredit);
     const directions=validCoordinates(place)?'https://www.google.com/maps/dir/?api=1&destination='+place.lat+','+place.lng:mapUrl;
     return detailShell(intro+summary+alert+location+hours+details+reviews+trust,`<a class="event-directions" href="${safe(directions)}" target="_blank" rel="noopener noreferrer">길찾기 ↗</a><button type="button" class="event-official" data-place-plan-add ${selected?'disabled':''}>${selected?'✓ 플랜에 추가됨':'플랜에 추가하기'}</button>`);
   };
