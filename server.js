@@ -7,7 +7,8 @@ app.get('/api/busandrop/nearby-attractions',require('./lib/supabase-nearby.cjs')
 app.get('/api/busandrop/nearby-restaurants',require('./lib/supabase-nearby.cjs').createNearbyHandler({kind:'food',locationFile:path.join(publicApp,'data/store-locations.js'),keyFile:path.join(__dirname,'.env.local')}));
 app.get('/api/busandrop/tourism-translations',require('./lib/supabase-nearby.cjs').createNearbyHandler({dictionary:true,locationFile:path.join(publicApp,'data/store-locations.js'),keyFile:path.join(__dirname,'.env.local')}));
 app.get('/api/busandrop/restaurant-translations',require('./lib/supabase-nearby.cjs').createNearbyHandler({dictionary:true,kind:'food',locationFile:path.join(publicApp,'data/store-locations.js'),keyFile:path.join(__dirname,'.env.local')}));
-app.use('/api/busandrop/event-saves',require('./lib/event-saves')(path.join(__dirname,'.local/event-saves.json')));
+const savesHandler=require('./lib/supabase-event-saves.cjs').createSupabaseSavesHandler({keyFile:path.join(__dirname,'.env.local')});
+app.all(['/api/busandrop/event-saves','/api/busandrop/event-saves/:eventId'],(req,res)=>{req.query.eventId=req.params.eventId;return savesHandler(req,res);});
 app.get(['/','/busandrop','/busandrop/'],(req,res)=>res.redirect('/busandrop/login'));
 app.get('/busandrop/integration/mapbox-config.js',async(req,res,next)=>{try{res.type('application/javascript').send(await require('./scripts/mapbox-runtime.cjs').loadMapboxConfig());}catch(error){next(error);}});
 app.use('/busandrop',express.static(publicApp));

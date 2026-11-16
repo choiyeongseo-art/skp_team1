@@ -14,7 +14,6 @@
     "preview": "npm run build && node scripts/preview.cjs"
   },
   "dependencies": {
-    "express": "4.21.2",
-    "@vercel/blob": "2.8.2"
+    "express": "4.21.2"
   }
 }
