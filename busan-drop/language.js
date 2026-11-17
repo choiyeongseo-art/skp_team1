@@ -1,4 +1,18 @@
 const languageOptions=[{code:'ko',native:'한국어',label:'Korean'},{code:'ja',native:'日本語',label:'Japanese'},{code:'zh',native:'简体中文',label:'Simplified Chinese'},{code:'zh-TW',native:'繁體中文',label:'Traditional Chinese'},{code:'en',native:'English',label:'English'}];
+// An explicit saved choice wins; otherwise use the device's first preferred language.
+function initialLanguage(savedLanguage, device = typeof navigator === 'undefined' ? {} : navigator) {
+  if (languageOptions.some(option => option.code === savedLanguage)) return savedLanguage;
+  const preferred = device.languages?.[0] || device.language || '';
+  const parts = String(preferred).trim().replace(/_/g, '-').toLowerCase().split('-');
+  if (parts[0] === 'ko') return 'ko';
+  if (parts[0] === 'ja') return 'ja';
+  if (parts[0] === 'zh') {
+    if (parts.includes('hant')) return 'zh-TW';
+    if (parts.includes('hans')) return 'zh';
+    return parts.some(part => ['tw', 'hk', 'mo'].includes(part)) ? 'zh-TW' : 'zh';
+  }
+  return 'en';
+}
 const languageWelcome={ko:['사용할 언어를<br>선택해주세요.','부산 여행, 편한 언어로 시작하세요.','선택한 언어로 시작하기'],ja:['言語を<br>選択してください。','使い慣れた言語で、釜山の旅を。','この言語で始める'],zh:['请选择<br>您的语言。','用熟悉的语言，开启釜山之旅。','以此语言开始'],en:['Your trip.<br>Your language.','Explore Busan in your preferred language.','Continue in English']};
 languageWelcome['zh-TW']=['請選擇<br>您的語言。','用熟悉的語言，開啟釜山之旅。','以此語言開始'];
 function languagePicker(){const lang=state.pendingLanguage||'ko',copy=languageWelcome[lang]||languageWelcome.ko;return `<section class="language-screen"><button class="iconbtn" data-action="back" aria-label="뒤로">${icon('back')}</button><div class="language-intro">${head().match(/<div class="wordmark[\s\S]*?<\/div>/)?.[0]||'BUSAN DROP ↘'}<h2 lang="${lang}">${copy[0]}</h2></div><div class="language-options" role="group" aria-label="Language">${languageOptions.map(l=>`<button data-language-choice="${l.code}" aria-pressed="${lang===l.code}" class="${lang===l.code?'selected':''}"><span><strong lang="${l.code}">${l.native}</strong><small>${l.label}</small></span><span class="language-check" aria-hidden="true">${lang===l.code?'✓':''}</span></button>`).join('')}</div><button class="primary language-enter" data-language-enter="true" lang="${lang}">${copy[2]} ${icon('arrow')}</button></section>`}

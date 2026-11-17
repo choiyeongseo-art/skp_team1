@@ -1,4 +1,18 @@
-# BUSAN DROP 디자이너 인수인계
+# BUSAN DROP 운영 웹 인수인계
+
+## 최신 작업 기준 — 2026-11-16
+
+최신 운영 배포: `dpl_5AQtiasLHGVNrrb4eZBazc63BVcj` / https://busandrop-6ivxvl2ky-manoken2.vercel.app → https://busandrop.vercel.app . 운영에서 와이잭·G-STAR·메이플스토리 상세를 열어 9종 최상위 섹션 헤더의 계산된 색이 모두 `rgb(36, 36, 36)`임을 확인했다. 증거는 `docs/section-headers-black-verified-20261116.json`에 보관한다. CSS 버전은 `20261116-section-black`다.
+
+- 최신 운영 웹 소스는 이 폴더 `busandrop_개발/team-web-github-20261113/`이다. 폴더명 날짜는 생성일이다. 현재 4188 개발 서버도 이 경로에서 실행된다.
+- Git 기준 커밋은 `2607235`. 그 이후 기기 언어 자동 선택, GA4 제품 이벤트·조회 API·UTM 실제 전송 수정 등이 미커밋 상태다. 기존 변경을 보존한다.
+- 행사 상세는 방문 요약부터 기타 안내까지 모든 최상위 섹션 헤더에 검정 `#242424`를 적용한다. 장소 헤더와 공유 관광지·맛집 상세도 같은 스타일을 사용한다. 행사 내용과 미확인 조건은 그대로 유지한다.
+- UTM 수정은 운영 Chrome Network에서 instagram/ig02_bio, youtube/yt02_bio 각각 첫 page_view와 행사 상세 조회의 cs/cm/cn/cc 및 HTTP 204를 확인했다. 전체 회귀 테스트 290개 통과 기록은 `docs/ga4-utm-transport-verified-20261116.json`에 있다. 이는 보고서 최종 귀속 확인과 구분한다.
+- 행사 좋아요의 운영 집계 저장소는 Supabase다. 아래 이전 기록의 Vercel Blob 안내는 현재에 적용하지 않는다. 상세는 `docs/event-saves-storage.md`를 확인한다.
+- 어드민은 부모 폴더의 `local-admin/`, `lib/`, `scripts/admin-readonly.cjs`를 사용한다. 기본 주소는 `http://localhost:5001/local-admin`, GA4 보고서 조회 인증은 아직 미설정이다.
+- 프로젝트 루트의 `개발/`은 11월 15일 복사 보관본, 형제 `team-web/`은 별도 네이티브 패키징과 이전 작업을 보존하는 곳이다. 웹 배포 소스로 혼동하지 않는다. 루트 `읽어주세요.md`에 경로 비교 근거를 기록했다.
+
+## 이전 디자이너 전달 기록 — 2026-11-12
 
 기준일: 2026-11-12. 현재 작업을 이어받는 사람을 위한 문서입니다. 오래된 변경 이력은 `docs/archive/HANDOFF_HISTORY_through_20261109.md`에 보관했습니다.
 

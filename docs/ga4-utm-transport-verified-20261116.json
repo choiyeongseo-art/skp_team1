@@ -1,0 +1,142 @@
+{
+  "deployment": {
+    "id": "dpl_HYBku73GTBCrTJJ4jzTMn6pcVHkX",
+    "url": "https://busandrop-k1f1xm8ci-manoken2.vercel.app",
+    "alias": "https://busandrop.vercel.app"
+  },
+  "verification": "Real Chrome DevTools Network capture on deployed production, no script interception or substitution",
+  "regressionTests": {
+    "passed": 290,
+    "failed": 0
+  },
+  "captures": [
+    {
+      "platform": "instagram",
+      "checkedAt": "2026-11-16T05:59:51.264Z",
+      "testUrl": "https://busandrop.vercel.app/busandrop/login?utm_source=instagram&utm_medium=social&utm_campaign=launch&utm_content=ig02_bio",
+      "requestCount": 5,
+      "beforeConsentCollectRequests": 0,
+      "events": [
+        {
+          "tid": "G-FFNDG6H81M",
+          "cs": "instagram",
+          "cm": "social",
+          "cn": "launch",
+          "cc": "ig02_bio",
+          "dl": "https://busandrop.vercel.app/busandrop/login",
+          "en": "page_view",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "cc": "ig02_bio",
+          "cm": "social",
+          "cn": "launch",
+          "cs": "instagram",
+          "dl": "https://busandrop.vercel.app/busandrop/login?utm_source=instagram&utm_medium=social&utm_campaign=launch&utm_content=ig02_bio",
+          "en": "scroll",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "cs": "instagram",
+          "cm": "social",
+          "cn": "launch",
+          "cc": "ig02_bio",
+          "dl": "https://busandrop.vercel.app/busandrop/home",
+          "en": "page_view",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "dl": "https://busandrop.vercel.app/busandrop/home",
+          "dr": "https://busandrop.vercel.app/busandrop/login?utm_source=instagram&utm_medium=social&utm_campaign=launch&utm_content=ig02_bio",
+          "cc": "ig02_bio",
+          "cm": "social",
+          "cn": "launch",
+          "cs": "instagram",
+          "en": "page_view",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "cs": "instagram",
+          "cm": "social",
+          "cn": "launch",
+          "cc": "ig02_bio",
+          "dl": "https://busandrop.vercel.app/busandrop/home",
+          "dr": "https://busandrop.vercel.app/busandrop/login?utm_source=instagram&utm_medium=social&utm_campaign=launch&utm_content=ig02_bio",
+          "en": "event_detail_viewed",
+          "httpStatus": 204
+        }
+      ]
+    },
+    {
+      "platform": "youtube",
+      "checkedAt": "2026-11-16T05:59:52.074Z",
+      "testUrl": "https://busandrop.vercel.app/busandrop/login?utm_source=youtube&utm_medium=social&utm_campaign=launch&utm_content=yt02_bio",
+      "requestCount": 5,
+      "beforeConsentCollectRequests": 0,
+      "events": [
+        {
+          "tid": "G-FFNDG6H81M",
+          "cs": "youtube",
+          "cm": "social",
+          "cn": "launch",
+          "cc": "yt02_bio",
+          "dl": "https://busandrop.vercel.app/busandrop/login",
+          "en": "page_view",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "cc": "yt02_bio",
+          "cm": "social",
+          "cn": "launch",
+          "cs": "youtube",
+          "dl": "https://busandrop.vercel.app/busandrop/login?utm_source=youtube&utm_medium=social&utm_campaign=launch&utm_content=yt02_bio",
+          "en": "scroll",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "cs": "youtube",
+          "cm": "social",
+          "cn": "launch",
+          "cc": "yt02_bio",
+          "dl": "https://busandrop.vercel.app/busandrop/home",
+          "en": "page_view",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "dl": "https://busandrop.vercel.app/busandrop/home",
+          "dr": "https://busandrop.vercel.app/busandrop/login?utm_source=youtube&utm_medium=social&utm_campaign=launch&utm_content=yt02_bio",
+          "cc": "yt02_bio",
+          "cm": "social",
+          "cn": "launch",
+          "cs": "youtube",
+          "en": "page_view",
+          "httpStatus": 204
+        },
+        {
+          "tid": "G-FFNDG6H81M",
+          "cs": "youtube",
+          "cm": "social",
+          "cn": "launch",
+          "cc": "yt02_bio",
+          "dl": "https://busandrop.vercel.app/busandrop/home",
+          "dr": "https://busandrop.vercel.app/busandrop/login?utm_source=youtube&utm_medium=social&utm_campaign=launch&utm_content=yt02_bio",
+          "en": "event_detail_viewed",
+          "httpStatus": 204
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "HTTP 204 confirms transport response, not completed GA4 report attribution.",
+    "Synthetic verification visits contribute to production analytics.",
+    "GA4 enhanced measurement generated scroll and additional page_view events; property settings were not changed.",
+    "GA4 admin report credentials remain unconfigured."
+  ]
+}

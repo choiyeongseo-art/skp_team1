@@ -156,6 +156,7 @@
  #phone .event-flow-v3 .event-table-wrap :is(th,td){padding-inline:8px}
 }
 #phone .event-flow-v3 [data-flow-section="products"] .event-table-wrap :is(th,td):last-child{text-align:right}
+/* Keep section titles black, including the location heading. */
 #phone .event-detail-dialog.event-flow-v3 :is(.event-info-section>h3,.event-flow-section-heading>h3){color:#242424}
 #phone .event-flow-v3 :is(p,li,td,th,dd,.event-guidance-callout){word-break:keep-all;overflow-wrap:anywhere}
 /* Keep the close control in its own fixed area, clear of scrolled text and tables. */

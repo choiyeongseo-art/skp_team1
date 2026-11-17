@@ -246,5 +246,271 @@
   "scheduleSource": "https://www.gstar.or.kr/part/gstar_btc_info.do"
 }
  ];
+ events.push(...[
+  {
+    "id": "busan-handmade-fair-winter-2026",
+    "brand": "부산 핸드메이드페어",
+    "title": "2026 부산 핸드메이드페어 윈터",
+    "start": "2026-12-11",
+    "end": "2026-12-13",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://handmadefair.co.kr/about_the_exhibition"
+  },
+  {
+    "id": "busan-international-childrens-book-fair-2026",
+    "brand": "부산국제아동도서전",
+    "title": "2026 부산국제아동도서전",
+    "start": "2026-12-03",
+    "end": "2026-12-06",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://bicbf.or.kr/page/61"
+  },
+  {
+    "id": "christmas-village-busan-2026",
+    "brand": "크리스마스 빌리지 부산",
+    "title": "크리스마스 빌리지 부산 2026",
+    "start": "2026-11-26",
+    "end": "2026-12-25",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://marketchango.com/CHRISTMAS_VILLAGE_BUSAN_2026"
+  },
+  {
+    "id": "othoniel-labyrinth-2026",
+    "brand": "오토니엘",
+    "title": "장-미셸 오토니엘 《사랑 안의 미로》",
+    "start": "2026-08-28",
+    "end": "2026-12-31",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.busan.go.kr/eng/bsevents/1750485"
+  }
+]);
+ events.push(...[
+  {
+    "id": "caplab-samjung-202611",
+    "brand": "캡랩",
+    "category": "팝업",
+    "title": "삼정타워 캡랩 팝업",
+    "start": "2026-11-13",
+    "end": "2026-11-26",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.samjungtower.com/upload/event/2026/11/11/c255690b-d519-4e14-ad79-8d32bdc4e918.jpg"
+  },
+  {
+    "id": "no-bad-vibes-samjung-202611",
+    "brand": "노배드바이브스",
+    "category": "팝업",
+    "title": "삼정타워 노배드바이브스 초코겹겹이찹쌀떡 팝업",
+    "start": "2026-11-13",
+    "end": "2026-11-26",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.samjungtower.com/upload/event/2026/11/11/7540ac26-d849-4967-ba74-fbf0a96a4463.jpg"
+  }
+]);
+ events.push(...[
+  {
+    "id": "lafeuille-centum-mochi",
+    "brand": "라푀유",
+    "title": "라푀유 모찌 판매 안내 — 확인 중",
+    "category": "디저트",
+    "start": null,
+    "end": null,
+    "scheduleStatus": "unconfirmed"
+  },
+  {
+    "id": "teenieping-connect-busan-202611",
+    "brand": "캐치! 티니핑",
+    "title": "쥬얼스타 캐치! 티니핑 팝업 — 부산 일정 확인 중",
+    "category": "팝업",
+    "start": null,
+    "end": null,
+    "scheduleStatus": "unconfirmed",
+    "reportedStart": "2026-11-26",
+    "reportedEnd": "2026-12-13"
+  }
+]);
+ const officialEventPosters={
+  "othoniel-labyrinth-2026": {
+    "brand": "오토니엘",
+    "image": "othoniel-2026-official.jpg",
+    "imageSource": "https://tkfile.yes24.com/upload2/perfblog/202607/20260721/20260721-59314.jpg"
+  },
+  "christmas-village-busan-2026": {
+    "brand": "크리스마스 빌리지 부산",
+    "image": "christmas-village-2026-official.png",
+    "imageSource": "https://cdn.imweb.me/thumbnail/20261109/0f83742696c63.png"
+  },
+  "busan-handmade-fair-winter-2026": {
+    "brand": "부산 핸드메이드페어",
+    "image": "handmade-winter-2026-official.webp",
+    "imageSource": "https://d2v5p8jgjm0j1e.cloudfront.net/613036a6ce1797564bcfb042/20260309-05h/05m34s/2026%20%E1%84%87%E1%85%AE%E1%84%92%E1%85%A2%E1%86%AB%E1%84%91%E1%85%A6%20%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%20%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%A1%28%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%89%E1%85%B5%E1%84%92%E1%85%AC%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%29---997.0124999999999---3000.webp"
+  },
+  "busan-international-childrens-book-fair-2026": {
+    "brand": "부산국제아동도서전",
+    "image": "bicbf-2026-official.png",
+    "imageSource": "https://bicbf.or.kr/data/editor/2610/thumb-c2caab56789d44157bb7299170f65405_1791270086_2746_835x1181.png"
+  },
+  "caplab-samjung-202611": {
+    "brand": "캡랩",
+    "image": "caplab-2026-official.jpg",
+    "imageSource": "https://www.samjungtower.com/upload/event/2026/11/11/c255690b-d519-4e14-ad79-8d32bdc4e918.jpg"
+  },
+  "no-bad-vibes-samjung-202611": {
+    "brand": "노배드바이브스",
+    "image": "no-bad-vibes-2026-official.jpg",
+    "imageSource": "https://www.samjungtower.com/upload/event/2026/11/11/7540ac26-d849-4967-ba74-fbf0a96a4463.jpg"
+  }
+};
+ for(const event of events){const poster=officialEventPosters[event.id];if(poster)Object.assign(event,{image:poster.image,imageSource:poster.imageSource});}
+ events.push(...[
+  {
+    "id": "haeundae-light-2026",
+    "brand": "해운대 빛축제",
+    "title": "제13회 해운대 빛축제",
+    "image": "haeundae-light-2026.jpg",
+    "category": "로컬",
+    "start": "2026-11-28",
+    "end": "2027-01-10",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://korean.visitkorea.or.kr/kfes/detail/fstvlDetail.do?fstvlCntntsId=b3b7a23c-c7f6-45db-930a-b139e4d8cd9f"
+  },
+  {
+    "id": "gwangbok-street-dec-2026",
+    "brand": "광복로 스트릿페스타",
+    "title": "12월 스트릿페스타 앤 발코니뮤직쇼",
+    "image": "gwangbok-street-dec-2026-official.png",
+    "category": "로컬",
+    "start": "2026-12-05",
+    "end": "2026-12-19",
+    "openDates": [
+      "2026-12-05",
+      "2026-12-12",
+      "2026-12-19"
+    ],
+    "dateDisplay": "2026.12.05 / 2026.12.12 / 2026.12.19",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://visitbusan.net/schedule/view.do?boardId=BBS_0000009&dataSid=6482&menuCd=DOM_000000204012000000"
+  },
+  {
+    "id": "busan-bridge-marathon-2026",
+    "brand": "부산브릿지마라톤",
+    "title": "2026 부산브릿지마라톤",
+    "image": "busan-bridge-marathon-2026-official.png",
+    "category": "로컬",
+    "start": "2026-12-06",
+    "end": "2026-12-06",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.busanmarathon.com/"
+  },
+  {
+    "id": "kpet-busan-dec-2026",
+    "brand": "케이펫페어 부산",
+    "title": "2026 케이펫페어 부산 시즌2",
+    "image": "kpet-busan-dec-2026-official.jpg",
+    "category": "로컬",
+    "start": "2026-12-11",
+    "end": "2026-12-13",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://k-pet.co.kr/information/exhibition-scheduled-all/"
+  },
+  {
+    "id": "moif-centum-nov-2026",
+    "brand": "모이프",
+    "title": "모이프 팝업스토어",
+    "image": "moif-centum-nov-2026-official.jpg",
+    "category": "팝업",
+    "start": "2026-11-16",
+    "end": "2026-12-03",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008"
+  },
+  {
+    "id": "lancome-centum-holiday-2026",
+    "brand": "랑콤",
+    "title": "랑콤 2026년 홀리데이 세트",
+    "image": "lancome-centum-holiday-2026-official.png",
+    "category": "뷰티",
+    "start": "2026-11-13",
+    "end": "2026-11-19",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008"
+  },
+  {
+    "id": "labruket-centum-launch-2026",
+    "brand": "라부르켓",
+    "title": "라부르켓 신상품 론칭",
+    "image": "labruket-centum-launch-2026-official.jpg",
+    "category": "뷰티",
+    "start": "2026-11-13",
+    "end": "2026-11-19",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008"
+  },
+  {
+    "id": "food-fair-busan-nov-2026",
+    "brand": "부산식품박람회",
+    "title": "2026 FOOD FAIR 부산 하반기",
+    "image": "food-fair-busan-nov-2026-official.jpg",
+    "category": "푸드",
+    "start": "2026-11-26",
+    "end": "2026-11-29",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://foodfair.co.kr/board/?id=sub31"
+  },
+  {
+    "id": "busan-wine-spirits-2026",
+    "brand": "부산국제주류&와인박람회",
+    "title": "2026 부산국제주류&와인박람회",
+    "image": "busan-wine-spirits-2026-official.jpg",
+    "category": "푸드",
+    "start": "2026-12-11",
+    "end": "2026-12-13",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://busan.siwse.com/page/31"
+  },
+  {
+    "id": "paradise-christmas-cake-2026",
+    "brand": "파라다이스 부티크",
+    "title": "THE WONDER OF CHRISTMAS · 크리스마스 케이크",
+    "image": "paradise-christmas-cake-2026.jpg",
+    "category": "디저트",
+    "start": "2026-11-16",
+    "end": "2026-12-25",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://www.busanparadisehotel.co.kr/front/event/eventHtml"
+  },
+  {
+    "id": "lotte-pusan-in-busan-2026",
+    "brand": "롯데호텔 부산",
+    "title": "롯데호텔 부산 Pusan in Busan",
+    "image": "lotte-pusan-in-busan-2026.webp",
+    "category": "숙박",
+    "start": "2026-07-01",
+    "end": "2026-12-31",
+    "scheduleStatus": "confirmed",
+    "scheduleSource": "https://app.lottehotel.com/busan-hotel/ko/offers/packages/260626/pusan_in_busan"
+  },
+  {
+    "id": "topten-black-friday-busan-2026",
+    "brand": "탑텐 블랙프라이데이",
+    "title": "탑텐 2026 블랙프라이데이 · 부산 확인 중",
+    "image": "topten.jpg",
+    "category": "패션",
+    "start": null,
+    "end": null,
+    "scheduleStatus": "unconfirmed",
+    "scheduleSource": "https://topten10.goodwearmall.com/"
+  },
+  {
+    "id": "musinsa-standard-black-friday-busan-2026",
+    "brand": "무신사 스탠다드",
+    "title": "무신사 스탠다드 겨울 블랙프라이데이 · 부산 확인 중",
+    "image": "musinsa-standard.jpg",
+    "category": "패션",
+    "start": null,
+    "end": null,
+    "scheduleStatus": "unconfirmed",
+    "scheduleSource": "https://www.musinsa.com/content/1566699710148818818"
+  }
+]);
  if(typeof module==='object'&&module.exports)module.exports=events;else root.BUSAN_EVENT_CATALOG=events;
 })(typeof window==='object'?window:this);

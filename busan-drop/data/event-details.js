@@ -1765,3 +1765,503 @@ Object.assign(window.BUSAN_EVENT_DETAILS,{
     ]
   }
 });
+
+Object.assign(window.BUSAN_EVENT_DETAILS,{
+  "부산 핸드메이드페어": {
+    "title": "2026 부산 핸드메이드페어 윈터",
+    "description": "공예·디자인·생활용품을 둘러보고 구매하는 겨울 전시.",
+    "type": "전시",
+    "category": "로컬",
+    "start": "2026-12-11",
+    "end": "2026-12-13",
+    "venue": "벡스코(BEXCO) 제1전시장",
+    "source": "https://handmadefair.co.kr/about_the_exhibition",
+    "action": "공식 행사 안내",
+    "closed": [],
+    "notice": "관람 안내에 13세 이하 아동은 보호자 동반 시 무료라고 표시되어 있습니다. 일반 입장권 적용가와 접수 일정은 주최사 확인이 필요합니다.",
+    "phone": "051-714-7116",
+    "openingHours": [
+      {
+        "label": "12.11~13",
+        "time": "10:00~18:00",
+        "note": "17:30 입장 마감"
+      }
+    ],
+    "entry": "사전·현장 등록 안내가 있으며 적용 일정은 확인 전입니다."
+  },
+  "부산국제아동도서전": {
+    "title": "2026 부산국제아동도서전",
+    "description": "그림책과 어린이 출판 콘텐츠, 작가 강연과 워크숍을 만나는 도서전.",
+    "type": "전시",
+    "category": "로컬",
+    "start": "2026-12-03",
+    "end": "2026-12-06",
+    "venue": "벡스코(BEXCO) 제1전시장 2홀",
+    "source": "https://bicbf.or.kr/page/61",
+    "action": "공식 행사 안내",
+    "closed": [],
+    "notice": "동반인도 각각 등록합니다. 강연·세미나는 별도 예약이 필요할 수 있습니다.",
+    "phone": "02-733-8402 (내선 9927)",
+    "fee": [
+      "수신 동의 시: 무료 (입장 등록 시 마케팅 정보 수신 동의)",
+      "수신 미동의 시: 10,000원 (현장 결제)",
+      "만 14세 미만: 무료 (현장 등록, 필요 시 나이 확인 자료 제시)"
+    ],
+    "openingHours": [
+      {
+        "label": "12.03~05",
+        "time": "10:00~18:00",
+        "note": "17:30 입장 마감"
+      },
+      {
+        "label": "12.06",
+        "time": "10:00~17:00",
+        "note": "16:30 입장 마감"
+      }
+    ],
+    "entry": "사전등록 또는 현장등록 · 동반인도 개별 등록"
+  },
+  "크리스마스 빌리지 부산": {
+    "title": "크리스마스 빌리지 부산 2026",
+    "description": "산타 퍼레이드와 공연, 겨울 먹거리와 선물 상점을 만나는 야외 축제.",
+    "type": "축제",
+    "category": "로컬",
+    "start": "2026-11-26",
+    "end": "2026-12-25",
+    "venue": "영화의전당 야외광장",
+    "source": "https://m.ticket.yes24.com/Notice/Detail.aspx?bid=18701",
+    "action": "공식 티켓 안내",
+    "closed": [
+      "2026-11-30",
+      "2026-12-01",
+      "2026-12-02",
+      "2026-12-07",
+      "2026-12-08",
+      "2026-12-09",
+      "2026-12-14",
+      "2026-12-15",
+      "2026-12-16"
+    ],
+    "notice": "권종별 입장 가능 시간이 다릅니다. 예매 QR 확인 후 입장 스탬프를 받습니다.",
+    "phone": "070-4680-1718",
+    "fee": [
+      "평일: 5,900원",
+      "주말 주간: 5,900원",
+      "주말 야간: 7,900원",
+      "12월 24~25일 시즌권: 14,900원",
+      "영유아: 무료 (36개월 미만, 생년월일 증빙 필요)"
+    ],
+    "periods": [
+      "11.26~11.29",
+      "12.03~12.06",
+      "12.10~12.13",
+      "12.17~12.25"
+    ],
+    "openingHours": [
+      {
+        "label": "목·금 및 12.21~23",
+        "time": "16:00~22:00",
+        "note": "12.24~25 제외"
+      },
+      {
+        "label": "토·일 및 12.24~25",
+        "time": "11:00~22:00"
+      }
+    ],
+    "entry": "예매 QR 확인 후 입장 스탬프 수령",
+    "foreign": "주관사 사이트에 해외 방문객용 티켓 안내가 있습니다. 실제 예매 절차와 인증 조건은 확인 전."
+  },
+  "오토니엘": {
+    "title": "장-미셸 오토니엘 《사랑 안의 미로》",
+    "description": "유리 조형과 빛을 활용한 장-미셸 오토니엘의 개인전.",
+    "type": "전시",
+    "category": "로컬",
+    "start": "2026-08-28",
+    "end": "2026-12-31",
+    "venue": "F1963 석천홀·달빛가든",
+    "source": "https://www.busan.go.kr/eng/bsevents/1750485",
+    "action": "공식 행사 안내",
+    "closed": [],
+    "notice": "전시 전문매체 안내 기준 월요일 휴관. 관람료와 예매 조건은 주최 측 기준 재확인 필요.",
+    "phone": null,
+    "fee": [
+      "성인: 10,000원 (만 19세 이상)",
+      "청소년: 8,000원 (만 13~18세)",
+      "어린이: 6,000원 (만 3~12세)",
+      "전시 전문매체 안내 기준"
+    ],
+    "openingHours": [
+      {
+        "label": "화~일",
+        "time": "10:00~18:00",
+        "note": "17:30 입장 마감 · 월요일 휴관 (전시 전문매체 기준)"
+      }
+    ]
+  }
+});
+
+Object.assign(window.BUSAN_EVENT_DETAILS,{
+  "캡랩": {
+    "title": "삼정타워 캡랩 팝업",
+    "start": "2026-11-13",
+    "end": "2026-11-26",
+    "description": "삼정타워 2층에서 모자를 꾸미는 캡랩 팝업.",
+    "type": "팝업",
+    "category": "팝업",
+    "venue": "삼정타워 2층",
+    "transit": "부산도시철도 서면역 2번 출구 인근",
+    "source": "https://www.samjungtower.com/upload/event/2026/11/11/c255690b-d519-4e14-ad79-8d32bdc4e918.jpg",
+    "action": "공식 포스터",
+    "notice": "팝업 운영시간·가격·혜택·해외 결제·텍스 리펀은 확인 전입니다.",
+    "closed": [],
+    "hoursNote": "행사 운영시간 확인 전."
+  },
+  "노배드바이브스": {
+    "title": "삼정타워 노배드바이브스 초코겹겹이찹쌀떡 팝업",
+    "start": "2026-11-13",
+    "end": "2026-11-26",
+    "description": "삼정타워 1층에서 12겹 초코겹겹이찹쌀떡을 소개하는 팝업.",
+    "type": "팝업",
+    "category": "팝업",
+    "venue": "삼정타워 1층",
+    "transit": "부산도시철도 서면역 2번 출구 인근",
+    "source": "https://www.samjungtower.com/upload/event/2026/11/11/7540ac26-d849-4967-ba74-fbf0a96a4463.jpg",
+    "action": "공식 포스터",
+    "notice": "팝업 운영시간·가격·혜택·해외 결제·텍스 리펀은 확인 전입니다. 시식은 확인 전입니다.",
+    "closed": [],
+    "hoursNote": "행사 운영시간 확인 전."
+  }
+});
+
+Object.assign(window.BUSAN_EVENT_DETAILS,{
+  "라푀유": {
+    "title": "라푀유 모찌 판매 안내 — 확인 중",
+    "description": "신세계 센텀시티의 모찌 판매 여부와 한정 행사 일정은 확인 전입니다.",
+    "type": "판매 안내",
+    "category": "디저트",
+    "venue": "신세계 센텀시티",
+    "start": null,
+    "end": null,
+    "notice": "신세계 센텀시티의 모찌 판매 여부와 한정 행사 일정은 확인 전입니다.",
+    "source": "https://www.shinsegae.com/store/floor.do?storeCd=SC00008",
+    "action": "신세계 층별 안내"
+  },
+  "캐치! 티니핑": {
+    "title": "쥬얼스타 캐치! 티니핑 팝업 — 부산 일정 확인 중",
+    "description": "제작사가 발표한 티니핑 순회 팝업. 부산 지점 세부 일정은 공식 확인 전입니다.",
+    "type": "팝업 안내",
+    "category": "팝업",
+    "venue": "커넥트현대 부산",
+    "start": null,
+    "end": null,
+    "notice": "보도상 11월 26일~12월 13일. 부산 지점 공식 일정·층수·프로그램은 확인 전입니다.",
+    "source": "https://www.samg.net/ja/news/20261106-x3cdhz",
+    "action": "제작사 공식 안내"
+  }
+});
+
+// officialEventPosters — original event artwork
+for(const [name,poster] of Object.entries({
+  "오토니엘": {
+    "image": "othoniel-2026-official.jpg",
+    "imageSource": "https://tkfile.yes24.com/upload2/perfblog/202607/20260721/20260721-59314.jpg"
+  },
+  "크리스마스 빌리지 부산": {
+    "image": "christmas-village-2026-official.png",
+    "imageSource": "https://cdn.imweb.me/thumbnail/20261109/0f83742696c63.png"
+  },
+  "부산 핸드메이드페어": {
+    "image": "handmade-winter-2026-official.webp",
+    "imageSource": "https://d2v5p8jgjm0j1e.cloudfront.net/613036a6ce1797564bcfb042/20260309-05h/05m34s/2026%20%E1%84%87%E1%85%AE%E1%84%92%E1%85%A2%E1%86%AB%E1%84%91%E1%85%A6%20%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%20%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%A1%28%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%89%E1%85%B5%E1%84%92%E1%85%AC%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%29---997.0124999999999---3000.webp"
+  },
+  "부산국제아동도서전": {
+    "image": "bicbf-2026-official.png",
+    "imageSource": "https://bicbf.or.kr/data/editor/2610/thumb-c2caab56789d44157bb7299170f65405_1791270086_2746_835x1181.png"
+  },
+  "캡랩": {
+    "image": "caplab-2026-official.jpg",
+    "imageSource": "https://www.samjungtower.com/upload/event/2026/11/11/c255690b-d519-4e14-ad79-8d32bdc4e918.jpg"
+  },
+  "노배드바이브스": {
+    "image": "no-bad-vibes-2026-official.jpg",
+    "imageSource": "https://www.samjungtower.com/upload/event/2026/11/11/7540ac26-d849-4967-ba74-fbf0a96a4463.jpg"
+  }
+}))Object.assign(window.BUSAN_EVENT_DETAILS[name],poster);
+
+Object.assign(window.BUSAN_EVENT_DETAILS,{
+  "해운대 빛축제": {
+    "title": "제13회 해운대 빛축제",
+    "image": "haeundae-light-2026.jpg",
+    "category": "로컬",
+    "start": "2026-11-28",
+    "end": "2027-01-10",
+    "type": "로컬",
+    "venue": "해운대 구남로 · 해운대해수욕장",
+    "description": "구남로와 백사장에서 심해를 테마로 한 빛 조형물과 미디어아트를 관람할 수 있습니다.",
+    "fee": "무료",
+    "source": "https://korean.visitkorea.or.kr/kfes/detail/fstvlDetail.do?fstvlCntntsId=b3b7a23c-c7f6-45db-930a-b139e4d8cd9f",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요.",
+    "phone": "051-749-4062"
+  },
+  "광복로 스트릿페스타": {
+    "title": "12월 스트릿페스타 앤 발코니뮤직쇼",
+    "image": "gwangbok-street-dec-2026-official.png",
+    "category": "로컬",
+    "start": "2026-12-05",
+    "end": "2026-12-19",
+    "openDates": [
+      "2026-12-05",
+      "2026-12-12",
+      "2026-12-19"
+    ],
+    "dateDisplay": "2026.12.05 / 2026.12.12 / 2026.12.19",
+    "type": "로컬",
+    "venue": "중구 광복로 차 없는 거리",
+    "description": "12월 5일은 퍼레이드·거리 공연·플리마켓, 12일과 19일은 발코니 라이브 공연이 열립니다.",
+    "periods": [
+      "2026.12.05",
+      "2026.12.12",
+      "2026.12.19"
+    ],
+    "openingHours": [
+      {
+        "date": "2026.12.05",
+        "time": "16:00–22:00"
+      },
+      {
+        "date": "2026.12.12",
+        "time": "18:00–21:00"
+      },
+      {
+        "date": "2026.12.19",
+        "time": "18:00–21:00"
+      }
+    ],
+    "source": "https://visitbusan.net/schedule/view.do?boardId=BBS_0000009&dataSid=6482&menuCd=DOM_000000204012000000",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요."
+  },
+  "부산브릿지마라톤": {
+    "title": "2026 부산브릿지마라톤",
+    "image": "busan-bridge-marathon-2026-official.png",
+    "category": "로컬",
+    "start": "2026-12-06",
+    "end": "2026-12-06",
+    "type": "로컬",
+    "venue": "벡스코 제1전시장 3홀",
+    "description": "42.195km 풀코스와 10km 로드레이스입니다. 총 모집 규모는 12,000명입니다.",
+    "entry": "사전 접수 필요",
+    "source": "https://www.busanmarathon.com/",
+    "action": "공식 안내",
+    "notice": "참가 신청은 8월 24일 10:00부터 선착순으로 받습니다. 잔여 접수 여부는 공식 페이지에서 확인해 주세요.",
+    "phone": "070-7636-6119"
+  },
+  "케이펫페어 부산": {
+    "title": "2026 케이펫페어 부산 시즌2",
+    "image": "kpet-busan-dec-2026-official.jpg",
+    "category": "로컬",
+    "start": "2026-12-11",
+    "end": "2026-12-13",
+    "type": "로컬",
+    "venue": "벡스코 제2전시장",
+    "description": "반려동물용품 박람회입니다. 사전등록 또는 현장등록으로 입장할 수 있습니다.",
+    "fee": "10,000원",
+    "entry": "사전등록 또는 현장 입장",
+    "openingHours": [
+      {
+        "label": "운영일",
+        "time": "10:00–18:00",
+        "note": "입장 마감 17:30"
+      }
+    ],
+    "source": "https://k-pet.co.kr/registration/",
+    "action": "공식 예약",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요."
+  },
+  "모이프": {
+    "title": "모이프 팝업스토어",
+    "image": "moif-centum-nov-2026-official.jpg",
+    "category": "팝업",
+    "start": "2026-11-16",
+    "end": "2026-12-03",
+    "type": "팝업",
+    "venue": "신세계 센텀시티 백화점 지하2층",
+    "description": "신세계 센텀시티 백화점 지하2층에서 모이프 팝업스토어가 열립니다.",
+    "source": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요."
+  },
+  "랑콤": {
+    "title": "랑콤 2026년 홀리데이 세트",
+    "image": "lancome-centum-holiday-2026-official.png",
+    "category": "뷰티",
+    "start": "2026-11-13",
+    "end": "2026-11-19",
+    "type": "뷰티",
+    "venue": "신세계 센텀시티 백화점 1층",
+    "description": "신세계 센텀시티에서 랑콤의 홀리데이 세트를 소개합니다.",
+    "source": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요."
+  },
+  "라부르켓": {
+    "title": "라부르켓 신상품 론칭",
+    "image": "labruket-centum-launch-2026-official.jpg",
+    "category": "뷰티",
+    "start": "2026-11-13",
+    "end": "2026-11-19",
+    "type": "뷰티",
+    "venue": "신세계 센텀시티 백화점 1층",
+    "description": "신세계 센텀시티에서 라부르켓 신상품을 소개합니다.",
+    "source": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요."
+  },
+  "부산식품박람회": {
+    "title": "2026 FOOD FAIR 부산 하반기",
+    "image": "food-fair-busan-nov-2026-official.jpg",
+    "category": "푸드",
+    "start": "2026-11-26",
+    "end": "2026-11-29",
+    "type": "푸드",
+    "venue": "벡스코",
+    "description": "농특산물과 커피·베이커리 등을 소개하는 식품 박람회입니다.",
+    "fee": "5,000원",
+    "entry": "공식 무료관람 신청 / 현장 입장",
+    "openingHours": [
+      {
+        "label": "운영일",
+        "time": "10:00–18:00",
+        "note": "입장 마감 17:30"
+      }
+    ],
+    "source": "https://foodfair.co.kr/board/?id=sub31",
+    "action": "공식 안내",
+    "notice": "현장 입장료는 카드로만 결제할 수 있습니다. 반려동물은 입장할 수 없습니다."
+  },
+  "부산국제주류&와인박람회": {
+    "title": "2026 부산국제주류&와인박람회",
+    "image": "busan-wine-spirits-2026-official.jpg",
+    "category": "푸드",
+    "start": "2026-12-11",
+    "end": "2026-12-13",
+    "type": "푸드",
+    "venue": "벡스코 제1전시장 3홀",
+    "description": "와인·맥주·전통주·증류주를 소개하는 박람회입니다. 입장 시 신분증을 지참해야 합니다.",
+    "fee": "20,000원",
+    "entry": "사전등록 또는 현장 입장",
+    "openingHours": [
+      {
+        "label": "운영일",
+        "time": "11:00–19:00"
+      }
+    ],
+    "source": "https://ticket.siwse.com/busan2026/",
+    "action": "공식 예약",
+    "notice": "미성년자는 입장할 수 없습니다. 신분증을 지참하세요.",
+    "phone": "02-761-2564"
+  },
+  "파라다이스 부티크": {
+    "title": "THE WONDER OF CHRISTMAS · 크리스마스 케이크",
+    "image": "paradise-christmas-cake-2026.jpg",
+    "category": "디저트",
+    "start": "2026-11-16",
+    "end": "2026-12-25",
+    "type": "디저트",
+    "venue": "파라다이스 호텔 부산 본관 1층 부티크",
+    "description": "파라다이스 부티크의 크리스마스 케이크 컬렉션입니다. 공지 기간과 실제 픽업일은 구분해 확인해 주세요.",
+    "periods": [
+      {
+        "label": "호텔 공지 기간",
+        "start": "2026-11-16",
+        "end": "2026-12-25"
+      }
+    ],
+    "source": "https://www.busanparadisehotel.co.kr/front/event/eventHtml",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요.",
+    "phone": "051-749-2258"
+  },
+  "롯데호텔 부산": {
+    "title": "롯데호텔 부산 Pusan in Busan",
+    "image": "lotte-pusan-in-busan-2026.webp",
+    "category": "숙박",
+    "start": "2026-07-01",
+    "end": "2026-12-31",
+    "type": "숙박",
+    "venue": "롯데호텔 부산",
+    "description": "헤리티지 객실 1박과 한정판 키트·객실 키가 포함됩니다. 객실형·조식형·홈파티형이 있습니다.",
+    "periods": [
+      {
+        "label": "예약 기간",
+        "start": "2026-06-26",
+        "end": "2026-12-31"
+      },
+      {
+        "label": "투숙 기간",
+        "start": "2026-07-01",
+        "end": "2026-12-31"
+      }
+    ],
+    "entry": "숙박 예약 필요",
+    "sections": [
+      {
+        "title": "숙박 패키지 3종",
+        "columns": [
+          "패키지",
+          "일반 최저가",
+          "포함 내용·조건"
+        ],
+        "rows": [
+          [
+            "객실형",
+            "459,800원",
+            "헤리티지 객실 1박"
+          ],
+          [
+            "조식형",
+            "534,660원",
+            "라세느 조식 2인"
+          ],
+          [
+            "홈파티형",
+            "689,700원",
+            "라세느 홈파티 세트 사전예약 및 직접 픽업"
+          ]
+        ]
+      }
+    ],
+    "benefit": "투숙당 전용 키트 1세트와 객실 키 2매를 제공합니다.",
+    "source": "https://app.lottehotel.com/busan-hotel/ko/offers/packages/260626/pusan_in_busan",
+    "action": "공식 예약",
+    "notice": "세금과 봉사료가 포함됩니다. 체크인 전날 18:00 이후 취소·변경 시 1박 요금이 부과됩니다.",
+    "phone": "051-810-1100"
+  },
+  "탑텐 블랙프라이데이": {
+    "title": "탑텐 2026 블랙프라이데이 · 부산 확인 중",
+    "image": "topten.jpg",
+    "category": "패션",
+    "start": null,
+    "end": null,
+    "type": "패션",
+    "venue": "부산 참여 지점 확인 중",
+    "description": "부산 매장 참여 여부와 행사 기간을 확인 중입니다.",
+    "source": "https://topten10.goodwearmall.com/",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요."
+  },
+  "무신사 스탠다드": {
+    "title": "무신사 스탠다드 겨울 블랙프라이데이 · 부산 확인 중",
+    "image": "musinsa-standard.jpg",
+    "category": "패션",
+    "start": null,
+    "end": null,
+    "type": "패션",
+    "venue": "부산 참여 지점 확인 중",
+    "description": "무신사 모행사는 11월 22일 19:00 시작으로 안내됐습니다. 부산 스탠다드 매장 참여와 적용 혜택은 확인 중입니다.",
+    "source": "https://www.musinsa.com/content/1566699710148818818",
+    "action": "공식 안내",
+    "notice": "상세 이용 조건은 공식 안내에서 확인해 주세요."
+  }
+});

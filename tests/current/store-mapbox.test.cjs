@@ -7,10 +7,10 @@ function setup(){
  class MapMock{constructor(options){this.options=options;maps.push(this);}addControl(){}on(){}remove(){this.removed=true;}isStyleLoaded(){return true;}getLayer(){return false;}resize(){}jumpTo(o){this.camera=o;}flyTo(o){this.camera=o;}fitBounds(bounds){this.bounds=bounds.points;}zoomIn(){}zoomOut(){}}
  class Marker{constructor(o){this.element=o.element;pins.push(this);}setLngLat(ll){this.ll=ll;return this;}addTo(){return this;}remove(){this.removed=true;}}
  const mapboxgl={Map:MapMock,Marker,AttributionControl:class{},LngLatBounds:class{constructor(){this.points=[];}extend(p){this.points.push(p);return this;}}};
- const c={document,window:{mapboxgl,BUSAN_MAPBOX_CONFIG:{token:'test',style:'mapbox://styles/mapbox/dark-v11'}},mapboxgl,state:{screen:'stores',storeView:'map',brand:1,language:'ko',mapLocal:false,storeRegion:null},brands:['탑텐','올리브영','유니클로','자라','몬치치','티파니앤코'].map(name=>({name})),head:()=>'<header class="app-head"></header>',storeMap(){},bindStoreMap(){},render(){c.bindStoreMap();},icon:()=>'<svg/>',esc:String};
+ const c={document,window:{mapboxgl,BUSAN_MAPBOX_CONFIG:{token:'test',style:'mapbox://styles/mapbox/dark-v11'}},mapboxgl,state:{screen:'stores',storeView:'map',brand:1,language:'ko',mapLocal:false,storeRegion:null},brands:['탑텐','올리브영','유니클로','자라','몬치치','티파니앤코'].map(name=>({name})),home(){return '';},head:()=>'<header class="app-head"></header>',storeMap(){},bindStoreMap(){},render(){c.bindStoreMap();},icon:()=>'<svg/>',esc:String};
  vm.createContext(c);
- for(const f of ['data/store-locations.js','integration/mapbox-view.js','integration/store-mapbox.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
- const click=(selector,dataset)=>events.click[0]({target:{closest:s=>s===selector?{dataset}:null}});
+ for(const f of ['data/store-locations.js','integration/mapbox-view.js','integration/home-categories.js','integration/store-mapbox.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+ const click=(selector,dataset)=>events.click.forEach(fn=>fn({target:{closest:s=>s===selector?{dataset}:null}}));
  return {c,maps,pins,elements,click};
 }
 test('brand and region selection render only matching real coordinates and reuse the map',()=>{
@@ -105,4 +105,19 @@ test('expanded finder districts distinguish Centum, Haeundae and Gijang without 
  for(const pin of pins.filter(p=>!p.removed)){const item=source.find(row=>row.id===pin.element.dataset.storePin);assert.equal(c.window.BUSAN_STORE_REGION_FOR(item),'벡스코/센텀시티');}
  const html=c.storeMap();assert.equal((html.match(/data-store-region=/g)||[]).length,11);assert.match(html,/부산 전체/);
  assert.equal(JSON.stringify(source),before);
+});
+
+test('store map marker and category filter use the same artwork',()=>{
+ const {c,pins,click}=setup();
+ for(const [category,asset] of [['패션','fashion'],['팝업','popup'],['뷰티','beauty']]){
+  click('[data-store-category]',{storeCategory:category});
+  const visible=pins.filter(pin=>!pin.removed);
+  assert.ok(visible.length);
+  const categoryArtwork=c.window.BUSAN_CATEGORY_ICON(category);
+  assert.ok(categoryArtwork.includes('flat-black-yellow-'+asset+'.svg'));
+  for(const pin of visible){
+   assert.equal(pin.element.dataset.pinCategory,category);
+   assert.ok(pin.element.innerHTML.includes(categoryArtwork));
+  }
+ }
 });

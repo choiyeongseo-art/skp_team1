@@ -9,6 +9,7 @@ app.get('/api/busandrop/tourism-translations',require('./lib/supabase-nearby.cjs
 app.get('/api/busandrop/restaurant-translations',require('./lib/supabase-nearby.cjs').createNearbyHandler({dictionary:true,kind:'food',locationFile:path.join(publicApp,'data/store-locations.js'),keyFile:path.join(__dirname,'.env.local')}));
 const savesHandler=require('./lib/supabase-event-saves.cjs').createSupabaseSavesHandler({keyFile:path.join(__dirname,'.env.local')});
 app.all(['/api/busandrop/event-saves','/api/busandrop/event-saves/:eventId'],(req,res)=>{req.query.eventId=req.params.eventId;return savesHandler(req,res);});
+app.post('/api/busandrop/count',require('./api/count.js'));
 app.get(['/','/busandrop','/busandrop/'],(req,res)=>res.redirect('/busandrop/login'));
 app.get('/busandrop/integration/mapbox-config.js',async(req,res,next)=>{try{res.type('application/javascript').send(await require('./scripts/mapbox-runtime.cjs').loadMapboxConfig());}catch(error){next(error);}});
 app.use('/busandrop',express.static(publicApp));

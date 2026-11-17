@@ -17,6 +17,10 @@
       pin.className='bd-event-location-pin';
       pin.setAttribute('aria-hidden','true');
       pin.innerHTML='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 10l2-5h12l2 5v2a2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0zM6 14v5h12v-5M10 19v-4h4v4"/></svg>';
+      if(window.BUSAN_CATEGORY_ICON && window.BUSAN_PLACE_CARD){
+        const kind=item.kind||'event';
+        pin.innerHTML=window.BUSAN_PLACE_CARD.mapIcon(kind,item);
+      }
       new window.mapboxgl.Marker({element:pin}).setLngLat([item.lng,item.lat]).addTo(map);
       map.on('load',()=>{if(venueMap===map)map.resize();});
       map.on('error',()=>{if(venueMap===map)container.setAttribute('aria-label','지도를 불러올 수 없어요. 아래 길찾기를 이용해주세요.');});

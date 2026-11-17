@@ -1,8 +1,14 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const base=path.join(__dirname,'../../busan-drop/integration'),shopping=fs.readFileSync(path.join(base,'shopping-pass.js'),'utf8'),library=fs.readFileSync(path.join(base,'my-library.js'),'utf8');
+function loadCategories(context){
+ const icons=context.window.BUSAN_CATEGORY_ICON;
+ context.home=()=>'';context.document||={};context.document.addEventListener=()=>{};
+ vm.runInContext(fs.readFileSync(path.join(base,'home-categories.js'),'utf8'),context);
+ context.window.BUSAN_CATEGORY_ICON=icons;
+}
 const part=(source,start,end)=>source.slice(source.indexOf(start),source.indexOf(end,source.indexOf(start)));
 test('food and sights expose independent list/map tabs',()=>{
- const c={nearbyKind:()=> 'food',nearbyView:()=> 'map',nearbyMapIcon:()=>'<svg>food</svg>',activeVenue:()=>({campaign:{brand:'Fashion'}}),window:{BUSAN_STORE_BRAND_CATEGORIES:{Fashion:['패션']},BUSAN_CATEGORY_ICON:category=>'<svg>'+category+'</svg>'}};vm.createContext(c);vm.runInContext(part(shopping,' function tourMapMarkup()',' function revealTourPreview('),c);
+ const c={nearbyKind:()=> 'food',nearbyView:()=> 'map',nearbyMapIcon:()=>'<svg>food</svg>',activeVenue:()=>({campaign:{brand:'Fashion'}}),window:{BUSAN_STORE_BRAND_CATEGORIES:{Fashion:['패션']},BUSAN_CATEGORY_ICON:category=>'<svg>'+category+'</svg>'}};vm.createContext(c);loadCategories(c);vm.runInContext(part(shopping,' function tourMapMarkup()',' function revealTourPreview('),c);
  assert.match(c.tourMapMarkup(),/행사장 주변 맛집 지도/);assert.match(c.tourMapMarkup(),/data-tour-view="map" aria-pressed="true"/);assert.match(c.tourMapMarkup(),/food<\/svg>/);assert.match(c.tourMapMarkup(),/패션<\/svg>/);assert.doesNotMatch(c.tourMapMarkup(),/<i class="event"/);
  c.nearbyKind=()=> 'sights';c.nearbyView=()=> 'list';assert.doesNotMatch(c.tourMapMarkup(),/id="passTourMap"/);assert.match(c.tourMapMarkup(),/data-tour-view="list" aria-pressed="true"/);
 });
@@ -36,7 +42,7 @@ test('overview connects every consecutive stop including transfers between event
 test('food map mounts every valid filtered coordinate with fork-and-knife pins and preview actions',()=>{
  const pins=[],places=Array.from({length:14},(_,i)=>({id:'food-'+i,lat:i===13?null:35+i/100,lng:129+i/100,name:'Food '+i,distance:i*100})),previews=[];
  const c={map:null,markers:[],tourCamera:null,tourCameraKey:'',tourKey:()=> 'venue-a',foodGroup:'all',nearbyKind:()=> 'food',mapPlaces:()=>places,nearbyMapIcon:()=>'<svg>fork-and-knife</svg>',tourDistance:p=>p.distance+'m',showTourPreview:o=>previews.push(o),tourFocused:null,dispose(){},model:{coordinateGroups:()=>[]},document:{querySelector:()=>({}),querySelectorAll:()=>[],createElement:()=>({dataset:{},setAttribute(){},addEventListener(n,fn){this[n]=fn;}})},window:{BUSAN_TOURISM_I18N:{display:p=>p},BUSAN_MAPBOX_CONFIG:{token:'fake',style:'fake'}}};
- c.mapboxgl={Map:class{addControl(){}fitBounds(){}},AttributionControl:class{},LngLatBounds:class{extend(){}},Marker:class{constructor({element}){pins.push(element);}setLngLat(){return this;}addTo(){return this;}}};vm.createContext(c);vm.runInContext(part(shopping,' function initTourMap(route)',' function foodHoursDetails('),c);c.initTourMap([{item:{lat:35,lng:129}}]);assert.equal(pins.length,13);assert.ok(pins.every(p=>p.className.includes('pass-food-pin')&&p.innerHTML.includes('fork-and-knife')));pins[2].click();assert.equal(c.tourFocused,'food-2');assert.equal(previews.at(-1).reveal,true);
+ c.mapboxgl={Map:class{addControl(){}fitBounds(){}},AttributionControl:class{},LngLatBounds:class{extend(){}},Marker:class{constructor({element}){pins.push(element);}setLngLat(){return this;}addTo(){return this;}}};vm.createContext(c);loadCategories(c);vm.runInContext(part(shopping,' function initTourMap(route)',' function foodHoursDetails('),c);c.initTourMap([{item:{lat:35,lng:129}}]);assert.equal(pins.length,13);assert.ok(pins.every(p=>p.className.includes('pass-food-pin')&&p.innerHTML.includes('fork-and-knife')));pins[2].click();assert.equal(c.tourFocused,'food-2');assert.equal(previews.at(-1).reveal,true);
 });
 test('240px card maps isolate each venue and dispose old map instances on rerender',()=>{
  const h=mapSetup(points),labels=[{},{}],hosts=['a','b'].map((id,i)=>({dataset:{venueMiniMap:id},parentElement:{querySelector:()=>labels[i]}})),original=h.c.document.querySelectorAll;
@@ -78,7 +84,7 @@ test('co-located mini-map places share the exact coordinate with zero artificial
 test('nearby maps use each venue category icon and keep co-located categories at their actual coordinate',()=>{
  const pins=[],positions=[],groups=[{lat:35,lng:129,entries:[{number:1,entry:{campaign:{brand:'Popup'},item:{name:'Popup venue'}}}]},{lat:35.1,lng:129.1,entries:[{number:2,entry:{campaign:{brand:'Fashion'},item:{name:'Fashion venue'}}},{number:3,entry:{campaign:{brand:'Popup'},item:{name:'Other popup'}}}]}];
  const c={map:null,markers:[],tourCamera:null,tourCameraKey:'',tourKey:()=> 'a',foodGroup:'all',nearbyKind:()=> 'sights',mapPlaces:()=>[],showTourPreview(){},dispose(){throw Error('unexpected map error')},esc:String,model:{coordinateGroups:()=>groups},document:{querySelector:()=>({}),querySelectorAll:()=>[],createElement:()=>({dataset:{},setAttribute(k,v){this[k]=v},addEventListener(){}})},window:{BUSAN_MAPBOX_CONFIG:{token:'fake',style:'fake'},BUSAN_STORE_BRAND_CATEGORIES:{Popup:['팝업'],Fashion:['패션']},BUSAN_CATEGORY_ICON:cat=>'<svg>'+cat+'</svg>'}};
- c.mapboxgl={Map:class{addControl(){}fitBounds(){}},AttributionControl:class{},LngLatBounds:class{extend(){}},Marker:class{constructor({element}){pins.push(element)}setLngLat(p){positions.push(p);return this}addTo(){return this}}};vm.createContext(c);vm.runInContext(part(shopping,' function initTourMap(route)',' function foodHoursDetails('),c);c.initTourMap([{item:{lat:35,lng:129}}]);
+ c.mapboxgl={Map:class{addControl(){}fitBounds(){}},AttributionControl:class{},LngLatBounds:class{extend(){}},Marker:class{constructor({element}){pins.push(element)}setLngLat(p){positions.push(p);return this}addTo(){return this}}};vm.createContext(c);loadCategories(c);vm.runInContext(part(shopping,' function initTourMap(route)',' function foodHoursDetails('),c);c.initTourMap([{item:{lat:35,lng:129}}]);
  assert.equal(pins.length,2);assert.equal(pins[0].innerHTML,'<svg>팝업</svg>');assert.equal(pins[1].innerHTML,'<svg>패션</svg><svg>팝업</svg>');assert.equal(pins[1].dataset.pinCategory,'패션 팝업');assert.doesNotMatch(pins[0].innerHTML,/>1</);assert.deepEqual(Array.from(positions[1]),[129.1,35.1]);
 });
 

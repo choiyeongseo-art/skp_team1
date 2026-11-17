@@ -498,7 +498,6 @@ html:not([lang=ko]) #phone .pass-footer-summary .pass-footer-progress li>b{font-
 
 #phone .pass-map-place-popup .mapboxgl-popup-content{max-height:240px;overflow-y:auto;overscroll-behavior:contain}
 
-#phone .pass-tour-pin .tourism-camera-icon path{fill:none}
 
 #phone .pass-food-categories{margin:0 0 18px}
 #phone .pass-food-categories-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;color:#626870;font-size:12px}

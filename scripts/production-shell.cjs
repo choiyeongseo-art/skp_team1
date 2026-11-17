@@ -2,7 +2,13 @@
 const fs=require('node:fs'),path=require('node:path');
 function prepareProduction(target){
  const index=path.join(target,'index.html');let html=fs.readFileSync(index,'utf8');
- html=html.replace('<html lang="ko">','<html lang="ko" data-production="true">').replace('width=device-width,initial-scale=1','width=device-width,initial-scale=1,viewport-fit=cover').replace('<title>BUSAN DROP — Prototype Studio</title>','<title>BUSAN DROP</title>').replace('</head>','<link rel="stylesheet" href="integration/production-shell.css?v=20261109-viewport-check6"><script defer src="integration/production-viewport.js?v=20261109-viewport-check6"></script></head>').replace('app.js?v=20261108-venue-groups1','app.js?v=20261109-viewport-check6');
+ html=html.replace('<html lang="ko" translate="no">','<html lang="ko" translate="no" data-production="true">').replace('width=device-width,initial-scale=1','width=device-width,initial-scale=1,viewport-fit=cover').replace('<title>BUSAN DROP — Prototype Studio</title>','<title>BUSAN DROP</title>').replace('</head>','<link rel="stylesheet" href="integration/production-shell.css?v=20261109-viewport-check6"><script defer src="integration/production-viewport.js?v=20261109-viewport-check6"></script></head>').replace('app.js?v=20261108-venue-groups1','app.js?v=20261109-viewport-check6');
+ const measurementId=process.env.BUSANDROP_GA4_MEASUREMENT_ID;
+ if(measurementId){
+  if(!/^G-[A-Z0-9]{4,20}$/.test(measurementId))throw Error('Invalid BUSANDROP_GA4_MEASUREMENT_ID');
+  html=html.replace('</head>',`<script src="integration/ga4.js?v=20261116-unified-consent" data-measurement-id="${measurementId}"></script></head>`);
+ }
+ html=html.replace(/(integration\/analytics\.js)(?:\?[^"]*)?"/g,'$1?v=20261116-unified-consent2"');
  fs.writeFileSync(index,html);
  const app=path.join(target,'app.js');fs.writeFileSync(app,fs.readFileSync(app,'utf8').replace("theme:stored.theme||'color'","theme:'color'"));
  fs.writeFileSync(path.join(target,'integration/production-viewport.js'),`/* Follow available device dimensions without scaling the application. */

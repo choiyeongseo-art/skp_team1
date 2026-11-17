@@ -48,7 +48,7 @@ test('normalization follows the canonical ten section order',()=>{
  const d=draft();d.sections=Object.fromEntries(Object.entries(d.sections).reverse());assert.deepEqual(Object.keys(ordered(d).sections),contract.sections.map(s=>s.key));
 });
 test('full audit includes expired events, all branch overrides and missing details',()=>{
- const a=audit('2026-11-14');assert.equal(a.events.length,20);assert.equal(a.branches.length,33);assert.equal(a.summary.visibleEvents,13);assert.equal(a.summary.visibleLocations,24);
+ const a=audit('2026-11-14');assert.equal(a.events.length,28);assert.equal(a.branches.length,41);assert.equal(a.summary.visibleEvents,21);assert.equal(a.summary.visibleLocations,32);
  assert.equal(a.events.find(e=>e.brand==='티파니앤코').detailPresent,false);assert.ok(a.events.find(e=>e.brand==='몬치치').issues.some(s=>s.includes('충돌')));
  assert.ok(a.branches.find(b=>b.id==='uniqlo-4').overrides.includes('payment'));
 });

@@ -7,12 +7,12 @@ function setup({noMap=false,language='ko'}={}){
  class MapMock{constructor(options){this.options=options;maps.push(this);}addControl(){}on(){}remove(){this.removed=true;}isStyleLoaded(){return true;}getLayer(){return false;}resize(){}jumpTo(o){this.camera=o;}flyTo(o){this.camera=o;}fitBounds(bounds){this.bounds=bounds.points;}zoomIn(){}zoomOut(){}}
  class Marker{constructor(o){this.element=o.element;pins.push(this);}setLngLat(ll){this.ll=ll;return this;}addTo(){return this;}remove(){this.removed=true;}}
  const mapboxgl={Map:MapMock,Marker,AttributionControl:class{},LngLatBounds:class{constructor(){this.points=[];}extend(p){this.points.push(p);return this;}}};
- const c={document,window:{mapboxgl,BUSAN_MAPBOX_CONFIG:{token:'test',style:'mapbox://styles/mapbox/dark-v11'}},mapboxgl,state:{screen:'stores',storeView:'map',brand:1,language,mapLocal:false,storeRegion:null},brands:['탑텐','올리브영','유니클로','자라','몬치치','티파니앤코'].map(name=>({name})),head:()=>'<header class="app-head"></header>',storeMap(){},bindStoreMap(){},render(){c.bindStoreMap();},icon:()=>'<svg/>',esc:String};
+ const c={document,window:{mapboxgl,BUSAN_MAPBOX_CONFIG:{token:'test',style:'mapbox://styles/mapbox/dark-v11'}},mapboxgl,state:{screen:'stores',storeView:'map',brand:1,language,mapLocal:false,storeRegion:null},brands:['탑텐','올리브영','유니클로','자라','몬치치','티파니앤코'].map(name=>({name})),home(){return '';},head:()=>'<header class="app-head"></header>',storeMap(){},bindStoreMap(){},render(){c.bindStoreMap();},icon:()=>'<svg/>',esc:String};
  vm.createContext(c);
- for(const f of ['data/store-locations.js','data/event-catalog.js','data/event-details.js','integration/store-events-model.js','integration/mapbox-view.js','integration/store-mapbox.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+ for(const f of ['data/store-locations.js','data/event-catalog.js','data/event-details.js','integration/store-events-model.js','integration/mapbox-view.js','integration/home-categories.js','integration/store-mapbox.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
  if(noMap)c.window.mapboxgl=null;
  const opened=[];c.window.BUSAN_OPEN_EVENT_DETAIL=item=>opened.push(item);
- const click=(selector,dataset)=>events.click[0]({target:{closest:s=>s===selector?{dataset,setAttribute(){}}:null}});
+ const click=(selector,dataset)=>events.click.forEach(fn=>fn({target:{closest:s=>s===selector?{dataset,setAttribute(){}}:null}}));
  return {c,maps,pins,elements,click,opened};
 }
 
@@ -30,7 +30,7 @@ test('all nine branch buttons open the matching venue directly',()=>{
 test('map includes all nine coordinates and every numbered pin opens its own event',()=>{
  const h=setup();openUniqlo(h);const rows=h.c.window.BUSAN_STORE_LOCATIONS.filter(x=>x.brand==='유니클로');
  assert.equal(h.pins.length,9);assert.equal(h.maps[0].bounds.length,9);
- rows.forEach((item,i)=>{assert.deepEqual(Array.from(h.pins[i].ll),[item.lng,item.lat]);assert.equal(h.pins[i].element.textContent,String(i+1));h.pins[i].element.listeners.click({stopPropagation(){}});assert.equal(h.opened.at(-1).id,item.id);});
+ rows.forEach((item,i)=>{assert.deepEqual(Array.from(h.pins[i].ll),[item.lng,item.lat]);assert.ok(h.pins[i].element.innerHTML.includes('flat-black-yellow-fashion.svg'));assert.ok(h.pins[i].element.innerHTML.includes(`class="map-category-order">${i+1}</b>`));h.pins[i].element.listeners.click({stopPropagation(){}});assert.equal(h.opened.at(-1).id,item.id);});
  h.click('[data-branch-overview]',{});assert.equal(h.maps[0].bounds.length,9);
 });
 test('map failure preserves direct branch access and clear fallback copy',()=>{

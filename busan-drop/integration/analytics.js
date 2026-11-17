@@ -3,14 +3,98 @@
  const consentKey='busan-analytics-consent-v1';
  const readConsent=()=>{try{return JSON.parse(localStorage.getItem(consentKey));}catch{return null;}};
  let consent=readConsent(),started=false;
- const labels={"ko": ["서비스 이용 통계 (선택)", "행사 탐색·플랜 흐름 개선과 오류 확인을 위해 임의 방문자·세션 ID, 로그인 상태·방식·계정 ID(로그인 시), 화면·클릭·좋아요·플랜 단계·길찾기·방문 완료·오류 기록, 기기 종류·언어·유입 호스트·캠페인값·시각을 Supabase에 기록합니다. 이메일·이름·비밀번호·IP 주소·정밀 위치는 분석 항목에 넣지 않습니다. 일반 이벤트는 90일 초과 후 매일 삭제(최대 약 91일)하며, 플랜 작성 요약은 마지막 활동 기준이고 참조 세션은 연결 기록 정리 시까지 유지합니다. 거부해도 주요 기능을 이용할 수 있고, 마이 → 서비스 이용 통계에서 철회할 수 있습니다. 철회는 이후 수집을 중지하며 기존 서버 기록을 즉시 삭제하지는 않습니다.", "허용", "허용 안함"], "en": ["Usage analytics (optional)", "To improve discovery and plans and diagnose errors, we send random visitor/session IDs, login status/method and account ID (when signed in), screen/click/like/plan/directions/visit/error records, device type, language, referrer host, campaign tags and timestamps to Supabase. Analytics fields exclude email, name, passwords, IP addresses and precise location. Events are deleted daily after 90 days (up to about 91 days); draft summaries use last activity and referenced sessions remain until linked records are cleared. Declining does not block core features. Withdraw under My → Usage analytics to stop future collection; existing server records are not immediately deleted.", "Allow", "Do not allow"], "ja": ["利用状況の分析（任意）", "イベント探し・プランの改善とエラー確認のため、ランダムな訪問者・セッションID、ログイン状態・方法・アカウントID（ログイン時）、画面・クリック・お気に入り・プラン段階・経路検索・訪問完了・エラー、端末種別・言語・参照元ホスト・キャンペーン値・時刻をSupabaseに送信します。分析項目にメール・氏名・パスワード・IPアドレス・正確な位置は含めません。イベントは90日超過後に毎日削除（最大約91日）。下書き集計は最終操作を基準とし、関連セッションは参照記録の削除まで保持します。拒否しても主要機能を利用できます。マイ→利用状況の分析で撤回すると以後の収集を停止しますが、既存のサーバー記録は即時削除されません。", "許可", "許可しない"], "zh": ["使用情况统计（可选）", "为改善活动探索、行程流程及排查错误，我们向Supabase发送随机访客和会话ID、登录状态与方式、账户ID（登录时）、页面、点击、收藏、行程步骤、路线、到访完成和错误记录，以及设备类型、语言、来源主机、活动标记和时间。统计字段不含邮箱、姓名、密码、IP地址或精确位置。事件超过90天后每日清理（最长约91天）；草稿摘要按最后操作计算，关联会话保留至引用记录清理。拒绝不影响主要功能。可在“我的→使用情况统计”撤回，停止后续收集；已发送的服务器记录不会立即删除。", "允许", "不允许"], "zh-TW": ["使用情況統計（選用）", "為改善活動探索、行程流程及排查錯誤，我們向Supabase傳送隨機訪客及工作階段ID、登入狀態與方式、帳戶ID（登入時）、頁面、點擊、收藏、行程步驟、路線、到訪完成及錯誤紀錄，以及裝置類型、語言、來源主機、活動標記及時間。統計欄位不含信箱、姓名、密碼、IP位址或精確位置。事件超過90天後每日清理（最長約91天）；草稿摘要依最後操作計算，關聯工作階段保留至引用紀錄清理。拒絕不影響主要功能。可在「我的→使用情況統計」撤回，停止後續蒐集；已傳送的伺服器紀錄不會立即刪除。", "允許", "不允許"]};
- function choose(value){consent=value;try{localStorage.setItem(consentKey,JSON.stringify(value));}catch{}document.querySelector('[data-analytics-consent-panel]')?.remove();if(value&&!started){started=true;start();}window.dispatchEvent(new Event('busan-analytics-consent-updated'));}
- function panel(){document.querySelector('[data-analytics-consent-panel]')?.remove();const t=labels[state.language]||labels.en,node=document.createElement('section');node.dataset.analyticsConsentPanel='';node.setAttribute('role','dialog');node.setAttribute('aria-label',t[0]);node.style.cssText='position:absolute;z-index:95;left:12px;right:12px;bottom:calc(90px + env(safe-area-inset-bottom, 0px));background:#fff;color:#191919;border:1px solid #ddd;border-radius:16px;padding:16px;box-shadow:0 8px 30px #0002;font-size:13px;line-height:1.5;max-height:65%;overflow:auto';node.innerHTML=`<strong>${t[0]}</strong><p style="margin:8px 0 12px">${t[1]}</p><p style="margin:8px 0 12px"><a href="/busandrop/privacy.html" target="_blank" rel="noopener">${({ko:'개인정보처리방침',en:'Privacy policy',ja:'プライバシーポリシー',zh:'隐私政策','zh-TW':'隱私權政策'})[state.language]||'Privacy policy'}</a></p><div style="display:flex;gap:8px"><button type="button" data-analytics-allow style="flex:1;background:#FFD628;color:#191919;border:0;border-radius:8px;min-height:40px">${t[2]}</button><button type="button" data-analytics-deny style="flex:1;background:#f4f4f5;color:#191919;border:0;border-radius:8px;min-height:40px">${t[3]}</button></div>`;document.querySelector('#phone')?.append(node);}
- window.BUSAN_ANALYTICS_SETTINGS={open:panel,allowed:()=>consent===true};
- document.addEventListener('click',e=>{if(e.target.closest('[data-analytics-allow]'))choose(true);if(e.target.closest('[data-analytics-deny]'))choose(false);if(e.target.closest('[data-analytics-settings]'))panel();});
+ const labels={"ko": ["서비스 이용 통계 (선택)", "행사 탐색·플랜 흐름 개선과 오류 확인을 위해 임의 방문자·세션 ID, 로그인 상태·방식·계정 ID(로그인 시), 화면·클릭·좋아요·플랜 단계·길찾기·방문 완료·오류 기록, 기기 종류·언어·유입 호스트·캠페인값·시각을 Supabase에 기록합니다. 이메일·이름·비밀번호·IP 주소·정밀 위치는 분석 항목에 넣지 않습니다. 일반 이벤트는 90일 초과 후 매일 삭제(최대 약 91일)하며, 플랜 작성 요약은 마지막 활동 기준이고 참조 세션은 연결 기록 정리 시까지 유지합니다. 거부해도 주요 기능을 이용할 수 있고, 마이 → 통계 수집 설정에서 철회할 수 있습니다. 철회는 이후 수집을 중지하며 기존 서버 기록을 즉시 삭제하지는 않습니다.", "허용", "허용 안함"], "en": ["Usage analytics (optional)", "To improve discovery and plans and diagnose errors, we send random visitor/session IDs, login status/method and account ID (when signed in), screen/click/like/plan/directions/visit/error records, device type, language, referrer host, campaign tags and timestamps to Supabase. Analytics fields exclude email, name, passwords, IP addresses and precise location. Events are deleted daily after 90 days (up to about 91 days); draft summaries use last activity and referenced sessions remain until linked records are cleared. Declining does not block core features. Withdraw under My → Analytics preferences to stop future collection; existing server records are not immediately deleted.", "Allow", "Do not allow"], "ja": ["利用状況の分析（任意）", "イベント探し・プランの改善とエラー確認のため、ランダムな訪問者・セッションID、ログイン状態・方法・アカウントID（ログイン時）、画面・クリック・お気に入り・プラン段階・経路検索・訪問完了・エラー、端末種別・言語・参照元ホスト・キャンペーン値・時刻をSupabaseに送信します。分析項目にメール・氏名・パスワード・IPアドレス・正確な位置は含めません。イベントは90日超過後に毎日削除（最大約91日）。下書き集計は最終操作を基準とし、関連セッションは参照記録の削除まで保持します。拒否しても主要機能を利用できます。マイ→分析データの設定で撤回すると以後の収集を停止しますが、既存のサーバー記録は即時削除されません。", "許可", "許可しない"], "zh": ["使用情况统计（可选）", "为改善活动探索、行程流程及排查错误，我们向Supabase发送随机访客和会话ID、登录状态与方式、账户ID（登录时）、页面、点击、收藏、行程步骤、路线、到访完成和错误记录，以及设备类型、语言、来源主机、活动标记和时间。统计字段不含邮箱、姓名、密码、IP地址或精确位置。事件超过90天后每日清理（最长约91天）；草稿摘要按最后操作计算，关联会话保留至引用记录清理。拒绝不影响主要功能。可在“我的→统计收集设置”撤回，停止后续收集；已发送的服务器记录不会立即删除。", "允许", "不允许"], "zh-TW": ["使用情況統計（選用）", "為改善活動探索、行程流程及排查錯誤，我們向Supabase傳送隨機訪客及工作階段ID、登入狀態與方式、帳戶ID（登入時）、頁面、點擊、收藏、行程步驟、路線、到訪完成及錯誤紀錄，以及裝置類型、語言、來源主機、活動標記及時間。統計欄位不含信箱、姓名、密碼、IP位址或精確位置。事件超過90天後每日清理（最長約91天）；草稿摘要依最後操作計算，關聯工作階段保留至引用紀錄清理。拒絕不影響主要功能。可在「我的→統計蒐集設定」撤回，停止後續蒐集；已傳送的伺服器紀錄不會立即刪除。", "允許", "不允許"]};
+ const settingsCopy = {
+  ko: ['통계 수집 설정', '통계 수집은 선택 사항이며 항목별로 설정할 수 있어요.', '모두 허용', '모두 거부', '선택 저장', '개인정보처리방침'],
+  en: ['Analytics preferences', 'Analytics is optional. You can manage each option separately.', 'Allow all', 'Reject all', 'Save choices', 'Privacy policy'],
+  ja: ['分析データの設定', '分析データの収集は任意で、項目ごとに設定できます。', 'すべて許可', 'すべて拒否', '選択を保存', 'プライバシーポリシー'],
+  zh: ['统计收集设置', '统计收集为可选项，可分别设置。', '全部允许', '全部拒绝', '保存选择', '隐私政策'],
+  'zh-TW': ['統計蒐集設定', '統計蒐集為選用，可分別設定。', '全部允許', '全部拒絕', '儲存選擇', '隱私權政策']
+ };
+ function choose(value) {
+  if (consent === value) return;
+  consent = value;
+  try { localStorage.setItem(consentKey, JSON.stringify(value)); } catch {}
+  if (value && !started) { started = true; start(); }
+  window.dispatchEvent(new Event('busan-analytics-consent-updated'));
+ }
+ const panelSelector = '[data-analytics-consent-panel]';
+ function panel() {
+  const existing = document.querySelector(panelSelector);
+  const language = state.language;
+  const [title, intro, allow, deny, save, privacy] = settingsCopy[language] || settingsCopy.en;
+  const [usage, usageDescription] = labels[language] || labels.en;
+  const gaConsent = window.BUSAN_GA4?.consent;
+  const analyticsChecked = existing?.querySelector('[name="usage"]')?.checked ?? consent;
+  const gaChecked = existing?.querySelector('[name="ga"]')?.checked ?? gaConsent?.get();
+  const node = document.createElement('section');
+  node.dataset.analyticsConsentPanel = '';
+  node.setAttribute('translate', 'no');
+  node.setAttribute('role', 'dialog');
+  node.setAttribute('aria-label', title);
+  node.style.cssText = 'position:absolute;z-index:95;left:12px;right:12px;bottom:calc(90px + env(safe-area-inset-bottom,0px));background:#fff;color:#191919;border:1px solid #ddd;border-radius:16px;padding:16px;box-shadow:0 8px 30px #0002;font-size:13px;line-height:1.5;max-height:65%;overflow:auto';
+  const option = (name, label, description, checked, link = '') => `
+   <div style="padding:10px 0;border-top:1px solid #ddd">
+    <label style="display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:30px">
+     <strong>${label}</strong><input type="checkbox" name="${name}" ${checked ? 'checked' : ''}>
+    </label>
+    <p style="margin:4px 0;color:#414141">${description}</p>${link}
+   </div>`;
+  const gaCopy = gaConsent?.copy(language);
+  const button = 'flex:1;min-height:44px;border:0;border-radius:8px;padding:6px;color:#191919;';
+  node.innerHTML = `
+   <strong style="font-size:17px">${title}</strong>
+   <p style="margin:4px 0 12px">${intro}</p>
+   <form data-analytics-consent-form>
+    ${option('usage', usage, usageDescription, analyticsChecked)}
+    ${gaCopy ? option('ga', gaCopy[0], gaCopy[1], gaChecked, `<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">${gaCopy[4]}</a>`) : ''}
+    <p style="margin:8px 0 12px"><a href="/busandrop/privacy.html" target="_blank" rel="noopener">${privacy}</a></p>
+    <div style="display:flex;gap:6px">
+     <button type="submit" value="deny" style="${button}background:#f4f4f5">${deny}</button>
+     <button type="submit" value="allow" style="${button}background:#f4f4f5">${allow}</button>
+     <button type="submit" value="save" style="${button}background:#FFD628;font-weight:700">${save}</button>
+    </div>
+   </form>`;
+  if (existing) existing.replaceWith(node);
+  else document.querySelector('#phone')?.append(node);
+ }
+ function refreshPanelLanguage() {
+  if (document.querySelector(panelSelector)) panel();
+ }
+ window.BUSAN_ANALYTICS_SETTINGS = {open: panel, allowed: () => consent === true};
+ document.addEventListener('click', event => {
+  if (event.target.closest('[data-analytics-settings]')) panel();
+  if (event.target.closest('[data-language-enter]')) refreshPanelLanguage();
+ });
+ document.addEventListener('submit', event => {
+  const form = event.target;
+  if (!form.matches('[data-analytics-consent-form]')) return;
+  event.preventDefault();
+  const action = event.submitter?.value || 'save';
+  const selected = name => action === 'allow' || (action === 'save' && form.elements.namedItem(name)?.checked === true);
+  const reload = window.BUSAN_GA4?.consent?.set(selected('ga'));
+  choose(selected('usage'));
+  document.querySelector(panelSelector)?.remove();
+  if (reload) location.reload();
+ });
+ window.addEventListener('busan-language-changed', refreshPanelLanguage);
+ const uuid=()=>window.crypto.randomUUID();
+ let recordUsage=()=>{}, draftUsage=()=>{}, flushUsage=()=>{}, loginUsage=()=>{}, completeUsage=()=>{};
+ function track(name,data={}){
+  window.BUSAN_GA4?.track(name,data);
+  recordUsage(name,data);
+ }
+ const analytics={
+  track, flush:()=>flushUsage(), draft:plan=>draftUsage(plan), loginStart:method=>loginUsage(method),
+  completeDraft:(id,data)=>{window.BUSAN_GA4?.track('plan_saved',data);completeUsage(id,data);},
+  get newId(){return consent===true||window.BUSAN_GA4?.allowed()?uuid:undefined;}
+ };
+ const originalOpen=window.BUSAN_OPEN_EVENT_DETAIL;if(originalOpen)window.BUSAN_OPEN_EVENT_DETAIL=item=>{const result=originalOpen(item);if(item&&!window.BUSAN_EVENT_WINDOW?.locationExpired(item)&&document.querySelector('.event-detail-dialog'))track('event_detail_viewed',{event_id:window.BUSAN_EVENT_CATALOG.find(e=>e.brand===item.brand)?.id,store_id:item.id});return result;};
+ window.addEventListener('busan-ga4-enabled',()=>{window.BUSAN_ANALYTICS=analytics;});
  function start(){
+ window.BUSAN_ANALYTICS=analytics;
 /* Product telemetry: guest-safe, no contact details/URLs/coordinates, write-only RPC. */
- const uuid=()=>window.crypto.randomUUID(),load=(store,key,fallback)=>{try{return JSON.parse(store.getItem(key))||fallback;}catch{return fallback;}},put=(store,key,value)=>{try{store.setItem(key,JSON.stringify(value));}catch{}};
+ const load=(store,key,fallback)=>{try{return JSON.parse(store.getItem(key))||fallback;}catch{return fallback;}},put=(store,key,value)=>{try{store.setItem(key,JSON.stringify(value));}catch{}};
  const env=location.hostname==='busandrop.vercel.app'?'production':/localhost|127\.0\.0\.1/.test(location.hostname)?'development':'test';
  const environment=new URLSearchParams(location.search).get('analytics_test')==='1'?'test':env;
  const visitor=load(localStorage,'busan-analytics-visitor-v1',null)||uuid();put(localStorage,'busan-analytics-visitor-v1',visitor);
@@ -18,7 +102,7 @@
  const safeTag=x=>typeof x==='string'&&/^[a-zA-Z0-9_.-]{1,80}$/.test(x)?x:null;
  function activeSession(){const now=Date.now();if(!session||now-session.last>1800000||session.environment!==environment){const query=new URLSearchParams(location.search);let referrer=null;try{referrer=new URL(document.referrer).hostname;}catch{}session={session_id:uuid(),visitor_id:visitor,secret:uuid(),environment,device_type:/iPad|Tablet|Android(?!.*Mobile)/i.test(navigator.userAgent)||navigator.maxTouchPoints>1&&/Macintosh/.test(navigator.userAgent)?'tablet':/iPhone|Android.*Mobile/i.test(navigator.userAgent)?'mobile':'desktop',language:['ko','en','ja','zh','zh-TW'].includes(state.language)?state.language:'ko',referrer_host:referrer,utm_source:safeTag(query.get('utm_source')),utm_medium:safeTag(query.get('utm_medium')),utm_campaign:safeTag(query.get('utm_campaign')),last:now};lastScreen='';}session.last=now;put(sessionStorage,'busan-analytics-session-v1',session);return {...session};}
  function method(){const user=window.BUSAN_AUTH?.getUser();if(!user)return 'guest';const known=load(sessionStorage,'busan-analytics-auth-method-v1',null),value=known?.id===user.id?known.method:user.app_metadata?.provider;return ['google','apple','email'].includes(value)?value:'unknown';}
- function track(name,data={}){if(consent!==true)return;try{if(name==='login_failed')data={...data,source:load(sessionStorage,'busan-analytics-login-v1',null)?.method||data.source};const user=window.BUSAN_AUTH?.getUser(),s=activeSession(),event={id:uuid(),occurred_at:new Date().toISOString(),event_name:name,authenticated:!!user,auth_method:method(),screen:state.screen||'unknown'};
+ function record(name,data={}){if(consent!==true)return;try{if(name==='login_failed')data={...data,source:load(sessionStorage,'busan-analytics-login-v1',null)?.method||data.source};const user=window.BUSAN_AUTH?.getUser(),s=activeSession(),event={id:uuid(),occurred_at:new Date().toISOString(),event_name:name,authenticated:!!user,auth_method:method(),screen:state.screen||'unknown'};
   for(const key of ['event_id','store_id','plan_id','draft_id'])if(data[key])event[key]=String(data[key]);
   const allow=['step','venue_index','event_count','sight_count','food_count','editing_existing','save_scope','operation','error_code','skipped','source','language','wanted_saved'];event.properties={};for(const key of allow)if(data[key]!==undefined)event.properties[key]=data[key];
   queue.push({session:s,event,owner:user?.id||null});queue=queue.filter(item=>Date.now()-Date.parse(item.event.occurred_at)<6*86400000).slice(-1000);put(localStorage,'busan-analytics-queue-v1',queue);
@@ -29,12 +113,15 @@
  function screen(){const s=activeSession(),key=s.session_id+':'+state.screen;if(key===lastScreen)return;lastScreen=key;track('screen_view');}
  function auth(){const user=window.BUSAN_AUTH.getUser();if(user?.id===lastUser&&authResolved)return;const pending=load(sessionStorage,'busan-analytics-login-v1',null);if(user){if(pending&&Date.now()-pending.at<1800000)put(sessionStorage,'busan-analytics-auth-method-v1',{id:user.id,method:pending.method});track(pending&&Date.now()-pending.at<1800000?'login_succeeded':'session_restored',{source:pending?.method||method()});put(sessionStorage,'busan-analytics-login-v1',null);}else if(lastUser)track('logout_succeeded');lastUser=user?.id||null;authResolved=true;flush();}
  function draft(plan){if(consent!==true||!plan.analyticsDraftId)return;const s=plan.tripSelection||{},groups=Object.values(s.venueChoices||{}),data={draft_id:plan.analyticsDraftId,step:s.review?5:Number(s.step)||1,event_count:(s.selected||[]).length,sight_count:groups.reduce((n,g)=>n+(g.sights||[]).length,0),food_count:groups.reduce((n,g)=>n+(g.food||[]).length,0),editing_existing:!!plan.activeSavedId};clearTimeout(draftTimers.get(plan.analyticsDraftId));draftTimers.set(plan.analyticsDraftId,setTimeout(()=>{draftTimers.delete(plan.analyticsDraftId);track('plan_draft_updated',data);},700));}
- function completeDraft(id,data){clearTimeout(draftTimers.get(id));draftTimers.delete(id);track('plan_saved',{...data,draft_id:id,step:5});}
+ function completeDraft(id,data){clearTimeout(draftTimers.get(id));draftTimers.delete(id);record('plan_saved',{...data,draft_id:id,step:5});}
  window.addEventListener('busan-account-deleted',e=>{queue=queue.filter(item=>item.owner!==e.detail?.id);put(localStorage,'busan-analytics-queue-v1',queue);lastUser=null;});
- window.BUSAN_ANALYTICS={track,flush,draft,completeDraft,newId:uuid,loginStart:method=>{if(consent!==true)return;put(sessionStorage,'busan-analytics-login-v1',{method,at:Date.now()});track('login_started',{source:method});}};
+ recordUsage=record;
+ flushUsage=flush;
+ draftUsage=draft;
+ completeUsage=completeDraft;
+ loginUsage=method=>{if(consent!==true)return;put(sessionStorage,'busan-analytics-login-v1',{method,at:Date.now()});track('login_started',{source:method});};
  const previousRender=render;render=(...args)=>{previousRender(...args);screen();};screen();
  window.addEventListener('busan-auth-updated',auth);window.BUSAN_AUTH.ready().then(auth);
- const originalOpen=window.BUSAN_OPEN_EVENT_DETAIL;if(originalOpen)window.BUSAN_OPEN_EVENT_DETAIL=item=>{const result=originalOpen(item);if(item&&!window.BUSAN_EVENT_WINDOW?.locationExpired(item)&&document.querySelector('.event-detail-dialog'))track('event_detail_viewed',{event_id:window.BUSAN_EVENT_CATALOG.find(e=>e.brand===item.brand)?.id,store_id:item.id});return result;};
  document.addEventListener('click',e=>{const el=e.target.closest('button,a');if(!el||el.disabled)return;
   if(el.matches('.bd-login-guest'))track('guest_entered');
   if(el.dataset.bdProvider){window.BUSAN_ANALYTICS.loginStart(el.dataset.bdProvider);}
@@ -48,5 +135,6 @@
  let previousConsent=consent;window.addEventListener('busan-analytics-consent-updated',()=>{const resumed=consent===true&&previousConsent!==true;previousConsent=consent;if(resumed){lastScreen='';authResolved=false;screen();auth();}if(consent!==true){queue=[];put(localStorage,'busan-analytics-queue-v1',[]);for(const id of draftTimers.values())clearTimeout(id);draftTimers.clear();}});window.addEventListener('online',flush);window.addEventListener('pagehide',flush);document.addEventListener('visibilitychange',()=>{if(document.hidden)flush();});setInterval(flush,5000);
 
  }
- if(consent===true){started=true;start();}else if(consent!==false)panel();
+ if (consent === true) { started = true; start(); }
+ if (consent == null || window.BUSAN_GA4?.consent?.get() === null) panel();
 })();

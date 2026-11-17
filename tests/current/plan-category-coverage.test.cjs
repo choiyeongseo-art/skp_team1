@@ -18,5 +18,18 @@ test('all seven service categories retain their own artwork, independently of th
 
 test('missing tourism and food photos use exactly the map icon in both selection and saved cards',()=>{
  const w=setup();w.BUSAN_TOURISM_I18N={display:p=>p};
- for(const kind of ['sights','food'])for(const selectable of [true,false]){const html=w.BUSAN_PLACE_CARD.render({id:kind,kind,name:'사진 없는 장소',address:'부산'},{selectable});assert.ok(html.includes(w.BUSAN_PLACE_CARD.mapIcon(kind)));assert.doesNotMatch(html,/<img /);}
+ for(const kind of ['sights','food'])for(const selectable of [true,false]){const html=w.BUSAN_PLACE_CARD.render({id:kind,kind,name:'사진 없는 장소',address:'부산'},{selectable});assert.ok(html.includes(w.BUSAN_PLACE_CARD.mapIcon(kind)));assert.doesNotMatch(html.replace(w.BUSAN_PLACE_CARD.mapIcon(kind),''),/<img /);}
+});
+
+test('saved plans display the current catalog thumbnail and preserve older snapshots',()=>{
+ const w=setup(),c=vm.createContext({window:w});
+ vm.runInContext(fs.readFileSync(path.join(root,'integration/my-library-model.js'),'utf8'),c);
+ const campaign=w.BUSAN_EVENT_CATALOG.find(event=>event.id==='tunaschool-gwangbok-202611');
+ const savedCampaign={...campaign,image:'old-illustration.png'};
+ const venue={campaign:savedCampaign,event:{title:campaign.title},item:{id:'tuna',address:'Busan'}};
+ const plan={flow:'venue-groups',routeSnapshot:[venue]};
+ assert.equal(w.BUSAN_MY_LIBRARY_MODEL.groupedRows(plan)[0].image,'assets/banners/home-20261105/'+campaign.image);
+ assert.equal(savedCampaign.image,'old-illustration.png');
+ const unlisted={...venue,campaign:{...savedCampaign,id:'unlisted'}};
+ assert.equal(w.BUSAN_MY_LIBRARY_MODEL.venueItinerary([unlisted])[0].image,'assets/banners/home-20261105/old-illustration.png');
 });

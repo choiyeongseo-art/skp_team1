@@ -97,6 +97,80 @@
   ]
 };
   brandCategories['참치학교']=[...brandCategories['참치학교'],'푸드'];
+  Object.assign(brandCategories,{
+  "캡랩": [
+    "팝업",
+    "패션"
+  ],
+  "노배드바이브스": [
+    "팝업",
+    "디저트"
+  ]
+});
+  Object.assign(brandCategories,{
+  "라푀유": [
+    "디저트"
+  ],
+  "캐치! 티니핑": [
+    "팝업"
+  ]
+});
+  Object.assign(brandCategories,{
+  "부산 핸드메이드페어": [
+    "로컬"
+  ],
+  "부산국제아동도서전": [
+    "로컬"
+  ],
+  "크리스마스 빌리지 부산": [
+    "로컬"
+  ],
+  "오토니엘": [
+    "로컬"
+  ]
+});
+  Object.assign(brandCategories,{
+  "해운대 빛축제": [
+    "로컬"
+  ],
+  "광복로 스트릿페스타": [
+    "로컬"
+  ],
+  "부산브릿지마라톤": [
+    "로컬"
+  ],
+  "케이펫페어 부산": [
+    "로컬"
+  ],
+  "모이프": [
+    "팝업",
+    "패션"
+  ],
+  "랑콤": [
+    "뷰티"
+  ],
+  "라부르켓": [
+    "뷰티"
+  ],
+  "부산식품박람회": [
+    "푸드"
+  ],
+  "부산국제주류&와인박람회": [
+    "푸드"
+  ],
+  "파라다이스 부티크": [
+    "디저트"
+  ],
+  "롯데호텔 부산": [
+    "숙박"
+  ],
+  "탑텐 블랙프라이데이": [
+    "패션"
+  ],
+  "무신사 스탠다드": [
+    "패션"
+  ]
+});
   brandCategories['달달더마켓']=[...brandCategories['달달더마켓'],'디저트'];
   window.BUSAN_STORE_BRAND_CATEGORIES=brandCategories;
   const category=()=>categories.includes(state.storeCategory)?state.storeCategory:'전체';
@@ -105,16 +179,8 @@
   const filterLabels=()=>({ko:['지역','카테고리','브랜드','부산'],en:['Area','Category','Brand','Busan'],ja:['エリア','カテゴリー','ブランド','釜山'],zh:['地区','类别','品牌','釜山']})[state.language]||['지역','카테고리','브랜드','부산'];
   const copy=()=>({ko:['전체','매장찾기','등록된 위치','등록된 위치가 없어요','매장 선택','지도 불러오는 중','지도를 불러오지 못했어요','다시 시도','길찾기'],en:['All','Find stores','locations','No locations registered','Choose a store','Loading map','Unable to load map','Retry','Directions'],ja:['すべて','店舗検索','登録地点','登録された場所はありません','店舗を選択','地図を読み込み中','地図を読み込めませんでした','再試行','ルート'],zh:['全部','查找门店','个地点','暂无登记地点','选择门店','正在加载地图','无法加载地图','重试','路线']})[state.language]||['전체','매장찾기','등록된 위치','등록된 위치가 없어요','매장 선택','지도 불러오는 중','지도를 불러오지 못했어요','다시 시도','길찾기'];
   const regionLabel=r=>r==='부산 전체'?({en:'All Busan',ja:'釜山全域',zh:'釜山全域','zh-TW':'釜山全域'}[state.language]||r):({en:{서면:'Seomyeon',남포동:'Nampo',광안리:'Gwangalli',해운대:'Haeundae'},ja:{서면:'西面',남포동:'南浦洞',광안리:'広安里',해운대:'海雲台'},zh:{서면:'西面',남포동:'南浦洞',광안리:'广安里',해운대:'海云台'}})[state.language]?.[r]||r;
-  const categoryPinIcon=category=>{
-    const drawings={
-      '로컬':`<path d="M3 20c2-6 6-12 13-12 5 0 9 3 10 7-4-3-8-3-10 0-2 3 0 5 4 5 3 0 6-1 9-3v8H3Z" fill="#FFD628"/><path d="M4 24c4 0 5-2 9-2s5 2 9 2 5-2 7-2M7 17c2-4 5-6 9-6M4 28c4 0 5-2 9-2s5 2 9 2 5-2 7-2"/>`,
-      '팝업':`<path d="M6 14h20v14H6Z" fill="#FFD628"/><path d="M4 13 7 5h18l3 8Z" fill="#FFD628"/><path d="M4 13v2a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0v-2M10 13l1-8m5 8V5m6 8-1-8"/><path d="M10 21h5v7h-5Z" fill="currentColor" stroke="none"/><path d="M19 21h4v4h-4Z" fill="#fff"/><path d="M4 28h24"/>`,
-      '패션':`<path d="M8 5h5l3 3 3-3h5l5 7-6 3v12H9V15l-6-3Z" fill="#FFD628"/><path d="m12 5 4 5 4-5M12 22h8"/>`,
-      '뷰티':`<path d="M10 15h12v13H10Z" fill="#FFD628"/><path d="M12 15V8l7-4v11Z" fill="#FFD628"/><path d="M10 19h12"/><path d="m25 5 .8 2.2L28 8l-2.2.8L25 11l-.8-2.2L22 8l2.2-.8Z" fill="currentColor" stroke="none"/>`,
-      '숙박':`<path d="M8 9h16v19H8Z" fill="#FFD628"/><path d="M11 9V5h10v4" fill="#FFD628"/><path d="M13 5V2h9v3"/><path d="M12 13h2m4 0h2M12 17h2m4 0h2M12 21h2m4 0h2" stroke-width="2"/><path d="M14 28v-4h4v4" fill="currentColor"/><path d="M5 28h22"/>`
-    };
-    return `<span class="category-pin-face"><svg class="category-pin-icon" viewBox="0 0 32 32" aria-hidden="true">${drawings[category]||drawings['로컬']}</svg></span>`;
-  };
+  const pinCategoryFor=item=>window.BUSAN_EVENT_MAP_CATEGORY(item,category());
+  const categoryPinIcon=name=>`<span class="category-pin-face">${window.BUSAN_CATEGORY_ICON(name)}</span>`;
   window.BUSAN_CATEGORY_PIN_ICON=categoryPinIcon;
   const visible=()=>rows.filter(s=>!window.BUSAN_EVENT_WINDOW?.locationExpired(s)&&matchesCategory(s.brand)&&(state.mapLocal||s.brand===brands[state.brand]?.name)&&(!state.storeRegion||(regions.includes(state.storeRegion)?locationRegion(s)===state.storeRegion:s.region===state.storeRegion)));
   const results=(list,t)=>{
@@ -125,10 +191,10 @@
     return toolbar+`<div class="store-event-results">${groups.length?groups.map(group=>{
       const {brand,campaign,event,items}=group;
       const image=campaign?.image,title=event?.title||campaign?.title||brand+' 행사 안내';
-      const date=event?.start&&event?.end?(event.start.slice(0,4)!==event.end.slice(0,4)?event.start.replaceAll('-','.')+' – '+event.end.replaceAll('-','.'):event.start.slice(5).replace('-','.')+' – '+event.end.slice(5).replace('-','.')):'공식 일정 안내 전';
+      const date=event?.dateDisplay || (event?.start&&event?.end?(event.start.slice(0,4)!==event.end.slice(0,4)?event.start.replaceAll('-','.')+' – '+event.end.replaceAll('-','.'):event.start.slice(5).replace('-','.')+' – '+event.end.slice(5).replace('-','.')):'공식 일정 안내 전');
       const status=window.BUSAN_STORE_EVENTS.status(event,window.BUSAN_EVENT_WINDOW?.koreaToday()||new Date().toISOString().slice(0,10));
       const key=items[0].id;
-      return `<article class="store-event-card"><button class="store-event-open" data-store-event-open="${key}" aria-label="${esc(title)} · ${items.length===1?'상세 보기':'방문 지점 선택'}" aria-expanded="false"><span class="store-event-image">${image?`<img src="assets/banners/home-20261105/${image}" alt="${esc(brand)} 행사 배너" width="200" height="200">`:icon('store')}<span>${esc(status)}</span></span><span class="store-event-copy"><small>${esc(brand)} · ${esc(categoryLabel(brandCategories[brand]?.[0]||'전체'))}</small><strong>${esc(title)}</strong><span class="store-event-date">${event?.periodLabel?esc(event.periodLabel)+' · ':''}${esc(date)}</span></span></button>${window.BUSAN_EVENT_SOCIAL?.saveControl(brand,items.length===1?items[0].id:null)||''}<div class="store-event-branches" data-store-event-branches="${key}" hidden><div class="branch-map-heading"><p>${branchCopy()[0]}</p><button class="branch-map-overview" data-branch-overview>${branchCopy()[4]} ↗</button></div><div class="branch-location-map" data-branch-map="${key}" aria-label="${esc(brand)} ${branchCopy()[4]}"></div><span class="branch-map-status" role="status">${branchCopy()[3]}</span><div class="branch-number-choices" role="group" aria-label="${branchCopy()[0]}">${items.map((item,i)=>`<button type="button" data-store-detail="${esc(item.id)}"><b aria-hidden="true">${i+1}</b><span class="branch-choice-name">${esc(branchName(item))}</span><span class="branch-choice-action">${branchCopy()[1]} <span aria-hidden="true">↗</span></span></button>`).join('')}</div></div></article>`;
+      return `<article class="store-event-card"><button class="store-event-open" data-store-event-open="${key}" aria-label="${esc(title)} · ${items.length===1?'상세 보기':'방문 지점 선택'}" aria-expanded="false"><span class="store-event-image">${image?`<img src="assets/banners/home-20261105/${image}" alt="${esc(brand)} 행사 배너" width="200" height="200">`:icon('store')}<span>${esc(status)}</span></span><span class="store-event-copy"><small>${esc(brand)} · ${esc(categoryLabel(pinCategoryFor(items[0])))}</small><strong>${esc(title)}</strong><span class="store-event-date">${event?.periodLabel?esc(event.periodLabel)+' · ':''}${esc(date)}</span></span></button>${window.BUSAN_EVENT_SOCIAL?.saveControl(brand,items.length===1?items[0].id:null)||''}<div class="store-event-branches" data-store-event-branches="${key}" hidden><div class="branch-map-heading"><p>${branchCopy()[0]}</p><button class="branch-map-overview" data-branch-overview>${branchCopy()[4]} ↗</button></div><div class="branch-location-map" data-branch-map="${key}" aria-label="${esc(brand)} ${branchCopy()[4]}"></div><span class="branch-map-status" role="status">${branchCopy()[3]}</span><div class="branch-number-choices" role="group" aria-label="${branchCopy()[0]}">${items.map((item,i)=>`<button type="button" data-store-detail="${esc(item.id)}"><b aria-hidden="true">${i+1}</b><span class="branch-choice-name">${esc(branchName(item))}</span><span class="branch-choice-action">${branchCopy()[1]} <span aria-hidden="true">↗</span></span></button>`).join('')}</div></div></article>`;
     }).join(''):`<div class="store-results-empty">${icon('search')}<h3>선택한 조건의 행사가 없어요.</h3><p>다른 지역이나 카테고리로 찾아보세요.</p><button data-store-reset>전체 행사 보기</button></div>`}</div>`;
   };
   const branchCopy=()=>({ko:['지도나 지점명을 누르면 해당 행사로 이동해요','행사 보기','지도를 불러오지 못했어요. 아래 지점명을 눌러 행사를 확인하세요.','지도 불러오는 중','전체 위치'],en:['Tap a pin or branch name to view its event','View event','Map unavailable. Tap a branch name below to view its event.','Loading map','All locations'],ja:['ピンまたは店舗名を押すとイベントが開きます','イベントを見る','地図を読み込めません。下の店舗名からイベントを確認できます。','地図を読み込み中','すべての場所'],zh:['点击地图标记或门店名称查看活动','查看活动','地图加载失败，请点击下方门店名称查看活动。','正在加载地图','全部位置'],'zh-TW':['點擊地圖標記或門店名稱查看活動','查看活動','地圖載入失敗，請點擊下方門店名稱查看活動。','正在載入地圖','全部位置']})[state.language]||['지도나 지점명을 누르면 해당 행사로 이동해요','행사 보기','지도를 불러오지 못했어요. 아래 지점명을 눌러 행사를 확인하세요.','지도 불러오는 중','전체 위치'];
@@ -154,7 +220,7 @@
       const current=branchMap;
       branchMap.on('load',()=>{if(branchMap!==current)return;status.hidden=true;branchMap.resize();const field={ko:'name_ko',en:'name_en',ja:'name_ja',zh:'name_zh-Hans','zh-TW':'name_zh-Hant'}[state.language]||'name_en';for(const layer of ['settlement-label','settlement-subdivision-label','poi-label','road-label'])if(current.getLayer(layer))current.setLayoutProperty(layer,'text-field',['coalesce',['get',field],['get','name']]);});
       branchMap.on('error',()=>{if(branchMap===current&&!current.isStyleLoaded()){status.hidden=false;status.textContent=branchCopy()[2];}});
-      items.forEach((item,i)=>{if(!Number.isFinite(item.lat)||!Number.isFinite(item.lng))return;const pin=document.createElement('button');pin.type='button';pin.className='branch-map-pin';pin.dataset.branchId=item.id;pin.textContent=String(i+1);pin.setAttribute('aria-label',`${i+1}. ${branchName(item)}`);pin.addEventListener('click',e=>{e.stopPropagation();select(item.id);});branchMarkers.push(new mapboxgl.Marker({element:pin,anchor:'center'}).setLngLat([item.lng,item.lat]).addTo(branchMap));});
+      items.forEach((item,i)=>{if(!Number.isFinite(item.lat)||!Number.isFinite(item.lng))return;const pin=document.createElement('button');pin.type='button';pin.className='branch-map-pin';pin.dataset.branchId=item.id;pin.innerHTML=window.BUSAN_CATEGORY_ICON(pinCategoryFor(item))+`<b class="map-category-order">${i+1}</b>`;pin.setAttribute('aria-label',`${i+1}. ${branchName(item)}`);pin.addEventListener('click',e=>{e.stopPropagation();select(item.id);});branchMarkers.push(new mapboxgl.Marker({element:pin,anchor:'center'}).setLngLat([item.lng,item.lat]).addTo(branchMap));});
       fitBranches();
     }catch{status.textContent=branchCopy()[2];}
   };
@@ -185,16 +251,16 @@
     const item=visible().find(s=>s.id===id),panel=document.querySelector('.store-location-detail');if(!item||!panel)return;
     state.realStoreId=item.id;
     const campaign=window.BUSAN_EVENT_CATALOG.find(c=>c.brand===item.brand),event=window.BUSAN_EVENT_DETAILS[item.brand]||{},labels=({ko:['자세히 보기','소개 닫기'],en:['View details','Close preview'],ja:['詳しく見る','紹介を閉じる'],zh:['查看详情','关闭介绍']})[state.language]||['자세히 보기','소개 닫기'];
-    panel.innerHTML=`<button class="store-preview-close" data-store-preview-close aria-label="${labels[1]}">×</button><div class="store-preview-heading">${campaign?.image?`<img src="assets/banners/home-20261105/${esc(campaign.image)}" alt="" width="64" height="64">`:''}<div><small>${esc(categoryLabel(brandCategories[item.brand]?.[0]||'전체'))}</small><strong>${esc(item.name)}</strong></div></div><p class="store-preview-address">${esc(item.address)}</p><p class="store-preview-description">${esc(item.profile?.headline||event.title||campaign?.title||item.brand)}</p><button class="store-preview-more" data-store-detail="${esc(item.id)}">${labels[0]} <span aria-hidden="true">↗</span></button>`;
+    panel.innerHTML=`<button class="store-preview-close" data-store-preview-close aria-label="${labels[1]}">×</button><div class="store-preview-heading">${campaign?.image?`<img src="assets/banners/home-20261105/${esc(campaign.image)}" alt="" width="64" height="64">`:''}<div><small>${esc(categoryLabel(pinCategoryFor(item)))}</small><strong>${esc(item.name)}</strong></div></div><p class="store-preview-address">${esc(item.address)}</p><p class="store-preview-description">${esc(item.profile?.headline||event.title||campaign?.title||item.brand)}</p><button class="store-preview-more" data-store-detail="${esc(item.id)}">${labels[0]} <span aria-hidden="true">↗</span></button>`;
     panel.hidden=false;
     document.querySelectorAll('.real-store-pin').forEach(pin=>pin.setAttribute('aria-pressed',String(pin.dataset.storePin===id)));
     map?.easeTo({center:[item.lng,item.lat],offset:[0,-100],duration:450});
   };
   const sync=()=>{
     markers.forEach(m=>m.remove());markers=[];
-    const list=visible();
+    const list=visible().filter(s=>Number.isFinite(s.lat)&&Number.isFinite(s.lng));
     list.forEach(s=>{
-      const pin=document.createElement('button');pin.type='button';pin.className='real-store-pin';const pinCategory=brandCategories[s.brand]?.[0]||'로컬';pin.setAttribute('aria-label',`${categoryLabel(pinCategory)} · ${s.name}`);pin.dataset.pinCategory=pinCategory;pin.dataset.storePin=s.id;pin.setAttribute('aria-pressed','false');pin.innerHTML=categoryPinIcon(pinCategory);pin.addEventListener('click',()=>preview(s.id));
+      const pin=document.createElement('button');pin.type='button';pin.className='real-store-pin';const pinCategory=pinCategoryFor(s);pin.setAttribute('aria-label',`${categoryLabel(pinCategory)} · ${s.name}`);pin.dataset.pinCategory=pinCategory;pin.dataset.storePin=s.id;pin.setAttribute('aria-pressed','false');pin.innerHTML=categoryPinIcon(pinCategory);pin.addEventListener('click',()=>preview(s.id));
       markers.push(new mapboxgl.Marker({element:pin,anchor:'center'}).setLngLat([s.lng,s.lat]).addTo(map));
     });
     const filter=`${category()}/${state.mapLocal?'all':state.brand}/${state.storeRegion||''}`;

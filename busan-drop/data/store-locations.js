@@ -800,3 +800,267 @@ window.BUSAN_STORE_LOCATIONS.push(...[
     "eventParticipation": "confirmed-notice"
   }
 ]);
+
+window.BUSAN_STORE_LOCATIONS.push(...[
+  {
+    "id": "bexco-exhibition-center-1",
+    "brand": "부산 핸드메이드페어",
+    "name": "벡스코(BEXCO) 제1전시장",
+    "address": "부산광역시 해운대구 APEC로 55",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.16894,
+    "lng": 129.13616,
+    "source": "https://handmadefair.co.kr/about_the_exhibition",
+    "coordinateSource": "https://mapcarta.com/W396366119",
+    "coordinateNote": "시설 대표 위치 · 행사 구역 실측 좌표 아님",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "bexco-exhibition-center-1-hall-2",
+    "brand": "부산국제아동도서전",
+    "name": "벡스코(BEXCO) 제1전시장 2홀",
+    "address": "부산광역시 해운대구 APEC로 55",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.16894,
+    "lng": 129.13616,
+    "source": "https://bicbf.or.kr/page/61",
+    "coordinateSource": "https://mapcarta.com/W396366119",
+    "coordinateNote": "시설 대표 위치 · 행사 구역 실측 좌표 아님",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "busan-cinema-center-outdoor",
+    "brand": "크리스마스 빌리지 부산",
+    "name": "영화의전당 야외광장",
+    "address": "부산광역시 해운대구 수영강변대로 120",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.171111,
+    "lng": 129.126944,
+    "source": "https://marketchango.com/CHRISTMAS_VILLAGE_BUSAN_2026",
+    "coordinateSource": "https://trek.zone/en/south-korea/places/394433/busan-cinema-center",
+    "coordinateNote": "시설 대표 위치 · 행사 구역 실측 좌표 아님",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "f1963-seokcheon-moonlight",
+    "brand": "오토니엘",
+    "name": "F1963 석천홀·달빛가든",
+    "address": "부산광역시 수영구 구락로123번길 20",
+    "region": "광안리",
+    "district": "수영구",
+    "lat": 35.176745,
+    "lng": 129.115485,
+    "source": "https://www.busan.go.kr/eng/bsevents/1750485",
+    "coordinateSource": "https://busan.webforai.kr/en/places/f1963/",
+    "coordinateNote": "시설 대표 위치 · 행사 구역 실측 좌표 아님",
+    "eventParticipation": "confirmed-notice"
+  }
+]);
+
+window.BUSAN_STORE_LOCATIONS.push(...[
+  {
+    "id": "caplab-samjung-202611-venue",
+    "brand": "캡랩",
+    "name": "삼정타워 2층",
+    "address": "부산광역시 부산진구 중앙대로 672",
+    "region": "서면",
+    "district": "부산진구",
+    "lat": 35.1528,
+    "lng": 129.059606,
+    "source": "https://www.samjungtower.com/upload/event/2026/11/11/c255690b-d519-4e14-ad79-8d32bdc4e918.jpg",
+    "coordinateSource": "https://maps.google.com/maps?ll=35.1528,129.059606",
+    "coordinateNote": "삼정타워 건물 기준",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "no-bad-vibes-samjung-202611-venue",
+    "brand": "노배드바이브스",
+    "name": "삼정타워 1층",
+    "address": "부산광역시 부산진구 중앙대로 672",
+    "region": "서면",
+    "district": "부산진구",
+    "lat": 35.1528,
+    "lng": 129.059606,
+    "source": "https://www.samjungtower.com/upload/event/2026/11/11/7540ac26-d849-4967-ba74-fbf0a96a4463.jpg",
+    "coordinateSource": "https://maps.google.com/maps?ll=35.1528,129.059606",
+    "coordinateNote": "삼정타워 건물 기준",
+    "eventParticipation": "confirmed-notice"
+  }
+]);
+
+window.BUSAN_STORE_LOCATIONS.push(...[
+  {
+    "id": "lafeuille-centum-mochi-venue",
+    "brand": "라푀유",
+    "name": "신세계 센텀시티",
+    "address": "부산광역시 해운대구 센텀남대로 35",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.1688179,
+    "lng": 129.1295233,
+    "source": "https://www.shinsegae.com/store/floor.do?storeCd=SC00008",
+    "coordinateSource": "https://www.shinsegae.com/store/floor.do?storeCd=SC00008",
+    "coordinateNote": "시설 건물 기준 · 행사 위치 미확인",
+    "eventParticipation": "unconfirmed"
+  },
+  {
+    "id": "teenieping-connect-busan-202611-venue",
+    "brand": "캐치! 티니핑",
+    "name": "커넥트현대 부산",
+    "address": "부산광역시 동구 범일로 125",
+    "region": "기타",
+    "district": "동구",
+    "lat": 35.141309,
+    "lng": 129.058589,
+    "source": "https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00124000",
+    "coordinateSource": "https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00124000",
+    "coordinateNote": "시설 건물 기준 · 행사 위치 미확인",
+    "eventParticipation": "unconfirmed"
+  }
+]);
+
+window.BUSAN_STORE_LOCATIONS.push(...[
+  {
+    "id": "haeundae-light-2026-venue",
+    "brand": "해운대 빛축제",
+    "name": "해운대 구남로 · 해운대해수욕장",
+    "address": "부산광역시 해운대구 중동 1411-14 일원",
+    "region": "해운대",
+    "district": "해운대구",
+    "source": "https://korean.visitkorea.or.kr/kfes/detail/fstvlDetail.do?fstvlCntntsId=b3b7a23c-c7f6-45db-930a-b139e4d8cd9f",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "gwangbok-street-dec-2026-venue",
+    "brand": "광복로 스트릿페스타",
+    "name": "중구 광복로 차 없는 거리",
+    "address": "",
+    "region": "남포동",
+    "district": "중구",
+    "source": "https://visitbusan.net/schedule/view.do?boardId=BBS_0000009&dataSid=6482&menuCd=DOM_000000204012000000",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "busan-bridge-marathon-2026-venue",
+    "brand": "부산브릿지마라톤",
+    "name": "벡스코 제1전시장 3홀",
+    "address": "부산광역시 해운대구 APEC로 55",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.16894,
+    "lng": 129.13616,
+    "source": "https://www.busanmarathon.com/",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "kpet-busan-dec-2026-venue",
+    "brand": "케이펫페어 부산",
+    "name": "벡스코 제2전시장",
+    "address": "부산광역시 해운대구 APEC로 30",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.1657,
+    "lng": 129.13504,
+    "source": "https://k-pet.co.kr/visitor/visitor-guide/",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "moif-centum-nov-2026-venue",
+    "brand": "모이프",
+    "name": "신세계 센텀시티 백화점 지하2층",
+    "address": "부산광역시 해운대구 센텀남대로 35",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.1688179,
+    "lng": 129.1295233,
+    "source": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "lancome-centum-holiday-2026-venue",
+    "brand": "랑콤",
+    "name": "신세계 센텀시티 백화점 1층",
+    "address": "부산광역시 해운대구 센텀남대로 35",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.1688179,
+    "lng": 129.1295233,
+    "source": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "labruket-centum-launch-2026-venue",
+    "brand": "라부르켓",
+    "name": "신세계 센텀시티 백화점 1층",
+    "address": "부산광역시 해운대구 센텀남대로 35",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.1688179,
+    "lng": 129.1295233,
+    "source": "https://www.shinsegae.com/shopping/list.do?schMainCd=02&schPgIdx=36&storeCd=SC00008",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "food-fair-busan-nov-2026-venue",
+    "brand": "부산식품박람회",
+    "name": "벡스코",
+    "address": "",
+    "region": "해운대",
+    "district": "해운대구",
+    "source": "https://foodfair.co.kr/?main=1",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "busan-wine-spirits-2026-venue",
+    "brand": "부산국제주류&와인박람회",
+    "name": "벡스코 제1전시장 3홀",
+    "address": "부산광역시 해운대구 APEC로 55",
+    "region": "해운대",
+    "district": "해운대구",
+    "lat": 35.16894,
+    "lng": 129.13616,
+    "source": "https://busan.siwse.com/page/31",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "paradise-christmas-cake-2026-venue",
+    "brand": "파라다이스 부티크",
+    "name": "파라다이스 호텔 부산 본관 1층 부티크",
+    "address": "부산광역시 해운대구 해운대해변로 296",
+    "region": "해운대",
+    "district": "해운대구",
+    "source": "https://www.busanparadisehotel.co.kr/front/facility/dineboutique",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "lotte-pusan-in-busan-2026-venue",
+    "brand": "롯데호텔 부산",
+    "name": "롯데호텔 부산",
+    "address": "부산광역시 부산진구 가야대로 772",
+    "region": "서면",
+    "district": "부산진구",
+    "source": "https://app.lottehotel.com/busan-hotel/ko/offers/packages/260626/pusan_in_busan",
+    "eventParticipation": "confirmed-notice"
+  },
+  {
+    "id": "topten-black-friday-busan-2026-venue",
+    "brand": "탑텐 블랙프라이데이",
+    "name": "부산 참여 지점 확인 중",
+    "address": "",
+    "region": "기타",
+    "source": "https://topten10.goodwearmall.com/",
+    "eventParticipation": "unconfirmed"
+  },
+  {
+    "id": "musinsa-standard-black-friday-busan-2026-venue",
+    "brand": "무신사 스탠다드",
+    "name": "부산 참여 지점 확인 중",
+    "address": "",
+    "region": "기타",
+    "source": "https://www.musinsa.com/content/1566699710148818818",
+    "eventParticipation": "unconfirmed"
+  }
+]);

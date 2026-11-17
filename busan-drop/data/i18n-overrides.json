@@ -503,8 +503,8 @@
   "운영시간": {
     "en": "Hours",
     "ja": "営業時間",
-    "zh-CN": "营业时间",
-    "zh-TW": "營業時間"
+    "zh-CN": "开放时间",
+    "zh-TW": "開放時間"
   },
   "요일별 운영시간": {
     "en": "Weekly hours",
@@ -4119,10 +4119,10 @@
     "zh-TW": "釜山海雲台區 Centumnam 大路 35"
   },
   "부산광역시 부산진구 가야대로 772": {
-    "en": "Lotte Department Store Busan Main Branch B1 Kinetic Stage, 772 Gaya-daero, Busanjin-gu, Busan",
-    "ja": "釜山広域市釜山神宮ヶ谷通り772・ロッテ百貨店釜山本店B1キネティックステージ",
-    "zh-CN": "釜山广域市釜山镇区伽倻大路 772 号乐天百货公司釜山总店 B1 Kinetic Stage",
-    "zh-TW": "釜山廣域市釜山鎮區伽倻大路 772 號樂天百貨公司釜山總店 B1 Kinetic Stage"
+    "en": "772 Gaya-daero, Busanjin-gu, Busan",
+    "ja": "釜山広域市 釜山鎮区 伽倻大路772",
+    "zh-CN": "釜山广域市釜山镇区伽倻大路772号",
+    "zh-TW": "釜山廣域市釜山鎮區伽倻大路772號"
   },
   "부산광역시 중구 중앙대로 2": {
     "en": "2 Jungang-daero, Jung-gu, Busan",
@@ -4138,15 +4138,15 @@
   },
   "부산광역시 해운대구 APEC로 55": {
     "en": "55 APEC-ro, Haeundae-gu, Busan",
-    "ja": "釜山広域市海雲台区APECで55・BEXCO第1展示場1～3ホール",
-    "zh-CN": "釜山海云台区 APEC 路 55 号·BEXCO 展览馆 1，1 至 3 号馆",
-    "zh-TW": "釜山海雲台區 APEC 路 55 號·BEXCO 展覽館 1，1 至 3 號館"
+    "ja": "釜山広域市 海雲台区 APEC路55",
+    "zh-CN": "釜山广域市海云台区APEC路55号",
+    "zh-TW": "釜山廣域市海雲臺區 APEC 路55號"
   },
   "부산광역시 해운대구 APEC로 30": {
     "en": "30 APEC-ro, Haeundae-gu, Busan",
-    "ja": "釜山広域市海雲台区APECで30・BEXCO第2展示場1階4ホール",
-    "zh-CN": "釜山海云台区 APEC 路 30 号",
-    "zh-TW": "釜山海雲台區 APEC 路 30 號"
+    "ja": "釜山広域市 海雲台区 APEC路30",
+    "zh-CN": "釜山广域市海云台区APEC路30号",
+    "zh-TW": "釜山廣域市海雲臺區 APEC 路30號"
   },
   "마지막 코스": {
     "en": "Final stop",
@@ -4423,5 +4423,1031 @@
     "ja": "機張郡",
     "zh-CN": "机张郡",
     "zh-TW": "機張郡"
+  },
+  "제13회 해운대 빛축제": {
+    "en": "13th Haeundae Light Festival",
+    "ja": "第13回海雲台光の祭り",
+    "zh-CN": "第13届海云台灯光节",
+    "zh-TW": "第13屆海雲臺燈光節"
+  },
+  "구남로와 백사장에서 심해를 테마로 한 빛 조형물과 미디어아트를 관람할 수 있습니다.": {
+    "en": "See deep-sea-themed light installations and media art along Gunam-ro and the beach.",
+    "ja": "クナム路と砂浜で深海をテーマにした光のオブジェやメディアアートを楽しめます。",
+    "zh-CN": "龟南路和沙滩展出深海主题灯光装置及媒体艺术。",
+    "zh-TW": "龜南路與沙灘展出深海主題燈光裝置及媒體藝術。"
+  },
+  "해운대 구남로 · 해운대해수욕장": {
+    "en": "Gunam-ro and Haeundae Beach",
+    "ja": "海雲台クナム路・海雲台海水浴場",
+    "zh-CN": "海云台龟南路及海云台海水浴场",
+    "zh-TW": "海雲臺龜南路及海雲臺海水浴場"
+  },
+  "부산광역시 해운대구 중동 1411-14 일원": {
+    "en": "Around 1411-14 Jung-dong, Haeundae-gu, Busan",
+    "ja": "釜山広域市 海雲台区 中洞1411-14周辺",
+    "zh-CN": "釜山广域市海云台区中洞1411-14一带",
+    "zh-TW": "釜山廣域市海雲臺區中洞1411-14一帶"
+  },
+  "해운대 빛축제": {
+    "en": "13th Haeundae Light Festival",
+    "ja": "第13回海雲台光の祭り",
+    "zh-CN": "第13届海云台灯光节",
+    "zh-TW": "第13屆海雲臺燈光節"
+  },
+  "무료": {
+    "en": "Free",
+    "ja": "無料",
+    "zh-CN": "免费",
+    "zh-TW": "免費"
+  },
+  "공식 안내": {
+    "en": "Official information",
+    "ja": "公式案内",
+    "zh-CN": "官方信息",
+    "zh-TW": "官方資訊"
+  },
+  "상세 이용 조건은 공식 안내에서 확인해 주세요.": {
+    "en": "See the official information for visit conditions.",
+    "ja": "詳しい利用条件は公式案内でご確認ください。",
+    "zh-CN": "详细使用条件请查阅官方信息。",
+    "zh-TW": "詳細使用條件請查閱官方資訊。"
+  },
+  "12월 스트릿페스타 앤 발코니뮤직쇼": {
+    "en": "December Street Festa and Balcony Music Show",
+    "ja": "12月ストリートフェスタ＆バルコニーミュージックショー",
+    "zh-CN": "12月街头庆典与阳台音乐秀",
+    "zh-TW": "12月街頭慶典與陽臺音樂秀"
+  },
+  "12월 5일은 퍼레이드·거리 공연·플리마켓, 12일과 19일은 발코니 라이브 공연이 열립니다.": {
+    "en": "December 5 features a parade, street performances and a flea market. Balcony concerts take place on December 12 and 19.",
+    "ja": "12月5日はパレード・ストリート公演・フリーマーケット、12日と19日はバルコニーでライブ公演が行われます。",
+    "zh-CN": "12月5日有巡游、街头表演和跳蚤市场，12日及19日有阳台现场演出。",
+    "zh-TW": "12月5日有遊行、街頭表演和跳蚤市場，12日與19日有陽臺現場演出。"
+  },
+  "중구 광복로 차 없는 거리": {
+    "en": "Gwangbok-ro Car-Free Street, Jung-gu",
+    "ja": "中区 光復路歩行者天国",
+    "zh-CN": "中区光复路步行街",
+    "zh-TW": "中區光復路行人徒步區"
+  },
+  "광복로 스트릿페스타": {
+    "en": "December Street Festa and Balcony Music Show",
+    "ja": "12月ストリートフェスタ＆バルコニーミュージックショー",
+    "zh-CN": "12月街头庆典与阳台音乐秀",
+    "zh-TW": "12月街頭慶典與陽臺音樂秀"
+  },
+  "2026 부산브릿지마라톤": {
+    "en": "2026 Busan Bridge Marathon",
+    "ja": "2026釜山ブリッジマラソン",
+    "zh-CN": "2026釜山跨桥马拉松",
+    "zh-TW": "2026釜山跨橋馬拉松"
+  },
+  "42.195km 풀코스와 10km 로드레이스입니다. 총 모집 규모는 12,000명입니다.": {
+    "en": "The event offers a 42.195 km marathon and a 10 km road race, with a total field of 12,000.",
+    "ja": "42.195kmのフルと10kmロードレース。募集人数は合計12,000人です。",
+    "zh-CN": "设42.195公里全程马拉松和10公里公路赛，总招募规模12,000人。",
+    "zh-TW": "設42.195公里全程馬拉松及10公里公路賽，總招募名額12,000人。"
+  },
+  "벡스코 제1전시장 3홀": {
+    "en": "BEXCO Exhibition Center 1, Hall 3",
+    "ja": "BEXCO第1展示場3ホール",
+    "zh-CN": "BEXCO第一展馆3号厅",
+    "zh-TW": "BEXCO 第一展館3號廳"
+  },
+  "부산브릿지마라톤": {
+    "en": "2026 Busan Bridge Marathon",
+    "ja": "2026釜山ブリッジマラソン",
+    "zh-CN": "2026釜山跨桥马拉松",
+    "zh-TW": "2026釜山跨橋馬拉松"
+  },
+  "참가 신청은 8월 24일 10:00부터 선착순으로 받습니다. 잔여 접수 여부는 공식 페이지에서 확인해 주세요.": {
+    "en": "Registration opened August 24 at 10:00 and is first come, first served. Check the organizer for availability.",
+    "ja": "参加受付は8月24日10:00開始の先着順です。空き状況は主催者サイトでご確認ください。",
+    "zh-CN": "报名自8月24日10:00起按先后顺序受理，请在主办方网站查询剩余名额。",
+    "zh-TW": "報名自8月24日10:00起按先後順序受理，請在主辦方網站查詢剩餘名額。"
+  },
+  "사전 접수 필요": {
+    "en": "Advance registration required",
+    "ja": "事前申込が必要",
+    "zh-CN": "须提前登记",
+    "zh-TW": "須提前登記"
+  },
+  "2026 케이펫페어 부산 시즌2": {
+    "en": "2026 K-PET FAIR Busan Season 2",
+    "ja": "2026 K-PET FAIR 釜山シーズン2",
+    "zh-CN": "2026 K-PET FAIR 釜山第二季",
+    "zh-TW": "2026 K-PET FAIR 釜山第二季"
+  },
+  "반려동물용품 박람회입니다. 사전등록 또는 현장등록으로 입장할 수 있습니다.": {
+    "en": "A pet products fair with advance and on-site registration.",
+    "ja": "ペット用品の展示会です。事前登録または当日受付で入場できます。",
+    "zh-CN": "宠物用品展，可预先登记或现场登记入场。",
+    "zh-TW": "寵物用品展，可預先登記或現場登記入場。"
+  },
+  "벡스코 제2전시장": {
+    "en": "BEXCO Exhibition Center 2",
+    "ja": "BEXCO第2展示場",
+    "zh-CN": "BEXCO第二展馆",
+    "zh-TW": "BEXCO 第二展館"
+  },
+  "케이펫페어 부산": {
+    "en": "2026 K-PET FAIR Busan Season 2",
+    "ja": "2026 K-PET FAIR 釜山シーズン2",
+    "zh-CN": "2026 K-PET FAIR 釜山第二季",
+    "zh-TW": "2026 K-PET FAIR 釜山第二季"
+  },
+  "10,000원": {
+    "en": "₩10,000",
+    "ja": "10,000ウォン",
+    "zh-CN": "₩10,000",
+    "zh-TW": "₩10,000"
+  },
+  "운영일": {
+    "en": "Opening days",
+    "ja": "開催日",
+    "zh-CN": "开放日",
+    "zh-TW": "開放日"
+  },
+  "공식 예약": {
+    "en": "Official booking",
+    "ja": "公式予約",
+    "zh-CN": "官方预约",
+    "zh-TW": "官方預約"
+  },
+  "사전등록 또는 현장 입장": {
+    "en": "Advance registration or on-site admission",
+    "ja": "事前登録または当日入場",
+    "zh-CN": "预先登记或现场入场",
+    "zh-TW": "預先登記或現場入場"
+  },
+  "모이프 팝업스토어": {
+    "en": "moif Pop-up Store",
+    "ja": "moif ポップアップストア",
+    "zh-CN": "moif 快闪店",
+    "zh-TW": "moif 快閃店"
+  },
+  "신세계 센텀시티 백화점 지하2층에서 모이프 팝업스토어가 열립니다.": {
+    "en": "Visit the moif pop-up on B2 of Shinsegae Centum City.",
+    "ja": "新世界百貨店センタムシティ店地下2階でmoifのポップアップが開催されます。",
+    "zh-CN": "moif 快闪店设于新世界百货Centum City店地下2层。",
+    "zh-TW": "moif 快閃店設於新世界百貨 Centum City 店地下2樓。"
+  },
+  "신세계 센텀시티 백화점 지하2층": {
+    "en": "Shinsegae Centum City, B2",
+    "ja": "新世界百貨店センタムシティ店地下2階",
+    "zh-CN": "新世界百货Centum City店地下2层",
+    "zh-TW": "新世界百貨 Centum City 店地下2樓"
+  },
+  "부산광역시 해운대구 센텀남대로 35": {
+    "en": "35 Centumnam-daero, Haeundae-gu, Busan",
+    "ja": "釜山広域市 海雲台区 センタム南大路35",
+    "zh-CN": "釜山广域市海云台区Centumnam-daero 35号",
+    "zh-TW": "釜山廣域市海雲臺區 Centumnam-daero 35 號"
+  },
+  "모이프": {
+    "en": "moif Pop-up Store",
+    "ja": "moif ポップアップストア",
+    "zh-CN": "moif 快闪店",
+    "zh-TW": "moif 快閃店"
+  },
+  "랑콤 2026년 홀리데이 세트": {
+    "en": "Lancôme 2026 Holiday Sets",
+    "ja": "ランコム 2026年ホリデーセット",
+    "zh-CN": "兰蔻2026节日套装",
+    "zh-TW": "蘭蔻2026節日套組"
+  },
+  "신세계 센텀시티에서 랑콤의 홀리데이 세트를 소개합니다.": {
+    "en": "Lancôme showcases its holiday sets at Shinsegae Centum City.",
+    "ja": "新世界百貨店センタムシティ店でランコムのホリデーセットを紹介します。",
+    "zh-CN": "兰蔻在新世界百货Centum City店展示节日套装。",
+    "zh-TW": "蘭蔻在新世界百貨 Centum City 店展示節日套組。"
+  },
+  "신세계 센텀시티 백화점 1층": {
+    "en": "Shinsegae Centum City, 1F",
+    "ja": "新世界百貨店センタムシティ店1階",
+    "zh-CN": "新世界百货Centum City店1层",
+    "zh-TW": "新世界百貨 Centum City 店1樓"
+  },
+  "랑콤": {
+    "en": "Lancôme 2026 Holiday Sets",
+    "ja": "ランコム 2026年ホリデーセット",
+    "zh-CN": "兰蔻2026节日套装",
+    "zh-TW": "蘭蔻2026節日套組"
+  },
+  "라부르켓 신상품 론칭": {
+    "en": "L:A Bruket New Product Launch",
+    "ja": "L:A Bruket 新商品発売",
+    "zh-CN": "L:A Bruket 新品发布",
+    "zh-TW": "L:A Bruket 新品上市"
+  },
+  "신세계 센텀시티에서 라부르켓 신상품을 소개합니다.": {
+    "en": "L:A Bruket presents new products at Shinsegae Centum City.",
+    "ja": "新世界百貨店センタムシティ店でL:A Bruketの新商品を紹介します。",
+    "zh-CN": "L:A Bruket 在新世界百货Centum City店推出新品。",
+    "zh-TW": "L:A Bruket 在新世界百貨 Centum City 店推出新品。"
+  },
+  "라부르켓": {
+    "en": "L:A Bruket New Product Launch",
+    "ja": "L:A Bruket 新商品発売",
+    "zh-CN": "L:A Bruket 新品发布",
+    "zh-TW": "L:A Bruket 新品上市"
+  },
+  "2026 FOOD FAIR 부산 하반기": {
+    "en": "2026 FOOD FAIR Busan (November)",
+    "ja": "2026 FOOD FAIR 釜山・下半期",
+    "zh-CN": "2026釜山食品博览会（下半年）",
+    "zh-TW": "2026釜山食品博覽會（下半年）"
+  },
+  "농특산물과 커피·베이커리 등을 소개하는 식품 박람회입니다.": {
+    "en": "A food fair showcasing regional farm products, coffee, bakery items and more.",
+    "ja": "地域の農産物やコーヒー、ベーカリーなどを紹介する食品展示会です。",
+    "zh-CN": "展示地方农特产、咖啡及烘焙食品等。",
+    "zh-TW": "展示地方農特產、咖啡及烘焙食品等。"
+  },
+  "벡스코": {
+    "en": "BEXCO",
+    "ja": "BEXCO",
+    "zh-CN": "BEXCO",
+    "zh-TW": "BEXCO"
+  },
+  "부산식품박람회": {
+    "en": "2026 FOOD FAIR Busan (November)",
+    "ja": "2026 FOOD FAIR 釜山・下半期",
+    "zh-CN": "2026釜山食品博览会（下半年）",
+    "zh-TW": "2026釜山食品博覽會（下半年）"
+  },
+  "5,000원": {
+    "en": "₩5,000",
+    "ja": "5,000ウォン",
+    "zh-CN": "₩5,000",
+    "zh-TW": "₩5,000"
+  },
+  "현장 입장료는 카드로만 결제할 수 있습니다. 반려동물은 입장할 수 없습니다.": {
+    "en": "On-site admission is card-only. Pets are not admitted.",
+    "ja": "当日入場料はカード決済のみです。ペットは入場できません。",
+    "zh-CN": "现场门票仅接受刷卡，宠物不得入场。",
+    "zh-TW": "現場門票僅接受刷卡，寵物不得入場。"
+  },
+  "공식 무료관람 신청 / 현장 입장": {
+    "en": "Free advance registration / on-site admission",
+    "ja": "無料事前登録 / 当日入場",
+    "zh-CN": "免费预先登记 / 现场入场",
+    "zh-TW": "免費預先登記 / 現場入場"
+  },
+  "2026 부산국제주류&와인박람회": {
+    "en": "2026 Busan International Wines & Spirits Expo",
+    "ja": "2026釜山国際酒類＆ワイン博覧会",
+    "zh-CN": "2026釜山国际酒类及葡萄酒博览会",
+    "zh-TW": "2026釜山國際酒類及葡萄酒博覽會"
+  },
+  "와인·맥주·전통주·증류주를 소개하는 박람회입니다. 입장 시 신분증을 지참해야 합니다.": {
+    "en": "The expo showcases wine, beer, traditional Korean liquor and spirits. Bring ID for entry.",
+    "ja": "ワイン、ビール、韓国伝統酒、蒸留酒の展示会です。入場時に身分証明書が必要です。",
+    "zh-CN": "展出葡萄酒、啤酒、韩国传统酒和蒸馏酒，入场须携带身份证件。",
+    "zh-TW": "展出葡萄酒、啤酒、韓國傳統酒及蒸餾酒，入場須攜帶身分證件。"
+  },
+  "부산국제주류&와인박람회": {
+    "en": "2026 Busan International Wines & Spirits Expo",
+    "ja": "2026釜山国際酒類＆ワイン博覧会",
+    "zh-CN": "2026釜山国际酒类及葡萄酒博览会",
+    "zh-TW": "2026釜山國際酒類及葡萄酒博覽會"
+  },
+  "20,000원": {
+    "en": "₩20,000",
+    "ja": "20,000ウォン",
+    "zh-CN": "₩20,000",
+    "zh-TW": "₩20,000"
+  },
+  "미성년자는 입장할 수 없습니다. 신분증을 지참하세요.": {
+    "en": "Minors cannot enter. Bring identification.",
+    "ja": "未成年者は入場できません。身分証明書をご持参ください。",
+    "zh-CN": "未成年人不得入场，请携带身份证件。",
+    "zh-TW": "未成年人不得入場，請攜帶身分證件。"
+  },
+  "THE WONDER OF CHRISTMAS · 크리스마스 케이크": {
+    "en": "THE WONDER OF CHRISTMAS · Christmas Cakes",
+    "ja": "THE WONDER OF CHRISTMAS・クリスマスケーキ",
+    "zh-CN": "THE WONDER OF CHRISTMAS · 圣诞蛋糕",
+    "zh-TW": "THE WONDER OF CHRISTMAS · 聖誕蛋糕"
+  },
+  "파라다이스 부티크의 크리스마스 케이크 컬렉션입니다. 공지 기간과 실제 픽업일은 구분해 확인해 주세요.": {
+    "en": "A Christmas cake collection from Paradise Boutique. Confirm actual pickup dates separately from the advertised promotion period.",
+    "ja": "パラダイスブティックのクリスマスケーキコレクションです。告知期間とは別に受取可能日をご確認ください。",
+    "zh-CN": "天堂精品烘焙店圣诞蛋糕系列，实际取货日期请另行确认。",
+    "zh-TW": "天堂精品烘焙店聖誕蛋糕系列，實際取貨日期請另行確認。"
+  },
+  "파라다이스 호텔 부산 본관 1층 부티크": {
+    "en": "Paradise Boutique, Main Building 1F, Paradise Hotel Busan",
+    "ja": "パラダイスホテル釜山 本館1階ブティック",
+    "zh-CN": "釜山天堂酒店主楼1层精品烘焙店",
+    "zh-TW": "釜山天堂飯店主樓1樓精品烘焙店"
+  },
+  "부산광역시 해운대구 해운대해변로 296": {
+    "en": "296 Haeundaehaebyeon-ro, Haeundae-gu, Busan",
+    "ja": "釜山広域市 海雲台区 海雲台海辺路296",
+    "zh-CN": "釜山广域市海云台区海云台海滨路296号",
+    "zh-TW": "釜山廣域市海雲臺區海雲臺海濱路296號"
+  },
+  "파라다이스 부티크": {
+    "en": "THE WONDER OF CHRISTMAS · Christmas Cakes",
+    "ja": "THE WONDER OF CHRISTMAS・クリスマスケーキ",
+    "zh-CN": "THE WONDER OF CHRISTMAS · 圣诞蛋糕",
+    "zh-TW": "THE WONDER OF CHRISTMAS · 聖誕蛋糕"
+  },
+  "호텔 공지 기간": {
+    "en": "Hotel promotion dates",
+    "ja": "ホテル告知期間",
+    "zh-CN": "酒店公告日期",
+    "zh-TW": "飯店公告日期"
+  },
+  "롯데호텔 부산 Pusan in Busan": {
+    "en": "LOTTE HOTEL BUSAN: Pusan in Busan",
+    "ja": "ロッテホテル釜山 Pusan in Busan",
+    "zh-CN": "釜山乐天酒店 Pusan in Busan",
+    "zh-TW": "釜山樂天飯店 Pusan in Busan"
+  },
+  "헤리티지 객실 1박과 한정판 키트·객실 키가 포함됩니다. 객실형·조식형·홈파티형이 있습니다.": {
+    "en": "Includes one night in a Heritage Room, a limited-edition kit and keepsake room keys. Choose room-only, breakfast or home-party options.",
+    "ja": "ヘリテージルーム1泊に限定キットと記念ルームキー付き。客室のみ、朝食付き、ホームパーティー付きの3タイプ。",
+    "zh-CN": "含传统风格客房一晚、限量套件和纪念房卡，提供纯住宿、含早餐及聚会三种套餐。",
+    "zh-TW": "含傳統風格客房一晚、限量套件與紀念房卡，提供純住宿、含早餐及聚會三種套裝。"
+  },
+  "롯데호텔 부산": {
+    "en": "LOTTE HOTEL BUSAN",
+    "ja": "ロッテホテル釜山",
+    "zh-CN": "釜山乐天酒店",
+    "zh-TW": "釜山樂天飯店"
+  },
+  "예약 기간": {
+    "en": "Booking dates",
+    "ja": "予約期間",
+    "zh-CN": "预订日期",
+    "zh-TW": "預訂日期"
+  },
+  "투숙 기간": {
+    "en": "Stay dates",
+    "ja": "宿泊期間",
+    "zh-CN": "入住日期",
+    "zh-TW": "入住日期"
+  },
+  "숙박 패키지 3종": {
+    "en": "Three stay packages",
+    "ja": "宿泊プラン3種",
+    "zh-CN": "三种住宿套餐",
+    "zh-TW": "三種住宿套裝"
+  },
+  "패키지": {
+    "en": "Package",
+    "ja": "パッケージ",
+    "zh-CN": "套餐",
+    "zh-TW": "套裝"
+  },
+  "일반 최저가": {
+    "en": "Standard rate from",
+    "ja": "一般料金（最低）",
+    "zh-CN": "普通最低价",
+    "zh-TW": "一般最低價"
+  },
+  "포함 내용·조건": {
+    "en": "Inclusions and conditions",
+    "ja": "内容・条件",
+    "zh-CN": "包含内容及条件",
+    "zh-TW": "包含內容及條件"
+  },
+  "객실형": {
+    "en": "Room only",
+    "ja": "客室のみ",
+    "zh-CN": "纯住宿",
+    "zh-TW": "純住宿"
+  },
+  "459,800원": {
+    "en": "₩459,800",
+    "ja": "459,800ウォン",
+    "zh-CN": "₩459,800",
+    "zh-TW": "₩459,800"
+  },
+  "헤리티지 객실 1박": {
+    "en": "One night in a Heritage Room",
+    "ja": "ヘリテージルーム1泊",
+    "zh-CN": "传统风格客房一晚",
+    "zh-TW": "傳統風格客房一晚"
+  },
+  "조식형": {
+    "en": "Breakfast package",
+    "ja": "朝食付き",
+    "zh-CN": "含早餐",
+    "zh-TW": "含早餐"
+  },
+  "534,660원": {
+    "en": "₩534,660",
+    "ja": "534,660ウォン",
+    "zh-CN": "₩534,660",
+    "zh-TW": "₩534,660"
+  },
+  "라세느 조식 2인": {
+    "en": "La Seine breakfast for two",
+    "ja": "ラ・セーヌの朝食2名分",
+    "zh-CN": "La Seine 双人早餐",
+    "zh-TW": "La Seine 雙人早餐"
+  },
+  "홈파티형": {
+    "en": "Home party package",
+    "ja": "ホームパーティー付き",
+    "zh-CN": "聚会套餐",
+    "zh-TW": "聚會套裝"
+  },
+  "689,700원": {
+    "en": "₩689,700",
+    "ja": "689,700ウォン",
+    "zh-CN": "₩689,700",
+    "zh-TW": "₩689,700"
+  },
+  "라세느 홈파티 세트 사전예약 및 직접 픽업": {
+    "en": "Reserve and collect the La Seine home party set",
+    "ja": "ラ・セーヌのホームパーティーセットは要予約・店頭受取",
+    "zh-CN": "La Seine 聚会套餐须预约并自取",
+    "zh-TW": "La Seine 聚會套裝須預約並自取"
+  },
+  "세금과 봉사료가 포함됩니다. 체크인 전날 18:00 이후 취소·변경 시 1박 요금이 부과됩니다.": {
+    "en": "Tax and service charges are included. Changes or cancellations after 18:00 the day before check-in incur a one-night charge.",
+    "ja": "税・サービス料込み。チェックイン前日の18:00以降の変更・取消は1泊分がかかります。",
+    "zh-CN": "含税和服务费，入住前一天18:00后取消或变更将收取一晚费用。",
+    "zh-TW": "含稅及服務費，入住前一天18:00後取消或變更將收取一晚費用。"
+  },
+  "숙박 예약 필요": {
+    "en": "Room reservation required",
+    "ja": "宿泊予約が必要",
+    "zh-CN": "须预订客房",
+    "zh-TW": "須預訂客房"
+  },
+  "투숙당 전용 키트 1세트와 객실 키 2매를 제공합니다.": {
+    "en": "Each stay includes one exclusive kit and two keepsake keys.",
+    "ja": "1滞在につき限定キット1セットと記念ルームキー2枚付き。",
+    "zh-CN": "每次入住提供一套专属套件和两张纪念房卡。",
+    "zh-TW": "每次入住提供一套專屬套件及兩張紀念房卡。"
+  },
+  "탑텐 블랙프라이데이": {
+    "en": "TOPTEN10 Black Friday",
+    "ja": "TOPTEN10 ブラックフライデー",
+    "zh-CN": "TOPTEN10 黑色星期五",
+    "zh-TW": "TOPTEN10 黑色星期五"
+  },
+  "탑텐 2026 블랙프라이데이 · 부산 확인 중": {
+    "en": "TOPTEN10 2026 Black Friday · Busan details pending",
+    "ja": "TOPTEN10 2026 ブラックフライデー・釜山の詳細は確認中",
+    "zh-CN": "TOPTEN10 2026黑色星期五 · 釜山详情待确认",
+    "zh-TW": "TOPTEN10 2026黑色星期五 · 釜山詳情待確認"
+  },
+  "부산 매장 참여 여부와 행사 기간을 확인 중입니다.": {
+    "en": "Busan store participation and dates are pending confirmation.",
+    "ja": "釜山の店舗の参加有無と日程は確認中です。",
+    "zh-CN": "釜山门店参与情况及日期待确认。",
+    "zh-TW": "釜山門市參與情況及日期待確認。"
+  },
+  "부산 참여 지점 확인 중": {
+    "en": "Participating Busan stores pending",
+    "ja": "釜山の対象店舗は確認中",
+    "zh-CN": "釜山参与门店待确认",
+    "zh-TW": "釜山參與門市待確認"
+  },
+  "무신사 스탠다드 겨울 블랙프라이데이 · 부산 확인 중": {
+    "en": "MUSINSA STANDARD Winter Black Friday · Busan details pending",
+    "ja": "MUSINSA STANDARD 冬のブラックフライデー・釜山の詳細は確認中",
+    "zh-CN": "MUSINSA STANDARD 冬季黑色星期五 · 釜山详情待确认",
+    "zh-TW": "MUSINSA STANDARD 冬季黑色星期五 · 釜山詳情待確認"
+  },
+  "무신사 모행사는 11월 22일 19:00 시작으로 안내됐습니다. 부산 스탠다드 매장 참여와 적용 혜택은 확인 중입니다.": {
+    "en": "MUSINSA announced a November 22, 19:00 start for its main campaign. Participation and offers at Busan STANDARD stores are pending confirmation.",
+    "ja": "MUSINSAの全体キャンペーンは11月22日19:00開始予定です。釜山のSTANDARD店舗の参加と特典は確認中です。",
+    "zh-CN": "MUSINSA 主活动公布于11月22日19:00开始。釜山 STANDARD 门店的参与情况及优惠待确认。",
+    "zh-TW": "MUSINSA 主活動公布於11月22日19:00開始。釜山 STANDARD 門市的參與情況及優惠待確認。"
+  },
+  "무신사 스탠다드": {
+    "en": "MUSINSA STANDARD Winter Black Friday · Busan details pending",
+    "ja": "MUSINSA STANDARD 冬のブラックフライデー・釜山の詳細は確認中",
+    "zh-CN": "MUSINSA STANDARD 冬季黑色星期五 · 釜山详情待确认",
+    "zh-TW": "MUSINSA STANDARD 冬季黑色星期五 · 釜山詳情待確認"
+  },
+  "회차 사이 · 다음 일정 확인": {
+    "en": "Between sessions · check next date",
+    "ja": "公演間の休演日・次回日程を確認",
+    "zh-CN": "场次间无演出 · 请查看下场日期",
+    "zh-TW": "場次間無演出 · 請查看下場日期"
+  },
+  "삼정타워 캡랩 팝업": {
+    "en": "CAPLAB Pop-up at Samjung Tower",
+    "ja": "サムジョンタワー CAPLAB ポップアップ",
+    "zh-CN": "三井塔 CAPLAB 快闪店",
+    "zh-TW": "三井塔 CAPLAB 快閃店"
+  },
+  "삼정타워 2층에서 모자를 꾸미는 캡랩 팝업.": {
+    "en": "Customize a cap at the CAPLAB pop-up on the second floor of Samjung Tower.",
+    "ja": "サムジョンタワー2階で帽子をカスタマイズできるCAPLABのポップアップです。",
+    "zh-CN": "在三井塔2楼的 CAPLAB 快闪店体验帽子定制。",
+    "zh-TW": "在三井塔2樓的 CAPLAB 快閃店體驗帽子客製。"
+  },
+  "삼정타워 2층": {
+    "en": "Samjung Tower, 2F",
+    "ja": "サムジョンタワー2階",
+    "zh-CN": "三井塔2楼",
+    "zh-TW": "三井塔2樓"
+  },
+  "부산광역시 부산진구 중앙대로 672": {
+    "en": "672 Jungang-daero, Busanjin-gu, Busan",
+    "ja": "釜山広域市 釜山鎮区 中央大路672",
+    "zh-CN": "釜山广域市釜山镇区中央大路672号",
+    "zh-TW": "釜山廣域市釜山鎮區中央大路672號"
+  },
+  "부산도시철도 서면역 2번 출구 인근": {
+    "en": "Near Exit 2 of Seomyeon Station",
+    "ja": "地下鉄西面駅2番出口付近",
+    "zh-CN": "釜山地铁西面站2号出口附近",
+    "zh-TW": "釜山地鐵西面站2號出口附近"
+  },
+  "팝업 운영시간·가격·혜택·해외 결제·텍스 리펀은 확인 전입니다.": {
+    "en": "Hours, prices, offers, international payments and tax refunds are pending confirmation.",
+    "ja": "営業時間、価格、特典、海外決済、免税還付は確認中です。",
+    "zh-CN": "营业时间、价格、优惠、境外支付和退税信息待确认。",
+    "zh-TW": "營業時間、價格、優惠、境外支付及退稅資訊待確認。"
+  },
+  "공식 포스터": {
+    "en": "Official poster",
+    "ja": "公式ポスター",
+    "zh-CN": "官方海报",
+    "zh-TW": "官方海報"
+  },
+  "삼정타워 노배드바이브스 초코겹겹이찹쌀떡 팝업": {
+    "en": "NO BAD VIBES Chocolate Layered Mochi Pop-up at Samjung Tower",
+    "ja": "サムジョンタワー NO BAD VIBES チョコレート重ね餅ポップアップ",
+    "zh-CN": "三井塔 NO BAD VIBES 巧克力千层糯米糕快闪店",
+    "zh-TW": "三井塔 NO BAD VIBES 巧克力千層糯米糕快閃店"
+  },
+  "삼정타워 1층에서 12겹 초코겹겹이찹쌀떡을 소개하는 팝업.": {
+    "en": "A pop-up featuring 12-layer chocolate mochi on the first floor of Samjung Tower.",
+    "ja": "サムジョンタワー1階で12層のチョコレート重ね餅を紹介するポップアップです。",
+    "zh-CN": "在三井塔1楼展示12层巧克力糯米糕。",
+    "zh-TW": "在三井塔1樓展示12層巧克力糯米糕。"
+  },
+  "삼정타워 1층": {
+    "en": "Samjung Tower, 1F",
+    "ja": "サムジョンタワー1階",
+    "zh-CN": "三井塔1楼",
+    "zh-TW": "三井塔1樓"
+  },
+  "시식은 확인 전입니다.": {
+    "en": "Sampling is pending confirmation.",
+    "ja": "試食の有無は確認中です。",
+    "zh-CN": "能否试吃待确认。",
+    "zh-TW": "能否試吃待確認。"
+  },
+  "판매 안내": {
+    "en": "Sales information",
+    "ja": "販売案内",
+    "zh-CN": "销售信息",
+    "zh-TW": "銷售資訊"
+  },
+  "라푀유 모찌 판매 안내 — 확인 중": {
+    "en": "La Feuille Mochi Sales · Confirmation Pending",
+    "ja": "La Feuille もち販売案内・確認中",
+    "zh-CN": "La Feuille 麻薯销售信息 · 待确认",
+    "zh-TW": "La Feuille 麻糬銷售資訊 · 待確認"
+  },
+  "신세계 센텀시티의 모찌 판매 여부와 한정 행사 일정은 확인 전입니다.": {
+    "en": "Mochi availability and the dates of the limited-time event at Shinsegae Centum City are pending confirmation.",
+    "ja": "新世界百貨店センタムシティ店でのもちの販売有無と期間限定イベントの日程は確認中です。",
+    "zh-CN": "新世界百货 Centum City 店的麻薯供应及限时活动日期待确认。",
+    "zh-TW": "新世界百貨 Centum City 店的麻糬供應及期間限定活動日期待確認。"
+  },
+  "신세계 센텀시티": {
+    "en": "Shinsegae Centum City",
+    "ja": "新世界百貨店センタムシティ店",
+    "zh-CN": "新世界百货 Centum City 店",
+    "zh-TW": "新世界百貨 Centum City 店"
+  },
+  "신세계 층별 안내": {
+    "en": "Shinsegae floor guide",
+    "ja": "新世界百貨店フロアガイド",
+    "zh-CN": "新世界百货楼层指南",
+    "zh-TW": "新世界百貨樓層指南"
+  },
+  "쥬얼스타 캐치! 티니핑 팝업 — 부산 일정 확인 중": {
+    "en": "Jewel Star Catch! Teenieping Pop-up · Busan Dates Pending",
+    "ja": "ジュエルスター キャッチ！ティニピン ポップアップ・釜山日程は確認中",
+    "zh-CN": "Jewel Star Catch! Teenieping 快闪店 · 釜山日期待确认",
+    "zh-TW": "Jewel Star Catch! Teenieping 快閃店 · 釜山日期待確認"
+  },
+  "제작사가 발표한 티니핑 순회 팝업. 부산 지점 세부 일정은 공식 확인 전입니다.": {
+    "en": "The producer announced a touring Teenieping pop-up. Details for the Busan stop are pending official confirmation.",
+    "ja": "制作会社が発表したティニピンの巡回ポップアップです。釜山会場の詳細日程は公式発表待ちです。",
+    "zh-CN": "制作方已宣布 Teenieping 巡回快闪活动，釜山站详细时间待官方确认。",
+    "zh-TW": "製作方已宣布 Teenieping 巡迴快閃活動，釜山站詳細時間待官方確認。"
+  },
+  "커넥트현대 부산": {
+    "en": "Connect Hyundai Busan",
+    "ja": "コネクト現代 釜山",
+    "zh-CN": "Connect Hyundai 釜山",
+    "zh-TW": "Connect Hyundai 釜山"
+  },
+  "보도상 11월 26일~12월 13일.": {
+    "en": "Reported dates: November 26 to December 13.",
+    "ja": "報道による日程は11月26日〜12月13日です。",
+    "zh-CN": "据报道为11月26日至12月13日。",
+    "zh-TW": "據報導為11月26日至12月13日。"
+  },
+  "부산 지점 공식 일정·층수·프로그램은 확인 전입니다.": {
+    "en": "Official dates, floor and programming for Busan are pending confirmation.",
+    "ja": "釜山会場の公式日程、フロア、プログラムは確認中です。",
+    "zh-CN": "釜山站官方日期、楼层和活动安排待确认。",
+    "zh-TW": "釜山站官方日期、樓層及活動安排待確認。"
+  },
+  "제작사 공식 안내": {
+    "en": "Official producer information",
+    "ja": "制作会社の公式案内",
+    "zh-CN": "制作方官方信息",
+    "zh-TW": "製作方官方資訊"
+  },
+  "전시": {
+    "en": "Exhibition",
+    "ja": "展覧会",
+    "zh-CN": "展览",
+    "zh-TW": "展覽"
+  },
+  "축제": {
+    "en": "Festival",
+    "ja": "フェスティバル",
+    "zh-CN": "节庆",
+    "zh-TW": "節慶"
+  },
+  "2026 부산 핸드메이드페어 윈터": {
+    "en": "2026 Busan Handmade Fair Winter",
+    "ja": "2026釜山ハンドメイドフェア 冬",
+    "zh-CN": "2026釜山冬季手工艺博览会",
+    "zh-TW": "2026釜山冬季手工藝博覽會"
+  },
+  "공예·디자인·생활용품을 둘러보고 구매하는 겨울 전시.": {
+    "en": "A winter fair for browsing and buying crafts, design goods and homewares.",
+    "ja": "工芸品、デザイン雑貨、生活用品を見て購入できる冬の展示会です。",
+    "zh-CN": "冬季展会上可参观和购买手工艺品、设计商品及生活用品。",
+    "zh-TW": "冬季展會上可參觀與購買手工藝品、設計商品及生活用品。"
+  },
+  "벡스코(BEXCO) 제1전시장": {
+    "en": "BEXCO Exhibition Center 1",
+    "ja": "BEXCO第1展示場",
+    "zh-CN": "BEXCO第一展馆",
+    "zh-TW": "BEXCO 第一展館"
+  },
+  "사전·현장 등록 안내가 있으며 적용 일정은 확인 전입니다.": {
+    "en": "Advance and on-site registration are listed. The applicable dates are pending confirmation.",
+    "ja": "事前・当日登録の案内があります。受付日程は確認中です。",
+    "zh-CN": "有预先登记及现场登记说明，具体时间待确认。",
+    "zh-TW": "有預先登記與現場登記說明，具體時間待確認。"
+  },
+  "관람 안내에 13세 이하 아동은 보호자 동반 시 무료라고 표시되어 있습니다.": {
+    "en": "The visitor guide lists free admission for children aged 13 and under accompanied by a guardian.",
+    "ja": "来場案内では保護者同伴の13歳以下は無料です。",
+    "zh-CN": "参观指南注明，13岁及以下儿童在监护人陪同下免费入场。",
+    "zh-TW": "參觀指南註明，13歲及以下兒童在監護人陪同下免費入場。"
+  },
+  "일반 입장권 적용가와 접수 일정은 주최사 확인이 필요합니다.": {
+    "en": "Check general admission prices and registration dates with the organizer.",
+    "ja": "一般入場料と受付日程は主催者にご確認ください。",
+    "zh-CN": "普通门票价格和登记日期请向主办方确认。",
+    "zh-TW": "一般門票價格與登記日期請向主辦方確認。"
+  },
+  "2026 부산국제아동도서전": {
+    "en": "2026 Busan International Children's Book Fair",
+    "ja": "2026釜山国際児童図書展",
+    "zh-CN": "2026釜山国际儿童图书展",
+    "zh-TW": "2026釜山國際兒童圖書展"
+  },
+  "그림책과 어린이 출판 콘텐츠, 작가 강연과 워크숍을 만나는 도서전.": {
+    "en": "A book fair featuring picture books, children's publishing, author talks and workshops.",
+    "ja": "絵本や児童出版作品、作家トークやワークショップを楽しめるブックフェアです。",
+    "zh-CN": "汇集绘本、儿童出版作品、作家讲座与工作坊的书展。",
+    "zh-TW": "匯集繪本、兒童出版作品、作家講座與工作坊的書展。"
+  },
+  "벡스코(BEXCO) 제1전시장 2홀": {
+    "en": "BEXCO Exhibition Center 1, Hall 2",
+    "ja": "BEXCO第1展示場2ホール",
+    "zh-CN": "BEXCO第一展馆2号厅",
+    "zh-TW": "BEXCO 第一展館2號廳"
+  },
+  "수신 동의 시: 무료 (입장 등록 시 마케팅 정보 수신 동의)": {
+    "en": "Free with consent to receive marketing messages at registration",
+    "ja": "入場登録時にマーケティング情報の受信に同意すると無料",
+    "zh-CN": "入场登记时同意接收营销信息即可免费入场",
+    "zh-TW": "入場登記時同意接收行銷資訊即可免費入場"
+  },
+  "수신 미동의 시: 10,000원 (현장 결제)": {
+    "en": "₩10,000 on site without marketing consent",
+    "ja": "受信に同意しない場合は10,000ウォン（現地決済）",
+    "zh-CN": "不同意接收信息时为10,000韩元（现场支付）",
+    "zh-TW": "不同意接收資訊時為10,000韓元（現場付款）"
+  },
+  "만 14세 미만: 무료 (현장 등록, 필요 시 나이 확인 자료 제시)": {
+    "en": "Under 14: Free with on-site registration. Proof of age may be required.",
+    "ja": "14歳未満は無料（当日登録、必要に応じて年齢確認書類を提示）",
+    "zh-CN": "未满14岁免费（现场登记，必要时出示年龄证明）",
+    "zh-TW": "未滿14歲免費（現場登記，必要時出示年齡證明）"
+  },
+  "사전등록 또는 현장등록 · 동반인도 개별 등록": {
+    "en": "Advance or on-site registration · Companions register separately",
+    "ja": "事前または当日登録・同伴者も個別登録",
+    "zh-CN": "预先登记或现场登记 · 同行者也须单独登记",
+    "zh-TW": "預先登記或現場登記 · 同行者也須個別登記"
+  },
+  "동반인도 각각 등록합니다.": {
+    "en": "Companions must register individually.",
+    "ja": "同伴者も一人ずつ登録が必要です。",
+    "zh-CN": "同行者也须逐一登记。",
+    "zh-TW": "同行者也須逐一登記。"
+  },
+  "강연·세미나는 별도 예약이 필요할 수 있습니다.": {
+    "en": "Talks and seminars may require separate reservations.",
+    "ja": "講演やセミナーは別途予約が必要な場合があります。",
+    "zh-CN": "讲座和研讨会可能需要另行预约。",
+    "zh-TW": "講座與研討會可能需要另行預約。"
+  },
+  "내선 9927": {
+    "en": "ext. 9927",
+    "ja": "内線9927",
+    "zh-CN": "分机9927",
+    "zh-TW": "分機9927"
+  },
+  "크리스마스 빌리지 부산 2026": {
+    "en": "Christmas Village Busan 2026",
+    "ja": "クリスマスビレッジ釜山2026",
+    "zh-CN": "2026釜山圣诞村",
+    "zh-TW": "2026釜山聖誕村"
+  },
+  "산타 퍼레이드와 공연, 겨울 먹거리와 선물 상점을 만나는 야외 축제.": {
+    "en": "An outdoor festival with a Santa parade, performances, winter food and gift shops.",
+    "ja": "サンタパレードや公演、冬のグルメ、ギフトショップを楽しめる屋外イベントです。",
+    "zh-CN": "有圣诞老人巡游、演出、冬日美食及礼品店的户外节庆。",
+    "zh-TW": "有聖誕老人遊行、演出、冬日美食及禮品店的戶外節慶。"
+  },
+  "영화의전당 야외광장": {
+    "en": "Busan Cinema Center Outdoor Plaza",
+    "ja": "映画の殿堂 野外広場",
+    "zh-CN": "釜山电影殿堂户外广场",
+    "zh-TW": "釜山電影殿堂戶外廣場"
+  },
+  "평일: 5,900원": {
+    "en": "Weekdays: ₩5,900",
+    "ja": "平日：5,900ウォン",
+    "zh-CN": "工作日：5,900韩元",
+    "zh-TW": "平日：5,900韓元"
+  },
+  "주말 주간: 5,900원": {
+    "en": "Weekend daytime: ₩5,900",
+    "ja": "週末の日中：5,900ウォン",
+    "zh-CN": "周末白天：5,900韩元",
+    "zh-TW": "週末白天：5,900韓元"
+  },
+  "주말 야간: 7,900원": {
+    "en": "Weekend evening: ₩7,900",
+    "ja": "週末の夜：7,900ウォン",
+    "zh-CN": "周末晚上：7,900韩元",
+    "zh-TW": "週末晚上：7,900韓元"
+  },
+  "12월 24~25일 시즌권: 14,900원": {
+    "en": "December 24–25 pass: ₩14,900",
+    "ja": "12月24〜25日パス：14,900ウォン",
+    "zh-CN": "12月24日至25日通票：14,900韩元",
+    "zh-TW": "12月24日至25日通票：14,900韓元"
+  },
+  "영유아: 무료 (36개월 미만, 생년월일 증빙 필요)": {
+    "en": "Children under 36 months: Free with proof of date of birth",
+    "ja": "36か月未満は無料（生年月日を確認できる書類が必要）",
+    "zh-CN": "未满36个月免费（须出示出生日期证明）",
+    "zh-TW": "未滿36個月免費（須出示出生日期證明）"
+  },
+  "예매 QR 확인 후 입장 스탬프 수령": {
+    "en": "Show your booking QR code to receive an entry stamp",
+    "ja": "予約QRコードを提示して入場スタンプを受け取る",
+    "zh-CN": "出示预约二维码后领取入场印章",
+    "zh-TW": "出示預約 QR Code 後領取入場印章"
+  },
+  "부산광역시 해운대구 수영강변대로 120": {
+    "en": "120 Suyeonggangbyeon-daero, Haeundae-gu, Busan",
+    "ja": "釜山広域市 海雲台区 水営江辺大路120",
+    "zh-CN": "釜山广域市海云台区水营江边大路120号",
+    "zh-TW": "釜山廣域市海雲臺區水營江邊大路120號"
+  },
+  "목·금 및 12.21~23": {
+    "en": "Thu–Fri and Dec 21–23",
+    "ja": "木・金および12月21〜23日",
+    "zh-CN": "周四、周五及12月21日至23日",
+    "zh-TW": "週四、週五及12月21日至23日"
+  },
+  "12.24~25 제외": {
+    "en": "Excluding Dec 24–25",
+    "ja": "12月24〜25日を除く",
+    "zh-CN": "12月24日至25日除外",
+    "zh-TW": "12月24日至25日除外"
+  },
+  "토·일 및 12.24~25": {
+    "en": "Sat–Sun and Dec 24–25",
+    "ja": "土・日および12月24〜25日",
+    "zh-CN": "周六、周日及12月24日至25日",
+    "zh-TW": "週六、週日及12月24日至25日"
+  },
+  "주관사 사이트에 해외 방문객용 티켓 안내가 있습니다. 실제 예매 절차와 인증 조건은 확인 전.": {
+    "en": "The organizer lists ticket information for international visitors. Booking and verification requirements are pending confirmation.",
+    "ja": "主催者サイトに海外来場者向けのチケット案内があります。予約方法と認証条件は確認中です。",
+    "zh-CN": "主办方网站提供海外游客购票信息，具体购票流程与验证要求待确认。",
+    "zh-TW": "主辦方網站提供海外旅客購票資訊，具體購票流程與驗證要求待確認。"
+  },
+  "권종별 입장 가능 시간이 다릅니다.": {
+    "en": "Entry times vary by ticket type.",
+    "ja": "入場可能時間はチケットの種類によって異なります。",
+    "zh-CN": "入场时间因票种而异。",
+    "zh-TW": "入場時間依票種而異。"
+  },
+  "예매 QR 확인 후 입장 스탬프를 받습니다.": {
+    "en": "Show your booking QR code to receive an entry stamp.",
+    "ja": "予約QRコードを提示して入場スタンプを受け取ります。",
+    "zh-CN": "出示预约二维码后领取入场印章。",
+    "zh-TW": "出示預約 QR Code 後領取入場印章。"
+  },
+  "공식 티켓 안내": {
+    "en": "Official ticket information",
+    "ja": "公式チケット案内",
+    "zh-CN": "官方购票信息",
+    "zh-TW": "官方購票資訊"
+  },
+  "장-미셸 오토니엘 《사랑 안의 미로》": {
+    "en": "Jean-Michel Othoniel: Labyrinth of Love",
+    "ja": "ジャン＝ミシェル・オトニエル《愛の迷宮》",
+    "zh-CN": "让-米歇尔·奥托尼耶《爱之迷宫》",
+    "zh-TW": "尚-米榭・歐托尼耶《愛之迷宮》"
+  },
+  "유리 조형과 빛을 활용한 장-미셸 오토니엘의 개인전.": {
+    "en": "A solo exhibition by Jean-Michel Othoniel featuring glass sculpture and light.",
+    "ja": "ガラス彫刻と光を用いたジャン＝ミシェル・オトニエルの個展です。",
+    "zh-CN": "让-米歇尔·奥托尼耶以玻璃雕塑和灯光为媒介的个展。",
+    "zh-TW": "尚-米榭・歐托尼耶以玻璃雕塑與光線為媒介的個展。"
+  },
+  "F1963 석천홀·달빛가든": {
+    "en": "F1963 Seokcheon Hall and Moonlight Garden",
+    "ja": "F1963 ソクチョンホール・月明かりガーデン",
+    "zh-CN": "F1963 石川厅及月光花园",
+    "zh-TW": "F1963 石川廳與月光花園"
+  },
+  "성인: 10,000원 (만 19세 이상)": {
+    "en": "Adults (19+): ₩10,000",
+    "ja": "大人（19歳以上）：10,000ウォン",
+    "zh-CN": "成人（19岁及以上）：10,000韩元",
+    "zh-TW": "成人（19歲及以上）：10,000韓元"
+  },
+  "청소년: 8,000원 (만 13~18세)": {
+    "en": "Ages 13–18: ₩8,000",
+    "ja": "13〜18歳：8,000ウォン",
+    "zh-CN": "13至18岁：8,000韩元",
+    "zh-TW": "13至18歲：8,000韓元"
+  },
+  "어린이: 6,000원 (만 3~12세)": {
+    "en": "Ages 3–12: ₩6,000",
+    "ja": "3〜12歳：6,000ウォン",
+    "zh-CN": "3至12岁：6,000韩元",
+    "zh-TW": "3至12歲：6,000韓元"
+  },
+  "전시 전문매체 안내 기준": {
+    "en": "According to exhibition publications",
+    "ja": "展覧会専門メディアの案内による",
+    "zh-CN": "根据展览专业媒体信息",
+    "zh-TW": "依展覽專業媒體資訊"
+  },
+  "부산광역시 수영구 구락로123번길 20": {
+    "en": "20 Gurak-ro 123beon-gil, Suyeong-gu, Busan",
+    "ja": "釜山広域市 水営区 久楽路123番ギル20",
+    "zh-CN": "釜山广域市水营区Gurak-ro 123beon-gil 20号",
+    "zh-TW": "釜山廣域市水營區 Gurak-ro 123beon-gil 20號"
+  },
+  "화~일": {
+    "en": "Tue–Sun",
+    "ja": "火〜日",
+    "zh-CN": "周二至周日",
+    "zh-TW": "週二至週日"
+  },
+  "17:30 입장 마감 · 월요일 휴관 (전시 전문매체 기준)": {
+    "en": "Last entry at 17:30 · Closed Mondays (per exhibition publications)",
+    "ja": "最終入場17:30・月曜休館（展覧会専門メディアの案内）",
+    "zh-CN": "17:30停止入场 · 周一闭馆（据展览专业媒体）",
+    "zh-TW": "17:30停止入場 · 週一休館（依展覽專業媒體）"
+  },
+  "전시 전문매체 안내 기준 월요일 휴관.": {
+    "en": "Exhibition publications list Mondays as closed.",
+    "ja": "展覧会専門メディアによると月曜休館です。",
+    "zh-CN": "据展览专业媒体，周一闭馆。",
+    "zh-TW": "依展覽專業媒體，週一休館。"
+  },
+  "관람료와 예매 조건은 주최 측 기준 재확인 필요.": {
+    "en": "Confirm admission fees and booking terms with the organizer.",
+    "ja": "入場料と予約条件は主催者にご確認ください。",
+    "zh-CN": "请向主办方确认门票价格与预约条件。",
+    "zh-TW": "請向主辦方確認門票價格與預約條件。"
+  },
+  "휴점": {
+    "en": "Closed",
+    "ja": "休業",
+    "zh-CN": "休息",
+    "zh-TW": "休息"
+  },
+  "캡랩": {
+    "en": "CAPLAB",
+    "ja": "CAPLAB",
+    "zh-CN": "CAPLAB",
+    "zh-TW": "CAPLAB"
+  },
+  "노배드바이브스": {
+    "en": "NO BAD VIBES",
+    "ja": "NO BAD VIBES",
+    "zh-CN": "NO BAD VIBES",
+    "zh-TW": "NO BAD VIBES"
+  },
+  "라푀유": {
+    "en": "La Feuille",
+    "ja": "La Feuille",
+    "zh-CN": "La Feuille",
+    "zh-TW": "La Feuille"
+  },
+  "캐치! 티니핑": {
+    "en": "Catch! Teenieping",
+    "ja": "キャッチ！ティニピン",
+    "zh-CN": "Catch! Teenieping",
+    "zh-TW": "Catch! Teenieping"
+  },
+  "부산 핸드메이드페어": {
+    "en": "Busan Handmade Fair",
+    "ja": "釜山ハンドメイドフェア",
+    "zh-CN": "釜山手工艺博览会",
+    "zh-TW": "釜山手工藝博覽會"
+  },
+  "부산국제아동도서전": {
+    "en": "Busan International Children's Book Fair",
+    "ja": "釜山国際児童図書展",
+    "zh-CN": "釜山国际儿童图书展",
+    "zh-TW": "釜山國際兒童圖書展"
+  },
+  "크리스마스 빌리지 부산": {
+    "en": "Christmas Village Busan",
+    "ja": "クリスマスビレッジ釜山",
+    "zh-CN": "釜山圣诞村",
+    "zh-TW": "釜山聖誕村"
+  },
+  "오토니엘": {
+    "en": "Othoniel",
+    "ja": "オトニエル",
+    "zh-CN": "奥托尼耶",
+    "zh-TW": "歐托尼耶"
+  },
+  "공식 포스터 ↗": {
+    "en": "Official poster ↗",
+    "ja": "公式ポスター ↗",
+    "zh-CN": "官方海报 ↗",
+    "zh-TW": "官方海報 ↗"
+  },
+  "신세계 층별 안내 ↗": {
+    "en": "Shinsegae floor guide ↗",
+    "ja": "新世界百貨店フロアガイド ↗",
+    "zh-CN": "新世界百货楼层指南 ↗",
+    "zh-TW": "新世界百貨樓層指南 ↗"
+  },
+  "제작사 공식 안내 ↗": {
+    "en": "Official producer information ↗",
+    "ja": "制作会社の公式案内 ↗",
+    "zh-CN": "制作方官方信息 ↗",
+    "zh-TW": "製作方官方資訊 ↗"
+  },
+  "공식 티켓 안내 ↗": {
+    "en": "Official ticket information ↗",
+    "ja": "公式チケット案内 ↗",
+    "zh-CN": "官方购票信息 ↗",
+    "zh-TW": "官方購票資訊 ↗"
+  },
+  "팝업 운영시간·가격·혜택·해외 결제·텍스 리펀은 확인 전입니다.\n시식은 확인 전입니다.": {
+    "en": "Hours, prices, offers, international payments and tax refunds are pending confirmation.\nSampling is pending confirmation.",
+    "ja": "営業時間、価格、特典、海外決済、免税還付は確認中です。\n試食の有無は確認中です。",
+    "zh-CN": "营业时间、价格、优惠、境外支付和退税信息待确认。\n能否试吃待确认。",
+    "zh-TW": "營業時間、價格、優惠、境外支付及退稅資訊待確認。\n能否試吃待確認。"
+  },
+  "보도상 11월 26일~12월 13일.\n부산 지점 공식 일정·층수·프로그램은 확인 전입니다.": {
+    "en": "Reported dates: November 26 to December 13.\nOfficial dates, floor and programming for Busan are pending confirmation.",
+    "ja": "報道による日程は11月26日〜12月13日です。\n釜山会場の公式日程、フロア、プログラムは確認中です。",
+    "zh-CN": "据报道为11月26日至12月13日。\n釜山站官方日期、楼层和活动安排待确认。",
+    "zh-TW": "據報導為11月26日至12月13日。\n釜山站官方日期、樓層及活動安排待確認。"
+  },
+  "권종별 입장 가능 시간이 다릅니다.\n예매 QR 확인 후 입장 스탬프를 받습니다.": {
+    "en": "Entry times vary by ticket type.\nShow your booking QR code to receive an entry stamp.",
+    "ja": "入場可能時間はチケットの種類によって異なります。\n予約QRコードを提示して入場スタンプを受け取ります。",
+    "zh-CN": "入场时间因票种而异。\n出示预约二维码后领取入场印章。",
+    "zh-TW": "入場時間依票種而異。\n出示預約 QR Code 後領取入場印章。"
+  },
+  "전시 전문매체 안내 기준 월요일 휴관.\n관람료와 예매 조건은 주최 측 기준 재확인 필요.": {
+    "en": "Exhibition publications list Mondays as closed.\nConfirm admission fees and booking terms with the organizer.",
+    "ja": "展覧会専門メディアによると月曜休館です。\n入場料と予約条件は主催者にご確認ください。",
+    "zh-CN": "据展览专业媒体，周一闭馆。\n请向主办方确认门票价格与预约条件。",
+    "zh-TW": "依展覽專業媒體，週一休館。\n請向主辦方確認門票價格與預約條件。"
   }
 }

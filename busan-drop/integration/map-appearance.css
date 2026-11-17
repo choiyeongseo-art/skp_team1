@@ -101,3 +101,73 @@
 #phone .category-pin-caption{display:none}
 #phone .venue-mini-map .category-pin-icon{width:24px;height:24px}
 .bd-event-location-pin svg{color:#FFD628}
+
+/* Black-and-yellow category artwork needs a light surface inside each map pin. */
+#phone :is(.category-pin-face,.branch-map-pin,.pass-map-pin,.venue-map-pin.is-event,.bd-event-location-pin):has(.category-glass-icon) {
+  background: #fff;
+  border: 1px solid #191919;
+  color: #191919;
+}
+#phone .real-store-pin[aria-pressed=true] .category-pin-face:has(.category-glass-icon) {background:#fff}
+#phone :is(.category-pin-face,.branch-map-pin,.pass-map-pin,.pass-tour-pin,.bd-event-location-pin) .category-glass-icon {
+  display:block;width:26px;height:26px;object-fit:contain;transform:none;
+}
+#phone :is(.branch-map-pin,.pass-map-pin):has(.category-glass-icon) {width:42px;height:42px;overflow:visible}
+#phone .pass-map-pin-group:has(.category-glass-icon) {width:auto;min-width:42px;padding-inline:6px}
+#phone .map-category-symbols {display:flex;align-items:center;gap:3px}
+#phone .map-category-order {
+  position:absolute;right:-5px;bottom:-5px;min-width:18px;padding:2px 4px;
+  border-radius:12px;background:#FFD628;color:#191919;font-size:11px;line-height:14px;text-align:center;
+}
+
+/* Match the event pins in Store Finder throughout planning and saved routes. */
+#phone .pass-venue-category-pin {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 7px;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #191919;
+  border-radius: 22px;
+  box-shadow: 0 3px 8px #22344736;
+}
+#phone .pass-venue-category-pin .category-glass-icon {
+  width: 28px;
+  height: 28px;
+}
+#phone .venue-map-pin.is-event,
+#phone .pass-map-pin:has(.category-glass-icon),
+#phone .pass-tour-pin,
+#phone .venue-map-pin:is(.is-sight,.is-food) {
+  background: #fff;
+  border: 1px solid #191919;
+  color: #191919;
+}
+
+#phone :is(.pass-tour-legend,.venue-map-legend) :is(svg,.category-glass-icon,.nearby-place-icon) {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+#phone .pass-tour-pin .nearby-place-icon {
+  width: 28px;
+  height: 28px;
+}
+#phone .venue-map-pin .nearby-place-icon {
+  width: 30px;
+  height: 30px;
+}
+#phone .venue-mini-map .venue-map-pin .nearby-place-icon {
+  width: 24px;
+  height: 24px;
+}
+
+#phone .place-card-image .nearby-place-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+#phone .pass-map-place-media .nearby-place-icon {
+  object-fit: contain;
+}

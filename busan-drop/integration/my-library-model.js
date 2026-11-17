@@ -13,7 +13,9 @@
  // Venue groups are travel options, not assignments to calendar days.
  function venueGroups(route=[],places=[]){return route.map(c=>({id:c.campaign.id,campaign:c.campaign,event:c.event,item:c.item,places:places.filter(p=>p.eventId?p.eventId===c.campaign.id:p.nearStoreId===c.item.id)}));}
  function venueItinerary(route=[],places=[],orders={}){return venueGroups(route,places).flatMap(group=>{
-  const rows=[{id:'event:'+group.id,eventId:group.id,kind:'event',brand:group.campaign.brand,storeId:group.item.id,name:group.event.title||group.campaign.title,image:group.campaign.image?'assets/banners/home-20261105/'+group.campaign.image:'',address:group.item.address,hours:group.event.hours||'',hoursNote:group.event.hoursNote||'',lat:group.item.lat,lng:group.item.lng,date:'',unavailableDates:group.event.closed||[],availableStart:group.campaign.start,availableEnd:group.campaign.end},
+  const currentCampaign=root.BUSAN_EVENT_CATALOG?.find(campaign=>campaign.id===group.id);
+  const image=currentCampaign?.image||group.campaign.image;
+  const rows=[{id:'event:'+group.id,eventId:group.id,kind:'event',brand:group.campaign.brand,storeId:group.item.id,name:group.event.title||group.campaign.title,image:image?'assets/banners/home-20261105/'+image:'',address:group.item.address,hours:group.event.hours||'',hoursNote:group.event.hoursNote||'',lat:group.item.lat,lng:group.item.lng,date:'',unavailableDates:group.event.closed||[],availableStart:group.campaign.start,availableEnd:group.campaign.end},
   ...['sights','food'].flatMap(kind=>group.places.filter(p=>p.kind===kind).map(p=>({...clone(p),id:'place:'+group.id+':'+p.id,placeId:p.id,eventId:group.id,date:'',unavailableDates:group.event.closed||[],availableStart:group.campaign.start,availableEnd:group.campaign.end})))];
   const ids=[...new Set(Array.isArray(orders?.[group.id])?orders[group.id]:[])],rank=new Map(ids.map((id,i)=>[id,i]));return rows.sort((a,b)=>(rank.get(a.id)??Infinity)-(rank.get(b.id)??Infinity));
  });}

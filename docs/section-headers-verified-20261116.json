@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-11-16T06:09:11.393Z",
+  "url": "https://busandrop.vercel.app/busandrop/home?analytics_test=1",
+  "expectedColor": "#FFD628",
+  "scenarios": [
+    {
+      "label": "와이잭",
+      "headers": [
+        {
+          "section": "visit",
+          "text": "방문 요약",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "alerts",
+          "text": "방문 전 꼭 확인",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "location",
+          "text": "장소",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "admission",
+          "text": "운영 시간",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "products",
+          "text": "상품·메뉴·패키지 가격",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "benefits",
+          "text": "혜택·적용 조건",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "international",
+          "text": "해외 방문객 안내",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "trust",
+          "text": "기타 안내",
+          "color": "rgb(255, 214, 40)"
+        }
+      ]
+    },
+    {
+      "label": "G-STAR",
+      "headers": [
+        {
+          "section": "visit",
+          "text": "방문 요약",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "alerts",
+          "text": "방문 전 꼭 확인",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "location",
+          "text": "장소",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "admission",
+          "text": "운영 시간",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "benefits",
+          "text": "혜택·적용 조건",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "international",
+          "text": "해외 방문객 안내",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "trust",
+          "text": "기타 안내",
+          "color": "rgb(255, 214, 40)"
+        }
+      ]
+    },
+    {
+      "label": "메이플스토리",
+      "headers": [
+        {
+          "section": "visit",
+          "text": "방문 요약",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "alerts",
+          "text": "방문 전 꼭 확인",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "location",
+          "text": "장소",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "admission",
+          "text": "운영 시간",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "content",
+          "text": "행사 내용·프로그램",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "benefits",
+          "text": "혜택·적용 조건",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "international",
+          "text": "해외 방문객 안내",
+          "color": "rgb(255, 214, 40)"
+        },
+        {
+          "section": "trust",
+          "text": "기타 안내",
+          "color": "rgb(255, 214, 40)"
+        }
+      ]
+    }
+  ],
+  "coveredSectionCount": 9,
+  "screenshot": "/Users/manok2ne/Desktop/PROJECT/BUSANDROP/busandrop_개발/artifacts/section-headers-20261116.png"
+}

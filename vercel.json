@@ -29,6 +29,9 @@
     },
     "api/apple-account-delete.js": {
       "maxDuration": 60
+    },
+    "api/count.js": {
+      "maxDuration": 10
     }
   },
   "redirects": [
@@ -49,6 +52,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/busandrop/count",
+      "destination": "/api/count"
+    },
     {
       "source": "/api/busandrop/apple-account-delete",
       "destination": "/api/apple-account-delete"

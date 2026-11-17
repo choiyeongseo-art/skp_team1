@@ -8,6 +8,7 @@ function generate(root=path.resolve(__dirname,'..')){
  '리락쿠마·스미코구라시':['admission','benefits','products','content'],'메이플스토리':['content','content','admission','admission'],
  '시그니엘 부산':['products','products','products','products','admission'],'웨스틴 조선 부산':['products','products','products','products','products','benefits','admission'],'그랜드 조선 부산':['products','products','products','products','products','alerts','benefits','admission'],
  '해리포터 마호도코로':['benefits','admission','products'],'히나쿠우':['benefits','products','admission','location'],'달달더마켓':['content'],'광안리 M 드론×레이저쇼':['content'],'G-STAR':['admission','admission']};
+ Object.assign(placement,{"롯데호텔 부산":["products"]});
  const mapping={};for(const[brand,event]of Object.entries(context.window.BUSAN_EVENT_DETAILS)){
   if((event.sections||[]).length!==(placement[brand]||[]).length)throw Error('행사 섹션 배치 재검토 필요: '+brand);
   mapping[brand]=Object.fromEntries((event.sections||[]).map((s,i)=>[s.title,placement[brand][i]]));

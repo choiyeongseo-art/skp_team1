@@ -16,7 +16,7 @@
  const today=()=>window.BUSAN_EVENT_WINDOW.koreaToday();
  const day=()=>{const start=state.visitStart||today(),end=state.visitEnd||null;if(!validVisitDate(plan.day)||plan.day<start||(end&&plan.day>end))plan.day=start;return plan.day;};
  const selection=()=>plan.tripSelection||(plan.tripSelection={selected:[],branches:{},visitDates:{},order:[],done:[],ready:false});
- function ensureAnalyticsDraft(){if(!demo&&!plan.analyticsDraftId&&window.BUSAN_ANALYTICS){plan.analyticsDraftId=window.BUSAN_ANALYTICS.newId();window.BUSAN_ANALYTICS.track('plan_creation_started',{draft_id:plan.analyticsDraftId,step:1,editing_existing:!!plan.activeSavedId});}}
+ function ensureAnalyticsDraft(){if(!demo&&!plan.analyticsDraftId&&window.BUSAN_ANALYTICS?.newId){plan.analyticsDraftId=window.BUSAN_ANALYTICS.newId();window.BUSAN_ANALYTICS.track('plan_creation_started',{draft_id:plan.analyticsDraftId,step:1,editing_existing:!!plan.activeSavedId});}}
  const persistPass=()=>{if(!demo&&plan.analyticsDraftId)window.BUSAN_ANALYTICS?.draft(plan);if(!demo)try{localStorage.setItem(draftOwner?'busan-shopping-pass:'+draftOwner:'busan-shopping-pass',JSON.stringify({...plan,_accountTrip:{start:state.visitStart,end:state.visitEnd}}));}catch{}};
  const social=()=>window.BUSAN_EVENT_SOCIAL.getState();
  const sample=()=>['oliveyoung-8',...window.BUSAN_STORE_LOCATIONS.filter(s=>s.brand==='몬치치').map(s=>s.id)].map(id=>{const item=window.BUSAN_STORE_LOCATIONS.find(s=>s.id===id);return {eventId:window.BUSAN_EVENT_CATALOG.find(e=>e.brand===item.brand).id,storeId:id};});
@@ -74,7 +74,7 @@
  function tourismMessage(){const fresh=tourism.key===tourKey();if(!fresh||tourism.status==='loading'||tourism.status==='idle')return '<div class="pass-tour-status" role="status"><span class="pass-tour-spinner" aria-hidden="true"></span><strong>행사장 근처 관광지를 찾고 있어요</strong><p>부산 관광지 정보를 불러옵니다.</p></div>';if(tourism.status==='error')return '<div class="pass-tour-status" role="status"><strong>관광지 정보를 불러오지 못했어요</strong><p>다시 시도하거나 이번 단계를 건너뛸 수 있어요.</p><button data-pass-tour-retry>다시 불러오기 ↻</button></div>';return '';}
  const tourSight='<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="m4 12 10-4 12 4 10-4v24l-10 4-12-4-10 4Z" fill="#FFD628" stroke="#191919" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 9v23m12-19v22" stroke="#191919" stroke-width="1.3" stroke-dasharray="2 2"/><path d="M20 3a8 8 0 0 0-8 8c0 6 8 13 8 13s8-7 8-13a8 8 0 0 0-8-8Z" fill="#191919" stroke="#fff" stroke-width="1.5"/><circle cx="20" cy="11" r="3" fill="#FFD628"/><path d="m8 27 3-2m18 4 3-2" stroke="#191919" stroke-width="1.5" stroke-linecap="round"/></svg>';
  const tourDistance=p=>p.distance>=1000?(p.distance/1000).toFixed(1)+'km':p.distance+'m';
- function tourMapMarkup(){const food=nearbyKind()==='food',label=food?'맛집':'관광지',view=nearbyView(),venue=activeVenue(),category=window.BUSAN_STORE_BRAND_CATEGORIES?.[venue?.campaign.brand]?.[0]||'팝업',venueIcon=window.BUSAN_CATEGORY_ICON?.(category)||window.BUSAN_PLACE_CARD.mapIcon('event');return `<div class="pass-tour-tools"><div class="pass-tour-legend"><span class="pass-venue-legend"><span class="pass-legend-category" aria-hidden="true">${venueIcon}</span>행사장</span><span>${nearbyMapIcon()}${label}</span></div><div class="pass-tour-view" role="group" aria-label="${label} 보기 방식"><button data-tour-view="list" aria-pressed="${view==='list'}">목록</button><button data-tour-view="map" aria-pressed="${view==='map'}">지도</button></div></div>${view==='map'?`<div class="pass-tour-map-wrap"><div id="passTourMap" aria-label="행사장 주변 ${label} 지도"></div><div class="pass-map-zoom" role="group" aria-label="지도 확대 및 축소"><button data-pass-zoom="in" aria-label="지도 확대">+</button><button data-pass-zoom="out" aria-label="지도 축소">−</button></div><span class="pass-tour-map-hint">${food?'맛집 핀을 눌러 둘러보세요':'관광지 핀을 눌러 둘러보세요'}</span></div>`:''}`;}
+ function tourMapMarkup(){const food=nearbyKind()==='food',label=food?'맛집':'관광지',view=nearbyView(),venue=activeVenue(),category=window.BUSAN_EVENT_MAP_CATEGORY(venue||{}),venueIcon=window.BUSAN_CATEGORY_ICON?.(category)||window.BUSAN_PLACE_CARD.mapIcon('event');return `<div class="pass-tour-tools"><div class="pass-tour-legend"><span class="pass-venue-legend"><span class="pass-legend-category" aria-hidden="true">${venueIcon}</span>행사장</span><span>${nearbyMapIcon()}${label}</span></div><div class="pass-tour-view" role="group" aria-label="${label} 보기 방식"><button data-tour-view="list" aria-pressed="${view==='list'}">목록</button><button data-tour-view="map" aria-pressed="${view==='map'}">지도</button></div></div>${view==='map'?`<div class="pass-tour-map-wrap"><div id="passTourMap" aria-label="행사장 주변 ${label} 지도"></div><div class="pass-map-zoom" role="group" aria-label="지도 확대 및 축소"><button data-pass-zoom="in" aria-label="지도 확대">+</button><button data-pass-zoom="out" aria-label="지도 축소">−</button></div><span class="pass-tour-map-hint">${food?'맛집 핀을 눌러 둘러보세요':'관광지 핀을 눌러 둘러보세요'}</span></div>`:''}`;}
  function revealTourPreview(panel){
   const viewport=document.querySelector('#viewport');if(!viewport||!panel)return;
   const top=Math.max(0,viewport.scrollTop+panel.getBoundingClientRect().top-viewport.getBoundingClientRect().top-12);
@@ -96,7 +96,7 @@
  function initTourMap(route){const host=document.querySelector('#passTourMap');if(!host)return;if(typeof mapboxgl==='undefined'){host.textContent='지도를 불러오지 못했어요. 목록 보기에서 장소를 선택해주세요.';return;}
  try{const places=mapPlaces().filter(p=>Number.isFinite(p.lat)&&Number.isFinite(p.lng)),cameraKey=tourKey()+':'+nearbyKind()+':'+foodGroup,same=tourCameraKey===cameraKey&&tourCamera;tourCameraKey=cameraKey;mapboxgl.accessToken=window.BUSAN_MAPBOX_CONFIG.token;map=new mapboxgl.Map({container:host,style:window.BUSAN_BASEMAP_STYLE||window.BUSAN_MAPBOX_CONFIG.style,center:same?tourCamera.center:[route[0].item.lng,route[0].item.lat],zoom:same?tourCamera.zoom:12,cooperativeGestures:true,performanceMetricsCollection:false,attributionControl:false});
    window.BUSAN_STYLE_MAP?.(map);map.addControl(new mapboxgl.AttributionControl({compact:true}),'bottom-right');
- model.coordinateGroups(route).forEach(group=>{const pin=document.createElement('button');pin.type='button';pin.className='real-store-pin pass-venue-category-pin';const categories=[...new Set(group.entries.map(({entry})=>window.BUSAN_STORE_BRAND_CATEGORIES?.[entry.campaign?.brand||entry.item.brand]?.[0]||'팝업'))];pin.innerHTML=categories.map(category=>window.BUSAN_CATEGORY_ICON?.(category)||window.BUSAN_PLACE_CARD.mapIcon('event')).join('');pin.dataset.pinCategory=categories.join(' ');pin.setAttribute('aria-label',categories.join(' · ')+' 행사장 · '+group.entries.map(e=>e.entry.item.name).join(', '));pin.addEventListener('click',()=>{
+ model.coordinateGroups(route).forEach(group=>{const pin=document.createElement('button');pin.type='button';pin.className='real-store-pin pass-venue-category-pin';const categories=[...new Set(group.entries.map(({entry})=>window.BUSAN_EVENT_MAP_CATEGORY(entry)))];pin.innerHTML=categories.map(category=>window.BUSAN_CATEGORY_ICON?.(category)||window.BUSAN_PLACE_CARD.mapIcon('event')).join('');pin.dataset.pinCategory=categories.join(' ');pin.setAttribute('aria-label',categories.join(' · ')+' 행사장 · '+group.entries.map(e=>e.entry.item.name).join(', '));pin.addEventListener('click',()=>{
   const previous=tourPopup;tourPopup=null;previous?.remove();tourFocused=null;
   document.querySelectorAll('[data-tour-pin]').forEach(pin=>pin.classList.remove('is-focused'));
   if(typeof mapboxgl.Popup!=='function')return;
@@ -132,15 +132,23 @@
   const body=selection().review?review():step===1?settings()+(hasVisit()?(candidates.length?choices(candidates):`<section class="pass-empty"><h3>여행 기간에 열리는 행사가 없어요.</h3><p>다른 여행 기간을 선택해보세요.</p></section>`):`<section class="pass-empty">${routeIcon}<h3>여행 일정부터 정해볼까요?</h3><p>기간을 선택하면 열리는 행사를 모아드려요.</p></section>`):optionalStep(step);
   return head()+`<div class="shopping-pass"><div class="pass-title"><h2>드롭 플랜</h2></div>${milestone(route)}${body}</div>`;
  };
- let dockObserver=null;
+ let dockObserver=null,lastGaStage=null;
  function syncDockSpace(){if(state.screen!=='pass')return;const height=document.querySelector('#detailActions')?.getBoundingClientRect?.().height;if(height>0)document.querySelector('#phone')?.style?.setProperty('--pass-dock-height',Math.ceil(height)+'px');}
  window.addEventListener('resize',syncDockSpace);
  function bind(){
-  if(state.screen!=='pass'){dockObserver?.disconnect();dockObserver=null;return;}
+  if(state.screen!=='pass'){lastGaStage=null;dockObserver?.disconnect();dockObserver=null;return;}
   const {candidates,route}=data(),pending=candidates.filter(c=>c.selected&&(!c.item||c.status.blocked)).length,ready=selection().ready&&route.length,next=route.findIndex(c=>!selection().done?.includes(c.campaign.id));
   const step=currentStep(),complete=selection().completed&&route.length;
   const index=Number(selection().venueIndex)||0,last=index>=route.length-1;
   const count=step===1?route.length:(venueChoice()[step===3?'sights':'food']||[]).length,reviewing=selection().review;
+  if(!demo&&window.BUSAN_GA4?.allowed()){
+   const stage=reviewing?'review':step===4?'food':step===3?'sights':hasVisit()?'events':'dates';
+   const stageKey=stage+':'+(step>1&&!reviewing?index:'');
+   if(stageKey!==lastGaStage){
+    window.BUSAN_GA4.track('plan_stage_viewed',{stage,venue_index:step>1&&!reviewing?index:undefined,editing_existing:!!plan.activeSavedId});
+    lastGaStage=stageKey;
+   }
+  }else lastGaStage=null;
   const nextLabel=reviewing?'플랜 저장':step===1?'첫 행사장 주변 둘러보기':step===3?'음식점 추천받기':last?'전체 플랜 확인':'다음 행사장 둘러보기';
   document.querySelector('#detailActions').innerHTML=`<div class="pass-step-footer pass-action-dock"><div class="pass-dock-heading"><strong>${reviewing?'행사장별 플랜 확인':step===1?'행사 선택':`행사장 ${index+1} / ${route.length} · ${step===3?'관광지':'맛집'}`}</strong><span class="pass-selection-count ${count?'has-selection':''}">${reviewing?route.length+'개 행사장':`<b>${count}</b><span>곳 선택</span>`}</span></div><div class="pass-dock-actions">${reviewing||step>1?`<button class="pass-dock-back" ${reviewing?'data-review-back':'data-venue-back'}>이전</button>`:''}<button class="pass-dock-next" ${reviewing?'data-review-save':'data-pass-next'} ${!reviewing&&(!route.length||pending)?'disabled':''}><span>${nextLabel}</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>${!reviewing?`<div class="pass-dock-help"><p>${step===1?(pending?'선택한 행사의 방문 지점을 확인해주세요.':route.length?'선택한 행사장 주변의 관광지·맛집을 추천해드려요.':'행사를 1곳 이상 선택하면 계속할 수 있어요.'):'선택하지 않아도 괜찮아요'}</p>${step>1?`<button class="pass-dock-skip" data-pass-skip="${step===3?'sights':'food'}">건너뛰기 <span aria-hidden="true">→</span></button>`:''}</div>`:''}${reviewing?dateNotice():''}</div>`;
   syncDockSpace();
@@ -158,7 +166,8 @@
    if(origin()){const pin=document.createElement('div');pin.className='pass-map-origin';pin.textContent='출발';pin.setAttribute('role','img');pin.setAttribute('aria-label',plan.origin+' 출발 권역');markers.push(new mapboxgl.Marker({element:pin}).setLngLat([origin().lng,origin().lat]).addTo(map));}
    model.coordinateGroups(route).forEach(group=>{
     const multi=group.entries.length>1,pin=document.createElement('button');pin.className='pass-map-pin'+(multi?' pass-map-pin-group':'');pin.type='button';pin.dataset.passMapGroup=group.key;
-    pin.innerHTML=group.entries.map(({number})=>`<span>${number}</span>`).join('<i aria-hidden="true">·</i>');
+    const categories=[...new Set(group.entries.map(({entry})=>window.BUSAN_EVENT_MAP_CATEGORY(entry)))];
+    pin.innerHTML=`<span class="map-category-symbols">${categories.map(window.BUSAN_CATEGORY_ICON).join('')}</span><b class="map-category-order">${group.entries.map(({number})=>number).join('·')}</b>`;
     pin.setAttribute('aria-label',multi?`방문 순서 ${group.entries.map(e=>e.number).join(', ')} · 같은 장소의 행사 ${group.entries.length}개`:`${group.entries[0].number}. ${group.entries[0].entry.item.name} 행사 정보`);
     if(multi){pin.setAttribute('aria-expanded','false');pin.addEventListener('click',()=>{
      const panel=document.querySelector('.pass-map-group-panel'),wasOpen=pin.getAttribute('aria-expanded')==='true';document.querySelectorAll('[data-pass-map-group]').forEach(button=>button.setAttribute('aria-expanded','false'));
